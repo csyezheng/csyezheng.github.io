@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>YeZheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/</link>
+    <description>Recent content on YeZheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 26 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="http://csyezheng.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>http://csyezheng.github.io/about/</link>
+      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      
+      <guid>http://csyezheng.github.io/about/</guid>
+      
+        <description>&lt;p&gt;Hugo is a static site engine written in Go.&lt;/p&gt;
+&lt;p&gt;It makes use of a variety of open source projects including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34;&gt;Cobra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34;&gt;Viper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/jWalterWeatherman&#34;&gt;J Walter Weatherman&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cast&#34;&gt;Cast&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Post-installation for archlinux</title>
+      <link>http://csyezheng.github.io/post/post-installation-for-archlinux/</link>
+      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/post-installation-for-archlinux/</guid>
+      
+        <description>&lt;h2 id=&#34;reboot-into-the-new-system&#34;&gt;reboot into the new system&lt;/h2&gt;
+&lt;h3 id=&#34;set-the-keyboard-layout-and-console-fonts&#34;&gt;Set the keyboard layout and Console fonts&lt;/h3&gt;
+&lt;p&gt;If you have the 4K display, console fonts will be extremely small.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ setfont sun12x22
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;connect-to-the-internet&#34;&gt;Connect to the internet&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;nmcli device wifi list
+nmcli device wifi connect TP-LINK_GZS password a3628436
+ping baidu.com
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;unofficial-user-repositories&#34;&gt;Unofficial user repositories&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;sudo vim /etc/pacman.conf 
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[archlinuxcn]
+Server = https://repo.archlinuxcn.org/$arch
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Adding unofficial keys&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -Syy &amp;amp;&amp;amp; sudo pacman -S archlinuxcn-keyring
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;fonts&#34;&gt;Fonts&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S adobe-source-han-sans-cn-fonts
+sudo pacman -S adobe-source-han-sans-tw-fonts 
+sudo pacman -S noto-fonts-emoji otf-latinmodern-math ttf-inconsolata
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;graphical-user-interface&#34;&gt;Graphical user interface&lt;/h2&gt;
+&lt;h3 id=&#34;display-server&#34;&gt;Display server&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;xorg-xrdb&lt;/code&gt; is using to loading a user-level configuration &lt;em&gt;dotfile&lt;/em&gt;, typically located at &lt;code&gt;~/.Xresources&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;They can be used to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;configure terminal preferences (e.g. terminal colors)&lt;/li&gt;
+&lt;li&gt;set &lt;strong&gt;DPI&lt;/strong&gt;, anti-aliasing, hinting and other X font settings&lt;/li&gt;
+&lt;li&gt;change the Xcursor theme&lt;/li&gt;
+&lt;li&gt;theme &lt;strong&gt;XScreenSaver&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;configure low-level X applications like: xorg-xclock, xpdf, &lt;strong&gt;rxvt-unicode&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Brightness can be set using the &lt;code&gt;xorg-xbacklight&lt;/code&gt; package.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ xbacklight -inc 10
+$ xbacklight -dec 10
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Optional:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S  xorg-apps xorg-xinit xorg-xrandr xorg-xinput
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;display-drivers&#34;&gt;Display drivers&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;lspci | grep -e VGA -e 3D
+sudo pacman -S xf86-video-intel mesa nvidia-lts nvidia-utils nvidia-settings 
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;sudo pacman -S wget git
+git clone https://aur.archlinux.org/yay.git
+cd yay/
+makepkg -si
+
+yay -S optimus-manager
+optimus-manager --switch nvidia
+systemctl enable optimus-manager.service
+systemctl start optimus-manager.service
+
+vim /etc/X11/xorg.conf.d/10-optimus-manager.conf 
+
+sudo rm /etc/X11/xorg.conf.d/10-xorg.conf /etc/X11/xorg.conf.d/20-*
+systemctl status optimus-manager.service
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Important notes :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Custom Xorg config :&lt;/strong&gt; optimus-manager works by auto-generating a Xorg configuration file and putting it into &lt;code&gt;/etc/X11/xorg.conf.d/&lt;/code&gt;. If you already have custom Xorg configuration files at that location or at &lt;code&gt;/etc/X11/xorg.conf &lt;/code&gt;, it is strongly advised that you &lt;strong&gt;remove anything&lt;/strong&gt; GPU-related from them to make sure that they do not interfere with the GPU switching process.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bumblebee :&lt;/strong&gt; optimus-manager is incompatible with Bumblebee since both tools would be trying to control GPU power switching at the same time. If Bumblebee is installed, you must disable its daemon (&lt;code&gt;sudo systemctl disable bumblebeed.service&lt;/code&gt;, then reboot). This is particularly important for Manjaro users since Bumblebee is installed by default.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;tree /etc/X11/
+/etc/X11/
+├── xinit
+│   ├── xinitrc
+│   ├── xinitrc.d
+│   │   ├── 40-libcanberra-gtk-module.sh
+│   │   └── 50-systemd-user.sh
+│   └── xserverrc
+└── xorg.conf.d
+    └── 10-optimus-manager.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;optimus-manager supported display managers are : SDDM, LightDM, GDM.&lt;/p&gt;
+&lt;p&gt;optimus-manager can also work with other display managers (or with no display manager at all) but you have to configure them manually.&lt;/p&gt;
+&lt;h4 id=&#34;usage&#34;&gt;usage&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;$ optimus-manager --switch intel    # Use Intel graphics
+$ optimus-manager --switch nvidia   # Use NVIDIA graphics
+$ optimus-manager --switch hybrid   # Use hybrid graphics (Requires a patch to xorg-server)
+$ optimus-manager --switch auto     # Switch to different graphics (from what is used now)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Also specify which graphics to use on boot:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ optimus-manager --set-startup intel
+$ optimus-manager --set-startup nvidia
+$ optimus-manager --switch hybrid   # Use hybrid graphics (Requires a patch to xorg-server)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;window-managers&#34;&gt;Window managers&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S i3 rxvt-unicode dmenu conky
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;i3wm missing/blank system dialogs solution:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;floating_minimum_size 500 x 300
+floating_maximum_size 2000 x 1500
+for_window [class=&amp;quot;chromium&amp;quot;] floating enable
+for_window [class=&amp;quot;typora&amp;quot;] floating enable
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;display-manager&#34;&gt;Display manager&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S lightdm lightdm-gtk-greeter
+sudo systemctl enable lightdm
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;cp /data/Backup/ye/.Xresources .
+vim ~/.Xresources 
+sudo systemctl start lightdm
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;user-directories&#34;&gt;User directories&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S xdg-user-dirs
+xdg-user-dirs-update
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;multimedia&#34;&gt;Multimedia&lt;/h2&gt;
+&lt;h3 id=&#34;sound&#34;&gt;Sound&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S alsa-utils
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Test:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ speaker-test -c 2
+$ aplay -L | grep :CARD
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;input-method&#34;&gt;Input method&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S fcitx fcitx-configtool fcitx-gtk2 fcitx-gtk3 fcitx-qt5
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;download &lt;code&gt;fcitx-qt4&lt;/code&gt; manually and install&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo pacman -U fcitx-qt4-4.2.9.6-1-x86_64.pkg.tar.xz
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;sudo pacman -S fcitx-googlepinyin
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Set environment variables for IM modules. LightDM checks and sources  &lt;code&gt;~/.xprofile&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;vim ~/.xprofile
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;When the terminal cannot switch the Chinese input method, consider logging out and logging in again.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ vim ~/.config/i3/config
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;exec --no-startup-id LANG=&amp;quot;zh_CN.UTF-8&amp;quot; fcitx &amp;amp;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;networking&#34;&gt;Networking&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ pacman -S network-manager-applet networkmanager-l2tp networkmanager-pptp
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;software-access-point&#34;&gt;Software access point&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo pacman -S create_ap
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;input-devices&#34;&gt;Input devices&lt;/h2&gt;
+&lt;h3 id=&#34;bluetooth&#34;&gt;Bluetooth&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo pacman -S bluez bluez-utils blueman 
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ systemctl start bluetooth.service
+$ systemctl enable bluetooth.service
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ vim /etc/bluetooth/main.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[Policy]
+AutoEnable=true
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;bluetooth-keyboard-pairing-process&#34;&gt;Bluetooth keyboard pairing process&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;$ blueman-applet
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ blueman-manager
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;press search button in  blueman-manager graphical settings panel, if your device is Filco,  press &lt;code&gt;Ctrl + Alt + Fn&lt;/code&gt; in keyboard.&lt;/p&gt;
+&lt;p&gt;after keyboard as found, pair it, trust it and connect to it.&lt;/p&gt;
+&lt;h2 id=&#34;useful-packages&#34;&gt;Useful packages&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S unzip
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;console-improvements&#34;&gt;Console improvements&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ echo $SHELL
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ sudo pacman -S zsh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To list all installed shells&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ chsh -l
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And to set one as default for your user do:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo chsh -s /bin/zsh ye
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ yay -S oh-my-zsh-git
+$ vim ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;LANGUAGE=&amp;quot;en&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;plugins&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ vim ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;plugins=( zsh-autosuggestions zsh-syntax-highlighting)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;bypass-gfw&#34;&gt;Bypass GFW&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ vim /etc/hosts
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;104.18.57.236  free-ss.site
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;sudo pacman -S chromium shadowsocks
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ cp /etc/shadowsocks/example.json /etc/shadowsocks/config.json
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;find available proxy in &lt;code&gt;free-ss.site&lt;/code&gt; and modify in &lt;code&gt;/etc/shadowsocks/config.json&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sslocal -c /etc/shadowsocks/config.json
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ chromium --proxy-server=http://127.0.0.1:1080
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/FelisCatus/SwitchyOmega/wiki/GFWList&#34;&gt;SwitchyOmega settings restore from online, and update gfwlist list&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;full-system-backup&#34;&gt;Full system backup&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo pacman -S rsync
+$ mkdir /data/initial_system_backup
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Rsync will try to modify any previously backed up files on the target machine to match their current state at the source machine, with each &lt;strong&gt;incremental backup&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;remember excluding data storage&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo rsync -aAXv --exclude={&amp;quot;/dev/*&amp;quot;,&amp;quot;/proc/*&amp;quot;,&amp;quot;/sys/*&amp;quot;,&amp;quot;/tmp/*&amp;quot;,&amp;quot;/run/*&amp;quot;,&amp;quot;/mnt/*&amp;quot;,&amp;quot;/media/*&amp;quot;,&amp;quot;/lost+found&amp;quot;,&amp;quot;/home/ye/.cache/chromium/*&amp;quot;,&amp;quot;/data/*&amp;quot;} / /data/initial_system_backup
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;restore-a-backup&#34;&gt;Restore a backup&lt;/h3&gt;
+&lt;p&gt;If you wish to restore a backup, use the same &lt;code&gt;rsync&lt;/code&gt; command that was executed but with the source and destination reversed.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Setup a Archlinux / Windows10 dual booting system</title>
+      <link>http://csyezheng.github.io/post/setup-a-archlinux-windows10-dual-booting-system/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/setup-a-archlinux-windows10-dual-booting-system/</guid>
+      
+        <description>&lt;h2 id=&#34;before&#34;&gt;Before&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Check the hardware, three disks on my Lenovo ThinkPad P50&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Samsung SSD 970 EVO Plus 250GB for installing windows&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Samsung SSD 960 EVO 250GB for installling archlinux&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WDC WD5000LPLX-0 HHD 500GB for data storage&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Disable Windows Fast Startup if start from windows&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Windows UEFI vs BIOS limitations. (In case where Windows and Linux dual boot from the same disk, it is advisable to follow the method used by Windows, ie. either go for &lt;strong&gt;UEFI/GPT&lt;/strong&gt; boot or &lt;strong&gt;BIOS/MBR&lt;/strong&gt; boot. )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bootloader UEFI vs BIOS limitations. (Most of the linux bootloaders installed for one firmware type cannot launch or chainload bootloaders of the other firmware type. If Arch and Windows are dual-booting from same disk, then Arch should follow the same firmware boot mode and partitioning combination used by the installed Windows in the disk.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;windows-10-installation&#34;&gt;Windows 10 Installation&lt;/h2&gt;
+&lt;p&gt;create an windows Installer USB drive using rufus&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;In GNU/Linux&lt;/p&gt;
+&lt;p&gt;make a bootable USB on windows in VirtualBox&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In Windows&lt;/p&gt;
+&lt;p&gt;Using Rufus directly&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Boot the live environment, F12&lt;/p&gt;
+&lt;p&gt;install in windows 10 install Samsung SSD 970 EVO Plus 250GB&lt;/p&gt;
+&lt;h2 id=&#34;arch-linux-installation&#34;&gt;Arch Linux Installation&lt;/h2&gt;
+&lt;h3 id=&#34;download-the-last-iso-of-arch-linux&#34;&gt;Download the last iso of Arch Linux&lt;/h3&gt;
+&lt;h3 id=&#34;create-an-arch-linux-live-usb-using-rufus&#34;&gt;Create an Arch Linux live USB using rufus&lt;/h3&gt;
+&lt;h3 id=&#34;boot-the-live-environment&#34;&gt;Boot the live environment&lt;/h3&gt;
+&lt;p&gt;Pointing the current boot device to a drive containing the Arch installation media is typically achieved by pressing a key during the POST phase.&lt;/p&gt;
+&lt;p&gt;When the Arch menu appears, select &lt;em&gt;Boot Arch Linux&lt;/em&gt; and press &lt;code&gt;Enter&lt;/code&gt; to enter the installation environment.&lt;/p&gt;
+&lt;h3 id=&#34;set-the-keyboard-layout-and-console-fonts&#34;&gt;Set the keyboard layout and Console fonts&lt;/h3&gt;
+&lt;p&gt;If you have the 4K display, console fonts will be extremely small.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# setfont sun12x22
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;verify-the-boot-mode&#34;&gt;Verify the boot mode&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# ls /sys/firmware/efi/efivars
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;connect-to-the-internet&#34;&gt;Connect to the internet&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# wifi-menu
+# ping archlinux.org
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;update-the-system-clock&#34;&gt;Update the system clock&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# timedatectl set-ntp true
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;partition-the-disks&#34;&gt;Partition the disks&lt;/h3&gt;
+&lt;p&gt;When recognized by the live system, disks are assigned to a block device such as &lt;code&gt;/dev/sda&lt;/code&gt; or &lt;code&gt;/dev/nvme1n1&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# fdisk -l
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Results ending in &lt;code&gt;rom&lt;/code&gt;, &lt;code&gt;loop&lt;/code&gt; or &lt;code&gt;airoot&lt;/code&gt; may be ignored.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Disk /dev/nvme1n1: 232.91 GiB
+Disk model: Samsung SSD 960 EVO 250GB
+
+Disk /dev/nvme0n1: 232.91 GiB
+Disk model: Samsung SSD 970 EVO Plus 250GB
+
+Disk /dev/sda: 465.78 GiB
+Disk model: WDC WD5000LPLX-0
+&lt;/code&gt;&lt;/pre&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;h6 id=&#34;swap&#34;&gt;Swap&lt;/h6&gt;
+&lt;p&gt;On average desktop machines with up to 512 MiB RAM, the 2× rule is usually adequate; if a sufficient amount of RAM (more than 1024 MiB) is available, it may be possible to have a smaller swap partition.&lt;/p&gt;
+&lt;p&gt;To use hibernation (a.k.a suspend to disk) it is advised to create the swap partition at the size of RAM.&lt;/p&gt;
+&lt;h4 id=&#34;create-a-partition-table-and-partitions&#34;&gt;Create a partition table and partitions&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;# gdisk /dev/nvme1n1
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;create-new-table&#34;&gt;Create new table&lt;/h6&gt;
+&lt;p&gt;To create a new GUID Partition Table and clear all current partition data, type &lt;code&gt;o&lt;/code&gt; at the prompt. Skip this step if the table you require has already been created.&lt;/p&gt;
+&lt;h6 id=&#34;create-partitions&#34;&gt;Create partitions&lt;/h6&gt;
+&lt;p&gt;Create a new partition with the &lt;code&gt;n&lt;/code&gt; command. You must enter the partition number, first sector, last sector and the partition type.&lt;/p&gt;
+&lt;h6 id=&#34;partition-number&#34;&gt;Partition number&lt;/h6&gt;
+&lt;p&gt;A partition number is the number assigned to a partition, e.g. a partition with number &lt;code&gt;1&lt;/code&gt; on a disk &lt;code&gt;/dev/sda&lt;/code&gt; would be &lt;code&gt;/dev/sda1&lt;/code&gt;.&lt;/p&gt;
+&lt;h6 id=&#34;first-and-last-sector&#34;&gt;First and last sector&lt;/h6&gt;
+&lt;p&gt;relative terms by preceding the size with &lt;code&gt;+size&lt;/code&gt; or &lt;code&gt;-size&lt;/code&gt;. E.g. &lt;code&gt;+2G&lt;/code&gt; to specify a point 2 GiB after the default start sector, or &lt;code&gt;-200M&lt;/code&gt; to specify a point 200 MiB before the last available sector.&lt;/p&gt;
+&lt;h6 id=&#34;partition-type&#34;&gt;Partition type&lt;/h6&gt;
+&lt;p&gt;The default, &lt;code&gt;Linux filesystem&lt;/code&gt; (GUID &lt;code&gt;0FC63DAF-8483-4772-8E79-3D69D8477DE4&lt;/code&gt;, gdisk&#39;s internal code &lt;code&gt;8300&lt;/code&gt;), should be fine for most use cases.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;o (new partition table)
+y (confirm)
+
+Command (? for help): n
+Partition number (1-128, default 1): 
+First sector:
+Last sector or {+-}size{KMGTP}: +512M
+Hex code or GUID (L to show codes, Enter = 8300): ef00
+Changed type of partition to &#39;EFI System&#39;
+
+Command (? for help): n
+Partition number (2-128, default 2): 
+First sector:
+Last sector or {+-}size{KMGTP}: +8G
+Hex code or GUID (L to show codes, Enter = 8300): 8200
+Changed type of partition to &#39;Linux swap&#39;
+
+Command (? for help): n
+Partition number (3-128, default 3): 
+First sector:
+Last sector:
+Hex code or GUID (L to show codes, Enter = 8300): 8300
+Changed type of partition to &#39;Linux filesystem&#39;
+
+Command (? for help): w
+Do you want to proceed? (Y/N): y
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;Device            Start       End   Sectors   Size Type
+/dev/nvme1n1p1     2048   1050623   1048576   512M EFI System
+/dev/nvme1n1p2  1050624  17827839  16777216     8G Linux swap
+/dev/nvme1n1p3 17827840 488397134 470569295 224.4G Linux filesystem
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;format-the-partitions&#34;&gt;Format the partitions&lt;/h3&gt;
+&lt;p&gt;an &lt;code&gt;EFI system partition&lt;/code&gt; must contain a &lt;code&gt;FAT32&lt;/code&gt; file system&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;code&gt;mkfs.vfat&lt;/code&gt; is a symlink to &lt;code&gt;mkfs.fat&lt;/code&gt;, they are the same utility.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# mkfs.fat -F32 /dev/nvme1n1p1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you created a partition for swap, initialize it with &lt;code&gt;mkswap&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# mkswap /dev/nvme1n1p2
+# swapon /dev/nvme1n1p2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;the root partition will contain the &lt;code&gt;ext4&lt;/code&gt; file system&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# mkfs.ext4 /dev/nvme1n1p3
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;mount-the-file-systems&#34;&gt;Mount the file systems&lt;/h3&gt;
+&lt;p&gt;The simplest scenarios for mounting EFI system partition are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;mount ESP to &lt;code&gt;/efi&lt;/code&gt; and use a boot loader which is capable of accessing the kernel(s) and initramfs image(s) that are stored elsewhere (typically &lt;code&gt;/boot&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;mount ESP to &lt;code&gt;/boot&lt;/code&gt;. This is the preferred method when directly booting a EFISTUB kernel from UEFI.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tip: &lt;code&gt;/efi&lt;/code&gt; is a replacement for the previously popular (and possibly still used by other Linux distributions) ESP mountpoint &lt;code&gt;/boot/efi&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Mount the file system on the root partition to &lt;code&gt;/mnt&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# mount  /dev/nvme1n1p3  /mnt
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# mkdir -p /mnt/efi 
+# mount /dev/nvme1n1p1 /mnt/efi
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# mkdir -p /mnt/data
+# mount /dev/sda /mnt/data
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;select-the-mirrors&#34;&gt;Select the mirrors&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# vim /etc/pacman.d/mirrorlist
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The higher a mirror is placed in the list, the more priority it is given when downloading a package. You may want to edit the file accordingly, and move the geographically closest mirrors to the top of the list, although other criteria should be taken into account.&lt;/p&gt;
+&lt;p&gt;This file will later be copied to the new system by &lt;em&gt;pacstrap&lt;/em&gt;, so it is worth getting right.&lt;/p&gt;
+&lt;h3 id=&#34;install-essential-packages&#34;&gt;Install essential packages&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# pacstrap /mnt base base-devel linux-lts linux-lts-headers linux-firmware vim dhcpcd networkmanager
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;configure-the-linux-system&#34;&gt;Configure the Linux system&lt;/h3&gt;
+&lt;h4 id=&#34;fstab&#34;&gt;Fstab&lt;/h4&gt;
+&lt;p&gt;Generate an fstab file:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# genfstab -U /mnt &amp;gt;&amp;gt; /mnt/etc/fstab
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Check the resulting &lt;code&gt;/mnt/etc/fstab&lt;/code&gt; file, and edit it in case of errors.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# cat /mnt/etc/fstab
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;chroot&#34;&gt;Chroot&lt;/h4&gt;
+&lt;p&gt;Change root into the new system:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# arch-chroot /mnt
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;time-zone&#34;&gt;Time zone&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;# ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+# hwclock --systohc
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;localization&#34;&gt;Localization&lt;/h4&gt;
+&lt;p&gt;Uncomment &lt;code&gt;en_US.UTF-8 UTF-8&lt;/code&gt; and &lt;code&gt;zh_CN.UTF-8 UTF-8&lt;/code&gt; locales in &lt;code&gt;/etc/locale.gen&lt;/code&gt;, and generate them with:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# locale-gen
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Create the &lt;code&gt;locale.conf&lt;/code&gt; file, and set the &lt;code&gt;LANG&lt;/code&gt; variable accordingly:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# vim /etc/locale.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;LANG=en_US.UTF-8
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you set the keyboard layout, make the changes persistent in &lt;code&gt;vconsole.conf&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# vim /etc/vconsole.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;Font=sun12x22
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;network-configuration&#34;&gt;Network configuration&lt;/h4&gt;
+&lt;p&gt;Create the &lt;code&gt;hostname&lt;/code&gt; file:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# vim /etc/hostname
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;myhostname
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Add matching entries to hosts:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# vim /etc/hosts
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;127.0.0.1	localhost
+::1		localhost
+127.0.1.1	myhostname.localdomain	myhostname
+
+104.18.57.236 free-ss.site
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If the system has a permanent IP address, it should be used instead of &lt;code&gt;127.0.1.1&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# pacman -S vim iputils networkmanager
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# systemctl enable NetworkManager
+# systemctl enable dhcpcd
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;root-password&#34;&gt;Root password&lt;/h4&gt;
+&lt;p&gt;Set the root password:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# passwd
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;#&lt;/code&gt; Represents executing commands as Root users, &lt;code&gt;$&lt;/code&gt; Represents executing commands as ordinary users&lt;/p&gt;
+&lt;h6 id=&#34;add-a-new-user&#34;&gt;Add a new user&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;# useradd -m username
+# passwd username
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;install-sudo&#34;&gt;Install sudo&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;# pacman -S sudo
+# vim /etc/sudoers
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;username  ALL=(ALL) ALL
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;boot-loader-for-uefi-systems&#34;&gt;Boot loader for UEFI systems&lt;/h4&gt;
+&lt;h6 id=&#34;detecting-other-operating-systems&#34;&gt;Detecting other operating systems&lt;/h6&gt;
+&lt;p&gt;To have &lt;em&gt;&lt;code&gt;grub-mkconfig&lt;/code&gt;&lt;/em&gt; search for other installed systems and automatically add them to the menu, install the &lt;code&gt;os-prober&lt;/code&gt;  and &lt;code&gt;ntfs-3g&lt;/code&gt; package and &lt;code&gt;mount&lt;/code&gt; the partitions that contain the other systems. Then re-run &lt;em&gt;&lt;code&gt;grub-mkconfig&lt;/code&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# pacman -S os-prober ntfs-3g
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;microcode-updates&#34;&gt;microcode updates&lt;/h6&gt;
+&lt;p&gt;Choose and install a Linux-capable boot loader. If you have an Intel or AMD CPU, enable &lt;code&gt;microcode&lt;/code&gt; updates in addition.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# pacman -S intel-ucode
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;install-a-linux-capable-boot-loader&#34;&gt;install a Linux-capable boot loader&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;# pacman -S grub efibootmgr
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;EFI directory  must be EPS mount point.&lt;/p&gt;
+&lt;p&gt;Choose a bootloader identifier, here named &lt;code&gt;GRUB&lt;/code&gt;. A directory of that name will be created in &lt;code&gt;/efi/EFI/&lt;/code&gt; to store the EFI binary and this is the name that will appear in the UEFI boot menu to identify the GRUB boot entry.&lt;/p&gt;
+&lt;p&gt;Execute the following command to install the GRUB EFI application &lt;code&gt;grubx64.efi&lt;/code&gt; to &lt;code&gt;/efi/EFI/GRUB/&lt;/code&gt; and install its modules to &lt;code&gt;/boot/grub/x86_64-efi/&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=grub
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# grub-mkconfig -o /boot/grub/grub.cfg
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;check&#34;&gt;Check&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;vim /boot/grub/grub.cfg
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;checks it for syntax errors, and entry point in &lt;code&gt;menuentry&lt;/code&gt; menu.&lt;/p&gt;
+&lt;h3 id=&#34;reboot&#34;&gt;Reboot&lt;/h3&gt;
+&lt;p&gt;Exit the chroot environment by typing &lt;code&gt;exit&lt;/code&gt; or pressing &lt;code&gt;Ctrl+d&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;umount -R /mnt/efi
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Optionally manually unmount all the partitions with &lt;code&gt;umount -R /mnt&lt;/code&gt;: this allows noticing any &amp;ldquo;busy&amp;rdquo; partitions, and finding the cause with fuser.&lt;/p&gt;
+&lt;p&gt;Finally, restart the machine by typing &lt;code&gt;reboot&lt;/code&gt;: any partitions still mounted will be automatically unmounted by &lt;em&gt;systemd&lt;/em&gt;. Remember to remove the installation media and then login into the new system with the root account.&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org/index.php/EFI_system_partition&#34;&gt;https://wiki.archlinux.org/index.php/EFI_system_partition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.viseator.com/2017/05/17/arch_install/&#34;&gt;https://www.viseator.com/2017/05/17/arch_install/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

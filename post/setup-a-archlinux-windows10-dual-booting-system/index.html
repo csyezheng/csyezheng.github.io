@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Setup a Archlinux / Windows10 dual booting system - YeZheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="Before   Check the hardware, three disks on my Lenovo ThinkPad P50
+  Samsung SSD 970 EVO Plus 250GB for installing windows
+  Samsung SSD 960 EVO 250GB for installling archlinux
+  WDC WD5000LPLX-0 HHD 500GB for data storage
+    Disable Windows Fast Startup if start from windows
+  Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)" />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<link rel="canonical" href="http://csyezheng.github.io/post/setup-a-archlinux-windows10-dual-booting-system/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.0995afa14b62cd93e93cfc066b646c4c17a3eddca0e9d52a1d9dcf5d90aaacd3.css" integrity="sha256-CZWvoUtizZPpPPwGa2RsTBej7dyg6dUqHZ3PXZCqrNM=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="Setup a Archlinux / Windows10 dual booting system" />
+<meta property="og:description" content="Before   Check the hardware, three disks on my Lenovo ThinkPad P50
+  Samsung SSD 970 EVO Plus 250GB for installing windows
+  Samsung SSD 960 EVO 250GB for installling archlinux
+  WDC WD5000LPLX-0 HHD 500GB for data storage
+    Disable Windows Fast Startup if start from windows
+  Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://csyezheng.github.io/post/setup-a-archlinux-windows10-dual-booting-system/" />
+<meta property="article:published_time" content="2017-09-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-09-25T00:00:00+00:00" />
+<meta itemprop="name" content="Setup a Archlinux / Windows10 dual booting system">
+<meta itemprop="description" content="Before   Check the hardware, three disks on my Lenovo ThinkPad P50
+  Samsung SSD 970 EVO Plus 250GB for installing windows
+  Samsung SSD 960 EVO 250GB for installling archlinux
+  WDC WD5000LPLX-0 HHD 500GB for data storage
+    Disable Windows Fast Startup if start from windows
+  Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)">
+<meta itemprop="datePublished" content="2017-09-25T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-09-25T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1413">
+
+
+
+<meta itemprop="keywords" content="archlinux,linux,installation," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Setup a Archlinux / Windows10 dual booting system"/>
+<meta name="twitter:description" content="Before   Check the hardware, three disks on my Lenovo ThinkPad P50
+  Samsung SSD 970 EVO Plus 250GB for installing windows
+  Samsung SSD 960 EVO 250GB for installling archlinux
+  WDC WD5000LPLX-0 HHD 500GB for data storage
+    Disable Windows Fast Startup if start from windows
+  Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">YeZheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      YeZheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Setup a Archlinux / Windows10 dual booting system</h1>
+      
+      <div class="post-meta">
+        <time datetime="2017-09-25" class="post-time">
+          2017-09-25
+        </time>
+        <div class="post-category">
+            <a href="http://csyezheng.github.io/categories/archlinux/"> archlinux </a>
+            <a href="http://csyezheng.github.io/categories/linux/"> linux </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#before">Before</a></li>
+    <li><a href="#windows-10-installation">Windows 10 Installation</a></li>
+    <li><a href="#arch-linux-installation">Arch Linux Installation</a>
+      <ul>
+        <li><a href="#download-the-last-iso-of-arch-linux">Download the last iso of Arch Linux</a></li>
+        <li><a href="#create-an-arch-linux-live-usb-using-rufus">Create an Arch Linux live USB using rufus</a></li>
+        <li><a href="#boot-the-live-environment">Boot the live environment</a></li>
+        <li><a href="#set-the-keyboard-layout-and-console-fonts">Set the keyboard layout and Console fonts</a></li>
+        <li><a href="#verify-the-boot-mode">Verify the boot mode</a></li>
+        <li><a href="#connect-to-the-internet">Connect to the internet</a></li>
+        <li><a href="#update-the-system-clock">Update the system clock</a></li>
+        <li><a href="#partition-the-disks">Partition the disks</a></li>
+        <li><a href="#format-the-partitions">Format the partitions</a></li>
+        <li><a href="#mount-the-file-systems">Mount the file systems</a></li>
+        <li><a href="#select-the-mirrors">Select the mirrors</a></li>
+        <li><a href="#install-essential-packages">Install essential packages</a></li>
+        <li><a href="#configure-the-linux-system">Configure the Linux system</a></li>
+        <li><a href="#check">Check</a></li>
+        <li><a href="#reboot">Reboot</a></li>
+      </ul>
+    </li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h2 id="before">Before</h2>
+<ol>
+<li>
+<p>Check the hardware, three disks on my Lenovo ThinkPad P50</p>
+<ul>
+<li>
+<p>Samsung SSD 970 EVO Plus 250GB for installing windows</p>
+</li>
+<li>
+<p>Samsung SSD 960 EVO 250GB for installling archlinux</p>
+</li>
+<li>
+<p>WDC WD5000LPLX-0 HHD 500GB for data storage</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Disable Windows Fast Startup if start from windows</p>
+</li>
+<li>
+<p>Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)</p>
+</li>
+<li>
+<p>Windows UEFI vs BIOS limitations. (In case where Windows and Linux dual boot from the same disk, it is advisable to follow the method used by Windows, ie. either go for <strong>UEFI/GPT</strong> boot or <strong>BIOS/MBR</strong> boot. )</p>
+</li>
+<li>
+<p>Bootloader UEFI vs BIOS limitations. (Most of the linux bootloaders installed for one firmware type cannot launch or chainload bootloaders of the other firmware type. If Arch and Windows are dual-booting from same disk, then Arch should follow the same firmware boot mode and partitioning combination used by the installed Windows in the disk.)</p>
+</li>
+</ol>
+<h2 id="windows-10-installation">Windows 10 Installation</h2>
+<p>create an windows Installer USB drive using rufus</p>
+<ul>
+<li>
+<p>In GNU/Linux</p>
+<p>make a bootable USB on windows in VirtualBox</p>
+</li>
+<li>
+<p>In Windows</p>
+<p>Using Rufus directly</p>
+</li>
+</ul>
+<p>Boot the live environment, F12</p>
+<p>install in windows 10 install Samsung SSD 970 EVO Plus 250GB</p>
+<h2 id="arch-linux-installation">Arch Linux Installation</h2>
+<h3 id="download-the-last-iso-of-arch-linux">Download the last iso of Arch Linux</h3>
+<h3 id="create-an-arch-linux-live-usb-using-rufus">Create an Arch Linux live USB using rufus</h3>
+<h3 id="boot-the-live-environment">Boot the live environment</h3>
+<p>Pointing the current boot device to a drive containing the Arch installation media is typically achieved by pressing a key during the POST phase.</p>
+<p>When the Arch menu appears, select <em>Boot Arch Linux</em> and press <code>Enter</code> to enter the installation environment.</p>
+<h3 id="set-the-keyboard-layout-and-console-fonts">Set the keyboard layout and Console fonts</h3>
+<p>If you have the 4K display, console fonts will be extremely small.</p>
+<pre><code># setfont sun12x22
+</code></pre><h3 id="verify-the-boot-mode">Verify the boot mode</h3>
+<pre><code># ls /sys/firmware/efi/efivars
+</code></pre><h3 id="connect-to-the-internet">Connect to the internet</h3>
+<pre><code># wifi-menu
+# ping archlinux.org
+</code></pre><h3 id="update-the-system-clock">Update the system clock</h3>
+<pre><code># timedatectl set-ntp true
+</code></pre><h3 id="partition-the-disks">Partition the disks</h3>
+<p>When recognized by the live system, disks are assigned to a block device such as <code>/dev/sda</code> or <code>/dev/nvme1n1</code>.</p>
+<pre><code># fdisk -l
+</code></pre><p>Results ending in <code>rom</code>, <code>loop</code> or <code>airoot</code> may be ignored.</p>
+<pre><code>Disk /dev/nvme1n1: 232.91 GiB
+Disk model: Samsung SSD 960 EVO 250GB
+
+Disk /dev/nvme0n1: 232.91 GiB
+Disk model: Samsung SSD 970 EVO Plus 250GB
+
+Disk /dev/sda: 465.78 GiB
+Disk model: WDC WD5000LPLX-0
+</code></pre><!-- raw HTML omitted -->
+<h6 id="swap">Swap</h6>
+<p>On average desktop machines with up to 512 MiB RAM, the 2× rule is usually adequate; if a sufficient amount of RAM (more than 1024 MiB) is available, it may be possible to have a smaller swap partition.</p>
+<p>To use hibernation (a.k.a suspend to disk) it is advised to create the swap partition at the size of RAM.</p>
+<h4 id="create-a-partition-table-and-partitions">Create a partition table and partitions</h4>
+<pre><code># gdisk /dev/nvme1n1
+</code></pre><h6 id="create-new-table">Create new table</h6>
+<p>To create a new GUID Partition Table and clear all current partition data, type <code>o</code> at the prompt. Skip this step if the table you require has already been created.</p>
+<h6 id="create-partitions">Create partitions</h6>
+<p>Create a new partition with the <code>n</code> command. You must enter the partition number, first sector, last sector and the partition type.</p>
+<h6 id="partition-number">Partition number</h6>
+<p>A partition number is the number assigned to a partition, e.g. a partition with number <code>1</code> on a disk <code>/dev/sda</code> would be <code>/dev/sda1</code>.</p>
+<h6 id="first-and-last-sector">First and last sector</h6>
+<p>relative terms by preceding the size with <code>+size</code> or <code>-size</code>. E.g. <code>+2G</code> to specify a point 2 GiB after the default start sector, or <code>-200M</code> to specify a point 200 MiB before the last available sector.</p>
+<h6 id="partition-type">Partition type</h6>
+<p>The default, <code>Linux filesystem</code> (GUID <code>0FC63DAF-8483-4772-8E79-3D69D8477DE4</code>, gdisk's internal code <code>8300</code>), should be fine for most use cases.</p>
+<pre><code>o (new partition table)
+y (confirm)
+
+Command (? for help): n
+Partition number (1-128, default 1): 
+First sector:
+Last sector or {+-}size{KMGTP}: +512M
+Hex code or GUID (L to show codes, Enter = 8300): ef00
+Changed type of partition to 'EFI System'
+
+Command (? for help): n
+Partition number (2-128, default 2): 
+First sector:
+Last sector or {+-}size{KMGTP}: +8G
+Hex code or GUID (L to show codes, Enter = 8300): 8200
+Changed type of partition to 'Linux swap'
+
+Command (? for help): n
+Partition number (3-128, default 3): 
+First sector:
+Last sector:
+Hex code or GUID (L to show codes, Enter = 8300): 8300
+Changed type of partition to 'Linux filesystem'
+
+Command (? for help): w
+Do you want to proceed? (Y/N): y
+</code></pre><pre><code>Device            Start       End   Sectors   Size Type
+/dev/nvme1n1p1     2048   1050623   1048576   512M EFI System
+/dev/nvme1n1p2  1050624  17827839  16777216     8G Linux swap
+/dev/nvme1n1p3 17827840 488397134 470569295 224.4G Linux filesystem
+</code></pre><h3 id="format-the-partitions">Format the partitions</h3>
+<p>an <code>EFI system partition</code> must contain a <code>FAT32</code> file system</p>
+<p><strong>Note:</strong> <code>mkfs.vfat</code> is a symlink to <code>mkfs.fat</code>, they are the same utility.</p>
+<pre><code># mkfs.fat -F32 /dev/nvme1n1p1
+</code></pre><p>If you created a partition for swap, initialize it with <code>mkswap</code>:</p>
+<pre><code># mkswap /dev/nvme1n1p2
+# swapon /dev/nvme1n1p2
+</code></pre><p>the root partition will contain the <code>ext4</code> file system</p>
+<pre><code># mkfs.ext4 /dev/nvme1n1p3
+</code></pre><h3 id="mount-the-file-systems">Mount the file systems</h3>
+<p>The simplest scenarios for mounting EFI system partition are:</p>
+<ul>
+<li>mount ESP to <code>/efi</code> and use a boot loader which is capable of accessing the kernel(s) and initramfs image(s) that are stored elsewhere (typically <code>/boot</code>).</li>
+<li>mount ESP to <code>/boot</code>. This is the preferred method when directly booting a EFISTUB kernel from UEFI.</li>
+</ul>
+<p>Tip: <code>/efi</code> is a replacement for the previously popular (and possibly still used by other Linux distributions) ESP mountpoint <code>/boot/efi</code>.</p>
+<p>Mount the file system on the root partition to <code>/mnt</code>:</p>
+<pre><code># mount  /dev/nvme1n1p3  /mnt
+</code></pre><pre><code># mkdir -p /mnt/efi 
+# mount /dev/nvme1n1p1 /mnt/efi
+</code></pre><pre><code># mkdir -p /mnt/data
+# mount /dev/sda /mnt/data
+</code></pre><h3 id="select-the-mirrors">Select the mirrors</h3>
+<pre><code># vim /etc/pacman.d/mirrorlist
+</code></pre><p>The higher a mirror is placed in the list, the more priority it is given when downloading a package. You may want to edit the file accordingly, and move the geographically closest mirrors to the top of the list, although other criteria should be taken into account.</p>
+<p>This file will later be copied to the new system by <em>pacstrap</em>, so it is worth getting right.</p>
+<h3 id="install-essential-packages">Install essential packages</h3>
+<pre><code># pacstrap /mnt base base-devel linux-lts linux-lts-headers linux-firmware vim dhcpcd networkmanager
+</code></pre><h3 id="configure-the-linux-system">Configure the Linux system</h3>
+<h4 id="fstab">Fstab</h4>
+<p>Generate an fstab file:</p>
+<pre><code># genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</code></pre><p>Check the resulting <code>/mnt/etc/fstab</code> file, and edit it in case of errors.</p>
+<pre><code># cat /mnt/etc/fstab
+</code></pre><h4 id="chroot">Chroot</h4>
+<p>Change root into the new system:</p>
+<pre><code># arch-chroot /mnt
+</code></pre><h4 id="time-zone">Time zone</h4>
+<pre><code># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+# hwclock --systohc
+</code></pre><h4 id="localization">Localization</h4>
+<p>Uncomment <code>en_US.UTF-8 UTF-8</code> and <code>zh_CN.UTF-8 UTF-8</code> locales in <code>/etc/locale.gen</code>, and generate them with:</p>
+<pre><code># locale-gen
+</code></pre><p>Create the <code>locale.conf</code> file, and set the <code>LANG</code> variable accordingly:</p>
+<pre><code># vim /etc/locale.conf
+</code></pre><pre><code>LANG=en_US.UTF-8
+</code></pre><p>If you set the keyboard layout, make the changes persistent in <code>vconsole.conf</code>:</p>
+<pre><code># vim /etc/vconsole.conf
+</code></pre><pre><code>Font=sun12x22
+</code></pre><h4 id="network-configuration">Network configuration</h4>
+<p>Create the <code>hostname</code> file:</p>
+<pre><code># vim /etc/hostname
+</code></pre><pre><code>myhostname
+</code></pre><p>Add matching entries to hosts:</p>
+<pre><code># vim /etc/hosts
+</code></pre><pre><code>127.0.0.1	localhost
+::1		localhost
+127.0.1.1	myhostname.localdomain	myhostname
+
+104.18.57.236 free-ss.site
+</code></pre><p>If the system has a permanent IP address, it should be used instead of <code>127.0.1.1</code>.</p>
+<pre><code># pacman -S vim iputils networkmanager
+</code></pre><pre><code># systemctl enable NetworkManager
+# systemctl enable dhcpcd
+</code></pre><h4 id="root-password">Root password</h4>
+<p>Set the root password:</p>
+<pre><code># passwd
+</code></pre><p><code>#</code> Represents executing commands as Root users, <code>$</code> Represents executing commands as ordinary users</p>
+<h6 id="add-a-new-user">Add a new user</h6>
+<pre><code># useradd -m username
+# passwd username
+</code></pre><h6 id="install-sudo">Install sudo</h6>
+<pre><code># pacman -S sudo
+# vim /etc/sudoers
+</code></pre><pre><code>username  ALL=(ALL) ALL
+</code></pre><h4 id="boot-loader-for-uefi-systems">Boot loader for UEFI systems</h4>
+<h6 id="detecting-other-operating-systems">Detecting other operating systems</h6>
+<p>To have <em><code>grub-mkconfig</code></em> search for other installed systems and automatically add them to the menu, install the <code>os-prober</code>  and <code>ntfs-3g</code> package and <code>mount</code> the partitions that contain the other systems. Then re-run <em><code>grub-mkconfig</code></em>.</p>
+<pre><code># pacman -S os-prober ntfs-3g
+</code></pre><h6 id="microcode-updates">microcode updates</h6>
+<p>Choose and install a Linux-capable boot loader. If you have an Intel or AMD CPU, enable <code>microcode</code> updates in addition.</p>
+<pre><code># pacman -S intel-ucode
+</code></pre><h6 id="install-a-linux-capable-boot-loader">install a Linux-capable boot loader</h6>
+<pre><code># pacman -S grub efibootmgr
+</code></pre><p>EFI directory  must be EPS mount point.</p>
+<p>Choose a bootloader identifier, here named <code>GRUB</code>. A directory of that name will be created in <code>/efi/EFI/</code> to store the EFI binary and this is the name that will appear in the UEFI boot menu to identify the GRUB boot entry.</p>
+<p>Execute the following command to install the GRUB EFI application <code>grubx64.efi</code> to <code>/efi/EFI/GRUB/</code> and install its modules to <code>/boot/grub/x86_64-efi/</code>.</p>
+<pre><code># grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=grub
+</code></pre><pre><code># grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre><h3 id="check">Check</h3>
+<pre><code>vim /boot/grub/grub.cfg
+</code></pre><p>checks it for syntax errors, and entry point in <code>menuentry</code> menu.</p>
+<h3 id="reboot">Reboot</h3>
+<p>Exit the chroot environment by typing <code>exit</code> or pressing <code>Ctrl+d</code>.</p>
+<pre><code>umount -R /mnt/efi
+</code></pre><p>Optionally manually unmount all the partitions with <code>umount -R /mnt</code>: this allows noticing any &ldquo;busy&rdquo; partitions, and finding the cause with fuser.</p>
+<p>Finally, restart the machine by typing <code>reboot</code>: any partitions still mounted will be automatically unmounted by <em>systemd</em>. Remember to remove the installation media and then login into the new system with the root account.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://wiki.archlinux.org/index.php/EFI_system_partition">https://wiki.archlinux.org/index.php/EFI_system_partition</a></li>
+<li><a href="https://www.viseator.com/2017/05/17/arch_install/">https://www.viseator.com/2017/05/17/arch_install/</a></li>
+</ol>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2017-09-25
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://csyezheng.github.io/tags/archlinux/">archlinux</a>
+          <a href="http://csyezheng.github.io/tags/linux/">linux</a>
+          <a href="http://csyezheng.github.io/tags/installation/">installation</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/post-installation-for-archlinux/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">Post-installation for archlinux</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
