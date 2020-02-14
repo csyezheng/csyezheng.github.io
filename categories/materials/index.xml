@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>materials on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/categories/materials/</link>
+    <description>Recent content in materials on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 08 Dec 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/categories/materials/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Materials</title>
+      <link>http://csyezheng.github.io/post/materials/materials/</link>
+      <pubDate>Thu, 08 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/materials/materials/</guid>
+      <description>Linux Linux Reference Books  Michael Kerrisk, The Linux Programming Interface, No Starch Press, 2010.  The essential Linux system programming guide by the maintainer of the Linux man pages. Clear, authoritative, and encyclopedic. Includes file I/O, processes, signals, time, threads, shared libraries, IPC, synchronization, and sockets. A great book.    Online GDB Materials  Beej&#39;s Quick Guide to GDB (based on the very handy gdb -tui mode) Two-page x86-64 GDB cheat sheet (pdf, txt)  Online C and Linux Materials  CS:APP3e Unix FAQ Prof.</description>
+    </item>
+    
+  </channel>
+</rss>

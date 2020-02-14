@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tools on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/tools/</link>
+    <description>Recent content in tools on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 30 Oct 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git cheat sheet </title>
+      <link>http://csyezheng.github.io/post/any-path/git/</link>
+      <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/any-path/git/</guid>
+      <description>Create Clone an existing repository
+$ git clone ssh://user@domain.tld/repo.git Clone an existing repository and all its sub-modules recursively
+$ git clone --recurse-submodules ssh://user@domain.tld/repo.git Create a new local repository
+$ git init Configuration Set the name attached to all your commits
+$ git config [--global] user.name &amp;lt;name&amp;gt; Set the email attached to all your commits
+$ git config [--global] user.email &amp;lt;email&amp;gt; Set colorization of command line output for all repos
+$ git config [--global] color.</description>
+    </item>
+    
+    <item>
+      <title>vim tutorial</title>
+      <link>http://csyezheng.github.io/post/any-path/vim/</link>
+      <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/any-path/vim/</guid>
+      <description>vimtutor To move the cursor, press the h, j, k, l keys as indicated.
+:q! exits the editor, DISCARDING any changes you have made.
+Press x to delete the character under the cursor.
+Use :wq to save a file and exit.
+Press i to insert text.
+Type a to insert text AFTER the cursor.
+Press A to append text.
+Type o to open a line below the cursor and place you in Insert mode.</description>
+    </item>
+    
+  </channel>
+</rss>

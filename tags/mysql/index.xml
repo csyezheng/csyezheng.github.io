@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mySQL on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/mysql/</link>
+    <description>Recent content in mySQL on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MySQL</title>
+      <link>http://csyezheng.github.io/post/back-end/mysql/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/mysql/</guid>
+      <description>MySQL Shell Guide Connecting to and Disconnecting from the Server shell&amp;gt; mysql -h host -u user -p mysql&amp;gt; QUIT User Account Management Adding User Accounts shell&amp;gt; mysql --user=root --password mysql shell&amp;gt; mysql --u root -p mysql mysql&amp;gt; CREATE USER &#39;custom&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;localhost&#39; -&amp;gt; WITH GRANT OPTION; mysql&amp;gt; CREATE USER &#39;custom&#39;@&#39;%&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;%&#39; -&amp;gt; WITH GRANT OPTION; mysql&amp;gt; CREATE USER &#39;admin&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT RELOAD,PROCESS ON *.</description>
+    </item>
+    
+  </channel>
+</rss>

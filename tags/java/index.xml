@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/java/</link>
+    <description>Recent content in Java on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>spring-boot</title>
+      <link>http://csyezheng.github.io/post/programming-languages/java/spring-boot/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/java/spring-boot/</guid>
+      <description>Building Java Projects with Maven Install Maven Maven is downloadable as a zip file at https://maven.apache.org/download.cgi.
+Once you have downloaded the zip file, unzip it to your computer. Then add the bin folder to your path.
+$ mvn -v Define a simple Maven build Maven projects are defined with an XML file named pom.xml. Create a file named pom.xml at the root of the project (i.e. put it next to the src folder) and give it the following contents:</description>
+    </item>
+    
+    <item>
+      <title>The Java™ Tutorials</title>
+      <link>http://csyezheng.github.io/post/programming-languages/java/the-java-tutorials/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/java/the-java-tutorials/</guid>
+      <description>https://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html
+Basics Getting Started The Java programming language is a high-level language that can be characterized by all of the following buzzwords:
+ Simple Object oriented Distributed Multithreaded Dynamic Architecture neutral Portable High performance Robust Secure  An overview of the software development process:
+all source code is first written in plain text files ending with the .java extension. Those source files are then compiled into .class files by the javac compiler.</description>
+    </item>
+    
+  </channel>
+</rss>

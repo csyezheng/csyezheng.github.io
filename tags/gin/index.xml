@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gin on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/gin/</link>
+    <description>Recent content in Gin on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/tags/gin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gin</title>
+      <link>http://csyezheng.github.io/post/programming-languages/go/gin/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/go/gin/</guid>
+      <description>sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
+$ go get github.com/gin-contrib/sessions import &amp;quot;github.com/gin-contrib/sessions&amp;quot; cookie-based Example import ( &amp;quot;github.com/gin-contrib/sessions&amp;quot; &amp;quot;github.com/gin-contrib/sessions/cookie&amp;quot; &amp;quot;github.com/gin-gonic/gin&amp;quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&amp;quot;secret&amp;quot;)) r.Use(sessions.Sessions(&amp;quot;mysession&amp;quot;, store)) r.GET(&amp;quot;/incr&amp;quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&amp;quot;count&amp;quot;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&amp;quot;count&amp;quot;, count) session.</description>
+    </item>
+    
+  </channel>
+</rss>

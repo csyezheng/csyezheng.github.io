@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Django on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/django/</link>
+    <description>Recent content in Django on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/tags/django/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Scraping with Scrapy and Django Integration</title>
+      <link>http://csyezheng.github.io/post/back-end/scrapy-with-django/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/scrapy-with-django/</guid>
+      <description>Installing Dependencies (Optional) $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple $ python -m pip install --user virtualenv $ python -m pip install --user virtualenvwrapper $ vim ~/.bashrc export WORKON_HOME=$HOME/.virtualenvs export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv source $HOME/.local/bin/virtualenvwrapper.sh $ source ~/.bashrc $ mkvirtualenv stock-screener pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results Creating a Django Project $ django-admin startproject stock_screener $ cd stock_screener $ mkdir stock_screener/apps/basic_info $ django-admin startapp basic_info stock_screener/apps/basic_info $ mkdir stock_screener/apps/northbound $ django-admin startapp northbound stock_screener/apps/northbound $ mkdir stock_screener/apps/financial_metrics $ django-admin startapp financial_metrics stock_screener/apps/financial_metrics $ mkdir stock_screener/apps/quotes $ django-admin startapp quotes stock_screener/apps/quotes $ mkdir stock_screener/apps/jobs $ django-admin startapp jobs stock_screener/apps/jobs Cannot add backslash suffix when run startapp command.</description>
+    </item>
+    
+    <item>
+      <title>Django oauth2 provider</title>
+      <link>http://csyezheng.github.io/post/back-end/oauth2/</link>
+      <pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/oauth2/</guid>
+      <description>Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... &#39;provider&#39;, &#39;provider.oauth2&#39;, ) # urls.py url(r&#39;^oauth2/&#39;, include(&#39;provider.oauth2.urls&#39;, namespace = &#39;oauth2&#39;)), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ?   Create a client entry in your database
+To find out which type of client you need to create, read Section 2.1.
+To create a new entry simply use the Django admin panel.</description>
+    </item>
+    
+    <item>
+      <title>edx oauth</title>
+      <link>http://csyezheng.github.io/post/back-end/edx_oauth/</link>
+      <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/edx_oauth/</guid>
+      <description>Request URL: http://localhost:18381/api-auth/login/?next=/api/v1/courses/
+Query String Parameters: next: /api/v1/courses/
+Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18381/login/edx-oidc/?next=/api/v1/courses/
+Query String Parameters: next: /api/v1/courses/
+Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18000/oauth2/authorize/?redirect_uri=http://localhost:18381/complete/edx-oidc/&amp;amp;client_id=discovery-key&amp;amp;scope=openid+profile+email+permissions&amp;amp;response_type=code&amp;amp;state=W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x
+Query String Parameters:
+ redirect_uri: http://localhost:18381/complete/edx-oidc/ client_id: discovery-key scope: openid profile email permissions response_type: code state: W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x  Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18000/oauth2/authorize/confirm
+Request Method: GET</description>
+    </item>
+    
+    <item>
+      <title>Wagtail</title>
+      <link>http://csyezheng.github.io/post/back-end/wagtail/</link>
+      <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/wagtail/</guid>
+      <description>Getting started setting up a brand new Wagtail project $ pip install wagtail $ wagtail start mysite $ cd mysite $ pip install -r requirements.txt $ ./manage.py migrate $ ./manage.py createsuperuser $ ./manage.py runserver http://localhost:8000
+http://localhost:8000/admin/
+Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page.</description>
+    </item>
+    
+    <item>
+      <title>Getting start with Django</title>
+      <link>http://csyezheng.github.io/post/back-end/django/</link>
+      <pubDate>Mon, 22 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/django/</guid>
+      <description>First steps  Requests and responses Models and the admin site Views and templates Forms and generic views Testing Static files Customizing the admin site  Advanced Tutorials: How to write reusable apps | Writing your first patch for Django
+The model layer Models Generally, each model maps to a single database table.
+from django.db import models class Person(models.Model): name = models.CharField(max_length=30)  The name of the table, myapp_person, is automatically derived from the name of the app and the model class.</description>
+    </item>
+    
+  </channel>
+</rss>

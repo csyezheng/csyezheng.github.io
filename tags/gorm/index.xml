@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gorm on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/gorm/</link>
+    <description>Recent content in gorm on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/tags/gorm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>generate-model-structs-from-database</title>
+      <link>http://csyezheng.github.io/post/programming-languages/go/generate-model-structs-from-database/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/go/generate-model-structs-from-database/</guid>
+      <description>Generate gorm model structs from database
+  https://github.com/smallnest/gen
+  https://github.com/wantedly/pq2gorm
+  https://github.com/go-xorm/cmd
+  </description>
+    </item>
+    
+    <item>
+      <title>gorm</title>
+      <link>http://csyezheng.github.io/post/programming-languages/go/gorm/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/go/gorm/</guid>
+      <description>struct name and table name type User struct {} // default table name is `users` // Set User&#39;s table name to be `profiles` func (User) TableName() string { return &amp;quot;profiles&amp;quot; } gorm不定条件查询和分页操作 making dynamic query and pagination using gorm course := models.Course{} // The global db variable must be assigned to the local db variable. //</description>
+    </item>
+    
+  </channel>
+</rss>

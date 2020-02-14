@@ -1,31 +1,148 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on YeZheng&#39;s Blog</title>
+    <title>Categories on Ye Zheng&#39;s Blog</title>
     <link>http://csyezheng.github.io/categories/</link>
-    <description>Recent content in Categories on YeZheng&#39;s Blog</description>
+    <description>Recent content in Categories on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 26 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://csyezheng.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>archlinux</title>
-      <link>http://csyezheng.github.io/categories/archlinux/</link>
-      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      <title>back-end</title>
+      <link>http://csyezheng.github.io/categories/back-end/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/categories/archlinux/</guid>
+      <guid>http://csyezheng.github.io/categories/back-end/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>linux</title>
-      <link>http://csyezheng.github.io/categories/linux/</link>
+      <title>Cpp</title>
+      <link>http://csyezheng.github.io/categories/cpp/</link>
+      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/cpp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming-languages</title>
+      <link>http://csyezheng.github.io/categories/programming-languages/</link>
+      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/programming-languages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevOps</title>
+      <link>http://csyezheng.github.io/categories/devops/</link>
+      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>http://csyezheng.github.io/categories/go/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://csyezheng.github.io/categories/java/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>http://csyezheng.github.io/categories/javascript/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://csyezheng.github.io/categories/python/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scala</title>
+      <link>http://csyezheng.github.io/categories/scala/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/scala/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TypeScript</title>
+      <link>http://csyezheng.github.io/categories/typescript/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/typescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thinking</title>
+      <link>http://csyezheng.github.io/categories/thinking/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/thinking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deep learning</title>
+      <link>http://csyezheng.github.io/categories/deep-learning/</link>
+      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>any-path</title>
+      <link>http://csyezheng.github.io/categories/any-path/</link>
       <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/categories/linux/</guid>
+      <guid>http://csyezheng.github.io/categories/any-path/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>front-end</title>
+      <link>http://csyezheng.github.io/categories/front-end/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/front-end/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>materials</title>
+      <link>http://csyezheng.github.io/categories/materials/</link>
+      <pubDate>Thu, 08 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/materials/</guid>
       <description></description>
     </item>
     

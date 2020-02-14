@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DOM on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/dom/</link>
+    <description>Recent content in DOM on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/tags/dom/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DOM</title>
+      <link>http://csyezheng.github.io/post/front-end/dom/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/front-end/dom/</guid>
+      <description>所有 HTML 元素被定义为对象，而编程接口则是对象方法和对象属性。 方法是您能够执行的动作（比如添加或修改元素）。 属性是您能够获取或设置的值（比如节点</description>
+    </item>
+    
+  </channel>
+</rss>

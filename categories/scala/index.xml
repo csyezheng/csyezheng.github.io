@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scala on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/categories/scala/</link>
+    <description>Recent content in Scala on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/categories/scala/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Getting Started with Scala</title>
+      <link>http://csyezheng.github.io/post/programming-languages/scala/getting-started/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/scala/getting-started/</guid>
+      <description>Create A Scala Project With sbt In The Command Line Installation   Java 8 JDK javac -version 
+  install sbt
+  Create a project $ mkdir practice &amp;amp;&amp;amp; cd practice $ sbt new scala/hello-world.g8 # pull template from GitHub - hello-world - project (sbt uses this to install manage plugins and dependencies) - build.properties - src - main - scala (All of your scala code goes here) -Main.</description>
+    </item>
+    
+    <item>
+      <title>Scala By Example</title>
+      <link>http://csyezheng.github.io/post/programming-languages/scala/scalabyexample/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/scala/scalabyexample/</guid>
+      <description>Introduction Scala smoothly integrates object-oriented and functional programming.
+ Abstract types and mixin composition unify concepts from object and module systems. Pattern matching over class hierarchies uniﬁes functional and object-oriented data access. It greatly simpliﬁes the processing of XML trees. A ﬂexible syntax and type system enables the construction of advanced libraries and new domain speciﬁc languages.  Starting with simple expressions and functions, and working up through objects and classes, lists and streams, mutable state, pattern matching to more complete examples that show interesting programming techniques.</description>
+    </item>
+    
+    <item>
+      <title>The tour of Scala</title>
+      <link>http://csyezheng.github.io/post/programming-languages/scala/a-tour-of-scala/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/scala/a-tour-of-scala/</guid>
+      <description>Introduction Scala is object-oriented: every value is an object.  classes traits mixin-based composition as a clean replacement for multiple inheritance.  Scala is functional: every function is a value.  higher-order functions nested functions currying (multiple parameter lists) case classes pattern matching model algebraic types used in many functional programming languages. Singleton objects provide a convenient way to group functions that aren’t members of a class.  Scala is statically typed the type system supports:</description>
+    </item>
+    
+  </channel>
+</rss>

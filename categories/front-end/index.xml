@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>front-end on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/categories/front-end/</link>
+    <description>Recent content in front-end on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 01 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/categories/front-end/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bootstrap</title>
+      <link>http://csyezheng.github.io/post/front-end/bootstrap/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/front-end/bootstrap/</guid>
+      <description>Bootstrap Components Modal Add dialogs to your site for lightboxes, user notifications, or completely custom content.</description>
+    </item>
+    
+    <item>
+      <title>Angular</title>
+      <link>http://csyezheng.github.io/post/front-end/angular/</link>
+      <pubDate>Wed, 21 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/front-end/angular/</guid>
+      <description>QuickStart Step 1. Set up the Development Environment $ yaourt -S nodejs npm $ npm install -g @angular/cli Step 2. Create a new project $ ng new my-app Step 3: Serve the application $ cd my-app $ ng serve --open Step 4: Edit your first Angular component # ./src/app/app.component.ts export class AppComponent { title = &#39;My First Angular App!&#39;; } # ./src/app/app.component.css h1 { color: #369; font-family: Arial, Helvetica, sans-serif; font-size: 250%; } Project file review my-app e2e # end-to-end tests src app.</description>
+    </item>
+    
+    <item>
+      <title>jQuery Tutorial</title>
+      <link>http://csyezheng.github.io/post/front-end/jquery/</link>
+      <pubDate>Wed, 17 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/front-end/jquery/</guid>
+      <description>jQuery Get Started Downloading jQuery &amp;lt;head&amp;gt; &amp;lt;script src=&amp;quot;jquery-3.3.1.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; jQuery CDN &amp;lt;head&amp;gt; &amp;lt;script src=&amp;quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;head&amp;gt; &amp;lt;script src=&amp;quot;https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; jQuery Syntax Basic syntax is: $(selector).action() // Examples: $(this).hide() // hides the current element. $(&amp;quot;p&amp;quot;).hide() // hides all &amp;lt;p&amp;gt; elements. $(&amp;quot;.test&amp;quot;).hide() // hides all elements with class=&amp;quot;test&amp;quot;. $(&amp;quot;#test&amp;quot;).hide() // hides the element with id=&amp;quot;test&amp;quot;. $(document).ready(function(){ // all jQuery methods inside a document ready event to prevent // any jQuery code from</description>
+    </item>
+    
+    <item>
+      <title>DOM</title>
+      <link>http://csyezheng.github.io/post/front-end/dom/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/front-end/dom/</guid>
+      <description>所有 HTML 元素被定义为对象，而编程接口则是对象方法和对象属性。 方法是您能够执行的动作（比如添加或修改元素）。 属性是您能够获取或设置的值（比如节点</description>
+    </item>
+    
+    <item>
+      <title>Getting started with the Web</title>
+      <link>http://csyezheng.github.io/post/front-end/getting-started-with-the-web/</link>
+      <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/front-end/getting-started-with-the-web/</guid>
+      <description>Naming name folders and files completely in lowercase with no spaces. This is because:
+ Many computers, particularly web servers, are case-sensitive. Browsers, web servers, and programming languages do not handle spaces consistently. It&#39;s better to separate words with dashes, rather than underscores: my-file.html vs. my_file.html.  The short answer is that you should use a hyphen for your file names. The Google search engine treats a hyphen as a word separator but does not regard an underscore that way.</description>
+    </item>
+    
+    <item>
+      <title>HTML</title>
+      <link>http://csyezheng.github.io/post/front-end/html/</link>
+      <pubDate>Sat, 21 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/front-end/html/</guid>
+      <description>Introduction to HTML Getting started with HTML What is HTML? HTML (Hypertext Markup Language) is not a programming language; it is a markup language used to tell your browser how to structure the web pages you visit. HTML consists of a series of elements, an element may contain a data item or a chunk of text or an image, or perhaps nothing. A typical element includes an opening tag with</description>
+    </item>
+    
+  </channel>
+</rss>

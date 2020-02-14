@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>glide on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/glide/</link>
+    <description>Recent content in glide on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/tags/glide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>glide</title>
+      <link>http://csyezheng.github.io/post/programming-languages/go/glide/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/go/glide/</guid>
+      <description>使用 glide install 或 glide up 时报 Cannot detect VCS image.png 解决 这个是国内访问golang.org被墙导致的 解决方法如下： glide mirror set https://golang.org/x/crypto https://github.com/golang/crypto 理论上这样后再执行 glide install 或 glide up 就可以了 如果按</description>
+    </item>
+    
+  </channel>
+</rss>

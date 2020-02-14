@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JavaScript - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //" />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<link rel="canonical" href="http://csyezheng.github.io/content/post/programming-languages/javascript/javascript/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.0995afa14b62cd93e93cfc066b646c4c17a3eddca0e9d52a1d9dcf5d90aaacd3.css" integrity="sha256-CZWvoUtizZPpPPwGa2RsTBej7dyg6dUqHZ3PXZCqrNM=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="JavaScript" />
+<meta property="og:description" content="概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://csyezheng.github.io/content/post/programming-languages/javascript/javascript/" />
+<meta property="article:published_time" content="2019-03-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="name" content="JavaScript">
+<meta itemprop="description" content="概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //">
+<meta itemprop="datePublished" content="2019-03-01T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-03-01T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="5041">
+
+
+
+<meta itemprop="keywords" content="JavaScript," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="JavaScript"/>
+<meta name="twitter:description" content="概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+  
+  <header class="post-header">
+    <h1 class="post-title">JavaScript</h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
+      </time>
+    </div>
+  </header>
+
+  
+  
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+
+  
+  <div class="post-content">
+      <p>概要
+1.1 JavaScript语言核心
+// 注释
+/*
+*  多行注释
+*/
+let x;      // 声明变量
+x = 0;      // 赋值
+x              // 获取值</p>
+<pre><code>// 注释
+/*
+ *  多行注释
+ */
+let x;      // 声明变量
+x = 0;      // 赋值
+x              // 获取值
+</code></pre>
+<p>​
+​	// &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; data type &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+​
+x = 1;          // 数字类型
+x = 0.01;        // 整数和实数共用一种数据类型
+let then = new Date(2011, 0, 1, 17, 10, 30);  // Data类型
+.getFullYear()
+.getMonth()
+.getDate()
+.getDay()      // weekday
+.getHours()       // =&gt; 17:05 pm
+.getUTCHours()
+x = “hello world&rdquo;;         // 双引号字符串
+x = &lsquo;JavaScript&rsquo;;        // 单引号字符串
++
+.length
+.charAt(0)
+.substring(start, end)
+.slice(start, end)
+.slice(start)
+.indexOf(&ldquo;a&rdquo;)
+.lastIndexOf(&ldquo;a&rdquo;)
+.indexOf(&ldquo;a&rdquo;, start)
+.split(&quot;,&quot;)
+.replace(&ldquo;h&rdquo;, &ldquo;H&rdquo;)
+.toUpperCase()</p>
+<pre><code>    /pattern/        // 正则表达式直接量
+    /pattern/i        // 忽略小写
+    /pattern/g       // 全局
+    let text = &quot;testing: 1, 2, 3&quot;;
+    let pattern = /\d+/g              
+    pattern.test(text)                   // return boolean
+    text.search(pattern)              // 返回首次匹配成功的位置
+    text.match(pattern)              //所有匹配组成的数组
+    text.replace(pattern, &quot;#&quot;);       // =&gt; &quot;testing: #, #, #&quot;
+    text.split(/D+/);         // =&gt; [&quot;&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;] 用非数字字符截取字符串
+x = true;         // 布尔值
+x = false;        // 另一个布尔值
+x = null;         // null 是一个特殊的值，意思是“空”
+    typeof(null)      // return &quot;object&quot;
+x = undefined;
+    typeof(underfined)      // return &quot;underfined&quot;
+    null == underfined     // return true
+    null === underfined    // return false
+// object
+// array
+
+
+// 对象是键值对的集合，字符串到值得映射
+let book = {
+    topic: &quot;JavaScript&quot;,
+    fat: true
+};
+
+// 通过&quot;.&quot;或&quot;[]&quot;来访问对象属性
+book.topic
+book[&quot;fat&quot;]
+book.author = &quot;Flanagan&quot;;          // 通过赋值创建一个新属性
+book.contents = {};                       // { }是一个空对象，它没有属性
+
+// 数组，以数字为索引的列表
+let primes = [2, 3, 5, 7]
+primes[0]
+primes.length                      // 个数
+primes[4] = 9;                // 通过赋值来添加新元素，底层是链表吗？primes[100] = 0, 那中间是什么元素？
+
+// 数组和对象都可以包含另一个数组或对象
+let points = [
+    {x: 0, y: 0},
+    {x: 1, y: 1}
+];
+let data = {
+    trial1: [[1,2 ], [3,4]],
+    trial2: [[2,3],[4,5]]
+};
+
+
+// -------------------------------------- 全局对象 ------------------------------------- 
+
+// 全局属性：underfined, Infinity, NaN
+// 全局函数：isNaN(), parseInt()
+// 构造函数：Date(), RegExp(), String(), Object(), Array()
+// 全局对象：Math, JSON
+
+// ------------------------------- 包装对象和引用类型 ------------------------------------ 
+
+字符串字面量使用属性或方法时其实自动调用new String(s)构造成对象，属性引用结束，自动销毁临时对象
+Number(), Boolean同理
+null和underfined没有包装对象，访问属性产生类型错误
+== 运算符将原始值和包装对象视为对等，=== 视为不等，typeof运算符可看到原始值和包装对象的不同
+
+原始值（underfined, null, bool, number, string）不可更改，比较是值的比较
+对象（数组，函数）可更改，对象的比较并非值的比较，即使包含同样属性和相同值也是不相等的。
+let o = {x:1}, p = {x:1};
+o === p;     // false
+let a = [], b = [];
+a === b;     // false
+
+将对象成为引用类型，原始值为基本类型，对象值都是引用，对象的比较均是引用的比较，当且仅当引用同一个基对象时才相等。
+let a = []
+let b = a;    // 对象本身没有被赋值一次
+a === b;   // true
+
+// 想得到一个对象或数组的副本必须显示复制对象的每个属性或数组的每个元素
+let a = ['a', 'b', 'c']
+let b = [];
+for (let i = 0; i &lt; a.length; i++) {
+    b[i] = a[i];
+}
+
+// 比较两个单独的对象或数组
+function equalArrays(a, b) {
+    if (a.length != b.length) return false;
+    for (let i = 0; i &lt; a.length; i++)
+        if (a[i] !== b[i] return false;
+    return true;
+}
+
+
+// ------------------------------------ 类型转换 -------------------------------------- 
+
+10 + &quot; objects&quot;       // &quot;10 obejcts&quot;
+&quot;7&quot; * &quot;4&quot;                // 28
+let n = 1 - &quot;x&quot;         // NaN
+n + &quot; objects&quot;        // NaN
+
+原始值-&gt;对象 ： 使用 String(), Number(), Boolean() 构造函数转换为包装对象
+对象-&gt;原始值：.toString(), .valueOf()
+
+== 会进行类型转换，=== 不做类型转换
+
+除了null和underfined之外任何值都有.toString()方法
+parseInt(string)
+parseFloat(string)
+
+// ---------------------------------- operator --------------------------------------- 
+
+// 算术运算符
++
+-
+*
+/
+&quot;3&quot; + &quot;2&quot;         // =&gt; &quot;32&quot;,   + 可以完成加法运算也可以作字符串连接
+
+// 一元运算符
++        // 把操作数转化为数字
+-  //   把操作数转化为数字后取负
+// 递增递减，复合运算符
+let count = 0;
+count++;
+count--;
+count += 2;
+count *= 3;
+
+// 关系运算符
+==
+!=
+&lt;
+&lt;=
+&gt;
+&gt;=
+
+// 位运算符
+&amp;
+|
+~
+^
+&lt;&lt;
+&gt;&gt;
+&gt;&gt;&gt;
+
+// 逻辑运算符
+&amp;&amp;
+||
+!
+
+// in  右侧的对象是否有左侧的属性名
+let point = {x: 1, y: 1};
+&quot;x&quot; in point;                        // true
+&quot;toString&quot; in point            // true
+
+// instanceof 左侧对象是否是右侧类的实例
+let d = new Date();
+d instanceof Date;   // true
+d instanceof Object;     // true      所有对象都是object的实例
+
+// eval()
+// ? :
+    x &gt; 0 ? x : -x
+// typeof
+    (typeof value == &quot;string&quot;) ? &quot;'&quot; + value + &quot;'&quot; : value
+// delete 删除对象属性或数组元素
+    let o = {x:1, y:2};
+    delete o.x;
+    let a = [1,2,3];
+    delete a[2];          
+    a.length                 // =&gt; 3 删除属性或者删除数组元素是设置了一个underfined的值
+// void
+    出现在操作数之前，操作数会照常计算，但会忽略计算结果并返回underfined
+</code></pre>
+<p>​
+​	// &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; function &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+​
+​	function plus1(x) {
+​		return x + 1;
+​	}
+​
+plus1(y)</p>
+<pre><code>let square = function(x) {
+    return x*x;
+};                                                                     // 分号标识了赋值语句的结束
+
+square(plus1(u))                                         // 在一个表达式中调用两个函数
+
+// 当函数赋值给对象的属性，称为“method&quot;，所有的JavaScript对象都含有方法
+let a = []
+a.plush(1, 2, 3)
+a.reverse();
+
+// 自定义方法，this 是对定义方法的对象的引用
+points.dist = function() {
+    let p1 = this[0];
+    let p2 = this[2];
+    let a = p2.x - p1.x;
+    let b = p2.y - p1.y，吗 
+    return Math.sqrt(a * a + b * b);
+};
+points.dist()
+
+// ------------------------------ control sentence ------------------------------------ 
+
+function abx(x) {
+    if (x &gt; 0) {
+        return x;
+    } else if (x = 0) {
+        return x;
+    } else {
+        return -x;
+    }
+}
+
+switch(n) {
+    case 1:
+        statements
+        break;
+    case 2;
+        statements
+        break;
+    default:
+        statements
+        break;
+}
+
+function factorial(n) {
+    let product = 1;
+    while (n &gt; 1) {
+        product *= n;
+        n--;
+    }
+    return product;
+}
+
+factorial(4);
+
+function factorial2(n) {
+    let i, product = 1;
+    for (i = 2; i &lt;= n; i++)
+        product *= i;
+    return product;
+}
+
+factorial2(5)
+
+for (let variable in object)
+    object[variable]            // 依次枚举对象的属性或者数组的索引，内置方法是不可枚举的
+	
+break;
+continue;
+
+try {
+    statements
+}
+catch(e) {
+    statements
+    throw expression;
+}
+finally {
+    statements
+}
+
+with (object) {
+    statement                        // 临时扩展作用域链，不要用
+}
+
+debugger;
+
+&quot;use strict&quot;
+
+
+// ----------------------------------- Object -----------------------------------
+
+对象，即“散列”，“散列表”，“字典”，“关联数组”。字符串到值的映射。
+普通对象都从原型对象继承了属性，对象方法通常是继承的属性，原型式继承。
+JavaScript对象是动态的，可新增属性，也可删除属性。对象是可变的，而且简单拷贝其实是引用。
+直接量:
+    let book = {
+        &quot;main title&quot;: &quot;JavaScript&quot;,          // 属性名里用空格或连字符或保留字，必须用字符串表示
+        author: {
+            firstname: &quot;David&quot;,
+            surname: &quot;Flanagan&quot;
+        }
+    };
+使用new:
+    let o = new Object();
+    let a = new Array();
+    let d = new Date();
+    let r = new RegExp(&quot;js&quot;);
+原型：
+    Object.prototype获得对原型对象的引用，通过new和构造函数调用创建的对象的原型就是构造函数的prototype属性的值。
+    new Object()创建的对象继承自Object.prototype  
+    new Array()创建的对象继承自 Array.prototype和Object.prototype 
+    new Date()创建的对象继承自Date.prototype和Object.prototype 
+    所有的内置构造函数都具有一个继承自Object.prototype的原型
+    原型链
+Object.create():
+    let o1 = Object.create({x:1, y:2});
+    let o3 = Object.create(Object.prototype);       // =&gt; {}   the same as new Object()
+	
+    function inherit(p) {
+        if (p == null) throw TypeError();
+        if (Object.create) return Object.create(p);
+        let t = typeof p;
+        if (t !== &quot;object&quot; &amp;&amp; t != &quot;function&quot;) throw TypeError();
+        function f() {};                        // 定义一个新的构造函数
+        f.prototype = p;                       // 将其原型属性设为p
+        return new f();
+    }
+	
+    通过编写构造函数定义对象的“类”。
+    给构造函数的prototype属性赋值可以让其“实例”直接使用这个原型上的属性和方法。
+	
+    .和[]的方法访问对象属性
+	
+    // 获取subtitle的length或underfined，避免类型错误异常
+    var len = book &amp;&amp; book.subtitle &amp;&amp; book.subtitle.length;      
+	
+    delete object.attribute;
+	
+    检测是否包含属性：
+        attributeName in object              // true or not      自由属性和继承属性都检测
+        object.hasOwnPreperty(attributeName)       // true or not 仅检测自有属性
+        propertyIsEnumerable()                // true or not 仅检测可枚举的自有属性
+    枚举：
+        function extend(o, o) {
+            for (prop in p) {
+                o[prop] = p[prop];
+            }
+            return o;
+        }
+        function merge(o, p) {
+            for (prop in p) {
+                if (o.hasOwnProperty[prop] continue;
+                o[prop] = p[prop];
+            }
+            return 0;
+        }
+        function restrict(o, p) {
+            for (prop in o) {
+                if (! (prop in p)) delete o[prop];
+            }
+            return o;
+        }
+        function subtract (o, p) {
+            for (prop in p) {
+                delete o[prop];
+            }
+            return o;
+        }
+        function union(o, p) { return extend(extend({}, o), p); }
+		
+        function intersection(o, p) { return restrict(extend({}, o), p); }
+		
+        function keys(o) {
+            if (typeof o !== &quot;object&quot;) throw TypeError();
+            let result = [];
+            for (let prop in o) {
+                if (o.hasOwnProperty(prop))
+                    result.push(prop);
+            }
+            return result;
+        }
+	
+    getter, setter:
+        对象的存取器属性getter, setter, 定义存取器属性使用对象直接量，用get, set替代function关键字
+        var o = {
+            $data_prop: value,                                         // $ 起始的属性名为私有属性
+            get accessor_prop() { /* 函数体 */};
+            set accessor_prop() { /* 函数体 */};
+        }
+        若同名属性只有get, 没有set则为只读
+    Object.getOwnPropertyDescriptor()
+        获得某个对象特定属性的特性描述符
+    Object.defineProperty()
+        设置属性的特性
+    Object.getPrototypeOf()
+        查询原型，但并不可靠，constructor.prototype才是真的原型，Object.create()则不是
+    o.isProtypeOf(p)         
+        // 检测p是否是o的原型
+    类属性：
+        function classof (o) {
+            if (o === null) return &quot;Null&quot;;
+            if (o === underfined) return &quot;Underfined&quot;;
+            return Object.prototype.toString.call(o).slice(8, -1);
+        }
+    序列化对象：
+        JSON.stringify()             //序列化对象           只能序列化可枚举的自由属性
+        JSON.parse()                 // 还原对象          不会还原日期对象
+        函数 RegExp undefined Error对象不能序列化和还原
+    对象方法：
+        Object.toString()
+        Object.toLocalString()            // 会针对DateTime, Number 做本地化转换
+        Object.toJSON()
+        Object.valueOf()                 // 将对象转换为原始值而非字符串的时候调用
+
+
+// ------------------------------------- Array -----------------------------------
+
+数组，元素类型可不唯一，可变长度，数组可能是稀疏的，数组的元素不一定连续，可以有空缺。
+let misc = [1.1, true, &quot;a&quot;, ]
+let count = [1, ,3]        // 三个元素， 中间的那个元素值为underfined
+let undefs = [ , , ]       // 两个元素
+let a = new Array()
+let a = nre Array(10);  // 10个元素
+数组是对象的特殊形式，意味着不会越界，不会出现索引错误，字符串索引会创建一个属性
+
+a = []
+a[1000] = 0;
+稀疏数组查找元素的时间和常规对象属性的查找时间一样长
+let a1 = [,,,];     // 数组是[underfined, underfined, underfined]
+let a2 = new Array(3);     // 数组根本没有元素
+let a3 = [,]           // 数组没有元素，长度为1
+0 in a1         // =&gt; true
+0 in a2        // =&gt; false
+
+a.length     设置a.length的值是大坑
+a.push(elem)
+
+let keys = Object.keys(o);
+let values = [];
+for (let i = 0; i &lt; keys.length; ++i) {
+    let key = keys[i];
+    values.push(o[key]);
+}
+
+数组上不该使用for/in 循环，因为能够枚举继承的属性名，除非用 if (a.hasOwnProperty(i)) 判断
+
+forEach():
+    let data = [1, 2, 3, 4, 5];
+    let sumOfSquares = 0;
+    data.forEach(function(x) {
+        sumOfSquares += x*x;
+        });
+    sumOfSquares    
+	
+Array.join()
+    let a = [1, 2, 3]; 
+    a.join();                 // =&gt; &quot;1, 2, 3&quot;            默认为都好分隔
+    a.join(&quot; &quot;);            // =&gt; &quot;1 2 3&quot;
+Array.reverse()
+    // 改变了原数组，不创建新数组
+Array.sort()
+    // 返回排序后的数组，不改变原数组，可选谓词做参数
+    a.sort(function(a, b) {
+            return b - a;
+        });
+Array.concat(array)
+    // 创建并返回拼接的新数组
+Array.slice(start, end)
+    // 不包含第二个元素
+Array.splice(start, end)
+    //插入或删除元素，返回删除元素组成的数组，不太懂
+Array.push()
+Array.pop()
+Array.unshift()
+Array.shift()
+Array.toString()
+Array.toLocalString()
+
+Array.forEach(function(elem, index, array) { })
+    let data = [1,2,3,4,5]
+    let sum = 0;
+    data.forEach(function(value) { sum += value; });
+    data.forEach(function(v, i, a) { a[i] = v + 1; });    // 给数组每个元素自加一
+
+Array.map(function(elem){})
+    a = [1, 2, 3];
+    b = a.map(function(x) { return x*x; });       // =&gt; [1, 4, 9]
+	
+Array.filer(function(elem, index) {} )
+    a = [5, 4, 3, 2, 1];
+    smallvalues = a.filter(function(x) { return x &lt; 3; });       // [2,1]
+    everyother = a.filter(function(x, i) { return i%2 == 0; });    // [5,3,1]
+	
+Array.every(function)
+    a = [1,2,3,4,5];
+    a.every(function(x) {return x &lt; 10; });             // true
+    a.every(function(x) { return x % 2 === 0; });            // false
+
+Array.some(function)
+    a = [1,2,3,4,5] [1,2,3,4,5];
+    a.some(function(x) { return x%2 === 0; })        // true
+    a.some(isNaN);                                                         // false
+
+
+// ------------------------------- Class and OOP ------------------------------ 
+
+继承：
+    let o = {};                                       // 继承Object.prototype的方法
+    o.x = 1;                                          // 给o定义属性x
+    let p = inherit(o);                         // 继承o 和 Object.prototype的属性和方法
+    p.y = 2;                                           // 给p定义属性y
+    let q = inherit(p);                         // 继承p, o 和 Object.prototype的属性和方法
+    q.z = 3;                                           // 给q定义属性y
+    let s = q.toString();                     // toString继承自Object.prototype
+    q.x + q.y                                        // =&gt; 3    
+    在JavaScript中，只用查询的时候才体会继承的原型链查找，设置属性时与继承无关，不改变原型
+    let unitcircle = {r: 1};
+    let c = inherit(unitcircle);
+    c.x = 1; c.y =1;                   
+    c.r = 2;                                          // 对属性赋值要么创建属性要么覆盖继承来的属性
+    unitcircle.r;                                 // 1,     原型对象没有修改
+
+// 定义一个构造函数以初始化一个新的Point对象
+function Point(x, y) {                                  // 按照惯例，构造函数均以大写字母开始
+    this.x = x;                                           // 关键字this 指代初始化的实例
+    this.y = y;                                          // 将函数参数存储为对象的属性
+}                                                                     // 不需要return
+
+// 使用new 关键字和构造函数来创建一个实例
+let p = new Point(1, 1);             // 平面几何中的点(1, 1)
+
+// 通过给构造函数的prototype对象赋值来给Point对象定义方法
+Point.prototype.r = function() {
+    return Math.sqrt(
+        this.x * this.y +
+        this.y * this.y)
+    );
+};
+
+// Point的所有实例对象对继承了方法r()
+p.r()
+</code></pre>
+<p>1.2 客户端JavaScript</p>
+<pre><code>// ----------------- Web browser 脚本技术和JavaScript全局函数 ---------------------- 
+
+&lt;script&gt;
+function moveon() {
+    // 弹出一个对话框
+    let answer = confirm(&quot;准备好了吗?&quot;);
+    // 单击确定按钮，浏览器会加载一个新页面
+    if (answer) window.location = &quot;http://toabo.com&quot;;
+}
+//在1分钟后执行定义的这个函数
+setTimeout(moveon, 600000);
+&lt;/script&gt;
+
+// -------------------------- 通过脚本操纵HTML文档内容 -------------------------- 
+
+// 如何选取特定的HTML元素
+// 如何给HTML元素设置属性
+// 如何修改元素内容
+// 如何给文档添加新节点
+
+// 在document中的指定区域输出调试消息
+function debug(msg) {
+    let log = document.getElementById(&quot;debuglog&quot;);
+    // 如果document不存在这个元素，则创建一个
+    if (!log) {
+        log = document.createElement(&quot;div&quot;);
+        log.id = &quot;debuglog&quot;;
+        log.innerHTML = &quot;&lt;h1&gt;Debug Log&lt;/h1&gt;&quot;;                #定义初始内容
+        doucument.body.appendChild(log);              
+    }
+    let pre = document.createElement(&quot;pre&quot;);
+    let text = document.createTextNode(&quot;msg&quot;);                  # 将msg包装在一个文本节点中
+    pre.appendChild(text);
+    log.appendChild(pre);
+}
+
+// ---------------------------- 通过脚本操纵CSS样式 ----------------------------- 
+
+function hide(e, reflow) {                       // 通过JavaScript操作样式来隐藏元素e
+    if (reflow) {                                    // 如果第二个参数是true
+        e.style.display = &quot;none&quot;                             // 隐藏这个元素，所占空间也消失
+    }
+    else {                                                                     
+        e.style.visibility = &quot;hidden&quot;;             // 否则将e隐藏，但是保留其所占的空间
+    }
+}
+function highlight(e) {                               // 通过设置CSS类来高亮显示e
+                              // 简单加类属性，这里假设CSS样式表已经有&quot;hilite&quot;类的定义
+    if (!e.classNmae) e.className = &quot;hilite&quot;;       
+    else e.classNmae += &quot;hilite&quot;;
+}
+
+
+// ------------------------------ 事件处理程序定义文档的行为 ------------------------------- 
+
+// 定义事件处理程序的方法是给HTML的&quot;on&quot;为前缀的属性绑定一个回调
+
+&lt;script src=&quot;debug&quot;.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;hide.js&quot;&gt;&lt;/script&gt;
+hello
+&lt;button onclick=&quot;hide(this, true&quot;; debug('hide button 1');&quot;&gt;Hide1&lt;/button&gt;
+&lt;button onclick=&quot;hide(this); debug('hide button 2');&quot;&gt;Hide2&lt;/button&gt;
+world
+
+// 注册事件处理程序 &quot;load&quot;
+
+// &quot;load&quot;事件只有在文档加载完成后才会触发
+// 通常需要等待load事件发生后才开始执行JavaScript代码
+windows.onload = function() {
+    let images = document.getElementsByTagName(&quot;img&quot;);
+    // 遍历images，给每个节点的&quot;click&quot;事件添加事件处理程序
+    // 在点击图片的时候将图片隐藏
+    for(let i = 0; i &lt; images.length; i++) {
+        let image = images[i];
+        if (image.addEventListener)          
+                   // 注册事件处理程序的另一种方法
+            image.addEventListener(&quot;click&quot;, hide, false);
+        else
+            image.attachEvent(&quot;onclick&quot;, hide);      // 兼容IE8及以前版本
+    }
+    // 这便是上面注册的事件处理函数
+    function hide(event) { event.target.style.visibility = &quot;hidden&quot;; }
+};
+
+
+// ------------------------ jQuery --------------------------------------------
+</code></pre>
+<p>​
+​
+​
+​	// &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; JavaScript 发送 HTTP 请求&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<p>​
+​	// &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; 客户端数据存储及会话状态 &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<p>​
+​
+​
+​	// &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- 巨坑&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+​	稀疏数组，数组索引，数组长度</p>
+<p>​</p>
+
+  </div>
+
+  
+  
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2019-03-01
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+  
+  
+</article>
+
+
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

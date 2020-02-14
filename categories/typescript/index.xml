@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TypeScript on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/categories/typescript/</link>
+    <description>Recent content in TypeScript on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/categories/typescript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TypeScript</title>
+      <link>http://csyezheng.github.io/post/programming-languages/typescript/typescript/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/typescript/typescript/</guid>
+      <description>TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件</description>
+    </item>
+    
+  </channel>
+</rss>

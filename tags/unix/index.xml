@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>unix on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/unix/</link>
+    <description>Recent content in unix on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 26 Sep 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bash Reference Manual</title>
+      <link>http://csyezheng.github.io/post/any-path/bash/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/any-path/bash/</guid>
+      <description>Bash Reference Manual Basic Shell Features Shell Syntax Shell Operation Quoting Escape Character A non-quoted backslash \ is the Bash escape character. It preserves the literal value of the next character that follows, with the exception of \newline.
+Single Quotes Enclosing characters in single quotes (&#39;) preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash.</description>
+    </item>
+    
+    <item>
+      <title>UNIX / Linux Short Remedial</title>
+      <link>http://csyezheng.github.io/post/any-path/unix-short-remedial/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/any-path/unix-short-remedial/</guid>
+      <description>Shell and Basic Commands A shell is a program1 that inputs Unix commands from the keyboard and relays them to the Unix system for execution. Shells typically include various shortcuts for users to use in stating their commands, and also a programming feature, in which users can make programs out of sets of their commands.
+There are many different shells available for Unix systems. Here we focus on two of the most popular ones, tcsh and bash.</description>
+    </item>
+    
+  </channel>
+</rss>

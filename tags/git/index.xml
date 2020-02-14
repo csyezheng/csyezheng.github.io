@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/git/</link>
+    <description>Recent content in git on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 30 Oct 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git cheat sheet </title>
+      <link>http://csyezheng.github.io/post/any-path/git/</link>
+      <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/any-path/git/</guid>
+      <description>Create Clone an existing repository
+$ git clone ssh://user@domain.tld/repo.git Clone an existing repository and all its sub-modules recursively
+$ git clone --recurse-submodules ssh://user@domain.tld/repo.git Create a new local repository
+$ git init Configuration Set the name attached to all your commits
+$ git config [--global] user.name &amp;lt;name&amp;gt; Set the email attached to all your commits
+$ git config [--global] user.email &amp;lt;email&amp;gt; Set colorization of command line output for all repos
+$ git config [--global] color.</description>
+    </item>
+    
+  </channel>
+</rss>

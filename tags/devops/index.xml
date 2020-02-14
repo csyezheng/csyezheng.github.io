@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevOps on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/devops/</link>
+    <description>Recent content in DevOps on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DevOps</title>
+      <link>http://csyezheng.github.io/post/devops/devops/</link>
+      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/devops/devops/</guid>
+      <description>What is DevOps? DevOps (a clipped compound of &amp;ldquo;development&amp;rdquo; and &amp;ldquo;operations&amp;quot;) is a software engineering culture and practice that aims at unifying software development (Dev) and software operation (Ops). The main characteristic of the DevOps movement is to strongly advocate automation and monitoring at all steps of software construction, from integration, testing, releasing to deployment and infrastructure management. DevOps aims at shorter development cycles, increased deployment frequency, and more dependable</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Basics</title>
+      <link>http://csyezheng.github.io/post/devops/kubernetes/</link>
+      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/devops/kubernetes/</guid>
+      <description>Using Minikube to Create a Cluster Kubernetes Clusters Kubernetes coordinates a highly available cluster of computers that are connected to work as a single unit.
+applications need to be packaged in a way that decouples them from individual hosts: they need to be containerized.
+Kubernetes automates the distribution and scheduling of application containers across a cluster in a more efficient way.
+A Kubernetes cluster consists of two types of resources:</description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>http://csyezheng.github.io/post/devops/docker/</link>
+      <pubDate>Thu, 25 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/devops/docker/</guid>
+      <description>Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&amp;ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&amp;ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker add your user to the docker group.</description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>http://csyezheng.github.io/post/devops/nginx/</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/devops/nginx/</guid>
+      <description>General configuration Managing server entries It is possible to put different server blocks in different files. This allows you to easily enable or disable certain sites.
+# mkdir /etc/nginx/sites-available # mkdir /etc/nginx/sites-enabled Create a file inside the sites-available directory that contains one or more server blocks:
+/etc/nginx/sites-available/example server { .. } Append the following line at the end of the http block in /etc/nginx/nginx.conf:
+include sites-enabled/*; To enable a server block, simple create a symlink:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>back-end on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/categories/back-end/</link>
+    <description>Recent content in back-end on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/categories/back-end/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Scraping with Scrapy and Django Integration</title>
+      <link>http://csyezheng.github.io/post/back-end/scrapy-with-django/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/scrapy-with-django/</guid>
+      <description>Installing Dependencies (Optional) $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple $ python -m pip install --user virtualenv $ python -m pip install --user virtualenvwrapper $ vim ~/.bashrc export WORKON_HOME=$HOME/.virtualenvs export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv source $HOME/.local/bin/virtualenvwrapper.sh $ source ~/.bashrc $ mkvirtualenv stock-screener pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results Creating a Django Project $ django-admin startproject stock_screener $ cd stock_screener $ mkdir stock_screener/apps/basic_info $ django-admin startapp basic_info stock_screener/apps/basic_info $ mkdir stock_screener/apps/northbound $ django-admin startapp northbound stock_screener/apps/northbound $ mkdir stock_screener/apps/financial_metrics $ django-admin startapp financial_metrics stock_screener/apps/financial_metrics $ mkdir stock_screener/apps/quotes $ django-admin startapp quotes stock_screener/apps/quotes $ mkdir stock_screener/apps/jobs $ django-admin startapp jobs stock_screener/apps/jobs Cannot add backslash suffix when run startapp command.</description>
+    </item>
+    
+    <item>
+      <title>Django oauth2 provider</title>
+      <link>http://csyezheng.github.io/post/back-end/oauth2/</link>
+      <pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/oauth2/</guid>
+      <description>Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... &#39;provider&#39;, &#39;provider.oauth2&#39;, ) # urls.py url(r&#39;^oauth2/&#39;, include(&#39;provider.oauth2.urls&#39;, namespace = &#39;oauth2&#39;)), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ?   Create a client entry in your database
+To find out which type of client you need to create, read Section 2.1.
+To create a new entry simply use the Django admin panel.</description>
+    </item>
+    
+    <item>
+      <title>microservices</title>
+      <link>http://csyezheng.github.io/post/back-end/microservices/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/microservices/</guid>
+      <description>第1章 微服务 1.1 什么是微服务 微服务就是一些协同工作的小而自治的服务 1.1.1 很小，专注于做好一件事 在一个单块系统内，通常会创建一些抽象层或者模块来保证</description>
+    </item>
+    
+    <item>
+      <title>edx oauth</title>
+      <link>http://csyezheng.github.io/post/back-end/edx_oauth/</link>
+      <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/edx_oauth/</guid>
+      <description>Request URL: http://localhost:18381/api-auth/login/?next=/api/v1/courses/
+Query String Parameters: next: /api/v1/courses/
+Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18381/login/edx-oidc/?next=/api/v1/courses/
+Query String Parameters: next: /api/v1/courses/
+Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18000/oauth2/authorize/?redirect_uri=http://localhost:18381/complete/edx-oidc/&amp;amp;client_id=discovery-key&amp;amp;scope=openid+profile+email+permissions&amp;amp;response_type=code&amp;amp;state=W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x
+Query String Parameters:
+ redirect_uri: http://localhost:18381/complete/edx-oidc/ client_id: discovery-key scope: openid profile email permissions response_type: code state: W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x  Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18000/oauth2/authorize/confirm
+Request Method: GET</description>
+    </item>
+    
+    <item>
+      <title>Wagtail</title>
+      <link>http://csyezheng.github.io/post/back-end/wagtail/</link>
+      <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/wagtail/</guid>
+      <description>Getting started setting up a brand new Wagtail project $ pip install wagtail $ wagtail start mysite $ cd mysite $ pip install -r requirements.txt $ ./manage.py migrate $ ./manage.py createsuperuser $ ./manage.py runserver http://localhost:8000
+http://localhost:8000/admin/
+Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page.</description>
+    </item>
+    
+    <item>
+      <title>gRPC by Go</title>
+      <link>http://csyezheng.github.io/post/back-end/grpc/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/grpc/</guid>
+      <description>$ go version $ go get -u google.golang.org/grpc Install Protocol Buffers v3
+ download pre-compiled binaries for your platform(protoc-&amp;lt;version&amp;gt;-&amp;lt;platform&amp;gt;.zip) from here: https://github.com/google/protobuf/releases Unzip this file. Update the environment variable PATH to include the path to the protoc binary file.  $ go get -u github.com/golang/protobuf/protoc-gen-go $ export PATH=$PATH:$GOPATH/bin Build the example $ cd $GOPATH/src/google.golang.org/grpc/examples/helloworld </description>
+    </item>
+    
+    <item>
+      <title>JSON Web Tokens</title>
+      <link>http://csyezheng.github.io/post/back-end/jwt/</link>
+      <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/jwt/</guid>
+      <description>What is JSON Web Token? JSON Web Token (JWT) is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
+When should you use JSON Web Tokens? Here are some scenarios where JSON Web Tokens are useful:</description>
+    </item>
+    
+    <item>
+      <title>Concurrent-Programming-for-Scalable-Web-Architectures</title>
+      <link>http://csyezheng.github.io/post/back-end/concurrent-programming-for-scalable-web-architectures/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/concurrent-programming-for-scalable-web-architectures/</guid>
+      <description>Introduction Scope of this Thesis We will have a detailed look on concurrency in three distinct areas of web architectures&amp;ndash;connection handling, application logic and backend persistence. For each stage, we will discuss its main challenges and issues and explain existing approaches to tackle concurrency.
+Web Applications distinguish two separate types of web applications &amp;ndash; web sites and web services.
+Web Sites some popular types for web sites that are interesting in terms of scalability and concurrency</description>
+    </item>
+    
+    <item>
+      <title>distributed systems</title>
+      <link>http://csyezheng.github.io/post/back-end/distributed-systems/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/distributed-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>high concurrency</title>
+      <link>http://csyezheng.github.io/post/back-end/high-concurrency/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/high-concurrency/</guid>
+      <description>高并发 高并发其实挺容易的，当你明白了一万并发的原理，然后扩展到百万、千万、亿万级很easy 要点有如下几项： 1、垂直分层：DNS层、跨机房部署</description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>http://csyezheng.github.io/post/back-end/mysql/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/mysql/</guid>
+      <description>MySQL Shell Guide Connecting to and Disconnecting from the Server shell&amp;gt; mysql -h host -u user -p mysql&amp;gt; QUIT User Account Management Adding User Accounts shell&amp;gt; mysql --user=root --password mysql shell&amp;gt; mysql --u root -p mysql mysql&amp;gt; CREATE USER &#39;custom&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;localhost&#39; -&amp;gt; WITH GRANT OPTION; mysql&amp;gt; CREATE USER &#39;custom&#39;@&#39;%&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;%&#39; -&amp;gt; WITH GRANT OPTION; mysql&amp;gt; CREATE USER &#39;admin&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT RELOAD,PROCESS ON *.</description>
+    </item>
+    
+    <item>
+      <title>OpenID Connect</title>
+      <link>http://csyezheng.github.io/post/back-end/oidc/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/oidc/</guid>
+      <description>OpenID Connect References http://www.cnblogs.com/zhaojianwei/p/4667864.html
+https://github.com/edx/edx-oauth2-provider</description>
+    </item>
+    
+    <item>
+      <title>Kafka</title>
+      <link>http://csyezheng.github.io/post/back-end/kafka/</link>
+      <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/kafka/</guid>
+      <description>Quickstart &amp;gt; tar -xzf kafka_2.11-1.1.0.tgz &amp;gt; cd kafka_2.11-1.1.0 Start the server bin/zookeeper-server-start.sh config/zookeeper.properties bin/kafka-server-start.sh config/server.properties Create a topic bin/kaftopics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic my-topic bin/kafka-topics.sh --list --zookeeper localhost:2181 Send some messages bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning Python client for the Apache Kafka #!/usr/bin/env python3 import logging from kafka import KafkaProducer from kafka.errors import KafkaError import msgpack log = logging.getLogger(__name__) def send(): producer = KafkaProducer(bootstrap_servers=[&#39;localhost:9092&#39;], value_serializer=msgpack.</description>
+    </item>
+    
+    <item>
+      <title>MAKE A WEBSITE</title>
+      <link>http://csyezheng.github.io/post/back-end/make-a-web-site/</link>
+      <pubDate>Sun, 18 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/make-a-web-site/</guid>
+      <description>GET A DOMAIN &amp;amp; WEB HOSTING Register a domain name Namesilo Create New Account csyezheng csye3631 SEARCH Domain and REGISTER NameServers：域名解析服务器设置，未确定的可以等稍后在后台设置也一样； Auto-Renew</description>
+    </item>
+    
+    <item>
+      <title>PostgreSQL</title>
+      <link>http://csyezheng.github.io/post/back-end/postgresql/</link>
+      <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/postgresql/</guid>
+      <description>Installing PostgreSQL $ sudo pacman -S postgresql $ sudo -u postgres -i [postgres]$ initdb --locale $LANG -E UTF8 -D &#39;/var/lib/postgres/data&#39; [postgres]$ exit $ pg_ctl -D /var/lib/postgres/data -l logfile start $ systemctl start postgresql.service $ systemctl enable postgresql.service Create your first database/user Access the database shell $ [postgres]$ psql -d myDatabaseName \help \c &amp;lt;database&amp;gt; \du # list all users and their permission levels \dt # show summary information about all tables \q \?</description>
+    </item>
+    
+    <item>
+      <title>Getting start with Django</title>
+      <link>http://csyezheng.github.io/post/back-end/django/</link>
+      <pubDate>Mon, 22 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/django/</guid>
+      <description>First steps  Requests and responses Models and the admin site Views and templates Forms and generic views Testing Static files Customizing the admin site  Advanced Tutorials: How to write reusable apps | Writing your first patch for Django
+The model layer Models Generally, each model maps to a single database table.
+from django.db import models class Person(models.Model): name = models.CharField(max_length=30)  The name of the table, myapp_person, is automatically derived from the name of the app and the model class.</description>
+    </item>
+    
+  </channel>
+</rss>

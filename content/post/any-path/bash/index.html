@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bash Reference Manual - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="Bash Reference Manual Basic Shell Features Shell Syntax Shell Operation Quoting Escape Character A non-quoted backslash \ is the Bash escape character. It preserves the literal value of the next character that follows, with the exception of \newline.
+Single Quotes Enclosing characters in single quotes (&#39;) preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash." />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<link rel="canonical" href="http://csyezheng.github.io/content/post/any-path/bash/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.0995afa14b62cd93e93cfc066b646c4c17a3eddca0e9d52a1d9dcf5d90aaacd3.css" integrity="sha256-CZWvoUtizZPpPPwGa2RsTBej7dyg6dUqHZ3PXZCqrNM=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="Bash Reference Manual" />
+<meta property="og:description" content="Bash Reference Manual Basic Shell Features Shell Syntax Shell Operation Quoting Escape Character A non-quoted backslash \ is the Bash escape character. It preserves the literal value of the next character that follows, with the exception of \newline.
+Single Quotes Enclosing characters in single quotes (&#39;) preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://csyezheng.github.io/content/post/any-path/bash/" />
+<meta property="article:published_time" content="2016-09-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-09-26T00:00:00+00:00" />
+<meta itemprop="name" content="Bash Reference Manual">
+<meta itemprop="description" content="Bash Reference Manual Basic Shell Features Shell Syntax Shell Operation Quoting Escape Character A non-quoted backslash \ is the Bash escape character. It preserves the literal value of the next character that follows, with the exception of \newline.
+Single Quotes Enclosing characters in single quotes (&#39;) preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash.">
+<meta itemprop="datePublished" content="2016-09-26T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2016-09-26T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="3758">
+
+
+
+<meta itemprop="keywords" content="“bash&#34;,shell,unix,linux," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Bash Reference Manual"/>
+<meta name="twitter:description" content="Bash Reference Manual Basic Shell Features Shell Syntax Shell Operation Quoting Escape Character A non-quoted backslash \ is the Bash escape character. It preserves the literal value of the next character that follows, with the exception of \newline.
+Single Quotes Enclosing characters in single quotes (&#39;) preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+  
+  <header class="post-header">
+    <h1 class="post-title">Bash Reference Manual</h1>
+    
+    <div class="post-meta">
+      <time datetime="2016-09-26" class="post-time">
+        2016-09-26
+      </time>
+    </div>
+  </header>
+
+  
+  
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#basic-shell-features">Basic Shell Features</a>
+      <ul>
+        <li><a href="#shell-syntax">Shell Syntax</a></li>
+        <li><a href="#shell-commands">Shell Commands</a></li>
+        <li><a href="#shell-functions">Shell Functions</a></li>
+        <li><a href="#shell-parameters">Shell Parameters</a></li>
+        <li><a href="#shell-expansions">Shell Expansions</a></li>
+        <li><a href="#redirections">Redirections</a></li>
+      </ul>
+    </li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+  
+  <div class="post-content">
+      <h1 id="bash-reference-manual">Bash Reference Manual</h1>
+<h2 id="basic-shell-features">Basic Shell Features</h2>
+<h3 id="shell-syntax">Shell Syntax</h3>
+<h4 id="shell-operation">Shell Operation</h4>
+<h4 id="quoting">Quoting</h4>
+<h6 id="escape-character">Escape Character</h6>
+<p>A non-quoted backslash <code>\</code> is the Bash escape character. It preserves the literal value of the next character that follows, with the exception of <code>\newline</code>.</p>
+<h6 id="single-quotes">Single Quotes</h6>
+<p>Enclosing characters in single quotes (<code>'</code>) preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash.</p>
+<h6 id="double-quotes">Double Quotes</h6>
+<p>Enclosing characters in double quotes (‘&quot;’) preserves the literal value of all characters within the quotes, with the exception of <code>$</code>, <code>\</code>.</p>
+<h6 id="ansi-c-quoting">ANSI-C Quoting</h6>
+<p>Backslash escape sequences:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>special meaning</th>
+<th></th>
+<th>special meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>\a</code></strong></td>
+<td>alert (bell)</td>
+<td><strong><code>\'</code></strong></td>
+<td>single quote</td>
+</tr>
+<tr>
+<td><strong><code>\b</code></strong></td>
+<td>backspace</td>
+<td><strong><code>\&quot;</code></strong></td>
+<td>double quote</td>
+</tr>
+<tr>
+<td><strong><code>\e</code></strong>   (<strong><code>\E</code></strong>)</td>
+<td>an escape character (not ANSI C)</td>
+<td><strong><code>\?</code></strong></td>
+<td>question mark</td>
+</tr>
+<tr>
+<td><strong><code>\f</code></strong></td>
+<td>form feed</td>
+<td><strong><code>\nnn</code></strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><code>\n</code></strong></td>
+<td>newline</td>
+<td><strong><code>\xHH</code></strong></td>
+<td>hexadecimal value</td>
+</tr>
+<tr>
+<td><strong><code>\r</code></strong></td>
+<td>carriage return</td>
+<td><strong><code>\uHHHH</code></strong></td>
+<td>Unicode character</td>
+</tr>
+<tr>
+<td><strong><code>\t</code></strong></td>
+<td>horizontal tab</td>
+<td><strong><code>\UHHHHHHHH</code></strong></td>
+<td>Unicode character</td>
+</tr>
+<tr>
+<td><strong><code>\v</code></strong></td>
+<td>vertical tab</td>
+<td><strong><code>\cx</code></strong></td>
+<td>a control-x character</td>
+</tr>
+<tr>
+<td><strong><code>\\</code></strong></td>
+<td>backslash</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h6 id="locale-specific-translation">Locale-Specific Translation</h6>
+<p>A double-quoted string preceded by a dollar sign (<code>$</code>) will cause the string to be translated according to the current locale. If the current locale is <code>C</code> or <code>POSIX</code>, the dollar sign is ignored. If the string is translated and replaced, the replacement is double-quoted.</p>
+<h4 id="comments">Comments</h4>
+<p>A word beginning with <code>#</code> causes that word and all remaining characters on that line to be ignored</p>
+<h3 id="shell-commands">Shell Commands</h3>
+<h4 id="simple-commands">Simple Commands</h4>
+<p>A simple command is the kind of command encountered most often. It’s just a sequence of words separated by <code>blank</code>s, terminated by one of the shell’s control operators. The first word generally specifies a command to be executed, with the rest of the words being that command’s arguments.</p>
+<h4 id="pipelines">Pipelines</h4>
+<p>A <code>pipeline</code> is a sequence of one or more commands separated by one of the control operators <code>|</code> or <code>|&amp;</code>.</p>
+<p>The format for a pipeline is</p>
+<pre><code>[time [-p]] [!] command1 [ | or |&amp; command2 ] …
+</code></pre><p>The output of each command in the pipeline is connected via a pipe to the input of the next command.</p>
+<p>If <code>|&amp;</code> is used, command1’s standard error, in addition to its standard output, is connected to command2’s standard input through the pipe; it is shorthand for <code>2&gt;&amp;1 |</code>. This implicit redirection of the standard error to the standard output is performed after any redirections specified by the command.</p>
+<p>The reserved word <code>time</code> causes timing statistics to be printed for the pipeline once it finishes.</p>
+<p>Each command in a pipeline is executed in its own subshell, which is a separate process.</p>
+<p>The exit status of a pipeline is the exit status of the last command in the pipeline, unless the <code>pipefail</code> option is enabled.</p>
+<p>If the reserved word <code>!</code> precedes the pipeline, the exit status is the <strong>logical negation</strong> of the exit status as described above.</p>
+<h4 id="lists-of-commands">Lists of Commands</h4>
+<p>A <code>list</code> is a sequence of one or more pipelines separated by one of the operators <code>;</code>, <code>&amp;</code>, <code>&amp;&amp;</code>, or <code>||</code>, and optionally terminated by one of <code>;</code>, <code>&amp;</code>, or a <code>newline</code>.</p>
+<p>A sequence of one or more newlines may appear in a <code>list</code> to delimit commands, equivalent to a semicolon.</p>
+<p>If a command is terminated by the control operator <code>&amp;</code>, the shell executes the command asynchronously in a subshell. This is known as executing the command in the <strong>background</strong>, and these are referred to as <strong>asynchronous commands</strong>. The shell does not wait for the command to finish, and the return status is 0 (true).</p>
+<p>Commands separated by a <code>;</code> are executed sequentially; the shell waits for each command to terminate in turn. The return status is the exit status of the last command executed.</p>
+<p>AND and OR lists are sequences of one or more pipelines separated by the control operators <code>&amp;&amp;</code> and <code>||</code>, respectively. AND and OR lists are executed with <strong>left associativity</strong>.</p>
+<h4 id="compound-commands">Compound Commands</h4>
+<p>In most cases a list of commands in a compound command’s description may be separated from the rest of the command by one or more newlines, and may be followed by a newline in place of a semicolon.</p>
+<h6 id="looping-constructs">Looping Constructs</h6>
+<p>Note that wherever a <code>;</code> appears in the description of a command’s syntax, it may be replaced with one or more newlines.</p>
+<ul>
+<li>
+<p><strong><code>until</code></strong></p>
+<pre><code>until test-commands; do consequent-commands; done
+</code></pre><p>Execute consequent-commands as long as test-commands has an exit status which is not zero.</p>
+<p>The return status is the exit status of the last command executed in consequent-commands, or zero if none was executed.</p>
+</li>
+<li>
+<p><strong><code>while</code></strong></p>
+<pre><code>while test-commands; do consequent-commands; done
+</code></pre><p>Execute consequent-commands as long as test-commands has an exit status of zero.</p>
+<p>The return status is the exit status of the last command executed in consequent-commands, or zero if none was executed.</p>
+</li>
+<li>
+<p><strong><code>for</code></strong></p>
+<pre><code>for name [ [in [words …] ] ; ] do commands; done
+</code></pre><p>If <code>in words</code> is not present, the <code>for</code> command executes the commands once for each positional parameter that is set.</p>
+<p>The return status is the exit status of the last command that executes. If there are no items in the expansion of words, no commands are executed, and the return status is zero.</p>
+<pre><code>for (( expr1 ; expr2 ; expr3 )) ; do commands ; done
+</code></pre><p>First, the arithmetic expression expr1 is evaluated, The arithmetic expression expr2 is then evaluated repeatedly until it evaluates to zero. Each time expr2 evaluates to a non-zero value, commands are executed and the arithmetic expression expr3 is evaluated.</p>
+</li>
+<li>
+<p>The <code>break</code> and <code>continue</code> builtins may be used to control loop execution.</p>
+</li>
+</ul>
+<h6 id="conditional-constructs">Conditional Constructs</h6>
+<ul>
+<li>
+<p><strong><code>if</code></strong></p>
+<pre><code>if test-commands; then
+  consequent-commands;
+[elif more-test-commands; then
+  more-consequents;]
+[else alternate-consequents;]
+fi
+</code></pre><p>The test-commands list is executed, and if its return status is zero, the consequent-commands list is executed.</p>
+<p>The return status is the exit status of the last command executed, or zero if no condition tested true.</p>
+</li>
+<li>
+<p><strong><code>case</code></strong></p>
+<pre><code>case word in
+    [ [(] pattern [| pattern]…) command-list ;;]…
+esac
+</code></pre><p>Each clause must be terminated with <code>;;</code>, <code>;&amp;</code>, or <code>;;&amp;</code>.</p>
+<pre><code>echo -n &quot;Enter the name of an animal: &quot;
+read ANIMAL
+echo -n &quot;The $ANIMAL has &quot;
+case $ANIMAL in
+  horse | dog | cat) echo -n &quot;four&quot;;;
+  man | kangaroo ) echo -n &quot;two&quot;;;
+  *) echo -n &quot;an unknown number of&quot;;;
+esac
+echo &quot; legs.&quot;
+</code></pre><p>If the ‘;;’ operator is used, no subsequent matches are attempted after the first pattern match. Using ‘;&amp;’ in place of ‘;;’ causes execution to continue with the command-list associated with the next clause, if any. Using ‘;;&amp;’ in place of ‘;;’ causes the shell to test the patterns in the next clause, if any, and execute any associated command-list on a successful match, continuing the case statement execution as if the pattern list had not matched.</p>
+<p>The return status is zero if no pattern is matched. Otherwise, the return status is the exit status of the command-list executed.</p>
+</li>
+<li>
+<p><strong><code>select</code></strong></p>
+<pre><code>select name [in words …]; do commands; done
+</code></pre><pre><code>select fname in *;
+do
+  echo you picked $fname \($REPLY\)
+  break;
+done
+</code></pre></li>
+<li>
+<p><strong><code>((…))</code></strong></p>
+<pre><code>(( expression ))
+</code></pre><p>If the value of the expression is non-zero, the return status is 0; otherwise the return status is 1.</p>
+</li>
+<li>
+<p><strong><code>[[…]]</code></strong></p>
+<pre><code>[[ expression ]]
+</code></pre><p>Return a status of 0 or 1 depending on the evaluation of the conditional expression expression.</p>
+</li>
+</ul>
+<h6 id="grouping-commands">Grouping Commands</h6>
+<p>Bash provides two ways to group a list of commands to be executed as a unit.</p>
+<ul>
+<li>
+<pre><code>( list )
+</code></pre><p>Placing a list of commands between parentheses causes a subshell environment to be created, and each of the commands in list to be executed in that subshell. ince the list is executed in a subshell, variable assignments do not remain in effect after the subshell completes.</p>
+</li>
+<li>
+<pre><code>{ list; }
+</code></pre><p>Placing a list of commands between curly braces causes the list to be executed in the current shell context. No subshell is created. The semicolon (or newline) following list is required.</p>
+</li>
+</ul>
+<h4 id="coprocesses">Coprocesses</h4>
+<p>A coprocess is executed asynchronously in a subshell, as if the command had been terminated with the ‘&amp;’ control operator, with a two-way pipe established between the executing shell and the coprocess.</p>
+<pre><code>coproc [NAME] command [redirections]
+</code></pre><p>This creates a coprocess named NAME. If NAME is not supplied, the default name is COPROC. NAME must not be supplied if command is a simple command; otherwise, it is interpreted as the first word of the simple command.</p>
+<h4 id="gnu-parallel">GNU Parallel</h4>
+<p>Parallel can replace <code>xargs</code> or feed commands from its input sources to several different instances of Bash.</p>
+<p>For example, it is easy to replace <code>xargs</code> to gzip all html files in the current directory and its subdirectories:</p>
+<pre><code>find . -type f -name '*.html' -print | parallel gzip
+</code></pre><p>If you need to protect special characters such as newlines in file names, use find’s <code>-print0</code> option and parallel’s <code>-0</code> option.</p>
+<p>You can use Parallel to move files from the current directory when the number of files is too large to process with one <code>mv</code> invocation:</p>
+<pre><code>ls | parallel mv {} destdir
+</code></pre><p>As you can see, the {} is replaced with each line read from standard input. While using <code>ls</code> will work in most instances, it is not sufficient to deal with all filenames. If you need to accommodate special characters in filenames, you can use</p>
+<pre><code>find . -depth 1 \! -name '.*' -print0 | parallel -0 mv {} destdir
+</code></pre><p>This will run as many <code>mv</code> commands as there are files in the current directory. You can emulate a parallel <code>xargs</code> by adding the -X option:</p>
+<pre><code>find . -depth 1 \! -name '.*' -print0 | parallel -0 -X mv {} destdir
+</code></pre><p>GNU Parallel can replace certain common idioms that operate on lines read from a file (in this case, filenames listed one per line):</p>
+<pre><code>	while IFS= read -r x; do
+		do-something1 &quot;$x&quot; &quot;config-$x&quot;
+		do-something2 &lt; &quot;$x&quot;
+	done &lt; file | process-output
+</code></pre><p>with a more compact syntax reminiscent of lambdas:</p>
+<pre><code>cat list | parallel &quot;do-something1 {} config-{} ; do-something2 &lt; {}&quot; |
+           process-output
+</code></pre><p>Parallel provides a built-in mechanism to remove filename extensions, which lends itself to batch file transformations or renaming:</p>
+<pre><code>ls *.gz | parallel -j+0 &quot;zcat {} | bzip2 &gt;{.}.bz2 &amp;&amp; rm {}&quot;
+</code></pre><h3 id="shell-functions">Shell Functions</h3>
+<p>Functions are declared using this syntax:</p>
+<pre><code>name () compound-command [ redirections ]
+</code></pre><p>or</p>
+<pre><code>function name [()] compound-command [ redirections ]
+</code></pre><p>That command is usually a list enclosed between <code>{</code> and <code>}</code></p>
+<p>Note that for historical reasons, in the most common usage the curly braces that surround the body of the function must be separated from the body by <code>blank</code>s or newlines.</p>
+<p>Also, when using the braces, the list must be terminated by a semicolon, a <code>&amp;</code>, or a newline.</p>
+<p>The shell uses dynamic scoping to control a variable’s visibility within functions.</p>
+<pre><code>func1()
+{
+    local var='func1 local'
+    func2
+}
+
+func2()
+{
+    echo &quot;In func2, var = $var&quot;
+}
+
+var=global
+func1
+</code></pre><pre><code>In func2, var = func1 local
+</code></pre><h3 id="shell-parameters">Shell Parameters</h3>
+<h4 id="positional-parameters">Positional Parameters</h4>
+<p>The shell provides a set of variables called positional parameters that contain the individual words on the command line. The variables are named 0 through 9. The shell also provides a variable, <code>$#</code>, that contains the number of arguments on the command line:</p>
+<p>They can be demonstrated this way:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span><span style="color:#75715e"># posit-param: script to view command line parameters</span>
+echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Number of arguments: </span>$#<span style="color:#e6db74">
+</span><span style="color:#e6db74">\$0 = </span>$0<span style="color:#e6db74">
+</span><span style="color:#e6db74">\$1 = </span>$1<span style="color:#e6db74">
+</span><span style="color:#e6db74">\$2 = </span>$2<span style="color:#e6db74">
+</span><span style="color:#e6db74">\$3 = </span>$3<span style="color:#e6db74">
+</span><span style="color:#e6db74">\$4 = </span>$4<span style="color:#e6db74">
+</span><span style="color:#e6db74">\$5 = </span>$5<span style="color:#e6db74">
+</span><span style="color:#e6db74">\$6 = </span>$6<span style="color:#e6db74">
+</span><span style="color:#e6db74">\$7 = </span>$7<span style="color:#e6db74">
+</span><span style="color:#e6db74">\$8 = </span>$8<span style="color:#e6db74">
+</span><span style="color:#e6db74">\$9 = </span>$9<span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span>
+</code></pre></div><pre><code>[me@linuxbox ~]$ posit-param a b c d
+Number of arguments: 4
+$0 = /home/me/bin/posit-param
+$1 = a
+$2 = b
+$3 = c
+$4 = d
+$5 =
+$6 =
+$7 =
+$8 =
+$9 = 
+</code></pre><p>Even when no arguments are provided, $0 will always contain the first item appearing on the command line, which is the pathname of the program being executed.</p>
+<h6 id="shift--getting-access-to-many-arguments">shift – Getting Access to Many Arguments</h6>
+<pre><code>#!/bin/bash
+# posit-param2: script to display all arguments
+count=1
+while [[ $# -gt 0 ]]; do
+    echo &quot;Argument $count = $1&quot;
+    count=$((count + 1))
+    shift
+done
+</code></pre><p>Each time shift is executed, the value of <code>$2</code> is moved to <code>$1</code>, the value of <code>$3</code> is moved to <code>$2</code> and so on. The value of <code>$#</code> is also reduced by one.</p>
+<pre><code>[me@linuxbox ~]$ posit-param2 a b c d
+Argument 1 = a
+Argument 2 = b
+Argument 3 = c
+Argument 4 = d
+</code></pre><h6 id="simple-applications">Simple Applications</h6>
+<pre><code>#!/bin/bash
+# file-info: simple file information program
+PROGNAME=&quot;$(basename &quot;$0&quot;)&quot;
+if [[ -e &quot;$1&quot; ]]; then
+    echo -e &quot;\nFile Type:&quot;
+    file &quot;$1&quot;
+    echo -e &quot;\nFile Status:&quot;
+    stat &quot;$1&quot;
+else
+    echo &quot;$PROGNAME: usage: $PROGNAME file&quot; &gt;&amp;2
+    exit 1
+fi
+</code></pre><p>This program displays the file type (determined by the <code>file</code> command) and the file status (from the <code>stat</code> command) of a specified file. One interesting feature of this program is the <code>PROGNAME</code> variable. It is given the value that results from the <code>basename &quot;$0&quot;</code> command. The <code>basename</code> command removes the leading portion of a pathname, leaving only the base name of a file. In our example, <code>basename</code> removes the leading portion of the pathname contained in the <code>$0</code> parameter, the full pathname of our example program.</p>
+<h4 id="special-parameters">Special Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$*</code></td>
+<td>Expands into the list of positional parameters, starting with 1. When surrounded by double quotes, it expands into <strong>a double quoted string containing all of the positional parameters</strong>, each separated by the first character of the IFS shell variable (<strong>by default a space character</strong>).</td>
+</tr>
+<tr>
+<td><code>$@ </code></td>
+<td>Expands into the list of positional parameters, starting with 1. When surrounded by double quotes, it expands <strong>each positional parameter into a separate word as if it was surrounded by double quotes</strong>.</td>
+</tr>
+</tbody>
+</table>
+<pre><code>#!/bin/bash
+# posit-params3: script to demonstrate $* and $@
+print_params () {
+    echo &quot;\$1 = $1&quot;
+    echo &quot;\$2 = $2&quot;
+    echo &quot;\$3 = $3&quot;
+    echo &quot;\$4 = $4&quot;
+}
+pass_params () {
+    echo -e &quot;\n&quot; '$* :'; print_params $*
+    echo -e &quot;\n&quot; '&quot;$*&quot; :'; print_params &quot;$*&quot;
+    echo -e &quot;\n&quot; '$@ :'; print_params $@
+    echo -e &quot;\n&quot; '&quot;$@&quot; :'; print_params &quot;$@&quot;
+}
+pass_params &quot;word&quot; &quot;words with spaces&quot;
+</code></pre><pre><code>[me@linuxbox ~]$ posit-param3
+ $* :
+$1 = word
+$2 = words
+$3 = with
+$4 = spaces
+ &quot;$*&quot; :
+$1 = word words with spaces
+$2 =
+$3 =
+$4 =
+ $@ :
+$1 = word
+$2 = words
+$3 = with
+$4 = spaces
+ &quot;$@&quot; :
+$1 = word
+$2 = words with spaces
+$3 =
+$4 = 
+</code></pre><p><code>$@</code> is by far the most useful for most situations because it preserves the integrity of each positional parameter.</p>
+<h3 id="shell-expansions">Shell Expansions</h3>
+<h4 id="brace-expansion">Brace Expansion</h4>
+<pre><code>[me@linuxbox ~]$ echo Front-{A,B,C}-Back
+Front-A-Back Front-B-Back Front-C-Back
+</code></pre><p>The brace expression itself may contain either a comma-separated list of strings or a range of integers or single characters.</p>
+<pre><code>[me@linuxbox ~]$ echo Number_{1..5}
+Number_1 Number_2 Number_3 Number_4 Number_5
+</code></pre><p>Here is a range of letters in reverse order:</p>
+<pre><code>[me@linuxbox ~]$ echo {Z..A}
+Z Y X W V U T S R Q P O N M L K J I H G F E D C B A
+</code></pre><p>Brace expansions may be nested.</p>
+<pre><code>[me@linuxbox ~]$ echo a{A{1,2},B{3,4}}b
+aA1b aA2b aB3b aB4b
+</code></pre><p>So, what is this good for? The most common application is to make lists of files or directories to be created.</p>
+<pre><code>[me@linuxbox ~]$ mkdir Photos
+[me@linuxbox ~]$ cd Photos
+[me@linuxbox Photos]$ mkdir {2007..2009}-{01..12}
+</code></pre><h4 id="tilde-expansion">Tilde Expansion</h4>
+<p>As we may recall from our introduction to the cd command, the tilde character (~) has a special meaning. When used at the beginning of a word, it expands into the name of the home directory of the named user or, if no user is named, the home directory of the current user.</p>
+<pre><code>[me@linuxbox ~]$ echo ~
+/home/me
+[me@linuxbox ~]$ echo ~foo
+/home/foo
+</code></pre><h4 id="shell-parameter-expansion">Shell Parameter Expansion</h4>
+<p>It's a feature that is more useful in shell scripts than directly on the command line.</p>
+<p>The basic form of parameter expansion is ${parameter}</p>
+<p>The braces are required when parameter is a positional parameter with more than one digit, or when parameter is followed by a character that is not to be interpreted as part of its name.</p>
+<pre><code>[me@linuxbox ~]$ echo $USER
+me
+[me@linuxbox ~]$ printenv | less
+</code></pre><p>With parameter expansion, if we misspell the name of a variable, the expansion will still take place but will result in an empty string</p>
+<p><a href="https://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion">read more</a></p>
+<h4 id="command-substitution">Command Substitution</h4>
+<p>Command substitution allows us to use the output of a command as an expansion.</p>
+<pre><code>[me@linuxbox ~]$ ls -l $(which cp)
+-rwxr-xr-x 1 root root 71516 2007-12-05 08:58 /bin/cp
+</code></pre><pre><code>[me@linuxbox ~]$ file $(ls -d /usr/bin/* | grep zip)
+/usr/bin/bunzip2: symbolic link to `bzip2'
+/usr/bin/bzip2: ELF 32-bit LSB executable, Intel 80386,
+version 1 (SYSV), dynamically linked (uses shared libs), for
+GNU/Linux 2.6.9, stripped
+/usr/bin/bzip2recover: ELF 32-bit LSB executable, Intel 80386,
+version 1 (SYSV), dynamically linked (uses shared libs), for
+GNU/Linux 2.6.9, stripped
+</code></pre><h4 id="arithmetic-expansion">Arithmetic Expansion</h4>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>Addition</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Subtraction</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Multiplication</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Division (but remember, since expansion supports only integer arithmetic, results are integers).</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Modulo, which simply means “remainder.”</td>
+</tr>
+<tr>
+<td>**</td>
+<td>Exponentiation</td>
+</tr>
+</tbody>
+</table>
+<p>The format for arithmetic expansion is:</p>
+<pre><code>$(( expression ))
+</code></pre><pre><code>[me@linuxbox ~]$ echo $((2 + 2))                  # 4
+[me@linuxbox ~]$ echo $(($((5**2)) * 3))          # 75
+</code></pre><h4 id="process-substitution">Process Substitution</h4>
+<p>Process substitution allows a process’s input or output to be referred to using a filename. Process substitution is expressed in two ways.</p>
+<p>For processes that produce standard output, it looks like this:</p>
+<pre><code>&lt;(list)
+</code></pre><p>or, for processes that intake standard input, it looks like this:</p>
+<pre><code>&gt;(list)
+</code></pre><p>where list is a list of commands.</p>
+<p>Process substitution is often used with loops containing read. Here is an example of a read loop that processes the contents of a directory listing created by a subshell:</p>
+<pre><code>#!/bin/bash
+# pro-sub: demo of process substitution
+while read attr links owner group size date time filename; do
+    cat &lt;&lt;- EOF
+        Filename: $filename
+        Size: $size
+        Owner: $owner
+        Group: $group
+        Modified: $date $time
+        Links: $links
+        Attributes: $attr
+    EOF
+done &lt; &lt;(ls -l | tail -n +2)
+</code></pre><p>The loop executes read for each line of a directory listing. The listing itself is produced on the final line of the script. This line redirects the output of the process substitution into the standard input of the loop. The tail command is included in the process substitution pipeline to eliminate the first line of the listing, which is not needed</p>
+<h4 id="word-splitting">Word Splitting</h4>
+<h4 id="filename-expansion">Filename Expansion</h4>
+<h6 id="pattern-matching">Pattern Matching</h6>
+<h4 id="quote-removal">Quote Removal</h4>
+<h3 id="redirections">Redirections</h3>
+<p>In the following descriptions, if the file descriptor number is omitted, and the first character of the redirection operator is <code>&lt;</code>, the redirection refers to the standard input (<strong>file descriptor 0</strong>). If the first character of the redirection operator is <code>&gt;</code>, the redirection refers to the standard output (<strong>file descriptor 1</strong>).</p>
+<p><strong>Note that the order of redirections is significant.</strong> For example, the command</p>
+<pre><code>ls &gt; dirlist 2&gt;&amp;1
+</code></pre><p>directs both standard output (file descriptor 1) and standard error (file descriptor 2) to the file dirlist, while the command</p>
+<pre><code>ls 2&gt;&amp;1 &gt; dirlist
+</code></pre><p>directs only the standard output to file dirlist, because the standard error <strong>was made</strong> a copy of the standard output before the standard output was redirected to dirlist.</p>
+<ul>
+<li>cat – Concatenate files</li>
+<li>sort – Sort lines of text</li>
+<li>uniq – Report or omit repeated lines</li>
+<li>grep – Print lines matching a pattern</li>
+<li>wc – Print newline, word, and byte counts for each file</li>
+<li>head – Output the first part of a file</li>
+<li>tail – Output the last part of a file</li>
+<li>tee – Read from standard input and write to standard output and files</li>
+</ul>
+<h4 id="redirecting-input">Redirecting Input</h4>
+<pre><code>[n]&lt;word
+</code></pre><p>n is file descriptor, redirecting the standard input (file descriptor 0) if <code>n</code> is not specified.</p>
+<h4 id="redirecting-output">Redirecting Output</h4>
+<pre><code>[n]&gt;[|]word
+</code></pre><p>n is file descriptor, redirecting the standard output (file descriptor 1) if n is not specified.</p>
+<h4 id="appending-redirected-output">Appending Redirected Output</h4>
+<pre><code>[n]&gt;&gt;word              
+</code></pre><p>n is file descriptor, redirecting the standard output (file descriptor 1) if n is not specified.</p>
+<h4 id="redirecting-standard-output-and-standard-error">Redirecting Standard Output and Standard Error</h4>
+<p>This construct allows both the standard output (file descriptor 1) and the standard error output (file descriptor 2) to be redirected to the file whose name is the expansion of word.</p>
+<pre><code>&amp;&gt;word
+</code></pre><pre><code>&gt;word 2&gt;&amp;1
+</code></pre><h4 id="appending-standard-output-and-standard-error">Appending Standard Output and Standard Error</h4>
+<pre><code>&amp;&gt;&gt;word
+</code></pre><pre><code>&gt;&gt;word 2&gt;&amp;1
+</code></pre><h4 id="here-documents">Here Documents</h4>
+<p>A here document is an additional form of I/O redirection in which we embed a body of text into our script and feed it into the standard input of a command.</p>
+<pre><code>command &lt;&lt; token
+text
+token
+</code></pre><p>where command is the name of command that accepts standard input and token is a string used to indicate the end of the embedded text.</p>
+<pre><code>#!/bin/bash
+# Program to output a system information page
+TITLE=&quot;System Information Report For $HOSTNAME&quot;
+CURRENT_TIME=&quot;$(date +&quot;%x %r %Z&quot;)&quot;
+TIMESTAMP=&quot;Generated $CURRENT_TIME, by $USER&quot;
+cat &lt;&lt; _EOF_
+&lt;html&gt;
+    &lt;head&gt;
+    	&lt;title&gt;$TITLE&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;$TITLE&lt;/h1&gt;
+        &lt;p&gt;$TIMESTAMP&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+_EOF_
+</code></pre><p>Instead of using echo, our script now uses cat and a here document.</p>
+<p>The string <code>_EOF_</code> (meaning End Of File, a common convention) was selected as the token and marks the end of the embedded text. Note that the token must appear alone and that there must not be trailing spaces on the line.</p>
+<p>So, what’s the advantage of using a here document? It’s mostly the same as echo, <strong>except that, by default, single and double quotes within here documents lose their special meaning to the shell</strong>.</p>
+<p>If we change the redirection operator from <code>&lt;&lt;</code> to <strong><code>&lt;&lt;-</code></strong>, the shell will ignore leading tab characters (but not spaces) in the here document. This allows a here document to be indented, which can improve readability</p>
+<h4 id="here-strings">Here Strings</h4>
+<pre><code>[n]&lt;&lt;&lt; word
+</code></pre><pre><code>#!/bin/bash
+# read-ifs: read fields from a file
+FILE=/etc/passwd
+read -p &quot;Enter a username &gt; &quot; user_name
+file_info=&quot;$(grep &quot;^$user_name:&quot; $FILE)&quot;
+if [ -n &quot;$file_info&quot; ]; then
+    IFS=&quot;:&quot; read user pw uid gid name home shell &lt;&lt;&lt; &quot;$file_info&quot;
+    echo &quot;User = '$user'&quot;
+    echo &quot;UID = '$uid'&quot;
+    echo &quot;GID = '$gid'&quot;
+    echo &quot;Full Name = '$name'&quot;
+    echo &quot;Home Dir. = '$home'&quot;
+    echo &quot;Shell = '$shell'&quot;
+else
+    echo &quot;No such user '$user_name'&quot; &gt;&amp;2
+    exit 1
+fi
+</code></pre><p>The <code>&lt;&lt;&lt;</code> operator indicates a here string. A here string is like a here document, only shorter, consisting of a single string. In our example, the line of data from the <code>/etc/ passwd</code> file is fed to the standard input of the read command.</p>
+<p>We might wonder <strong>why this rather oblique method was chosen rather than thsi</strong>:</p>
+<pre><code>echo &quot;$file_info&quot; | IFS=&quot;:&quot; read user pw uid gid name home shell
+</code></pre><p>In bash (and other shells such as sh), pipelines create subshells. These are copies of the shell and its environment that are used to execute the command in the pipeline. When the processes finishes, the copy of the environment is destroyed. This means that a subshell can never alter the environment of its parent process.  In the previous example, read assigns the value foo to the variable REPLY in its subshell’s environment, but when the command exits, <strong>the subshell and its environment are destroyed, and the effect of the assignment is lost.</strong> <strong>Using here strings is one way to work around this behavior.</strong></p>
+<h4 id="duplicating-file-descriptors">Duplicating File Descriptors</h4>
+<h4 id="moving-file-descriptors">Moving File Descriptors</h4>
+<h4 id="opening-file-descriptors-for-reading-and-writing">Opening File Descriptors for Reading and Writing</h4>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://www.gnu.org/software/bash/manual/bash.html">Bash Reference Manual</a></li>
+<li><a href="http://linuxcommand.org/index.php">The Linux Command Line</a></li>
+</ol>
+
+  </div>
+
+  
+  
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2016-09-26
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+  
+  
+</article>
+
+
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

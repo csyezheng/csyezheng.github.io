@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming-languages on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/categories/programming-languages/</link>
+    <description>Recent content in programming-languages on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 16 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/categories/programming-languages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C&#43;&#43; Library Management</title>
+      <link>http://csyezheng.github.io/post/programming-languages/cpp/cpp-library-management/</link>
+      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/cpp/cpp-library-management/</guid>
+      <description>In general, you are going to have to end up with
+ Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&#39;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).</description>
+    </item>
+    
+    <item>
+      <title>libcurl</title>
+      <link>http://csyezheng.github.io/post/programming-languages/cpp/curl/</link>
+      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/cpp/curl/</guid>
+      <description>#include &amp;lt;curl/curl.h&amp;gt; When using an external library you must link with it:
+$ g++ main.cpp -lcurl </description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; 3rd party libraries</title>
+      <link>http://csyezheng.github.io/post/programming-languages/cpp/3rd-libraries/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/cpp/3rd-libraries/</guid>
+      <description>grpc/libevent/libev/libasio 实现高性能网络服务器 protobuf 数据结构序列化/反序列化，方便数据交换 LevelDB/RocksDB 嵌入式KV数据库 snappy/zlib/lz4 数据压缩，解压缩 jemalloc/tcmalloc 高效内存分配器，尤其多线程场景 jerasure Reed Sol</description>
+    </item>
+    
+    <item>
+      <title>jsoncpp</title>
+      <link>http://csyezheng.github.io/post/programming-languages/cpp/jsoncpp/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/cpp/jsoncpp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CMake</title>
+      <link>http://csyezheng.github.io/post/programming-languages/cpp/cmake/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/cpp/cmake/</guid>
+      <description>如果工程存在多个目录,需要确保每个要管理的目录都存在一个 CMakeLists.txt． Set a name, version, and enable languages for the entire project. project(&amp;lt;PROJECT-NAME&amp;gt; [LANGUAGES] [&amp;lt;language-name&amp;gt;...]) Sets the name of the project and stores the name in the PROJECT_NAME</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; tools</title>
+      <link>http://csyezheng.github.io/post/programming-languages/cpp/tools/</link>
+      <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/cpp/tools/</guid>
+      <description>Tools clang-format 格式化c++代码，同类工具还有astyle。保持代码风格统一是个好习惯。 qt creator vs以外我觉得最好用的c++ ide，代码补全质量高（基于li</description>
+    </item>
+    
+    <item>
+      <title>A Tour of Go</title>
+      <link>http://csyezheng.github.io/post/programming-languages/go/a-tour-of-go/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/go/a-tour-of-go/</guid>
+      <description>Basics Packages, variables, and functions. Packages Programs start running in package main.
+By convention, the package name is the same as the last element of the import path. For instance, the &amp;quot;math/rand&amp;quot; package comprises files that begin with the statement package rand.
+Imports It is good style to use the factored import statement.
+import ( &amp;quot;fmt&amp;quot; &amp;quot;math/rand&amp;quot; ) Exported names In Go, a name is exported if it begins with a capital letter.</description>
+    </item>
+    
+    <item>
+      <title>Debugging JavaScript in Chrome DevTools</title>
+      <link>http://csyezheng.github.io/post/programming-languages/javascript/debug/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/javascript/debug/</guid>
+      <description>Get Started Step 2: Get familiar with the Sources panel UI The Sources panel is where you debug JavaScript.
+Open DevTools by pressing Command+Option+I (Mac) or Control+Shift+I (Windows, Linux). This shortcut opens the Consolepanel.
+Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: Set a line-of-code breakpoint Step 6: Check variable values </description>
+    </item>
+    
+    <item>
+      <title>Delve Documentation</title>
+      <link>http://csyezheng.github.io/post/programming-languages/go/debugging-with-delve/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/go/debugging-with-delve/</guid>
+      <description>Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;amp;&amp;amp; cd &amp;quot;$_&amp;quot; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &amp;quot;fmt&amp;quot; &amp;quot;log&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;os&amp;quot; ) const port = &amp;quot;8000&amp;quot; func main() { http.HandleFunc(&amp;quot;/hi&amp;quot;, hi) fmt.Println(&amp;quot;runing on port: &amp;quot; + port) log.Fatal(http.ListenAndServe(&amp;quot;:&amp;quot; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &amp;quot;HostName: %s&amp;quot;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.</description>
+    </item>
+    
+    <item>
+      <title>generate-model-structs-from-database</title>
+      <link>http://csyezheng.github.io/post/programming-languages/go/generate-model-structs-from-database/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/go/generate-model-structs-from-database/</guid>
+      <description>Generate gorm model structs from database
+  https://github.com/smallnest/gen
+  https://github.com/wantedly/pq2gorm
+  https://github.com/go-xorm/cmd
+  </description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Scala</title>
+      <link>http://csyezheng.github.io/post/programming-languages/scala/getting-started/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/scala/getting-started/</guid>
+      <description>Create A Scala Project With sbt In The Command Line Installation   Java 8 JDK javac -version 
+  install sbt
+  Create a project $ mkdir practice &amp;amp;&amp;amp; cd practice $ sbt new scala/hello-world.g8 # pull template from GitHub - hello-world - project (sbt uses this to install manage plugins and dependencies) - build.properties - src - main - scala (All of your scala code goes here) -Main.</description>
+    </item>
+    
+    <item>
+      <title>Gin</title>
+      <link>http://csyezheng.github.io/post/programming-languages/go/gin/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/go/gin/</guid>
+      <description>sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
+$ go get github.com/gin-contrib/sessions import &amp;quot;github.com/gin-contrib/sessions&amp;quot; cookie-based Example import ( &amp;quot;github.com/gin-contrib/sessions&amp;quot; &amp;quot;github.com/gin-contrib/sessions/cookie&amp;quot; &amp;quot;github.com/gin-gonic/gin&amp;quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&amp;quot;secret&amp;quot;)) r.Use(sessions.Sessions(&amp;quot;mysession&amp;quot;, store)) r.GET(&amp;quot;/incr&amp;quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&amp;quot;count&amp;quot;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&amp;quot;count&amp;quot;, count) session.</description>
+    </item>
+    
+    <item>
+      <title>glide</title>
+      <link>http://csyezheng.github.io/post/programming-languages/go/glide/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/go/glide/</guid>
+      <description>使用 glide install 或 glide up 时报 Cannot detect VCS image.png 解决 这个是国内访问golang.org被墙导致的 解决方法如下： glide mirror set https://golang.org/x/crypto https://github.com/golang/crypto 理论上这样后再执行 glide install 或 glide up 就可以了 如果按</description>
+    </item>
+    
+    <item>
+      <title>go modules</title>
+      <link>http://csyezheng.github.io/post/programming-languages/go/modules/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/go/modules/</guid>
+      <description>https://github.com/golang/go/wiki/Modules#quick-start</description>
+    </item>
+    
+    <item>
+      <title>go-get-golang-x-solution</title>
+      <link>http://csyezheng.github.io/post/programming-languages/go/go-get-golang-x-solution/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/go/go-get-golang-x-solution/</guid>
+      <description>问题描述 当我们使用 go get、go install、go mod 等命令时，会自动下载相应的包或依赖包。但由于众所周知的原因，类似于 golang.org/x/... 的包会出现下载失败</description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>http://csyezheng.github.io/post/programming-languages/go/go/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/go/go/</guid>
+      <description>a-tour-of-go
+standard-library
+Debugging-with-Delve
+generate-model-structs-from-database
+glide
+gopm
+material
+package_download
+quick-start
+web-dev-with-gin-needed
+gin
+go-get-golang-x-solution.md
+good-at.md
+gorm.md
+modules.md
+photoprism.md</description>
+    </item>
+    
+    <item>
+      <title>Golang Pros and Cons</title>
+      <link>http://csyezheng.github.io/post/programming-languages/go/good-at/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/go/good-at/</guid>
+      <description>Golang Pros  Modular design means the compiled binary is as small as possible and requires no dependencies. Like Java, it’s platform independent. You can compile it for any platform your servers and applications run on. Take that, Apple. Easy for your developers to learn because it’s based on C. You don’t need to go to a code bootcamp to become proficient. Has static type checking, meaning your code gets its bugs cleaned up at compile time, not in production.</description>
+    </item>
+    
+    <item>
+      <title>gopm</title>
+      <link>http://csyezheng.github.io/post/programming-languages/go/gopm/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/go/gopm/</guid>
+      <description>go get -u github.com/gpmgo/gopm </description>
+    </item>
+    
+    <item>
+      <title>gorm</title>
+      <link>http://csyezheng.github.io/post/programming-languages/go/gorm/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/go/gorm/</guid>
+      <description>struct name and table name type User struct {} // default table name is `users` // Set User&#39;s table name to be `profiles` func (User) TableName() string { return &amp;quot;profiles&amp;quot; } gorm不定条件查询和分页操作 making dynamic query and pagination using gorm course := models.Course{} // The global db variable must be assigned to the local db variable. //</description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>http://csyezheng.github.io/post/programming-languages/javascript/javascript/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/javascript/javascript/</guid>
+      <description>概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //</description>
+    </item>
+    
+  </channel>
+</rss>

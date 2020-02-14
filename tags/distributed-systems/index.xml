@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>distributed systems on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/distributed-systems/</link>
+    <description>Recent content in distributed systems on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/tags/distributed-systems/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Concurrent-Programming-for-Scalable-Web-Architectures</title>
+      <link>http://csyezheng.github.io/post/back-end/concurrent-programming-for-scalable-web-architectures/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/concurrent-programming-for-scalable-web-architectures/</guid>
+      <description>Introduction Scope of this Thesis We will have a detailed look on concurrency in three distinct areas of web architectures&amp;ndash;connection handling, application logic and backend persistence. For each stage, we will discuss its main challenges and issues and explain existing approaches to tackle concurrency.
+Web Applications distinguish two separate types of web applications &amp;ndash; web sites and web services.
+Web Sites some popular types for web sites that are interesting in terms of scalability and concurrency</description>
+    </item>
+    
+    <item>
+      <title>distributed systems</title>
+      <link>http://csyezheng.github.io/post/back-end/distributed-systems/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/distributed-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>high concurrency</title>
+      <link>http://csyezheng.github.io/post/back-end/high-concurrency/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/high-concurrency/</guid>
+      <description>高并发 高并发其实挺容易的，当你明白了一万并发的原理，然后扩展到百万、千万、亿万级很easy 要点有如下几项： 1、垂直分层：DNS层、跨机房部署</description>
+    </item>
+    
+  </channel>
+</rss>

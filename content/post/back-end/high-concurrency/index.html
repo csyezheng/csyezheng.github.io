@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>high concurrency - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="高并发 高并发其实挺容易的，当你明白了一万并发的原理，然后扩展到百万、千万、亿万级很easy 要点有如下几项： 1、垂直分层：DNS层、跨机房部署" />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<link rel="canonical" href="http://csyezheng.github.io/content/post/back-end/high-concurrency/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.0995afa14b62cd93e93cfc066b646c4c17a3eddca0e9d52a1d9dcf5d90aaacd3.css" integrity="sha256-CZWvoUtizZPpPPwGa2RsTBej7dyg6dUqHZ3PXZCqrNM=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="high concurrency" />
+<meta property="og:description" content="高并发 高并发其实挺容易的，当你明白了一万并发的原理，然后扩展到百万、千万、亿万级很easy 要点有如下几项： 1、垂直分层：DNS层、跨机房部署" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://csyezheng.github.io/content/post/back-end/high-concurrency/" />
+<meta property="article:published_time" content="2018-08-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-08-26T00:00:00+00:00" />
+<meta itemprop="name" content="high concurrency">
+<meta itemprop="description" content="高并发 高并发其实挺容易的，当你明白了一万并发的原理，然后扩展到百万、千万、亿万级很easy 要点有如下几项： 1、垂直分层：DNS层、跨机房部署">
+<meta itemprop="datePublished" content="2018-08-26T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-08-26T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="4115">
+
+
+
+<meta itemprop="keywords" content="high concurrency,system design,distributed systems," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="high concurrency"/>
+<meta name="twitter:description" content="高并发 高并发其实挺容易的，当你明白了一万并发的原理，然后扩展到百万、千万、亿万级很easy 要点有如下几项： 1、垂直分层：DNS层、跨机房部署"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+  
+  <header class="post-header">
+    <h1 class="post-title">high concurrency</h1>
+    
+    <div class="post-meta">
+      <time datetime="2018-08-26" class="post-time">
+        2018-08-26
+      </time>
+    </div>
+  </header>
+
+  
+  
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+
+  
+  <div class="post-content">
+      <h1 id="高并发">高并发</h1>
+<p>高并发其实挺容易的，当你明白了一万并发的原理，然后扩展到百万、千万、亿万级很easy</p>
+<p>要点有如下几项：</p>
+<p>1、垂直分层：DNS层、跨机房部署、LVS+Nginx负载均衡，vanish+共享存储实现动静分离，Nginx后挂载N台服务器集群，服务器集群后挂载微服务化、微服务后挂载数据库分库分表+消息队列+任务调度，最后端挂载数据集群负责数据的统一归档+流计算+异步批处理</p>
+<p>2、水平分区：根据业务划分业务线，每个业务线中设计分区键，根据userNo设计用户隔离，根据IP地址设计地区隔离，根据用户级别设计级别隔离，根据操作日期设计时间隔离，根据关键key进行hash散列，然后考虑一下分区的扩容、缩容、灾备、监控</p>
+<p>3、数据同步，跨机房跨集群的困难点在于数据同步，有三种做法：</p>
+<p>3.1）不同步，任由各子集群在自己的业务范围内运行</p>
+<p>3.2）汇总集群，建立一个统一的数据汇总集群（如Hadoop\Spark\Kylin等），将数据汇总到统一的大数据集群中，再进行统计、汇总、运算等。缺点是会有时间差，短须5分钟，长须一天以上</p>
+<p>3.3）远程数据同步，通过开源框架实现多个数据库的同步，例如阿里的otter，底层为canal，模拟mysql的从库，实现日志解析并数据库入库，时间差较短，如果网络没有太大问题，可在秒级完成数据同步。数据同步冲突算法有两种：单向回环补救、时间交集补救。一般推荐使用单向回环补救，即：如果发现数据库A与数据库B的同步时间差大于某个数值，则根据pk查询最新记录同步到数据库中。而另一种算法时间交集补救，是根据“时间交集”的定义，获得双方数据库的“时间交叉的操作”清单，然后根据此清单执行单向回环补救。此方法缺点为：a)开源版本中仅有单向回环补救;b)只支持mysql-&gt;mysql同步或者mysql-&gt;oracle同步。</p>
+<p>集齐以上三件，基本上百万级并发就轻松搞定了。然后需要注意一些细节：</p>
+<p>1）集群与集群之间要实现从入口开始的严格隔离，即DNS层-&gt;LVS层-&gt;Nginx层完全隔离</p>
+<p>2）数据库的链接数是重要资源，一个mysql数据库可以提供1000链接，也就是说，按照50链接/每机器来计算，最多链接20个实例，硬上一下超不过30台。因此数据库层的分库分表一定要彻彻底底的分开。子集群之间不能互相链接数据库。</p>
+<p>3）一些关键业务可以在缓存中操作，建议采用redis缓存。而memcache死机后数据丢失，mongodb功能尚不完善。redis的安全机制一定要做好，千万不能丢数据。缓存到数据库的存储可以采用计数形式，每隔N次操作存一次数据库，可以线性降低数据库压力</p>
+<p>4）数据库只使用简单的存取功能，所有业务功能在代码层实现，DBA推荐的分区、分存储、存储过程等功能一般在数据仓库中是有用的，而在实时计算系统中，千万不要采用。否则你会看到你们几百人的开发团队等待一个DBA给你们排期的情况。</p>
+<p>5）前端可以做一些小的手段，例如抽奖活动，可以在页面js中直接告诉用户未中奖，而并不通知后台，此为“基础不中奖率”，可以直接过滤掉90%以上的流量。（此功能请与产品团队好好沟通，从性价比上讲，这种小手段不提倡，但是性价比极高。）</p>
+<p>6）消息队列系统建议采用一些堆积能力较强的系统，如:rocketmq,rabbit等，建议rocketmq，消息堆积能力之强，单机堆积上亿条。</p>
+<p>7）日志系统建议kafka，日志系统之后可以增加storm,hdfs,logstash等配套设施</p>
+<p>8）网卡流量问题需要严重关注，经常出现的问题是：在某个活动之间，redis网卡流量打满，导致redis无法访问，整个业务暂停。需要网络部门对公司内部的服务器路由有准确估算，出现分值之后可以妥善定位问题并修复，日常工作中也要做好规划，提前做好准备。</p>
+<p>9）老生常谈的：断路器、限流、自动降级。断路器是指在RPC的客户端中实现如下功能：如果发现该断路器访问服务端在10秒内访问超过50次且失败率高于50%，则中断该断路器的访问10秒钟，以保护下游系统。自动降级就是：如果发生问题，自动切换到备用程序上，如报错、如访问redis失败改访问DB等。限流就是在RPC的服务端中实现如下功能：对每个IP、每个token进行限制，通过令牌桶算法，每个时间段只允许指定数量的服务通过，否则就拒绝服务调用。一般断路器使用hystrix，自动降级可以自行实现，也可以用hystrix的配套设施实现，限流比较简单自行实现即可。</p>
+<p>这么一套下来，大概得三四百人，时间得四五年吧，估算一下：</p>
+<p>工资成本两个亿</p>
+<p>服务器预算一个亿</p>
+<p>网络流量费、电费、机架费、安全监测费、域名费用、第三方采购费用&hellip;&hellip;</p>
+<p>大致可以这么说：如果一家公司计划三年内投入五个亿，还计算搞一番事业出来的，这套框架就够了，包你从QPS500到QPS10000到QPS1亿稳定运行。</p>
+<hr>
+<p>但本文主旨不是要告诉你如何搭建一个亿万计的高并发系统，我的意思是：现在高并发技术烂大街了，每当我看到一个人和我吹嘘高并发多么多么牛，我心中总是泛起一丝怜悯。</p>
+<p>想想战争年代的发报员</p>
+<p>想想几十年前的司机</p>
+<p>想想十年前的站长</p>
+<p>想想五年前的国产操作系统</p>
+<p>想想三年前的移动端开发</p>
+<p>想想一年前的docker</p>
+<p>。。。。。。</p>
+<p>高并发只是一种类似的技术：使用场景少，价格高昂，好比屠龙之技，龙就那么几条，还都差不多被砍死了。随着相关资料的泛滥，将来它会是一门“出入江湖必备的手艺”，如太祖长拳一般的泛滥，不值一文。</p>
+<ol>
+<li></li>
+<li></li>
+<li>
+<p>基础知识非常重要，这包括算法，操作系统，jvm，数据库，缓存，多线程等等，其实这都是独立而又关联的知识。书本里都有，但理论要结合实际，一定要联系到具体的技术才会有用。但也别迷信任何技术，大并发面前，没一个框架靠得住，靠得住的只有人，是人来根据具体的应用场景，使用各种知识去解决具体的问题。</p>
+</li>
+<li>
+<p>一个后端程序员最重要的技能是分布式系统设计，这是经验和知识的结合，或者说就是用前面提到的基础来搭积木。编程语言是不重要的，但有那么几个语言在高并发应用方面积累了非常多的宝贵经验，比如说java，scala还有新兴的go。</p>
+</li>
+<li>
+<p>这里最常见的就是如何分片sharding和负载均衡load balancer。为什么要分片和负载均衡呢？ 因为一台机器你再怎么玩，能力也是有限的。很多人都知道都知道更大的并发需要更多的服务器，这么多的服务器怎么分工，就是分片和负载均衡。这听起来还是挺容易的，做起来也不难。</p>
+</li>
+<li>
+<p>有时候你的分布式系统很可能加不了那么多服务器，这就是所谓的scalability，这是我们在项目伊始就要多加注意的地方。但这东西有个平衡，高的scalability不是没有代价的。我以前给人家讲课的时候，常讲一个例子，如果你设计一个自家厨房，你肯定只设计一个洗碗的水池对不对？平时绝对是够用的，但是如果你有一天请20个朋友来你家吃饭，吃饭大家围着桌子一起吃非常快，但你发现洗碗就scale不上去了，派再多人洗碗也没用，最多同时只能一个人在洗碗，这就成为你家接待能力的瓶颈。但家里厨房并不是为接待20+个朋友设计的，搞太多水池是个累赘。这就需要权衡，没有一定对的设计。</p>
+</li>
+</ol>
+<p><a href="http://highscalability.com/all-time-favorites/">http://highscalability.com/all-time-favorites/</a></p>
+<p><a href="https://www.mullie.eu/why-your-code-doesnt-scale/">https://www.mullie.eu/why-your-code-doesnt-scale/</a></p>
+<ol start="5">
+<li>
+<p>并没有一种高并发设计可以打遍天下无敌手，每个公司都有自己的应用场景，有自己的实际需要，有自己的权衡，有自己的技术特点。有一得就必有一失，比如说google和uber使用go来解决起自身的特殊需要和已经产生的问题，但是go对你的团队来说可能仅仅是个略显丑陋的普通语言。你去照搬人家微服务的设计，很可能还不如老老实实用个spring mvc + mysql</p>
+<p>所以我们去了解我们自己系统的特点，选择对应的技术，明白当前技术的得失。有兴趣的朋友可以看看</p>
+<p><a href="https://cloud.google.com/datastore/docs/articles/balancing-strong-and-eventual-consistency-with-google-cloud-datastore/">https://cloud.google.com/datastore/docs/articles/balancing-strong-and-eventual-consistency-with-google-cloud-datastore/</a></p>
+</li>
+<li>
+<p>高并发和scalability还不能离开高可用，你搞5w台服务器，但只要坏一台就全部服务都受影响肯定是不行的。你想如果1台服务器的可用性是99%，那如果你有100台，它们在一起每台都不坏的可用性就只有99%^100, 这个值只有36.6%。也就是说如果你有个100台机器的机房，每年大半时间都有机器在出问题。单纯的冗余并不能解决问题，如果有些服务坏掉或者重启，你需要能有一些应对和调整的策略，你需要让别的服务器知道哪些下游服务器可用，哪些已经挂了。这有很多的搞法，大家可以看看zookeeper。但像zookeeper这样的技术也不能过度使用，有些朋友把啥都往zookeeper里放，造成zookeeper成了系统的瓶颈，这就反而不美了。</p>
+</li>
+</ol>
+<p>这有还很多细节，比如说id怎么生成，你用一个mysql自增长的整数就会影响并发的能力，uuid生成也没那么简单，也要根据实际情况调整。比如说你的数据怎么sharding，以后怎么扩容，可以看看一致性哈希，再结合前面id算法，可以给你带来很多思考。然后跨多个数据中心怎么办，如果是一个可写其他只读，那我怎么知道去哪个数据中心写，其实还是可以做在那个id算法里。这些我觉得也可以自学，网上公开的资料很多。关于ID的算法，我也是最近玩go，仿制twitter的snowflake id做了一个用乐观锁的分布式ID算法。</p>
+<p>beinan/fastidwww.github.com<img src="https://pic4.zhimg.com/v2-d7ee72adef4240c956fb3a63dadc9253_ipico.jpg" alt="图标"></p>
+<p>现在的高并发服务不单单是线上的服务，还包括很多线下的服务，比如说大数据，这个也是不能忽视的部分。数据处理又根据你的需要可以是实时的，实时的可以使用storm， twitter有一个新的实现heron，有更合理的架构，而且和storm api兼容。如果不是实时的，选择就更多了。</p>
+<p>很多人可能会比较在意GC的设置，其实GC并不直接影响你系统的并发能力，它可能会影响到你系统的吞吐量和访问延时之间的关系，而且其实近年来jvm和go的默认GC设置已经很难让其成为系统的瓶颈了。</p>
+<p>最后才是实操经验，其实这主要让猎头和hr觉得你行，因为你干过。但你具体行不行技术面试一聊就知道了，再好的公司也不是各个都行。国内做得好的可以多看看阿里、头条等，但我不知道他们具体并发多少。如果你前面那些基础好，去阿里和头条不会太难，去一个核心点的组，就接触到了。或者可以看看twitter的技术博客也有帮助(要翻墙)。</p>
+<p><a href="https://blog.twitter.com/engineering/en_us.htmlblog.twitter.com">https://blog.twitter.com/engineering/en_us.htmlblog.twitter.com</a></p>
+
+  </div>
+
+  
+  
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2018-08-26
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+  
+  
+</article>
+
+
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

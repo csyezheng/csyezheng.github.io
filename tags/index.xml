@@ -1,40 +1,193 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on YeZheng&#39;s Blog</title>
+    <title>Tags on Ye Zheng&#39;s Blog</title>
     <link>http://csyezheng.github.io/tags/</link>
-    <description>Recent content in Tags on YeZheng&#39;s Blog</description>
+    <description>Recent content in Tags on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 26 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://csyezheng.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>archlinux</title>
-      <link>http://csyezheng.github.io/tags/archlinux/</link>
-      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      <title>Django</title>
+      <link>http://csyezheng.github.io/tags/django/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/tags/archlinux/</guid>
+      <guid>http://csyezheng.github.io/tags/django/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>linux</title>
-      <link>http://csyezheng.github.io/tags/linux/</link>
-      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      <title>Scrapy</title>
+      <link>http://csyezheng.github.io/tags/scrapy/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/tags/linux/</guid>
+      <guid>http://csyezheng.github.io/tags/scrapy/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>installation</title>
-      <link>http://csyezheng.github.io/tags/installation/</link>
-      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      <title>Cpp</title>
+      <link>http://csyezheng.github.io/tags/cpp/</link>
+      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/tags/installation/</guid>
+      <guid>http://csyezheng.github.io/tags/cpp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jsoncpp</title>
+      <link>http://csyezheng.github.io/tags/jsoncpp/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/jsoncpp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cmake</title>
+      <link>http://csyezheng.github.io/tags/cmake/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/cmake/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevOps</title>
+      <link>http://csyezheng.github.io/tags/devops/</link>
+      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>http://csyezheng.github.io/tags/kubernetes/</link>
+      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oauth2</title>
+      <link>http://csyezheng.github.io/tags/oauth2/</link>
+      <pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/oauth2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>http://csyezheng.github.io/tags/docker/</link>
+      <pubDate>Thu, 25 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>microservices</title>
+      <link>http://csyezheng.github.io/tags/microservices/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/microservices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gin</title>
+      <link>http://csyezheng.github.io/tags/gin/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/gin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>glide</title>
+      <link>http://csyezheng.github.io/tags/glide/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/glide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>http://csyezheng.github.io/tags/go/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gopm</title>
+      <link>http://csyezheng.github.io/tags/gopm/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/gopm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gorm</title>
+      <link>http://csyezheng.github.io/tags/gorm/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/gorm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://csyezheng.github.io/tags/java/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>http://csyezheng.github.io/tags/javascript/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>photoprism</title>
+      <link>http://csyezheng.github.io/tags/photoprism/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/photoprism/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://csyezheng.github.io/tags/python/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scala</title>
+      <link>http://csyezheng.github.io/tags/scala/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/scala/</guid>
       <description></description>
     </item>
     

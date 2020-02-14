@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>installation on YeZheng&#39;s Blog</title>
+    <title>installation on Ye Zheng&#39;s Blog</title>
     <link>http://csyezheng.github.io/tags/installation/</link>
-    <description>Recent content in installation on YeZheng&#39;s Blog</description>
+    <description>Recent content in installation on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 25 Sep 2017 00:00:00 +0000</lastBuildDate>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Setup a Archlinux / Windows10 dual booting system</title>
-      <link>http://csyezheng.github.io/post/setup-a-archlinux-windows10-dual-booting-system/</link>
+      <link>http://csyezheng.github.io/post/any-path/setup-a-archlinux-windows10-dual-booting-system/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/setup-a-archlinux-windows10-dual-booting-system/</guid>
+      <guid>http://csyezheng.github.io/post/any-path/setup-a-archlinux-windows10-dual-booting-system/</guid>
       <description>Before   Check the hardware, three disks on my Lenovo ThinkPad P50
   Samsung SSD 970 EVO Plus 250GB for installing windows
   Samsung SSD 960 EVO 250GB for installling archlinux

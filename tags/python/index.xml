@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/python/</link>
+    <description>Recent content in Python on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python datetime</title>
+      <link>http://csyezheng.github.io/post/programming-languages/python/datetime/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/python/datetime/</guid>
+      <description>datetime 8.1. datetime
+The datetime module, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation.
+There are two kinds of date and time objects: “naive” and “aware”.
+An aware object has sufficient knowledge of applicable algorithmic and political time adjustments, such as time zone and daylight saving time information, to locate itself relative to other aware objects. An aware object is used to represent a specific moment in time.</description>
+    </item>
+    
+    <item>
+      <title>The Python Standard Library</title>
+      <link>http://csyezheng.github.io/post/programming-languages/python/standard-library-by-example/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/python/standard-library-by-example/</guid>
+      <description>The Python Standard Library 1. Introduction 2. Built-in Functions      Built-in Functions       abs(x) dict(**kwarg) help([object]) min(iterable, *[, key, default]) setattr(object, name, value)   all(iterable) dir([object]) hex(x) next(iterator[, default]) slice([start,] stop[, step])   any(iterable) divmod(a, b) id(object) object() sorted(iterable, key=func, reverse=False)   ascii(object) enumerate(iterable, start=0) input([prompt]) oct(int) @staticmethod   bin(int) eval(expression, globals=None, locals=None) int(x, base=10) open(file, mode=&#39;r&amp;rsquo;,&amp;hellip;) str(object=&amp;rsquo;&#39;)   bool([x]) exec(object[, globals[, locals]]) isinstance(object, classinfo) ord(char) sum(iterable[, start])   bytearray(s) filter(function, iterable) issubclass(class, classinfo) pow(x, y[, z]) super([type[, object-or-type]])   bytes(source) float([x]) iter(object[, sentinel]) print() tuple([iterable])   callable(object) format(value[, format_spec]) len(s) @property type(object)   chr(int) frozenset([iterable]) list([iterable]) range([start], stop[, step]) vars([object])   @classmethod getattr(object, name[, default]) locals() repr(object) zip(*iterables)   compile() globals() map(function, iterable, &amp;hellip;) reversed(seq) _import_()   complex([real[, imag]]) hasattr(object, name) max(iterable, *[, key, default]) round(number[, ndigits])    delattr(object, name) hash(object) memoryview(bytes_obj) set([iterable])       @classmethod</description>
+    </item>
+    
+    <item>
+      <title>The Python Tutorial</title>
+      <link>http://csyezheng.github.io/post/programming-languages/python/the-python-tutorial/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/python/the-python-tutorial/</guid>
+      <description>The Python Tutorial \1. Whetting Your Appetite \2. Using the Python Interpreter 2.1. Invoking the Interpreter 2.1.1. Argument Passing 2.1.2. Interactive Mode 2.2. The Interpreter and Its Environment 2.2.1. Source Code Encoding \3. An Informal Introduction to Python 3.1. Using Python as a Calculator 3.1.1. Numbers 3.1.2. Strings 3.1.3. Lists 3.2. First Steps Towards Programming \4. More Control Flow Tools 4.1. if Statements 4.2. for Statements 4.3. The range() Function</description>
+    </item>
+    
+  </channel>
+</rss>
