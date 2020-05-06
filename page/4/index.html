@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.69.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0995afa14b62cd93e93cfc066b646c4c17a3eddca0e9d52a1d9dcf5d90aaacd3.css" integrity="sha256-CZWvoUtizZPpPPwGa2RsTBej7dyg6dUqHZ3PXZCqrNM=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.fa3d941d1d0e0ddc985804227feabffea55c89883eb0af34e0532a7ae9135151.css" integrity="sha256-&#43;j2UHR0ODdyYWAQif&#43;q//qVciYg&#43;sK804FMqeukTUVE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-02-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2017-09-25T21:38:52+08:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,15 +295,16 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/oauth2/">Django oauth2 provider</a>
+      <a class="post-link" href="/post/programming-languages/cpp/tools/">C&#43;&#43; tools</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-05-26" class="post-time">
-        2019-05-26
+      <time datetime="2019-09-09" class="post-time">
+        2019-09-09
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
+          <a href="http://csyezheng.github.io/categories/cpp/"> cpp </a>
           
         </div>
       
@@ -315,12 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... 'provider', 'provider.oauth2', ) # urls.py url(r'^oauth2/', include('provider.oauth2.urls', namespace = 'oauth2')), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ?   Create a client entry in your database
-To find out which type of client you need to create, read Section 2.1.
-To create a new entry simply use the Django admin panel.
+      Tools clang-format 格式化c++代码，同类工具还有astyle。保持代码风格统一是个好习惯。 qt creator vs以外我觉得最好用的c++ ide，代码补全质量高（基于li
     </div>
     <div class="read-more">
-      <a href="/post/back-end/oauth2/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/cpp/tools/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,12 +330,12 @@ To create a new entry simply use the Django admin panel.
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/devops/docker/">Docker</a>
+      <a class="post-link" href="/post/devops/devops/">DevOps</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-04-25" class="post-time">
-        2019-04-25
+      <time datetime="2019-05-30" class="post-time">
+        2019-05-30
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/devops/"> DevOps </a>
@@ -351,10 +350,10 @@ To create a new entry simply use the Django admin panel.
   <div class="post-content">
     
     <div class="post-summary">
-      Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker add your user to the docker group.
+      What is DevOps? DevOps (a clipped compound of &ldquo;development&rdquo; and &ldquo;operations&quot;) is a software engineering culture and practice that aims at unifying software development (Dev) and software operation (Ops). The main characteristic of the DevOps movement is to strongly advocate automation and monitoring at all steps of software construction, from integration, testing, releasing to deployment and infrastructure management. DevOps aims at shorter development cycles, increased deployment frequency, and more dependable
     </div>
     <div class="read-more">
-      <a href="/post/devops/docker/" class="read-more-link">Read more</a>
+      <a href="/post/devops/devops/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -365,15 +364,15 @@ To create a new entry simply use the Django admin panel.
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/microservices/">microservices</a>
+      <a class="post-link" href="/post/devops/kubernetes/">Kubernetes Basics</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-04-20" class="post-time">
-        2019-04-20
+      <time datetime="2019-05-30" class="post-time">
+        2019-05-30
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          <a href="http://csyezheng.github.io/categories/devops/"> DevOps </a>
           
         </div>
       
@@ -385,10 +384,13 @@ To create a new entry simply use the Django admin panel.
   <div class="post-content">
     
     <div class="post-summary">
-      第1章 微服务 1.1 什么是微服务 微服务就是一些协同工作的小而自治的服务 1.1.1 很小，专注于做好一件事 在一个单块系统内，通常会创建一些抽象层或者模块来保证
+      Using Minikube to Create a Cluster Kubernetes Clusters Kubernetes coordinates a highly available cluster of computers that are connected to work as a single unit.
+applications need to be packaged in a way that decouples them from individual hosts: they need to be containerized.
+Kubernetes automates the distribution and scheduling of application containers across a cluster in a more efficient way.
+A Kubernetes cluster consists of two types of resources:
     </div>
     <div class="read-more">
-      <a href="/post/back-end/microservices/" class="read-more-link">Read more</a>
+      <a href="/post/devops/kubernetes/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1090,6 +1092,30 @@ To create a new entry simply use the Django admin panel.
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/5/">»</a></li>
@@ -1097,7 +1123,7 @@ To create a new entry simply use the Django admin panel.
 
       
       
-      <li><a href="/page/23/">»»</a></li>
+      <li><a href="/page/24/">»»</a></li>
       
 
       </ul>

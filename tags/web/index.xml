@@ -6,7 +6,7 @@
     <description>Recent content in web on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Dec 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://csyezheng.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,7 +18,7 @@
       
       <guid>http://csyezheng.github.io/post/front-end/getting-started-with-the-web/</guid>
       <description>Naming name folders and files completely in lowercase with no spaces. This is because:
- Many computers, particularly web servers, are case-sensitive. Browsers, web servers, and programming languages do not handle spaces consistently. It&#39;s better to separate words with dashes, rather than underscores: my-file.html vs. my_file.html.  The short answer is that you should use a hyphen for your file names. The Google search engine treats a hyphen as a word separator but does not regard an underscore that way.</description>
+ Many computers, particularly web servers, are case-sensitive. Browsers, web servers, and programming languages do not handle spaces consistently. It&amp;rsquo;s better to separate words with dashes, rather than underscores: my-file.html vs. my_file.html.  The short answer is that you should use a hyphen for your file names. The Google search engine treats a hyphen as a word separator but does not regard an underscore that way.</description>
     </item>
     
   </channel>

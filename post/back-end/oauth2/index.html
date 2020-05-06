@@ -34,7 +34,7 @@ To create a new entry simply use the Django admin panel." />
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.69.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/back-end/oauth2/" />
@@ -55,7 +55,7 @@ To create a new entry simply use the Django admin panel." />
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0995afa14b62cd93e93cfc066b646c4c17a3eddca0e9d52a1d9dcf5d90aaacd3.css" integrity="sha256-CZWvoUtizZPpPPwGa2RsTBej7dyg6dUqHZ3PXZCqrNM=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.fa3d941d1d0e0ddc985804227feabffea55c89883eb0af34e0532a7ae9135151.css" integrity="sha256-&#43;j2UHR0ODdyYWAQif&#43;q//qVciYg&#43;sK804FMqeukTUVE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -335,22 +335,22 @@ To create a new entry simply use the Django admin panel."/>
         <li><a href="#how-to-request-an-access-token-for-the-first-time-">How to request an access token for the first time ?</a></li>
       </ul>
     </li>
-    <li><a href="#example-between-catalogdiscoveryhttpsgithubcomedxcourse-discovery-and-lmshttpsgithubcomedxedx-platform">Example between Catalog/Discovery and LMS</a>
+    <li><a href="#example-between-catalogdiscoveryhttpsgithubcomedxcourse-discovery-and-lmshttpsgithubcomedxedx-platform">Example between <a href="https://github.com/edx/course-discovery">Catalog/Discovery</a> and <a href="https://github.com/edx/edx-platform">LMS</a></a>
       <ul>
-        <li><a href="#oauth-dispatch-app-oauth2-provider-interfacehttpsgithubcomedxedx-platformtreemasteropenedxcoredjangoappsoauth_dispatchdocs">OAuth Dispatch App (OAuth2 Provider Interface)</a></li>
+        <li><a href="#oauth-dispatch-app-oauth2-provider-interfacehttpsgithubcomedxedx-platformtreemasteropenedxcoredjangoappsoauth_dispatchdocs"><a href="https://github.com/edx/edx-platform/tree/master/openedx/core/djangoapps/oauth_dispatch/docs">OAuth Dispatch App (OAuth2 Provider Interface)</a></a></li>
         <li><a href="#provider-code">Provider code</a></li>
-        <li><a href="#clients--rest-api-clients-code">Clients & REST API Clients code</a></li>
+        <li><a href="#clients--rest-api-clients-code">Clients &amp; REST API Clients code</a></li>
         <li><a href="#authentication-by-rest-endpoints">Authentication by REST endpoints</a></li>
       </ul>
     </li>
-    <li><a href="#auth-backendshttpsgithubcomedxauth-backends">auth-backends</a>
+    <li><a href="#auth-backendshttpsgithubcomedxauth-backends"><a href="https://github.com/edx/auth-backends/"><strong>auth-backends</strong></a></a>
       <ul>
         <li><a href="#configuration">Configuration</a></li>
       </ul>
     </li>
-    <li><a href="#edx-rest-api-clienthttpsgithubcomedxedx-rest-api-client">edx-rest-api-client</a>
+    <li><a href="#edx-rest-api-clienthttpsgithubcomedxedx-rest-api-client"><a href="https://github.com/edx/edx-rest-api-client"><strong>edx-rest-api-client</strong></a></a>
       <ul>
-        <li><a href="#edx-drf-extensionshttpsgithubcomedxedx-drf-extensions">edx-drf-extensions.</a></li>
+        <li><a href="#edx-drf-extensionshttpsgithubcomedxedx-drf-extensions"><a href="https://github.com/edx/edx-drf-extensions">edx-drf-extensions</a>.</a></li>
       </ul>
     </li>
     <li><a href="#reference">Reference</a></li>
@@ -525,7 +525,7 @@ $ python manage.py migrate
 <ul>
 <li><a href="https://github.com/edx/edx-drf-extensions/blob/1db9f5e3e5130a1e0f43af2035489b3ed916d245/edx_rest_framework_extensions/authentication.py#L153">JwtAuthentication</a> is implemented in the <a href="https://github.com/edx/edx-drf-extensions">edx-drf-extensions</a> library.</li>
 <li><a href="https://github.com/edx/edx-drf-extensions/blob/1db9f5e3e5130a1e0f43af2035489b3ed916d245/edx_rest_framework_extensions/authentication.py#L153">JwtAuthentication</a> extends the <a href="https://github.com/GetBlimp/django-rest-framework-jwt/blob/0a0bd402ec21fd6b9a5f715d114411836fbb2923/rest_framework_jwt/authentication.py#L71">JSONWebTokenAuthentication</a> class implemented in the <a href="https://github.com/GetBlimp/django-rest-framework-jwt">django-rest-framework-jwt</a> library.</li>
-<li><a href="https://github.com/edx/edx-drf-extensions/blob/1db9f5e3e5130a1e0f43af2035489b3ed916d245/edx_rest_framework_extensions/authentication.py#L153">JwtAuthentication</a> is used to authenticate an API request only if it is listed in the endpoint's <a href="http://www.django-rest-framework.org/api-guide/authentication/#setting-the-authentication-scheme">authentication_classes</a> and the request's Authorization header specifies &ldquo;JWT&rdquo; instead of &ldquo;Bearer&rdquo;.</li>
+<li><a href="https://github.com/edx/edx-drf-extensions/blob/1db9f5e3e5130a1e0f43af2035489b3ed916d245/edx_rest_framework_extensions/authentication.py#L153">JwtAuthentication</a> is used to authenticate an API request only if it is listed in the endpoint&rsquo;s <a href="http://www.django-rest-framework.org/api-guide/authentication/#setting-the-authentication-scheme">authentication_classes</a> and the request&rsquo;s Authorization header specifies &ldquo;JWT&rdquo; instead of &ldquo;Bearer&rdquo;.</li>
 <li><strong>Note:</strong> The Credentials service has its own implementation of <a href="https://github.com/edx/edx-drf-extensions/blob/1db9f5e3e5130a1e0f43af2035489b3ed916d245/edx_rest_framework_extensions/authentication.py#L153">JwtAuthentication</a> and should be converted to use the common implementation in <a href="https://github.com/edx/edx-drf-extensions">edx-drf-extensions</a>.</li>
 </ul>
 <p><a href="https://github.com/edx/edx-platform/blob/master/openedx/core/djangoapps/oauth_dispatch/docs/decisions/0003-use-jwt-as-oauth-tokens-remove-openid-connect.rst">https://github.com/edx/edx-platform/blob/master/openedx/core/djangoapps/oauth_dispatch/docs/decisions/0003-use-jwt-as-oauth-tokens-remove-openid-connect.rst</a></p>

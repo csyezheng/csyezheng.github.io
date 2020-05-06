@@ -35,7 +35,7 @@ all source code is first written in plain text files ending with the .java exten
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.69.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/programming-languages/java/the-java-tutorials/" />
@@ -56,7 +56,7 @@ all source code is first written in plain text files ending with the .java exten
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0995afa14b62cd93e93cfc066b646c4c17a3eddca0e9d52a1d9dcf5d90aaacd3.css" integrity="sha256-CZWvoUtizZPpPPwGa2RsTBej7dyg6dUqHZ3PXZCqrNM=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.fa3d941d1d0e0ddc985804227feabffea55c89883eb0af34e0532a7ae9135151.css" integrity="sha256-&#43;j2UHR0ODdyYWAQif&#43;q//qVciYg&#43;sK804FMqeukTUVE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -412,28 +412,28 @@ class HelloWorldApp {
 <li><strong>Parameters</strong> Recall that the signature for the <code>main</code>method is <code>public static void main(String[] args)</code>. Here, the <code>args</code> variable is the parameter to this method.</li>
 </ul>
 <p><strong>Naming</strong></p>
-<p>Every programming language has its own set of rules and conventions for the kinds of names that you're allowed to use:</p>
+<p>Every programming language has its own set of rules and conventions for the kinds of names that you&rsquo;re allowed to use:</p>
 <ul>
 <li>Variable names are <strong>case-sensitive</strong>. The convention, is to always begin your variable names with a letter, not &ldquo;<code>$</code>&rdquo; or &ldquo;<code>_</code>&rdquo;. `</li>
 <li>When choosing a name for your variables, <strong>use full words instead of cryptic abbreviations</strong>. Also keep in mind that the name you choose must not be a keyword or reserved word.</li>
 <li>If the name you choose consists of only one word, spell that word in all lowercase letters. If it consists of more than one word, <strong>capitalize the first letter of each subsequent word</strong>. The names <code>gearRatio</code> and <code>currentGear</code> are prime examples of this convention. If your variable stores a <strong>constant value</strong>, such as <code>static final int NUM_GEARS = 6</code>, the convention changes slightly, capitalizing every letter and separating subsequent words with the underscore character. By convention, <strong>the underscore character is never used elsewhere</strong>.</li>
 </ul>
 <h6 id="primitive-data-types">Primitive Data Types</h6>
-<p>The Java programming language is statically-typed, which means that all variables must first be declared before they can be used. This involves stating the variable's type and name</p>
+<p>The Java programming language is statically-typed, which means that all variables must first be declared before they can be used. This involves stating the variable&rsquo;s type and name</p>
 <pre><code>int gear = 1;    // holds numerical data, and has an initial value 
 </code></pre><p>The eight primitive data types supported by the Java programming language are:</p>
 <ul>
-<li><strong>byte</strong>: The <code>byte</code> data type is an 8-bit signed two's complement integer. The <code>byte</code> data type can <strong>be useful for saving memory in large arrays</strong>.</li>
-<li><strong>short</strong>: The <code>short</code> data type is a 16-bit signed two's complement integer. You can use a <code>short</code> to save memory in large arrays, in situations where the memory savings actually matters.</li>
-<li><strong>int</strong>: By default, the <code>int</code> data type is a 32-bit signed two's complement integer In Java SE 8 and later, you can use the <code>int</code> data type to represent an unsigned 32-bit integer. Use the Integer class to use <code>int</code> data type as an unsigned integer. Static methods like <code>compareUnsigned</code>, <code>divideUnsigned</code> etc have been added to the Integer class to support the arithmetic operations for unsigned integers.</li>
-<li><strong>long</strong>: The <code>long</code> data type is a 64-bit two's complement integer. In Java SE 8 and later, you can use the <code>long</code> data type to represent an unsigned 64-bit long. Use this data type when you need a range of values wider than those provided by <code>int</code>. The <code>Long</code>class also contains methods like <code>compareUnsigned</code>, <code>divideUnsigned</code> etc to support arithmetic operations for unsigned long.</li>
+<li><strong>byte</strong>: The <code>byte</code> data type is an 8-bit signed two&rsquo;s complement integer. The <code>byte</code> data type can <strong>be useful for saving memory in large arrays</strong>.</li>
+<li><strong>short</strong>: The <code>short</code> data type is a 16-bit signed two&rsquo;s complement integer. You can use a <code>short</code> to save memory in large arrays, in situations where the memory savings actually matters.</li>
+<li><strong>int</strong>: By default, the <code>int</code> data type is a 32-bit signed two&rsquo;s complement integer In Java SE 8 and later, you can use the <code>int</code> data type to represent an unsigned 32-bit integer. Use the Integer class to use <code>int</code> data type as an unsigned integer. Static methods like <code>compareUnsigned</code>, <code>divideUnsigned</code> etc have been added to the Integer class to support the arithmetic operations for unsigned integers.</li>
+<li><strong>long</strong>: The <code>long</code> data type is a 64-bit two&rsquo;s complement integer. In Java SE 8 and later, you can use the <code>long</code> data type to represent an unsigned 64-bit long. Use this data type when you need a range of values wider than those provided by <code>int</code>. The <code>Long</code>class also contains methods like <code>compareUnsigned</code>, <code>divideUnsigned</code> etc to support arithmetic operations for unsigned long.</li>
 <li><strong>float</strong>: As with the recommendations for <code>byte</code> and <code>short</code>, use a <code>float</code> (instead of <code>double</code>) if you need to save memory in large arrays of floating point numbers. This data type should never be used for precise values, such as currency. For that, you will need to use the <code>java.math.BigDecimal</code> class instead.</li>
 <li><strong>double</strong>: For decimal values, this data type is generally the default choice. As mentioned above, this data type should never be used for precise values, such as currency.</li>
 <li><strong>boolean</strong>: The <code>boolean</code> data type has only two possible values: <code>true</code> and <code>false</code>. Use this data type for simple flags that track true/false conditions.</li>
 <li><strong>char</strong>: The <code>char</code> data type is a single 16-bit Unicode character. It has a minimum value of <code>'\u0000'</code> (or 0) and a maximum value of <code>'\uffff'</code> (or 65,535 inclusive).</li>
 </ul>
 <p><strong>Default Values</strong></p>
-<p>It's not always necessary to assign a value when a field is declared. Fields that are declared but not initialized will be set to a reasonable default by the compiler. Generally speaking, this default will be zero or <code>null</code>, depending on the data type. <strong>Relying on such default values, however, is generally considered bad programming style</strong>.</p>
+<p>It&rsquo;s not always necessary to assign a value when a field is declared. Fields that are declared but not initialized will be set to a reasonable default by the compiler. Generally speaking, this default will be zero or <code>null</code>, depending on the data type. <strong>Relying on such default values, however, is generally considered bad programming style</strong>.</p>
 <table>
 <thead>
 <tr>
@@ -482,16 +482,16 @@ class HelloWorldApp {
 </table>
 <p><strong>Local variables are slightly different; the compiler never assigns a default value to an uninitialized local variable.</strong> If you cannot initialize your local variable where it is declared, make sure to assign it a value before you attempt to use it. Accessing an uninitialized local variable will result in a compile-time error.</p>
 <p><strong>Literals</strong></p>
-<p>You may have noticed that the <code>new</code> keyword isn't used when initializing a variable of a primitive type.</p>
+<p>You may have noticed that the <code>new</code> keyword isn&rsquo;t used when initializing a variable of a primitive type.</p>
 <p><strong>Character and String Literals</strong></p>
 <p><strong>Always use &lsquo;single quotes&rsquo; for <code>char</code> literals and &ldquo;double quotes&rdquo; for <code>String</code> literals.</strong></p>
 <p>The Java programming language also supports a few special escape sequences for <code>char</code> and <code>String</code>literals: <code>\b</code> (backspace), <code>\t</code> (tab), <code>\n</code> (line feed), <code>\f</code> (form feed), <code>\r</code> (carriage return), <code>\&quot;</code> (double quote), <code>\'</code>(single quote), and <code>\\</code> (backslash).</p>
-<p>There's also a special <code>null</code> literal that can be used as a value for any reference type. <strong><code>null</code> may be assigned to any variable, except variables of primitive types.</strong> There's little you can do with a <code>null</code> value beyond testing for its presence. Therefore, <strong><code>null</code> is often used in programs as a marker to indicate that some object is unavailable</strong>.</p>
-<p>Finally, there's also a special kind of literal called a <em>class literal</em>, formed by taking a type name and appending &ldquo;<code>.class&quot;</code>; for example, <code>String.class</code>. This refers to the object (of type <code>Class</code>) that represents the type itself.</p>
+<p>There&rsquo;s also a special <code>null</code> literal that can be used as a value for any reference type. <strong><code>null</code> may be assigned to any variable, except variables of primitive types.</strong> There&rsquo;s little you can do with a <code>null</code> value beyond testing for its presence. Therefore, <strong><code>null</code> is often used in programs as a marker to indicate that some object is unavailable</strong>.</p>
+<p>Finally, there&rsquo;s also a special kind of literal called a <em>class literal</em>, formed by taking a type name and appending &ldquo;<code>.class&quot;</code>; for example, <code>String.class</code>. This refers to the object (of type <code>Class</code>) that represents the type itself.</p>
 <h6 id="strings">Strings</h6>
 <p>In addition to the eight primitive data types listed above, the Java programming language also provides special support for character strings via the <code>java.lang.String</code> class. Enclosing your character string within double quotes will automatically create a new String object.</p>
 <pre><code>String s = &quot;this is a string&quot;;
-</code></pre><p><code>String</code> objects are <em><strong>immutable</strong></em>, which means that once created, their values cannot be changed. The <code>String</code> class is not technically a primitive data type, but considering the special support given to it by the language, you'll probably tend to think of it as such.</p>
+</code></pre><p><code>String</code> objects are <em><strong>immutable</strong></em>, which means that once created, their values cannot be changed. The <code>String</code> class is not technically a primitive data type, but considering the special support given to it by the language, you&rsquo;ll probably tend to think of it as such.</p>
 <h6 id="arrays">Arrays</h6>
 <p>An <em>array</em> is a container object that holds a fixed number of values of a <strong>single type</strong>. The length of an array is established when the array is created. After creation, <strong>its length is fixed</strong>.</p>
 <pre><code>class ArrayDemo {
@@ -513,7 +513,7 @@ class HelloWorldApp {
                            + anArray[1]);
     }
 } 
-</code></pre><p>Like declarations for variables of other types, an array declaration has two components: the array's type and the array's name. An array's type is written as <strong><code>type[]</code></strong>, where <code>type</code> is the data type of the contained elements; the brackets are special symbols indicating that this variable holds an array. <strong>The size of the array is not part of its type (which is why the brackets are empty)</strong>. As with variables of other types, <strong>the declaration does not actually create an array</strong>; it simply tells the compiler that this variable will hold an array of the specified type.</p>
+</code></pre><p>Like declarations for variables of other types, an array declaration has two components: the array&rsquo;s type and the array&rsquo;s name. An array&rsquo;s type is written as <strong><code>type[]</code></strong>, where <code>type</code> is the data type of the contained elements; the brackets are special symbols indicating that this variable holds an array. <strong>The size of the array is not part of its type (which is why the brackets are empty)</strong>. As with variables of other types, <strong>the declaration does not actually create an array</strong>; it simply tells the compiler that this variable will hold an array of the specified type.</p>
 <p>Alternatively, you can use the shortcut syntax to create and initialize an array:</p>
 <pre><code>int [] anArray = { 
     100,200,300，
@@ -780,7 +780,7 @@ for ( ; ; ) {
 <pre><code>break;
 </code></pre><pre><code>continue;
 </code></pre><pre><code>return;
-</code></pre><p>The <code>return</code> statement has two forms: one that returns a value, and one that doesn't.  The data type of the returned value must match the type of the method's declared return value. When a method is declared <code>void</code>, use the form of <code>return</code> that doesn't return a value.</p>
+</code></pre><p>The <code>return</code> statement has two forms: one that returns a value, and one that doesn&rsquo;t.  The data type of the returned value must match the type of the method&rsquo;s declared return value. When a method is declared <code>void</code>, use the form of <code>return</code> that doesn&rsquo;t return a value.</p>
 <h6 id="comments">Comments</h6>
 <pre><code>/* comments */
 // comments

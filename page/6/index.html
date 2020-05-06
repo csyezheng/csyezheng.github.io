@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.69.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0995afa14b62cd93e93cfc066b646c4c17a3eddca0e9d52a1d9dcf5d90aaacd3.css" integrity="sha256-CZWvoUtizZPpPPwGa2RsTBej7dyg6dUqHZ3PXZCqrNM=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.fa3d941d1d0e0ddc985804227feabffea55c89883eb0af34e0532a7ae9135151.css" integrity="sha256-&#43;j2UHR0ODdyYWAQif&#43;q//qVciYg&#43;sK804FMqeukTUVE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-02-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2017-09-25T21:38:52+08:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,7 +295,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/go/generate-model-structs-from-database/">generate-model-structs-from-database</a>
+      <a class="post-link" href="/post/programming-languages/go/a-tour-of-go/">A Tour of Go</a>
     </h1>
     
     <div class="post-meta">
@@ -316,14 +316,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Generate gorm model structs from database
-  https://github.com/smallnest/gen
-  https://github.com/wantedly/pq2gorm
-  https://github.com/go-xorm/cmd
-  
+      Basics Packages, variables, and functions. Packages Programs start running in package main.
+By convention, the package name is the same as the last element of the import path. For instance, the &quot;math/rand&quot; package comprises files that begin with the statement package rand.
+Imports It is good style to use the factored import statement.
+import ( &quot;fmt&quot; &quot;math/rand&quot; ) Exported names In Go, a name is exported if it begins with a capital letter.
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/generate-model-structs-from-database/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/go/a-tour-of-go/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -334,7 +333,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/scala/getting-started/">Getting Started with Scala</a>
+      <a class="post-link" href="/post/programming-languages/javascript/debug/">Debugging JavaScript in Chrome DevTools</a>
     </h1>
     
     <div class="post-meta">
@@ -343,7 +342,7 @@
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/scala/"> Scala </a>
+          <a href="http://csyezheng.github.io/categories/javascript/"> JavaScript </a>
           
         </div>
       
@@ -355,12 +354,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Create A Scala Project With sbt In The Command Line Installation   Java 8 JDK javac -version 
-  install sbt
-  Create a project $ mkdir practice &amp;&amp; cd practice $ sbt new scala/hello-world.g8 # pull template from GitHub - hello-world - project (sbt uses this to install manage plugins and dependencies) - build.properties - src - main - scala (All of your scala code goes here) -Main.
+      Get Started Step 2: Get familiar with the Sources panel UI The Sources panel is where you debug JavaScript.
+Open DevTools by pressing Command+Option+I (Mac) or Control+Shift+I (Windows, Linux). This shortcut opens the Consolepanel.
+Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: Set a line-of-code breakpoint Step 6: Check variable values 
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/scala/getting-started/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/javascript/debug/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -371,7 +370,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/go/gin/">Gin</a>
+      <a class="post-link" href="/post/programming-languages/go/debugging-with-delve/">Delve Documentation</a>
     </h1>
     
     <div class="post-meta">
@@ -392,11 +391,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
-$ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/sessions&quot; cookie-based Example import ( &quot;github.com/gin-contrib/sessions&quot; &quot;github.com/gin-contrib/sessions/cookie&quot; &quot;github.com/gin-gonic/gin&quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&quot;secret&quot;)) r.Use(sessions.Sessions(&quot;mysession&quot;, store)) r.GET(&quot;/incr&quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&quot;count&quot;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&quot;count&quot;, count) session.
+      Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &quot;fmt&quot; &quot;log&quot; &quot;net/http&quot; &quot;os&quot; ) const port = &quot;8000&quot; func main() { http.HandleFunc(&quot;/hi&quot;, hi) fmt.Println(&quot;runing on port: &quot; + port) log.Fatal(http.ListenAndServe(&quot;:&quot; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &quot;HostName: %s&quot;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/gin/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/go/debugging-with-delve/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1098,6 +1096,30 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/7/">»</a></li>
@@ -1105,7 +1127,7 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
 
       
       
-      <li><a href="/page/23/">»»</a></li>
+      <li><a href="/page/24/">»»</a></li>
       
 
       </ul>

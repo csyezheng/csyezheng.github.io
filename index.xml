@@ -6,7 +6,7 @@
     <description>Recent content on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 Sep 2017 21:38:52 +0800</lastBuildDate>
     
         <atom:link href="http://csyezheng.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,9 +18,58 @@
       
       <guid>http://csyezheng.github.io/about/</guid>
       
-        <description>&lt;p&gt;I&#39;m graduated from the Hebei GEO University with a degree in marketing, because I thought computers were cool from an early age, so I chose programmers as my future employment direction in my third year of college. In the third year of college, I learned some front-end knowledge, and in the fourth year of college I learned some C ++ related knowledge. After graduating, I naturally found a job related to programming.&lt;/p&gt;
+        <description>&lt;p&gt;I&amp;rsquo;m graduated from the Hebei GEO University with a degree in marketing, because I thought computers were cool from an early age, so I chose programmers as my future employment direction in my third year of college. In the third year of college, I learned some front-end knowledge, and in the fourth year of college I learned some C ++ related knowledge. After graduating, I naturally found a job related to programming.&lt;/p&gt;
 &lt;p&gt;In the first company, I was mainly engaged in web crawling. I was responsible for scraping various financial data including stock exchanges, performing data cleaning, and completing an announcement classification system during the period. I worked as a data development engineer in the second company, and solved development problems such as real-time data forwarding, reception, and storage. I worked as a back-end development engineer at a third company and built the entire edx-based online learning system.&lt;/p&gt;
 </description>
+      
+    </item>
+    
+    <item>
+      <title>Few shot learning</title>
+      <link>http://csyezheng.github.io/post/machine-learning/few-shot-learning/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/few-shot-learning/</guid>
+      
+        <description>&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/AnthonyMRios/multi-label-zero-shot&#34;&gt;https://github.com/AnthonyMRios/multi-label-zero-shot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.aclweb.org/anthology/D18-1352.pdf&#34;&gt;Few-Shot and Zero-Shot Multi-Label Learning for Structured Label Spaces&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://uknowledge.uky.edu/cgi/viewcontent.cgi?article=1076&amp;amp;context=cs_etds&#34;&gt;Deep Neural Networks for Multi-Label Text Classification&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/YujiaBao/Distributional-Signatures&#34;&gt;https://github.com/YujiaBao/Distributional-Signatures&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://paperswithcode.com/paper/few-shot-text-classification-with-induction&#34;&gt;Induction Networks for Few-Shot Text Classification&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/laohur/LearnToCompareText&#34;&gt;https://github.com/laohur/LearnToCompareText&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Learning Path for Machine Learning</title>
+      <link>http://csyezheng.github.io/post/machine-learning/learn-ml/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/learn-ml/</guid>
+      
+        <description>&lt;h1 id=&#34;learning-path-for-machine-learning&#34;&gt;Learning Path for Machine Learning&lt;/h1&gt;
+&lt;h2 id=&#34;ml-theory&#34;&gt;ML theory&lt;/h2&gt;
+&lt;p&gt;Coding skills&lt;/p&gt;
+&lt;p&gt;Math and stats&lt;/p&gt;
+&lt;p&gt;Build your own projects&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developers.google.com/machine-learning/crash-course&#34;&gt;Google Developers Machine Learning Crash Course&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Wireshark</title>
+      <link>http://csyezheng.github.io/post/any-path/wireshark/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/any-path/wireshark/</guid>
+      
+        <description>&lt;pre&gt;&lt;code&gt;$ tshark -r all.pcapng.gz -i http==1 -O http -T fields -e http.request.method -e http.request.uri -e http.request.line -e http.response.line &amp;gt; dump.txt
+&lt;/code&gt;&lt;/pre&gt;</description>
       
     </item>
     
@@ -41,7 +90,7 @@ export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
 source $HOME/.local/bin/virtualenvwrapper.sh
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ source ~/.bashrc
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ mkvirtualenv stock-screener
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;creating-a-django-project&#34;&gt;Creating a Django Project&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;$ django-admin startproject stock_screener
 $ cd stock_screener
@@ -247,6 +296,7 @@ $ systemctl start docker &amp;amp;&amp;amp; systemctl enable docker
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;INSTALLED_APPS = [
     ...
     &#39;django_celery_results&#39;,
+    &#39;django_celery_beat&#39;,
     ...
 ]
 
@@ -307,6 +357,7 @@ def scrape_job(request):
         return JsonResponse({&#39;task_id&#39;: None, &#39;status&#39;: &#39;no found&#39;})
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;starting-the-worker-process&#34;&gt;starting the worker process&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;celery -A stock_screener worker -l info
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ celery -A stock_screener beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;test&#34;&gt;test&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;$ python manage.py runserver 0.0.0.0:8000
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;curl -X POST \
@@ -349,12 +400,12 @@ def scrape_job(request):
         <description>&lt;p&gt;In general, you are going to have to end up with&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Header files in a directory somewhere&lt;/li&gt;
-&lt;li&gt;library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&#39;t need this.&lt;/li&gt;
+&lt;li&gt;library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&amp;rsquo;t need this.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).&lt;/p&gt;
 &lt;p&gt;When you try to compile with the library, you may need a command line option (eg &lt;code&gt;-I&lt;/code&gt;) to specify the directory containing the header files, and you may need a linker option (eg &lt;code&gt;-l&lt;/code&gt;) to tell the linker to link against your library.&lt;/p&gt;
 &lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;
-&lt;h3 id=&#34;use-linux-distributions-packaging-system&#34;&gt;Use Linux distribution&#39;s packaging system&lt;/h3&gt;
+&lt;h3 id=&#34;use-linux-distributions-packaging-system&#34;&gt;Use Linux distribution&amp;rsquo;s packaging system&lt;/h3&gt;
 &lt;p&gt;If you are installing the libraries with a package manager, they will probably all end up in the right place. If not you can get the compiler to search for the by providing the an additional search path using the &lt;code&gt;-L &amp;lt;path&amp;gt;&lt;/code&gt; flag. You should be able to pass this extra flag to CMake.&lt;/p&gt;
 &lt;h3 id=&#34;build-and-install&#34;&gt;build and install&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;./configure
@@ -363,7 +414,7 @@ make install
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;two main options for where to put the library:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;/usr/local&lt;/code&gt; (libraries under &lt;code&gt;/usr/local/lib&lt;/code&gt;, headers under &lt;code&gt;/usr/local/include&lt;/code&gt;).&lt;/li&gt;
-&lt;li&gt;Under your project directory, as you did under Windows. This has the advantages of not requiring root access and not making systemwide changes, but you&#39;ll have to update your project&#39;s include paths and library paths, and you&#39;ll have to put any shared library files someplace where the &lt;a href=&#34;http://www.kernel.org/doc/man-pages/online/pages/man8/ld.so.8.html&#34;&gt;dynamic linker&lt;/a&gt; can find them (using &lt;code&gt;LD_LIBRARY_PATH&lt;/code&gt; or &lt;code&gt;ld.so.conf&lt;/code&gt; - see the link for more details).&lt;/li&gt;
+&lt;li&gt;Under your project directory, as you did under Windows. This has the advantages of not requiring root access and not making systemwide changes, but you&amp;rsquo;ll have to update your project&amp;rsquo;s include paths and library paths, and you&amp;rsquo;ll have to put any shared library files someplace where the &lt;a href=&#34;http://www.kernel.org/doc/man-pages/online/pages/man8/ld.so.8.html&#34;&gt;dynamic linker&lt;/a&gt; can find them (using &lt;code&gt;LD_LIBRARY_PATH&lt;/code&gt; or &lt;code&gt;ld.so.conf&lt;/code&gt; - see the link for more details).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;header-only-library&#34;&gt;header-only library&lt;/h3&gt;
 &lt;p&gt;No linking against pre-compiled code is required for header-only library. It can be included directly by&lt;/p&gt;
@@ -379,13 +430,13 @@ g++ -I /usr/local/boost -lboost_system &lt;!-- raw HTML omitted --&gt;.cpp&lt;/p
 &lt;p&gt;&lt;code&gt;/usr/local/lib/&lt;/code&gt; should be the right folder for this. It is the normal place for keeping shared library files installed manually from source code. If you build a library by running &lt;code&gt;./configure&lt;/code&gt;, &lt;code&gt;make&lt;/code&gt;, and &lt;code&gt;sudo make install&lt;/code&gt;, it will &lt;em&gt;usually&lt;/em&gt; install there automatically.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Example&lt;/p&gt;
-&lt;p&gt;Eigen c++ is a header only library: you don&#39;t have to install it, you just download it, unzip it and link your code against it.&lt;/p&gt;
+&lt;p&gt;Eigen c++ is a header only library: you don&amp;rsquo;t have to install it, you just download it, unzip it and link your code against it.&lt;/p&gt;
 &lt;p&gt;For example, if your code is in &lt;code&gt;my_favorite_cpp_folder&lt;/code&gt;, you do:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;cd my_favorite_cpp_folder
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;and, assuming your compiler is &lt;code&gt;gcc&lt;/code&gt; and the eigen headers are in&lt;code&gt;/usr/local/include/eigen3/unsupported/&lt;/code&gt; and the name of your source file is &lt;code&gt;my_favorite_cpp_source_file.cpp&lt;/code&gt;, you compile and code and link it to the eigen headers by doing:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;g++ -I /usr/local/include/eigen3/ my_favorite_cpp_source_file.cpp -o my_favorite_cpp_source_file
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;(from your code output posted above, the eigen headers are in &lt;code&gt;/usr/local/include/eigen3/&lt;/code&gt; in your computer)&lt;/p&gt;
-&lt;p&gt;Since the header files are in &lt;code&gt;/usr/local/include/&lt;/code&gt; folder you don&#39;t need to compile your source-code files against them using &amp;ldquo;&lt;code&gt;g++ -I&lt;/code&gt; &amp;hellip;. .&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Since the header files are in &lt;code&gt;/usr/local/include/&lt;/code&gt; folder you don&amp;rsquo;t need to compile your source-code files against them using &amp;ldquo;&lt;code&gt;g++ -I&lt;/code&gt; &amp;hellip;. .&amp;rdquo;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;a href=&#34;&#34;&gt;up vote&lt;/a&gt;6&lt;a href=&#34;&#34;&gt;down vote&lt;/a&gt;accepted&lt;/p&gt;
 &lt;ol&gt;
@@ -395,7 +446,7 @@ g++ -I /usr/local/boost -lboost_system &lt;!-- raw HTML omitted --&gt;.cpp&lt;/p
 &lt;li&gt;Use the &lt;code&gt;-l&lt;/code&gt; linker option to specify any concrete 3rd libs you need (&lt;code&gt;-l[oHNet]&lt;/code&gt;probably)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Look in the directories what actually was installed there to figure what to place for &lt;code&gt;[whatever you need from oHNet].h&lt;/code&gt; and &lt;code&gt;[oHNet]&lt;/code&gt;, s.th. like &lt;code&gt;liboHNet.a&lt;/code&gt; for the latter.&lt;/p&gt;
-&lt;p&gt;You didn&#39;t tag [tag:Eclipse CDT] explicitly here, but go to the Project-&amp;gt;Properties-&amp;gt;C++ Builder-&amp;gt;Settings Dialog and look for C/C++ Includes and Linker Options.&lt;/p&gt;
+&lt;p&gt;You didn&amp;rsquo;t tag [tag:Eclipse CDT] explicitly here, but go to the Project-&amp;gt;Properties-&amp;gt;C++ Builder-&amp;gt;Settings Dialog and look for C/C++ Includes and Linker Options.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;windows&#34;&gt;Windows&lt;/h2&gt;
 &lt;h3 id=&#34;configuring-ms-visual-c-to-use-external-libraries&#34;&gt;Configuring MS Visual C++ to use external libraries&lt;/h3&gt;
@@ -415,7 +466,7 @@ g++ -I /usr/local/boost -lboost_system &lt;!-- raw HTML omitted --&gt;.cpp&lt;/p
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Library files&lt;/p&gt;
-&lt;p&gt;Enter library filenames in &lt;em&gt;additional dependencies&lt;/em&gt; for the libraries to use, if your compiler or the library don&#39;t supports auto-linking.&lt;/p&gt;
+&lt;p&gt;Enter library filenames in &lt;em&gt;additional dependencies&lt;/em&gt; for the libraries to use, if your compiler or the library don&amp;rsquo;t supports auto-linking.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikibooks/en/0/08/Visual_studio_additionaldependencies.png&#34; alt=&#34;library filenames (the Boost &amp;ldquo;REGEXP&amp;rdquo;-library in this example)&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -965,7 +1016,7 @@ $ kubectl cluster-info
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# view the nodes that can be used to host our applications in the cluster
 $ kubectl get nodes
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;using-kubectl-to-deploy-an-app&#34;&gt;Using kubectl to deploy an App&lt;/h2&gt;
-&lt;p&gt;Once you&#39;ve created a Deployment, the Kubernetes master schedules mentioned application instances onto individual Nodes in the cluster.&lt;/p&gt;
+&lt;p&gt;Once you&amp;rsquo;ve created a Deployment, the Kubernetes master schedules mentioned application instances onto individual Nodes in the cluster.&lt;/p&gt;
 &lt;p&gt;Once the application instances are created, a Kubernetes Deployment Controller continuously monitors those instances.&lt;/p&gt;
 &lt;h2 id=&#34;explore-your-app-viewing-pods-and-nodes&#34;&gt;Explore Your App (Viewing Pods and Nodes)&lt;/h2&gt;
 &lt;h2 id=&#34;using-a-service-to-expose-your-app&#34;&gt;Using a Service to Expose Your App&lt;/h2&gt;
@@ -1146,7 +1197,7 @@ $ python manage.py migrate
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/edx/edx-drf-extensions/blob/1db9f5e3e5130a1e0f43af2035489b3ed916d245/edx_rest_framework_extensions/authentication.py#L153&#34;&gt;JwtAuthentication&lt;/a&gt; is implemented in the &lt;a href=&#34;https://github.com/edx/edx-drf-extensions&#34;&gt;edx-drf-extensions&lt;/a&gt; library.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/edx/edx-drf-extensions/blob/1db9f5e3e5130a1e0f43af2035489b3ed916d245/edx_rest_framework_extensions/authentication.py#L153&#34;&gt;JwtAuthentication&lt;/a&gt; extends the &lt;a href=&#34;https://github.com/GetBlimp/django-rest-framework-jwt/blob/0a0bd402ec21fd6b9a5f715d114411836fbb2923/rest_framework_jwt/authentication.py#L71&#34;&gt;JSONWebTokenAuthentication&lt;/a&gt; class implemented in the &lt;a href=&#34;https://github.com/GetBlimp/django-rest-framework-jwt&#34;&gt;django-rest-framework-jwt&lt;/a&gt; library.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/edx/edx-drf-extensions/blob/1db9f5e3e5130a1e0f43af2035489b3ed916d245/edx_rest_framework_extensions/authentication.py#L153&#34;&gt;JwtAuthentication&lt;/a&gt; is used to authenticate an API request only if it is listed in the endpoint&#39;s &lt;a href=&#34;http://www.django-rest-framework.org/api-guide/authentication/#setting-the-authentication-scheme&#34;&gt;authentication_classes&lt;/a&gt; and the request&#39;s Authorization header specifies &amp;ldquo;JWT&amp;rdquo; instead of &amp;ldquo;Bearer&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/edx/edx-drf-extensions/blob/1db9f5e3e5130a1e0f43af2035489b3ed916d245/edx_rest_framework_extensions/authentication.py#L153&#34;&gt;JwtAuthentication&lt;/a&gt; is used to authenticate an API request only if it is listed in the endpoint&amp;rsquo;s &lt;a href=&#34;http://www.django-rest-framework.org/api-guide/authentication/#setting-the-authentication-scheme&#34;&gt;authentication_classes&lt;/a&gt; and the request&amp;rsquo;s Authorization header specifies &amp;ldquo;JWT&amp;rdquo; instead of &amp;ldquo;Bearer&amp;rdquo;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Note:&lt;/strong&gt; The Credentials service has its own implementation of &lt;a href=&#34;https://github.com/edx/edx-drf-extensions/blob/1db9f5e3e5130a1e0f43af2035489b3ed916d245/edx_rest_framework_extensions/authentication.py#L153&#34;&gt;JwtAuthentication&lt;/a&gt; and should be converted to use the common implementation in &lt;a href=&#34;https://github.com/edx/edx-drf-extensions&#34;&gt;edx-drf-extensions&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/edx/edx-platform/blob/master/openedx/core/djangoapps/oauth_dispatch/docs/decisions/0003-use-jwt-as-oauth-tokens-remove-openid-connect.rst&#34;&gt;https://github.com/edx/edx-platform/blob/master/openedx/core/djangoapps/oauth_dispatch/docs/decisions/0003-use-jwt-as-oauth-tokens-remove-openid-connect.rst&lt;/a&gt;&lt;/p&gt;
@@ -1283,7 +1334,7 @@ networks:
   webnet:
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;Pull the image from the registry.&lt;/li&gt;
-&lt;li&gt;Run 5 instances of that image as a service called &lt;code&gt;web&lt;/code&gt;, limiting each one&#39;s CPU and RAM.&lt;/li&gt;
+&lt;li&gt;Run 5 instances of that image as a service called &lt;code&gt;web&lt;/code&gt;, limiting each one&amp;rsquo;s CPU and RAM.&lt;/li&gt;
 &lt;li&gt;Immediately restart containers if one fails.&lt;/li&gt;
 &lt;li&gt;Map port 80 on the host to &lt;code&gt;web&lt;/code&gt;’s port 80.&lt;/li&gt;
 &lt;li&gt;Instruct &lt;code&gt;web&lt;/code&gt;’s containers to share port 80 via a load-balanced network called &lt;code&gt;webnet&lt;/code&gt;. (Internally, the containers themselves publish to web’s port 80 at an ephemeral port.)&lt;/li&gt;
@@ -1843,7 +1894,7 @@ networks:
 	return y, x
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;named-return-values&#34;&gt;Named return values&lt;/h4&gt;
-&lt;p&gt;Go&#39;s return values may be named. These names should be used to document the meaning of the return values.&lt;/p&gt;
+&lt;p&gt;Go&amp;rsquo;s return values may be named. These names should be used to document the meaning of the return values.&lt;/p&gt;
 &lt;p&gt;A &lt;code&gt;return&lt;/code&gt; statement without arguments returns the named return values. This is known as a &amp;ldquo;naked&amp;rdquo; return.&lt;/p&gt;
 &lt;p&gt;Naked return statements should be used only in short functions. They can harm readability in longer functions.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;func split(sum int) (x, y int) {
@@ -1861,7 +1912,7 @@ networks:
 &lt;p&gt;Inside a function, the &lt;code&gt;:=&lt;/code&gt; short assignment statement can be used in place of a &lt;code&gt;var&lt;/code&gt; declaration with implicit type.&lt;/p&gt;
 &lt;p&gt;Outside a function, every statement begins with a keyword (&lt;code&gt;var&lt;/code&gt;, &lt;code&gt;func&lt;/code&gt;, and so on) and so the &lt;code&gt;:=&lt;/code&gt;construct is not available.&lt;/p&gt;
 &lt;h4 id=&#34;basic-types&#34;&gt;Basic types&lt;/h4&gt;
-&lt;p&gt;Go&#39;s basic types are&lt;/p&gt;
+&lt;p&gt;Go&amp;rsquo;s basic types are&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;bool
 
 string
@@ -1899,7 +1950,7 @@ f := float64(i)
 u := uint(f)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Unlike in C, in Go assignment between items of different type requires an explicit conversion.&lt;/p&gt;
 &lt;h4 id=&#34;type-inference&#34;&gt;Type inference&lt;/h4&gt;
-&lt;p&gt;When declaring a variable without specifying an explicit type, the variable&#39;s type is inferred from the value on the right hand side.&lt;/p&gt;
+&lt;p&gt;When declaring a variable without specifying an explicit type, the variable&amp;rsquo;s type is inferred from the value on the right hand side.&lt;/p&gt;
 &lt;p&gt;When the right hand side contains an untyped numeric constant, the new variable may be an &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;float64&lt;/code&gt;, or &lt;code&gt;complex128&lt;/code&gt; depending on the precision of the constant:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;i := 42           // int
 f := 3.142        // float64
@@ -1924,7 +1975,7 @@ g := 0.867 + 0.5i // complex128
 for ; sum &amp;lt; 1000; {
 	sum += sum
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;for-is-gos-while&#34;&gt;For is Go&#39;s &amp;ldquo;while&amp;rdquo;&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;for-is-gos-while&#34;&gt;For is Go&amp;rsquo;s &amp;ldquo;while&amp;rdquo;&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;for sum &amp;lt; 1000 {
 	sum += sum
 }
@@ -1933,7 +1984,7 @@ for ; sum &amp;lt; 1000; {
 &lt;pre&gt;&lt;code&gt;for {
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;if&#34;&gt;If&lt;/h4&gt;
-&lt;p&gt;Go&#39;s &lt;code&gt;if&lt;/code&gt; statements need not be surrounded by parentheses &lt;code&gt;( )&lt;/code&gt; but the braces &lt;code&gt;{ }&lt;/code&gt; are required.&lt;/p&gt;
+&lt;p&gt;Go&amp;rsquo;s &lt;code&gt;if&lt;/code&gt; statements need not be surrounded by parentheses &lt;code&gt;( )&lt;/code&gt; but the braces &lt;code&gt;{ }&lt;/code&gt; are required.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;if x &amp;lt; 0 {
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;if-with-a-short-statement&#34;&gt;If with a short statement&lt;/h4&gt;
@@ -1949,7 +2000,7 @@ for ; sum &amp;lt; 1000; {
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;switch&#34;&gt;Switch&lt;/h4&gt;
 &lt;p&gt;A &lt;code&gt;switch&lt;/code&gt; statement is a shorter way to write a sequence of &lt;code&gt;if - else&lt;/code&gt; statements. It runs the first case whose value is equal to the condition expression.&lt;/p&gt;
-&lt;p&gt;Go only runs the selected case, not all the cases that follow. In effect, the &lt;code&gt;break&lt;/code&gt; statement that is needed at the end of each case in other languages is provided automatically in Go. Another important difference is that Go&#39;s switch cases need not be constants, and the values involved need not be integers.&lt;/p&gt;
+&lt;p&gt;Go only runs the selected case, not all the cases that follow. In effect, the &lt;code&gt;break&lt;/code&gt; statement that is needed at the end of each case in other languages is provided automatically in Go. Another important difference is that Go&amp;rsquo;s switch cases need not be constants, and the values involved need not be integers.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;func main() {
 	fmt.Print(&amp;quot;Go runs on &amp;quot;)
 	switch os := runtime.GOOS; os {
@@ -1981,7 +2032,7 @@ for ; sum &amp;lt; 1000; {
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;defer&#34;&gt;Defer&lt;/h4&gt;
 &lt;p&gt;A defer statement defers the execution of a function until the surrounding function returns.&lt;/p&gt;
-&lt;p&gt;The deferred call&#39;s arguments are evaluated immediately, but the function call is not executed until the surrounding function returns.&lt;/p&gt;
+&lt;p&gt;The deferred call&amp;rsquo;s arguments are evaluated immediately, but the function call is not executed until the surrounding function returns.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;func main() {
 	defer fmt.Println(&amp;quot;world&amp;quot;)
 	fmt.Println(&amp;quot;hello&amp;quot;)
@@ -1995,7 +2046,7 @@ for ; sum &amp;lt; 1000; {
 &lt;pre&gt;&lt;code&gt;var p *int
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;i := 42
 p = &amp;amp;i   // The &amp;amp; operator generates a pointer to its operand.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;*&lt;/code&gt; operator denotes the pointer&#39;s underlying value. This is known as &amp;ldquo;dereferencing&amp;rdquo; or &amp;ldquo;indirecting&amp;rdquo;.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;*&lt;/code&gt; operator denotes the pointer&amp;rsquo;s underlying value. This is known as &amp;ldquo;dereferencing&amp;rdquo; or &amp;ldquo;indirecting&amp;rdquo;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;fmt.Println(*p) // read i through the pointer p
 *p = 21         // set i through the pointer p
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Unlike C, Go has no pointer arithmetic.&lt;/p&gt;
@@ -2045,7 +2096,7 @@ p  = &amp;amp;Vertex{1, 2} // has type *Vertex
 &lt;p&gt;The length of a slice is the number of elements it contains.&lt;/p&gt;
 &lt;p&gt;The capacity of a slice is the number of elements in the underlying array, &lt;strong&gt;counting from the first element in the slice&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;The length and capacity of a slice &lt;code&gt;s&lt;/code&gt; can be obtained using the expressions &lt;code&gt;len(s)&lt;/code&gt; and &lt;code&gt;cap(s)&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;You can extend a slice&#39;s length by re-slicing it, provided it has sufficient capacity.&lt;/p&gt;
+&lt;p&gt;You can extend a slice&amp;rsquo;s length by re-slicing it, provided it has sufficient capacity.&lt;/p&gt;
 &lt;h4 id=&#34;nil-slices&#34;&gt;Nil slices&lt;/h4&gt;
 &lt;p&gt;The zero value of a slice is &lt;code&gt;nil&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;A nil slice has a length and capacity of 0 and has no underlying array.&lt;/p&gt;
@@ -2122,7 +2173,7 @@ delete(m, key)   // Delete an element
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Test that a key is present with a two-value assignment:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;elem, ok := m[key]
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If &lt;code&gt;key&lt;/code&gt; is in &lt;code&gt;m&lt;/code&gt;, &lt;code&gt;ok&lt;/code&gt; is &lt;code&gt;true&lt;/code&gt;. If not, &lt;code&gt;ok&lt;/code&gt; is &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;If &lt;code&gt;key&lt;/code&gt; is not in the map, then &lt;code&gt;elem&lt;/code&gt; is the zero value for the map&#39;s element type.&lt;/p&gt;
+&lt;p&gt;If &lt;code&gt;key&lt;/code&gt; is not in the map, then &lt;code&gt;elem&lt;/code&gt; is the zero value for the map&amp;rsquo;s element type.&lt;/p&gt;
 &lt;h4 id=&#34;exercise-maps&#34;&gt;Exercise: Maps&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;func WordCount(s string) map[string]int {
     ret := make(map[string]int)
@@ -2394,7 +2445,7 @@ func describe(i interface{}) {
 	fmt.Printf(&amp;quot;(%v, %T)\n&amp;quot;, i, i)
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;type-assertions&#34;&gt;Type assertions&lt;/h4&gt;
-&lt;p&gt;A &lt;em&gt;type assertion&lt;/em&gt; provides access to an interface value&#39;s underlying concrete value.&lt;/p&gt;
+&lt;p&gt;A &lt;em&gt;type assertion&lt;/em&gt; provides access to an interface value&amp;rsquo;s underlying concrete value.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;t := i.(T)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This statement asserts that the interface value &lt;code&gt;i&lt;/code&gt;holds the concrete type &lt;code&gt;T&lt;/code&gt; and assigns the underlying &lt;code&gt;T&lt;/code&gt; value to the variable &lt;code&gt;t&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;If &lt;code&gt;i&lt;/code&gt; does not hold a &lt;code&gt;T&lt;/code&gt;, the statement will trigger a panic.&lt;/p&gt;
@@ -2581,9 +2632,9 @@ type Image interface {
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: the &lt;code&gt;Rectangle&lt;/code&gt; return value of the &lt;code&gt;Bounds&lt;/code&gt;method is actually an &lt;a href=&#34;https://golang.org/pkg/image/#Rectangle&#34;&gt;&lt;code&gt;image.Rectangle&lt;/code&gt;&lt;/a&gt;, as the declaration is inside package &lt;code&gt;image&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;(See &lt;a href=&#34;https://golang.org/pkg/image/#Image&#34;&gt;the documentation&lt;/a&gt; for all the details.)&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;color.Color&lt;/code&gt; and &lt;code&gt;color.Model&lt;/code&gt; types are also interfaces, but we&#39;ll ignore that by using the predefined implementations &lt;code&gt;color.RGBA&lt;/code&gt; and &lt;code&gt;color.RGBAModel&lt;/code&gt;. These interfaces and types are specified by the &lt;a href=&#34;https://golang.org/pkg/image/color/&#34;&gt;image/color package&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;color.Color&lt;/code&gt; and &lt;code&gt;color.Model&lt;/code&gt; types are also interfaces, but we&amp;rsquo;ll ignore that by using the predefined implementations &lt;code&gt;color.RGBA&lt;/code&gt; and &lt;code&gt;color.RGBAModel&lt;/code&gt;. These interfaces and types are specified by the &lt;a href=&#34;https://golang.org/pkg/image/color/&#34;&gt;image/color package&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id=&#34;exercise-images&#34;&gt;Exercise: Images&lt;/h4&gt;
-&lt;p&gt;Remember the &lt;a href=&#34;https://tour.golang.org/moretypes/18&#34;&gt;picture generator&lt;/a&gt; you wrote earlier? Let&#39;s write another one, but this time it will return an implementation of &lt;code&gt;image.Image&lt;/code&gt; instead of a slice of data.&lt;/p&gt;
+&lt;p&gt;Remember the &lt;a href=&#34;https://tour.golang.org/moretypes/18&#34;&gt;picture generator&lt;/a&gt; you wrote earlier? Let&amp;rsquo;s write another one, but this time it will return an implementation of &lt;code&gt;image.Image&lt;/code&gt; instead of a slice of data.&lt;/p&gt;
 &lt;p&gt;Define your own &lt;code&gt;Image&lt;/code&gt; type, implement &lt;a href=&#34;https://golang.org/pkg/image/#Image&#34;&gt;the necessary methods&lt;/a&gt;, and call &lt;code&gt;pic.ShowImage&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Bounds&lt;/code&gt; should return a &lt;code&gt;image.Rectangle&lt;/code&gt;, like &lt;code&gt;image.Rect(0, 0, w, h)&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;ColorModel&lt;/code&gt; should return &lt;code&gt;color.RGBAModel&lt;/code&gt;.&lt;/p&gt;
@@ -2621,15 +2672,15 @@ func main() {
 &lt;h4 id=&#34;goroutines&#34;&gt;Goroutines&lt;/h4&gt;
 &lt;p&gt;The Go FAQ section &lt;a href=&#34;http://golang.org/doc/faq#goroutines&#34;&gt;&lt;em&gt;Why goroutines instead of threads?&lt;/em&gt;&lt;/a&gt; explains:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Goroutines are part of making concurrency easy to use. The idea, which has been around for a while, is to multiplex independently executing functions—coroutines—onto a set of threads. When a coroutine blocks, such as by calling a blocking system call, the run-time automatically moves other coroutines on the same operating system thread to a different, runnable thread so they won&#39;t be blocked. The programmer sees none of this, which is the point. The result, which we call goroutines, can be very cheap: unless they spend a lot of time in long-running system calls, they cost little more than the memory for the stack, which is just a few kilobytes.&lt;/p&gt;
-&lt;p&gt;To make the stacks small, Go&#39;s run-time uses segmented stacks. A newly minted goroutine is given a few kilobytes, which is almost always enough. When it isn&#39;t, the run-time allocates (and frees) extension segments automatically. The overhead averages about three cheap instructions per function call. It is practical to create hundreds of thousands of goroutines in the same address space. If goroutines were just threads, system resources would run out at a much smaller number.&lt;/p&gt;
+&lt;p&gt;Goroutines are part of making concurrency easy to use. The idea, which has been around for a while, is to multiplex independently executing functions—coroutines—onto a set of threads. When a coroutine blocks, such as by calling a blocking system call, the run-time automatically moves other coroutines on the same operating system thread to a different, runnable thread so they won&amp;rsquo;t be blocked. The programmer sees none of this, which is the point. The result, which we call goroutines, can be very cheap: unless they spend a lot of time in long-running system calls, they cost little more than the memory for the stack, which is just a few kilobytes.&lt;/p&gt;
+&lt;p&gt;To make the stacks small, Go&amp;rsquo;s run-time uses segmented stacks. A newly minted goroutine is given a few kilobytes, which is almost always enough. When it isn&amp;rsquo;t, the run-time allocates (and frees) extension segments automatically. The overhead averages about three cheap instructions per function call. It is practical to create hundreds of thousands of goroutines in the same address space. If goroutines were just threads, system resources would run out at a much smaller number.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;A &lt;em&gt;goroutine&lt;/em&gt; is a lightweight thread managed by the Go runtime.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;go f(x, y, z)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;starts a new goroutine running&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;f(x, y, z)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The evaluation of &lt;code&gt;f&lt;/code&gt;, &lt;code&gt;x&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt;, and &lt;code&gt;z&lt;/code&gt; happens in the current goroutine and the execution of &lt;code&gt;f&lt;/code&gt; happens in the new goroutine.&lt;/p&gt;
-&lt;p&gt;Goroutines run in the same address space, so access to shared memory must be synchronized. The &lt;a href=&#34;https://golang.org/pkg/sync/&#34;&gt;&lt;code&gt;sync&lt;/code&gt;&lt;/a&gt; package provides useful primitives, although you won&#39;t need them much in Go as there are other primitives.&lt;/p&gt;
+&lt;p&gt;Goroutines run in the same address space, so access to shared memory must be synchronized. The &lt;a href=&#34;https://golang.org/pkg/sync/&#34;&gt;&lt;code&gt;sync&lt;/code&gt;&lt;/a&gt; package provides useful primitives, although you won&amp;rsquo;t need them much in Go as there are other primitives.&lt;/p&gt;
 &lt;h4 id=&#34;channels&#34;&gt;Channels&lt;/h4&gt;
 &lt;p&gt;Channels are a typed conduit through which you can send and receive values with the channel operator, &lt;code&gt;&amp;lt;-&lt;/code&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;ch &amp;lt;- v    // Send v to channel ch.
@@ -2667,7 +2718,7 @@ func main() {
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;ok&lt;/code&gt; is &lt;code&gt;false&lt;/code&gt; if there are no more values to receive and the channel is closed.&lt;/p&gt;
 &lt;p&gt;The loop &lt;code&gt;for i := range c&lt;/code&gt; receives values from the channel repeatedly until it is closed.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Only the sender should close a channel, never the receiver. Sending on a closed channel will cause a panic.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Another note:&lt;/strong&gt; Channels aren&#39;t like files; you don&#39;t usually need to close them. Closing is only necessary when the receiver must be told there are no more values coming, such as to terminate a &lt;code&gt;range&lt;/code&gt; loop.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Another note:&lt;/strong&gt; Channels aren&amp;rsquo;t like files; you don&amp;rsquo;t usually need to close them. Closing is only necessary when the receiver must be told there are no more values coming, such as to terminate a &lt;code&gt;range&lt;/code&gt; loop.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;func fibonacci(n int, c chan int) {
 	x, y := 0, 1
 	for i := 0; i &amp;lt; n; i++ {
@@ -2722,7 +2773,7 @@ default:
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;exercise-equivalent-binary-trees&#34;&gt;Exercise: Equivalent Binary Trees&lt;/h4&gt;
 &lt;p&gt;There can be many different binary trees with the same sequence of values stored at the leaves. For example, here are two binary trees storing the sequence 1, 1, 2, 3, 5, 8, 13.&lt;/p&gt;
-&lt;p&gt;A function to check whether two binary trees store the same sequence is quite complex in most languages. We&#39;ll use Go&#39;s concurrency and channels to write a simple solution.&lt;/p&gt;
+&lt;p&gt;A function to check whether two binary trees store the same sequence is quite complex in most languages. We&amp;rsquo;ll use Go&amp;rsquo;s concurrency and channels to write a simple solution.&lt;/p&gt;
 &lt;p&gt;This example uses the &lt;code&gt;tree&lt;/code&gt; package, which defines the type:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;type Tree struct {
     Left  *Tree
@@ -2781,10 +2832,10 @@ func main() {
 	fmt.Println(Same(tree.New(1), tree.New(2)))
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;syncmutex&#34;&gt;sync.Mutex&lt;/h4&gt;
-&lt;p&gt;We&#39;ve seen how channels are great for communication among goroutines.&lt;/p&gt;
-&lt;p&gt;But what if we don&#39;t need communication? What if we just want to make sure only one goroutine can access a variable at a time to avoid conflicts?&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ve seen how channels are great for communication among goroutines.&lt;/p&gt;
+&lt;p&gt;But what if we don&amp;rsquo;t need communication? What if we just want to make sure only one goroutine can access a variable at a time to avoid conflicts?&lt;/p&gt;
 &lt;p&gt;This concept is called &lt;em&gt;mutual exclusion&lt;/em&gt;, and the conventional name for the data structure that provides it is &lt;em&gt;mutex&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Go&#39;s standard library provides mutual exclusion with&lt;a href=&#34;https://golang.org/pkg/sync/#Mutex&#34;&gt;&lt;code&gt;sync.Mutex&lt;/code&gt;&lt;/a&gt; and its two methods:&lt;/p&gt;
+&lt;p&gt;Go&amp;rsquo;s standard library provides mutual exclusion with&lt;a href=&#34;https://golang.org/pkg/sync/#Mutex&#34;&gt;&lt;code&gt;sync.Mutex&lt;/code&gt;&lt;/a&gt; and its two methods:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;Lock&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Unlock&lt;/code&gt;&lt;/li&gt;
@@ -2792,7 +2843,7 @@ func main() {
 &lt;p&gt;We can define a block of code to be executed in mutual exclusion by surrounding it with a call to &lt;code&gt;Lock&lt;/code&gt; and &lt;code&gt;Unlock&lt;/code&gt; as shown on the &lt;code&gt;Inc&lt;/code&gt; method.&lt;/p&gt;
 &lt;p&gt;We can also use &lt;code&gt;defer&lt;/code&gt; to ensure the mutex will be unlocked as in the &lt;code&gt;Value&lt;/code&gt; method.&lt;/p&gt;
 &lt;h4 id=&#34;exercise-web-crawler&#34;&gt;Exercise: Web Crawler&lt;/h4&gt;
-&lt;p&gt;In this exercise you&#39;ll use Go&#39;s concurrency features to parallelize a web crawler.&lt;/p&gt;
+&lt;p&gt;In this exercise you&amp;rsquo;ll use Go&amp;rsquo;s concurrency features to parallelize a web crawler.&lt;/p&gt;
 &lt;p&gt;Modify the &lt;code&gt;Crawl&lt;/code&gt; function to fetch URLs in parallel without fetching the same URL twice.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Hint&lt;/em&gt;: you can keep a cache of the URLs that have been fetched on a map, but maps alone are not safe for concurrent use!&lt;/p&gt;
 &lt;h4 id=&#34;where-to-go-from-here&#34;&gt;Where to Go from here&amp;hellip;&lt;/h4&gt;
@@ -2800,9 +2851,9 @@ func main() {
 &lt;p&gt;Once you have Go installed, the &lt;a href=&#34;https://golang.org/doc/&#34;&gt;Go Documentation&lt;/a&gt;is a great place to continue. It contains references, tutorials, videos, and more.&lt;/p&gt;
 &lt;p&gt;To learn how to organize and work with Go code, watch &lt;a href=&#34;https://www.youtube.com/watch?v=XCsL89YtqCs&#34;&gt;this screencast&lt;/a&gt; or read &lt;a href=&#34;https://golang.org/doc/code.html&#34;&gt;How to Write Go Code&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If you need help with the standard library, see the &lt;a href=&#34;https://golang.org/pkg/&#34;&gt;package reference&lt;/a&gt;. For help with the language itself, you might be surprised to find the &lt;a href=&#34;https://golang.org/ref/spec&#34;&gt;Language Spec&lt;/a&gt; is quite readable.&lt;/p&gt;
-&lt;p&gt;To further explore Go&#39;s concurrency model, watch&lt;a href=&#34;https://www.youtube.com/watch?v=f6kdp27TYZs&#34;&gt;Go Concurrency Patterns&lt;/a&gt; (&lt;a href=&#34;https://talks.golang.org/2012/concurrency.slide&#34;&gt;slides&lt;/a&gt;) and &lt;a href=&#34;https://www.youtube.com/watch?v=QDDwwePbDtw&#34;&gt;Advanced Go Concurrency Patterns&lt;/a&gt; (&lt;a href=&#34;https://talks.golang.org/2013/advconc.slide&#34;&gt;slides&lt;/a&gt;) and read the &lt;a href=&#34;https://golang.org/doc/codewalk/sharemem/&#34;&gt;Share Memory by Communicating&lt;/a&gt; codewalk.&lt;/p&gt;
+&lt;p&gt;To further explore Go&amp;rsquo;s concurrency model, watch&lt;a href=&#34;https://www.youtube.com/watch?v=f6kdp27TYZs&#34;&gt;Go Concurrency Patterns&lt;/a&gt; (&lt;a href=&#34;https://talks.golang.org/2012/concurrency.slide&#34;&gt;slides&lt;/a&gt;) and &lt;a href=&#34;https://www.youtube.com/watch?v=QDDwwePbDtw&#34;&gt;Advanced Go Concurrency Patterns&lt;/a&gt; (&lt;a href=&#34;https://talks.golang.org/2013/advconc.slide&#34;&gt;slides&lt;/a&gt;) and read the &lt;a href=&#34;https://golang.org/doc/codewalk/sharemem/&#34;&gt;Share Memory by Communicating&lt;/a&gt; codewalk.&lt;/p&gt;
 &lt;p&gt;To get started writing web applications, watch &lt;a href=&#34;https://vimeo.com/53221558&#34;&gt;A simple programming environment&lt;/a&gt; (&lt;a href=&#34;https://talks.golang.org/2012/simple.slide&#34;&gt;slides&lt;/a&gt;) and read the &lt;a href=&#34;https://golang.org/doc/articles/wiki/&#34;&gt;Writing Web Applications&lt;/a&gt; tutorial.&lt;/p&gt;
-&lt;p&gt;The &lt;a href=&#34;https://golang.org/doc/codewalk/functions/&#34;&gt;First Class Functions in Go&lt;/a&gt; codewalk gives an interesting perspective on Go&#39;s function types.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://golang.org/doc/codewalk/functions/&#34;&gt;First Class Functions in Go&lt;/a&gt; codewalk gives an interesting perspective on Go&amp;rsquo;s function types.&lt;/p&gt;
 &lt;p&gt;The &lt;a href=&#34;https://blog.golang.org/&#34;&gt;Go Blog&lt;/a&gt; has a large archive of informative Go articles.&lt;/p&gt;
 &lt;p&gt;Visit &lt;a href=&#34;https://golang.org/&#34;&gt;golang.org&lt;/a&gt; for more.&lt;/p&gt;
 </description>
@@ -2924,214 +2975,6 @@ $ ps aux|grep main
 &lt;p&gt;&lt;a href=&#34;https://github.com/go-xorm/cmd&#34;&gt;https://github.com/go-xorm/cmd&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Getting Started with Scala</title>
-      <link>http://csyezheng.github.io/post/programming-languages/scala/getting-started/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/scala/getting-started/</guid>
-      
-        <description>&lt;h3 id=&#34;create-a-scala-project-with-sbt-in-the-command-line&#34;&gt;Create A Scala Project With sbt In The Command Line&lt;/h3&gt;
-&lt;h4 id=&#34;installation&#34;&gt;Installation&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Java 8 JDK   &lt;code&gt;javac -version &lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;install sbt&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;create-a-project&#34;&gt;Create a project&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;$ mkdir practice &amp;amp;&amp;amp; cd practice
-$ sbt new scala/hello-world.g8      # pull template from GitHub
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;- hello-world
-    - project (sbt uses this to install manage plugins and dependencies)
-        - build.properties
-    - src
-        - main
-            - scala (All of your scala code goes here)
-                -Main.scala (Entry point of program) 
-    build.sbt (sbt&#39;s build definition file)
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ cd hello-world
-$ sbt                            # open sbt console
-$ ~run                           # ~ causes sbt to re-run on every file save
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;modify the &lt;code&gt;src/main/scala/Main.scala&lt;/code&gt; file and see the results in the console.&lt;/p&gt;
-&lt;p&gt;add a dependency to the &lt;code&gt;build.sbt&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;libraryDependencies += &amp;quot;org.scala-lang.modules&amp;quot; %% &amp;quot;scala-parser-combinators&amp;quot; % &amp;quot;1.1.0&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;testing-scala-code-with-sbt-in-the-command-line&#34;&gt;Testing Scala Code With sbt In The Command Line&lt;/h3&gt;
-&lt;p&gt;One testing methodologies from the &lt;strong&gt;ScalaTest&lt;/strong&gt; framework called &lt;strong&gt;FunSuite&lt;/strong&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ mkdir practice &amp;amp;&amp;amp; cd practice
-$ sbt new scala/scalatest-example.g8    # pull template from GitHub
-$ cd ScalaTestTutorial
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ cat build.sbt
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;libraryDependencies += &amp;quot;org.scalatest&amp;quot; %% &amp;quot;scalatest&amp;quot; % &amp;quot;3.0.5&amp;quot; % Test
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ cat src/main/scala/CubeCalculator.scala
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;object CubeCalculator extends App {
-  def cube(x: Int) = {
-    x * x * x
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ cat src/main/scala/CubeCalculatorTest.scala
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;import org.scalatest.FunSuite
-
-class CubeCalculatorTest extends FunSuite {
-    test(&amp;quot;CubeCalculator.cube&amp;quot;) {
-        assert(CubeCalculator.cube(3) === 27)
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;test&lt;/code&gt; is function that comes from &lt;code&gt;FunSuite&lt;/code&gt; that collects results from assertions within the function body.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;quot;CubeCalculator.cube&amp;quot;&lt;/code&gt; is a name for the test. You can call it anything but one convention is “&lt;strong&gt;ClassName.methodName&lt;/strong&gt;”.&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;===&lt;/code&gt; is part of ScalaTest.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ sbt test                                 # run the test suite
-&lt;/code&gt;&lt;/pre&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Gin</title>
-      <link>http://csyezheng.github.io/post/programming-languages/go/gin/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/go/gin/</guid>
-      
-        <description>&lt;h2 id=&#34;sessions&#34;&gt;sessions&lt;/h2&gt;
-&lt;p&gt;Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ go get github.com/gin-contrib/sessions
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;import &amp;quot;github.com/gin-contrib/sessions&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;cookie-based-example&#34;&gt;cookie-based Example&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;import (
-	&amp;quot;github.com/gin-contrib/sessions&amp;quot;
-	&amp;quot;github.com/gin-contrib/sessions/cookie&amp;quot;
-	&amp;quot;github.com/gin-gonic/gin&amp;quot;
-)
-
-func main() {
-	r := gin.Default()
-	store := cookie.NewStore([]byte(&amp;quot;secret&amp;quot;))
-	r.Use(sessions.Sessions(&amp;quot;mysession&amp;quot;, store))
-
-	r.GET(&amp;quot;/incr&amp;quot;, func(c *gin.Context) {
-		session := sessions.Default(c)
-		var count int
-		v := session.Get(&amp;quot;count&amp;quot;)
-		if v == nil {
-			count = 0
-		} else {
-			count = v.(int)
-			count++
-		}
-		session.Set(&amp;quot;count&amp;quot;, count)
-		session.Save()
-		c.JSON(200, gin.H{&amp;quot;count&amp;quot;: count})
-	})
-	r.Run(&amp;quot;:8000&amp;quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;redis-based-example&#34;&gt;Redis-based Example&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;import (
-	&amp;quot;github.com/gin-contrib/sessions&amp;quot;
-	&amp;quot;github.com/gin-contrib/sessions/redis&amp;quot;
-	&amp;quot;github.com/gin-gonic/gin&amp;quot;
-)
-
-func main() {
-	r := gin.Default()
-	store, _ := redis.NewStore(10, &amp;quot;tcp&amp;quot;, &amp;quot;localhost:6379&amp;quot;, &amp;quot;&amp;quot;, []byte(&amp;quot;secret&amp;quot;))
-	r.Use(sessions.Sessions(&amp;quot;mysession&amp;quot;, store))
-
-	r.GET(&amp;quot;/incr&amp;quot;, func(c *gin.Context) {
-		session := sessions.Default(c)
-		var count int
-		v := session.Get(&amp;quot;count&amp;quot;)
-		if v == nil {
-			count = 0
-		} else {
-			count = v.(int)
-			count++
-		}
-		session.Set(&amp;quot;count&amp;quot;, count)
-		session.Save()
-		c.JSON(200, gin.H{&amp;quot;count&amp;quot;: count})
-	})
-	r.Run(&amp;quot;:8000&amp;quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;cache&#34;&gt;Cache&lt;/h2&gt;
-&lt;p&gt;Gin middleware/handler to enable Cache.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ go get github.com/gin-contrib/cache
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;import &amp;quot;github.com/gin-contrib/cache&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;canonical-example&#34;&gt;Canonical example&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;import (
-	&amp;quot;fmt&amp;quot;
-	&amp;quot;time&amp;quot;
-
-	&amp;quot;github.com/gin-contrib/cache&amp;quot;
-	&amp;quot;github.com/gin-contrib/cache/persistence&amp;quot;
-	&amp;quot;github.com/gin-gonic/gin&amp;quot;
-)
-
-func main() {
-	r := gin.Default()
-
-	store := persistence.NewInMemoryStore(time.Second)
-	
-	r.GET(&amp;quot;/ping&amp;quot;, func(c *gin.Context) {
-		c.String(200, &amp;quot;pong &amp;quot;+fmt.Sprint(time.Now().Unix()))
-	})
-	// Cached Page
-	r.GET(&amp;quot;/cache_ping&amp;quot;, cache.CachePage(store, time.Minute, func(c *gin.Context) {
-		c.String(200, &amp;quot;pong &amp;quot;+fmt.Sprint(time.Now().Unix()))
-	}))
-
-	// Listen and Server in 0.0.0.0:8080
-	r.Run(&amp;quot;:8080&amp;quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;cors&#34;&gt;CORS&lt;/h2&gt;
-&lt;h2 id=&#34;csrf-protection&#34;&gt;CSRF protection&lt;/h2&gt;
-&lt;h2 id=&#34;jwt&#34;&gt;JWT&lt;/h2&gt;
-&lt;h2 id=&#34;log&#34;&gt;Log&lt;/h2&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>glide</title>
-      <link>http://csyezheng.github.io/post/programming-languages/go/glide/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/go/glide/</guid>
-      
-        <description>&lt;p&gt;使用 &lt;code&gt;glide install&lt;/code&gt; 或 &lt;code&gt;glide up&lt;/code&gt; 时报 &lt;code&gt;Cannot detect VCS&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https:////upload-images.jianshu.io/upload_images/3515296-3b504ee9b2a09ab5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/459/format/webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;image.png&lt;/p&gt;
-&lt;h3 id=&#34;解决&#34;&gt;解决&lt;/h3&gt;
-&lt;p&gt;这个是国内访问&lt;code&gt;golang.org&lt;/code&gt;被墙导致的
-解决方法如下：
-&lt;code&gt;glide mirror set https://golang.org/x/crypto https://github.com/golang/crypto&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;理论上这样后再执行 &lt;code&gt;glide install&lt;/code&gt; 或 &lt;code&gt;glide up&lt;/code&gt; 就可以了&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;如果按上面方式还不行的话，尝试如下方法：&lt;/strong&gt;
-&lt;code&gt;rm -rf ~/.glide&lt;/code&gt;
-&lt;code&gt;mkdir -p ~/.glide&lt;/code&gt;
-&lt;code&gt;glide mirror set https://golang.org/x/crypto https://github.com/golang/crypto&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;有可能你的是下面的链接，用到哪个执行哪个就好&lt;/strong&gt;
-&lt;code&gt;glide mirror set https://golang.org/x/mobile https://github.com/golang/mobile --vcs git&lt;/code&gt;
-&lt;code&gt;glide mirror set https://golang.org/x/crypto https://github.com/golang/crypto --vcs git&lt;/code&gt;
-&lt;code&gt;glide mirror set https://golang.org/x/net https://github.com/golang/net --vcs git&lt;/code&gt;
-&lt;code&gt;glide mirror set https://golang.org/x/tools https://github.com/golang/tools --vcs git&lt;/code&gt;
-&lt;code&gt;glide mirror set https://golang.org/x/text https://github.com/golang/text --vcs git&lt;/code&gt;
-&lt;code&gt;glide mirror set https://golang.org/x/image https://github.com/golang/image --vcs git&lt;/code&gt;
-&lt;code&gt;glide mirror set https://golang.org/x/sys https://github.com/golang/sys --vcs git&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;heading&#34;&gt;&lt;/h3&gt;
-&lt;p&gt;作者：别瞄我&lt;/p&gt;
-&lt;p&gt;链接：https://www.jianshu.com/p/f5f42e7915ac&lt;/p&gt;
-&lt;p&gt;来源：简书&lt;/p&gt;
-&lt;p&gt;简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。&lt;/p&gt;
 </description>
       
     </item>

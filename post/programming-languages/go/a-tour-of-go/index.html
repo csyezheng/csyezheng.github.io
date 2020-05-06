@@ -35,7 +35,7 @@ import ( &amp;quot;fmt&amp;quot; &amp;quot;math/rand&amp;quot; ) Exported names 
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.69.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/programming-languages/go/a-tour-of-go/" />
@@ -56,7 +56,7 @@ import ( &amp;quot;fmt&amp;quot; &amp;quot;math/rand&amp;quot; ) Exported names 
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0995afa14b62cd93e93cfc066b646c4c17a3eddca0e9d52a1d9dcf5d90aaacd3.css" integrity="sha256-CZWvoUtizZPpPPwGa2RsTBej7dyg6dUqHZ3PXZCqrNM=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.fa3d941d1d0e0ddc985804227feabffea55c89883eb0af34e0532a7ae9135151.css" integrity="sha256-&#43;j2UHR0ODdyYWAQif&#43;q//qVciYg&#43;sK804FMqeukTUVE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -386,7 +386,7 @@ import ( &quot;fmt&quot; &quot;math/rand&quot; ) Exported names In Go, a name is
 	return y, x
 }
 </code></pre><h4 id="named-return-values">Named return values</h4>
-<p>Go's return values may be named. These names should be used to document the meaning of the return values.</p>
+<p>Go&rsquo;s return values may be named. These names should be used to document the meaning of the return values.</p>
 <p>A <code>return</code> statement without arguments returns the named return values. This is known as a &ldquo;naked&rdquo; return.</p>
 <p>Naked return statements should be used only in short functions. They can harm readability in longer functions.</p>
 <pre><code>func split(sum int) (x, y int) {
@@ -404,7 +404,7 @@ import ( &quot;fmt&quot; &quot;math/rand&quot; ) Exported names In Go, a name is
 <p>Inside a function, the <code>:=</code> short assignment statement can be used in place of a <code>var</code> declaration with implicit type.</p>
 <p>Outside a function, every statement begins with a keyword (<code>var</code>, <code>func</code>, and so on) and so the <code>:=</code>construct is not available.</p>
 <h4 id="basic-types">Basic types</h4>
-<p>Go's basic types are</p>
+<p>Go&rsquo;s basic types are</p>
 <pre><code>bool
 
 string
@@ -442,7 +442,7 @@ f := float64(i)
 u := uint(f)
 </code></pre><p>Unlike in C, in Go assignment between items of different type requires an explicit conversion.</p>
 <h4 id="type-inference">Type inference</h4>
-<p>When declaring a variable without specifying an explicit type, the variable's type is inferred from the value on the right hand side.</p>
+<p>When declaring a variable without specifying an explicit type, the variable&rsquo;s type is inferred from the value on the right hand side.</p>
 <p>When the right hand side contains an untyped numeric constant, the new variable may be an <code>int</code>, <code>float64</code>, or <code>complex128</code> depending on the precision of the constant:</p>
 <pre><code>i := 42           // int
 f := 3.142        // float64
@@ -467,7 +467,7 @@ g := 0.867 + 0.5i // complex128
 for ; sum &lt; 1000; {
 	sum += sum
 }
-</code></pre><h4 id="for-is-gos-while">For is Go's &ldquo;while&rdquo;</h4>
+</code></pre><h4 id="for-is-gos-while">For is Go&rsquo;s &ldquo;while&rdquo;</h4>
 <pre><code>for sum &lt; 1000 {
 	sum += sum
 }
@@ -476,7 +476,7 @@ for ; sum &lt; 1000; {
 <pre><code>for {
 }
 </code></pre><h4 id="if">If</h4>
-<p>Go's <code>if</code> statements need not be surrounded by parentheses <code>( )</code> but the braces <code>{ }</code> are required.</p>
+<p>Go&rsquo;s <code>if</code> statements need not be surrounded by parentheses <code>( )</code> but the braces <code>{ }</code> are required.</p>
 <pre><code>if x &lt; 0 {
 }
 </code></pre><h4 id="if-with-a-short-statement">If with a short statement</h4>
@@ -492,7 +492,7 @@ for ; sum &lt; 1000; {
 }
 </code></pre><h4 id="switch">Switch</h4>
 <p>A <code>switch</code> statement is a shorter way to write a sequence of <code>if - else</code> statements. It runs the first case whose value is equal to the condition expression.</p>
-<p>Go only runs the selected case, not all the cases that follow. In effect, the <code>break</code> statement that is needed at the end of each case in other languages is provided automatically in Go. Another important difference is that Go's switch cases need not be constants, and the values involved need not be integers.</p>
+<p>Go only runs the selected case, not all the cases that follow. In effect, the <code>break</code> statement that is needed at the end of each case in other languages is provided automatically in Go. Another important difference is that Go&rsquo;s switch cases need not be constants, and the values involved need not be integers.</p>
 <pre><code>func main() {
 	fmt.Print(&quot;Go runs on &quot;)
 	switch os := runtime.GOOS; os {
@@ -524,7 +524,7 @@ for ; sum &lt; 1000; {
 }
 </code></pre><h4 id="defer">Defer</h4>
 <p>A defer statement defers the execution of a function until the surrounding function returns.</p>
-<p>The deferred call's arguments are evaluated immediately, but the function call is not executed until the surrounding function returns.</p>
+<p>The deferred call&rsquo;s arguments are evaluated immediately, but the function call is not executed until the surrounding function returns.</p>
 <pre><code>func main() {
 	defer fmt.Println(&quot;world&quot;)
 	fmt.Println(&quot;hello&quot;)
@@ -538,7 +538,7 @@ for ; sum &lt; 1000; {
 <pre><code>var p *int
 </code></pre><pre><code>i := 42
 p = &amp;i   // The &amp; operator generates a pointer to its operand.
-</code></pre><p>The <code>*</code> operator denotes the pointer's underlying value. This is known as &ldquo;dereferencing&rdquo; or &ldquo;indirecting&rdquo;.</p>
+</code></pre><p>The <code>*</code> operator denotes the pointer&rsquo;s underlying value. This is known as &ldquo;dereferencing&rdquo; or &ldquo;indirecting&rdquo;.</p>
 <pre><code>fmt.Println(*p) // read i through the pointer p
 *p = 21         // set i through the pointer p
 </code></pre><p>Unlike C, Go has no pointer arithmetic.</p>
@@ -588,7 +588,7 @@ p  = &amp;Vertex{1, 2} // has type *Vertex
 <p>The length of a slice is the number of elements it contains.</p>
 <p>The capacity of a slice is the number of elements in the underlying array, <strong>counting from the first element in the slice</strong>.</p>
 <p>The length and capacity of a slice <code>s</code> can be obtained using the expressions <code>len(s)</code> and <code>cap(s)</code>.</p>
-<p>You can extend a slice's length by re-slicing it, provided it has sufficient capacity.</p>
+<p>You can extend a slice&rsquo;s length by re-slicing it, provided it has sufficient capacity.</p>
 <h4 id="nil-slices">Nil slices</h4>
 <p>The zero value of a slice is <code>nil</code>.</p>
 <p>A nil slice has a length and capacity of 0 and has no underlying array.</p>
@@ -665,7 +665,7 @@ delete(m, key)   // Delete an element
 </code></pre><p>Test that a key is present with a two-value assignment:</p>
 <pre><code>elem, ok := m[key]
 </code></pre><p>If <code>key</code> is in <code>m</code>, <code>ok</code> is <code>true</code>. If not, <code>ok</code> is <code>false</code>.</p>
-<p>If <code>key</code> is not in the map, then <code>elem</code> is the zero value for the map's element type.</p>
+<p>If <code>key</code> is not in the map, then <code>elem</code> is the zero value for the map&rsquo;s element type.</p>
 <h4 id="exercise-maps">Exercise: Maps</h4>
 <pre><code>func WordCount(s string) map[string]int {
     ret := make(map[string]int)
@@ -937,7 +937,7 @@ func describe(i interface{}) {
 	fmt.Printf(&quot;(%v, %T)\n&quot;, i, i)
 }
 </code></pre><h4 id="type-assertions">Type assertions</h4>
-<p>A <em>type assertion</em> provides access to an interface value's underlying concrete value.</p>
+<p>A <em>type assertion</em> provides access to an interface value&rsquo;s underlying concrete value.</p>
 <pre><code>t := i.(T)
 </code></pre><p>This statement asserts that the interface value <code>i</code>holds the concrete type <code>T</code> and assigns the underlying <code>T</code> value to the variable <code>t</code>.</p>
 <p>If <code>i</code> does not hold a <code>T</code>, the statement will trigger a panic.</p>
@@ -1124,9 +1124,9 @@ type Image interface {
 }
 </code></pre><p><strong>Note</strong>: the <code>Rectangle</code> return value of the <code>Bounds</code>method is actually an <a href="https://golang.org/pkg/image/#Rectangle"><code>image.Rectangle</code></a>, as the declaration is inside package <code>image</code>.</p>
 <p>(See <a href="https://golang.org/pkg/image/#Image">the documentation</a> for all the details.)</p>
-<p>The <code>color.Color</code> and <code>color.Model</code> types are also interfaces, but we'll ignore that by using the predefined implementations <code>color.RGBA</code> and <code>color.RGBAModel</code>. These interfaces and types are specified by the <a href="https://golang.org/pkg/image/color/">image/color package</a></p>
+<p>The <code>color.Color</code> and <code>color.Model</code> types are also interfaces, but we&rsquo;ll ignore that by using the predefined implementations <code>color.RGBA</code> and <code>color.RGBAModel</code>. These interfaces and types are specified by the <a href="https://golang.org/pkg/image/color/">image/color package</a></p>
 <h4 id="exercise-images">Exercise: Images</h4>
-<p>Remember the <a href="https://tour.golang.org/moretypes/18">picture generator</a> you wrote earlier? Let's write another one, but this time it will return an implementation of <code>image.Image</code> instead of a slice of data.</p>
+<p>Remember the <a href="https://tour.golang.org/moretypes/18">picture generator</a> you wrote earlier? Let&rsquo;s write another one, but this time it will return an implementation of <code>image.Image</code> instead of a slice of data.</p>
 <p>Define your own <code>Image</code> type, implement <a href="https://golang.org/pkg/image/#Image">the necessary methods</a>, and call <code>pic.ShowImage</code>.</p>
 <p><code>Bounds</code> should return a <code>image.Rectangle</code>, like <code>image.Rect(0, 0, w, h)</code>.</p>
 <p><code>ColorModel</code> should return <code>color.RGBAModel</code>.</p>
@@ -1164,15 +1164,15 @@ func main() {
 <h4 id="goroutines">Goroutines</h4>
 <p>The Go FAQ section <a href="http://golang.org/doc/faq#goroutines"><em>Why goroutines instead of threads?</em></a> explains:</p>
 <blockquote>
-<p>Goroutines are part of making concurrency easy to use. The idea, which has been around for a while, is to multiplex independently executing functions—coroutines—onto a set of threads. When a coroutine blocks, such as by calling a blocking system call, the run-time automatically moves other coroutines on the same operating system thread to a different, runnable thread so they won't be blocked. The programmer sees none of this, which is the point. The result, which we call goroutines, can be very cheap: unless they spend a lot of time in long-running system calls, they cost little more than the memory for the stack, which is just a few kilobytes.</p>
-<p>To make the stacks small, Go's run-time uses segmented stacks. A newly minted goroutine is given a few kilobytes, which is almost always enough. When it isn't, the run-time allocates (and frees) extension segments automatically. The overhead averages about three cheap instructions per function call. It is practical to create hundreds of thousands of goroutines in the same address space. If goroutines were just threads, system resources would run out at a much smaller number.</p>
+<p>Goroutines are part of making concurrency easy to use. The idea, which has been around for a while, is to multiplex independently executing functions—coroutines—onto a set of threads. When a coroutine blocks, such as by calling a blocking system call, the run-time automatically moves other coroutines on the same operating system thread to a different, runnable thread so they won&rsquo;t be blocked. The programmer sees none of this, which is the point. The result, which we call goroutines, can be very cheap: unless they spend a lot of time in long-running system calls, they cost little more than the memory for the stack, which is just a few kilobytes.</p>
+<p>To make the stacks small, Go&rsquo;s run-time uses segmented stacks. A newly minted goroutine is given a few kilobytes, which is almost always enough. When it isn&rsquo;t, the run-time allocates (and frees) extension segments automatically. The overhead averages about three cheap instructions per function call. It is practical to create hundreds of thousands of goroutines in the same address space. If goroutines were just threads, system resources would run out at a much smaller number.</p>
 </blockquote>
 <p>A <em>goroutine</em> is a lightweight thread managed by the Go runtime.</p>
 <pre><code>go f(x, y, z)
 </code></pre><p>starts a new goroutine running</p>
 <pre><code>f(x, y, z)
 </code></pre><p>The evaluation of <code>f</code>, <code>x</code>, <code>y</code>, and <code>z</code> happens in the current goroutine and the execution of <code>f</code> happens in the new goroutine.</p>
-<p>Goroutines run in the same address space, so access to shared memory must be synchronized. The <a href="https://golang.org/pkg/sync/"><code>sync</code></a> package provides useful primitives, although you won't need them much in Go as there are other primitives.</p>
+<p>Goroutines run in the same address space, so access to shared memory must be synchronized. The <a href="https://golang.org/pkg/sync/"><code>sync</code></a> package provides useful primitives, although you won&rsquo;t need them much in Go as there are other primitives.</p>
 <h4 id="channels">Channels</h4>
 <p>Channels are a typed conduit through which you can send and receive values with the channel operator, <code>&lt;-</code>.</p>
 <pre><code>ch &lt;- v    // Send v to channel ch.
@@ -1210,7 +1210,7 @@ func main() {
 </code></pre><p><code>ok</code> is <code>false</code> if there are no more values to receive and the channel is closed.</p>
 <p>The loop <code>for i := range c</code> receives values from the channel repeatedly until it is closed.</p>
 <p><strong>Note:</strong> Only the sender should close a channel, never the receiver. Sending on a closed channel will cause a panic.</p>
-<p><strong>Another note:</strong> Channels aren't like files; you don't usually need to close them. Closing is only necessary when the receiver must be told there are no more values coming, such as to terminate a <code>range</code> loop.</p>
+<p><strong>Another note:</strong> Channels aren&rsquo;t like files; you don&rsquo;t usually need to close them. Closing is only necessary when the receiver must be told there are no more values coming, such as to terminate a <code>range</code> loop.</p>
 <pre><code>func fibonacci(n int, c chan int) {
 	x, y := 0, 1
 	for i := 0; i &lt; n; i++ {
@@ -1265,7 +1265,7 @@ default:
 }
 </code></pre><h4 id="exercise-equivalent-binary-trees">Exercise: Equivalent Binary Trees</h4>
 <p>There can be many different binary trees with the same sequence of values stored at the leaves. For example, here are two binary trees storing the sequence 1, 1, 2, 3, 5, 8, 13.</p>
-<p>A function to check whether two binary trees store the same sequence is quite complex in most languages. We'll use Go's concurrency and channels to write a simple solution.</p>
+<p>A function to check whether two binary trees store the same sequence is quite complex in most languages. We&rsquo;ll use Go&rsquo;s concurrency and channels to write a simple solution.</p>
 <p>This example uses the <code>tree</code> package, which defines the type:</p>
 <pre><code>type Tree struct {
     Left  *Tree
@@ -1324,10 +1324,10 @@ func main() {
 	fmt.Println(Same(tree.New(1), tree.New(2)))
 }
 </code></pre><h4 id="syncmutex">sync.Mutex</h4>
-<p>We've seen how channels are great for communication among goroutines.</p>
-<p>But what if we don't need communication? What if we just want to make sure only one goroutine can access a variable at a time to avoid conflicts?</p>
+<p>We&rsquo;ve seen how channels are great for communication among goroutines.</p>
+<p>But what if we don&rsquo;t need communication? What if we just want to make sure only one goroutine can access a variable at a time to avoid conflicts?</p>
 <p>This concept is called <em>mutual exclusion</em>, and the conventional name for the data structure that provides it is <em>mutex</em>.</p>
-<p>Go's standard library provides mutual exclusion with<a href="https://golang.org/pkg/sync/#Mutex"><code>sync.Mutex</code></a> and its two methods:</p>
+<p>Go&rsquo;s standard library provides mutual exclusion with<a href="https://golang.org/pkg/sync/#Mutex"><code>sync.Mutex</code></a> and its two methods:</p>
 <ul>
 <li><code>Lock</code></li>
 <li><code>Unlock</code></li>
@@ -1335,7 +1335,7 @@ func main() {
 <p>We can define a block of code to be executed in mutual exclusion by surrounding it with a call to <code>Lock</code> and <code>Unlock</code> as shown on the <code>Inc</code> method.</p>
 <p>We can also use <code>defer</code> to ensure the mutex will be unlocked as in the <code>Value</code> method.</p>
 <h4 id="exercise-web-crawler">Exercise: Web Crawler</h4>
-<p>In this exercise you'll use Go's concurrency features to parallelize a web crawler.</p>
+<p>In this exercise you&rsquo;ll use Go&rsquo;s concurrency features to parallelize a web crawler.</p>
 <p>Modify the <code>Crawl</code> function to fetch URLs in parallel without fetching the same URL twice.</p>
 <p><em>Hint</em>: you can keep a cache of the URLs that have been fetched on a map, but maps alone are not safe for concurrent use!</p>
 <h4 id="where-to-go-from-here">Where to Go from here&hellip;</h4>
@@ -1343,9 +1343,9 @@ func main() {
 <p>Once you have Go installed, the <a href="https://golang.org/doc/">Go Documentation</a>is a great place to continue. It contains references, tutorials, videos, and more.</p>
 <p>To learn how to organize and work with Go code, watch <a href="https://www.youtube.com/watch?v=XCsL89YtqCs">this screencast</a> or read <a href="https://golang.org/doc/code.html">How to Write Go Code</a>.</p>
 <p>If you need help with the standard library, see the <a href="https://golang.org/pkg/">package reference</a>. For help with the language itself, you might be surprised to find the <a href="https://golang.org/ref/spec">Language Spec</a> is quite readable.</p>
-<p>To further explore Go's concurrency model, watch<a href="https://www.youtube.com/watch?v=f6kdp27TYZs">Go Concurrency Patterns</a> (<a href="https://talks.golang.org/2012/concurrency.slide">slides</a>) and <a href="https://www.youtube.com/watch?v=QDDwwePbDtw">Advanced Go Concurrency Patterns</a> (<a href="https://talks.golang.org/2013/advconc.slide">slides</a>) and read the <a href="https://golang.org/doc/codewalk/sharemem/">Share Memory by Communicating</a> codewalk.</p>
+<p>To further explore Go&rsquo;s concurrency model, watch<a href="https://www.youtube.com/watch?v=f6kdp27TYZs">Go Concurrency Patterns</a> (<a href="https://talks.golang.org/2012/concurrency.slide">slides</a>) and <a href="https://www.youtube.com/watch?v=QDDwwePbDtw">Advanced Go Concurrency Patterns</a> (<a href="https://talks.golang.org/2013/advconc.slide">slides</a>) and read the <a href="https://golang.org/doc/codewalk/sharemem/">Share Memory by Communicating</a> codewalk.</p>
 <p>To get started writing web applications, watch <a href="https://vimeo.com/53221558">A simple programming environment</a> (<a href="https://talks.golang.org/2012/simple.slide">slides</a>) and read the <a href="https://golang.org/doc/articles/wiki/">Writing Web Applications</a> tutorial.</p>
-<p>The <a href="https://golang.org/doc/codewalk/functions/">First Class Functions in Go</a> codewalk gives an interesting perspective on Go's function types.</p>
+<p>The <a href="https://golang.org/doc/codewalk/functions/">First Class Functions in Go</a> codewalk gives an interesting perspective on Go&rsquo;s function types.</p>
 <p>The <a href="https://blog.golang.org/">Go Blog</a> has a large archive of informative Go articles.</p>
 <p>Visit <a href="https://golang.org/">golang.org</a> for more.</p>
 

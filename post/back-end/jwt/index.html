@@ -33,7 +33,7 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.69.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/back-end/jwt/" />
@@ -54,7 +54,7 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0995afa14b62cd93e93cfc066b646c4c17a3eddca0e9d52a1d9dcf5d90aaacd3.css" integrity="sha256-CZWvoUtizZPpPPwGa2RsTBej7dyg6dUqHZ3PXZCqrNM=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.fa3d941d1d0e0ddc985804227feabffea55c89883eb0af34e0532a7ae9135151.css" integrity="sha256-&#43;j2UHR0ODdyYWAQif&#43;q//qVciYg&#43;sK804FMqeukTUVE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -332,8 +332,8 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
     <li><a href="#how-do-json-web-tokens-work">How do JSON Web Tokens work?</a></li>
     <li><a href="#json-web-token-implementation-in-python">JSON Web Token implementation in Python</a>
       <ul>
-        <li><a href="#encoding--decoding-tokens-with-hs256">Encoding & Decoding Tokens with HS256</a></li>
-        <li><a href="#encoding--decoding-tokens-with-rs256-rsa">Encoding & Decoding Tokens with RS256 (RSA)</a></li>
+        <li><a href="#encoding--decoding-tokens-with-hs256">Encoding &amp; Decoding Tokens with HS256</a></li>
+        <li><a href="#encoding--decoding-tokens-with-rs256-rsa">Encoding &amp; Decoding Tokens with RS256 (RSA)</a></li>
         <li><a href="#specifying-additional-headers">Specifying Additional Headers</a></li>
       </ul>
     </li>
@@ -351,7 +351,7 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
 <p>Here are some scenarios where JSON Web Tokens are useful:</p>
 <ul>
 <li><strong>Authorization</strong>: This is the most common scenario for using JWT. Once the user is logged in, each subsequent request will include the JWT, allowing the user to access routes, services, and resources that are permitted with that token. <strong>Single Sign On</strong> is a feature that widely uses JWT nowadays, because of its small overhead and its ability to be easily used across different domains.</li>
-<li><strong>Information Exchange</strong>: JSON Web Tokens are a good way of securely transmitting information between parties. Because JWTs can be signed—for example, using public/private key pairs—you can be sure the senders are who they say they are. Additionally, as the signature is calculated using the header and the payload, you can also verify that the content hasn't been tampered with.</li>
+<li><strong>Information Exchange</strong>: JSON Web Tokens are a good way of securely transmitting information between parties. Because JWTs can be signed—for example, using public/private key pairs—you can be sure the senders are who they say they are. Additionally, as the signature is calculated using the header and the payload, you can also verify that the content hasn&rsquo;t been tampered with.</li>
 </ul>
 <h2 id="what-is-the-json-web-token-structure">What is the JSON Web Token structure?</h2>
 <p>In its compact form, JSON Web Tokens consist of three parts separated by dots (<code>.</code>), which are:</p>

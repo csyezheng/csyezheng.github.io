@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.69.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0995afa14b62cd93e93cfc066b646c4c17a3eddca0e9d52a1d9dcf5d90aaacd3.css" integrity="sha256-CZWvoUtizZPpPPwGa2RsTBej7dyg6dUqHZ3PXZCqrNM=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.fa3d941d1d0e0ddc985804227feabffea55c89883eb0af34e0532a7ae9135151.css" integrity="sha256-&#43;j2UHR0ODdyYWAQif&#43;q//qVciYg&#43;sK804FMqeukTUVE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-02-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2017-09-25T21:38:52+08:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,16 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/cpp/3rd-libraries/">C&#43;&#43; 3rd party libraries</a>
+      <a class="post-link" href="/post/back-end/scrapy-with-django/">Scraping with Scrapy and Django Integration</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-09-15" class="post-time">
-        2019-09-15
+      <time datetime="2020-02-12" class="post-time">
+        2020-02-12
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/cpp/"> Cpp </a>
+          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
           
         </div>
       
@@ -316,10 +315,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      grpc/libevent/libev/libasio 实现高性能网络服务器 protobuf 数据结构序列化/反序列化，方便数据交换 LevelDB/RocksDB 嵌入式KV数据库 snappy/zlib/lz4 数据压缩，解压缩 jemalloc/tcmalloc 高效内存分配器，尤其多线程场景 jerasure Reed Sol
+      Installing Dependencies (Optional) $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple $ python -m pip install --user virtualenv $ python -m pip install --user virtualenvwrapper $ vim ~/.bashrc export WORKON_HOME=$HOME/.virtualenvs export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv source $HOME/.local/bin/virtualenvwrapper.sh $ source ~/.bashrc $ mkvirtualenv stock-screener pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat Creating a Django Project $ django-admin startproject stock_screener $ cd stock_screener $ mkdir stock_screener/apps/basic_info $ django-admin startapp basic_info stock_screener/apps/basic_info $ mkdir stock_screener/apps/northbound $ django-admin startapp northbound stock_screener/apps/northbound $ mkdir stock_screener/apps/financial_metrics $ django-admin startapp financial_metrics stock_screener/apps/financial_metrics $ mkdir stock_screener/apps/quotes $ django-admin startapp quotes stock_screener/apps/quotes $ mkdir stock_screener/apps/jobs $ django-admin startapp jobs stock_screener/apps/jobs Cannot add backslash suffix when run startapp command.
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/cpp/3rd-libraries/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/scrapy-with-django/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,12 +329,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/cpp/jsoncpp/">jsoncpp</a>
+      <a class="post-link" href="/post/programming-languages/cpp/cpp-library-management/">C&#43;&#43; Library Management</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-09-15" class="post-time">
-        2019-09-15
+      <time datetime="2019-09-16" class="post-time">
+        2019-09-16
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
@@ -351,10 +350,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      
+      In general, you are going to have to end up with
+ Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&rsquo;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/cpp/jsoncpp/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/cpp/cpp-library-management/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -365,12 +365,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/cpp/cmake/">CMake</a>
+      <a class="post-link" href="/post/programming-languages/cpp/curl/">libcurl</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-09-13" class="post-time">
-        2019-09-13
+      <time datetime="2019-09-16" class="post-time">
+        2019-09-16
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
@@ -386,10 +386,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      如果工程存在多个目录,需要确保每个要管理的目录都存在一个 CMakeLists.txt． Set a name, version, and enable languages for the entire project. project(&lt;PROJECT-NAME&gt; [LANGUAGES] [&lt;language-name&gt;...]) Sets the name of the project and stores the name in the PROJECT_NAME
+      #include &lt;curl/curl.h&gt; When using an external library you must link with it:
+$ g++ main.cpp -lcurl 
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/cpp/cmake/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/cpp/curl/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1091,6 +1092,30 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/3/">»</a></li>
@@ -1098,7 +1123,7 @@
 
       
       
-      <li><a href="/page/23/">»»</a></li>
+      <li><a href="/page/24/">»»</a></li>
       
 
       </ul>

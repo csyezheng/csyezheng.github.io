@@ -6,10 +6,19 @@
     <description>Recent content in any-path on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 26 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://csyezheng.github.io/categories/any-path/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Wireshark</title>
+      <link>http://csyezheng.github.io/post/any-path/wireshark/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/any-path/wireshark/</guid>
+      <description>$ tshark -r all.pcapng.gz -i http==1 -O http -T fields -e http.request.method -e http.request.uri -e http.request.line -e http.response.line &amp;gt; dump.txt </description>
+    </item>
     
     <item>
       <title>Post-installation for archlinux</title>

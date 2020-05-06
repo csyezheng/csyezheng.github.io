@@ -24,7 +24,7 @@
 
 <meta name="author" content="Ye Zheng" />
   <meta name="description" content="In general, you are going to have to end up with
- Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&#39;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for)." />
+ Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&amp;rsquo;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for)." />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.69.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/programming-languages/cpp/cpp-library-management/" />
@@ -54,7 +54,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0995afa14b62cd93e93cfc066b646c4c17a3eddca0e9d52a1d9dcf5d90aaacd3.css" integrity="sha256-CZWvoUtizZPpPPwGa2RsTBej7dyg6dUqHZ3PXZCqrNM=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.fa3d941d1d0e0ddc985804227feabffea55c89883eb0af34e0532a7ae9135151.css" integrity="sha256-&#43;j2UHR0ODdyYWAQif&#43;q//qVciYg&#43;sK804FMqeukTUVE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,14 +62,14 @@
 
 <meta property="og:title" content="C&#43;&#43; Library Management" />
 <meta property="og:description" content="In general, you are going to have to end up with
- Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&#39;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for)." />
+ Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&rsquo;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://csyezheng.github.io/post/programming-languages/cpp/cpp-library-management/" />
 <meta property="article:published_time" content="2019-09-16T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-09-16T00:00:00+00:00" />
 <meta itemprop="name" content="C&#43;&#43; Library Management">
 <meta itemprop="description" content="In general, you are going to have to end up with
- Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&#39;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).">
+ Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&rsquo;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).">
 <meta itemprop="datePublished" content="2019-09-16T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-09-16T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="808">
@@ -79,7 +79,7 @@
 <meta itemprop="keywords" content="Cpp," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="C&#43;&#43; Library Management"/>
 <meta name="twitter:description" content="In general, you are going to have to end up with
- Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&#39;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for)."/>
+ Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&rsquo;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for)."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -329,7 +329,7 @@
   <ul>
     <li><a href="#linux">Linux</a>
       <ul>
-        <li><a href="#use-linux-distributions-packaging-system">Use Linux distribution's packaging system</a></li>
+        <li><a href="#use-linux-distributions-packaging-system">Use Linux distribution&rsquo;s packaging system</a></li>
         <li><a href="#build-and-install">build and install</a></li>
         <li><a href="#header-only-library">header-only library</a></li>
       </ul>
@@ -351,12 +351,12 @@
       <p>In general, you are going to have to end up with</p>
 <ul>
 <li>Header files in a directory somewhere</li>
-<li>library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won't need this.</li>
+<li>library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&rsquo;t need this.</li>
 </ul>
 <p>You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).</p>
 <p>When you try to compile with the library, you may need a command line option (eg <code>-I</code>) to specify the directory containing the header files, and you may need a linker option (eg <code>-l</code>) to tell the linker to link against your library.</p>
 <h2 id="linux">Linux</h2>
-<h3 id="use-linux-distributions-packaging-system">Use Linux distribution's packaging system</h3>
+<h3 id="use-linux-distributions-packaging-system">Use Linux distribution&rsquo;s packaging system</h3>
 <p>If you are installing the libraries with a package manager, they will probably all end up in the right place. If not you can get the compiler to search for the by providing the an additional search path using the <code>-L &lt;path&gt;</code> flag. You should be able to pass this extra flag to CMake.</p>
 <h3 id="build-and-install">build and install</h3>
 <pre><code>./configure
@@ -365,7 +365,7 @@ make install
 </code></pre><p>two main options for where to put the library:</p>
 <ul>
 <li><code>/usr/local</code> (libraries under <code>/usr/local/lib</code>, headers under <code>/usr/local/include</code>).</li>
-<li>Under your project directory, as you did under Windows. This has the advantages of not requiring root access and not making systemwide changes, but you'll have to update your project's include paths and library paths, and you'll have to put any shared library files someplace where the <a href="http://www.kernel.org/doc/man-pages/online/pages/man8/ld.so.8.html">dynamic linker</a> can find them (using <code>LD_LIBRARY_PATH</code> or <code>ld.so.conf</code> - see the link for more details).</li>
+<li>Under your project directory, as you did under Windows. This has the advantages of not requiring root access and not making systemwide changes, but you&rsquo;ll have to update your project&rsquo;s include paths and library paths, and you&rsquo;ll have to put any shared library files someplace where the <a href="http://www.kernel.org/doc/man-pages/online/pages/man8/ld.so.8.html">dynamic linker</a> can find them (using <code>LD_LIBRARY_PATH</code> or <code>ld.so.conf</code> - see the link for more details).</li>
 </ul>
 <h3 id="header-only-library">header-only library</h3>
 <p>No linking against pre-compiled code is required for header-only library. It can be included directly by</p>
@@ -381,13 +381,13 @@ g++ -I /usr/local/boost -lboost_system <!-- raw HTML omitted -->.cpp</p>
 <p><code>/usr/local/lib/</code> should be the right folder for this. It is the normal place for keeping shared library files installed manually from source code. If you build a library by running <code>./configure</code>, <code>make</code>, and <code>sudo make install</code>, it will <em>usually</em> install there automatically.</p>
 <hr>
 <p>Example</p>
-<p>Eigen c++ is a header only library: you don't have to install it, you just download it, unzip it and link your code against it.</p>
+<p>Eigen c++ is a header only library: you don&rsquo;t have to install it, you just download it, unzip it and link your code against it.</p>
 <p>For example, if your code is in <code>my_favorite_cpp_folder</code>, you do:</p>
 <pre><code>cd my_favorite_cpp_folder
 </code></pre><p>and, assuming your compiler is <code>gcc</code> and the eigen headers are in<code>/usr/local/include/eigen3/unsupported/</code> and the name of your source file is <code>my_favorite_cpp_source_file.cpp</code>, you compile and code and link it to the eigen headers by doing:</p>
 <pre><code>g++ -I /usr/local/include/eigen3/ my_favorite_cpp_source_file.cpp -o my_favorite_cpp_source_file
 </code></pre><p>(from your code output posted above, the eigen headers are in <code>/usr/local/include/eigen3/</code> in your computer)</p>
-<p>Since the header files are in <code>/usr/local/include/</code> folder you don't need to compile your source-code files against them using &ldquo;<code>g++ -I</code> &hellip;. .&rdquo;</p>
+<p>Since the header files are in <code>/usr/local/include/</code> folder you don&rsquo;t need to compile your source-code files against them using &ldquo;<code>g++ -I</code> &hellip;. .&rdquo;</p>
 <hr>
 <p><a href="">up vote</a>6<a href="">down vote</a>accepted</p>
 <ol>
@@ -397,7 +397,7 @@ g++ -I /usr/local/boost -lboost_system <!-- raw HTML omitted -->.cpp</p>
 <li>Use the <code>-l</code> linker option to specify any concrete 3rd libs you need (<code>-l[oHNet]</code>probably)</li>
 </ol>
 <p>Look in the directories what actually was installed there to figure what to place for <code>[whatever you need from oHNet].h</code> and <code>[oHNet]</code>, s.th. like <code>liboHNet.a</code> for the latter.</p>
-<p>You didn't tag [tag:Eclipse CDT] explicitly here, but go to the Project-&gt;Properties-&gt;C++ Builder-&gt;Settings Dialog and look for C/C++ Includes and Linker Options.</p>
+<p>You didn&rsquo;t tag [tag:Eclipse CDT] explicitly here, but go to the Project-&gt;Properties-&gt;C++ Builder-&gt;Settings Dialog and look for C/C++ Includes and Linker Options.</p>
 <hr>
 <h2 id="windows">Windows</h2>
 <h3 id="configuring-ms-visual-c-to-use-external-libraries">Configuring MS Visual C++ to use external libraries</h3>
@@ -417,7 +417,7 @@ g++ -I /usr/local/boost -lboost_system <!-- raw HTML omitted -->.cpp</p>
 </li>
 <li>
 <p>Library files</p>
-<p>Enter library filenames in <em>additional dependencies</em> for the libraries to use, if your compiler or the library don't supports auto-linking.</p>
+<p>Enter library filenames in <em>additional dependencies</em> for the libraries to use, if your compiler or the library don&rsquo;t supports auto-linking.</p>
 <p><img src="https://upload.wikimedia.org/wikibooks/en/0/08/Visual_studio_additionaldependencies.png" alt="library filenames (the Boost &ldquo;REGEXP&rdquo;-library in this example)"></p>
 </li>
 <li>

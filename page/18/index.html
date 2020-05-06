@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.69.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0995afa14b62cd93e93cfc066b646c4c17a3eddca0e9d52a1d9dcf5d90aaacd3.css" integrity="sha256-CZWvoUtizZPpPPwGa2RsTBej7dyg6dUqHZ3PXZCqrNM=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.fa3d941d1d0e0ddc985804227feabffea55c89883eb0af34e0532a7ae9135151.css" integrity="sha256-&#43;j2UHR0ODdyYWAQif&#43;q//qVciYg&#43;sK804FMqeukTUVE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-02-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2017-09-25T21:38:52+08:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,49 +295,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/devops/nginx/">Nginx</a>
+      <a class="post-link" href="/post/back-end/kafka/">Kafka</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-10-21" class="post-time">
-        2017-10-21
-      </time>
-      <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/devops/"> DevOps </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      General configuration Managing server entries It is possible to put different server blocks in different files. This allows you to easily enable or disable certain sites.
-# mkdir /etc/nginx/sites-available # mkdir /etc/nginx/sites-enabled Create a file inside the sites-available directory that contains one or more server blocks:
-/etc/nginx/sites-available/example server { .. } Append the following line at the end of the http block in /etc/nginx/nginx.conf:
-include sites-enabled/*; To enable a server block, simple create a symlink:
-    </div>
-    <div class="read-more">
-      <a href="/post/devops/nginx/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/back-end/postgresql/">PostgreSQL</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2017-09-30" class="post-time">
-        2017-09-30
+      <time datetime="2018-07-23" class="post-time">
+        2018-07-23
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
@@ -352,10 +315,10 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
   <div class="post-content">
     
     <div class="post-summary">
-      Installing PostgreSQL $ sudo pacman -S postgresql $ sudo -u postgres -i [postgres]$ initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data' [postgres]$ exit $ pg_ctl -D /var/lib/postgres/data -l logfile start $ systemctl start postgresql.service $ systemctl enable postgresql.service Create your first database/user Access the database shell $ [postgres]$ psql -d myDatabaseName \help \c &lt;database&gt; \du # list all users and their permission levels \dt # show summary information about all tables \q \?
+      Quickstart &gt; tar -xzf kafka_2.11-1.1.0.tgz &gt; cd kafka_2.11-1.1.0 Start the server bin/zookeeper-server-start.sh config/zookeeper.properties bin/kafka-server-start.sh config/server.properties Create a topic bin/kaftopics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic my-topic bin/kafka-topics.sh --list --zookeeper localhost:2181 Send some messages bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning Python client for the Apache Kafka #!/usr/bin/env python3 import logging from kafka import KafkaProducer from kafka.errors import KafkaError import msgpack log = logging.getLogger(__name__) def send(): producer = KafkaProducer(bootstrap_servers=['localhost:9092'], value_serializer=msgpack.
     </div>
     <div class="read-more">
-      <a href="/post/back-end/postgresql/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/kafka/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -366,15 +329,15 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/any-path/post-installation-for-archlinux/">Post-installation for archlinux</a>
+      <a class="post-link" href="/post/deep-learning/keras/">keras</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-09-26" class="post-time">
-        2017-09-26
+      <time datetime="2018-03-26" class="post-time">
+        2018-03-26
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/any-path/"> any-path </a>
+          <a href="http://csyezheng.github.io/categories/deep-learning/"> deep learning </a>
           
         </div>
       
@@ -386,12 +349,44 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
   <div class="post-content">
     
     <div class="post-summary">
-      Reboot into the new system Set the keyboard layout and Console fonts If you have the 4K display, console fonts will be extremely small.
-$ setfont sun12x22 Connect to the internet nmcli device wifi list nmcli device wifi connect TP-LINK_GZS password a3628436 ping baidu.com Unofficial user repositories sudo vim /etc/pacman.conf [archlinuxcn] Server = https://repo.archlinuxcn.org/$arch Adding unofficial keys
-sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman -S adobe-source-han-sans-cn-fonts sudo pacman -S adobe-source-han-sans-tw-fonts sudo pacman -S noto-fonts-emoji otf-latinmodern-math ttf-inconsolata Graphical user interface Display server sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight xorg-xrdb is using to loading a user-level configuration dotfile, typically located at ~/.
+      Keras import tensorflow as tf from tensorflow import keras 
     </div>
     <div class="read-more">
-      <a href="/post/any-path/post-installation-for-archlinux/" class="read-more-link">Read more</a>
+      <a href="/post/deep-learning/keras/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/back-end/make-a-web-site/">MAKE A WEBSITE</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2018-03-18" class="post-time">
+        2018-03-18
+      </time>
+      <div class="post-category">
+          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      GET A DOMAIN &amp; WEB HOSTING Register a domain name Namesilo Create New Account csyezheng csye3631 SEARCH Domain and REGISTER NameServers：域名解析服务器设置，未确定的可以等稍后在后台设置也一样； Auto-Renew
+    </div>
+    <div class="read-more">
+      <a href="/post/back-end/make-a-web-site/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -678,8 +673,6 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
 
             
             
-              
-            
 
           
           
@@ -688,12 +681,6 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
         
 
         
-        
-          <li class="">
-            <a href="/page/11/">
-              11
-            </a>
-          </li>
         
 
       
@@ -1070,6 +1057,37 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/24/">
+              24
+            </a>
+          </li>
+        
+
+      
+
       
       
       <li><a href="/page/19/">»</a></li>
@@ -1077,7 +1095,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
 
       
       
-      <li><a href="/page/23/">»»</a></li>
+      <li><a href="/page/24/">»»</a></li>
       
 
       </ul>

@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.69.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/devops/docker/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0995afa14b62cd93e93cfc066b646c4c17a3eddca0e9d52a1d9dcf5d90aaacd3.css" integrity="sha256-CZWvoUtizZPpPPwGa2RsTBej7dyg6dUqHZ3PXZCqrNM=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.fa3d941d1d0e0ddc985804227feabffea55c89883eb0af34e0532a7ae9135151.css" integrity="sha256-&#43;j2UHR0ODdyYWAQif&#43;q//qVciYg&#43;sK804FMqeukTUVE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -331,7 +331,7 @@
     </li>
     <li><a href="#build-an-image-and-run-it-as-one-container">Build an image and run it as one container</a>
       <ul>
-        <li><a href="#define-a-container-with-dockerfile">Define a container with Dockerfile</a></li>
+        <li><a href="#define-a-container-with-dockerfile">Define a container with <code>Dockerfile</code></a></li>
         <li><a href="#build-the-app">Build the app</a></li>
         <li><a href="#run-the-app">Run the app</a></li>
         <li><a href="#stop-the-container">Stop the container</a></li>
@@ -343,7 +343,7 @@
       <ul>
         <li><a href="#install-docker-compose">Install Docker Compose</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#define-docker-composeyml-file">Define docker-compose.yml file</a></li>
+        <li><a href="#define-docker-composeyml-file">Define <code>docker-compose.yml</code> file</a></li>
         <li><a href="#run-this-load-balanced-app">Run this load-balanced app</a></li>
         <li><a href="#take-down-the-app-and-the-swarm">Take down the app and the swarm</a></li>
       </ul>
@@ -481,7 +481,7 @@ networks:
   webnet:
 </code></pre><ul>
 <li>Pull the image from the registry.</li>
-<li>Run 5 instances of that image as a service called <code>web</code>, limiting each one's CPU and RAM.</li>
+<li>Run 5 instances of that image as a service called <code>web</code>, limiting each one&rsquo;s CPU and RAM.</li>
 <li>Immediately restart containers if one fails.</li>
 <li>Map port 80 on the host to <code>web</code>’s port 80.</li>
 <li>Instruct <code>web</code>’s containers to share port 80 via a load-balanced network called <code>webnet</code>. (Internally, the containers themselves publish to web’s port 80 at an ephemeral port.)</li>

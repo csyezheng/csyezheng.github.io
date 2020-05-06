@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.69.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/front-end/html/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0995afa14b62cd93e93cfc066b646c4c17a3eddca0e9d52a1d9dcf5d90aaacd3.css" integrity="sha256-CZWvoUtizZPpPPwGa2RsTBej7dyg6dUqHZ3PXZCqrNM=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.fa3d941d1d0e0ddc985804227feabffea55c89883eb0af34e0532a7ae9135151.css" integrity="sha256-&#43;j2UHR0ODdyYWAQif&#43;q//qVciYg&#43;sK804FMqeukTUVE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -325,7 +325,7 @@
     <li><a href="#introduction-to-html">Introduction to HTML</a>
       <ul>
         <li><a href="#getting-started-with-html">Getting started with HTML</a></li>
-        <li><a href="#whats-in-the-head-metadata-in-html">What's in the head? Metadata in HTML</a></li>
+        <li><a href="#whats-in-the-head-metadata-in-html">What&rsquo;s in the head? Metadata in HTML</a></li>
         <li><a href="#html-text-fundamentals">HTML text fundamentals</a></li>
         <li><a href="#creating-hyperlinks">Creating hyperlinks</a></li>
         <li><a href="#advanced-text-formatting">Advanced text formatting</a></li>
@@ -375,23 +375,23 @@
 <h4 id="what-is-html">What is HTML?</h4>
 <p>HTML (Hypertext Markup Language) is not a programming language; it is a <strong>markup language</strong> used to tell your browser how to structure the web pages you visit.</p>
 <p>HTML consists of a series of <strong>elements</strong>,  an element may contain a data item or a chunk of text or an image, or perhaps nothing. <strong>A typical element includes an opening tag with some attributes, enclosed text content, and a closing tag</strong>.</p>
-<p>In HTML a <strong>tag</strong> is used for creating an element.  The name of an HTML element is the name used in angle brackets such as  <code>&lt;p&gt;</code> for paragraph.  Note that the end tag's name is preceded by a slash character, <code>&lt;/p&gt;</code>.</p>
+<p>In HTML a <strong>tag</strong> is used for creating an element.  The name of an HTML element is the name used in angle brackets such as  <code>&lt;p&gt;</code> for paragraph.  Note that the end tag&rsquo;s name is preceded by a slash character, <code>&lt;/p&gt;</code>.</p>
 <p>If <strong>attributes</strong> are not mentioned, default values are used in each case.</p>
 <h4 id="element">element</h4>
 <p>Elements can be placed within other elements too — this is called <strong>nesting</strong>.</p>
 <h6 id="block-versus-inline-elements">Block versus inline elements</h6>
 <p>There are two important categories of elements in HTML which you should know about. They are block-level elements and inline elements.</p>
 <ul>
-<li><strong>Block-level elements</strong> form a visible block on a page — they will appear on a new line from whatever content went before it, and any content that goes after it will also appear on a new line. Block-level elements tend to be structural elements on the page that represent, for example, paragraphs, lists, navigation menus, footers, and so on. A block-level element wouldn't be nested inside an inline element, but it might be nested inside another block-level element.</li>
+<li><strong>Block-level elements</strong> form a visible block on a page — they will appear on a new line from whatever content went before it, and any content that goes after it will also appear on a new line. Block-level elements tend to be structural elements on the page that represent, for example, paragraphs, lists, navigation menus, footers, and so on. A block-level element wouldn&rsquo;t be nested inside an inline element, but it might be nested inside another block-level element.</li>
 <li><strong>Inline elements</strong> are those that are contained within block-level elements and surround only small parts of the document’s content, not entire paragraphs and groupings of content. An inline element will not cause a new line to appear in the document; they would normally appear inside a paragraph of text, for example an <code>&lt;a&gt;</code> element (hyperlink) or emphasis elements such as <code>&lt;em&gt;</code> or <code>&lt;strong&gt;</code>.</li>
 </ul>
-<p>The terms &ldquo;block&rdquo; and &ldquo;inline&rdquo;, as used in this topic, should not be confused with the types of CSS boxes with the same names. While they correlate by default, changing the CSS display type doesn't change the category of the element and doesn't affect which elements it can contain and which elements it can be contained in.</p>
+<p>The terms &ldquo;block&rdquo; and &ldquo;inline&rdquo;, as used in this topic, should not be confused with the types of CSS boxes with the same names. While they correlate by default, changing the CSS display type doesn&rsquo;t change the category of the element and doesn&rsquo;t affect which elements it can contain and which elements it can be contained in.</p>
 <h6 id="empty-elements">Empty elements</h6>
 <p>Not all elements follow the above pattern of an opening tag, content, and a closing tag. Some elements consist only of a single tag, which is usually used to insert/embed something in the document at the place it is included.</p>
 <h4 id="attributes">Attributes</h4>
-<p>Attributes contain extra information about the element that you don't want to appear in the actual content. In this case, the <strong><code>class</code></strong> attribute allows you to give the element an identifying name, that can be used later to target the element with style information and other things.</p>
+<p>Attributes contain extra information about the element that you don&rsquo;t want to appear in the actual content. In this case, the <strong><code>class</code></strong> attribute allows you to give the element an identifying name, that can be used later to target the element with style information and other things.</p>
 <h6 id="boolean-attributes">Boolean attributes</h6>
-<p>You'll sometimes see attributes written without values — this is perfectly allowed. These are called Boolean attributes, and they can only have one value, which is generally the same as the attribute name.</p>
+<p>You&rsquo;ll sometimes see attributes written without values — this is perfectly allowed. These are called Boolean attributes, and they can only have one value, which is generally the same as the attribute name.</p>
 <pre><code>&lt;input type=&quot;text&quot; disabled&gt;
 &lt;input type=&quot;text&quot; disabled=&quot;disabled&quot;&gt;
 </code></pre><h4 id="anatomy-of-an-html-document">Anatomy of an HTML document</h4>
@@ -450,16 +450,16 @@
 &lt;p&gt;In HTML, you define a paragraph using the &amp;lt;p&amp;gt; element.&lt;/p&gt;  
 </code></pre><h4 id="html-comments">HTML comments</h4>
 <p>To turn a section of HTML content into a comment, you need to wrap it in the special markers <code>&lt;!--</code> and <code>--&gt;</code></p>
-<h3 id="whats-in-the-head-metadata-in-html">What's in the head? Metadata in HTML</h3>
-<p>The head's content is not displayed on the page. Instead, the head's job is to contain metadata about the document.</p>
+<h3 id="whats-in-the-head-metadata-in-html">What&rsquo;s in the head? Metadata in HTML</h3>
+<p>The head&rsquo;s content is not displayed on the page. Instead, the head&rsquo;s job is to contain metadata about the document.</p>
 <h4 id="title">title</h4>
-<p>We've already seen the <code>&lt;title&gt;</code> element in action — this can be used to add a title to the document. This however can get confused with the <code>&lt;h1&gt;</code> element, which is used to add a top level heading to your body content — this is also sometimes referred to as the page title. But they are different things!</p>
+<p>We&rsquo;ve already seen the <code>&lt;title&gt;</code> element in action — this can be used to add a title to the document. This however can get confused with the <code>&lt;h1&gt;</code> element, which is used to add a top level heading to your body content — this is also sometimes referred to as the page title. But they are different things!</p>
 <ul>
 <li>The <code>&lt;h1&gt;</code> element appears on the page when loaded in the browser — generally this should be used once per page, to mark up the title of your page content (the story title, or news headline, or whatever is appropriate to your usage.)</li>
-<li>The <code>&lt;title&gt;</code> element is metadata that represents the title of the overall HTML document (not the document's content.)</li>
+<li>The <code>&lt;title&gt;</code> element is metadata that represents the title of the overall HTML document (not the document&rsquo;s content.)</li>
 </ul>
 <h4 id="metadata-the-meta-element">Metadata: the <code>&lt;meta&gt;</code> element</h4>
-<h6 id="specifying-your-documents-character-encoding">Specifying your document's character encoding</h6>
+<h6 id="specifying-your-documents-character-encoding">Specifying your document&rsquo;s character encoding</h6>
 <pre><code>&lt;meta charset=&quot;utf-8&quot;&gt;
 </code></pre><h6 id="adding-an-author-and-description">Adding an author and description</h6>
 <pre><code>&lt;meta name=&quot;author&quot; content=&quot;&quot;&gt;
@@ -467,33 +467,33 @@
 </code></pre><p>The description is also used on search engine result pages.</p>
 <p>Specifying a description that includes keywords relating to the content of your page is useful as it has the potential to make your page appear higher in relevant searches performed in search engines</p>
 <h6 id="other-types-of-metadata">Other types of metadata</h6>
-<p>As you travel around the web, you'll find other types of metadata, too. A lot of the features you'll see on websites are proprietary creations, designed to provide certain sites (such as social networking sites) with specific pieces of information they can use.</p>
+<p>As you travel around the web, you&rsquo;ll find other types of metadata, too. A lot of the features you&rsquo;ll see on websites are proprietary creations, designed to provide certain sites (such as social networking sites) with specific pieces of information they can use.</p>
 <h4 id="adding-custom-icons-to-your-site">Adding custom icons to your site</h4>
 <p>The humble <strong>favicon</strong> has been around for many years. It is the first icon of this type: a 16-pixel square icon used in multiple places. You may see (depending on the browser) favicons displayed in the browser tab containing each open page, and next to bookmarked pages in the bookmarks panel.</p>
 <p>A favicon can be added to your page by:</p>
 <ol>
 <li>
-<p>Saving it in the same directory as the site's index page, saved in <code>.ico</code> format (most browsers will support favicons in more common formats like <code>.gif</code> or <code>.png</code>, but using the ICO format will ensure it works as far back as Internet Explorer 6.)</p>
+<p>Saving it in the same directory as the site&rsquo;s index page, saved in <code>.ico</code> format (most browsers will support favicons in more common formats like <code>.gif</code> or <code>.png</code>, but using the ICO format will ensure it works as far back as Internet Explorer 6.)</p>
 </li>
 <li>
-<p>Adding the following line into your HTML's <code>&lt;head&gt;</code> block to reference it:</p>
+<p>Adding the following line into your HTML&rsquo;s <code>&lt;head&gt;</code> block to reference it:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;shortcut icon&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;favicon.ico&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image/x-icon&#34;</span>&gt;
 </code></pre></div></li>
 </ol>
 <h4 id="applying-css-and-javascript-to-html">Applying CSS and JavaScript to HTML</h4>
-<p>The <strong><code>&lt;link&gt;</code></strong> element always goes inside the head of your document. This takes two attributes, <strong><code>rel=&quot;stylesheet&quot;</code></strong>, which indicates that it is the document's stylesheet, and <strong>href</strong>, which contains the path to the stylesheet file:</p>
+<p>The <strong><code>&lt;link&gt;</code></strong> element always goes inside the head of your document. This takes two attributes, <strong><code>rel=&quot;stylesheet&quot;</code></strong>, which indicates that it is the document&rsquo;s stylesheet, and <strong>href</strong>, which contains the path to the stylesheet file:</p>
 <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;my-css-file.css&quot;&gt;
-</code></pre><p>The <strong><code>&lt;script&gt;</code></strong> element does not have to go in the head; in fact, <strong>often it is better to put it at the bottom of the document body (just before the closing  <code>&lt;/body&gt; </code> tag</strong>), to make sure that all the HTML content has been read by the browser before it tries to apply JavaScript to it (if JavaScript tries to access an element that doesn't yet exist, the browser will throw an error.)</p>
+</code></pre><p>The <strong><code>&lt;script&gt;</code></strong> element does not have to go in the head; in fact, <strong>often it is better to put it at the bottom of the document body (just before the closing  <code>&lt;/body&gt; </code> tag</strong>), to make sure that all the HTML content has been read by the browser before it tries to apply JavaScript to it (if JavaScript tries to access an element that doesn&rsquo;t yet exist, the browser will throw an error.)</p>
 <pre><code>&lt;script src=&quot;my-js-file.js&quot;&gt;&lt;/script&gt;
-</code></pre><p>Note: The <code>&lt;script&gt;</code> element may look like an empty element, but it's not, and so needs a closing tag. Instead of pointing to an external script file, you can also choose to put your script inside the <code>&lt;script&gt;</code> element.</p>
+</code></pre><p>Note: The <code>&lt;script&gt;</code> element may look like an empty element, but it&rsquo;s not, and so needs a closing tag. Instead of pointing to an external script file, you can also choose to put your script inside the <code>&lt;script&gt;</code> element.</p>
 <h4 id="setting-the-primary-language-of-the-document">Setting the primary language of the document</h4>
-<p>It's worth mentioning that you can (and really should) set the language of your page.</p>
+<p>It&rsquo;s worth mentioning that you can (and really should) set the language of your page.</p>
 <pre><code>&lt;html lang=&quot;en-US&quot;&gt;
 </code></pre><p>You can also set subsections of your document to be recognised as different languages.</p>
 <pre><code>&lt;p&gt;Japanese example: &lt;span lang=&quot;ja&quot;&gt;ご飯が熱い。&lt;/span&gt;.&lt;/p&gt;
 </code></pre><h3 id="html-text-fundamentals">HTML text fundamentals</h3>
 <h4 id="why-do-we-need-semantics">Why do we need semantics?</h4>
-<p>One of HTML's main jobs is to give <strong>text structure</strong> and meaning (also known as semantics) so that a browser can display it correctly. HTML provides various semantic elements to allow us to mark up textual content with</p>
+<p>One of HTML&rsquo;s main jobs is to give <strong>text structure</strong> and meaning (also known as semantics) so that a browser can display it correctly. HTML provides various semantic elements to allow us to mark up textual content with</p>
 <p><strong>Semantics</strong> are relied on everywhere around us — we rely on previous experience to tell us what the function of an everyday object is; when we see something, we know what its function will be. So, for example, we expect a red traffic light to mean &ldquo;stop&rdquo;, and a green traffic light to mean &ldquo;go&rdquo;.</p>
 <p>In a similar vein, we need to make sure we are <strong>using the correct elements, giving our content the correct meaning, function, or appearance</strong>.</p>
 <h4 id="headings-and-paragraphs">Headings and Paragraphs</h4>
@@ -526,12 +526,12 @@
 </code></pre><h4 id="emphasis-and-importance">Emphasis and importance</h4>
 <h6 id="emphasis">Emphasis</h6>
 <p>When we want to add emphasis in spoken language, we <em>stress</em> certain words, <strong>subtly</strong> altering the meaning of what we are saying. Similarly, in written language we tend to stress words by putting them in italics.  In HTML we use the <code>&lt;em&gt;</code> (emphasis) element to mark up such instances.</p>
-<p>Browsers style this as italic by default, but <strong>you shouldn't use this tag purely to get italic styling</strong>. To do that, you'd use a <code>&lt;span&gt;</code> element and some CSS, or perhaps an <code>&lt;i&gt;</code> element</p>
+<p>Browsers style this as italic by default, but <strong>you shouldn&rsquo;t use this tag purely to get italic styling</strong>. To do that, you&rsquo;d use a <code>&lt;span&gt;</code> element and some CSS, or perhaps an <code>&lt;i&gt;</code> element</p>
 <pre><code>&lt;p&gt;I am &lt;em&gt;glad&lt;/em&gt; you weren't &lt;em&gt;late&lt;/em&gt;.&lt;/p&gt;
 </code></pre><h6 id="strong-importance">Strong importance</h6>
 <p>To emphasize important words, we tend to stress them in spoken language and <strong>bold</strong> them in written language. In HTML we use the <code>&lt;strong&gt;</code> (strong importance) element to mark up such instances.</p>
 <h6 id="italic-bold-underline">Italic, bold, underline&hellip;</h6>
-<p>Here's the best rule of thumb: it's likely appropriate to use <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, or <code>&lt;u&gt;</code> to convey a meaning traditionally conveyed with bold, italics, or underline, provided there is no more suitable element.</p>
+<p>Here&rsquo;s the best rule of thumb: it&rsquo;s likely appropriate to use <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>, or <code>&lt;u&gt;</code> to convey a meaning traditionally conveyed with bold, italics, or underline, provided there is no more suitable element.</p>
 <h3 id="creating-hyperlinks">Creating hyperlinks</h3>
 <h4 id="anatomy-of-a-link">Anatomy of a link</h4>
 <p>A basic link is created by wrapping the text (or other content) you want to turn into a link inside an <code>&lt;a&gt;</code> element, and giving it an <strong>href</strong> attribute that will contain the web address you want the link to point to.</p>
@@ -550,7 +550,7 @@
 <h6 id="document-fragments">Document fragments</h6>
 <p>It is possible to link to a specific part of an HTML document (known as a <strong>document fragment</strong>), rather than just to the top of the document. To do this you first have to assign an <code>id</code> attribute to the element you want to link to.</p>
 <pre><code>&lt;h2 id=&quot;Mailing_address&quot;&gt;Mailing address&lt;/h2&gt;
-</code></pre><p>Then to link to that specific <code>id</code>, you'd include it at the end of the URL, preceded by a hash/pound symbol</p>
+</code></pre><p>Then to link to that specific <code>id</code>, you&rsquo;d include it at the end of the URL, preceded by a hash/pound symbol</p>
 <pre><code>&lt;p&gt;Want to write us a letter? Use our &lt;a href=&quot;contacts.html#Mailing_address&quot;&gt;mailing address&lt;/a&gt;.&lt;/p&gt;
 </code></pre><p>You can even use the document fragment reference on its own to link to <em>another part of the same document</em>:</p>
 <pre><code>&lt;p&gt;The &lt;a href=&quot;#Mailing_address&quot;&gt;company mailing address&lt;/a&gt; can be found at the bottom of this page.&lt;/p&gt;
@@ -582,7 +582,7 @@
 <p>It is possible to create links or buttons that, when clicked, open a new outgoing email message rather than linking to a resource or page. This is done using the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">``</a> element and the <code>mailto:</code> URL scheme.</p>
 <p>In its most basic and commonly used form, a <code>mailto:</code> link simply indicates the email address of the intended recipient.</p>
 <pre><code>&lt;a href=&quot;mailto:nowhere@mozilla.org&quot;&gt;Send email to nowhere&lt;/a&gt;
-</code></pre><p>In fact, the email address is even optional. If you leave it out (that is, your <code>href</code> is simply &ldquo;mailto:&quot;), a new outgoing email window will be opened by the user's mail client that has no destination address specified yet. This is often useful as &ldquo;Share&rdquo; links that users can click to send an email to an address of their choosing.</p>
+</code></pre><p>In fact, the email address is even optional. If you leave it out (that is, your <code>href</code> is simply &ldquo;mailto:&quot;), a new outgoing email window will be opened by the user&rsquo;s mail client that has no destination address specified yet. This is often useful as &ldquo;Share&rdquo; links that users can click to send an email to an address of their choosing.</p>
 <h6 id="specifying-details">Specifying details</h6>
 <p>In addition to the email address, you can provide other information. In fact, any standard mail header fields can be added to the <code>mailto</code> URL you provide. The most commonly used of these are &ldquo;subject&rdquo;, &ldquo;cc&rdquo;, and &ldquo;body&rdquo; (which is not a true header field, but allows you to specify a short content message for the new email). Each field and its value is specified as a query term.</p>
 <pre><code>&lt;a href=&quot;mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&amp;bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email&amp;body=The%20body%20of%20the%20email&quot;&gt;
@@ -615,10 +615,10 @@
 for short quotations that don't require paragraph breaks.&lt;/q&gt;&lt;/p&gt;
 </code></pre><p>Browser default styling will render this as normal text put in quotes to indicate a quotation.</p>
 <h6 id="citations">Citations</h6>
-<p>The content of the cite attribute sounds useful, but unfortunately browsers don't really display the contents of cite.  There is a <code>&lt;cite&gt;</code> element, but this is meant to contain the title of the resource being quoted, e.g. the name of the book.</p>
+<p>The content of the cite attribute sounds useful, but unfortunately browsers don&rsquo;t really display the contents of cite.  There is a <code>&lt;cite&gt;</code> element, but this is meant to contain the title of the resource being quoted, e.g. the name of the book.</p>
 <pre><code>&lt;p&gt;Hello and welcome to my motivation page. As &lt;a href=&quot;http://www.brainyquote.com/quotes/authors/c/confucius.html&quot;&gt;&lt;cite&gt;Confucius' quotes site&lt;/cite&gt;&lt;/a&gt; says:&lt;/p&gt;
 </code></pre><h4 id="abbreviations">Abbreviations</h4>
-<p>Another fairly common element you'll meet when looking around the Web is <code>&lt;abbr&gt;</code> — this is used to wrap around an abbreviation or acronym, and provide a full expansion of the term (included inside a <code>title</code> attribute.)</p>
+<p>Another fairly common element you&rsquo;ll meet when looking around the Web is <code>&lt;abbr&gt;</code> — this is used to wrap around an abbreviation or acronym, and provide a full expansion of the term (included inside a <code>title</code> attribute.)</p>
 <pre><code>&lt;p&gt;We use &lt;abbr title=&quot;Hypertext Markup Language&quot;&gt;HTML&lt;/abbr&gt; to structure our web documents.&lt;/p&gt;
 </code></pre><h4 id="marking-up-contact-details">Marking up contact details</h4>
 <p>HTML has an element for marking up contact details. This simply wraps around your contact details</p>
@@ -665,13 +665,13 @@ para.onclick = function() {
 <li>sidebar: <code>&lt;aside&gt;</code>; often placed inside <code>&lt;main&gt;</code>.</li>
 <li>footer: <code>&lt;footer&gt;</code>.</li>
 </ul>
-<p>It's good to understand the overall meaning of all the HTML sectioning elements in detail:</p>
+<p>It&rsquo;s good to understand the overall meaning of all the HTML sectioning elements in detail:</p>
 <ul>
-<li><code>&lt;main&gt;</code> is for content unique to this page. Use <code>&lt;main&gt;</code> <strong>only once per page</strong>, and put it <strong>directly inside</strong> <code>&lt;body&gt;</code>. Ideally this shouldn't be nested within other elements.</li>
+<li><code>&lt;main&gt;</code> is for content unique to this page. Use <code>&lt;main&gt;</code> <strong>only once per page</strong>, and put it <strong>directly inside</strong> <code>&lt;body&gt;</code>. Ideally this shouldn&rsquo;t be nested within other elements.</li>
 <li><code>&lt;article&gt;</code> encloses a block of related content that makes sense on its own without the rest of the page (e.g., a single blog post).</li>
-<li><code>&lt;section&gt;</code> is similar to <code>&lt;article&gt;</code>, but it is more for grouping together a single part of the page that <strong>constitutes one single piece of functionality</strong> (e.g., a mini map, or a set of article headlines and summaries). It's considered best practice to begin each section with a heading; also note that you can break <code>&lt;article&gt;</code>s up into different <code>&lt;section&gt;</code>s, or <code>&lt;section&gt;</code>s up into different <code>&lt;article&gt;</code>s, depending on the context.</li>
+<li><code>&lt;section&gt;</code> is similar to <code>&lt;article&gt;</code>, but it is more for grouping together a single part of the page that <strong>constitutes one single piece of functionality</strong> (e.g., a mini map, or a set of article headlines and summaries). It&rsquo;s considered best practice to begin each section with a heading; also note that you can break <code>&lt;article&gt;</code>s up into different <code>&lt;section&gt;</code>s, or <code>&lt;section&gt;</code>s up into different <code>&lt;article&gt;</code>s, depending on the context.</li>
 <li><code>&lt;aside&gt;</code> contains content that is not directly related to the main content but can provide additional information indirectly related to it (glossary entries, author biography, related links, etc.).</li>
-<li><code>&lt;header&gt;</code> represents a group of introductory content. If it is a child of <code>&lt;body&gt;</code> it defines the global header of a webpage, but if it's a child of an <code>&lt;article&gt;</code> or <code>&lt;section&gt;</code> it defines a specific header for that section (try not to confuse this with titles and headings).</li>
+<li><code>&lt;header&gt;</code> represents a group of introductory content. If it is a child of <code>&lt;body&gt;</code> it defines the global header of a webpage, but if it&rsquo;s a child of an <code>&lt;article&gt;</code> or <code>&lt;section&gt;</code> it defines a specific header for that section (try not to confuse this with titles and headings).</li>
 <li><code>&lt;nav&gt;</code> contains the main navigation functionality for the page. Secondary links, etc., would not go in the navigation.
 <code>&lt;footer&gt;</code> represents a group of end content for a page.</li>
 </ul>
@@ -759,32 +759,32 @@ para.onclick = function() {
 &lt;/html&gt;
 </code></pre><h6 id="non-semantic-wrappers">Non-semantic wrappers</h6>
 <p>HTML provides the <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements. You should use these preferably with a suitable class attribute, to provide some kind of label for them so they can be easily targeted.</p>
-<p><code>&lt;span&gt;</code> is an inline non-semantic element, which you should only use if you can't think of a better semantic text element to wrap your content.</p>
-<p><code>&lt;div&gt;</code> is a block level non-semantic element, which you should only use if you can't think of a better semantic block element to use, or don't want to add any specific meaning.</p>
+<p><code>&lt;span&gt;</code> is an inline non-semantic element, which you should only use if you can&rsquo;t think of a better semantic text element to wrap your content.</p>
+<p><code>&lt;div&gt;</code> is a block level non-semantic element, which you should only use if you can&rsquo;t think of a better semantic block element to use, or don&rsquo;t want to add any specific meaning.</p>
 <h6 id="line-breaks-and-horizontal-rules">Line breaks and horizontal rules</h6>
 <p><code>&lt;br&gt;</code> creates a line break in a paragraph; it is the only way to force a rigid structure in a situation where you want a series of fixed short lines.</p>
 <p><code>&lt;hr&gt;</code> elements create a horizontal rule in the document that denotes a thematic change in the text (such as a change in topic or scene). Visually it just looks like a horizontal line.</p>
 <h3 id="debugging-html">Debugging HTML</h3>
 <p>The way that browsers parse HTML is a lot more <strong>permissive</strong> than how programming languages are run, which is both a good and a bad thing.</p>
 <h6 id="permissive-code">Permissive code</h6>
-<p>So what do we mean by <strong>permissive</strong>? Well, generally when you do something wrong in code, there are two main types of error that you'll come across:</p>
+<p>So what do we mean by <strong>permissive</strong>? Well, generally when you do something wrong in code, there are two main types of error that you&rsquo;ll come across:</p>
 <ul>
-<li><strong>Syntax errors</strong>: These are usually easy to fix as long as you are familiar with the language's syntax and know what the error messages mean.</li>
-<li><strong>Logic errors</strong>: These are often harder to fix than syntax errors, as there isn't an error message to direct you to the source of the error.</li>
+<li><strong>Syntax errors</strong>: These are usually easy to fix as long as you are familiar with the language&rsquo;s syntax and know what the error messages mean.</li>
+<li><strong>Logic errors</strong>: These are often harder to fix than syntax errors, as there isn&rsquo;t an error message to direct you to the source of the error.</li>
 </ul>
-<p>HTML itself doesn't suffer from syntax errors because browsers parse it permissively, meaning that the page still displays even if there are syntax errors. Browsers have built-in rules to state how to interpret incorrectly written markup, so you'll get something running, even if it is not what you expected. This, of course, can still be a problem!</p>
+<p>HTML itself doesn&rsquo;t suffer from syntax errors because browsers parse it permissively, meaning that the page still displays even if there are syntax errors. Browsers have built-in rules to state how to interpret incorrectly written markup, so you&rsquo;ll get something running, even if it is not what you expected. This, of course, can still be a problem!</p>
 <h6 id="html-validation">HTML validation</h6>
 <p>The best strategy is to start by running your HTML page through the <strong><a href="https://validator.w3.org/">Markup Validation Service</a></strong> — created and maintained by the W3C, the organization that looks after the specifications that define HTML, CSS, and other web technologies. This webpage takes an HTML document as an input, goes through it, and gives you a report to tell you what is wrong with your HTML.</p>
 <h2 id="multimedia-and-embedding">Multimedia and Embedding</h2>
 <h3 id="images-in-html">Images in HTML</h3>
 <h4 id="how-do-we-put-an-image-on-a-webpage">How do we put an image on a webpage?</h4>
 <h6 id="source">source</h6>
-<p>If the image was in an images subdirectory, which was inside the same directory as the HTML page (which Google recommends for SEO/indexing purposes), then you'd embed it using <strong>relative URLs</strong>.</p>
-<p>You could embed the image using its absolute URL, but this is pointless, as it just makes the browser do more work, looking up the IP address from the DNS server all over again, etc. You'll almost always keep the images for your website on the same server as your HTML.</p>
+<p>If the image was in an images subdirectory, which was inside the same directory as the HTML page (which Google recommends for SEO/indexing purposes), then you&rsquo;d embed it using <strong>relative URLs</strong>.</p>
+<p>You could embed the image using its absolute URL, but this is pointless, as it just makes the browser do more work, looking up the IP address from the DNS server all over again, etc. You&rsquo;ll almost always keep the images for your website on the same server as your HTML.</p>
 <h6 id="alternative-text">Alternative text</h6>
 <p>The value of  <code>alt</code> attribute is supposed to be a textual description of the image, for use in situations where the image cannot be seen/displayed.</p>
 <h6 id="width-and-height">Width and height</h6>
-<p>You can use the <code>width</code> and <code>height</code> attributes to specify the width and height of your image. However, you shouldn't alter the size of your images using HTML attributes. <strong>If you do need to alter an image's size, you should use CSS instead.</strong></p>
+<p>You can use the <code>width</code> and <code>height</code> attributes to specify the width and height of your image. However, you shouldn&rsquo;t alter the size of your images using HTML attributes. <strong>If you do need to alter an image&rsquo;s size, you should use CSS instead.</strong></p>
 <h6 id="image-titles">Image titles</h6>
 <p><strong>As with links</strong>, you can also add title attributes to images</p>
 <pre><code>&lt;img src=&quot;images/dinosaur.jpg&quot;
@@ -807,7 +807,7 @@ para.onclick = function() {
 </code></pre><p>captions and <code>alt</code> text have distinct roles</p>
 <p>A figure could be several images, a code snippet, audio, video, equations, a table, or something else.</p>
 <h4 id="css-background-images">CSS background images</h4>
-<p>You can also use CSS to embed images into webpages (and JavaScript, but that's another story entirely). The CSS <code>background-image</code> property, and the other <code>background-*</code> properties, are used to control background image placement.</p>
+<p>You can also use CSS to embed images into webpages (and JavaScript, but that&rsquo;s another story entirely). The CSS <code>background-image</code> property, and the other <code>background-*</code> properties, are used to control background image placement.</p>
 <pre><code>p {
   background-image: url(&quot;images/dinosaur.jpg&quot;);
 }
@@ -815,7 +815,7 @@ para.onclick = function() {
 <p><strong>Summing up</strong>: if an image has meaning, in terms of your content, you should use an HTML image. If an image is purely decoration, you should use CSS background images.</p>
 <h3 id="video-and-audio-content">Video and audio content</h3>
 <h4 id="video-and-audio-on-the-web">Video and audio on the web</h4>
-<p>In the early days, native web technologies such as HTML didn't have the ability to embed video and audio on the Web, so proprietary (or plugin-based) technologies like <strong>Flash</strong> (and later, Silverlight) became popular for handling such content.</p>
+<p>In the early days, native web technologies such as HTML didn&rsquo;t have the ability to embed video and audio on the Web, so proprietary (or plugin-based) technologies like <strong>Flash</strong> (and later, Silverlight) became popular for handling such content.</p>
 <p>A few years later the <strong>HTML5 specification</strong> had such features added, with the <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> elements, and some shiny <strong>new JavaScript APIs for controlling them</strong>.</p>
 <h6 id="the-video-element">The <code>&lt;video&gt;</code> element</h6>
 <pre><code>&lt;video src=&quot;rabbit320.webm&quot; controls&gt;
@@ -823,8 +823,8 @@ para.onclick = function() {
 &lt;/video&gt;
 </code></pre><ul>
 <li>the <code>src</code> (source) attribute contains a path to the video you want to embed.</li>
-<li>You must either use the <code>controls</code> attribute to include the browser's own control interface, or build your interface using the appropriate <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement">JavaScript API</a>.</li>
-<li>The paragraph inside the <code>&lt;video&gt;</code> tags will be displayed if the browser accessing the page doesn't support the <code>&lt;video&gt;</code> element.</li>
+<li>You must either use the <code>controls</code> attribute to include the browser&rsquo;s own control interface, or build your interface using the appropriate <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement">JavaScript API</a>.</li>
+<li>The paragraph inside the <code>&lt;video&gt;</code> tags will be displayed if the browser accessing the page doesn&rsquo;t support the <code>&lt;video&gt;</code> element.</li>
 </ul>
 <h6 id="using-multiple-source-formats-to-improve-compatibility">Using multiple source formats to improve compatibility</h6>
 <p>different browsers support different video (and audio) formats.</p>
@@ -833,8 +833,8 @@ para.onclick = function() {
   &lt;source src=&quot;rabbit320.webm&quot; type=&quot;video/webm&quot;&gt;
   &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href=&quot;rabbit320.mp4&quot;&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
 &lt;/video&gt;
-</code></pre><p>Here we've taken the src attribute out of the actual <code>&lt;video&gt;</code> tag, and instead included separate <code>&lt;source&gt;</code> elements that point to their own sources. In this case the browser will go through the <code>&lt;source&gt;</code> elements and play the first one that it has the codec to support. Including WebM and MP4 sources should be enough to play your video on most platforms and browsers these days.</p>
-<p>Each <code>&lt;source&gt;</code> element also has a type attribute. This is optional, but <strong>it is advised that you include it</strong>. The type attribute contains the MIME type of the file specified by the <code>&lt;source&gt;</code>, and browsers can use the type to immediately skip videos they don't understand. Iftype isn't included, browsers will load and try to play each file until they find one that works, which obviously takes time and is an unnecessary use of resources.</p>
+</code></pre><p>Here we&rsquo;ve taken the src attribute out of the actual <code>&lt;video&gt;</code> tag, and instead included separate <code>&lt;source&gt;</code> elements that point to their own sources. In this case the browser will go through the <code>&lt;source&gt;</code> elements and play the first one that it has the codec to support. Including WebM and MP4 sources should be enough to play your video on most platforms and browsers these days.</p>
+<p>Each <code>&lt;source&gt;</code> element also has a type attribute. This is optional, but <strong>it is advised that you include it</strong>. The type attribute contains the MIME type of the file specified by the <code>&lt;source&gt;</code>, and browsers can use the type to immediately skip videos they don&rsquo;t understand. Iftype isn&rsquo;t included, browsers will load and try to play each file until they find one that works, which obviously takes time and is an unnecessary use of resources.</p>
 <h6 id="other-video-features">Other <code>&lt;video&gt;</code> features</h6>
 <pre><code>&lt;video controls width=&quot;400&quot; height=&quot;400&quot;
        autoplay loop muted
@@ -882,8 +882,8 @@ para.onclick = function() {
 &lt;/audio&gt;
 </code></pre><p>Other differences from HTML video are as follows:</p>
 <ul>
-<li>The <code>&lt;audio&gt;</code> element doesn't support the <code>width/height</code> attributes — again, there is no visual component, so there is nothing to assign a width or height to.</li>
-<li>It also doesn't support the <code>poster</code> attribute — again, no visual component.</li>
+<li>The <code>&lt;audio&gt;</code> element doesn&rsquo;t support the <code>width/height</code> attributes — again, there is no visual component, so there is nothing to assign a width or height to.</li>
+<li>It also doesn&rsquo;t support the <code>poster</code> attribute — again, no visual component.</li>
 </ul>
 <h6 id="restarting-media-playback">Restarting media playback</h6>
 <p>At any time, you can reset the media to the beginning</p>
@@ -900,11 +900,11 @@ mediaElem.audioTracks.onaddtrack = function(event) {
 <ul>
 <li>
 <p>subtitles</p>
-<p>Translations of foreign material, for people who don't understand the words spoken in the audio.</p>
+<p>Translations of foreign material, for people who don&rsquo;t understand the words spoken in the audio.</p>
 </li>
 <li>
 <p>captions</p>
-<p>Synchronized transcriptions of dialog or descriptions of significant sounds, to let people who can't hear the audio understand what is going on.</p>
+<p>Synchronized transcriptions of dialog or descriptions of significant sounds, to let people who can&rsquo;t hear the audio understand what is going on.</p>
 </li>
 <li>
 <p>timed descriptions</p>
@@ -918,7 +918,7 @@ mediaElem.audioTracks.onaddtrack = function(event) {
 &lt;/video&gt;
 </code></pre><p>For more details, please read <a href="https://developer.mozilla.org/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>.</p>
 <h3 id="iframe--other-embedding-technologies">iframe — other embedding technologies</h3>
-<p><code>&lt;iframe&gt;</code> elements are designed to allow you to embed other web documents into the current document. This is great for incorporating third-party content into your website that you might not have direct control over and don't want to have to implement your own version of — such as <strong>video</strong> from online video providers, <strong>commenting systems</strong> like Disqus, <strong>maps</strong> from online map providers, advertising banners, etc.</p>
+<p><code>&lt;iframe&gt;</code> elements are designed to allow you to embed other web documents into the current document. This is great for incorporating third-party content into your website that you might not have direct control over and don&rsquo;t want to have to implement your own version of — such as <strong>video</strong> from online video providers, <strong>commenting systems</strong> like Disqus, <strong>maps</strong> from online map providers, advertising banners, etc.</p>
 <pre><code>&lt;iframe src=&quot;https://developer.mozilla.org/en-US/docs/Glossary&quot;
         width=&quot;100%&quot; height=&quot;500&quot; frameborder=&quot;0&quot;
         allowfullscreen sandbox&gt;
@@ -930,7 +930,7 @@ mediaElem.audioTracks.onaddtrack = function(event) {
 &lt;/iframe&gt;
 </code></pre><h3 id="adding-vector-graphics-to-the-web">Adding vector graphics to the Web</h3>
 <h4 id="what-are-vector-graphics">What are vector graphics?</h4>
-<p>On the web, you'll work with two types of image — <strong>raster images</strong>, and <strong>vector images</strong>:</p>
+<p>On the web, you&rsquo;ll work with two types of image — <strong>raster images</strong>, and <strong>vector images</strong>:</p>
 <ul>
 <li><strong>Raster images</strong> are defined using a grid of pixels — a raster image file contains information showing exactly where each pixel is to be placed, and exactly what color it should be. Popular web raster formats include Bitmap (<code>.bmp</code>), PNG (<code>.png</code>), JPEG (<code>.jpg</code>), and GIF (<code>.gif</code>.)</li>
 <li><strong>Vector images</strong> are defined using algorithms — a vector image file contains shape and path definitions that the computer can use to work out what the image should look like when rendered on the screen. The <strong>SVG</strong> format allows us to create powerful vector graphics for use on the Web.</li>
@@ -961,7 +961,7 @@ background-size: contain;
             800px&quot;
      src=&quot;elva-fairy-800w.jpg&quot; alt=&quot;Elva dressed as a fairy&quot;&gt;
 </code></pre><p><strong><code>srcset</code></strong> defines the set of images we will allow the browser to choose between, and what size each image is. Each set of image information is separated from the previous one by a comma.</p>
-<p>The image's <strong>intrinsic width in pixels</strong> (<code>480w</code>) — note that this uses the <code>w</code> unit, not <code>px</code> as you might expect. This is the image's real size, which can be found by inspecting the image file on your computer.</p>
+<p>The image&rsquo;s <strong>intrinsic width in pixels</strong> (<code>480w</code>) — note that this uses the <code>w</code> unit, not <code>px</code> as you might expect. This is the image&rsquo;s real size, which can be found by inspecting the image file on your computer.</p>
 <p><strong><code>sizes</code></strong> defines a set of media conditions (e.g. screen widths) and indicates what image size would be best to choose, when certain media conditions are true.</p>
 <h6 id="resolution-switching-same-size-different-resolutions">Resolution switching: Same size, different resolutions</h6>
 <pre><code>&lt;img srcset=&quot;elva-fairy-320w.jpg,
@@ -971,7 +971,7 @@ background-size: contain;
 </code></pre><pre><code>img {
   width: 320px;
 }
-</code></pre><p>In this case, <code>sizes</code> is not needed — the browser simply works out what resolution the display is that it is being shown on, and serves the most appropriate image referenced in the <code>srcset</code>. So if the device accessing the page has a standard/low resolution display, with one device pixel representing each CSS pixel, the <code>elva-fairy-320w.jpg</code> image will be loaded (<strong>the 1x is implied, so you don't need to include it.</strong>) If the device has a high resolution of two device pixels per CSS pixel or more, the <code>elva-fairy-640w.jpg</code> image will be loaded.</p>
+</code></pre><p>In this case, <code>sizes</code> is not needed — the browser simply works out what resolution the display is that it is being shown on, and serves the most appropriate image referenced in the <code>srcset</code>. So if the device accessing the page has a standard/low resolution display, with one device pixel representing each CSS pixel, the <code>elva-fairy-320w.jpg</code> image will be loaded (<strong>the 1x is implied, so you don&rsquo;t need to include it.</strong>) If the device has a high resolution of two device pixels per CSS pixel or more, the <code>elva-fairy-640w.jpg</code> image will be loaded.</p>
 <h6 id="art-direction">Art direction</h6>
 <p>For example, a web page includes a large landscape shot with a person in the middle when viewed on a desktop browser. It would probably be better to show a smaller, portrait image on mobile, which zooms in on the person.</p>
 <pre><code>&lt;picture&gt;
@@ -979,7 +979,7 @@ background-size: contain;
   &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;elva-800w.jpg&quot;&gt;
   &lt;img src=&quot;elva-800w.jpg&quot; alt=&quot;Chris standing up holding his daughter Elva&quot;&gt;
 &lt;/picture&gt;
-</code></pre><p><strong>Note</strong>: You should use the <code>media</code> attribute only in art direction scenarios; when you do use <code>media</code>, don't also offer media conditions within the <code>sizes</code> attribute.</p>
+</code></pre><p><strong>Note</strong>: You should use the <code>media</code> attribute only in art direction scenarios; when you do use <code>media</code>, don&rsquo;t also offer media conditions within the <code>sizes</code> attribute.</p>
 <p><code>&lt;picture&gt;</code> lets us continue catering to older browsers. You can supply <strong>MIME</strong> types inside type attributes so the browser can immediately reject unsupported file types:</p>
 <pre><code>&lt;picture&gt;
   &lt;source type=&quot;image/svg+xml&quot; srcset=&quot;pyramid.svg&quot;&gt;
@@ -1131,12 +1131,12 @@ background-size: contain;
 &lt;/table&gt;
 </code></pre><h2 id="html-forms">HTML forms</h2>
 <p>Forms allow users to enter data, which is generally sent to a web server for processing and storage, or used on the client-side to immediately update the interface in some way (for example, add another item to a list, or show or hide a UI feature).</p>
-<p>A web form's HTML is made up of one or more <strong>form controls</strong> (sometimes called <strong>widgets</strong>).</p>
+<p>A web form&rsquo;s HTML is made up of one or more <strong>form controls</strong> (sometimes called <strong>widgets</strong>).</p>
 <p>The controls can be single or multi-line text fields, dropdown boxes, buttons, checkboxes, or radio buttons.</p>
 <p>Form controls can also be programmed to enforce specific formats or values to be entered (<strong>form validation</strong>), and paired with <strong>text labels</strong> that describe their purpose</p>
 <h3 id="how-to-structure-an-html-form">How to structure an HTML form</h3>
 <h6 id="the--form-element">The <code> &lt;form&gt;</code> element</h6>
-<p>All of its attributes are optional, but it's standard practice to always set at least the <code>action</code> and <code>method</code> attributes</p>
+<p>All of its attributes are optional, but it&rsquo;s standard practice to always set at least the <code>action</code> and <code>method</code> attributes</p>
 <h6 id="the-label-input-and-textarea-elements">The <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code>, and <code>&lt;textarea&gt;</code> elements</h6>
 <pre><code>&lt;form action=&quot;/my-handling-form-page&quot; method=&quot;post&quot;&gt;
  &lt;ul&gt;
@@ -1177,7 +1177,7 @@ by default this element is filled with this text
 <h6 id="the-fieldset-and-legend-elements">The &lt;fieldset&gt; and &lt;legend&gt; elements</h6>
 <p>The <code>&lt;fieldset&gt;</code> element is a convenient way to create groups of widgets that share the same purpose, for styling and semantic purposes. You can label a <code>&lt;fieldset&gt;</code> by including a <code>&lt;legend&gt;</code> element just below the opening <code>&lt;fieldset&gt;</code> tag. The text content of the <code>&lt;legend&gt;</code> formally describes the purpose of the <code>&lt;fieldset&gt;</code> it is included inside.</p>
 <h6 id="building-a-form-structure">building a form structure</h6>
-<p>Beyond the structures specific to web forms, it's good to remember that form markup is just HTML. This means that you can use all the power of HTML to structure a web form.</p>
+<p>Beyond the structures specific to web forms, it&rsquo;s good to remember that form markup is just HTML. This means that you can use all the power of HTML to structure a web form.</p>
 <pre><code>&lt;form method=&quot;post&quot;&gt;
     &lt;h1&gt;Payment form&lt;/h1&gt;
     &lt;p&gt;Required fields are followed by &lt;strong&gt;&lt;abbr title=&quot;required&quot;&gt;*&lt;/abbr&gt;&lt;/strong&gt;.&lt;/p&gt;
@@ -1204,13 +1204,13 @@ by default this element is filled with this text
 <h4 id="text-input-fields">Text input fields</h4>
 <p>All basic text controls share some common behaviors:</p>
 <ul>
-<li>They can be marked as <code>readonly</code> (the user cannot modify the input value but it is still sent with the rest of the form data) or <code>disabled</code> (the input value can't be modified and is never sent with the rest of the form data).</li>
+<li>They can be marked as <code>readonly</code> (the user cannot modify the input value but it is still sent with the rest of the form data) or <code>disabled</code> (the input value can&rsquo;t be modified and is never sent with the rest of the form data).</li>
 <li>They can have a <code>placeholder</code>; this is text that appears inside the text input box that should be used to briefly describe the purpose of the box.</li>
 <li>They can be constrained in <code>size</code> (the physical size of the box) and <code>maxlength</code> (the maximum number of characters that can be entered into the box).</li>
 <li>They can benefit from spell checking (using the
 <code>spellcheck</code> attribute), if the browser supports it.</li>
 </ul>
-<p>HTML form text fields are simple plain text input controls. This means that you cannot use them to perform rich editing (bold, italic, etc.). All rich text editors you'll encounter are custom widgets created with HTML, CSS, and JavaScript.</p>
+<p>HTML form text fields are simple plain text input controls. This means that you cannot use them to perform rich editing (bold, italic, etc.). All rich text editors you&rsquo;ll encounter are custom widgets created with HTML, CSS, and JavaScript.</p>
 <h6 id="single-line-text-fields">Single line text fields</h6>
 <pre><code>&lt;label for=&quot;comment&quot;&gt;Add a comment here:&lt;/label&gt;
 &lt;input type=&quot;text&quot; id=&quot;comment&quot; name=&quot;comment&quot; value=&quot;I'm a text field&quot;&gt;
@@ -1286,11 +1286,11 @@ on load match the <code>:default</code> pseudo class, even if they are no longer
 element, except that when the user clicks on it, it behaves like a
 submit button.</p>
 <pre><code>&lt;input type=&quot;image&quot; alt=&quot;Click me!&quot; src=&quot;my-img.png&quot; width=&quot;80&quot; height=&quot;30&quot;&gt;
-</code></pre><p>If the image button is used to submit the form, this control doesn't submit its value — instead, the X and Y coordinates of the click on the image are submitted.</p>
+</code></pre><p>If the image button is used to submit the form, this control doesn&rsquo;t submit its value — instead, the X and Y coordinates of the click on the image are submitted.</p>
 <h4 id="file-picker">File picker</h4>
 <p>The types of files that are accepted can be constrained using the <code>accept</code> attribute.</p>
 <pre><code>&lt;input type=&quot;file&quot; name=&quot;file&quot; id=&quot;file&quot; accept=&quot;image/*&quot; multiple&gt;
-</code></pre><p>On some mobile devices, the file picker can access photos, videos, and audio captured directly by the device's camera and microphone by adding capture information to the <code>accept</code> attribute like so:</p>
+</code></pre><p>On some mobile devices, the file picker can access photos, videos, and audio captured directly by the device&rsquo;s camera and microphone by adding capture information to the <code>accept</code> attribute like so:</p>
 <pre><code>&lt;input type=&quot;file&quot; accept=&quot;image/*;capture=camera&quot;&gt;
 &lt;input type=&quot;file&quot; accept=&quot;video/*;capture=camcorder&quot;&gt;
 &lt;input type=&quot;file&quot; accept=&quot;audio/*;capture=microphone&quot;&gt;
@@ -1327,7 +1327,7 @@ submit button.</p>
 <tr>
 <td><code>value</code></td>
 <td></td>
-<td>The element's initial value.</td>
+<td>The element&rsquo;s initial value.</td>
 </tr>
 </tbody>
 </table>
@@ -1339,11 +1339,11 @@ submit button.</p>
 <pre><code class="language-brush:" data-lang="brush:">&lt;form action=&quot;/somewhere_else&quot;&gt;
 </code></pre><p>When specified with no attributes, the <code>&lt;form&gt;</code> data is sent to the same page that the form is present on</p>
 <h4 id="the-method-attribute">The method attribute</h4>
-<p>An HTTP request consists of two parts: a header that contains a set of global metadata about the browser's capabilities, and a body that can contain information necessary for the server to process the specific request.</p>
+<p>An HTTP request consists of two parts: a header that contains a set of global metadata about the browser&rsquo;s capabilities, and a body that can contain information necessary for the server to process the specific request.</p>
 <h6 id="viewing-http-requests">Viewing HTTP requests</h6>
 <p>HTTP requests are never displayed to the user (if you want to see them, you need to use tools such as the Firefox Network Monitor or the Chrome Developer Tools).</p>
 <p>with a <code>GET</code> request the user will see the data in their URL bar,
-but with a <code>POST</code> request they won't, with the data included in the request body instead.</p>
+but with a <code>POST</code> request they won&rsquo;t, with the data included in the request body instead.</p>
 <ol>
 <li>If you need to send a password (or any other sensitive piece of data), never use the <code>GET</code> method or you risk displaying it in the URL bar, which would be very insecure.</li>
 <li>If you need to send a large amount of data, the <code>POST</code> method is preferred because some browsers limit the sizes of URLs. In addition, many servers limit the length of URLs they accept.</li>
@@ -1366,10 +1366,10 @@ but with a <code>POST</code> request they won't, with the data included in the r
 </code></pre><h3 id="form-validation">Form validation</h3>
 <p>When you enter data, the browser and/or the web server will check to see that the data is in the correct format and within the constraints set by the application. Validation done in the browser is called <strong>client-side</strong> validation, while validation done on the server is called <strong>server-side</strong> validation.</p>
 <h4 id="different-types-of-client-side-validation">Different types of client-side validation</h4>
-<p>There are two different types of client-side validation that you'll encounter on the web:</p>
+<p>There are two different types of client-side validation that you&rsquo;ll encounter on the web:</p>
 <ul>
 <li>
-<p><strong>Built-in form validation</strong> uses HTML5 form validation features, which we've discussed in many places throughout this module. This validation generally doesn't require much JavaScript. Built-in form validation has better performance than JavaScript, but it is not as customizable as JavaScript validation.</p>
+<p><strong>Built-in form validation</strong> uses HTML5 form validation features, which we&rsquo;ve discussed in many places throughout this module. This validation generally doesn&rsquo;t require much JavaScript. Built-in form validation has better performance than JavaScript, but it is not as customizable as JavaScript validation.</p>
 </li>
 <li>
 <p><strong>JavaScript</strong> validation is coded using JavaScript. This validation is completely customizable, but you need to create it all (or use a library).</p>
@@ -1395,7 +1395,7 @@ but with a <code>POST</code> request they won't, with the data included in the r
 </li>
 <li>
 <p><strong>Validating against a regular expression</strong></p>
-<p><strong>Note</strong>: The <code>&lt;textarea&gt;</code> element doesn't support the pattern
+<p><strong>Note</strong>: The <code>&lt;textarea&gt;</code> element doesn&rsquo;t support the pattern
 attribute.</p>
 </li>
 <li>
@@ -1556,19 +1556,19 @@ btn.addEventListener( 'click', function()
 <h3 id="styling-html-forms">Styling HTML forms</h3>
 <h3 id="advanced-styling-for-html-forms">Advanced styling for HTML forms</h3>
 <p><strong>The bad</strong>: Some elements are more difficult to style, requiring more complex CSS or some more specific tricks:</p>
-<p><strong>The ugly</strong>: Some elements can't be styled thoroughly using CSS.</p>
+<p><strong>The ugly</strong>: Some elements can&rsquo;t be styled thoroughly using CSS.</p>
 <h4 id="solution">solution</h4>
 <h6 id="create-a-custom-solution">create a custom solution</h6>
 <h6 id="use-a-third-party-solution">use a third party solution</h6>
 <p>It is easier to just create your own custom solution for these features, if you want to be able to control the styling, or use a third party solution such as <a href="http://kimmobrunfeldt.github.io/progressbar.js/#examples">progressbar.js</a>.</p>
 <h4 id="the-road-to-nicer-forms-useful-libraries-and-polyfills">The road to nicer forms: useful libraries and polyfills</h4>
-<p>As we've mentioned above a few times, if you want to gain full control over the &ldquo;ugly&rdquo; control types, you have no choice but to rely on JavaScript. In the article How to build custom form controls you will see how to do it on your own, but there are some very useful libraries out there that can help you:</p>
+<p>As we&rsquo;ve mentioned above a few times, if you want to gain full control over the &ldquo;ugly&rdquo; control types, you have no choice but to rely on JavaScript. In the article How to build custom form controls you will see how to do it on your own, but there are some very useful libraries out there that can help you:</p>
 <ul>
-<li><strong>Uni-form</strong> is a framework that standardizes form markup, styling it with CSS. It also offers a few additional features when used with jQuery, but that's optional.</li>
+<li><strong>Uni-form</strong> is a framework that standardizes form markup, styling it with CSS. It also offers a few additional features when used with jQuery, but that&rsquo;s optional.</li>
 <li><strong>Formalize</strong> is an extension to common JavaScript frameworks (such as jQuery, Dojo, YUI, etc.) that helps to normalize and customize your forms.</li>
 <li><strong>Niceforms</strong> is a standalone JavaScript method that provides complete customization of web forms. You can use some of the built in themes, or create your own.</li>
 </ul>
-<p>The following libraries aren't just about forms, but they have very interesting features for dealing with HTML forms:</p>
+<p>The following libraries aren&rsquo;t just about forms, but they have very interesting features for dealing with HTML forms:</p>
 <ul>
 <li><strong>jQuery UI</strong> offers customizable widgets such as date pickers (with special attention given to accessibility).</li>
 <li><strong>Twitter Bootstrap</strong> can help normalize your forms.</li>
@@ -1631,6 +1631,19 @@ btn.addEventListener( 'click', function()
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
+          <a class="next" href="/post/back-end/proxy/">
+            <span class="next-text nav-default"></span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
       </nav>
     </footer>
   </article>

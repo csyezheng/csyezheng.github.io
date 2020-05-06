@@ -6,10 +6,40 @@
     <description>Recent content in Posts on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://csyezheng.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Few shot learning</title>
+      <link>http://csyezheng.github.io/post/machine-learning/few-shot-learning/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/few-shot-learning/</guid>
+      <description>Reference  https://github.com/AnthonyMRios/multi-label-zero-shot Few-Shot and Zero-Shot Multi-Label Learning for Structured Label Spaces Deep Neural Networks for Multi-Label Text Classification https://github.com/YujiaBao/Distributional-Signatures Induction Networks for Few-Shot Text Classification https://github.com/laohur/LearnToCompareText  </description>
+    </item>
+    
+    <item>
+      <title>Learning Path for Machine Learning</title>
+      <link>http://csyezheng.github.io/post/machine-learning/learn-ml/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/learn-ml/</guid>
+      <description>Learning Path for Machine Learning ML theory Coding skills
+Math and stats
+Build your own projects
+Google Developers Machine Learning Crash Course</description>
+    </item>
+    
+    <item>
+      <title>Wireshark</title>
+      <link>http://csyezheng.github.io/post/any-path/wireshark/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/any-path/wireshark/</guid>
+      <description>$ tshark -r all.pcapng.gz -i http==1 -O http -T fields -e http.request.method -e http.request.uri -e http.request.line -e http.response.line &amp;gt; dump.txt </description>
+    </item>
     
     <item>
       <title>Scraping with Scrapy and Django Integration</title>
@@ -17,7 +47,7 @@
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>http://csyezheng.github.io/post/back-end/scrapy-with-django/</guid>
-      <description>Installing Dependencies (Optional) $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple $ python -m pip install --user virtualenv $ python -m pip install --user virtualenvwrapper $ vim ~/.bashrc export WORKON_HOME=$HOME/.virtualenvs export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv source $HOME/.local/bin/virtualenvwrapper.sh $ source ~/.bashrc $ mkvirtualenv stock-screener pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results Creating a Django Project $ django-admin startproject stock_screener $ cd stock_screener $ mkdir stock_screener/apps/basic_info $ django-admin startapp basic_info stock_screener/apps/basic_info $ mkdir stock_screener/apps/northbound $ django-admin startapp northbound stock_screener/apps/northbound $ mkdir stock_screener/apps/financial_metrics $ django-admin startapp financial_metrics stock_screener/apps/financial_metrics $ mkdir stock_screener/apps/quotes $ django-admin startapp quotes stock_screener/apps/quotes $ mkdir stock_screener/apps/jobs $ django-admin startapp jobs stock_screener/apps/jobs Cannot add backslash suffix when run startapp command.</description>
+      <description>Installing Dependencies (Optional) $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple $ python -m pip install --user virtualenv $ python -m pip install --user virtualenvwrapper $ vim ~/.bashrc export WORKON_HOME=$HOME/.virtualenvs export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv source $HOME/.local/bin/virtualenvwrapper.sh $ source ~/.bashrc $ mkvirtualenv stock-screener pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat Creating a Django Project $ django-admin startproject stock_screener $ cd stock_screener $ mkdir stock_screener/apps/basic_info $ django-admin startapp basic_info stock_screener/apps/basic_info $ mkdir stock_screener/apps/northbound $ django-admin startapp northbound stock_screener/apps/northbound $ mkdir stock_screener/apps/financial_metrics $ django-admin startapp financial_metrics stock_screener/apps/financial_metrics $ mkdir stock_screener/apps/quotes $ django-admin startapp quotes stock_screener/apps/quotes $ mkdir stock_screener/apps/jobs $ django-admin startapp jobs stock_screener/apps/jobs Cannot add backslash suffix when run startapp command.</description>
     </item>
     
     <item>
@@ -27,7 +57,7 @@
       
       <guid>http://csyezheng.github.io/post/programming-languages/cpp/cpp-library-management/</guid>
       <description>In general, you are going to have to end up with
- Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&#39;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).</description>
+ Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&amp;rsquo;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).</description>
     </item>
     
     <item>
@@ -180,34 +210,6 @@ Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: S
       <description>Create A Scala Project With sbt In The Command Line Installation   Java 8 JDK javac -version 
   install sbt
   Create a project $ mkdir practice &amp;amp;&amp;amp; cd practice $ sbt new scala/hello-world.g8 # pull template from GitHub - hello-world - project (sbt uses this to install manage plugins and dependencies) - build.properties - src - main - scala (All of your scala code goes here) -Main.</description>
-    </item>
-    
-    <item>
-      <title>Gin</title>
-      <link>http://csyezheng.github.io/post/programming-languages/go/gin/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/go/gin/</guid>
-      <description>sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
-$ go get github.com/gin-contrib/sessions import &amp;quot;github.com/gin-contrib/sessions&amp;quot; cookie-based Example import ( &amp;quot;github.com/gin-contrib/sessions&amp;quot; &amp;quot;github.com/gin-contrib/sessions/cookie&amp;quot; &amp;quot;github.com/gin-gonic/gin&amp;quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&amp;quot;secret&amp;quot;)) r.Use(sessions.Sessions(&amp;quot;mysession&amp;quot;, store)) r.GET(&amp;quot;/incr&amp;quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&amp;quot;count&amp;quot;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&amp;quot;count&amp;quot;, count) session.</description>
-    </item>
-    
-    <item>
-      <title>glide</title>
-      <link>http://csyezheng.github.io/post/programming-languages/go/glide/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/go/glide/</guid>
-      <description>使用 glide install 或 glide up 时报 Cannot detect VCS image.png 解决 这个是国内访问golang.org被墙导致的 解决方法如下： glide mirror set https://golang.org/x/crypto https://github.com/golang/crypto 理论上这样后再执行 glide install 或 glide up 就可以了 如果按</description>
-    </item>
-    
-    <item>
-      <title>go modules</title>
-      <link>http://csyezheng.github.io/post/programming-languages/go/modules/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/go/modules/</guid>
-      <description>https://github.com/golang/go/wiki/Modules#quick-start</description>
     </item>
     
   </channel>
