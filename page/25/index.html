@@ -295,18 +295,14 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/go/gin/">Gin</a>
+      <a class="post-link" href="/post/microservices/"></a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="0001-01-01" class="post-time">
+        0001-01-01
       </time>
-      <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
-          
-        </div>
+      
       
       
       
@@ -316,81 +312,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
-$ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/sessions&quot; cookie-based Example import ( &quot;github.com/gin-contrib/sessions&quot; &quot;github.com/gin-contrib/sessions/cookie&quot; &quot;github.com/gin-gonic/gin&quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&quot;secret&quot;)) r.Use(sessions.Sessions(&quot;mysession&quot;, store)) r.GET(&quot;/incr&quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&quot;count&quot;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&quot;count&quot;, count) session.
+       https://en.wikipedia.org/wiki/Microservices https://en.wikipedia.org/wiki/Service_discovery https://en.wikipedia.org/wiki/SOA_governance https://grpc.io/blog/grpc-load-balancing/ https://github.com/grpc/grpc/blob/master/doc/load-balancing.md https://www.nginx.com/blog/introduction-to-microservices/ https://github.com/gliderlabs/registrator https://github.com/micro/go-micro https://github.com/micro/examples https://github.com/apache/incubator-brpc/tree/master/example  
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/gin/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/programming-languages/go/glide/">glide</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
-      </time>
-      <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      使用 glide install 或 glide up 时报 Cannot detect VCS image.png 解决 这个是国内访问golang.org被墙导致的 解决方法如下： glide mirror set https://golang.org/x/crypto https://github.com/golang/crypto 理论上这样后再执行 glide install 或 glide up 就可以了 如果按
-    </div>
-    <div class="read-more">
-      <a href="/post/programming-languages/go/glide/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/programming-languages/go/modules/">go modules</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
-      </time>
-      <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      https://github.com/golang/go/wiki/Modules#quick-start
-    </div>
-    <div class="read-more">
-      <a href="/post/programming-languages/go/modules/" class="read-more-link">Read more</a>
+      <a href="/post/microservices/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -430,7 +355,7 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
 
       
       
-      <li><a href="/page/7/">«</a></li>
+      <li><a href="/page/24/">«</a></li>
       
 
       
@@ -446,7 +371,9 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
           
 
             
+            
 
+          
           
 
         
@@ -466,329 +393,265 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
           
           
 
+            
+            
+
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
             
               
             
 
           
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/2/">
-              2
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-              
-            
-
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/3/">
-              3
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-              
-            
-
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/4/">
-              4
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-              
-            
-
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/5/">
-              5
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-              
-            
-
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/6/">
-              6
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-              
-            
-
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/7/">
-              7
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-              
-            
-
-          
-
-        
-        
-
-        
-        
-          <li class="active">
-            <a href="/page/8/">
-              8
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-              
-            
-
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/9/">
-              9
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-              
-            
-
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/10/">
-              10
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-              
-            
-
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/11/">
-              11
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-              
-            
-
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/12/">
-              12
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-              
-            
-
           
 
         
@@ -815,9 +678,11 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
           
 
             
+            
               
             
 
+          
           
 
         
@@ -844,13 +709,23 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
           
 
             
+            
+              
+            
 
+          
           
 
         
         
 
         
+        
+          <li class="">
+            <a href="/page/15/">
+              15
+            </a>
+          </li>
         
 
       
@@ -865,13 +740,23 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
           
 
             
+            
+              
+            
 
+          
           
 
         
         
 
         
+        
+          <li class="">
+            <a href="/page/16/">
+              16
+            </a>
+          </li>
         
 
       
@@ -886,13 +771,23 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
           
 
             
+            
+              
+            
 
+          
           
 
         
         
 
         
+        
+          <li class="">
+            <a href="/page/17/">
+              17
+            </a>
+          </li>
         
 
       
@@ -907,13 +802,23 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
           
 
             
+            
+              
+            
 
+          
           
 
         
         
 
         
+        
+          <li class="">
+            <a href="/page/18/">
+              18
+            </a>
+          </li>
         
 
       
@@ -928,13 +833,23 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
           
 
             
+            
+              
+            
 
+          
           
 
         
         
 
         
+        
+          <li class="">
+            <a href="/page/19/">
+              19
+            </a>
+          </li>
         
 
       
@@ -949,13 +864,23 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
           
 
             
+            
+              
+            
 
+          
           
 
         
         
 
         
+        
+          <li class="">
+            <a href="/page/20/">
+              20
+            </a>
+          </li>
         
 
       
@@ -970,13 +895,23 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
           
 
             
+            
+              
+            
 
+          
           
 
         
         
 
         
+        
+          <li class="">
+            <a href="/page/21/">
+              21
+            </a>
+          </li>
         
 
       
@@ -991,13 +926,23 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
           
 
             
+            
+              
+            
 
+          
           
 
         
         
 
         
+        
+          <li class="">
+            <a href="/page/22/">
+              22
+            </a>
+          </li>
         
 
       
@@ -1012,13 +957,23 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
           
 
             
+            
+              
+            
 
+          
           
 
         
         
 
         
+        
+          <li class="">
+            <a href="/page/23/">
+              23
+            </a>
+          </li>
         
 
       
@@ -1033,13 +988,23 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
           
 
             
+            
+              
+            
 
+          
           
 
         
         
 
         
+        
+          <li class="">
+            <a href="/page/24/">
+              24
+            </a>
+          </li>
         
 
       
@@ -1054,7 +1019,11 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
           
 
             
+            
+              
+            
 
+          
           
 
         
@@ -1062,17 +1031,19 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
 
         
         
+          <li class="active">
+            <a href="/page/25/">
+              25
+            </a>
+          </li>
+        
 
       
 
       
       
-      <li><a href="/page/9/">»</a></li>
-      
 
       
-      
-      <li><a href="/page/25/">»»</a></li>
       
 
       </ul>

@@ -25,6 +25,223 @@
     </item>
     
     <item>
+      <title>Machine Learning Crash Course Courses</title>
+      <link>http://csyezheng.github.io/post/machine-learning/crash-course/</link>
+      <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/crash-course/</guid>
+      
+        <description>&lt;h1 id=&#34;machine-learning-crash-course-courses&#34;&gt;Machine Learning Crash Course Courses&lt;/h1&gt;
+&lt;h2 id=&#34;ml-concepts&#34;&gt;ML Concepts&lt;/h2&gt;
+&lt;h4 id=&#34;introduction-to-ml&#34;&gt;Introduction to ML&lt;/h4&gt;
+&lt;p&gt;First, it gives you a tool to reduce the time you spend programming.&lt;/p&gt;
+&lt;p&gt;Second, it will allow you to customize your products, making them better for specific groups of people.&lt;/p&gt;
+&lt;p&gt;Third, machine learning lets you solve problems that you, as a programmer, have no idea how to do by hand.&lt;/p&gt;
+&lt;p&gt;machine learning &lt;strong&gt;changes the way you think about a problem&lt;/strong&gt;. Software engineers are trained to think logically and mathematically; we use assertions to prove properties of our program are correct.  With machine learning, the focus shifts from a mathematical science to a natural science: we&amp;rsquo;re making observations about an uncertain world, running experiments, and using statistics, not logic, to analyze the results of the experiment. The ability to think like a scientist  will expand your horizons and open up new areas that you couldn&amp;rsquo;t explore without it.&lt;/p&gt;
+&lt;h4 id=&#34;framing-框架处理&#34;&gt;Framing (框架处理)&lt;/h4&gt;
+&lt;p&gt;What is (supervised) machine learning? Concisely put, it is the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ML systems learn how to combine input to produce useful predictions on never-before-seen data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&#34;labels-标签&#34;&gt;Labels (标签)&lt;/h6&gt;
+&lt;p&gt;A &lt;strong&gt;label&lt;/strong&gt; is the thing we&amp;rsquo;re predicting—the &lt;code&gt;y&lt;/code&gt; variable in simple linear regression.&lt;/p&gt;
+&lt;h6 id=&#34;features-特征&#34;&gt;Features (特征)&lt;/h6&gt;
+&lt;p&gt;A &lt;strong&gt;feature&lt;/strong&gt; is an input variable—the &lt;code&gt;x&lt;/code&gt; variable in simple linear regression. A simple machine learning project might use a single feature, while a more sophisticated machine learning project could use millions of features.&lt;/p&gt;
+&lt;h6 id=&#34;examples-样本&#34;&gt;Examples (样本)&lt;/h6&gt;
+&lt;p&gt;An &lt;strong&gt;example&lt;/strong&gt; is a particular instance of data, &lt;strong&gt;x&lt;/strong&gt;. (We put &lt;strong&gt;x&lt;/strong&gt; in boldface to indicate that it is a vector.) We break examples into two categories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;labeled examples&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;labeled example&lt;/strong&gt; includes both feature(s) and the label.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;unlabeled examples&lt;/p&gt;
+&lt;p&gt;An &lt;strong&gt;unlabeled example&lt;/strong&gt; contains features but not the label.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&#34;models-模型&#34;&gt;Models (模型)&lt;/h6&gt;
+&lt;p&gt;A model defines the relationship between features and label.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Training&lt;/strong&gt; means creating or &lt;strong&gt;learning&lt;/strong&gt; the model. That is, you show the model labeled examples and enable the model to gradually learn the relationships between features and label.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Inference&lt;/strong&gt; means applying the trained model to unlabeled examples. That is, you use the trained model to make useful predictions (&lt;code&gt;y&#39;&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&#34;regression-vs-classification-回归与分类&#34;&gt;Regression vs. classification (回归与分类)&lt;/h6&gt;
+&lt;p&gt;A &lt;strong&gt;regression&lt;/strong&gt; model predicts continuous values.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;classification&lt;/strong&gt; model predicts discrete values (离散值).&lt;/p&gt;
+&lt;h4 id=&#34;descending-into-ml&#34;&gt;Descending into ML&lt;/h4&gt;
+&lt;h6 id=&#34;linear-regression&#34;&gt;Linear Regression&lt;/h6&gt;
+&lt;p&gt;$$
+y&amp;rsquo; = b + w_1x_1 + w_2x_2 + w_3x_3
+$$&lt;/p&gt;
+&lt;p&gt;where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$y′$ is the predicted &lt;strong&gt;label&lt;/strong&gt; (a desired output).&lt;/li&gt;
+&lt;li&gt;$b$ is the &lt;strong&gt;bias&lt;/strong&gt; (the y-intercept), sometimes referred to as $w_0$.&lt;/li&gt;
+&lt;li&gt;$w1$ is the &lt;strong&gt;weight&lt;/strong&gt; of &lt;strong&gt;feature&lt;/strong&gt; 1. Weight is the same concept as the &amp;ldquo;slope&amp;rdquo; m in the traditional equation of a line.&lt;/li&gt;
+&lt;li&gt;$x_1$ is a &lt;strong&gt;feature&lt;/strong&gt; (a known input).&lt;/li&gt;
+&lt;li&gt;a more sophisticated model might rely on multiple features, each having a separate weight ($w_1$, $w_2$, etc.).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&#34;training-and-loss&#34;&gt;Training and Loss&lt;/h6&gt;
+&lt;p&gt;&lt;strong&gt;Training&lt;/strong&gt; a model simply means learning (determining) good values for all the weights and the bias from labeled examples. In supervised learning, a machine learning algorithm builds a model by examining many examples and attempting to find a model that &lt;strong&gt;minimizes loss&lt;/strong&gt;; this process is called &lt;strong&gt;empirical risk minimization&lt;/strong&gt; (&lt;strong&gt;经验风险最小化&lt;/strong&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Loss is the penalty for a bad prediction&lt;/strong&gt;. That is, &lt;strong&gt;loss&lt;/strong&gt; is a number &lt;strong&gt;indicating how bad the model&amp;rsquo;s prediction was on a single example&lt;/strong&gt;. If the model&amp;rsquo;s prediction is perfect, the loss is zero; otherwise, the loss is greater. The goal of training a model is to find a set of weights and biases that have &lt;em&gt;low&lt;/em&gt; loss, on average, across all examples.&lt;/p&gt;
+&lt;p&gt;You might be wondering whether you could &lt;strong&gt;create a mathematical function—a loss function—that would aggregate the individual losses in a meaningful fashion.&lt;/strong&gt;&lt;/p&gt;
+&lt;h6 id=&#34;squared-loss-a-popular-loss-function&#34;&gt;Squared loss: a popular loss function&lt;/h6&gt;
+&lt;p&gt;The linear regression models we&amp;rsquo;ll examine here use a loss function called &lt;strong&gt;squared loss&lt;/strong&gt; (also known as &lt;strong&gt;L2 loss&lt;/strong&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mean square error&lt;/strong&gt; (&lt;strong&gt;MSE&lt;/strong&gt;) is the average squared loss per example over the whole dataset. To calculate MSE, sum up all the squared losses for individual examples and then divide by the number of examples:
+$$
+MSE = \frac{1}{N}\sum_{(x,y)\in{D}} (y - prediction(x))^2
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$(x,y)$ is an example in which&lt;/li&gt;
+&lt;li&gt;$x$ is the set of features (for example, chirps/minute, age, gender) that the model uses to make predictions.&lt;/li&gt;
+&lt;li&gt;$y$ is the example&amp;rsquo;s label (for example, temperature).&lt;/li&gt;
+&lt;li&gt;$prediction(x)$ is a function of the &lt;strong&gt;weights&lt;/strong&gt; and &lt;strong&gt;bias&lt;/strong&gt; in combination with the set of &lt;strong&gt;features&lt;/strong&gt; x.&lt;/li&gt;
+&lt;li&gt;$D$ is a data set containing many labeled examples, which are $(x,y)$ pairs.&lt;/li&gt;
+&lt;li&gt;$N$ is the number of examples in $D$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;reducing-loss-降低损失&#34;&gt;Reducing Loss (降低损失)&lt;/h4&gt;
+&lt;h6 id=&#34;an-iterative-approach-迭代方法&#34;&gt;An Iterative Approach (迭代方法)&lt;/h6&gt;
+&lt;p&gt;&lt;img src=&#34;https://developers.google.cn/machine-learning/crash-course/images/GradientDescentDiagram.svg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;A Machine Learning model is trained by starting with an initial guess for the weights and bias and iteratively adjusting those guesses until learning the weights and bias with the lowest possible loss.&lt;/p&gt;
+&lt;p&gt;Usually, you iterate until overall loss stops changing or at least changes extremely slowly. When that happens, we say that the model has &lt;strong&gt;converged&lt;/strong&gt; (&lt;strong&gt;收敛&lt;/strong&gt;).&lt;/p&gt;
+&lt;h6 id=&#34;gradient-descent-梯度下降法&#34;&gt;Gradient Descent (梯度下降法)&lt;/h6&gt;
+&lt;p&gt;For the kind of regression problems we&amp;rsquo;ve been examining, the resulting plot of loss vs. $w_1$ will always be &lt;strong&gt;convex&lt;/strong&gt; (凸形). In other words, the plot will always be bowl-shaped, &lt;strong&gt;Convex problems have only one minimum&lt;/strong&gt;; that is, only one place where the slope is exactly 0. That minimum is where the loss function converges.&lt;/p&gt;
+&lt;p&gt;Calculating the loss function for every conceivable value of $w_{1}$ **over the entire data set would be an inefficient way** of finding the convergence point. Let&amp;rsquo;s examine a better mechanism—very popular in machine learning—called **gradient descent**.&lt;/p&gt;
+&lt;p&gt;The first stage in gradient descent is to pick a starting value (a starting point) for $w_{1}$. **The starting point doesn&amp;rsquo;t matter much**; therefore, many algorithms simply set $w_{1}$ to 0 or pick a random value.&lt;/p&gt;
+&lt;p&gt;The gradient descent algorithm then calculates the gradient of the loss curve at the starting point. the gradient of the loss is equal to the &lt;strong&gt;derivative&lt;/strong&gt; (&lt;strong&gt;slope&lt;/strong&gt;) of the curve, and tells you which way is &amp;ldquo;warmer&amp;rdquo; or &amp;ldquo;colder.&amp;rdquo; When there are multiple weights, the &lt;strong&gt;gradient&lt;/strong&gt; is a &lt;strong&gt;vector&lt;/strong&gt; of &lt;strong&gt;partial derivatives&lt;/strong&gt; with respect to the weights.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note that a gradient is a vector&lt;/strong&gt;, so it has both of the following characteristics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a direction&lt;/li&gt;
+&lt;li&gt;a magnitude (大小)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://developers.google.cn/machine-learning/crash-course/images/GradientDescentGradientStep.svg?dcb_=0.336975579495699&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h6 id=&#34;learning-rate-学习速率&#34;&gt;Learning Rate (学习速率)&lt;/h6&gt;
+&lt;p&gt;As noted, the gradient vector has both a direction and a magnitude. Gradient descent algorithms multiply the gradient by a scalar known as the &lt;strong&gt;learning rate&lt;/strong&gt; (also sometimes called &lt;strong&gt;step size&lt;/strong&gt;) to determine the next point. For example, if the gradient magnitude is 2.5 and the learning rate is 0.01, then the gradient descent algorithm will pick the next point 0.025 away from the previous point.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hyperparameters&lt;/strong&gt; are the knobs that programmers tweak in machine learning algorithms. Most machine learning programmers spend a fair amount of time tuning the learning rate.&lt;/p&gt;
+&lt;p&gt;If you pick a learning rate that is &lt;strong&gt;too small&lt;/strong&gt;, learning will take too long, Conversely, if you specify a learning rate that is &lt;strong&gt;too large&lt;/strong&gt;, the next point will perpetually bounce haphazardly across the bottom of the well like a quantum mechanics experiment gone horribly wrong.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The ideal learning rate:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The ideal learning rate in one-dimension is 1f(x)″ (the inverse of the second derivative of f(x) at x).&lt;/li&gt;
+&lt;li&gt;The ideal learning rate for 2 or more dimensions is the inverse of the &lt;a href=&#34;https://wikipedia.org/wiki/Hessian_matrix&#34;&gt;Hessian&lt;/a&gt; (matrix of second partial derivatives).&lt;/li&gt;
+&lt;li&gt;The story for general convex functions is more complex.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&#34;stochastic-gradient-descent-随机梯度下降法&#34;&gt;Stochastic Gradient Descent (随机梯度下降法)&lt;/h6&gt;
+&lt;p&gt;&lt;strong&gt;batch&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In gradient descent, a &lt;strong&gt;batch&lt;/strong&gt; is the total number of examples you use to calculate the gradient in a single iteration.&lt;/p&gt;
+&lt;p&gt;A large data set with randomly sampled examples probably contains &lt;strong&gt;redundant&lt;/strong&gt; data. In fact, redundancy becomes more likely as the batch size grows. Some redundancy can be useful to &lt;strong&gt;smooth&lt;/strong&gt; out noisy gradients, but enormous batches tend not to carry much more predictive value than large batches.&lt;/p&gt;
+&lt;p&gt;By choosing examples at random from our data set, we could estimate (albeit, noisily) a big average from a much smaller one. &lt;strong&gt;Stochastic gradient descent&lt;/strong&gt; (&lt;strong&gt;SGD&lt;/strong&gt;) takes this idea to the extreme&amp;ndash;it uses &lt;strong&gt;only a single example (a batch size of 1) per iteration&lt;/strong&gt;. Given enough iterations, SGD works but is very noisy. The term &amp;ldquo;stochastic&amp;rdquo; indicates that the one example comprising each batch is chosen at random.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mini-batch stochastic gradient descent&lt;/strong&gt; (&lt;strong&gt;mini-batch SGD&lt;/strong&gt;) is a compromise between full-batch iteration and SGD. A mini-batch is typically between 10 and 1,000 examples, chosen at random. Mini-batch SGD reduces the amount of noise in SGD but is still more efficient than full-batch.&lt;/p&gt;
+&lt;h4 id=&#34;first-steps-with-tf&#34;&gt;First Steps with TF&lt;/h4&gt;
+&lt;p&gt;Programming Exercises&lt;/p&gt;
+&lt;p&gt;If you are unfamiliar with NumPy or pandas, please begin by doing the following two Colab exercises:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/github/google/eng-edu/blob/master/ml/cc/exercises/numpy_ultraquick_tutorial.ipynb?utm_source=mlcc&amp;amp;utm_campaign=colab-external&amp;amp;utm_medium=referral&amp;amp;utm_content=numpy_tf2-colab&amp;amp;hl=en&#34;&gt;NumPy Ultraquick Tutorial&lt;/a&gt; Colab exercise, which provides all the NumPy information you need for this course.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/github/google/eng-edu/blob/master/ml/cc/exercises/pandas_dataframe_ultraquick_tutorial.ipynb?utm_source=mlcc&amp;amp;utm_campaign=colab-external&amp;amp;utm_medium=referral&amp;amp;utm_content=pandas_tf2-colab&amp;amp;hl=en&#34;&gt;pandas UltraQuick Tutorial&lt;/a&gt; Colab exercise, which provides all the pandas information you need for this course.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After gaining competency in NumPy and pandas, do the following two Colab exercises to explore linear regression and hyperparameter tuning in tf.keras:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/github/google/eng-edu/blob/master/ml/cc/exercises/linear_regression_with_synthetic_data.ipynb?utm_source=mlcc&amp;amp;utm_campaign=colab-external&amp;amp;utm_medium=referral&amp;amp;utm_content=linear_regression_synthetic_tf2-colab&amp;amp;hl=en&#34;&gt;Linear Regression with Synthetic Data&lt;/a&gt; Colab exercise, which explores linear regression with a toy dataset.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/github/google/eng-edu/blob/master/ml/cc/exercises/linear_regression_with_a_real_dataset.ipynb?utm_source=mlcc&amp;amp;utm_campaign=colab-external&amp;amp;utm_medium=referral&amp;amp;utm_content=linear_regression_real_tf2-colab&amp;amp;hl=en&#34;&gt;Linear Regression with a Real Dataset&lt;/a&gt; Colab exercise, which guides you through the kinds of analysis you should do on a real dataset.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;generalization-泛化&#34;&gt;Generalization (泛化)&lt;/h4&gt;
+&lt;p&gt;Video Lecture
+Peril of Overfitting&lt;/p&gt;
+&lt;h4 id=&#34;training-and-test-sets&#34;&gt;Training and Test Sets&lt;/h4&gt;
+&lt;p&gt;Video Lecture
+Splitting Data
+Playground Exercise&lt;/p&gt;
+&lt;h4 id=&#34;validation-set&#34;&gt;Validation Set&lt;/h4&gt;
+&lt;p&gt;Check Your Intuition
+Video Lecture
+Another Partition
+Programming Exercise&lt;/p&gt;
+&lt;h4 id=&#34;representation-表示法&#34;&gt;Representation (表示法)&lt;/h4&gt;
+&lt;p&gt;Video Lecture
+Feature Engineering
+Qualities of Good Features
+Cleaning Data&lt;/p&gt;
+&lt;h4 id=&#34;feature-crosses-特征组合&#34;&gt;Feature Crosses (特征组合)&lt;/h4&gt;
+&lt;p&gt;Video Lecture
+Encoding Nonlinearity
+Crossing One-Hot Vectors
+Playground Exercises
+Programming Exercise&lt;/p&gt;
+&lt;p&gt;Check Your Understanding&lt;/p&gt;
+&lt;h4 id=&#34;regularization-simplicity-正则化简单性&#34;&gt;Regularization: Simplicity (正则化：简单性)&lt;/h4&gt;
+&lt;p&gt;Playground Exercise: Overcrossing?
+Video Lecture
+L2 Regularization
+Lambda
+Playground Exercise: L2 Regularization
+Check Your Understanding&lt;/p&gt;
+&lt;h4 id=&#34;logistic-regression&#34;&gt;Logistic Regression&lt;/h4&gt;
+&lt;p&gt;Video Lecture
+Calculating a Probability
+Loss and Regularization&lt;/p&gt;
+&lt;h4 id=&#34;classification&#34;&gt;Classification&lt;/h4&gt;
+&lt;p&gt;Video Lecture
+Thresholding
+True vs. False; Positive vs. Negative
+Accuracy
+Precision and Recall
+Check Your Understanding: Accuracy, Precision, Recall
+ROC Curve and AUC
+Check Your Understanding: ROC and AUC
+Prediction Bias
+Programming Exercise&lt;/p&gt;
+&lt;h4 id=&#34;regularization-sparsity-正则化稀疏性&#34;&gt;Regularization: Sparsity (正则化：稀疏性)&lt;/h4&gt;
+&lt;p&gt;Video Lecture
+L1 Regularization
+Playground Exercise
+Check Your Understanding&lt;/p&gt;
+&lt;h4 id=&#34;neural-networks&#34;&gt;Neural Networks&lt;/h4&gt;
+&lt;p&gt;Video Lecture
+Structure
+Playground Exercises
+Programming Exercise&lt;/p&gt;
+&lt;h4 id=&#34;training-neural-nets&#34;&gt;Training Neural Nets&lt;/h4&gt;
+&lt;p&gt;Video Lecture
+Best Practices&lt;/p&gt;
+&lt;h4 id=&#34;multi-class-neural-nets&#34;&gt;Multi-Class Neural Nets&lt;/h4&gt;
+&lt;p&gt;Video Lecture
+One vs. All
+Softmax
+Programming Exercise&lt;/p&gt;
+&lt;h4 id=&#34;embeddings-嵌入&#34;&gt;Embeddings (嵌入)&lt;/h4&gt;
+&lt;p&gt;Video Lecture
+Motivation from Collaborative Filtering
+Categorical Input Data
+Translating to a Lower-Dimensional Space
+Obtaining Embeddings&lt;/p&gt;
+&lt;h2 id=&#34;ml-engineering&#34;&gt;ML Engineering&lt;/h2&gt;
+&lt;h4 id=&#34;production-ml-systems&#34;&gt;Production ML Systems&lt;/h4&gt;
+&lt;h4 id=&#34;static-vs-dynamic-training&#34;&gt;Static vs. Dynamic Training&lt;/h4&gt;
+&lt;p&gt;Video Lecture
+Check Your Understanding&lt;/p&gt;
+&lt;h4 id=&#34;static-vs-dynamic-inference&#34;&gt;Static vs. Dynamic Inference&lt;/h4&gt;
+&lt;p&gt;Video Lecture
+Check Your Understanding&lt;/p&gt;
+&lt;h4 id=&#34;data-dependencies&#34;&gt;Data Dependencies&lt;/h4&gt;
+&lt;p&gt;Video Lecture
+Check Your Understanding&lt;/p&gt;
+&lt;h4 id=&#34;fairness&#34;&gt;Fairness&lt;/h4&gt;
+&lt;p&gt;Video Lecture
+Types of Bias
+Identifying Bias
+Evaluating for Bias
+Programming Exercise
+Check Your Understanding&lt;/p&gt;
+&lt;h2 id=&#34;ml-systems-in-the-real-world&#34;&gt;ML Systems in the Real World&lt;/h2&gt;
+&lt;h4 id=&#34;cancer-prediction&#34;&gt;Cancer Prediction&lt;/h4&gt;
+&lt;h4 id=&#34;literature&#34;&gt;Literature&lt;/h4&gt;
+&lt;h4 id=&#34;guidelines&#34;&gt;Guidelines&lt;/h4&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;h4 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h4&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Few shot learning</title>
       <link>http://csyezheng.github.io/post/machine-learning/few-shot-learning/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
@@ -2951,29 +3168,6 @@ $ ps aux|grep main
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/go-delve/delve/tree/master/Documentation&#34;&gt;https://github.com/go-delve/delve/tree/master/Documentation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/li-peng/p/8522592.html&#34;&gt;https://www.cnblogs.com/li-peng/p/8522592.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>generate-model-structs-from-database</title>
-      <link>http://csyezheng.github.io/post/programming-languages/go/generate-model-structs-from-database/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/go/generate-model-structs-from-database/</guid>
-      
-        <description>&lt;p&gt;Generate gorm model structs from database&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/smallnest/gen&#34;&gt;https://github.com/smallnest/gen&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/wantedly/pq2gorm&#34;&gt;https://github.com/wantedly/pq2gorm&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/go-xorm/cmd&#34;&gt;https://github.com/go-xorm/cmd&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
 </description>
       

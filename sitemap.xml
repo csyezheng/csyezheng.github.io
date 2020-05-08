@@ -10,7 +10,42 @@
   
   <url>
     <loc>http://csyezheng.github.io/categories/</loc>
-    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/machine-learning/</loc>
+    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/categories/machine-learning/</loc>
+    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/machine-learning/crash-course/</loc>
+    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/</loc>
+    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/</loc>
+    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -31,34 +66,6 @@
   
   <url>
     <loc>http://csyezheng.github.io/post/machine-learning/learn-ml/</loc>
-    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/tags/machine-learning/</loc>
-    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/categories/machine-learning/</loc>
-    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/</loc>
-    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/tags/</loc>
     <lastmod>2020-04-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
