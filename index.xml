@@ -242,6 +242,48 @@ Check Your Understanding&lt;/p&gt;
     </item>
     
     <item>
+      <title>scikit-learn</title>
+      <link>http://csyezheng.github.io/post/machine-learning/scikit-learn/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/scikit-learn/</guid>
+      
+        <description>&lt;h1 id=&#34;scikit-learn&#34;&gt;scikit-learn&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;sklearn&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;preprocessing&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;MultiLabelBinarizer&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Transforms between iterable of iterables and a multilabel format (binary matrix)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;utils&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;class_weight&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;compute_class_weight&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Estimate class weights for unbalanced datasets.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Few shot learning</title>
       <link>http://csyezheng.github.io/post/machine-learning/few-shot-learning/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
@@ -269,11 +311,57 @@ Check Your Understanding&lt;/p&gt;
       <guid>http://csyezheng.github.io/post/machine-learning/learn-ml/</guid>
       
         <description>&lt;h1 id=&#34;learning-path-for-machine-learning&#34;&gt;Learning Path for Machine Learning&lt;/h1&gt;
-&lt;h2 id=&#34;ml-theory&#34;&gt;ML theory&lt;/h2&gt;
-&lt;p&gt;Coding skills&lt;/p&gt;
-&lt;p&gt;Math and stats&lt;/p&gt;
-&lt;p&gt;Build your own projects&lt;/p&gt;
+&lt;h2 id=&#34;basics-of-machine-learning-with-tensorflow&#34;&gt;Basics of machine learning with TensorFlow&lt;/h2&gt;
+&lt;h3 id=&#34;step-1-understand-what-ml-is-all-about&#34;&gt;Step 1: Understand what ML is all about&lt;/h3&gt;
+&lt;p&gt;The book ‘&lt;a href=&#34;https://www.manning.com/books/deep-learning-with-python&#34;&gt;Deep Learning in Python&lt;/a&gt;’ by Francois Chollet, creator of Keras, is a great place to get started. Read chapters 1-4 to understand the fundamentals of ML from a programmer’s perspective.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://developers.google.com/machine-learning/crash-course&#34;&gt;Google Developers Machine Learning Crash Course&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developers.google.cn/machine-learning/glossary&#34;&gt;Machine Learning Glossary&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-2-beyond-the-basics&#34;&gt;Step 2: Beyond the basics&lt;/h3&gt;
+&lt;p&gt;Take the &lt;a href=&#34;https://www.coursera.org/specializations/tensorflow-in-practice&#34;&gt;TensorFlow in Practice Specialization&lt;/a&gt;, which takes you beyond the basics into introductory Computer Vision, NLP, and Sequence modelling.&lt;/p&gt;
+&lt;p&gt;Completing this step continues your introduction, and teaches you how to use TensorFlow to build basic models for a variety of scenarios, including image classification, understanding sentiment in text, generative algorithms, and more.&lt;/p&gt;
+&lt;h3 id=&#34;step-3-practice&#34;&gt;Step 3: Practice&lt;/h3&gt;
+&lt;p&gt;Try some of our &lt;a href=&#34;https://www.tensorflow.org/beta/tutorials/keras&#34;&gt;TensorFlow Core tutorials&lt;/a&gt;, which will allow you to practice the concepts you learned in steps 1 and 2. When you’re done, try some of the more advanced exercises on the left side of the page.&lt;/p&gt;
+&lt;p&gt;Completing this step will improve your understanding of the main concepts and scenarios you will encounter when building ML models.&lt;/p&gt;
+&lt;h3 id=&#34;step-4-go-deeper-with-tensorflow&#34;&gt;Step 4: Go deeper with TensorFlow&lt;/h3&gt;
+&lt;p&gt;Now it’s time to go back to ‘&lt;strong&gt;Deep Learning in Python’&lt;/strong&gt; by Francois and finish chapters 5-9. Every example in this book will work in TensorFlow 2.0, just by changing an import. You should also read the book &lt;a href=&#34;https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/&#34;&gt;Hands-on Machine Learning with Scikit-Learn, Keras, and TensorFlow&lt;/a&gt;, by Aurelien Geron. This book introduces ML using scikit-learn, and also deep learning using TensorFlow 2.0.&lt;/p&gt;
+&lt;p&gt;Completing this step will round out your introductory knowledge of ML, including expanding the platform to meet your needs.&lt;/p&gt;
+&lt;h2 id=&#34;theoretical-and-advanced-machine-learning-with-tensorflow&#34;&gt;Theoretical and advanced machine learning with TensorFlow&lt;/h2&gt;
+&lt;h3 id=&#34;step-1-refresh-your-understanding-of-math-concepts&#34;&gt;Step 1: Refresh your understanding of math concepts&lt;/h3&gt;
+&lt;p&gt;ML is a math heavy discipline. If you plan to modify ML models, or build new ones from scratch, familiarity with the underlying math concepts is important. You don&amp;rsquo;t have to learn all the math upfront, but instead you can look up concepts you are unfamiliar with as you come across them. If it’s been a while since you’ve taken a math course, try watching the &lt;a href=&#34;https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&#34;&gt;Essence of linear algebra&lt;/a&gt; and the &lt;a href=&#34;https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr&#34;&gt;Essence of calculus&lt;/a&gt; playlists from 3blue1brown for a refresher. We recommend that you continue by taking a class from a university, or watching open access lectures from MIT, such as &lt;a href=&#34;https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/&#34;&gt;Linear Algebra&lt;/a&gt; or &lt;a href=&#34;https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/&#34;&gt;Single Variable Calculus&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;step-2-deepen-your-understanding-of-deep-learning-with-these-courses-and-books&#34;&gt;Step 2: Deepen your understanding of deep learning with these courses and books&lt;/h3&gt;
+&lt;p&gt;There is no single course that will teach you everything you need to know about deep learning. One approach that may be helpful is to take a few courses at the same time. Although there will be overlap in the material, having multiple instructors explain concepts in different ways can be helpful, especially for complex topics. Below are several courses we recommend to help get you started. You can explore each of them together, or just choose the ones that feel the most relevant to you.&lt;/p&gt;
+&lt;p&gt;Remember, the more you learn, and reinforce these concepts through practice, the more adept you will be at building and evaluating your own ML models.&lt;/p&gt;
+&lt;h5 id=&#34;take-these-courses&#34;&gt;Take these courses:&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;http://cs231n.stanford.edu/index.html&#34;&gt;CS231n: Convolutional Neural Networks for Visual Recognition&lt;/a&gt; is a collection of lecture videos and slides from Stanford on the details of deep learning architectures, with a focus on learning end-to-end models for computer vision tasks. This is an excellent course and a great place to begin. The &lt;a href=&#34;http://introtodeeplearning.com/&#34;&gt;MIT course 6.S191: Introduction to Deep Learning&lt;/a&gt; is a shorter introductory course on Deep Learning with TensorFlow from MIT and also a wonderful resource. You can also try the &lt;a href=&#34;https://deeplearning.mit.edu/&#34;&gt;MIT Deep Learning&lt;/a&gt; collection of courses and lectures on deep learning, deep reinforcement learning, autonomous vehicles, and artificial intelligence, taught by &lt;a href=&#34;https://lexfridman.com/&#34;&gt;Lex Fridman&lt;/a&gt;.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Finally, Andrew Ng’s seminal &lt;a href=&#34;https://www.coursera.org/specializations/deep-learning&#34;&gt;Deep Learning Specialization at Coursera&lt;/a&gt; has five courses in which you learn the foundations of deep learning, including Convolutional networks, RNNS, LSTMs, and more. This specialization is designed to help you apply deep learning in your work, and to build a career in AI.&lt;/p&gt;
+&lt;h5 id=&#34;-and--read-these-books&#34;&gt;⬆ And ⬇ Read these books:&lt;/h5&gt;
+&lt;p&gt;To complement what you learn in the courses listed above, we recommend that you dive deeper by reading the books below. Each book is available online, and offers supplementary materials to help you practice.&lt;/p&gt;
+&lt;p&gt;You can start by reading &lt;a href=&#34;https://www.deeplearningbook.org/&#34;&gt;Deep Learning: An MIT Press Book&lt;/a&gt; by Ian Goodfellow, Yoshua Bengio, and Aaron Courville. The Deep Learning textbook is an advanced resource intended to help students deepen their understanding. The book is accompanied by &lt;a href=&#34;http://www.deeplearningbook.org/&#34;&gt;a website&lt;/a&gt;, which provides a variety of supplementary materials, including exercises, lecture slides, corrections of mistakes, and other resources to give you hands on practice with the concepts.&lt;/p&gt;
+&lt;p&gt;You can also explore Michael Nielsen’s online book &lt;a href=&#34;http://neuralnetworksanddeeplearning.com/&#34;&gt;Neural Networks and Deep Learning&lt;/a&gt;. This book provides a theoretical background on neural networks. It does not use TensorFlow, but is a great reference for students interested in learning more.&lt;/p&gt;
+&lt;h3 id=&#34;step-3-read-and-implement-papers-with-tensorflow&#34;&gt;Step 3: Read and implement papers with TensorFlow&lt;/h3&gt;
+&lt;p&gt;At this point, we recommend reading papers and trying the advanced tutorials on our website, which contain implementations of a few well known publications. The best way to learn an advanced application, &lt;a href=&#34;https://www.tensorflow.org/tutorials/text/transformer&#34;&gt;machine translation&lt;/a&gt;, or &lt;a href=&#34;https://www.tensorflow.org/tutorials/text/image_captioning&#34;&gt;image captioning&lt;/a&gt;, is to read the paper linked from the tutorial. As you work through it, find the relevant sections of the code, and use them to help solidify your understanding.&lt;/p&gt;
+&lt;h2 id=&#34;kaggle&#34;&gt;Kaggle&lt;/h2&gt;
+&lt;h4 id=&#34;multi-class-classification-and-multi-label-classification&#34;&gt;multi-class classification and multi-label classification&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kaggle.com/c/planet-understanding-the-amazon-from-space/&#34;&gt;Planet: Understanding the Amazon from Space&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kaggle.com/philschmidt/multilabel-classification-rainforest-eda&#34;&gt;https://www.kaggle.com/philschmidt/multilabel-classification-rainforest-eda&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/tensorflow/training-and-serving-ml-models-with-tf-keras-fd975cc0fa27#9ea4&#34;&gt;https://medium.com/tensorflow/training-and-serving-ml-models-with-tf-keras-fd975cc0fa27#9ea4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;multi-label-classification&#34;&gt;multi-label classification&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kaggle.com/cryptexcode/mpst-movie-plot-synopses-with-tags&#34;&gt;MPST: Movie Plot Synopses with Tags&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://towardsdatascience.com/automated-movie-tagging-a-multiclass-classification-problem-721eb7fb70c2&#34;&gt;https://towardsdatascience.com/automated-movie-tagging-a-multiclass-classification-problem-721eb7fb70c2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aihubprojects.com/movie-plot-synopses-with-tags-tags-prediction/&#34;&gt;https://aihubprojects.com/movie-plot-synopses-with-tags-tags-prediction/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/analytics-vidhya/machine-learning-multi-label-classification-mpst-movie-plot-synopses-with-tags-tags-8314e6841e17&#34;&gt;https://medium.com/analytics-vidhya/machine-learning-multi-label-classification-mpst-movie-plot-synopses-with-tags-tags-8314e6841e17&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kaggle.com/renatorangel/multi-label-classification&#34;&gt;https://www.kaggle.com/renatorangel/multi-label-classification&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/towards-artificial-intelligence/keras-for-multi-label-text-classification-86d194311d0e&#34;&gt;https://medium.com/towards-artificial-intelligence/keras-for-multi-label-text-classification-86d194311d0e&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>
@@ -3092,83 +3180,6 @@ func main() {
 &lt;h4 id=&#34;step-4-step-through-the-code&#34;&gt;Step 4: Step through the code&lt;/h4&gt;
 &lt;h4 id=&#34;step-5-set-a-line-of-code-breakpoint&#34;&gt;Step 5: Set a line-of-code breakpoint&lt;/h4&gt;
 &lt;h4 id=&#34;step-6-check-variable-values&#34;&gt;Step 6: Check variable values&lt;/h4&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Delve Documentation</title>
-      <link>http://csyezheng.github.io/post/programming-languages/go/debugging-with-delve/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/go/debugging-with-delve/</guid>
-      
-        <description>&lt;h2 id=&#34;installation-on-linux&#34;&gt;Installation on Linux&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;$ mkdir -p $GOPATH/src/github.com/myusername/project &amp;amp;&amp;amp; cd &amp;quot;$_&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ go get -u github.com/go-delve/delve/cmd/dlv
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;$ cat $GOPATH/src/github.com/username/proj/main.go
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;package main
- 
-import (
-    &amp;quot;fmt&amp;quot;
-    &amp;quot;log&amp;quot;
-    &amp;quot;net/http&amp;quot;
-    &amp;quot;os&amp;quot;
-)
- 
-const port  = &amp;quot;8000&amp;quot;
-
-func main() {
-    http.HandleFunc(&amp;quot;/hi&amp;quot;, hi)
-
-    fmt.Println(&amp;quot;runing on port: &amp;quot; + port)
-    log.Fatal(http.ListenAndServe(&amp;quot;:&amp;quot; + port, nil))
-}
-
-func hi(w http.ResponseWriter, r *http.Request) {
-    hostName, _ := os.Hostname()
-    fmt.Fprintf(w, &amp;quot;HostName: %s&amp;quot;, hostName)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;dlv-debug&#34;&gt;dlv debug&lt;/h3&gt;
-&lt;p&gt;Compile and begin debugging main package in current directory, or the package specified.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ dlv debug ./main.go
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;(dlv) help
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;(dlv) b main.main
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;(dlv) c
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;(dlv) b main.hi
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;(dlv) c
-running on port: 8000
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;curl localhost:8000/hi
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;dlv-attach&#34;&gt;dlv attach&lt;/h3&gt;
-&lt;p&gt;Attach to running process and begin debugging.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ go build main.go
-$ ./main
-$ ps aux|grep main
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;dlv attach pid [executable]
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;(dlv) b /home/ye/go/src/github.com/username/proj/main.go:20
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;curl localhost:8000/hi
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;command-line-interface&#34;&gt;Command Line Interface&lt;/h2&gt;
-&lt;p&gt;help	Prints the help message.&lt;/p&gt;
-&lt;p&gt;list	Show source code.&lt;/p&gt;
-&lt;p&gt;args	Print function arguments.&lt;/p&gt;
-&lt;p&gt;locals	Print local variables.&lt;/p&gt;
-&lt;p&gt;next	Step over to next source line.&lt;/p&gt;
-&lt;p&gt;step	Single step through program.&lt;/p&gt;
-&lt;p&gt;break	Sets a breakpoint.&lt;/p&gt;
-&lt;p&gt;clear	Deletes breakpoint.&lt;/p&gt;
-&lt;p&gt;clearall	Deletes multiple breakpoints.&lt;/p&gt;
-&lt;p&gt;print	Evaluate an expression.&lt;/p&gt;
-&lt;p&gt;continue	Run until breakpoint or program termination.&lt;/p&gt;
-&lt;p&gt;set	Changes the value of a variable.&lt;/p&gt;
-&lt;p&gt;stack	Print stack trace.&lt;/p&gt;
-&lt;p&gt;trace	Set tracepoint.&lt;/p&gt;
-&lt;p&gt;exit	Exit the debugger.&lt;/p&gt;
-&lt;p&gt;reference:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/go-delve/delve/tree/master/Documentation&#34;&gt;https://github.com/go-delve/delve/tree/master/Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/li-peng/p/8522592.html&#34;&gt;https://www.cnblogs.com/li-peng/p/8522592.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
       
     </item>

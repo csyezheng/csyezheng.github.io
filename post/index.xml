@@ -21,6 +21,23 @@
     </item>
     
     <item>
+      <title>scikit-learn</title>
+      <link>http://csyezheng.github.io/post/machine-learning/scikit-learn/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/scikit-learn/</guid>
+      <description>scikit-learn   sklearn
+  preprocessing
+  MultiLabelBinarizer
+Transforms between iterable of iterables and a multilabel format (binary matrix)
+    utils
+  class_weight
+  compute_class_weight
+Estimate class weights for unbalanced datasets.
+        </description>
+    </item>
+    
+    <item>
       <title>Few shot learning</title>
       <link>http://csyezheng.github.io/post/machine-learning/few-shot-learning/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
@@ -35,10 +52,10 @@
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>http://csyezheng.github.io/post/machine-learning/learn-ml/</guid>
-      <description>Learning Path for Machine Learning ML theory Coding skills
-Math and stats
-Build your own projects
-Google Developers Machine Learning Crash Course</description>
+      <description>Learning Path for Machine Learning Basics of machine learning with TensorFlow Step 1: Understand what ML is all about The book ‘Deep Learning in Python’ by Francois Chollet, creator of Keras, is a great place to get started. Read chapters 1-4 to understand the fundamentals of ML from a programmer’s perspective.
+Google Developers Machine Learning Crash Course
+Machine Learning Glossary
+Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which takes you beyond the basics into introductory Computer Vision, NLP, and Sequence modelling.</description>
     </item>
     
     <item>
@@ -195,19 +212,6 @@ Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: S
       
       <guid>http://csyezheng.github.io/post/programming-languages/go/debugging-with-delve/</guid>
       <description>Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;amp;&amp;amp; cd &amp;quot;$_&amp;quot; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &amp;quot;fmt&amp;quot; &amp;quot;log&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;os&amp;quot; ) const port = &amp;quot;8000&amp;quot; func main() { http.HandleFunc(&amp;quot;/hi&amp;quot;, hi) fmt.Println(&amp;quot;runing on port: &amp;quot; + port) log.Fatal(http.ListenAndServe(&amp;quot;:&amp;quot; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &amp;quot;HostName: %s&amp;quot;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.</description>
-    </item>
-    
-    <item>
-      <title>generate-model-structs-from-database</title>
-      <link>http://csyezheng.github.io/post/programming-languages/go/generate-model-structs-from-database/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/go/generate-model-structs-from-database/</guid>
-      <description>Generate gorm model structs from database
-  https://github.com/smallnest/gen
-  https://github.com/wantedly/pq2gorm
-  https://github.com/go-xorm/cmd
-  </description>
     </item>
     
   </channel>

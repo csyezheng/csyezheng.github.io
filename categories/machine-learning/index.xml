@@ -21,6 +21,23 @@
     </item>
     
     <item>
+      <title>scikit-learn</title>
+      <link>http://csyezheng.github.io/post/machine-learning/scikit-learn/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/scikit-learn/</guid>
+      <description>scikit-learn   sklearn
+  preprocessing
+  MultiLabelBinarizer
+Transforms between iterable of iterables and a multilabel format (binary matrix)
+    utils
+  class_weight
+  compute_class_weight
+Estimate class weights for unbalanced datasets.
+        </description>
+    </item>
+    
+    <item>
       <title>Few shot learning</title>
       <link>http://csyezheng.github.io/post/machine-learning/few-shot-learning/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
@@ -35,10 +52,10 @@
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>http://csyezheng.github.io/post/machine-learning/learn-ml/</guid>
-      <description>Learning Path for Machine Learning ML theory Coding skills
-Math and stats
-Build your own projects
-Google Developers Machine Learning Crash Course</description>
+      <description>Learning Path for Machine Learning Basics of machine learning with TensorFlow Step 1: Understand what ML is all about The book ‘Deep Learning in Python’ by Francois Chollet, creator of Keras, is a great place to get started. Read chapters 1-4 to understand the fundamentals of ML from a programmer’s perspective.
+Google Developers Machine Learning Crash Course
+Machine Learning Glossary
+Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which takes you beyond the basics into introductory Computer Vision, NLP, and Sequence modelling.</description>
     </item>
     
   </channel>
