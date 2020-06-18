@@ -6,10 +6,22 @@
     <description>Recent content in machine learning on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://csyezheng.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Multi-label classification</title>
+      <link>http://csyezheng.github.io/post/machine-learning/multi-label-classification/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/multi-label-classification/</guid>
+      <description>In the multi-label problem there is no constraint on how many of the classes the instance can be assigned to. Formally, multi-label classification is the problem of finding a model that maps inputs x to binary vectors y (assigning a value of 0 or 1 for each element (label) in y).
+Problem transformation methods   Transformation into binary classification problems
+  binary relevance
+amounts to independently training one binary classifier for each label.</description>
+    </item>
     
     <item>
       <title>Machine Learning Crash Course Courses</title>

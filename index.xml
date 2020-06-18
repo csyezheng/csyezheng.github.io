@@ -6,7 +6,7 @@
     <description>Recent content on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 25 Sep 2017 21:38:52 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://csyezheng.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,6 +20,71 @@
       
         <description>&lt;p&gt;I&amp;rsquo;m graduated from the Hebei GEO University with a degree in marketing, because I thought computers were cool from an early age, so I chose programmers as my future employment direction in my third year of college. In the third year of college, I learned some front-end knowledge, and in the fourth year of college I learned some C ++ related knowledge. After graduating, I naturally found a job related to programming.&lt;/p&gt;
 &lt;p&gt;In the first company, I was mainly engaged in web crawling. I was responsible for scraping various financial data including stock exchanges, performing data cleaning, and completing an announcement classification system during the period. I worked as a data development engineer in the second company, and solved development problems such as real-time data forwarding, reception, and storage. I worked as a back-end development engineer at a third company and built the entire edx-based online learning system.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Multi-label classification</title>
+      <link>http://csyezheng.github.io/post/machine-learning/multi-label-classification/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/multi-label-classification/</guid>
+      
+        <description>&lt;p&gt;In the multi-label problem there is no constraint on how many of the classes the instance can be assigned to. Formally, multi-label classification is the problem of finding a model that maps inputs &lt;strong&gt;x&lt;/strong&gt; to binary vectors &lt;strong&gt;y&lt;/strong&gt; (assigning a value of 0 or 1 for each element (label) in &lt;strong&gt;y&lt;/strong&gt;).&lt;/p&gt;
+&lt;h2 id=&#34;problem-transformation-methods&#34;&gt;Problem transformation methods&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Transformation into binary classification problems&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;binary relevance&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;amounts to independently training one binary classifier for each label.&lt;/p&gt;
+&lt;p&gt;Although this method of dividing the task into multiple binary tasks may resemble superficially the one-vs.-all (OvA) and one-vs.-rest (OvR) methods for multiclass classification, it is essentially different from both, because a single classifier under binary relevance deals with a single label, without any regard to other labels whatsoever.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;classifier chain&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It differs from binary relevance in that labels are predicted sequentially, and the output of all previous classifiers (i.e. positive or negative for a particular label) are input as features to subsequent classifiers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Transformation into multi-class classification problem&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;label powerset&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Ensemble methods&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A set of multi-class classifiers can be used to create a multi-label ensemble classifier. For a given example, each classifier outputs a single class (corresponding to a single label in the multi-label problem). These predictions are then combined by an ensemble method, usually a voting scheme where every class that receives a requisite percentage of votes from individual classifiers (often referred to as the discrimination threshold[8]) is predicted as a present label in the multi-label output.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;adapted-algorithms&#34;&gt;Adapted algorithms&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ML-kNN&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Clare&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;kernel methods for vector output&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BP-MLL&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;statistics-and-evaluation-metrics&#34;&gt;Statistics and evaluation metrics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Hamming loss&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;the fraction of the wrong labels to the total number of labels&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;**Precision, recall and $F_{1}$ score**&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;implementations-and-datasets&#34;&gt;Implementations and datasets&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/multiclass.html&#34;&gt;multi-labels algorithms and metrics&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A list of commonly used multi-label data-sets is available at the &lt;a href=&#34;http://mulan.sourceforge.net/datasets.html&#34;&gt;Mulan website&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;competition&#34;&gt;Competition&lt;/h2&gt;
+&lt;h3 id=&#34;toxic-comment-classification-challengehttpswwwkagglecomcjigsaw-toxic-comment-classification-challenge&#34;&gt;&lt;a href=&#34;https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge&#34;&gt;Toxic Comment Classification Challenge&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://stackabuse.com/python-for-nlp-multi-label-text-classification-with-keras/&#34;&gt;https://stackabuse.com/python-for-nlp-multi-label-text-classification-with-keras/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://towardsdatascience.com/multi-label-text-classification-with-scikit-learn-30714b7819c5&#34;&gt;https://towardsdatascience.com/multi-label-text-classification-with-scikit-learn-30714b7819c5&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;questions-from-cross-validated-stack-exchangehttpswwwkagglecomstackoverflowstatsquestions&#34;&gt;&lt;a href=&#34;https://www.kaggle.com/stackoverflow/statsquestions&#34;&gt;Questions from Cross Validated Stack Exchange&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.mimacom.com/text-classification/&#34;&gt;https://blog.mimacom.com/text-classification/&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>
@@ -3161,25 +3226,6 @@ func main() {
 &lt;p&gt;The &lt;a href=&#34;https://golang.org/doc/codewalk/functions/&#34;&gt;First Class Functions in Go&lt;/a&gt; codewalk gives an interesting perspective on Go&amp;rsquo;s function types.&lt;/p&gt;
 &lt;p&gt;The &lt;a href=&#34;https://blog.golang.org/&#34;&gt;Go Blog&lt;/a&gt; has a large archive of informative Go articles.&lt;/p&gt;
 &lt;p&gt;Visit &lt;a href=&#34;https://golang.org/&#34;&gt;golang.org&lt;/a&gt; for more.&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Debugging JavaScript in Chrome DevTools</title>
-      <link>http://csyezheng.github.io/post/programming-languages/javascript/debug/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/javascript/debug/</guid>
-      
-        <description>&lt;h3 id=&#34;get-started&#34;&gt;Get Started&lt;/h3&gt;
-&lt;h4 id=&#34;step-2-get-familiar-with-the-sources-panel-ui&#34;&gt;Step 2: Get familiar with the Sources panel UI&lt;/h4&gt;
-&lt;p&gt;The &lt;strong&gt;Sources&lt;/strong&gt; panel is where you debug JavaScript.&lt;/p&gt;
-&lt;p&gt;Open DevTools by pressing &lt;code&gt;Command+Option+I&lt;/code&gt; (Mac) or &lt;code&gt;Control+Shift+I&lt;/code&gt; (Windows, Linux). This shortcut opens the &lt;strong&gt;Console&lt;/strong&gt;panel.&lt;/p&gt;
-&lt;h4 id=&#34;step-3-pause-the-code-with-a-breakpoint&#34;&gt;Step 3: Pause the code with a breakpoint&lt;/h4&gt;
-&lt;h4 id=&#34;step-4-step-through-the-code&#34;&gt;Step 4: Step through the code&lt;/h4&gt;
-&lt;h4 id=&#34;step-5-set-a-line-of-code-breakpoint&#34;&gt;Step 5: Set a line-of-code breakpoint&lt;/h4&gt;
-&lt;h4 id=&#34;step-6-check-variable-values&#34;&gt;Step 6: Check variable values&lt;/h4&gt;
 </description>
       
     </item>

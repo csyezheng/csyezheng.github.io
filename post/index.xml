@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://csyezheng.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Multi-label classification</title>
+      <link>http://csyezheng.github.io/post/machine-learning/multi-label-classification/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/multi-label-classification/</guid>
+      <description>In the multi-label problem there is no constraint on how many of the classes the instance can be assigned to. Formally, multi-label classification is the problem of finding a model that maps inputs x to binary vectors y (assigning a value of 0 or 1 for each element (label) in y).
+Problem transformation methods   Transformation into binary classification problems
+  binary relevance
+amounts to independently training one binary classifier for each label.</description>
+    </item>
     
     <item>
       <title>Machine Learning Crash Course Courses</title>
@@ -203,15 +215,6 @@ import ( &amp;quot;fmt&amp;quot; &amp;quot;math/rand&amp;quot; ) Exported names 
       <description>Get Started Step 2: Get familiar with the Sources panel UI The Sources panel is where you debug JavaScript.
 Open DevTools by pressing Command+Option+I (Mac) or Control+Shift+I (Windows, Linux). This shortcut opens the Consolepanel.
 Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: Set a line-of-code breakpoint Step 6: Check variable values </description>
-    </item>
-    
-    <item>
-      <title>Delve Documentation</title>
-      <link>http://csyezheng.github.io/post/programming-languages/go/debugging-with-delve/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/go/debugging-with-delve/</guid>
-      <description>Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;amp;&amp;amp; cd &amp;quot;$_&amp;quot; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &amp;quot;fmt&amp;quot; &amp;quot;log&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;os&amp;quot; ) const port = &amp;quot;8000&amp;quot; func main() { http.HandleFunc(&amp;quot;/hi&amp;quot;, hi) fmt.Println(&amp;quot;runing on port: &amp;quot; + port) log.Fatal(http.ListenAndServe(&amp;quot;:&amp;quot; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &amp;quot;HostName: %s&amp;quot;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.</description>
     </item>
     
   </channel>

@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.69.1" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/programming-languages/python/the-python-tutorial/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.fa3d941d1d0e0ddc985804227feabffea55c89883eb0af34e0532a7ae9135151.css" integrity="sha256-&#43;j2UHR0ODdyYWAQif&#43;q//qVciYg&#43;sK804FMqeukTUVE=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
 
 
 
@@ -391,7 +391,7 @@
 <p><code>python -c command [arg] ...</code>, which executes the statement(s) in command, analogous to the shell’s <a href="">-c</a> option.</p>
 <p>When a script file is used, it is sometimes useful to be able to run the script and enter interactive mode afterwards. This can be done by passing <code>-i</code> before the script.</p>
 <h4 id="211-argument-passing">2.1.1. Argument Passing</h4>
-<p>When known to the interpreter, <strong>the script name and additional arguments</strong> thereafter are turned into <strong>a list of strings</strong> and assigned to the <strong><code>argv</code></strong> variable in the <strong><code>sys</code></strong> module. You can access this list by executing <code>import sys</code>. The length of the list is at least one; when no script and no arguments are given, <code>sys.argv[0]</code> is an empty string. When the script name is given as &lsquo;-&rsquo; (meaning standard input), <code>sys.argv[0]</code> is set to &lsquo;-'. When <code>-c</code> command is used, <code>sys.argv[0]</code> is set to &lsquo;-c&rsquo;. When <code>-m</code> module is used, <code>sys.argv[0]</code> is set to the full name of the located module. Options found after <code>-c</code> command or <code>-m</code> module are not consumed by the Python interpreter’s option processing but left in <code>sys.argv</code> for the command or module to handle.</p>
+<p>When known to the interpreter, <strong>the script name and additional arguments</strong> thereafter are turned into <strong>a list of strings</strong> and assigned to the <strong><code>argv</code></strong> variable in the <strong><code>sys</code></strong> module. You can access this list by executing <code>import sys</code>. The length of the list is at least one; when no script and no arguments are given, <code>sys.argv[0]</code> is an empty string. When the script name is given as &lsquo;-&rsquo; (meaning standard input), <code>sys.argv[0]</code> is set to &lsquo;-&rsquo;. When <code>-c</code> command is used, <code>sys.argv[0]</code> is set to &lsquo;-c&rsquo;. When <code>-m</code> module is used, <code>sys.argv[0]</code> is set to the full name of the located module. Options found after <code>-c</code> command or <code>-m</code> module are not consumed by the Python interpreter’s option processing but left in <code>sys.argv</code> for the command or module to handle.</p>
 <h4 id="212-interactive-mode">2.1.2. Interactive Mode</h4>
 <p>In this mode it prompts for the next command with the primary prompt, usually three greater-than signs (<code>&gt;&gt;&gt;</code>); for continuation lines it prompts with the secondary prompt, by default three dots (<code>...</code>).</p>
 <h3 id="22-the-interpreter-and-its-environment">2.2. The Interpreter and Its Environment</h3>
@@ -707,7 +707,7 @@ if x &lt; 0: a.remove(x)</p>
 <p>​    print(&quot;-&rdquo; * 40)</p>
 <p>​    keys = sorted(keywords.keys())</p>
 <p>​    for kw in keys:</p>
-<p>​        print(kw, &ldquo;:&quot;, keywords[kw])</p>
+<p>​        print(kw, &ldquo;:&rdquo;, keywords[kw])</p>
 <p>&gt;&raquo; def concat(*args, sep=&rdquo;/&quot;):</p>
 <p>&hellip;     return sep.join(args)</p>
 <p>&hellip;</p>
@@ -725,7 +725,7 @@ if x &lt; 0: a.remove(x)</p>
 <p>In the same fashion, dictionaries can deliver keyword arguments with the **-operator:</p>
 <p>&gt;&raquo; def parrot(voltage, state='a stiff&rsquo;, action='voom&rsquo;):</p>
 <p>&hellip;     print(&quot;&ndash; This parrot wouldn&rsquo;t&rdquo;, action, end=&rsquo; &lsquo;)</p>
-<p>&hellip;     print(&ldquo;if you put&rdquo;, voltage, &ldquo;volts through it.&quot;, end=&rsquo; &lsquo;)</p>
+<p>&hellip;     print(&ldquo;if you put&rdquo;, voltage, &ldquo;volts through it.&rdquo;, end=&rsquo; &lsquo;)</p>
 <p>&hellip;     print(&ldquo;E&rsquo;s&rdquo;, state, &ldquo;!&quot;)</p>
 <p>&hellip;</p>
 <p>&gt;&raquo; d = {&ldquo;voltage&rdquo;: &ldquo;four million&rdquo;, &ldquo;state&rdquo;: &ldquo;bleedin&rsquo; demised&rdquo;, &ldquo;action&rdquo;: &ldquo;VOOM&rdquo;}</p>
@@ -741,8 +741,8 @@ if x &lt; 0: a.remove(x)</p>
 <h4 id="477-function-annotations">4.7.7. Function Annotations</h4>
 <p>Annotations are stored in the <strong>annotations</strong> attribute of the function as a dictionary and have no effect on any other part of the function. Parameter annotations are defined by a colon after the parameter name, followed by an expression evaluating to the value of the annotation. Return annotations are defined by a literal -&gt;, followed by an expression, between the parameter list and the colon denoting the end of the def statement.</p>
 <p>&gt;&raquo; def f(ham: str, eggs: str = &lsquo;eggs&rsquo;) -&gt; str:</p>
-<p>&hellip;     print(&ldquo;Annotations:&quot;, f.<strong>annotations</strong>)</p>
-<p>&hellip;     print(&ldquo;Arguments:&quot;, ham, eggs)</p>
+<p>&hellip;     print(&ldquo;Annotations:&rdquo;, f.<strong>annotations</strong>)</p>
+<p>&hellip;     print(&ldquo;Arguments:&rdquo;, ham, eggs)</p>
 <p>&hellip;     return ham + ' and ' + eggs</p>
 <p>&hellip;</p>
 <p>&gt;&raquo; f(&lsquo;spam&rsquo;)</p>
@@ -843,19 +843,19 @@ if x &lt; 0: a.remove(x)</p>
 <p>&gt;&raquo; a = set(&lsquo;abracadabra&rsquo;)</p>
 <p>&gt;&raquo; b = set(&lsquo;alacazam&rsquo;)</p>
 <p>&gt;&raquo; a                                  # unique letters in a</p>
-<p>{&lsquo;a&rsquo;, &lsquo;r&rsquo;, &lsquo;b&rsquo;, &lsquo;c&rsquo;, &lsquo;d&rsquo;}</p>
+<p>{&lsquo;a&rsquo;, &lsquo;r&rsquo;, &lsquo;b&rsquo;, &lsquo;c&rsquo;, &rsquo;d&rsquo;}</p>
 <p>&gt;&raquo; a - b                              # letters in a but not in b</p>
-<p>{&lsquo;r&rsquo;, &lsquo;d&rsquo;, &lsquo;b&rsquo;}</p>
+<p>{&lsquo;r&rsquo;, &rsquo;d&rsquo;, &lsquo;b&rsquo;}</p>
 <p>&gt;&raquo; a | b                              # letters in either a or b</p>
-<p>{&lsquo;a&rsquo;, &lsquo;c&rsquo;, &lsquo;r&rsquo;, &lsquo;d&rsquo;, &lsquo;b&rsquo;, &lsquo;m&rsquo;, &lsquo;z&rsquo;, &lsquo;l&rsquo;}</p>
+<p>{&lsquo;a&rsquo;, &lsquo;c&rsquo;, &lsquo;r&rsquo;, &rsquo;d&rsquo;, &lsquo;b&rsquo;, &rsquo;m&rsquo;, &lsquo;z&rsquo;, &lsquo;l&rsquo;}</p>
 <p>&gt;&raquo; a &amp; b                              # letters in both a and b</p>
 <p>{&lsquo;a&rsquo;, &lsquo;c&rsquo;}</p>
 <p>&gt;&raquo; a ^ b                              # letters in a or b but not both</p>
-<p>{&lsquo;r&rsquo;, &lsquo;d&rsquo;, &lsquo;b&rsquo;, &lsquo;m&rsquo;, &lsquo;z&rsquo;, &lsquo;l&rsquo;}</p>
+<p>{&lsquo;r&rsquo;, &rsquo;d&rsquo;, &lsquo;b&rsquo;, &rsquo;m&rsquo;, &lsquo;z&rsquo;, &lsquo;l&rsquo;}</p>
 <p>Similarly to list comprehensions, set comprehensions are also supported:</p>
 <p>&gt;&raquo; a = {x for x in &lsquo;abracadabra&rsquo; if x not in &lsquo;abc&rsquo;}</p>
 <p>&gt;&raquo; a</p>
-<p>{&lsquo;r&rsquo;, &lsquo;d&rsquo;}</p>
+<p>{&lsquo;r&rsquo;, &rsquo;d&rsquo;}</p>
 <h3 id="55-dictionaries">5.5. Dictionaries</h3>
 <p>Unlike sequences, which are indexed by a range of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key.</p>
 <p>A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs within the braces adds initial key:value pairs to the dictionary.</p>
@@ -918,7 +918,7 @@ if x &lt; 0: a.remove(x)</p>
 <p>Each module has its own private symbol table, which is used as the global symbol table by all functions defined in the module. modname.itemname.\</p>
 <p>For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use importlib.reload(), e.g. import importlib; importlib.reload(modulename).</p>
 <h4 id="611-executing-modules-as-scripts">6.1.1. Executing modules as scripts</h4>
-<p>When you run a Python module with python fibo.py <!-- raw HTML omitted -->   the code in the module will be executed, just as if you imported it, but with the <strong>name</strong> set to &ldquo;<strong>main</strong>&quot;.</p>
+<p>When you run a Python module with python fibo.py <!-- raw HTML omitted -->   the code in the module will be executed, just as if you imported it, but with the <strong>name</strong> set to &ldquo;<strong>main</strong>&rdquo;.</p>
 <p>if <strong>name</strong> == &ldquo;<strong>main</strong>&quot;:</p>
 <p>​    import sys</p>
 <p>​    fib(int(sys.argv[1]))</p>
@@ -947,7 +947,7 @@ if x &lt; 0: a.remove(x)</p>
 <p>&gt;&raquo; import fibo</p>
 <p>&gt;&raquo; fib = fibo.fib</p>
 <p>&gt;&raquo; dir()</p>
-<p>['<strong>builtins</strong>', &lsquo;<strong>name</strong>', &lsquo;a&rsquo;, &lsquo;fib&rsquo;, &lsquo;fibo&rsquo;, &lsquo;sys&rsquo;]</p>
+<p>['<strong>builtins</strong>&rsquo;, &lsquo;<strong>name</strong>&rsquo;, &lsquo;a&rsquo;, &lsquo;fib&rsquo;, &lsquo;fibo&rsquo;, &lsquo;sys&rsquo;]</p>
 <p>dir() does not list the names of built-in functions and variables. If you want a list of those, they are defined in the standard module builtins:</p>
 <p>&gt;&raquo; import builtins</p>
 <p>&gt;&raquo; dir(builtins)</p>
@@ -1001,7 +1001,7 @@ if x &lt; 0: a.remove(x)</p>
 <p>from . import echo
 from .. import formats
 from ..filters import equalizer</p>
-<p>Note that relative imports are based on the name of the current module. Since the name of the main module is always &ldquo;<strong>main</strong>&quot;, modules intended for use as the main module of a Python application must always use absolute imports.</p>
+<p>Note that relative imports are based on the name of the current module. Since the name of the main module is always &ldquo;<strong>main</strong>&rdquo;, modules intended for use as the main module of a Python application must always use absolute imports.</p>
 <p>if <strong>name</strong> == &lsquo;<strong>main</strong>':</p>
 <p>6.4.3. Packages in Multiple Directories</p>
 <p>Packages support one more special attribute, <strong>path</strong>. This is initialized to be a list containing the name of the directory holding the package’s <strong>init</strong>.py before the code in that file is executed. This variable can be modified; doing so affects future searches for modules and subpackages contained in the package.</p>
@@ -1170,7 +1170,7 @@ Sjoerd     ==&gt;       4127</p>
 <p>except ValueError:</p>
 <p>​    print(&ldquo;Could not convert data to an integer.&quot;)</p>
 <p>except:</p>
-<p>​    print(&ldquo;Unexpected error:&quot;, sys.exc_info()[0])</p>
+<p>​    print(&ldquo;Unexpected error:&rdquo;, sys.exc_info()[0])</p>
 <p>​    raise</p>
 <p>The try &hellip; except statement has an optional else clause, which, when present, must follow all except clauses. It is useful for code that must be executed if the try clause does not raise an exception.</p>
 <p>for arg in sys.argv[1:]: try:</p>
@@ -1243,13 +1243,13 @@ spam = &ldquo;local spam&rdquo;</p>
 ​         spam = &ldquo;global spam&rdquo;</p>
 <p>​    spam = &ldquo;test spam&rdquo;
 ​     do_local()
-​     print(&ldquo;After local assignment:&quot;, spam)
+​     print(&ldquo;After local assignment:&rdquo;, spam)
 ​     do_nonlocal()
-​     print(&ldquo;After nonlocal assignment:&quot;, spam)
+​     print(&ldquo;After nonlocal assignment:&rdquo;, spam)
 ​     do_global()
-​     print(&ldquo;After global assignment:&quot;, spam)</p>
+​     print(&ldquo;After global assignment:&rdquo;, spam)</p>
 <p>scope_test()
-print(&ldquo;In global scope:&quot;, spam)</p>
+print(&ldquo;In global scope:&rdquo;, spam)</p>
 <p>The output of the example code is:</p>
 <p>After local assignment: test spam
 After nonlocal assignment: nonlocal spam
@@ -1470,7 +1470,7 @@ Warning, log file not found starting a new one</p>
 <p>10.5. String Pattern Matching</p>
 <p>The re module provides regular expression tools for advanced string processing.</p>
 <p>&gt;&raquo; import re
-&gt;&raquo; re.findall(r&rsquo;\bf[a-z]*', &lsquo;which foot or hand fell fastest&rsquo;)
+&gt;&raquo; re.findall(r&rsquo;\bf[a-z]*&rsquo;, &lsquo;which foot or hand fell fastest&rsquo;)
 [&lsquo;foot&rsquo;, &lsquo;fell&rsquo;, &lsquo;fastest&rsquo;]
 &gt;&raquo; re.sub(r&rsquo;(\b[a-z]+) \1&rsquo;, r&rsquo;\1&rsquo;, &lsquo;cat in the the hat&rsquo;)
 &lsquo;cat in the hat&rsquo;</p>
@@ -1518,7 +1518,7 @@ Warning, log file not found starting a new one</p>
 <p>10.10. Performance Measurement</p>
 <p>The timeit module quickly demonstrates a modest performance advantage:</p>
 <p>&gt;&raquo; from timeit import Timer
-&gt;&raquo; Timer(&lsquo;t=a; a=b; b=t&rsquo;, &lsquo;a=1; b=2&rsquo;).timeit()
+&gt;&raquo; Timer(&rsquo;t=a; a=b; b=t&rsquo;, &lsquo;a=1; b=2&rsquo;).timeit()
 0.57535828626024577
 &gt;&raquo; Timer(&lsquo;a,b = b,a&rsquo;, &lsquo;a=1; b=2&rsquo;).timeit()
 0.54962537085770791</p>
@@ -1558,7 +1558,7 @@ doctest.testmod()   # automatically validate the embedded tests</p>
 <p>The <a href="">reprlib</a> module provides a version of <a href="">repr()</a> customized for abbreviated displays of large or deeply nested containers:</p>
 <p>&gt;&raquo; import reprlib
 &gt;&raquo; reprlib.repr(set(&lsquo;supercalifragilisticexpialidocious&rsquo;))
-&ldquo;{&lsquo;a&rsquo;, &lsquo;c&rsquo;, &lsquo;d&rsquo;, &lsquo;e&rsquo;, &lsquo;f&rsquo;, &lsquo;g&rsquo;, &hellip;}&rdquo;</p>
+&ldquo;{&lsquo;a&rsquo;, &lsquo;c&rsquo;, &rsquo;d&rsquo;, &lsquo;e&rsquo;, &lsquo;f&rsquo;, &lsquo;g&rsquo;, &hellip;}&rdquo;</p>
 <p>The <a href="">pprint</a> module offers more sophisticated control over printing both built-in and user defined objects in a way that is readable by the interpreter. When the result is longer than one line, the “pretty printer” adds line breaks and indentation to more clearly reveal data structure:</p>
 <p>The <a href="">textwrap</a> module formats paragraphs of text to fit a given screen width:</p>
 <p>&gt;&raquo; import textwrap
@@ -1634,7 +1634,7 @@ self.outfile = outfile</p>
 f = zipfile.ZipFile(self.outfile, &lsquo;w&rsquo;, zipfile.ZIP_DEFLATED)
 f.write(self.infile)
 f.close()
-print(&lsquo;Finished background zip of:', self.infile)</p>
+print(&lsquo;Finished background zip of:&rsquo;, self.infile)</p>
 <p>background = AsyncZip(&lsquo;mydata.txt&rsquo;, &lsquo;myarchive.zip&rsquo;)
 background.start()
 print(&lsquo;The main program continues to run in foreground.')</p>

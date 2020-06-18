@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.69.1" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.fa3d941d1d0e0ddc985804227feabffea55c89883eb0af34e0532a7ae9135151.css" integrity="sha256-&#43;j2UHR0ODdyYWAQif&#43;q//qVciYg&#43;sK804FMqeukTUVE=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2017-09-25T21:38:52+08:00" />
+<meta property="og:updated_time" content="2020-05-15T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,14 +295,17 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/proxy/"></a>
+      <a class="post-link" href="/post/front-end/html/">HTML</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="0001-01-01" class="post-time">
-        0001-01-01
+      <time datetime="2015-11-21" class="post-time">
+        2015-11-21
       </time>
-      
+      <div class="post-category">
+          <a href="http://csyezheng.github.io/categories/front-end/"> front-end </a>
+          
+        </div>
       
       
       
@@ -312,10 +315,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      from proxybroker import Broker, Checker async def check(proxy): broker = Broker() ip = await broker._resolver.get_real_ext_ip() checker = Checker(judges=None, real_ext_ip=ip) results = [] for proto in ['HTTPS', 'HTTP']: result = await checker._check(proxy, proto) results.append(result) return True if any(results) else False 
+      Introduction to HTML Getting started with HTML What is HTML? HTML (Hypertext Markup Language) is not a programming language; it is a markup language used to tell your browser how to structure the web pages you visit. HTML consists of a series of elements, an element may contain a data item or a chunk of text or an image, or perhaps nothing. A typical element includes an opening tag with
     </div>
     <div class="read-more">
-      <a href="/post/back-end/proxy/" class="read-more-link">Read more</a>
+      <a href="/post/front-end/html/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -326,7 +329,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/machine-learning/solution/"></a>
+      <a class="post-link" href="/post/back-end/elasticsearch/"></a>
     </h1>
     
     <div class="post-meta">
@@ -343,10 +346,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      author: &quot;Ye Zheng&quot; date: 2020-05-08 title: &quot;Solution&quot; tags: [ &quot;machine learning&quot;, ] categories: [ &quot;machine learning&quot;, ] FAQ imbalanced data  https://www.tensorflow.org/tutorials/structured_data/imbalanced_data https://stackoverflow.com/questions/43481490/keras-class-weights-class-weight-for-one-hot-encoding https://github.com/jbjorne/TEES/blob/master/Detectors/KerasDetectorBase.py https://towardsdatascience.com/practical-tips-for-class-imbalance-in-binary-classification-6ee29bcdb8a7 https://stackoverflow.com/questions/48485870/multi-label-classification-with-class-weights-in-keras  Class weight degrades Multi Label Classification Performance  https://datascience.stackexchange.com/questions/28040/class-weight-degrades-multi-label-classification-performance  What is the difference between multilabel and multiclass classification?  https://www.quora.com/What-is-the-difference-between-multilabel-and-multiclass-classification https://stats.stackexchange.com/questions/260505/should-i-use-a-categorical-cross-entropy-or-binary-cross-entropy-loss-for-binary  
+      Elasticsearch Tutorial Getting Started Installing and Running Elasticsearch Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
+Installing Sense Sense is a Kibana app that provides an interactive console for submitting requests to Elasticsearch directly from your browser.
     </div>
     <div class="read-more">
-      <a href="/post/machine-learning/solution/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/elasticsearch/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -357,7 +361,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/microservices/"></a>
+      <a class="post-link" href="/post/back-end/elk-stack/"></a>
     </h1>
     
     <div class="post-meta">
@@ -374,10 +378,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-       https://en.wikipedia.org/wiki/Microservices https://en.wikipedia.org/wiki/Service_discovery https://en.wikipedia.org/wiki/SOA_governance https://grpc.io/blog/grpc-load-balancing/ https://github.com/grpc/grpc/blob/master/doc/load-balancing.md https://www.nginx.com/blog/introduction-to-microservices/ https://github.com/gliderlabs/registrator https://github.com/micro/go-micro https://github.com/micro/examples https://github.com/apache/incubator-brpc/tree/master/example  
+      Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
+Install Beats Install Filebeat Install Metricbeat sudo pacman -S metricbeat sudo vim /etc/metricbeat/metricbeat.yml setup.dashboards.enabled: true From the Metricbeat install directory, enable the system module
+cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricbeat.
     </div>
     <div class="read-more">
-      <a href="/post/microservices/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/elk-stack/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -710,8 +716,6 @@
 
             
             
-              
-            
 
           
           
@@ -720,12 +724,6 @@
         
 
         
-        
-          <li class="">
-            <a href="/page/13/">
-              13
-            </a>
-          </li>
         
 
       
@@ -741,8 +739,6 @@
 
             
             
-              
-            
 
           
           
@@ -751,12 +747,6 @@
         
 
         
-        
-          <li class="">
-            <a href="/page/14/">
-              14
-            </a>
-          </li>
         
 
       
@@ -772,8 +762,6 @@
 
             
             
-              
-            
 
           
           
@@ -782,12 +770,6 @@
         
 
         
-        
-          <li class="">
-            <a href="/page/15/">
-              15
-            </a>
-          </li>
         
 
       
@@ -1102,10 +1084,107 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/26/">
+              26
+            </a>
+          </li>
+        
+
       
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/27/">
+              27
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/28/">
+              28
+            </a>
+          </li>
+        
+
       
 
       
+      
+      <li><a href="/page/26/">»</a></li>
+      
+
+      
+      
+      <li><a href="/page/28/">»»</a></li>
       
 
       </ul>

@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.69.1" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.fa3d941d1d0e0ddc985804227feabffea55c89883eb0af34e0532a7ae9135151.css" integrity="sha256-&#43;j2UHR0ODdyYWAQif&#43;q//qVciYg&#43;sK804FMqeukTUVE=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2017-09-25T21:38:52+08:00" />
+<meta property="og:updated_time" content="2020-05-15T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,6 +295,42 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/back-end/wagtail/">Wagtail</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2018-11-02" class="post-time">
+        2018-11-02
+      </time>
+      <div class="post-category">
+          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Getting started setting up a brand new Wagtail project $ pip install wagtail $ wagtail start mysite $ cd mysite $ pip install -r requirements.txt $ ./manage.py migrate $ ./manage.py createsuperuser $ ./manage.py runserver http://localhost:8000
+http://localhost:8000/admin/
+Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page.
+    </div>
+    <div class="read-more">
+      <a href="/post/back-end/wagtail/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/back-end/grpc/">gRPC by Go</a>
     </h1>
     
@@ -355,42 +391,6 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
     </div>
     <div class="read-more">
       <a href="/post/back-end/jwt/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/back-end/concurrent-programming-for-scalable-web-architectures/">Concurrent-Programming-for-Scalable-Web-Architectures</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2018-08-26" class="post-time">
-        2018-08-26
-      </time>
-      <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Introduction Scope of this Thesis We will have a detailed look on concurrency in three distinct areas of web architectures&ndash;connection handling, application logic and backend persistence. For each stage, we will discuss its main challenges and issues and explain existing approaches to tackle concurrency.
-Web Applications distinguish two separate types of web applications &ndash; web sites and web services.
-Web Sites some popular types for web sites that are interesting in terms of scalability and concurrency
-    </div>
-    <div class="read-more">
-      <a href="/post/back-end/concurrent-programming-for-scalable-web-architectures/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1065,6 +1065,69 @@ Web Sites some popular types for web sites that are interesting in terms of scal
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/17/">»</a></li>
@@ -1072,7 +1135,7 @@ Web Sites some popular types for web sites that are interesting in terms of scal
 
       
       
-      <li><a href="/page/25/">»»</a></li>
+      <li><a href="/page/28/">»»</a></li>
       
 
       </ul>

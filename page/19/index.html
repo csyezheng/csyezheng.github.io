@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.69.1" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.fa3d941d1d0e0ddc985804227feabffea55c89883eb0af34e0532a7ae9135151.css" integrity="sha256-&#43;j2UHR0ODdyYWAQif&#43;q//qVciYg&#43;sK804FMqeukTUVE=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2017-09-25T21:38:52+08:00" />
+<meta property="og:updated_time" content="2020-05-15T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,6 +295,40 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/back-end/kafka/">Kafka</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2018-07-23" class="post-time">
+        2018-07-23
+      </time>
+      <div class="post-category">
+          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Quickstart &gt; tar -xzf kafka_2.11-1.1.0.tgz &gt; cd kafka_2.11-1.1.0 Start the server bin/zookeeper-server-start.sh config/zookeeper.properties bin/kafka-server-start.sh config/server.properties Create a topic bin/kaftopics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic my-topic bin/kafka-topics.sh --list --zookeeper localhost:2181 Send some messages bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning Python client for the Apache Kafka #!/usr/bin/env python3 import logging from kafka import KafkaProducer from kafka.errors import KafkaError import msgpack log = logging.getLogger(__name__) def send(): producer = KafkaProducer(bootstrap_servers=['localhost:9092'], value_serializer=msgpack.
+    </div>
+    <div class="read-more">
+      <a href="/post/back-end/kafka/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/deep-learning/keras/">keras</a>
     </h1>
     
@@ -359,43 +393,6 @@
 </article>
 
   
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/devops/nginx/">Nginx</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2017-10-21" class="post-time">
-        2017-10-21
-      </time>
-      <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/devops/"> DevOps </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      General configuration Managing server entries It is possible to put different server blocks in different files. This allows you to easily enable or disable certain sites.
-# mkdir /etc/nginx/sites-available # mkdir /etc/nginx/sites-enabled Create a file inside the sites-available directory that contains one or more server blocks:
-/etc/nginx/sites-available/example server { .. } Append the following line at the end of the http block in /etc/nginx/nginx.conf:
-include sites-enabled/*; To enable a server block, simple create a symlink:
-    </div>
-    <div class="read-more">
-      <a href="/post/devops/nginx/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
 </section>
 
 
@@ -445,9 +442,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -468,9 +463,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -491,9 +484,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -514,9 +505,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -537,9 +526,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -560,9 +547,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -583,9 +568,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -606,9 +589,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -629,9 +610,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -652,9 +631,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -675,9 +652,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -698,9 +673,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -720,12 +693,10 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
           
 
-            
             
               
             
 
-          
           
 
         
@@ -752,11 +723,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -783,11 +752,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -814,11 +781,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -845,11 +810,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -876,11 +839,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -907,11 +868,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -938,11 +897,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -969,11 +926,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1000,11 +955,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1031,11 +984,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1062,11 +1013,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1093,11 +1042,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1114,6 +1061,69 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/20/">»</a></li>
@@ -1121,7 +1131,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
 
       
       
-      <li><a href="/page/25/">»»</a></li>
+      <li><a href="/page/28/">»»</a></li>
       
 
       </ul>

@@ -10,41 +10,62 @@
   
   <url>
     <loc>http://csyezheng.github.io/categories/</loc>
-    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://csyezheng.github.io/tags/machine-learning/</loc>
-    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://csyezheng.github.io/categories/machine-learning/</loc>
-    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/machine-learning/crash-course/</loc>
-    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
+    <loc>http://csyezheng.github.io/tags/multi-label/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/machine-learning/multi-label-classification/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://csyezheng.github.io/post/</loc>
-    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://csyezheng.github.io/tags/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/machine-learning/crash-course/</loc>
     <lastmod>2020-05-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -828,13 +849,6 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/tags/web/</loc>
-    <lastmod>2018-03-18T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://csyezheng.github.io/tags/website/</loc>
     <lastmod>2018-03-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -886,13 +900,6 @@
   <url>
     <loc>http://csyezheng.github.io/post/any-path/post-installation-for-archlinux/</loc>
     <lastmod>2017-09-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/</loc>
-    <lastmod>2020-01-13T21:41:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1080,6 +1087,13 @@
   </url>
   
   <url>
+    <loc>http://csyezheng.github.io/tags/web/</loc>
+    <lastmod>2015-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://csyezheng.github.io/tags/html/</loc>
     <lastmod>2015-11-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1094,7 +1108,43 @@
   </url>
   
   <url>
+    <loc>http://csyezheng.github.io/post/back-end/elasticsearch/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/back-end/elk-stack/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://csyezheng.github.io/post/back-end/proxy/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/health/bigger-leaner-stronger/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/health/bls-5-day-workout-routine/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/health/workout/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/machine-learning/kaggle/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
