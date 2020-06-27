@@ -6,10 +6,27 @@
     <description>Recent content in deep learning on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 26 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://csyezheng.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>kaggle</title>
+      <link>http://csyezheng.github.io/post/machine-learning/kaggle/</link>
+      <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/kaggle/</guid>
+      <description>https://www.kaggle.com/stackoverflow/statsquestions
+https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
+https://developer.ibm.com/exchanges/models/all/max-toxic-comment-classifier/
+https://www.quora.com/Is-binary-relevance-same-as-one-vs-all
+https://stackoverflow.com/questions/44674847/what-are-the-differences-between-all-these-cross-entropy-losses-in-keras-and-ten
+https://vict0rs.ch/2018/06/17/multilabel-text-classification-tensorflow/
+https://github.com/tensorflow/skflow/issues/113
+https://towardsdatascience.com/journey-to-the-center-of-multi-label-classification-384c40229bff
+https://www.reddit.com/r/MLQuestions/comments/5n82zb/loss_function_for_sparse_multilabel_classification/</description>
+    </item>
     
     <item>
       <title>keras</title>

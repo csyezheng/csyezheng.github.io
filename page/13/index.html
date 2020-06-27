@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-05-15T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,80 +295,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/scala/scalabyexample/">Scala By Example</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
-      </time>
-      <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/scala/"> Scala </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Introduction Scala smoothly integrates object-oriented and functional programming.
- Abstract types and mixin composition unify concepts from object and module systems. Pattern matching over class hierarchies uniﬁes functional and object-oriented data access. It greatly simpliﬁes the processing of XML trees. A ﬂexible syntax and type system enables the construction of advanced libraries and new domain speciﬁc languages.  Starting with simple expressions and functions, and working up through objects and classes, lists and streams, mutable state, pattern matching to more complete examples that show interesting programming techniques.
-    </div>
-    <div class="read-more">
-      <a href="/post/programming-languages/scala/scalabyexample/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/programming-languages/java/spring-boot/">spring-boot</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
-      </time>
-      <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/java/"> Java </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Building Java Projects with Maven Install Maven Maven is downloadable as a zip file at https://maven.apache.org/download.cgi.
-Once you have downloaded the zip file, unzip it to your computer. Then add the bin folder to your path.
-$ mvn -v Define a simple Maven build Maven projects are defined with an XML file named pom.xml. Create a file named pom.xml at the root of the project (i.e. put it next to the src folder) and give it the following contents:
-    </div>
-    <div class="read-more">
-      <a href="/post/programming-languages/java/spring-boot/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/programming-languages/go/standard-library/">standard-library</a>
+      <a class="post-link" href="/post/programming-languages/go/debugging-with-delve/">Delve Documentation</a>
     </h1>
     
     <div class="post-meta">
@@ -389,10 +316,86 @@ $ mvn -v Define a simple Maven build Maven projects are defined with an XML file
   <div class="post-content">
     
     <div class="post-summary">
-      io io.Writer import	stdlog &quot;log&quot; var loggers []*Logger var logLevel = Debug type Logger struct { level int logger *stdlog.Logger } func NewLogger(out io.Writer) *Logger { ret := &amp;Logger{level: logLevel, logger: stdlog.New(out, &quot;&quot;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)} loggers = append(loggers, ret) return ret } io.MultiWriter func init() { rand.Seed(time.Now().UTC().UnixNano()) log.SetLevel(&quot;warn&quot;) logger = log.NewLogger(os.Stdout) model.LoadConf() util.LoadMarkdown() i18n.Load() theme.Load() replaceServerConf() if &quot;dev&quot; == model.Conf.RuntimeMode { gin.SetMode(gin.DebugMode) } else { gin.SetMode(gin.ReleaseMode) } gin.DefaultWriter = io.MultiWriter(os.Stdout) } io.
+      Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &quot;fmt&quot; &quot;log&quot; &quot;net/http&quot; &quot;os&quot; ) const port = &quot;8000&quot; func main() { http.HandleFunc(&quot;/hi&quot;, hi) fmt.Println(&quot;runing on port: &quot; + port) log.Fatal(http.ListenAndServe(&quot;:&quot; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &quot;HostName: %s&quot;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/standard-library/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/go/debugging-with-delve/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/programming-languages/go/generate-model-structs-from-database/">generate-model-structs-from-database</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
+      </time>
+      <div class="post-category">
+          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
+          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Generate gorm model structs from database
+  https://github.com/smallnest/gen
+  https://github.com/wantedly/pq2gorm
+  https://github.com/go-xorm/cmd
+  
+    </div>
+    <div class="read-more">
+      <a href="/post/programming-languages/go/generate-model-structs-from-database/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/programming-languages/scala/getting-started/">Getting Started with Scala</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
+      </time>
+      <div class="post-category">
+          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
+          <a href="http://csyezheng.github.io/categories/scala/"> Scala </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Create A Scala Project With sbt In The Command Line Installation   Java 8 JDK javac -version 
+  install sbt
+  Create a project $ mkdir practice &amp;&amp; cd practice $ sbt new scala/hello-world.g8 # pull template from GitHub - hello-world - project (sbt uses this to install manage plugins and dependencies) - build.properties - src - main - scala (All of your scala code goes here) -Main.
+    </div>
+    <div class="read-more">
+      <a href="/post/programming-languages/scala/getting-started/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1130,6 +1133,48 @@ $ mvn -v Define a simple Maven build Maven projects are defined with an XML file
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/14/">»</a></li>
@@ -1137,7 +1182,7 @@ $ mvn -v Define a simple Maven build Maven projects are defined with an XML file
 
       
       
-      <li><a href="/page/28/">»»</a></li>
+      <li><a href="/page/30/">»»</a></li>
       
 
       </ul>

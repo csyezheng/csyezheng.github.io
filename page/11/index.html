@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-05-15T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,16 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/go/gorm/">gorm</a>
+      <a class="post-link" href="/post/back-end/elasticsearch/">Elasticsearch Tutorial</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-15" class="post-time">
+        2019-05-15
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
+          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
           
         </div>
       
@@ -316,10 +315,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      struct name and table name type User struct {} // default table name is `users` // Set User's table name to be `profiles` func (User) TableName() string { return &quot;profiles&quot; } gorm不定条件查询和分页操作 making dynamic query and pagination using gorm course := models.Course{} // The global db variable must be assigned to the local db variable. //
+      Getting Started Installing and Running Elasticsearch Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
+Installing Sense Sense is a Kibana app that provides an interactive console for submitting requests to Elasticsearch directly from your browser.
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/gorm/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/elasticsearch/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,16 +330,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/javascript/javascript/">JavaScript</a>
+      <a class="post-link" href="/post/big-data/elk-stack/">elk stack</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-15" class="post-time">
+        2019-05-15
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/javascript/"> JavaScript </a>
+          <a href="http://csyezheng.github.io/categories/big-data/"> big-data </a>
           
         </div>
       
@@ -351,10 +350,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //
+      Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
+Install Beats Install Filebeat Install Metricbeat sudo pacman -S metricbeat sudo vim /etc/metricbeat/metricbeat.yml setup.dashboards.enabled: true From the Metricbeat install directory, enable the system module
+cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricbeat.
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/javascript/javascript/" class="read-more-link">Read more</a>
+      <a href="/post/big-data/elk-stack/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -365,16 +366,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/go/package_download/">package_download</a>
+      <a class="post-link" href="/post/devops/docker/">Docker</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-04-25" class="post-time">
+        2019-04-25
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
+          <a href="http://csyezheng.github.io/categories/devops/"> DevOps </a>
           
         </div>
       
@@ -386,10 +386,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      gopm get -g -v golang.org/x/sys 
+      Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker add your user to the docker group.
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/package_download/" class="read-more-link">Read more</a>
+      <a href="/post/devops/docker/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1127,6 +1127,48 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/12/">»</a></li>
@@ -1134,7 +1176,7 @@
 
       
       
-      <li><a href="/page/28/">»»</a></li>
+      <li><a href="/page/30/">»»</a></li>
       
 
       </ul>

@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-05-15T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,16 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/go/go/">Golang</a>
+      <a class="post-link" href="/post/devops/devops/">DevOps</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-30" class="post-time">
+        2019-05-30
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
+          <a href="http://csyezheng.github.io/categories/devops/"> DevOps </a>
           
         </div>
       
@@ -316,25 +315,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      a-tour-of-go
-standard-library
-Debugging-with-Delve
-generate-model-structs-from-database
-glide
-gopm
-material
-package_download
-quick-start
-web-dev-with-gin-needed
-gin
-go-get-golang-x-solution.md
-good-at.md
-gorm.md
-modules.md
-photoprism.md
+      What is DevOps? DevOps (a clipped compound of &ldquo;development&rdquo; and &ldquo;operations&quot;) is a software engineering culture and practice that aims at unifying software development (Dev) and software operation (Ops). The main characteristic of the DevOps movement is to strongly advocate automation and monitoring at all steps of software construction, from integration, testing, releasing to deployment and infrastructure management. DevOps aims at shorter development cycles, increased deployment frequency, and more dependable
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/go/" class="read-more-link">Read more</a>
+      <a href="/post/devops/devops/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -345,16 +329,15 @@ photoprism.md
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/go/good-at/">Golang Pros and Cons</a>
+      <a class="post-link" href="/post/devops/kubernetes/">Kubernetes Basics</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-30" class="post-time">
+        2019-05-30
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
+          <a href="http://csyezheng.github.io/categories/devops/"> DevOps </a>
           
         </div>
       
@@ -366,10 +349,13 @@ photoprism.md
   <div class="post-content">
     
     <div class="post-summary">
-      Golang Pros  Modular design means the compiled binary is as small as possible and requires no dependencies. Like Java, it’s platform independent. You can compile it for any platform your servers and applications run on. Take that, Apple. Easy for your developers to learn because it’s based on C. You don’t need to go to a code bootcamp to become proficient. Has static type checking, meaning your code gets its bugs cleaned up at compile time, not in production.
+      Using Minikube to Create a Cluster Kubernetes Clusters Kubernetes coordinates a highly available cluster of computers that are connected to work as a single unit.
+applications need to be packaged in a way that decouples them from individual hosts: they need to be containerized.
+Kubernetes automates the distribution and scheduling of application containers across a cluster in a more efficient way.
+A Kubernetes cluster consists of two types of resources:
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/good-at/" class="read-more-link">Read more</a>
+      <a href="/post/devops/kubernetes/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -380,16 +366,15 @@ photoprism.md
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/go/gopm/">gopm</a>
+      <a class="post-link" href="/post/back-end/oauth2/">Django oauth2 provider</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-26" class="post-time">
+        2019-05-26
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
+          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
           
         </div>
       
@@ -401,10 +386,12 @@ photoprism.md
   <div class="post-content">
     
     <div class="post-summary">
-      go get -u github.com/gpmgo/gopm 
+      Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... 'provider', 'provider.oauth2', ) # urls.py url(r'^oauth2/', include('provider.oauth2.urls', namespace = 'oauth2')), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ?   Create a client entry in your database
+To find out which type of client you need to create, read Section 2.1.
+To create a new entry simply use the Django admin panel.
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/gopm/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/oauth2/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1142,6 +1129,48 @@ photoprism.md
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/11/">»</a></li>
@@ -1149,7 +1178,7 @@ photoprism.md
 
       
       
-      <li><a href="/page/28/">»»</a></li>
+      <li><a href="/page/30/">»»</a></li>
       
 
       </ul>

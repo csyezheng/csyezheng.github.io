@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-05-15T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,16 +295,16 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/go/generate-model-structs-from-database/">generate-model-structs-from-database</a>
+      <a class="post-link" href="/post/programming-languages/cpp/curl/">libcurl</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-09-16" class="post-time">
+        2019-09-16
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
+          <a href="http://csyezheng.github.io/categories/cpp/"> cpp </a>
           
         </div>
       
@@ -316,14 +316,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Generate gorm model structs from database
-  https://github.com/smallnest/gen
-  https://github.com/wantedly/pq2gorm
-  https://github.com/go-xorm/cmd
-  
+      #include &lt;curl/curl.h&gt; When using an external library you must link with it:
+$ g++ main.cpp -lcurl 
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/generate-model-structs-from-database/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/cpp/curl/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -334,16 +331,16 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/scala/getting-started/">Getting Started with Scala</a>
+      <a class="post-link" href="/post/programming-languages/cpp/3rd-libraries/">C&#43;&#43; 3rd party libraries</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-09-15" class="post-time">
+        2019-09-15
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/scala/"> Scala </a>
+          <a href="http://csyezheng.github.io/categories/cpp/"> Cpp </a>
           
         </div>
       
@@ -355,12 +352,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Create A Scala Project With sbt In The Command Line Installation   Java 8 JDK javac -version 
-  install sbt
-  Create a project $ mkdir practice &amp;&amp; cd practice $ sbt new scala/hello-world.g8 # pull template from GitHub - hello-world - project (sbt uses this to install manage plugins and dependencies) - build.properties - src - main - scala (All of your scala code goes here) -Main.
+      grpc/libevent/libev/libasio 实现高性能网络服务器 protobuf 数据结构序列化/反序列化，方便数据交换 LevelDB/RocksDB 嵌入式KV数据库 snappy/zlib/lz4 数据压缩，解压缩 jemalloc/tcmalloc 高效内存分配器，尤其多线程场景 jerasure Reed Sol
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/scala/getting-started/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/cpp/3rd-libraries/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -371,16 +366,16 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/go/gin/">Gin</a>
+      <a class="post-link" href="/post/programming-languages/cpp/jsoncpp/">jsoncpp</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-09-15" class="post-time">
+        2019-09-15
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
+          <a href="http://csyezheng.github.io/categories/cpp/"> cpp </a>
           
         </div>
       
@@ -392,11 +387,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
-$ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/sessions&quot; cookie-based Example import ( &quot;github.com/gin-contrib/sessions&quot; &quot;github.com/gin-contrib/sessions/cookie&quot; &quot;github.com/gin-gonic/gin&quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&quot;secret&quot;)) r.Use(sessions.Sessions(&quot;mysession&quot;, store)) r.GET(&quot;/incr&quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&quot;count&quot;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&quot;count&quot;, count) session.
+      
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/gin/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/cpp/jsoncpp/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1134,6 +1128,48 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/9/">»</a></li>
@@ -1141,7 +1177,7 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
 
       
       
-      <li><a href="/page/28/">»»</a></li>
+      <li><a href="/page/30/">»»</a></li>
       
 
       </ul>

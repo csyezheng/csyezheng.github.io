@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-05-15T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,7 +295,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/scala/a-tour-of-scala/">The tour of Scala</a>
+      <a class="post-link" href="/post/programming-languages/go/go-get-golang-x-solution/">go-get-golang-x-solution</a>
     </h1>
     
     <div class="post-meta">
@@ -304,7 +304,7 @@
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/scala/"> Scala </a>
+          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
           
         </div>
       
@@ -316,10 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Introduction Scala is object-oriented: every value is an object.  classes traits mixin-based composition as a clean replacement for multiple inheritance.  Scala is functional: every function is a value.  higher-order functions nested functions currying (multiple parameter lists) case classes pattern matching model algebraic types used in many functional programming languages. Singleton objects provide a convenient way to group functions that aren’t members of a class.  Scala is statically typed the type system supports:
+      问题描述 当我们使用 go get、go install、go mod 等命令时，会自动下载相应的包或依赖包。但由于众所周知的原因，类似于 golang.org/x/... 的包会出现下载失败
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/scala/a-tour-of-scala/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/go/go-get-golang-x-solution/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,7 +330,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/typescript/typescript/">TypeScript</a>
+      <a class="post-link" href="/post/programming-languages/go/go/">Golang</a>
     </h1>
     
     <div class="post-meta">
@@ -339,7 +339,7 @@
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/typescript/"> TypeScript </a>
+          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
           
         </div>
       
@@ -351,10 +351,25 @@
   <div class="post-content">
     
     <div class="post-summary">
-      TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件
+      a-tour-of-go
+standard-library
+Debugging-with-Delve
+generate-model-structs-from-database
+glide
+gopm
+material
+package_download
+quick-start
+web-dev-with-gin-needed
+gin
+go-get-golang-x-solution.md
+good-at.md
+gorm.md
+modules.md
+photoprism.md
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/typescript/typescript/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/go/go/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -365,15 +380,16 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/edx_oauth/">edx oauth</a>
+      <a class="post-link" href="/post/programming-languages/go/good-at/">Golang Pros and Cons</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-11-22" class="post-time">
-        2018-11-22
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
+          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
           
         </div>
       
@@ -385,23 +401,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Request URL: http://localhost:18381/api-auth/login/?next=/api/v1/courses/
-Query String Parameters: next: /api/v1/courses/
-Request Method: GET
-Status Code: 302 Found
-  Request URL: http://localhost:18381/login/edx-oidc/?next=/api/v1/courses/
-Query String Parameters: next: /api/v1/courses/
-Request Method: GET
-Status Code: 302 Found
-  Request URL: http://localhost:18000/oauth2/authorize/?redirect_uri=http://localhost:18381/complete/edx-oidc/&amp;client_id=discovery-key&amp;scope=openid+profile+email+permissions&amp;response_type=code&amp;state=W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x
-Query String Parameters:
- redirect_uri: http://localhost:18381/complete/edx-oidc/ client_id: discovery-key scope: openid profile email permissions response_type: code state: W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x  Request Method: GET
-Status Code: 302 Found
-  Request URL: http://localhost:18000/oauth2/authorize/confirm
-Request Method: GET
+      Golang Pros  Modular design means the compiled binary is as small as possible and requires no dependencies. Like Java, it’s platform independent. You can compile it for any platform your servers and applications run on. Take that, Apple. Easy for your developers to learn because it’s based on C. You don’t need to go to a code bootcamp to become proficient. Has static type checking, meaning your code gets its bugs cleaned up at compile time, not in production.
     </div>
     <div class="read-more">
-      <a href="/post/back-end/edx_oauth/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/go/good-at/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1139,6 +1142,48 @@ Request Method: GET
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/16/">»</a></li>
@@ -1146,7 +1191,7 @@ Request Method: GET
 
       
       
-      <li><a href="/page/28/">»»</a></li>
+      <li><a href="/page/30/">»»</a></li>
       
 
       </ul>

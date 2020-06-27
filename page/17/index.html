@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-05-15T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,15 +295,16 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/concurrent-programming-for-scalable-web-architectures/">Concurrent-Programming-for-Scalable-Web-Architectures</a>
+      <a class="post-link" href="/post/programming-languages/go/package_download/">package_download</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-08-26" class="post-time">
-        2018-08-26
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
+          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
           
         </div>
       
@@ -315,12 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Introduction Scope of this Thesis We will have a detailed look on concurrency in three distinct areas of web architectures&ndash;connection handling, application logic and backend persistence. For each stage, we will discuss its main challenges and issues and explain existing approaches to tackle concurrency.
-Web Applications distinguish two separate types of web applications &ndash; web sites and web services.
-Web Sites some popular types for web sites that are interesting in terms of scalability and concurrency
+      gopm get -g -v golang.org/x/sys 
     </div>
     <div class="read-more">
-      <a href="/post/back-end/concurrent-programming-for-scalable-web-architectures/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/go/package_download/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,15 +330,16 @@ Web Sites some popular types for web sites that are interesting in terms of scal
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/distributed-systems/">distributed systems</a>
+      <a class="post-link" href="/post/programming-languages/go/photoprism/">photoprism</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-08-26" class="post-time">
-        2018-08-26
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
+          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
           
         </div>
       
@@ -351,10 +351,13 @@ Web Sites some popular types for web sites that are interesting in terms of scal
   <div class="post-content">
     
     <div class="post-summary">
-      
+      Step 1: Clone this project:
+git clone https://github.com/photoprism/photoprism.git Step 2: Start Docker containers:
+cd photoprism sudo docker-compose up Step 3: Open a new terminal to the photoprism container:
+sudo docker-compose exec photoprism bash 
     </div>
     <div class="read-more">
-      <a href="/post/back-end/distributed-systems/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/go/photoprism/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -365,15 +368,16 @@ Web Sites some popular types for web sites that are interesting in terms of scal
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/high-concurrency/">high concurrency</a>
+      <a class="post-link" href="/post/programming-languages/python/datetime/">Python datetime</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-08-26" class="post-time">
-        2018-08-26
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
+          <a href="http://csyezheng.github.io/categories/python/"> Python </a>
           
         </div>
       
@@ -385,10 +389,13 @@ Web Sites some popular types for web sites that are interesting in terms of scal
   <div class="post-content">
     
     <div class="post-summary">
-      高并发 高并发其实挺容易的，当你明白了一万并发的原理，然后扩展到百万、千万、亿万级很easy 要点有如下几项： 1、垂直分层：DNS层、跨机房部署
+      datetime 8.1. datetime
+The datetime module, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation.
+There are two kinds of date and time objects: “naive” and “aware”.
+An aware object has sufficient knowledge of applicable algorithmic and political time adjustments, such as time zone and daylight saving time information, to locate itself relative to other aware objects. An aware object is used to represent a specific moment in time.
     </div>
     <div class="read-more">
-      <a href="/post/back-end/high-concurrency/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/python/datetime/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1126,6 +1133,48 @@ Web Sites some popular types for web sites that are interesting in terms of scal
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/18/">»</a></li>
@@ -1133,7 +1182,7 @@ Web Sites some popular types for web sites that are interesting in terms of scal
 
       
       
-      <li><a href="/page/28/">»»</a></li>
+      <li><a href="/page/30/">»»</a></li>
       
 
       </ul>

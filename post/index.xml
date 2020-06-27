@@ -6,10 +6,112 @@
     <description>Recent content in Posts on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://csyezheng.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Grafana</title>
+      <link>http://csyezheng.github.io/post/devops/grafana/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/devops/grafana/</guid>
+      <description>Reference
+ https://grafana.com/grafana/dashboards/893  </description>
+    </item>
+    
+    <item>
+      <title>Prometheus</title>
+      <link>http://csyezheng.github.io/post/devops/prometheus/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/devops/prometheus/</guid>
+      <description>Prometheus 入门与实践 吴 莉, 殷 一鸣, 和 蔡 林 2018 年 5 月 30 日发布 随着容器技术的迅速发展，Kubernetes 已然成为大家追捧的容器集群管理系统。Promet</description>
+    </item>
+    
+    <item>
+      <title>Question answering</title>
+      <link>http://csyezheng.github.io/post/natural-language-processing/question-answering/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/natural-language-processing/question-answering/</guid>
+      <description>Reference
+ https://github.com/deepmipt/DeepPavlov https://github.com/deepset-ai/FARM https://github.com/huggingface/transformers https://github.com/deepset-ai/haystack https://github.com/deepset-ai/COVID-QA https://demo.allennlp.org/reading-comprehension https://github.com/baidu/AnyQ https://github.com/allenai/bi-att-flow https://github.com/google-research/language/tree/master/language/question_answering BERT Question Answering Inference with Mixed Precision in TensorFlow https://www.kaggle.com/c/tensorflow2-question-answering/ https://github.com/chrischute/squad https://github.com/ColasGael/QA-squad https://github.com/IBM/MAX-Question-Answering http://web.stanford.edu/class/cs224n/project/default-final-project-handout.pdf https://github.com/baidu/DuReader  </description>
+    </item>
+    
+    <item>
+      <title>tencent nlp interview</title>
+      <link>http://csyezheng.github.io/post/interview/tencent-nlp-interview/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/interview/tencent-nlp-interview/</guid>
+      <description>一面（技术面） 面试形式：电话面试。 简要的自我介绍。 研究生阶段最有挑战的项目是什么？ 对于这个项目，传统的方法是怎么样的？ 列举下这个任务在传统用</description>
+    </item>
+    
+    <item>
+      <title>Top 20 Python Libraries for Data Science</title>
+      <link>http://csyezheng.github.io/post/machine-learning/top-20-python-libraries/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/top-20-python-libraries/</guid>
+      <description>Core Libraries &amp;amp; Statistics  NumPy SciPy Pandas StatsModels  Visualization Matplotlib Seaborn Plotly Bokeh Pydot  Machine Learning Scikit-learn XGBoost Eli5  Deep Learning TensorFlow PyTorch Keras  Distributed Deep Learning Dist-keras / elephas / spark-deep-learning  Natural Language Processing NLTK SpaCy Gensim  Data Scraping Scrapy  </description>
+    </item>
+    
+    <item>
+      <title>Top Websites for Machine Learning</title>
+      <link>http://csyezheng.github.io/post/machine-learning/top-websites/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/top-websites/</guid>
+      <description>AI Hub</description>
+    </item>
+    
+    <item>
+      <title>Skincare</title>
+      <link>http://csyezheng.github.io/post/health/skincare/</link>
+      <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/health/skincare/</guid>
+      <description>Skincare Cleanse (清洁) oil cleanser mild cleanser 油性皮肤用用 38～40 度的热水比较好。比皮表温度稍高但又不觉得烫，容易把溢出的油脂洗掉。 使用尽量柔软的毛巾，毛巾每周清洗</description>
+    </item>
+    
+    <item>
+      <title>Bigger Leaner Stronger 5-DAY WORKOUT ROUTINE</title>
+      <link>http://csyezheng.github.io/post/health/bls-5-day-workout-routine/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/health/bls-5-day-workout-routine/</guid>
+      <description>PHASE 1 WORKOUT 1 | PUSH Barbell Bench Press (杠铃卧推) Warm-up and 3 hard sets Incline Barbell Bench Press(斜杠铃卧推) 3 hard sets Dumbbell Bench Press(哑铃卧推) 3 hard sets Triceps Pushdown(肱三头肌下拉</description>
+    </item>
+    
+    <item>
+      <title>workout</title>
+      <link>http://csyezheng.github.io/post/health/workout/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/health/workout/</guid>
+      <description>Barbell Bench Press (杠铃卧推) Incline Barbell Bench Press(斜杠铃卧推) Dumbbell Bench Press(哑铃卧推) Triceps Pushdown(肱三头肌下拉) Barbell Deadlift (杠铃硬拉) One-Arm Dumbbell Row (单臂哑铃</description>
+    </item>
+    
+    <item>
+      <title>Search Architecture</title>
+      <link>http://csyezheng.github.io/post/back-end/search-architecture/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/search-architecture/</guid>
+      <description>搜索服务使用说明 &#34;\nst=\u003estart: 开始\ne=\u003eend: 结束\n\nop1=\u003eoperation: 服务订阅\ncond1=\u003ec</description>
+    </item>
+    
+    <item>
+      <title>Bigger Leaner Stronger</title>
+      <link>http://csyezheng.github.io/post/health/bigger-leaner-stronger/</link>
+      <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/health/bigger-leaner-stronger/</guid>
+      <description>Workouts Meal Plans Part 1: What’s in This for You? 1. The Promise You absolutely, positively can have the lean, muscular, and powerful body that you dream about.
+2. Who Is Mike Matthews and Why Should I Care? 3. Why Bigger Leaner Stronger Is Different Part 2: Key Things “They” Aren’t Telling You 4. The Hidden Barrier 5. What Most Men Will Never Know about Getting Fit – Part 1 6.</description>
+    </item>
     
     <item>
       <title>Multi-label classification</title>
@@ -47,6 +149,15 @@ Transforms between iterable of iterables and a multilabel format (binary matrix)
   compute_class_weight
 Estimate class weights for unbalanced datasets.
         </description>
+    </item>
+    
+    <item>
+      <title>Solution for imbalanced data</title>
+      <link>http://csyezheng.github.io/post/machine-learning/solution/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/solution/</guid>
+      <description>FAQ imbalanced data  https://www.tensorflow.org/tutorials/structured_data/imbalanced_data https://stackoverflow.com/questions/43481490/keras-class-weights-class-weight-for-one-hot-encoding https://github.com/jbjorne/TEES/blob/master/Detectors/KerasDetectorBase.py https://towardsdatascience.com/practical-tips-for-class-imbalance-in-binary-classification-6ee29bcdb8a7 https://stackoverflow.com/questions/48485870/multi-label-classification-with-class-weights-in-keras  Class weight degrades Multi Label Classification Performance  https://datascience.stackexchange.com/questions/28040/class-weight-degrades-multi-label-classification-performance  What is the difference between multilabel and multiclass classification?  https://www.quora.com/What-is-the-difference-between-multilabel-and-multiclass-classification https://stats.stackexchange.com/questions/260505/should-i-use-a-categorical-cross-entropy-or-binary-cross-entropy-loss-for-binary  </description>
     </item>
     
     <item>
@@ -89,132 +200,12 @@ Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which 
     </item>
     
     <item>
-      <title>C&#43;&#43; Library Management</title>
-      <link>http://csyezheng.github.io/post/programming-languages/cpp/cpp-library-management/</link>
-      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      <title>proxy for crawler</title>
+      <link>http://csyezheng.github.io/post/web-scraping/proxy/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/programming-languages/cpp/cpp-library-management/</guid>
-      <description>In general, you are going to have to end up with
- Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&amp;rsquo;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).</description>
-    </item>
-    
-    <item>
-      <title>libcurl</title>
-      <link>http://csyezheng.github.io/post/programming-languages/cpp/curl/</link>
-      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/cpp/curl/</guid>
-      <description>#include &amp;lt;curl/curl.h&amp;gt; When using an external library you must link with it:
-$ g++ main.cpp -lcurl </description>
-    </item>
-    
-    <item>
-      <title>C&#43;&#43; 3rd party libraries</title>
-      <link>http://csyezheng.github.io/post/programming-languages/cpp/3rd-libraries/</link>
-      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/cpp/3rd-libraries/</guid>
-      <description>grpc/libevent/libev/libasio 实现高性能网络服务器 protobuf 数据结构序列化/反序列化，方便数据交换 LevelDB/RocksDB 嵌入式KV数据库 snappy/zlib/lz4 数据压缩，解压缩 jemalloc/tcmalloc 高效内存分配器，尤其多线程场景 jerasure Reed Sol</description>
-    </item>
-    
-    <item>
-      <title>jsoncpp</title>
-      <link>http://csyezheng.github.io/post/programming-languages/cpp/jsoncpp/</link>
-      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/cpp/jsoncpp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CMake</title>
-      <link>http://csyezheng.github.io/post/programming-languages/cpp/cmake/</link>
-      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/cpp/cmake/</guid>
-      <description>如果工程存在多个目录,需要确保每个要管理的目录都存在一个 CMakeLists.txt． Set a name, version, and enable languages for the entire project. project(&amp;lt;PROJECT-NAME&amp;gt; [LANGUAGES] [&amp;lt;language-name&amp;gt;...]) Sets the name of the project and stores the name in the PROJECT_NAME</description>
-    </item>
-    
-    <item>
-      <title>C&#43;&#43; tools</title>
-      <link>http://csyezheng.github.io/post/programming-languages/cpp/tools/</link>
-      <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/cpp/tools/</guid>
-      <description>Tools clang-format 格式化c++代码，同类工具还有astyle。保持代码风格统一是个好习惯。 qt creator vs以外我觉得最好用的c++ ide，代码补全质量高（基于li</description>
-    </item>
-    
-    <item>
-      <title>DevOps</title>
-      <link>http://csyezheng.github.io/post/devops/devops/</link>
-      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/devops/devops/</guid>
-      <description>What is DevOps? DevOps (a clipped compound of &amp;ldquo;development&amp;rdquo; and &amp;ldquo;operations&amp;quot;) is a software engineering culture and practice that aims at unifying software development (Dev) and software operation (Ops). The main characteristic of the DevOps movement is to strongly advocate automation and monitoring at all steps of software construction, from integration, testing, releasing to deployment and infrastructure management. DevOps aims at shorter development cycles, increased deployment frequency, and more dependable</description>
-    </item>
-    
-    <item>
-      <title>Kubernetes Basics</title>
-      <link>http://csyezheng.github.io/post/devops/kubernetes/</link>
-      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/devops/kubernetes/</guid>
-      <description>Using Minikube to Create a Cluster Kubernetes Clusters Kubernetes coordinates a highly available cluster of computers that are connected to work as a single unit.
-applications need to be packaged in a way that decouples them from individual hosts: they need to be containerized.
-Kubernetes automates the distribution and scheduling of application containers across a cluster in a more efficient way.
-A Kubernetes cluster consists of two types of resources:</description>
-    </item>
-    
-    <item>
-      <title>Django oauth2 provider</title>
-      <link>http://csyezheng.github.io/post/back-end/oauth2/</link>
-      <pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/back-end/oauth2/</guid>
-      <description>Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... &#39;provider&#39;, &#39;provider.oauth2&#39;, ) # urls.py url(r&#39;^oauth2/&#39;, include(&#39;provider.oauth2.urls&#39;, namespace = &#39;oauth2&#39;)), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ?   Create a client entry in your database
-To find out which type of client you need to create, read Section 2.1.
-To create a new entry simply use the Django admin panel.</description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>http://csyezheng.github.io/post/devops/docker/</link>
-      <pubDate>Thu, 25 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/devops/docker/</guid>
-      <description>Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&amp;ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&amp;ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker add your user to the docker group.</description>
-    </item>
-    
-    <item>
-      <title>microservices</title>
-      <link>http://csyezheng.github.io/post/back-end/microservices/</link>
-      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/back-end/microservices/</guid>
-      <description>第1章 微服务 1.1 什么是微服务 微服务就是一些协同工作的小而自治的服务 1.1.1 很小，专注于做好一件事 在一个单块系统内，通常会创建一些抽象层或者模块来保证</description>
-    </item>
-    
-    <item>
-      <title>A Tour of Go</title>
-      <link>http://csyezheng.github.io/post/programming-languages/go/a-tour-of-go/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/go/a-tour-of-go/</guid>
-      <description>Basics Packages, variables, and functions. Packages Programs start running in package main.
-By convention, the package name is the same as the last element of the import path. For instance, the &amp;quot;math/rand&amp;quot; package comprises files that begin with the statement package rand.
-Imports It is good style to use the factored import statement.
-import ( &amp;quot;fmt&amp;quot; &amp;quot;math/rand&amp;quot; ) Exported names In Go, a name is exported if it begins with a capital letter.</description>
-    </item>
-    
-    <item>
-      <title>Debugging JavaScript in Chrome DevTools</title>
-      <link>http://csyezheng.github.io/post/programming-languages/javascript/debug/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/javascript/debug/</guid>
-      <description>Get Started Step 2: Get familiar with the Sources panel UI The Sources panel is where you debug JavaScript.
-Open DevTools by pressing Command+Option+I (Mac) or Control+Shift+I (Windows, Linux). This shortcut opens the Consolepanel.
-Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: Set a line-of-code breakpoint Step 6: Check variable values </description>
+      <guid>http://csyezheng.github.io/post/web-scraping/proxy/</guid>
+      <description>from proxybroker import Broker, Checker async def check(proxy): broker = Broker() ip = await broker._resolver.get_real_ext_ip() checker = Checker(judges=None, real_ext_ip=ip) results = [] for proto in [&#39;HTTPS&#39;, &#39;HTTP&#39;]: result = await checker._check(proxy, proto) results.append(result) return True if any(results) else False </description>
     </item>
     
   </channel>

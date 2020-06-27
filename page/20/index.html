@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-05-15T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,15 +295,16 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/devops/nginx/">Nginx</a>
+      <a class="post-link" href="/post/programming-languages/python/the-python-tutorial/">The Python Tutorial</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-10-21" class="post-time">
-        2017-10-21
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/devops/"> DevOps </a>
+          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
+          <a href="http://csyezheng.github.io/categories/python/"> Python </a>
           
         </div>
       
@@ -315,13 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      General configuration Managing server entries It is possible to put different server blocks in different files. This allows you to easily enable or disable certain sites.
-# mkdir /etc/nginx/sites-available # mkdir /etc/nginx/sites-enabled Create a file inside the sites-available directory that contains one or more server blocks:
-/etc/nginx/sites-available/example server { .. } Append the following line at the end of the http block in /etc/nginx/nginx.conf:
-include sites-enabled/*; To enable a server block, simple create a symlink:
+      The Python Tutorial 1. Whetting Your Appetite The Python interpreter is easily extended with new functions and data types implemented in C or C++ (or other languages callable from C). Python allows you to split your program into modules that can be reused in other Python programs. It comes with a large collection of standard modules that you can use as the basis of your programs — or as examples
     </div>
     <div class="read-more">
-      <a href="/post/devops/nginx/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/python/the-python-tutorial/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -332,15 +330,16 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/postgresql/">PostgreSQL</a>
+      <a class="post-link" href="/post/programming-languages/scala/a-tour-of-scala/">The tour of Scala</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-09-30" class="post-time">
-        2017-09-30
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
+          <a href="http://csyezheng.github.io/categories/scala/"> Scala </a>
           
         </div>
       
@@ -352,10 +351,10 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
   <div class="post-content">
     
     <div class="post-summary">
-      Installing PostgreSQL $ sudo pacman -S postgresql $ sudo -u postgres -i [postgres]$ initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data' [postgres]$ exit $ pg_ctl -D /var/lib/postgres/data -l logfile start $ systemctl start postgresql.service $ systemctl enable postgresql.service Create your first database/user Access the database shell $ [postgres]$ psql -d myDatabaseName \help \c &lt;database&gt; \du # list all users and their permission levels \dt # show summary information about all tables \q \?
+      Introduction Scala is object-oriented: every value is an object.  classes traits mixin-based composition as a clean replacement for multiple inheritance.  Scala is functional: every function is a value.  higher-order functions nested functions currying (multiple parameter lists) case classes pattern matching model algebraic types used in many functional programming languages. Singleton objects provide a convenient way to group functions that aren’t members of a class.  Scala is statically typed the type system supports:
     </div>
     <div class="read-more">
-      <a href="/post/back-end/postgresql/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/scala/a-tour-of-scala/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -366,15 +365,16 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/any-path/post-installation-for-archlinux/">Post-installation for archlinux</a>
+      <a class="post-link" href="/post/programming-languages/typescript/typescript/">TypeScript</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-09-26" class="post-time">
-        2017-09-26
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/any-path/"> any-path </a>
+          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
+          <a href="http://csyezheng.github.io/categories/typescript/"> TypeScript </a>
           
         </div>
       
@@ -386,12 +386,10 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
   <div class="post-content">
     
     <div class="post-summary">
-      Reboot into the new system Set the keyboard layout and Console fonts If you have the 4K display, console fonts will be extremely small.
-$ setfont sun12x22 Connect to the internet nmcli device wifi list nmcli device wifi connect TP-LINK_GZS password a3628436 ping baidu.com Unofficial user repositories sudo vim /etc/pacman.conf [archlinuxcn] Server = https://repo.archlinuxcn.org/$arch Adding unofficial keys
-sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman -S adobe-source-han-sans-cn-fonts sudo pacman -S adobe-source-han-sans-tw-fonts sudo pacman -S noto-fonts-emoji otf-latinmodern-math ttf-inconsolata Graphical user interface Display server sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight xorg-xrdb is using to loading a user-level configuration dotfile, typically located at ~/.
+      TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件
     </div>
     <div class="read-more">
-      <a href="/post/any-path/post-installation-for-archlinux/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/typescript/typescript/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1129,6 +1127,48 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/21/">»</a></li>
@@ -1136,7 +1176,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
 
       
       
-      <li><a href="/page/28/">»»</a></li>
+      <li><a href="/page/30/">»»</a></li>
       
 
       </ul>

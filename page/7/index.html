@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-05-15T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,16 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/go/a-tour-of-go/">A Tour of Go</a>
+      <a class="post-link" href="/post/back-end/scrapy-with-django/">Scraping with Scrapy and Django Integration</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2020-02-12" class="post-time">
+        2020-02-12
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
+          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
           
         </div>
       
@@ -316,13 +315,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Basics Packages, variables, and functions. Packages Programs start running in package main.
-By convention, the package name is the same as the last element of the import path. For instance, the &quot;math/rand&quot; package comprises files that begin with the statement package rand.
-Imports It is good style to use the factored import statement.
-import ( &quot;fmt&quot; &quot;math/rand&quot; ) Exported names In Go, a name is exported if it begins with a capital letter.
+      Installing Dependencies (Optional) $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple $ python -m pip install --user virtualenv $ python -m pip install --user virtualenvwrapper $ vim ~/.bashrc export WORKON_HOME=$HOME/.virtualenvs export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv source $HOME/.local/bin/virtualenvwrapper.sh $ source ~/.bashrc $ mkvirtualenv stock-screener pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat Creating a Django Project $ django-admin startproject stock_screener $ cd stock_screener $ mkdir stock_screener/apps/basic_info $ django-admin startapp basic_info stock_screener/apps/basic_info $ mkdir stock_screener/apps/northbound $ django-admin startapp northbound stock_screener/apps/northbound $ mkdir stock_screener/apps/financial_metrics $ django-admin startapp financial_metrics stock_screener/apps/financial_metrics $ mkdir stock_screener/apps/quotes $ django-admin startapp quotes stock_screener/apps/quotes $ mkdir stock_screener/apps/jobs $ django-admin startapp jobs stock_screener/apps/jobs Cannot add backslash suffix when run startapp command.
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/a-tour-of-go/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/scrapy-with-django/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -333,16 +329,15 @@ import ( &quot;fmt&quot; &quot;math/rand&quot; ) Exported names In Go, a name is
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/javascript/debug/">Debugging JavaScript in Chrome DevTools</a>
+      <a class="post-link" href="/post/web-scraping/proxy/">proxy for crawler</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2020-01-15" class="post-time">
+        2020-01-15
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/javascript/"> JavaScript </a>
+          <a href="http://csyezheng.github.io/categories/web-scraping/"> web-scraping </a>
           
         </div>
       
@@ -354,12 +349,10 @@ import ( &quot;fmt&quot; &quot;math/rand&quot; ) Exported names In Go, a name is
   <div class="post-content">
     
     <div class="post-summary">
-      Get Started Step 2: Get familiar with the Sources panel UI The Sources panel is where you debug JavaScript.
-Open DevTools by pressing Command+Option+I (Mac) or Control+Shift+I (Windows, Linux). This shortcut opens the Consolepanel.
-Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: Set a line-of-code breakpoint Step 6: Check variable values 
+      from proxybroker import Broker, Checker async def check(proxy): broker = Broker() ip = await broker._resolver.get_real_ext_ip() checker = Checker(judges=None, real_ext_ip=ip) results = [] for proto in ['HTTPS', 'HTTP']: result = await checker._check(proxy, proto) results.append(result) return True if any(results) else False 
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/javascript/debug/" class="read-more-link">Read more</a>
+      <a href="/post/web-scraping/proxy/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -370,16 +363,16 @@ Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: S
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/go/debugging-with-delve/">Delve Documentation</a>
+      <a class="post-link" href="/post/programming-languages/cpp/cpp-library-management/">C&#43;&#43; Library Management</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-09-16" class="post-time">
+        2019-09-16
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
+          <a href="http://csyezheng.github.io/categories/cpp/"> cpp </a>
           
         </div>
       
@@ -391,10 +384,11 @@ Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: S
   <div class="post-content">
     
     <div class="post-summary">
-      Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &quot;fmt&quot; &quot;log&quot; &quot;net/http&quot; &quot;os&quot; ) const port = &quot;8000&quot; func main() { http.HandleFunc(&quot;/hi&quot;, hi) fmt.Println(&quot;runing on port: &quot; + port) log.Fatal(http.ListenAndServe(&quot;:&quot; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &quot;HostName: %s&quot;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.
+      In general, you are going to have to end up with
+ Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&rsquo;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/debugging-with-delve/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/cpp/cpp-library-management/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1216,6 +1210,54 @@ Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: S
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/8/">»</a></li>
@@ -1223,7 +1265,7 @@ Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: S
 
       
       
-      <li><a href="/page/28/">»»</a></li>
+      <li><a href="/page/30/">»»</a></li>
       
 
       </ul>

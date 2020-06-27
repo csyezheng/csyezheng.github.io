@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>interview on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/categories/interview/</link>
+    <description>Recent content in interview on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/categories/interview/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>tencent nlp interview</title>
+      <link>http://csyezheng.github.io/post/interview/tencent-nlp-interview/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/interview/tencent-nlp-interview/</guid>
+      <description>一面（技术面） 面试形式：电话面试。 简要的自我介绍。 研究生阶段最有挑战的项目是什么？ 对于这个项目，传统的方法是怎么样的？ 列举下这个任务在传统用</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-05-15T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,15 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/oauth2/">Django oauth2 provider</a>
+      <a class="post-link" href="/post/machine-learning/few-shot-learning/">Few shot learning</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-05-26" class="post-time">
-        2019-05-26
+      <time datetime="2020-04-27" class="post-time">
+        2020-04-27
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          <a href="http://csyezheng.github.io/categories/machine-learning/"> machine learning </a>
           
         </div>
       
@@ -315,12 +315,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... 'provider', 'provider.oauth2', ) # urls.py url(r'^oauth2/', include('provider.oauth2.urls', namespace = 'oauth2')), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ?   Create a client entry in your database
-To find out which type of client you need to create, read Section 2.1.
-To create a new entry simply use the Django admin panel.
+      Reference  https://github.com/AnthonyMRios/multi-label-zero-shot Few-Shot and Zero-Shot Multi-Label Learning for Structured Label Spaces Deep Neural Networks for Multi-Label Text Classification https://github.com/YujiaBao/Distributional-Signatures Induction Networks for Few-Shot Text Classification https://github.com/laohur/LearnToCompareText  
     </div>
     <div class="read-more">
-      <a href="/post/back-end/oauth2/" class="read-more-link">Read more</a>
+      <a href="/post/machine-learning/few-shot-learning/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,15 +329,15 @@ To create a new entry simply use the Django admin panel.
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/devops/docker/">Docker</a>
+      <a class="post-link" href="/post/machine-learning/learn-ml/">Learning Path for Machine Learning</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-04-25" class="post-time">
-        2019-04-25
+      <time datetime="2020-04-27" class="post-time">
+        2020-04-27
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/devops/"> DevOps </a>
+          <a href="http://csyezheng.github.io/categories/machine-learning/"> machine learning </a>
           
         </div>
       
@@ -351,10 +349,13 @@ To create a new entry simply use the Django admin panel.
   <div class="post-content">
     
     <div class="post-summary">
-      Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker add your user to the docker group.
+      Learning Path for Machine Learning Basics of machine learning with TensorFlow Step 1: Understand what ML is all about The book ‘Deep Learning in Python’ by Francois Chollet, creator of Keras, is a great place to get started. Read chapters 1-4 to understand the fundamentals of ML from a programmer’s perspective.
+Google Developers Machine Learning Crash Course
+Machine Learning Glossary
+Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which takes you beyond the basics into introductory Computer Vision, NLP, and Sequence modelling.
     </div>
     <div class="read-more">
-      <a href="/post/devops/docker/" class="read-more-link">Read more</a>
+      <a href="/post/machine-learning/learn-ml/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -365,15 +366,15 @@ To create a new entry simply use the Django admin panel.
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/microservices/">microservices</a>
+      <a class="post-link" href="/post/any-path/wireshark/">Wireshark</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-04-20" class="post-time">
-        2019-04-20
+      <time datetime="2020-03-07" class="post-time">
+        2020-03-07
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          <a href="http://csyezheng.github.io/categories/any-path/"> any-path </a>
           
         </div>
       
@@ -385,10 +386,10 @@ To create a new entry simply use the Django admin panel.
   <div class="post-content">
     
     <div class="post-summary">
-      第1章 微服务 1.1 什么是微服务 微服务就是一些协同工作的小而自治的服务 1.1.1 很小，专注于做好一件事 在一个单块系统内，通常会创建一些抽象层或者模块来保证
+      $ tshark -r all.pcapng.gz -i http==1 -O http -T fields -e http.request.method -e http.request.uri -e http.request.line -e http.response.line &gt; dump.txt 
     </div>
     <div class="read-more">
-      <a href="/post/back-end/microservices/" class="read-more-link">Read more</a>
+      <a href="/post/any-path/wireshark/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1210,6 +1211,54 @@ To create a new entry simply use the Django admin panel.
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/7/">»</a></li>
@@ -1217,7 +1266,7 @@ To create a new entry simply use the Django admin panel.
 
       
       
-      <li><a href="/page/28/">»»</a></li>
+      <li><a href="/page/30/">»»</a></li>
       
 
       </ul>

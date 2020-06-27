@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-05-15T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,15 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/front-end/html/">HTML</a>
+      <a class="post-link" href="/post/back-end/make-a-web-site/">MAKE A WEBSITE</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2015-11-21" class="post-time">
-        2015-11-21
+      <time datetime="2018-03-18" class="post-time">
+        2018-03-18
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/front-end/"> front-end </a>
+          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
           
         </div>
       
@@ -315,10 +315,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Introduction to HTML Getting started with HTML What is HTML? HTML (Hypertext Markup Language) is not a programming language; it is a markup language used to tell your browser how to structure the web pages you visit. HTML consists of a series of elements, an element may contain a data item or a chunk of text or an image, or perhaps nothing. A typical element includes an opening tag with
+      GET A DOMAIN &amp; WEB HOSTING Register a domain name Namesilo Create New Account csyezheng csye3631 SEARCH Domain and REGISTER NameServers：域名解析服务器设置，未确定的可以等稍后在后台设置也一样； Auto-Renew
     </div>
     <div class="read-more">
-      <a href="/post/front-end/html/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/make-a-web-site/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -329,14 +329,17 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/elasticsearch/"></a>
+      <a class="post-link" href="/post/devops/nginx/">Nginx</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="0001-01-01" class="post-time">
-        0001-01-01
+      <time datetime="2017-10-21" class="post-time">
+        2017-10-21
       </time>
-      
+      <div class="post-category">
+          <a href="http://csyezheng.github.io/categories/devops/"> DevOps </a>
+          
+        </div>
       
       
       
@@ -346,11 +349,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Elasticsearch Tutorial Getting Started Installing and Running Elasticsearch Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
-Installing Sense Sense is a Kibana app that provides an interactive console for submitting requests to Elasticsearch directly from your browser.
+      General configuration Managing server entries It is possible to put different server blocks in different files. This allows you to easily enable or disable certain sites.
+# mkdir /etc/nginx/sites-available # mkdir /etc/nginx/sites-enabled Create a file inside the sites-available directory that contains one or more server blocks:
+/etc/nginx/sites-available/example server { .. } Append the following line at the end of the http block in /etc/nginx/nginx.conf:
+include sites-enabled/*; To enable a server block, simple create a symlink:
     </div>
     <div class="read-more">
-      <a href="/post/back-end/elasticsearch/" class="read-more-link">Read more</a>
+      <a href="/post/devops/nginx/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -361,14 +366,17 @@ Installing Sense Sense is a Kibana app that provides an interactive console for 
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/elk-stack/"></a>
+      <a class="post-link" href="/post/back-end/postgresql/">PostgreSQL</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="0001-01-01" class="post-time">
-        0001-01-01
+      <time datetime="2017-09-30" class="post-time">
+        2017-09-30
       </time>
-      
+      <div class="post-category">
+          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          
+        </div>
       
       
       
@@ -378,12 +386,10 @@ Installing Sense Sense is a Kibana app that provides an interactive console for 
   <div class="post-content">
     
     <div class="post-summary">
-      Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
-Install Beats Install Filebeat Install Metricbeat sudo pacman -S metricbeat sudo vim /etc/metricbeat/metricbeat.yml setup.dashboards.enabled: true From the Metricbeat install directory, enable the system module
-cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricbeat.
+      Installing PostgreSQL $ sudo pacman -S postgresql $ sudo -u postgres -i [postgres]$ initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data' [postgres]$ exit $ pg_ctl -D /var/lib/postgres/data -l logfile start $ systemctl start postgresql.service $ systemctl enable postgresql.service Create your first database/user Access the database shell $ [postgres]$ psql -d myDatabaseName \help \c &lt;database&gt; \du # list all users and their permission levels \dt # show summary information about all tables \q \?
     </div>
     <div class="read-more">
-      <a href="/post/back-end/elk-stack/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/postgresql/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -785,8 +791,6 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
 
             
             
-              
-            
 
           
           
@@ -795,12 +799,6 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
         
 
         
-        
-          <li class="">
-            <a href="/page/16/">
-              16
-            </a>
-          </li>
         
 
       
@@ -816,8 +814,6 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
 
             
             
-              
-            
 
           
           
@@ -826,12 +822,6 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
         
 
         
-        
-          <li class="">
-            <a href="/page/17/">
-              17
-            </a>
-          </li>
         
 
       
@@ -1177,6 +1167,68 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/29/">
+              29
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/30/">
+              30
+            </a>
+          </li>
+        
+
+      
+
       
       
       <li><a href="/page/26/">»</a></li>
@@ -1184,7 +1236,7 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
 
       
       
-      <li><a href="/page/28/">»»</a></li>
+      <li><a href="/page/30/">»»</a></li>
       
 
       </ul>

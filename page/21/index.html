@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-05-15T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,15 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/any-path/setup-a-archlinux-windows10-dual-booting-system/">Setup a Archlinux / Windows10 dual booting system</a>
+      <a class="post-link" href="/post/back-end/edx_oauth/">edx oauth</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-09-25" class="post-time">
-        2017-09-25
+      <time datetime="2018-11-22" class="post-time">
+        2018-11-22
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/any-path/"> any-path </a>
+          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
           
         </div>
       
@@ -315,15 +315,23 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Before   Check the hardware, three disks on my Lenovo ThinkPad P50
-  Samsung SSD 970 EVO Plus 250GB for installing windows
-  Samsung SSD 960 EVO 250GB for installling archlinux
-  WDC WD5000LPLX-0 HHD 500GB for data storage
-    Disable Windows Fast Startup if start from windows
-  Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)
+      Request URL: http://localhost:18381/api-auth/login/?next=/api/v1/courses/
+Query String Parameters: next: /api/v1/courses/
+Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18381/login/edx-oidc/?next=/api/v1/courses/
+Query String Parameters: next: /api/v1/courses/
+Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18000/oauth2/authorize/?redirect_uri=http://localhost:18381/complete/edx-oidc/&amp;client_id=discovery-key&amp;scope=openid+profile+email+permissions&amp;response_type=code&amp;state=W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x
+Query String Parameters:
+ redirect_uri: http://localhost:18381/complete/edx-oidc/ client_id: discovery-key scope: openid profile email permissions response_type: code state: W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x  Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18000/oauth2/authorize/confirm
+Request Method: GET
     </div>
     <div class="read-more">
-      <a href="/post/any-path/setup-a-archlinux-windows10-dual-booting-system/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/edx_oauth/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -334,15 +342,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/front-end/bootstrap/">Bootstrap</a>
+      <a class="post-link" href="/post/back-end/wagtail/">Wagtail</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-07-01" class="post-time">
-        2017-07-01
+      <time datetime="2018-11-02" class="post-time">
+        2018-11-02
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/front-end/"> front-end </a>
+          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
           
         </div>
       
@@ -354,10 +362,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Bootstrap Components Modal Add dialogs to your site for lightboxes, user notifications, or completely custom content.
+      Getting started setting up a brand new Wagtail project $ pip install wagtail $ wagtail start mysite $ cd mysite $ pip install -r requirements.txt $ ./manage.py migrate $ ./manage.py createsuperuser $ ./manage.py runserver http://localhost:8000
+http://localhost:8000/admin/
+Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page.
     </div>
     <div class="read-more">
-      <a href="/post/front-end/bootstrap/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/wagtail/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -368,15 +378,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/front-end/angular/">Angular</a>
+      <a class="post-link" href="/post/back-end/grpc/">gRPC by Go</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-06-21" class="post-time">
-        2017-06-21
+      <time datetime="2018-10-13" class="post-time">
+        2018-10-13
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/front-end/"> front-end </a>
+          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
           
         </div>
       
@@ -388,10 +398,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      QuickStart Step 1. Set up the Development Environment $ yaourt -S nodejs npm $ npm install -g @angular/cli Step 2. Create a new project $ ng new my-app Step 3: Serve the application $ cd my-app $ ng serve --open Step 4: Edit your first Angular component # ./src/app/app.component.ts export class AppComponent { title = 'My First Angular App!'; } # ./src/app/app.component.css h1 { color: #369; font-family: Arial, Helvetica, sans-serif; font-size: 250%; } Project file review my-app e2e # end-to-end tests src app.
+      $ go version $ go get -u google.golang.org/grpc Install Protocol Buffers v3
+ download pre-compiled binaries for your platform(protoc-&lt;version&gt;-&lt;platform&gt;.zip) from here: https://github.com/google/protobuf/releases Unzip this file. Update the environment variable PATH to include the path to the protoc binary file.  $ go get -u github.com/golang/protobuf/protoc-gen-go $ export PATH=$PATH:$GOPATH/bin Build the example $ cd $GOPATH/src/google.golang.org/grpc/examples/helloworld 
     </div>
     <div class="read-more">
-      <a href="/post/front-end/angular/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/grpc/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1129,6 +1140,48 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/22/">»</a></li>
@@ -1136,7 +1189,7 @@
 
       
       
-      <li><a href="/page/28/">»»</a></li>
+      <li><a href="/page/30/">»»</a></li>
       
 
       </ul>

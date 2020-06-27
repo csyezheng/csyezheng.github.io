@@ -6,17 +6,134 @@
     <description>Recent content in Tags on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://csyezheng.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>chatbots</title>
+      <link>http://csyezheng.github.io/tags/chatbots/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/chatbots/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevOps</title>
+      <link>http://csyezheng.github.io/tags/devops/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dialogue-systems</title>
+      <link>http://csyezheng.github.io/tags/dialogue-systems/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/dialogue-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>grafana</title>
+      <link>http://csyezheng.github.io/tags/grafana/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/grafana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>machine learning</title>
       <link>http://csyezheng.github.io/tags/machine-learning/</link>
-      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>http://csyezheng.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>monitoring</title>
+      <link>http://csyezheng.github.io/tags/monitoring/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Natural Language Processing</title>
+      <link>http://csyezheng.github.io/tags/natural-language-processing/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/natural-language-processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Prometheus</title>
+      <link>http://csyezheng.github.io/tags/prometheus/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/prometheus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://csyezheng.github.io/tags/python/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Question answering</title>
+      <link>http://csyezheng.github.io/tags/question-answering/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/question-answering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Skincare</title>
+      <link>http://csyezheng.github.io/tags/skincare/</link>
+      <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/skincare/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>http://csyezheng.github.io/tags/exercise/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/exercise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fitness</title>
+      <link>http://csyezheng.github.io/tags/fitness/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/fitness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>search</title>
+      <link>http://csyezheng.github.io/tags/search/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/search/</guid>
       <description></description>
     </item>
     
@@ -71,123 +188,6 @@
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>http://csyezheng.github.io/tags/django/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Scrapy</title>
-      <link>http://csyezheng.github.io/tags/scrapy/</link>
-      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/scrapy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cpp</title>
-      <link>http://csyezheng.github.io/tags/cpp/</link>
-      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/cpp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>jsoncpp</title>
-      <link>http://csyezheng.github.io/tags/jsoncpp/</link>
-      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/jsoncpp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cmake</title>
-      <link>http://csyezheng.github.io/tags/cmake/</link>
-      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/cmake/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DevOps</title>
-      <link>http://csyezheng.github.io/tags/devops/</link>
-      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>http://csyezheng.github.io/tags/kubernetes/</link>
-      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>oauth2</title>
-      <link>http://csyezheng.github.io/tags/oauth2/</link>
-      <pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/oauth2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>http://csyezheng.github.io/tags/docker/</link>
-      <pubDate>Thu, 25 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>microservices</title>
-      <link>http://csyezheng.github.io/tags/microservices/</link>
-      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/microservices/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gin</title>
-      <link>http://csyezheng.github.io/tags/gin/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/gin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>glide</title>
-      <link>http://csyezheng.github.io/tags/glide/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/glide/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>http://csyezheng.github.io/tags/go/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>gopm</title>
-      <link>http://csyezheng.github.io/tags/gopm/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/gopm/</guid>
       <description></description>
     </item>
     

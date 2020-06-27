@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-05-15T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,15 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/front-end/jquery/">jQuery Tutorial</a>
+      <a class="post-link" href="/post/thinking/thinking/">Programming Thinking</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2016-02-17" class="post-time">
-        2016-02-17
+      <time datetime="2018-08-15" class="post-time">
+        2018-08-15
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/front-end/"> front-end </a>
+          <a href="http://csyezheng.github.io/categories/thinking/"> Thinking </a>
           
         </div>
       
@@ -315,10 +315,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      jQuery Get Started Downloading jQuery &lt;head&gt; &lt;script src=&quot;jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt; &lt;/head&gt; jQuery CDN &lt;head&gt; &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt; &lt;/head&gt; &lt;head&gt; &lt;script src=&quot;https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt; &lt;/head&gt; jQuery Syntax Basic syntax is: $(selector).action() // Examples: $(this).hide() // hides the current element. $(&quot;p&quot;).hide() // hides all &lt;p&gt; elements. $(&quot;.test&quot;).hide() // hides all elements with class=&quot;test&quot;. $(&quot;#test&quot;).hide() // hides the element with id=&quot;test&quot;. $(document).ready(function(){ // all jQuery methods inside a document ready event to prevent // any jQuery code from
+      基类的派生类的派生类需要做某些改动时，追溯到基类的一个虚函数做改动才能实现时，可以在此派生类中重写同名函数进行覆盖而不是继承这个虚函数，先拷
     </div>
     <div class="read-more">
-      <a href="/post/front-end/jquery/" class="read-more-link">Read more</a>
+      <a href="/post/thinking/thinking/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -329,15 +329,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/front-end/dom/">DOM</a>
+      <a class="post-link" href="/post/back-end/kafka/">Kafka</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2016-02-01" class="post-time">
-        2016-02-01
+      <time datetime="2018-07-23" class="post-time">
+        2018-07-23
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/front-end/"> front-end </a>
+          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
           
         </div>
       
@@ -349,10 +349,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      所有 HTML 元素被定义为对象，而编程接口则是对象方法和对象属性。 方法是您能够执行的动作（比如添加或修改元素）。 属性是您能够获取或设置的值（比如节点
+      Quickstart &gt; tar -xzf kafka_2.11-1.1.0.tgz &gt; cd kafka_2.11-1.1.0 Start the server bin/zookeeper-server-start.sh config/zookeeper.properties bin/kafka-server-start.sh config/server.properties Create a topic bin/kaftopics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic my-topic bin/kafka-topics.sh --list --zookeeper localhost:2181 Send some messages bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning Python client for the Apache Kafka #!/usr/bin/env python3 import logging from kafka import KafkaProducer from kafka.errors import KafkaError import msgpack log = logging.getLogger(__name__) def send(): producer = KafkaProducer(bootstrap_servers=['localhost:9092'], value_serializer=msgpack.
     </div>
     <div class="read-more">
-      <a href="/post/front-end/dom/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/kafka/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -363,15 +363,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/front-end/getting-started-with-the-web/">Getting started with the Web</a>
+      <a class="post-link" href="/post/deep-learning/keras/">keras</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2015-12-01" class="post-time">
-        2015-12-01
+      <time datetime="2018-03-26" class="post-time">
+        2018-03-26
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/front-end/"> front-end </a>
+          <a href="http://csyezheng.github.io/categories/deep-learning/"> deep learning </a>
           
         </div>
       
@@ -383,11 +383,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Naming name folders and files completely in lowercase with no spaces. This is because:
- Many computers, particularly web servers, are case-sensitive. Browsers, web servers, and programming languages do not handle spaces consistently. It&rsquo;s better to separate words with dashes, rather than underscores: my-file.html vs. my_file.html.  The short answer is that you should use a hyphen for your file names. The Google search engine treats a hyphen as a word separator but does not regard an underscore that way.
+      Keras import tensorflow as tf from tensorflow import keras 
     </div>
     <div class="read-more">
-      <a href="/post/front-end/getting-started-with-the-web/" class="read-more-link">Read more</a>
+      <a href="/post/deep-learning/keras/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -789,8 +788,6 @@
 
             
             
-              
-            
 
           
           
@@ -799,12 +796,6 @@
         
 
         
-        
-          <li class="">
-            <a href="/page/16/">
-              16
-            </a>
-          </li>
         
 
       
@@ -820,8 +811,6 @@
 
             
             
-              
-            
 
           
           
@@ -830,12 +819,6 @@
         
 
         
-        
-          <li class="">
-            <a href="/page/17/">
-              17
-            </a>
-          </li>
         
 
       
@@ -1181,6 +1164,68 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/29/">
+              29
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/30/">
+              30
+            </a>
+          </li>
+        
+
+      
+
       
       
       <li><a href="/page/25/">»</a></li>
@@ -1188,7 +1233,7 @@
 
       
       
-      <li><a href="/page/28/">»»</a></li>
+      <li><a href="/page/30/">»»</a></li>
       
 
       </ul>

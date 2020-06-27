@@ -6,10 +6,28 @@
     <description>Recent content in machine learning on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://csyezheng.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Top 20 Python Libraries for Data Science</title>
+      <link>http://csyezheng.github.io/post/machine-learning/top-20-python-libraries/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/top-20-python-libraries/</guid>
+      <description>Core Libraries &amp;amp; Statistics  NumPy SciPy Pandas StatsModels  Visualization Matplotlib Seaborn Plotly Bokeh Pydot  Machine Learning Scikit-learn XGBoost Eli5  Deep Learning TensorFlow PyTorch Keras  Distributed Deep Learning Dist-keras / elephas / spark-deep-learning  Natural Language Processing NLTK SpaCy Gensim  Data Scraping Scrapy  </description>
+    </item>
+    
+    <item>
+      <title>Top Websites for Machine Learning</title>
+      <link>http://csyezheng.github.io/post/machine-learning/top-websites/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/top-websites/</guid>
+      <description>AI Hub</description>
+    </item>
     
     <item>
       <title>Multi-label classification</title>
@@ -50,6 +68,15 @@ Estimate class weights for unbalanced datasets.
     </item>
     
     <item>
+      <title>Solution for imbalanced data</title>
+      <link>http://csyezheng.github.io/post/machine-learning/solution/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/solution/</guid>
+      <description>FAQ imbalanced data  https://www.tensorflow.org/tutorials/structured_data/imbalanced_data https://stackoverflow.com/questions/43481490/keras-class-weights-class-weight-for-one-hot-encoding https://github.com/jbjorne/TEES/blob/master/Detectors/KerasDetectorBase.py https://towardsdatascience.com/practical-tips-for-class-imbalance-in-binary-classification-6ee29bcdb8a7 https://stackoverflow.com/questions/48485870/multi-label-classification-with-class-weights-in-keras  Class weight degrades Multi Label Classification Performance  https://datascience.stackexchange.com/questions/28040/class-weight-degrades-multi-label-classification-performance  What is the difference between multilabel and multiclass classification?  https://www.quora.com/What-is-the-difference-between-multilabel-and-multiclass-classification https://stats.stackexchange.com/questions/260505/should-i-use-a-categorical-cross-entropy-or-binary-cross-entropy-loss-for-binary  </description>
+    </item>
+    
+    <item>
       <title>Few shot learning</title>
       <link>http://csyezheng.github.io/post/machine-learning/few-shot-learning/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
@@ -68,6 +95,23 @@ Estimate class weights for unbalanced datasets.
 Google Developers Machine Learning Crash Course
 Machine Learning Glossary
 Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which takes you beyond the basics into introductory Computer Vision, NLP, and Sequence modelling.</description>
+    </item>
+    
+    <item>
+      <title>kaggle</title>
+      <link>http://csyezheng.github.io/post/machine-learning/kaggle/</link>
+      <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/kaggle/</guid>
+      <description>https://www.kaggle.com/stackoverflow/statsquestions
+https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
+https://developer.ibm.com/exchanges/models/all/max-toxic-comment-classifier/
+https://www.quora.com/Is-binary-relevance-same-as-one-vs-all
+https://stackoverflow.com/questions/44674847/what-are-the-differences-between-all-these-cross-entropy-losses-in-keras-and-ten
+https://vict0rs.ch/2018/06/17/multilabel-text-classification-tensorflow/
+https://github.com/tensorflow/skflow/issues/113
+https://towardsdatascience.com/journey-to-the-center-of-multi-label-classification-384c40229bff
+https://www.reddit.com/r/MLQuestions/comments/5n82zb/loss_function_for_sparse_multilabel_classification/</description>
     </item>
     
   </channel>

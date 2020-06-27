@@ -6,10 +6,19 @@
     <description>Recent content in Python on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://csyezheng.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Top 20 Python Libraries for Data Science</title>
+      <link>http://csyezheng.github.io/post/machine-learning/top-20-python-libraries/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/machine-learning/top-20-python-libraries/</guid>
+      <description>Core Libraries &amp;amp; Statistics  NumPy SciPy Pandas StatsModels  Visualization Matplotlib Seaborn Plotly Bokeh Pydot  Machine Learning Scikit-learn XGBoost Eli5  Deep Learning TensorFlow PyTorch Keras  Distributed Deep Learning Dist-keras / elephas / spark-deep-learning  Natural Language Processing NLTK SpaCy Gensim  Data Scraping Scrapy  </description>
+    </item>
     
     <item>
       <title>Python datetime</title>

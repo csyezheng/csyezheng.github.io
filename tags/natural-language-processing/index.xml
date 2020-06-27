@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Natural Language Processing on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/natural-language-processing/</link>
+    <description>Recent content in Natural Language Processing on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://csyezheng.github.io/tags/natural-language-processing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Question answering</title>
+      <link>http://csyezheng.github.io/post/natural-language-processing/question-answering/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/natural-language-processing/question-answering/</guid>
+      <description>Reference
+ https://github.com/deepmipt/DeepPavlov https://github.com/deepset-ai/FARM https://github.com/huggingface/transformers https://github.com/deepset-ai/haystack https://github.com/deepset-ai/COVID-QA https://demo.allennlp.org/reading-comprehension https://github.com/baidu/AnyQ https://github.com/allenai/bi-att-flow https://github.com/google-research/language/tree/master/language/question_answering BERT Question Answering Inference with Mixed Precision in TensorFlow https://www.kaggle.com/c/tensorflow2-question-answering/ https://github.com/chrischute/squad https://github.com/ColasGael/QA-squad https://github.com/IBM/MAX-Question-Answering http://web.stanford.edu/class/cs224n/project/default-final-project-handout.pdf https://github.com/baidu/DuReader  </description>
+    </item>
+    
+    <item>
+      <title>tencent nlp interview</title>
+      <link>http://csyezheng.github.io/post/interview/tencent-nlp-interview/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/interview/tencent-nlp-interview/</guid>
+      <description>一面（技术面） 面试形式：电话面试。 简要的自我介绍。 研究生阶段最有挑战的项目是什么？ 对于这个项目，传统的方法是怎么样的？ 列举下这个任务在传统用</description>
+    </item>
+    
+  </channel>
+</rss>

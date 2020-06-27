@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-05-15T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,7 +295,41 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/go/photoprism/">photoprism</a>
+      <a class="post-link" href="/post/back-end/microservices/">microservices</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-04-20" class="post-time">
+        2019-04-20
+      </time>
+      <div class="post-category">
+          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      第1章 微服务 1.1 什么是微服务 微服务就是一些协同工作的小而自治的服务 1.1.1 很小，专注于做好一件事 在一个单块系统内，通常会创建一些抽象层或者模块来保证
+    </div>
+    <div class="read-more">
+      <a href="/post/back-end/microservices/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/programming-languages/go/a-tour-of-go/">A Tour of Go</a>
     </h1>
     
     <div class="post-meta">
@@ -316,13 +350,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Step 1: Clone this project:
-git clone https://github.com/photoprism/photoprism.git Step 2: Start Docker containers:
-cd photoprism sudo docker-compose up Step 3: Open a new terminal to the photoprism container:
-sudo docker-compose exec photoprism bash 
+      Basics Packages, variables, and functions. Packages Programs start running in package main.
+By convention, the package name is the same as the last element of the import path. For instance, the &quot;math/rand&quot; package comprises files that begin with the statement package rand.
+Imports It is good style to use the factored import statement.
+import ( &quot;fmt&quot; &quot;math/rand&quot; ) Exported names In Go, a name is exported if it begins with a capital letter.
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/photoprism/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/go/a-tour-of-go/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -333,7 +367,7 @@ sudo docker-compose exec photoprism bash
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/python/datetime/">Python datetime</a>
+      <a class="post-link" href="/post/programming-languages/javascript/debug/">Debugging JavaScript in Chrome DevTools</a>
     </h1>
     
     <div class="post-meta">
@@ -342,7 +376,7 @@ sudo docker-compose exec photoprism bash
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/python/"> Python </a>
+          <a href="http://csyezheng.github.io/categories/javascript/"> JavaScript </a>
           
         </div>
       
@@ -354,49 +388,12 @@ sudo docker-compose exec photoprism bash
   <div class="post-content">
     
     <div class="post-summary">
-      datetime 8.1. datetime
-The datetime module, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation.
-There are two kinds of date and time objects: “naive” and “aware”.
-An aware object has sufficient knowledge of applicable algorithmic and political time adjustments, such as time zone and daylight saving time information, to locate itself relative to other aware objects. An aware object is used to represent a specific moment in time.
+      Get Started Step 2: Get familiar with the Sources panel UI The Sources panel is where you debug JavaScript.
+Open DevTools by pressing Command+Option+I (Mac) or Control+Shift+I (Windows, Linux). This shortcut opens the Consolepanel.
+Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: Set a line-of-code breakpoint Step 6: Check variable values 
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/python/datetime/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/programming-languages/go/quick-start/">quick-start</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
-      </time>
-      <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-        Create your project folder and cd inside
-mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot;   go mod edit -require=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b go mod edit -replace=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b=github.com/google/go-genproto@v0.0.0-20180831171423-11092d34479b go mod edit -require=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -replace=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223=github.com/golang/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -require=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299 go mod edit -replace=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299=github.com/golang/crypto@v0.0.0-20180614174826-fd5f17ee7299 gen --connstr &quot;zhengye:csye3631@tcp(127.0.0.1:3307)/discovery&quot; --database discovery --json --gorm --guregu --rest 
-    </div>
-    <div class="read-more">
-      <a href="/post/programming-languages/go/quick-start/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/javascript/debug/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1134,6 +1131,48 @@ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; 
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/13/">»</a></li>
@@ -1141,7 +1180,7 @@ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; 
 
       
       
-      <li><a href="/page/28/">»»</a></li>
+      <li><a href="/page/30/">»»</a></li>
       
 
       </ul>
