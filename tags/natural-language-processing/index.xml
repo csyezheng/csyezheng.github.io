@@ -30,5 +30,14 @@
       <description>一面（技术面） 面试形式：电话面试。 简要的自我介绍。 研究生阶段最有挑战的项目是什么？ 对于这个项目，传统的方法是怎么样的？ 列举下这个任务在传统用</description>
     </item>
     
+    <item>
+      <title>Bert</title>
+      <link>http://csyezheng.github.io/post/deep-learning/bert/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/deep-learning/bert/</guid>
+      <description>BERT 可解释性-从&amp;quot;头&amp;quot;说起 一、背景介绍 搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大</description>
+    </item>
+    
   </channel>
 </rss>

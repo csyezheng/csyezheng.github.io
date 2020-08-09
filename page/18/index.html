@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.72.0" />
+<meta name="generator" content="Hugo 0.74.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-08-09T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,7 +295,42 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/go/quick-start/">quick-start</a>
+      <a class="post-link" href="/post/programming-languages/javascript/javascript/">JavaScript</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
+      </time>
+      <div class="post-category">
+          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
+          <a href="http://csyezheng.github.io/categories/javascript/"> JavaScript </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //
+    </div>
+    <div class="read-more">
+      <a href="/post/programming-languages/javascript/javascript/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/programming-languages/go/package_download/">package_download</a>
     </h1>
     
     <div class="post-meta">
@@ -316,11 +351,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-        Create your project folder and cd inside
-mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot;   go mod edit -require=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b go mod edit -replace=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b=github.com/google/go-genproto@v0.0.0-20180831171423-11092d34479b go mod edit -require=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -replace=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223=github.com/golang/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -require=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299 go mod edit -replace=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299=github.com/golang/crypto@v0.0.0-20180614174826-fd5f17ee7299 gen --connstr &quot;zhengye:csye3631@tcp(127.0.0.1:3307)/discovery&quot; --database discovery --json --gorm --guregu --rest 
+      gopm get -g -v golang.org/x/sys 
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/quick-start/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/go/package_download/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,7 +365,7 @@ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; 
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/scala/scalabyexample/">Scala By Example</a>
+      <a class="post-link" href="/post/programming-languages/go/photoprism/">photoprism</a>
     </h1>
     
     <div class="post-meta">
@@ -340,7 +374,7 @@ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; 
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/scala/"> Scala </a>
+          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
           
         </div>
       
@@ -352,48 +386,13 @@ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; 
   <div class="post-content">
     
     <div class="post-summary">
-      Introduction Scala smoothly integrates object-oriented and functional programming.
- Abstract types and mixin composition unify concepts from object and module systems. Pattern matching over class hierarchies uniﬁes functional and object-oriented data access. It greatly simpliﬁes the processing of XML trees. A ﬂexible syntax and type system enables the construction of advanced libraries and new domain speciﬁc languages.  Starting with simple expressions and functions, and working up through objects and classes, lists and streams, mutable state, pattern matching to more complete examples that show interesting programming techniques.
+      Step 1: Clone this project:
+git clone https://github.com/photoprism/photoprism.git Step 2: Start Docker containers:
+cd photoprism sudo docker-compose up Step 3: Open a new terminal to the photoprism container:
+sudo docker-compose exec photoprism bash 
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/scala/scalabyexample/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/programming-languages/java/spring-boot/">spring-boot</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
-      </time>
-      <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/java/"> Java </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Building Java Projects with Maven Install Maven Maven is downloadable as a zip file at https://maven.apache.org/download.cgi.
-Once you have downloaded the zip file, unzip it to your computer. Then add the bin folder to your path.
-$ mvn -v Define a simple Maven build Maven projects are defined with an XML file named pom.xml. Create a file named pom.xml at the root of the project (i.e. put it next to the src folder) and give it the following contents:
-    </div>
-    <div class="read-more">
-      <a href="/post/programming-languages/java/spring-boot/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/go/photoprism/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1173,6 +1172,48 @@ $ mvn -v Define a simple Maven build Maven projects are defined with an XML file
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/19/">»</a></li>
@@ -1180,7 +1221,7 @@ $ mvn -v Define a simple Maven build Maven projects are defined with an XML file
 
       
       
-      <li><a href="/page/30/">»»</a></li>
+      <li><a href="/page/32/">»»</a></li>
       
 
       </ul>

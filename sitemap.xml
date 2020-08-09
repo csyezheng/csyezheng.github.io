@@ -9,8 +9,92 @@
   </url>
   
   <url>
+    <loc>http://csyezheng.github.io/categories/back-end/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://csyezheng.github.io/categories/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/mybatis/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/back-end/mybatis-spring-boot/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/spring/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/back-end/spring/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/spring-boot/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/devops/</loc>
+    <lastmod>2020-07-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/categories/devops/</loc>
+    <lastmod>2020-07-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/devops/</loc>
+    <lastmod>2020-07-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -23,35 +107,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/tags/devops/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/categories/devops/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://csyezheng.github.io/tags/dialogue-systems/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/devops/grafana/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/tags/grafana/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -79,13 +135,6 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/tags/monitoring/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://csyezheng.github.io/tags/natural-language-processing/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -94,27 +143,6 @@
   
   <url>
     <loc>http://csyezheng.github.io/categories/natural-language-processing/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/tags/prometheus/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/devops/prometheus/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -142,13 +170,6 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/tags/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://csyezheng.github.io/post/interview/tencent-nlp-interview/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -164,13 +185,6 @@
   
   <url>
     <loc>http://csyezheng.github.io/post/machine-learning/top-websites/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -226,13 +240,6 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/back-end/</loc>
-    <lastmod>2020-06-22T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://csyezheng.github.io/tags/search/</loc>
     <lastmod>2020-06-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -254,6 +261,48 @@
   </url>
   
   <url>
+    <loc>http://csyezheng.github.io/post/deep-learning/bert/</loc>
+    <lastmod>2020-06-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/bert/</loc>
+    <lastmod>2020-06-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/deep-learning/</loc>
+    <lastmod>2020-06-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/categories/deep-learning/</loc>
+    <lastmod>2020-06-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/deep-learning/tensorflow/</loc>
+    <lastmod>2020-05-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/tensorflow/</loc>
+    <lastmod>2020-05-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://csyezheng.github.io/tags/multi-label/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -268,8 +317,29 @@
   </url>
   
   <url>
+    <loc>http://csyezheng.github.io/tags/django/</loc>
+    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/back-end/python-and-java-service/</loc>
+    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://csyezheng.github.io/post/machine-learning/crash-course/</loc>
     <lastmod>2020-05-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/deep-learning/notes-deep-learning-with-python/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -340,13 +410,6 @@
   <url>
     <loc>http://csyezheng.github.io/post/any-path/wireshark/</loc>
     <lastmod>2020-03-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/tags/django/</loc>
-    <lastmod>2020-02-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -478,13 +541,6 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/tags/deep-learning/</loc>
-    <lastmod>2019-08-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://csyezheng.github.io/tags/kaggle/</loc>
     <lastmod>2019-08-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -499,22 +555,29 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/devops/devops/</loc>
-    <lastmod>2019-05-30T00:00:00+00:00</lastmod>
+    <loc>http://csyezheng.github.io/tags/java/</loc>
+    <lastmod>2019-07-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/tags/kubernetes/</loc>
-    <lastmod>2019-05-30T00:00:00+00:00</lastmod>
+    <loc>http://csyezheng.github.io/categories/java/</loc>
+    <lastmod>2019-07-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/devops/kubernetes/</loc>
-    <lastmod>2019-05-30T00:00:00+00:00</lastmod>
+    <loc>http://csyezheng.github.io/tags/maven/</loc>
+    <lastmod>2019-07-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/programming-languages/java/maven/</loc>
+    <lastmod>2019-07-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -583,20 +646,6 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/tags/docker/</loc>
-    <lastmod>2019-04-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/devops/docker/</loc>
-    <lastmod>2019-04-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://csyezheng.github.io/tags/microservices/</loc>
     <lastmod>2019-04-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -612,6 +661,13 @@
   
   <url>
     <loc>http://csyezheng.github.io/post/programming-languages/go/a-tour-of-go/</loc>
+    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/back-end/spring-boot/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -744,20 +800,6 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/tags/java/</loc>
-    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/categories/java/</loc>
-    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://csyezheng.github.io/tags/javascript/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -836,13 +878,6 @@
   
   <url>
     <loc>http://csyezheng.github.io/post/programming-languages/scala/scalabyexample/</loc>
-    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/programming-languages/java/spring-boot/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1101,13 +1136,6 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/deep-learning/</loc>
-    <lastmod>2018-03-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://csyezheng.github.io/tags/keras/</loc>
     <lastmod>2018-03-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1131,20 +1159,6 @@
   <url>
     <loc>http://csyezheng.github.io/tags/website/</loc>
     <lastmod>2018-03-18T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/tags/nginx/</loc>
-    <lastmod>2017-10-21T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/devops/nginx/</loc>
-    <lastmod>2017-10-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1383,6 +1397,24 @@
   <url>
     <loc>http://csyezheng.github.io/post/front-end/html/</loc>
     <lastmod>2015-11-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/any-path/circumvent-internet-censorship/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/any-path/gcp_v2ray/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/any-path/pubg/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

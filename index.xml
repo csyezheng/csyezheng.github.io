@@ -6,7 +6,7 @@
     <description>Recent content on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://csyezheng.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -25,261 +25,737 @@
     </item>
     
     <item>
-      <title>Grafana</title>
-      <link>http://csyezheng.github.io/post/devops/grafana/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <title>Mybatis Spring Boot</title>
+      <link>http://csyezheng.github.io/post/back-end/mybatis-spring-boot/</link>
+      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/devops/grafana/</guid>
+      <guid>http://csyezheng.github.io/post/back-end/mybatis-spring-boot/</guid>
       
-        <description>&lt;p&gt;Reference&lt;/p&gt;
+        <description>&lt;h2 id=&#34;creating-a-project&#34;&gt;Creating a project&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;spring init -d=web --build=maven mysite
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;declare-dependencies&#34;&gt;Declare Dependencies&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;org.mybatis.spring.boot&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;mybatis-spring-boot-starter&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;2.1.3&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;MyBatis-Spring-Boot-Starter will:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Autodetect an existing &lt;code&gt;DataSource&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Will create and register an instance of a &lt;code&gt;SqlSessionFactory&lt;/code&gt; passing that &lt;code&gt;DataSource&lt;/code&gt; as an input using the &lt;code&gt;SqlSessionFactoryBean&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Will create and register an instance of a &lt;code&gt;SqlSessionTemplate&lt;/code&gt; got out of the &lt;code&gt;SqlSessionFactory&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Auto-scan your mappers, link them to the &lt;code&gt;SqlSessionTemplate&lt;/code&gt; and register them to Spring context so they can be injected into your beans&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;mybatis-integration-with-spring-boot&#34;&gt;MyBatis integration with Spring Boot&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;spring init -d=web,mybatis,h2 --build=maven mysite
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;create-sql-files&#34;&gt;Create sql files&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;vim src/main/resources/schema.sql
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;DROP TABLE IF EXISTS city;
+DROP TABLE IF EXISTS hotel;
+
+CREATE TABLE city
+(
+  id      INT PRIMARY KEY auto_increment,
+  name    VARCHAR,
+  state   VARCHAR,
+  country VARCHAR
+);
+
+CREATE TABLE hotel 
+(
+  city    INT,
+  name    VARCHAR,
+  address VARCHAR,
+  zip     VARCHAR
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;create-a-domain-class&#34;&gt;Create a domain class&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;mkdir src/main/java/com/example/mysite/domain
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim src/main/java/com/example/mysite/City.java
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;package com.example.mysite.domain;
+
+import java.io.Serializable;
+
+public class City implements Serializable {
+
+  private static final long serialVersionUID = 1L;
+
+  private Long id;
+
+  private String name;
+
+  private String state;
+
+  private String country;
+
+  public Long getId() {
+    return this.id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getState() {
+    return this.state;
+  }
+
+  public void setState(String state) {
+    this.state = state;
+  }
+
+  public String getCountry() {
+    return this.country;
+  }
+
+  public void setCountry(String country) {
+    this.country = country;
+  }
+
+  @Override
+  public String toString() {
+    return getId() + &amp;quot;,&amp;quot; + getName() + &amp;quot;,&amp;quot; + getState() + &amp;quot;,&amp;quot; + getCountry();
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim src/main/java/com/example/mysite/domain/Hotel.java
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;package com.example.mysite.domain;
+
+import java.io.Serializable;
+
+public class Hotel implements Serializable {
+
+  private static final long serialVersionUID = 1L;
+
+  private Long city;
+
+  private String name;
+
+  private String address;
+
+  private String zip;
+
+  public Long getCity() {
+    return city;
+  }
+
+  public void setCity(Long city) {
+    this.city = city;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getAddress() {
+    return address;
+  }
+
+  public void setAddress(String address) {
+    this.address = address;
+  }
+
+  public String getZip() {
+    return zip;
+  }
+
+  public void setZip(String zip) {
+    this.zip = zip;
+  }
+
+  @Override
+  public String toString() {
+    return getCity() + &amp;quot;,&amp;quot; + getName() + &amp;quot;,&amp;quot; + getAddress() + &amp;quot;,&amp;quot; + getZip();
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;create-a-dao&#34;&gt;Create a DAO&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;mkdir src/main/java/com/example/mysite/dao
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim src/main/java/com/example/mysite/dao/CityDao.java
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;package com.example.mysite.dao;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Component;
+
+import com.example.mysite.domain.City;
+
+@Component
+public class CityDao {
+
+    private final SqlSession sqlSession;
+
+    public CityDao(SqlSession sqlSession) {
+        this.sqlSession = sqlSession;
+    }
+
+    public City selectCityById(long id) {
+      return this.sqlSession.selectOne(&amp;quot;selectCityById&amp;quot;, id);
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;create-a-mapper-interface&#34;&gt;Create a mapper interface&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;mkdir src/main/java/com/example/mysite/mapper
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim src/main/java/com/example/mysite/mapper/HotelMapper.java
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;package com.example.mysite.mapper;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.example.mysite.domain.Hotel;
+
+@Mapper
+public interface HotelMapper {
+  Hotel selectByCityId(int cityId);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;writer-mapper-file&#34;&gt;Writer mapper file&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;mkdir -p src/main/resources/com/example/mysite/mapper
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim src/main/resources/com/example/mysite/mapper/CityMapper.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; ?&amp;gt;
+&amp;lt;!DOCTYPE mapper
+        PUBLIC &amp;quot;-//mybatis.org//DTD Mapper 3.0//EN&amp;quot;
+        &amp;quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&amp;quot;&amp;gt;
+&amp;lt;mapper namespace=&amp;quot;com.example.mysite.mapper.CityMapper&amp;quot;&amp;gt;
+    &amp;lt;select id=&amp;quot;selectCityById&amp;quot; resultType=&amp;quot;City&amp;quot;&amp;gt;
+        select id, name, state, country from city where id = #{id}
+    &amp;lt;/select&amp;gt;
+&amp;lt;/mapper&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim src/main/resources/com/example/mysite/mapper/HotelMapper.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot; ?&amp;gt;
+&amp;lt;!DOCTYPE mapper
+        PUBLIC &amp;quot;-//mybatis.org//DTD Mapper 3.0//EN&amp;quot;
+        &amp;quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&amp;quot;&amp;gt;
+&amp;lt;mapper namespace=&amp;quot;com.example.mysite.mapper.HotelMapper&amp;quot;&amp;gt;
+    &amp;lt;select id=&amp;quot;selectByCityId&amp;quot; resultType=&amp;quot;Hotel&amp;quot;&amp;gt;
+        select city, name, address, zip from hotel where city = #{id}
+    &amp;lt;/select&amp;gt;
+&amp;lt;/mapper&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;modify-a-spring-boot-application-class&#34;&gt;Modify a spring boot application class&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;vim src/main/java/com/example/mysite/DemoApplication.java
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;package com.example.mysite;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.mysite.dao.CityDao;
+import com.example.mysite.mapper.HotelMapper;
+
+@SpringBootApplication
+public class DemoApplication implements CommandLineRunner {
+
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+
+    private final CityDao cityDao;
+    private final HotelMapper hotelMapper;
+
+    public DemoApplication(CityDao cityDao, HotelMapper hotelMapper) {
+        this.cityDao = cityDao;
+        this.hotelMapper = hotelMapper;
+    }
+
+    @Override
+    @SuppressWarnings(&amp;quot;squid:S106&amp;quot;)
+    public void run(String... args) {
+        System.out.println(this.cityDao.selectCityById(1));
+        System.out.println(this.hotelMapper.selectByCityId(1));
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;mybatis-configuration&#34;&gt;Mybatis Configuration&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;vim src/main/resources/application.properties
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;mybatis.config-location=classpath:mybatis-config.xml
+logging.level.root=WARN
+logging.level.com.example.mysite.mapper=TRACE
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim src/main/resources/mybatis-config.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE configuration
+        PUBLIC &amp;quot;-//mybatis.org//DTD Config 3.0//EN&amp;quot;
+        &amp;quot;http://mybatis.org/dtd/mybatis-3-config.dtd&amp;quot;&amp;gt;
+&amp;lt;configuration&amp;gt;
+    &amp;lt;typeAliases&amp;gt;
+        &amp;lt;package name=&amp;quot;com.example.mysite.domain&amp;quot;/&amp;gt;
+    &amp;lt;/typeAliases&amp;gt;
+    &amp;lt;mappers&amp;gt;
+        &amp;lt;mapper resource=&amp;quot;com/example/mysite/mapper/CityMapper.xml&amp;quot;/&amp;gt;
+        &amp;lt;mapper resource=&amp;quot;com/example/mysite/mapper/HotelMapper.xml&amp;quot;/&amp;gt;
+    &amp;lt;/mappers&amp;gt;
+&amp;lt;/configuration&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;run-a-spring-boot-application&#34;&gt;Run a spring boot application&lt;/h6&gt;
+&lt;p&gt;Hot Swapping&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    &amp;lt;dependency&amp;gt;
+        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;spring-boot-devtools&amp;lt;/artifactId&amp;gt;
+        &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt;
+        &amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;build&amp;gt;
+    &amp;lt;plugins&amp;gt;
+        &amp;lt;plugin&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
+            &amp;lt;!-- enable forking --&amp;gt;
+            &amp;lt;configuration&amp;gt;
+                &amp;lt;fork&amp;gt;true&amp;lt;/fork&amp;gt;
+            &amp;lt;/configuration&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+    &amp;lt;/plugins&amp;gt;
+&amp;lt;/build&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Run a created application using the Spring Boot Maven Plugin.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;vim pom.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;properties&amp;gt;
+  &amp;lt;maven.compiler.target&amp;gt;1.8&amp;lt;/maven.compiler.target&amp;gt;
+  &amp;lt;maven.compiler.source&amp;gt;1.8&amp;lt;/maven.compiler.source&amp;gt;
+&amp;lt;/properties&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;build&amp;gt;
+  &amp;lt;plugins&amp;gt;
+    &amp;lt;plugin&amp;gt;
+      &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;maven-compiler-plugin&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;3.6.1&amp;lt;/version&amp;gt;
+      &amp;lt;configuration&amp;gt;
+        &amp;lt;source&amp;gt;1.8&amp;lt;/source&amp;gt;
+        &amp;lt;target&amp;gt;1.8&amp;lt;/target&amp;gt;
+      &amp;lt;/configuration&amp;gt;
+    &amp;lt;/plugin&amp;gt;
+  &amp;lt;/plugins&amp;gt;
+&amp;lt;/build&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;./mvnw spring-boot:run
+&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Spring</title>
+      <link>http://csyezheng.github.io/post/back-end/spring/</link>
+      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/spring/</guid>
+      
+        <description>&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h3 id=&#34;install-jdk&#34;&gt;Install JDK&lt;/h3&gt;
+&lt;p&gt;Download &lt;code&gt;jdk-8u261-linux-x64.tar.gz&lt;/code&gt; from Oracle&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S jdk8-openjdk
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim ~/.bashrc 
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;source ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;install-maven&#34;&gt;Install maven&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S maven
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;cp /opt/maven/conf/settings.xml ~/.m2/
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim ~/.m2/settings.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;mirror&amp;gt;
+  &amp;lt;id&amp;gt;alimaven&amp;lt;/id&amp;gt;
+  &amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt;
+  &amp;lt;name&amp;gt;aliyun maven&amp;lt;/name&amp;gt;
+  &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public&amp;lt;/url&amp;gt;
+&amp;lt;/mirror&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;installing-the-spring-boot-cli&#34;&gt;Installing the Spring Boot CLI&lt;/h3&gt;
+&lt;p&gt;Download  the Spring Boot CLI&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;wget https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-cli/2.3.3.BUILD-SNAPSHOT/spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Extract  to a directory that supports file execution.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo unzip spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip -d /opt/
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim ~/.bashrc 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Add the following line to the file&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;export PATH=/opt/spring-2.3.3.BUILD-SNAPSHOT/bin:$PATH
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Use the source command to force Linux to reload the &lt;code&gt;.bashrc&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;source ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;spring-at-a-glance&#34;&gt;Spring at a glance&lt;/h2&gt;
+&lt;h3 id=&#34;creating-a-project&#34;&gt;Creating a project&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;spring help init
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;spring init --list
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;spring init -d=web,mybatis,mysql --build=maven mysite
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;add-your-code&#34;&gt;Add your code&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;vim src/main/java/com/example/mysite/DemoApplication.java
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController
+public class DemoApplication {
+	
+    public static void main(String[] args) {
+    	SpringApplication.run(DemoApplication.class, args);
+    }
+
+    @GetMapping(&amp;quot;/hello&amp;quot;)
+    public String hello(@RequestParam(value = &amp;quot;name&amp;quot;, defaultValue = &amp;quot;World&amp;quot;) String name) {
+        return String.format(&amp;quot;Hello %s!&amp;quot;, name);
+    }
+}            
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;use-the-compiler-plugin&#34;&gt;Use the Compiler Plugin&lt;/h3&gt;
+&lt;h6 id=&#34;maven-java-compiler-properties&#34;&gt;Maven Java Compiler Properties&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;vim pom.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;properties&amp;gt;
+  &amp;lt;maven.compiler.target&amp;gt;1.8&amp;lt;/maven.compiler.target&amp;gt;
+  &amp;lt;maven.compiler.source&amp;gt;1.8&amp;lt;/maven.compiler.source&amp;gt;
+&amp;lt;/properties&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;maven-java-compiler-plugin&#34;&gt;Maven Java Compiler Plugin&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;vim pom.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;build&amp;gt;
+  &amp;lt;plugins&amp;gt;
+    &amp;lt;plugin&amp;gt;
+      &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;maven-compiler-plugin&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;3.6.1&amp;lt;/version&amp;gt;
+      &amp;lt;configuration&amp;gt;
+        &amp;lt;source&amp;gt;1.8&amp;lt;/source&amp;gt;
+        &amp;lt;target&amp;gt;1.8&amp;lt;/target&amp;gt;
+      &amp;lt;/configuration&amp;gt;
+    &amp;lt;/plugin&amp;gt;
+  &amp;lt;/plugins&amp;gt;
+&amp;lt;/build&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;hot-swapping&#34;&gt;Hot Swapping&lt;/h3&gt;
+&lt;h4 id=&#34;developer-tools&#34;&gt;Developer Tools&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
+    &amp;lt;dependency&amp;gt;
+        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;spring-boot-devtools&amp;lt;/artifactId&amp;gt;
+        &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt;
+        &amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+&amp;lt;/dependencies&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;build&amp;gt;
+    &amp;lt;plugins&amp;gt;
+        &amp;lt;plugin&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
+            &amp;lt;!-- enable forking --&amp;gt;
+            &amp;lt;configuration&amp;gt;
+                &amp;lt;fork&amp;gt;true&amp;lt;/fork&amp;gt;
+            &amp;lt;/configuration&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+    &amp;lt;/plugins&amp;gt;
+&amp;lt;/build&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;automatic-restart&#34;&gt;Automatic Restart&lt;/h4&gt;
+&lt;p&gt;Triggering a restart&lt;/p&gt;
+&lt;p&gt;As DevTools monitors classpath resources, the only way to trigger a restart is to update the classpath. The way in which you cause the classpath to be updated depends on the IDE that you are using. In Eclipse, saving a modified file causes the classpath to be updated and triggers a restart. In IntelliJ IDEA, &lt;strong&gt;building the project&lt;/strong&gt; (&lt;code&gt;Build +→+ Build Project&lt;/code&gt;) has the same effect.&lt;/p&gt;
+&lt;p&gt;As long as forking is enabled, you can also start your application by using the supported build plugins (Maven and Gradle), since DevTools needs an isolated application classloader to operate properly. By default, the Gradle and Maven plugins fork the application process.&lt;/p&gt;
+&lt;p&gt;If start application by command line, manually execute command &lt;strong&gt;compilation&lt;/strong&gt; after code change:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;./mvnw compile
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;run-the-server&#34;&gt;Run the server&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;./mvnw spring-boot:run
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now that the server’s running, visit http://localhost:8080/hello with your Web browser.&lt;/p&gt;
+&lt;p&gt;Then, depending on the development environment you use, after a change to Java code is made, you might need to &lt;strong&gt;build your project.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you start your Spring Boot app with &lt;strong&gt;java -jar&lt;/strong&gt;, the How Swap will not work even if you add the &lt;strong&gt;spring-boot-devtools&lt;/strong&gt; dependency.&lt;/p&gt;
+&lt;h2 id=&#34;structuring-your-code&#34;&gt;Structuring Your Code&lt;/h2&gt;
+&lt;p&gt;The following listing shows a typical layout:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;com
+ +- example
+     +- myapplication
+         +- Application.java
+         |
+         +- customer
+         |   +- Customer.java
+         |   +- CustomerController.java
+         |   +- CustomerService.java
+         |   +- CustomerRepository.java
+         |
+         +- order
+             +- Order.java
+             +- OrderController.java
+             +- OrderService.java
+             +- OrderRepository.java
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;com
+ +- example
+     +- myapplication
+         +- Application.java
+         |
+         +- config - class which will read from property files
+         +- cache - caching mechanism class files
+         +- controller - controller clwass
+         +- dao - Data Access Object
+         +- domain - @Entity 
+         +- dto - Data Transfer Object
+         +- exception - exception class  
+         +- model - pojos classes will be present
+         +- repository - @Repository
+         +- security - security classes
+         +- service - Impl classes
+         +- utils - utility classes
+         +- validation - validators classes
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;tutorial&#34;&gt;Tutorial&lt;/h2&gt;
+&lt;h3 id=&#34;building-java-projects-with-maven&#34;&gt;Building Java Projects with Maven&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;mkdir mysite
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;mkdir -p src/main/java/hello
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim src/main/java/hello/HelloWorld.java
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;package hello;
+
+public class HelloWorld {
+  public static void main(String[] args) {
+    Greeter greeter = new Greeter();
+    System.out.println(greeter.sayHello());
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim src/main/java/hello/Greeter.java
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;package hello;
+
+public class Greeter {
+  public String sayHello() {
+    return &amp;quot;Hello world!&amp;quot;;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;define-a-simple-maven-build&#34;&gt;Define a simple Maven build&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;vim pom.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+    xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
+    &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+
+    &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;gs-maven&amp;lt;/artifactId&amp;gt;
+    &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt;
+    &amp;lt;version&amp;gt;0.1.0&amp;lt;/version&amp;gt;
+
+    &amp;lt;properties&amp;gt;
+        &amp;lt;maven.compiler.source&amp;gt;1.8&amp;lt;/maven.compiler.source&amp;gt;
+        &amp;lt;maven.compiler.target&amp;gt;1.8&amp;lt;/maven.compiler.target&amp;gt;
+    &amp;lt;/properties&amp;gt;
+
+    &amp;lt;build&amp;gt;
+        &amp;lt;plugins&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;maven-shade-plugin&amp;lt;/artifactId&amp;gt;
+                &amp;lt;version&amp;gt;2.1&amp;lt;/version&amp;gt;
+                &amp;lt;executions&amp;gt;
+                    &amp;lt;execution&amp;gt;
+                        &amp;lt;phase&amp;gt;package&amp;lt;/phase&amp;gt;
+                        &amp;lt;goals&amp;gt;
+                            &amp;lt;goal&amp;gt;shade&amp;lt;/goal&amp;gt;
+                        &amp;lt;/goals&amp;gt;
+                        &amp;lt;configuration&amp;gt;
+                            &amp;lt;transformers&amp;gt;
+                                &amp;lt;transformer
+                                    implementation=&amp;quot;org.apache.maven.plugins.shade.resource.ManifestResourceTransformer&amp;quot;&amp;gt;
+                                    &amp;lt;mainClass&amp;gt;hello.HelloWorld&amp;lt;/mainClass&amp;gt;
+                                &amp;lt;/transformer&amp;gt;
+                            &amp;lt;/transformers&amp;gt;
+                        &amp;lt;/configuration&amp;gt;
+                    &amp;lt;/execution&amp;gt;
+                &amp;lt;/executions&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+        &amp;lt;/plugins&amp;gt;
+    &amp;lt;/build&amp;gt;
+&amp;lt;/project&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;build-java-code&#34;&gt;Build Java code&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;mvn compile
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;mvn package
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;java -jar target/mysite-0.1.0.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;declare-dependencies&#34;&gt;Declare Dependencies&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;vim pom.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;dependencies&amp;gt;
+		&amp;lt;dependency&amp;gt;
+			&amp;lt;groupId&amp;gt;joda-time&amp;lt;/groupId&amp;gt;
+			&amp;lt;artifactId&amp;gt;joda-time&amp;lt;/artifactId&amp;gt;
+			&amp;lt;version&amp;gt;2.9.2&amp;lt;/version&amp;gt;
+		&amp;lt;/dependency&amp;gt;
+&amp;lt;/dependencies&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim src/main/java/hello/HelloWorld.java
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;package hello;
+
+import org.joda.time.LocalTime;
+
+public class HelloWorld {
+  public static void main(String[] args) {
+    LocalTime currentTime = new LocalTime();
+    System.out.println(&amp;quot;The current local time is: &amp;quot; + currentTime);
+    Greeter greeter = new Greeter();
+    System.out.println(greeter.sayHello());
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;write-a-test&#34;&gt;Write a Test&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;vim pom.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;dependency&amp;gt;
+	&amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt;
+	&amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt;
+	&amp;lt;version&amp;gt;4.12&amp;lt;/version&amp;gt;
+	&amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;mkdir -p src/test/java/hello
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim src/test/java/hello/GreeterTest.java
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;package hello;
+
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class GreeterTest {
+
+  private Greeter greeter = new Greeter();
+
+  @Test
+  public void greeterSaysHello() {
+    assertThat(greeter.sayHello(), containsString(&amp;quot;Hello&amp;quot;));
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;mvn test
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;building-an-application-with-spring-boot&#34;&gt;Building an Application with Spring Boot&lt;/h3&gt;
+&lt;h3 id=&#34;mybatis-integration-with-spring-boot&#34;&gt;MyBatis integration with Spring Boot&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;spring init -d=web,mybatis,h2 --build=maven mysite_mybatis
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;create-sql-files&#34;&gt;Create sql files&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;vim src/main/resources/schema.sql
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;CREATE TABLE city
+(
+  id      INT PRIMARY KEY auto_increment,
+  name    VARCHAR,
+  state   VARCHAR,
+  country VARCHAR
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;create-a-domain-class&#34;&gt;Create a domain class&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;vim src/main/java/com/example/mysite_mybatis/City.java
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;package com.example.mysite_mybatis;
+
+public class City {
+
+  private Long id;
+  private String name;
+  private String state;
+  private String country;
+
+  public Long getId() {
+    return this.id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getState() {
+    return this.state;
+  }
+
+  public void setState(String state) {
+    this.state = state;
+  }
+
+  public String getCountry() {
+    return this.country;
+  }
+
+  public void setCountry(String country) {
+    this.country = country;
+  }
+
+  @Override
+  public String toString() {
+    return getId() + &amp;quot;,&amp;quot; + getName() + &amp;quot;,&amp;quot; + getState() + &amp;quot;,&amp;quot; + getCountry();
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;create-a-mapper-interface&#34;&gt;Create a mapper interface&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;vim src/main/java/com/example/mysite_mybatis/CityMapper.java
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;package com.example.mysite_mybatis;
+
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.Select;
+
+@Mapper
+public interface CityMapper {
+
+  @Insert(&amp;quot;INSERT INTO city (name, state, country) VALUES(#{name}, #{state}, #{country})&amp;quot;)
+  @Options(useGeneratedKeys = true, keyProperty = &amp;quot;id&amp;quot;)
+  void insert(City city);
+
+  @Select(&amp;quot;SELECT id, name, state, country FROM city WHERE id = #{id}&amp;quot;)
+  City findById(long id);
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;modify-a-spring-boot-application-class&#34;&gt;Modify a spring boot application class&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;vim src/main/java/com/example/mysite_mybatis/DemoApplication.java
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;package com.example.mysite_mybatis;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
+public class DemoApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+
+    public DemoApplication(CityMapper cityMapper) {
+        this.cityMapper = cityMapper;
+    }
+
+    @Bean
+    CommandLineRunner sampleCommandLineRunner() {
+        return args -&amp;gt; {
+            City city = new City();
+            city.setName(&amp;quot;San Francisco&amp;quot;);
+            city.setState(&amp;quot;CA&amp;quot;);
+            city.setCountry(&amp;quot;US&amp;quot;);
+            cityMapper.insert(city);
+            System.out.println(this.cityMapper.findById(city.getId()));
+        };
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;run-a-spring-boot-application&#34;&gt;Run a spring boot application&lt;/h6&gt;
+&lt;p&gt;Run a created application using the Spring Boot Maven Plugin.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;vim pom.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;properties&amp;gt;
+  &amp;lt;maven.compiler.target&amp;gt;1.8&amp;lt;/maven.compiler.target&amp;gt;
+  &amp;lt;maven.compiler.source&amp;gt;1.8&amp;lt;/maven.compiler.source&amp;gt;
+&amp;lt;/properties&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;build&amp;gt;
+  &amp;lt;plugins&amp;gt;
+    &amp;lt;plugin&amp;gt;
+      &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;maven-compiler-plugin&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;3.6.1&amp;lt;/version&amp;gt;
+      &amp;lt;configuration&amp;gt;
+        &amp;lt;source&amp;gt;1.8&amp;lt;/source&amp;gt;
+        &amp;lt;target&amp;gt;1.8&amp;lt;/target&amp;gt;
+      &amp;lt;/configuration&amp;gt;
+    &amp;lt;/plugin&amp;gt;
+  &amp;lt;/plugins&amp;gt;
+&amp;lt;/build&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://grafana.com/grafana/dashboards/893&#34;&gt;https://grafana.com/grafana/dashboards/893&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html&#34;&gt;Using Spring Boot&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
       
     </item>
     
     <item>
-      <title>Prometheus</title>
-      <link>http://csyezheng.github.io/post/devops/prometheus/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <title>欣宸Blog</title>
+      <link>http://csyezheng.github.io/post/devops/</link>
+      <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/devops/prometheus/</guid>
+      <guid>http://csyezheng.github.io/post/devops/</guid>
       
-        <description>&lt;h1 id=&#34;prometheus-入门与实践&#34;&gt;Prometheus 入门与实践&lt;/h1&gt;
-&lt;p&gt;吴 莉, 殷 一鸣, 和 蔡 林
-2018 年 5 月 30 日发布&lt;/p&gt;
-&lt;p&gt;随着容器技术的迅速发展，Kubernetes 已然成为大家追捧的容器集群管理系统。Prometheus 作为生态圈 Cloud Native Computing Foundation（简称：CNCF）中的重要一员,其活跃度仅次于 Kubernetes, 现已广泛用于 Kubernetes 集群的监控系统中。本文将简要介绍 Prometheus 的组成和相关概念，并实例演示 Prometheus 的安装，配置及使用，以便开发人员和云平台运维人员可以快速的掌握 Prometheus。&lt;/p&gt;
-&lt;h2 id=&#34;prometheus-简介&#34;&gt;Prometheus 简介&lt;/h2&gt;
-&lt;p&gt;Prometheus 是一套开源的系统监控报警框架。它启发于 Google 的 borgmon 监控系统，由工作在 SoundCloud 的 google 前员工在 2012 年创建，作为社区开源项目进行开发，并于 2015 年正式发布。2016 年，Prometheus 正式加入 Cloud Native Computing Foundation，成为受欢迎度仅次于 Kubernetes 的项目。&lt;/p&gt;
-&lt;p&gt;作为新一代的监控框架，Prometheus 具有以下特点：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;强大的多维度数据模型：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;时间序列数据通过 metric 名和键值对来区分。&lt;/li&gt;
-&lt;li&gt;所有的 metrics 都可以设置任意的多维标签。&lt;/li&gt;
-&lt;li&gt;数据模型更随意，不需要刻意设置为以点分隔的字符串。&lt;/li&gt;
-&lt;li&gt;可以对数据模型进行聚合，切割和切片操作。&lt;/li&gt;
-&lt;li&gt;支持双精度浮点类型，标签可以设为全 unicode。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;灵活而强大的查询语句（PromQL）：在同一个查询语句，可以对多个 metrics 进行乘法、加法、连接、取分数位等操作。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;易于管理： Prometheus server 是一个单独的二进制文件，可直接在本地工作，不依赖于分布式存储。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;高效：平均每个采样点仅占 3.5 bytes，且一个 Prometheus server 可以处理数百万的 metrics。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用 pull 模式采集时间序列数据，这样不仅有利于本机测试而且可以避免有问题的服务器推送坏的 metrics。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;可以采用 push gateway 的方式把时间序列数据推送至 Prometheus server 端。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;可以通过服务发现或者静态配置去获取监控的 targets。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;有多种可视化图形界面。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;易于伸缩。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;需要指出的是，由于数据采集可能会有丢失，所以 Prometheus 不适用对采集数据要 100% 准确的情形。但如果用于记录时间序列数据，Prometheus 具有很大的查询优势，此外，Prometheus 适用于微服务的体系架构。&lt;/p&gt;
-&lt;h2 id=&#34;prometheus-组成及架构&#34;&gt;Prometheus 组成及架构&lt;/h2&gt;
-&lt;p&gt;Prometheus 生态圈中包含了多个组件，其中许多组件是可选的：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Prometheus Server&lt;/strong&gt;: 用于收集和存储时间序列数据。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Client Library&lt;/strong&gt;: 客户端库，为需要监控的服务生成相应的 metrics 并暴露给 Prometheus server。当 Prometheus server 来 pull 时，直接返回实时状态的 metrics。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Push Gateway&lt;/strong&gt;: 主要用于短期的 jobs。由于这类 jobs 存在时间较短，可能在 Prometheus 来 pull 之前就消失了。为此，这次 jobs 可以直接向 Prometheus server 端推送它们的 metrics。这种方式主要用于服务层面的 metrics，对于机器层面的 metrices，需要使用 node exporter。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Exporters&lt;/strong&gt;: 用于暴露已有的第三方服务的 metrics 给 Prometheus。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Alertmanager&lt;/strong&gt;: 从 Prometheus server 端接收到 alerts 后，会进行去除重复数据，分组，并路由到对收的接受方式，发出报警。常见的接收方式有：电子邮件，pagerduty，OpsGenie, webhook 等。&lt;/li&gt;
-&lt;li&gt;一些其他的工具。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;图 1 为 Prometheus 官方文档中的架构图：&lt;/p&gt;
-&lt;h5 id=&#34;图-1-prometheus-架构图&#34;&gt;图 1. Prometheus 架构图&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image001.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N100B0&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;从上图可以看出，Prometheus 的主要模块包括：Prometheus server, exporters, Pushgateway, PromQL, Alertmanager 以及图形界面。&lt;/p&gt;
-&lt;p&gt;其大概的工作流程是：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Prometheus server 定期从配置好的 jobs 或者 exporters 中拉 metrics，或者接收来自 Pushgateway 发过来的 metrics，或者从其他的 Prometheus server 中拉 metrics。&lt;/li&gt;
-&lt;li&gt;Prometheus server 在本地存储收集到的 metrics，并运行已定义好的 alert.rules，记录新的时间序列或者向 Alertmanager 推送警报。&lt;/li&gt;
-&lt;li&gt;Alertmanager 根据配置文件，对接收到的警报进行处理，发出告警。&lt;/li&gt;
-&lt;li&gt;在图形界面中，可视化采集数据。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;prometheus-相关概念&#34;&gt;Prometheus 相关概念&lt;/h2&gt;
-&lt;p&gt;下面将对 Prometheus 中的数据模型，metric 类型以及 instance 和 job 等概念进行介绍，以便读者在 Prometheus 的配置和使用中可以有一个更好的理解。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;数据模型&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Prometheus 中存储的数据为时间序列，是由 metric 的名字和一系列的标签（键值对）唯一标识的，不同的标签则代表不同的时间序列。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;metric 名字：该名字应该具有语义，一般用于表示 metric 的功能，例如：http_requests_total, 表示 http 请求的总数。其中，metric 名字由 ASCII 字符，数字，下划线，以及冒号组成，且必须满足正则表达式 [a-zA-Z_:][a-zA-Z0-9_:]*。&lt;/li&gt;
-&lt;li&gt;标签：使同一个时间序列有了不同维度的识别。例如 http_requests_total{method=&amp;quot;Get&amp;rdquo;} 表示所有 http 请求中的 Get 请求。当 method=&amp;quot;post&amp;rdquo; 时，则为新的一个 metric。标签中的键由 ASCII 字符，数字，以及下划线组成，且必须满足正则表达式 [a-zA-Z_:][a-zA-Z0-9_:]*。&lt;/li&gt;
-&lt;li&gt;样本：实际的时间序列，每个序列包括一个 float64 的值和一个毫秒级的时间戳。&lt;/li&gt;
-&lt;li&gt;格式：&lt;!-- raw HTML omitted --&gt;{&lt;!-- raw HTML omitted --&gt;=&lt;!-- raw HTML omitted --&gt;, …}，例如：http_requests_total{method=&amp;quot;POST&amp;rdquo;,endpoint=&amp;rdquo;/api/tracks&amp;rdquo;}。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;四种 Metric 类型&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Prometheus 客户端库主要提供四种主要的 metric 类型：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Counter&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;一种累加的 metric，典型的应用如：请求的个数，结束的任务数， 出现的错误数等等。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;例如，查询 http_requests_total{method=&amp;quot;get&amp;rdquo;, job=&amp;quot;Prometheus&amp;rdquo;, handler=&amp;quot;query&amp;rdquo;} 返回 8，10 秒后，再次查询，则返回 14。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Gauge&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;一种常规的 metric，典型的应用如：温度，运行的 goroutines 的个数。&lt;/li&gt;
-&lt;li&gt;可以任意加减。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;例如：go_goroutines{instance=&amp;quot;172.17.0.2&amp;rdquo;, job=&amp;quot;Prometheus&amp;rdquo;} 返回值 147，10 秒后返回 124。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Histogram&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;可以理解为柱状图，典型的应用如：请求持续时间，响应大小。&lt;/li&gt;
-&lt;li&gt;可以对观察结果采样，分组及统计。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;例如，查询 http_request_duration_microseconds_sum{job=&amp;quot;Prometheus&amp;rdquo;, handler=&amp;quot;query&amp;rdquo;} 时，返回结果如下：&lt;/p&gt;
-&lt;h5 id=&#34;图-2-histogram-metric-返回结果图&#34;&gt;图 2. Histogram metric 返回结果图&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image002.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N100FE&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;类似于 Histogram, 典型的应用如：请求持续时间，响应大小。&lt;/li&gt;
-&lt;li&gt;提供观测值的 count 和 sum 功能。&lt;/li&gt;
-&lt;li&gt;提供百分位的功能，即可以按百分比划分跟踪结果。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;instance 和 jobs&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;instance:&lt;/strong&gt; 一个单独 scrape 的目标， 一般对应于一个进程。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;jobs:&lt;/strong&gt; 一组同种类型的 instances（主要用于保证可扩展性和可靠性），例如：&lt;/p&gt;
-&lt;h5 id=&#34;清单-1-job-和-instance-的关系&#34;&gt;清单 1. job 和 instance 的关系&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;job: api-server` `  ``instance 1: 1.2.3.4:5670``  ``instance 2: 1.2.3.4:5671``  ``instance 3: 5.6.7.8:5670``  ``instance 4: 5.6.7.8:5671
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;当 scrape 目标时，Prometheus 会自动给这个 scrape 的时间序列附加一些标签以便更好的分别，例如： instance，job。&lt;/p&gt;
-&lt;p&gt;下面以实际的 metric 为例，对上述概念进行说明。&lt;/p&gt;
-&lt;h5 id=&#34;图-3-metrics-示例&#34;&gt;图 3. Metrics 示例&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image003.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10129&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;如上图所示，这三个 metric 的名字都一样，他们仅凭 handler 不同而被标识为不同的 metrics。这类 metrics 只会向上累加，是属于 Counter 类型的 metric，且 metrics 中都含有 instance 和 job 这两个标签。&lt;/p&gt;
-&lt;h2 id=&#34;node-exporter-安装&#34;&gt;Node exporter 安装&lt;/h2&gt;
-&lt;p&gt;为了更好的演示 Prometheus 从配置，到监控，到报警的功能，本实例将引入本机 ubuntu server 的监控。由于 Prometheus 主要用于监控 web 服务，如果需要监控 ubuntu server，则需要在本机上安装 node exporter。 Node exporter 主要用于暴露 metrics 给 Prometheus，其中 metrics 包括：cpu 的负载，内存的使用情况，网络等。&lt;/p&gt;
-&lt;p&gt;安装 node export 首先需要从 github 中下载最新的 node exporter 包，放在指定的目录并解压安装包，在本实例中，放在 /home/lilly/prom/exporters/ 中。&lt;/p&gt;
-&lt;h5 id=&#34;清单-2-安装-node-exporter&#34;&gt;清单 2. 安装 Node exporter&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;cd /home/lilly/prom/exporters/``wget https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.linux-amd64.tar.gz``tar -xvzf node_exporter-0.14.0.linux-amd64.tar.gz
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;为了更好的启动和停止 node exporter，可以把 node exporter 转换为一个服务。&lt;/p&gt;
-&lt;h5 id=&#34;清单-3-配置-node-exporter-为服务&#34;&gt;清单 3. 配置 node exporter 为服务&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;vim /etc/init/node_exporter.conf``#Prometheus Node Exporter Upstart script`` ``start on startup`` ``script`` ``/home/lilly/prom/exporters/node_exporter/node_exporter`` ``end script
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;此时，node exporter 已经是一个服务，可以直接用 service 命令进行启停和查看。&lt;/p&gt;
-&lt;h5 id=&#34;清单-4-查看-node-exporter-状态&#34;&gt;清单 4. 查看 node exporter 状态&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;root@ubuntu1404-dev:~/alertmanager# service node_exporter start``node_exporter start/running, process 11017``root@ubuntu1404-dev:~/alertmanager# service node_exporter status``node_exporter start/running, process 11017``此时，node exporter 已经监听在 9100 端口。``root@ubuntu1404-dev:~/prom# netstat -anp | grep 9100``tcp6    0   0 :::9100         :::*          LISTEN   155/node_exporter
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;当 node exporter 启动时，可以通过 curl http://localhost:9100/metrics 或者在浏览器中查看 ubuntu server 里面的 metrics，部分 metrics 信息如下：&lt;/p&gt;
-&lt;h5 id=&#34;清单-5-验证-node-exporter&#34;&gt;清单 5. 验证 node exporter&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;root@ubuntu1404-dev:~/prom# curl http://localhost:9100/metrics``……``# HELP node_cpu Seconds the cpus spent in each mode.``# TYPE node_cpu counter``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;guest&amp;quot;} 0``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;idle&amp;quot;} 30.02``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;iowait&amp;quot;} 0.5``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;irq&amp;quot;} 0``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;nice&amp;quot;} 0``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;softirq&amp;quot;} 0.34``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;steal&amp;quot;} 0``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;system&amp;quot;} 5.38``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;user&amp;quot;} 11.34``# HELP node_disk_bytes_read The total number of bytes read successfully.``# TYPE node_disk_bytes_read counter``node_disk_bytes_read{device=&amp;quot;sda&amp;quot;} 5.50009856e+08``node_disk_bytes_read{device=&amp;quot;sr0&amp;quot;} 67584``# HELP node_disk_bytes_written The total number of bytes written successfully.``# TYPE node_disk_bytes_written counter``node_disk_bytes_written{device=&amp;quot;sda&amp;quot;} 2.0160512e+07``node_disk_bytes_written{device=&amp;quot;sr0&amp;quot;} 0``# HELP node_disk_io_now The number of I/Os currently in progress.``# TYPE node_disk_io_now gauge``node_disk_io_now{device=&amp;quot;sda&amp;quot;} 0``node_disk_io_now{device=&amp;quot;sr0&amp;quot;} 0``# HELP node_disk_io_time_ms Total Milliseconds spent doing I/Os.``# TYPE node_disk_io_time_ms counter``node_disk_io_time_ms{device=&amp;quot;sda&amp;quot;} 3484``node_disk_io_time_ms{device=&amp;quot;sr0&amp;quot;} 12``……``# HELP node_memory_MemAvailable Memory information field MemAvailable.``# TYPE node_memory_MemAvailable gauge``node_memory_MemAvailable 1.373270016e+09``# HELP node_memory_MemFree Memory information field MemFree.``# TYPE node_memory_MemFree gauge``node_memory_MemFree 9.2403712e+08``# HELP node_memory_MemTotal Memory information field MemTotal.``# TYPE node_memory_MemTotal gauge``node_memory_MemTotal 2.098388992e+09``……``# HELP node_network_receive_drop Network device statistic receive_drop.``# TYPE node_network_receive_drop gauge``node_network_receive_drop{device=&amp;quot;docker0&amp;quot;} 0``node_network_receive_drop{device=&amp;quot;eth0&amp;quot;} 0``node_network_receive_drop{device=&amp;quot;eth1&amp;quot;} 0``node_network_receive_drop{device=&amp;quot;lo&amp;quot;} 0
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;prometheus-安装和配置&#34;&gt;Prometheus 安装和配置&lt;/h2&gt;
-&lt;p&gt;Prometheus 可以采用多种方式安装，本文直接用官网的 docker image（prom/prometheus）启动一个 Prometheus server, 并配置相应的静态监控 targets，jobs 和 alert.rules 文件。&lt;/p&gt;
-&lt;p&gt;启动 Prometheus 容器，并把服务绑定在本机的 9090 端口。命令如下：&lt;/p&gt;
-&lt;h5 id=&#34;清单-6-安装-prometheus&#34;&gt;清单 6. 安装 Prometheus&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;docker run -d -p 9090:9090 \``      ``-v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml \``      ``-v $PWD/alert.rules:/etc/prometheus/alert.rules \``      ``--name prometheus \``      ``prom/prometheus \``      ``-config.file=/etc/prometheus/prometheus.yml \``      ``-alertmanager.url=http://10.0.2.15:9093
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;其中 Prometheus 的配置文件 prometheus.yml 内容为：&lt;/p&gt;
-&lt;h5 id=&#34;清单-7-prometheusyml-配置文件&#34;&gt;清单 7. Prometheus.yml 配置文件&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;global:         # 全局设置，可以被覆盖`` ``scrape_interval:   15s # 默认值为 15s，用于设置每次数据收集的间隔` ` ``external_labels:  # 所有时间序列和警告与外部通信时用的外部标签``  ``monitor: &#39;codelab-monitor&#39;` `rule_files: # 警告规则设置文件`` ``- &#39;/etc/prometheus/alert.rules&#39;` `# 用于配置 scrape 的 endpoint 配置需要 scrape 的 targets 以及相应的参数``scrape_configs: `` ``# The job name is added as a label `job=&amp;lt;``job_name``&amp;gt;` to any timeseries scraped from this config.`` ``- job_name: &#39;prometheus&#39; # 一定要全局唯一, 采集 Prometheus 自身的 metrics` `  ``# 覆盖全局的 scrape_interval``  ``scrape_interval: 5s` `  ``static_configs: # 静态目标的配置``   ``- targets: [&#39;172.17.0.2:9090&#39;]` ` ``- job_name: &#39;node&#39; # 一定要全局唯一, 采集本机的 metrics，需要在本机安装 node_exporter` `  ``scrape_interval: 10s` `  ``static_configs:``   ``- targets: [&#39;10.0.2.15:9100&#39;] # 本机 node_exporter 的 endpoint
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;alert 规则文件的内容如下：&lt;/p&gt;
-&lt;h5 id=&#34;清单-8-alertrules-配置文件&#34;&gt;清单 8. alert.rules 配置文件&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;# Alert for any instance that is unreachable for &amp;gt;5 minutes.``ALERT InstanceDown  # alert 名字`` ``IF up == 0      # 判断条件`` ``FOR 5m       # 条件保持 5m 才会发出 alert`` ``LABELS { severity = &amp;quot;critical&amp;quot; } # 设置 alert 的标签`` ``ANNOTATIONS {       # alert 的其他标签，但不用于标识 alert``  ``summary = &amp;quot;Instance {{ $labels.instance }} down&amp;quot;,``  ``description = &amp;quot;{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 5 minutes.&amp;quot;,`` ``}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;当 Prometheus server 起来时，可以在 Prometheus 容器的日志中看到：&lt;/p&gt;
-&lt;h5 id=&#34;清单-9-prometheus-日志&#34;&gt;清单 9. Prometheus 日志&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;time=&amp;quot;2017-09-05T08:18:02Z&amp;quot; level=info msg=&amp;quot;Starting prometheus (version=1.7.1, branch=master, ``revision=3afb3fffa3a29c3de865e1172fb740442e9d0133)&amp;quot; source=&amp;quot;main.go:88&amp;quot; ``time=&amp;quot;2017-09-05T08:18:02Z&amp;quot; level=info msg=&amp;quot;Build context (go=go1.8.3, user=root@0aa1b7fc430d, date=20170612-``11:44:05)&amp;quot; source=&amp;quot;main.go:89&amp;quot; ``time=&amp;quot;2017-09-05T08:18:02Z&amp;quot; level=info msg=&amp;quot;Host details (Linux 3.19.0-75-generic #83~14.04.1-Ubuntu SMP Thu Nov ``10 10:51:40 UTC 2016 x86_64 71984d75e6a1 (none))&amp;quot; source=&amp;quot;main.go:90&amp;quot; ``time=&amp;quot;2017-09-05T08:18:02Z&amp;quot; level=info msg=&amp;quot;Loading configuration file /etc/prometheus/prometheus.yml&amp;quot; ``source=&amp;quot;main.go:252&amp;quot; ``time=&amp;quot;2017-09-05T08:18:03Z&amp;quot; level=info msg=&amp;quot;Loading series map and head chunks...&amp;quot; source=&amp;quot;storage.go:428&amp;quot; ``time=&amp;quot;2017-09-05T08:18:03Z&amp;quot; level=info msg=&amp;quot;0 series loaded.&amp;quot; source=&amp;quot;storage.go:439&amp;quot; ``time=&amp;quot;2017-09-05T08:18:03Z&amp;quot; level=info msg=&amp;quot;Starting target manager...&amp;quot; source=&amp;quot;targetmanager.go:63&amp;quot; ``time=&amp;quot;2017-09-05T08:18:03Z&amp;quot; level=info msg=&amp;quot;Listening on :9090&amp;quot; source=&amp;quot;web.go:259&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在浏览器中访问 Prometheus 的主页 &lt;a href=&#34;http://localhost:9091/&#34;&gt;http://localhost:9091&lt;/a&gt;, 可以看到 Prometheus 的信息如下：&lt;/p&gt;
-&lt;h5 id=&#34;图-4-prometheus-状态信息&#34;&gt;图 4. Prometheus 状态信息&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image004.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N1019D&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;为了保证 Prometheus 确实从 node exporter 中收集数据，可以在 Graph 页面中搜索 metric 名字，如 node_cpu 并点击 Execute，可以在 console 中看到 metric 如下。&lt;/p&gt;
-&lt;h5 id=&#34;图-5-prometheus-中-metric-查询结果-console-输出示例&#34;&gt;图 5. Prometheus 中 metric 查询结果 console 输出示例&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image005.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N101A9&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;其中第一条为来自 node exporter 的 metric，此时 ubuntu server 上 goroutines 的个数为 13。点击 Graph 可以观察 metrics 的历史数据。如下图所示：&lt;/p&gt;
-&lt;h5 id=&#34;图-6-prometheus-中-metric-查询结果-graph-输出示例&#34;&gt;图 6. Prometheus 中 metric 查询结果 Graph 输出示例&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image006.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N101B5&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;alertmanager-安装和配置&#34;&gt;Alertmanager 安装和配置&lt;/h2&gt;
-&lt;p&gt;当接收到 Prometheus 端发送过来的 alerts 时，Alertmanager 会对 alerts 进行去重复，分组，路由到对应集成的接受端，包括：slack，电子邮件，pagerduty，hitchat，webhook。&lt;/p&gt;
-&lt;p&gt;在 Alertmanager 的配置文件中，需要进行如下配置：&lt;/p&gt;
-&lt;h5 id=&#34;清单-10-alermanager-中-configyml-文件&#34;&gt;清单 10. Alermanager 中 config.yml 文件&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;root@ubuntu1404-dev:~/alertmanager# cat config.yml``global:``  ``resolve_timeout: 5m``route:``  ``receiver: &#39;default-receiver&#39;``  ``group_wait: 30s``  ``group_interval: 1m``  ``repeat_interval: 1m``  ``group_by: [&#39;alertname&#39;]` `  ``routes:``  ``- match:``    ``severity: critical``   ``receiver: my-slack` `receivers:``- name: &#39;my-slack&#39;`` ``slack_configs:`` ``- send_resolved: true``  ``api_url: https://hooks.slack.com/services/***``  ``channel: &#39;#alertmanager-critical&#39;``  ``text: &amp;quot;{{ .CommonAnnotations.description }}&amp;quot;` `- name: &#39;default-receiver&#39;`` ``slack_configs:`` ``- send_resolved: true``  ``api_url: https://hooks.slack.com/services/***``  ``channel: &#39;#alertmanager-default&#39;``  ``text: &amp;quot;{{ .CommonAnnotations.description }}&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;创建好 config.yml 文件后，可以直接用 docker 启动一个 Alertmanager 的容器，如下：&lt;/p&gt;
-&lt;h5 id=&#34;清单-11-安装-alertmanager&#34;&gt;清单 11. 安装 Alertmanager&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;docker run -d -p 9093:9093 ``         ``–v /home/lilly/alertmanager/config.yml:/etc/alertmanager/config.yml \``         ``--name alertmanager \``         ``prom/alertmanager` `docker ps | grep alert``d1b7a753a688    prom/alertmanager  &amp;quot;/bin/alertmanager -c&amp;quot;  25 hours ago    Up 25 hours     ``0.0.0.0:9093-&amp;gt;9093/tcp  alertmanager
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;当 Alertmanager 服务起来时，可以通过浏览器访 Alertmanager 的主页 &lt;a href=&#34;http://localhost:9093/&#34;&gt;http://localhost:9093&lt;/a&gt;，其状态信息如下：&lt;/p&gt;
-&lt;h5 id=&#34;图-7-alertmanager-状态信息&#34;&gt;图 7. Alertmanager 状态信息&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image007.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N101E0&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在 alerts 的页面中，我们可以看到从 Prometheus sever 端发过来的 alerts，此外，还可以做 alerts 搜索，分组，静音等操作。&lt;/p&gt;
-&lt;h5 id=&#34;图-8-alertmanager-报警页面&#34;&gt;图 8. Alertmanager 报警页面&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image008.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N101EC&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;prometheus-实例演示&#34;&gt;Prometheus 实例演示&lt;/h2&gt;
-&lt;p&gt;下面将通过一个具体的实例来演示 Prometheus 的使用。在 alert.ruels 中定义了 alert 触发的条件是 up 为 0。下面，手动停止 node exporter 服务。&lt;/p&gt;
-&lt;h5 id=&#34;清单-12-停止-node-exporter-服务&#34;&gt;清单 12. 停止 node exporter 服务&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;root@ubuntu1404-dev:~/prom# service node_exporter stop``node_exporter stop/waiting``root@ubuntu1404-dev:~/prom# service node_exporter status``node_exporter stop/waiting
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;此时，Prometheus 中查询 metric up,可以看到此时 up{instance=&amp;quot;10.0.2.15&amp;rdquo;,job=&amp;quot;node&amp;rdquo;} 的值为 0，如下所示：&lt;/p&gt;
-&lt;h5 id=&#34;图-9-metric-up-的返回值停&#34;&gt;图 9. Metric up 的返回值（停）&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image009.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10207&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;此时，Alerts 页面中显示 InstanceDown，状态为 PENDING。因为 alert 规则中定义需要保持 5 分钟，所以在这之前，alerts 还没有发送至 Alertmanager。&lt;/p&gt;
-&lt;h5 id=&#34;图-10-alert-pending-界面&#34;&gt;图 10. Alert Pending 界面&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image010.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10213&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;5 分钟后，状态由 PENDING 变为 FIRING，于此同时，在 Alertmanager 中可以看到有一个 alert。&lt;/p&gt;
-&lt;h5 id=&#34;图-11-alert-firing-界面&#34;&gt;图 11. Alert Firing 界面&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image011.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N1021F&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;图-12-alertmanager-警报界面&#34;&gt;图 12. Alertmanager 警报界面&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image012.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10229&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在 Alertmanager 的配置文件中定义，党 severity 为 critical 的时候，往 Alertmanager-critical channel 中发送警告，且每隔两分钟重复发送。如下图所示。&lt;/p&gt;
-&lt;h5 id=&#34;图-13-slack-告警界面&#34;&gt;图 13. Slack 告警界面&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image013.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10235&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;由上可知，当目标失败时，不仅可以在 Prometheus 的主页上实时的查看目标和 alerts 的状态，还可以使用 Alertmanager 发送警告，以便运维人员尽快解决问题。&lt;/p&gt;
-&lt;p&gt;当问题解决后，Prometheus 不仅会实时更新 metrics 的状态，Alertmanager 也会在 slack 通知 resolved 的消息。以下演示问题解决后的，Prometheus 的操作。&lt;/p&gt;
-&lt;p&gt;手动启动 node exporter。首先 metric 在 Graph 中恢复至正常值 1。&lt;/p&gt;
-&lt;h5 id=&#34;图-14-metric-up-的返回值启&#34;&gt;图 14. Metric up 的返回值（启）&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image014.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10245&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;targets 中现实 node 这个 job 是 up 的状态。&lt;/p&gt;
-&lt;h5 id=&#34;图-15-targets-界面&#34;&gt;图 15. Targets 界面&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image015.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10251&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Alerts 为绿色，显示有 0 个激活态的警告。&lt;/p&gt;
-&lt;h5 id=&#34;图-16-alers-resolved-界面&#34;&gt;图 16. Alers resolved 界面&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image016.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N1025D&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;而在 Alertmanager 刚刚的 alert 也被清空，显示 No alerts found。&lt;/p&gt;
-&lt;h5 id=&#34;图-17-alertmanager-resolved-界面&#34;&gt;图 17. Alertmanager resolved 界面&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image017.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10269&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在 slack 端，在多次红色 FRING 报警后，也收到了绿色了 RESOLVED 消息。&lt;/p&gt;
-&lt;h5 id=&#34;图-18-slack-resolved-界面&#34;&gt;图 18. Slack resolved 界面&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image018.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10275&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
-&lt;p&gt;本文对 Prometheus 的组成，架构和基本概念进行了介绍，并实例演示了 node exporter, Prometheus 和 Alermanager 的配置和运行。最后，以一个监控的 target 的启停为例，演示 Prometheus 的一系列响应以及如何在 Prometheus 和 Alertmanager 中查看服务，警报和告警的状态。对于 Prometheus 中更高级的使用，如查询函数的使用，更多图形界面的集成，请参考官方文档。&lt;/p&gt;
-&lt;h2 id=&#34;参考资源&#34;&gt;参考资源&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Prometheus 概念及详细配置请参阅 &lt;a href=&#34;https://prometheus.io/docs/introduction/overview/&#34;&gt;Prometheus 官方文档&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Node exporter 安装请参考 &lt;a href=&#34;https://github.com/prometheus/node_exporter&#34;&gt;node_exporter github 仓库&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Slack 信息发送请参考 &lt;a href=&#34;https://api.slack.com/incoming-webhooks&#34;&gt;Incoming Webhooks&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://m.media-amazon.com/images/I/71riIyCXHaL._AC_UY436_FMwebp_QL65_.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html&#34;&gt;Prometheus 入门与实践&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://prometheus.io/docs/prometheus/latest/getting_started/&#34;&gt;https://prometheus.io/docs/prometheus/latest/getting_started/&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
+        <description>&lt;p&gt;&lt;a href=&#34;https://cloud.tencent.com/developer/column/1662&#34;&gt;https://cloud.tencent.com/developer/column/1662&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>
@@ -2073,6 +2549,232 @@
     </item>
     
     <item>
+      <title>Bert</title>
+      <link>http://csyezheng.github.io/post/deep-learning/bert/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/deep-learning/bert/</guid>
+      
+        <description>&lt;h1 id=&#34;bert-可解释性-从头说起&#34;&gt;BERT 可解释性-从&amp;quot;头&amp;quot;说起&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;一、背景介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大帮助。query-title 分档任务要求针对 query 和 title 按文本相关性进行 5 个档位的分类(1~5 档)，各档位从需求满足及语义匹配这两方面对 query-doc 的相关度进行衡量，档位越大表示相关性越高，如 1 档表示文本和语义完全不相关，而 5 档表示文本和语义高度相关，完全符合 query 的需求。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/80/v2-58cac5479dcc451b4d30133b67fb8c5d_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;我们尝试将 Bert 模型应用在 query-title 分档任务上，将 query 和 title 作为句对输入到 bert 中，取最后一层 cls 向量用做 5 分类(如上图)，最后得到的结果比 LSTM-Attention 交互式匹配模型要好。虽然知道了 bert&lt;strong&gt;能&lt;/strong&gt;解决这个问题，我们更好奇的是&amp;rdquo;&lt;strong&gt;为什么&lt;/strong&gt;&amp;quot;：为什么 bert 的表现能这么好？这里面有没有可解释的部分呢？&lt;/p&gt;
+&lt;p&gt;因为 Multi-head-attention 是 bert 的主要组成部分，所以我们从&amp;quot;头&amp;quot;入手，希望弄清楚各个 head 对 bert 模型有什么作用。为了研究某个 head 对模型的影响，我们需要比较有这个 head 和没有这个 head 模型的前后表现。这里定义一下 HEAD-MASK 操作，其实就是针对某个 head，直接将这个 head 的 attention 值置成 0，这样对于任何输入这个 head 都只能输出 0 向量。&lt;/p&gt;
+&lt;p&gt;通过 HEAD-MASK 操作对各个 head 进行对比实验，发现了下面几个有趣的点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;attention-head 很冗余/鲁棒，去掉 20%的 head 模型不受影响&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;各层 transformer 之间不是串行关系，去掉一整层 attention-head 对下层影响不大&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;各个 head 有固定的功能&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;某些 head 负责分词&lt;/li&gt;
+&lt;li&gt;某些 head 提取语序关系&lt;/li&gt;
+&lt;li&gt;某些 head 负责提取 query-title 之间 term 匹配关系&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面我们开始实验正文，看看这些结论是怎么得到的&lt;/p&gt;
+&lt;h3 id=&#34;二bert-模型-attention-head-实验&#34;&gt;&lt;strong&gt;二、Bert 模型 Attention-Head 实验&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;attention-head 是 bert 的基本组成模块，本次实验想要研究各个 head 都对模型作出了什么贡献。通过 Mask 掉某个 head，对比模型前后表现的差异来研究这个 head 对模型有什么样的作用(对训练好的 bert 做 head-mask，不重新训练，对比测试集的表现)。&lt;/p&gt;
+&lt;p&gt;bert-base 模型共 12 层每层有 12 个 head，下面实验各个 head 提取的特征是否有明显的模式(Bert 模型为在 query-title 数据上 finetune 好的中文&lt;strong&gt;字&lt;/strong&gt;模型)&lt;/p&gt;
+&lt;h3 id=&#34;21-attention-head-比较冗余&#34;&gt;&lt;strong&gt;2.1 Attention-Head 比较冗余&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;标准大小的 bert 一共有 12*12 共 144 个 head.我们尝试对训练好的 bert 模型，随机 mask 掉一定比例的 head,再在测试数据集上测试分档的准确率(&lt;strong&gt;五分类&lt;/strong&gt;)。&lt;/p&gt;
+&lt;p&gt;下图的柱状图的数值表示相比于 bseline(也就是不做任何 head-mask)模型 acc 的相对提升,如+1%表示比 baseline 模型的 acc 相对提高了 1%，从下面的图可以看到，随机 mask 掉低于 20%的 head，在测试数据集上模型的 acc 不会降低，甚至当 mask 掉 10%的 head 的时候模型表现比不做 head mask 的时候还提升了 1%。当 mask 掉超过一定数量的 head 后，模型表现持续下降，mask 掉越多表现越差。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic3.zhimg.com/80/v2-5725214f86d8232f6060e7177d0e92ca_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;同时为了弄清楚底层和高层的 transformer 哪个对于 query-title 分类更加的重要，分别对底层(layer0 ~ layer5 )和高层(layer6~layer11)的 head 做 mask, 去掉的 head 比例控制在 0~50%(占总 head 数量)之间，50%表示去掉了底层或者是高层 100%的 head 下面的图很清晰的说明了底层和高层的 attention-head 关系，橙色部分表示只 mask 掉高层(6 - 11 层)的 head,蓝色部分表示只 mask 掉底层(0 - 5 层)的 head。&lt;/p&gt;
+&lt;p&gt;显然高层的 attention-head 非常的依赖底层的 head，底层的 attention-head 负责提取输入文本的各种特征，而高层的 attention 负责将这些特征结合起来。具体表现在当 mask 掉底层(0~5 层)的 80%的 head(图中横坐标为 40%)和 mask 掉底层的 100%的 head(图中横坐标为 50%)时，模型在测试数据集上表现下降剧烈(图中蓝色部分)，说明了去掉大部分的底层 head 后只依赖高层的 head 是不行的，高层的 head 并没有提取输入的特征。相反去掉大部分高层的 head 后模型下降的并没有那么剧烈(图中橙色部分)，说明了底层的 head 提取到了很多对于本任务有用的输入特征，这部分特征通过残差连接可以直接传导到最后一层用做分类。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/80/v2-39143ffec66598679568a993dac38b69_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这个结论后面也可以用于指导模型蒸馏，实验结果表明底层的 transformer 比高层的 transformer 更加的重要，显然我们在蒸馏模型时需要保留更多的底层的 head&lt;/p&gt;
+&lt;p&gt;那么对于模型来说是否有某些层的 head 特别能影响 query-title 分类呢？假设将 bert 中所有的 attention-head 看做一个 12*12 的方阵，下面是按行 mask 掉一整行 head 后模型在测试数据上的表现，柱状图上的数值表示相比 baseline 模型的相对提升。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic4.zhimg.com/80/v2-e19db86266c333175066bf06d28c21bb_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以看到 mask 掉第 5 层～第 9 层的 head 都模型都有比较大的正面提升，特别是当去掉整个第 8 层的 attention-head 的时候测试数据准确率相对提升了 2.3%，从上图可以得到两个结论：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bert 模型非常的健壮或者是冗余度很高&lt;/li&gt;
+&lt;li&gt;Bert 模型各层之间不是串行依赖的关系，信息并不是通过一层一层 transformer 层来传递的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;bert 模型非常的健壮或者是冗余度很高，直接去掉一整层的 attention-head 并不会对模型的最终表现有太大的影响。 直接去掉整层的 attention-head 模型表现并没有大幅度的下降，说明各层提取的特征信息并不是一层一层的串行传递到分类器的，而是通过残差连接直接传导到对应的层。&lt;/p&gt;
+&lt;h3 id=&#34;22-某些-head-负责判断词的边界使得字模型带有分词信息&#34;&gt;&lt;strong&gt;2.2 某些 head 负责判断词的边界(使得字模型带有分词信息)&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;在我们的 query-title 分档场景中，发现词粒度的 bert 和字粒度的 bert 最终的表现是差不多的，而对于 rnn 模型来说字粒度的 rnn 很难达到词粒度 rnn 的效果，我们希望研究一下为什么词粒度和字粒度的 bert 表现差不多。&lt;/p&gt;
+&lt;p&gt;使用的 bert 可视化工具**&lt;a href=&#34;https://link.zhihu.com/?target=https%3A//github.com/jessevig/bertviz&#34;&gt;bert_viz&lt;/a&gt;**&lt;img src=&#34;https://www.zhihu.com/equation?tex=%5E%7B%5B2%5D%7D&#34; alt=&#34;[公式]&#34;&gt;观察各层 attention-head 的 attention 权重分布，可以发现某些 head 带有很明显的分词信息。推测这部分 attention-head 是专门用于提取分词信息的 head。当当前的字可能是词的结尾时，att 权重会偏向 sep,当这个字为词的结尾可能性越大(常见的词结尾)，sep 的权重会越高。当当前字不是词结尾时，att 会指向下一个字。**这种模式非常明显，直接拿这个 attention-head 的结果用于分词准确率为 70%。**&lt;/p&gt;
+&lt;p&gt;下面 gif 为我们模型中第 1 层第 3 个 head 的 attention 分布权重图，可以发现 attention 权重很明显带有词的边界信息，当当前的字是结尾时 attention 权重最大的 token 为&amp;quot;SEP&amp;rdquo;，若当前字不是结尾时 attention 权重最大的为下一个字。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/v2-47dbfcf64677c3dfd7152735e64a58e9_b.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这种用于提取分词信息的 head 有很多，且不同的 head 有不同的分词粒度，如果将多个粒度的分词综合考虑(有一个 head 分词正确就行)，则直接用 attention-head 切词的准确率在 96%，这也是为什么词粒度 bert 和字粒度 bert 表现差不多的原因。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/80/v2-bde0a5f3b6c50b5716e074306bca1cbd_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;猜测字粒度 bert 带词边界信息是通过 bert 的预训练任务 MLM 带来的，语言模型的训练使得 bert 对各个字之间的组合非常的敏感，从而能够区分词的边界信息。&lt;/p&gt;
+&lt;h3 id=&#34;23-某些-head-负责编码输入的顺序&#34;&gt;&lt;strong&gt;2.3 某些 head 负责编码输入的顺序&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;我们知道 bert 的输入为 token_emb+pos_emb+seg_type_emb 这三个部分相加而成，而文本输入的顺序完全是用 pos_emb 来隐式的表达。bert 中某些 head 实际上负责提取输入中的位置信息。这种 attention-head 有明显的上下对齐的模式，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic1.zhimg.com/80/v2-11ce4ed825f4130f0d16f3e6562c8430_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;原输入: query=&amp;quot;京东小哥&amp;rdquo;, title=&amp;quot;京东小哥最近在干嘛&amp;rdquo;,bert 模型判定为 4 档&lt;/p&gt;
+&lt;p&gt;将 title 顺序打乱: query=&amp;quot;京东小哥&amp;rdquo;, title=&amp;quot;近东嘛最都在干哥小京&amp;rdquo;,bert 模型判定为&lt;strong&gt;2 档&lt;/strong&gt; 将 title 顺序打乱: query=&amp;quot;京东小哥&amp;rdquo;, title=&amp;quot;近东嘛最都在干哥小京&amp;rdquo;,mask 掉 7 个怀疑用于提取语序的 head,bert 模型判定为&lt;strong&gt;3 档&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;下面的图分别对比了不做 mask，随机 mask 掉 7 个 head(重复 100 次取平均值)，mask 掉 7 个特定的 head(怀疑带有语序信息的 head) 从下面的图看到，mask 掉 7 个特定的 head 后整体分档提升为 3 档，而随机 mask 掉 7 个 head 结果仍然为 2 档，且档位概率分布和不 mask 的情况差别不大。&lt;/p&gt;
+&lt;p&gt;这个 case 说明了我们 mask 掉的 7 个特定的 head 应该是负责提取输入的顺序信息，也就是语序信息。将这部分 head mask 掉后，bert 表现比较难察觉到 title 中的乱序，从而提升了分档。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic1.zhimg.com/80/v2-baf0efbdabfcf5459e942e5a5d609f8c_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;24-某些-head-负责-query-和-title-中相同部分的-term-匹配&#34;&gt;&lt;strong&gt;2.4 某些 head 负责 query 和 title 中相同部分的 term 匹配&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;query 和 title 中是否有相同的 term 是我们的分类任务中非常关键的特征，假如 query 中大部分 term 都能在 title 中找到，则 query 和 title 相关性一般比较高。如 query=&amp;quot;京东小哥&amp;quot;就能完全在 title=&amp;quot;京东小哥最近在干嘛&amp;quot;中找到，两者的文本相关性也很高。我们发现部分 attention-head 负责提取这种 term 匹配特征，这种 head 的 attention 权重分布一般如下图，可以看到上句和下句中相同 term 的权重很高(颜色越深表示权重越大)。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic4.zhimg.com/80/v2-c2fa3ba68b6cc0c7ccdbfe1d4c182dbb_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其中在第 2~第 4 层有 5 个 head 匹配的模式特别明显。我们发现虽然 bert 模型中 attention-head 很冗余，去掉一些 head 对模型不会有太大的影响，但是有少部分 head 对模型非常重要，下面展示这 5 个 head 对模型的影响，表格中的数值表示与 baseline 模型的 acc 相对提升值。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic1.zhimg.com/80/v2-e3302aae2032e8ff09b807f1f8e2a97c_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;利用测试数据作为标准，分别测试随机 mask 掉 5 个 head 和 mask 掉 5 个指定的 head(这些 head 在 attention 可视化上都有明显的 query-title 匹配的模式)。从结果可以看到去掉这些负责 query-title 匹配的 head 后模型表现剧烈下降，只去掉这 5 个 head 就能让模型表现下降 50%。甚至 mask 掉 0~5 层其他 head，只保留这 5 个 head 时模型仍维持 baseline 模型 82%的表现，说明了 query-title 的 term 匹配在我们的任务中是非常重要的。&lt;/p&gt;
+&lt;p&gt;这也许是为什么双塔 bert 在我们的场景下表现会那么差的原因(Bert+LSTM 实验中两个模型结合最后的表现差于只使用 Bert, Bert 的输入为双塔输入)，因为 query 和 title 分别输入，使得这些 head 没有办法提取 term 的匹配特征(相当于 mask 掉了这些 head)，而这些匹配特征对于我们的分类任务是至关重要的&lt;/p&gt;
+&lt;h3 id=&#34;241-finetune-对于负责-term-匹配-attention-head-的影响&#34;&gt;&lt;strong&gt;2.4.1 finetune 对于负责 term 匹配 attention-head 的影响&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;在 query-title 分档任务中 query 和 title 中是否有相同的 term 是很重要的特征，那么在 finetune 过程中负责 query-title 中相同 term 匹配的 head 是否有比较明显的增强呢？&lt;/p&gt;
+&lt;p&gt;下面以 case 为例说明： query=&amp;quot;我在伊朗长大&amp;rdquo; title=&amp;quot;假期电影《我在伊朗长大》&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;下图展示了 query-title 数据&lt;em&gt;&lt;strong&gt;finetune 前&lt;/strong&gt;&lt;/em&gt;&lt;strong&gt;某个&lt;/strong&gt;负责 term 匹配的 head 的 attention 分配图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic4.zhimg.com/80/v2-1fe9e219c26f2708b7f9e7cb1b251d2b_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在&lt;strong&gt;没有 finetune 前&lt;/strong&gt;，可以看到某些 head 也会对上下句中重复的 term 分配比较大的 attention 值，这个特质可能是来自预训练任务 NSP(上下句预测)。因为假如上句和下句有出现相同的 term，则它们是上下句的概率比较大，所以 bert 有一些 head 专门负责提取这种匹配的信息。&lt;/p&gt;
+&lt;p&gt;除了上下句相同的 term 有比较大的注意力，每个 term 对自身也有比较大的注意力权重（体现在图中对角线上的值都比较大) 为了更直观的看&lt;strong&gt;训练前后&lt;/strong&gt;哪部分的 attention 值有比较大的改变，分别展示训练后 attention&lt;strong&gt;增强&lt;/strong&gt;(微调前-微调后&amp;gt;0)和训练后 attention&lt;strong&gt;减弱&lt;/strong&gt;(微调前-微调后&amp;lt;0)的 attention 分配图。可以观察到比较明显的几个点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;query 和 title 中 term 匹配的 attention 值变大了 从下图可以看到, query 和 title 中具有相同 term 时 attention 相比于训练前是有比较大的增强。说明在下游任务(query-title 分档)训练中增强了这个 head 的相同 term 匹配信息的抽取能力。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic4.zhimg.com/80/v2-edb5789f6481831d6f60495980be5d97_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;term 和自身的 attention 变小了 模型将重点放在找 query 和 title 中是否有相同的 term，弱化了 term 对自身的注意力权重&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic3.zhimg.com/80/v2-3bd82ee8721a541b2b992490bc0d8b86_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分隔符 sep 的 attention 值变小了。 有**&lt;a href=&#34;https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/1906.04341.pdf&#34;&gt;论文&lt;/a&gt;**指出当某个 token 的 attention 指向 sep 时表示一种不分配的状态(即此时没有找到合适的 attention 分配方式)，在经过 finetune 后 term 指向 sep 的权重变小了，表示经过 query-title 数据训练后这个 head 的 attention 分配更加的明确了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;242-是否有某个-head-特别能影响模型&#34;&gt;&lt;strong&gt;2.4.2 是否有某个 head 特别能影响模型&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;从上面的实验可以看到，bert 模型有比较多冗余的 head。去掉一部分这些 head 并不太影响模型，但是有少部分 head 特别能影响模型如上面提到的负责提取上下句中 term 匹配信息的 head，只去掉 5 个这种 head 就能让模型的表现下降 50%。那么是否有某个 head 特别能影响结果呢？&lt;/p&gt;
+&lt;p&gt;下面实验每次只 mask 掉一个 head，看模型在测试数据中表现是否上升/下降。下图中将 bert 的 144 个 head 看作 12X12 的矩阵，矩阵内每个元素表示去掉这个 head 后模型在测试数据上的表现。其中 0 表示去掉后对模型的影响不太大。元素内的值表示相对于 baseline 的表现提升，如+1%表示相比 baseline 的 acc 提高了 1%。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/80/v2-df23645337d194720fdc725f3ef16661_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以看到对于 bert 的大部分 head，单独去掉这个 head 对模型并不会造成太大的影响，而有少部分 head 确实特别能影响模型，比如负责上下句(query-title)中相同 term 匹配的 head。即使去掉一个这种 head 也会使得模型的表现下降。同时注意到高层(第 10 层)有一个 head 去掉后模型表现变化也很大，实验发现这个 head 功能是负责抽取底层 head 输出的特征，也就是 3-4 层中 head 抽取到输入的 query-title 有哪些相同 term 特征后，这部分信息会传递到第 10 层进一步进行提取，最后影响分类。&lt;/p&gt;
+&lt;h3 id=&#34;243-高层-head-是如何提取底层-head-特征-一个典型-case&#34;&gt;&lt;strong&gt;2.4.3 高层 head 是如何提取底层 head 特征-一个典型 case&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;上图中，在第 10 层有一个 head 去掉后特别能影响模型，观察其 attention 的分布，cls 的 attention 都集中在 query 和 title 中相同的 term 上，似乎是在对底层 term 匹配 head 抽取到的特征进一步的提取，将这种匹配特征保存到 cls 中(cls 最后一层会用于分类)。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic3.zhimg.com/80/v2-eabcfa5e4f4cce8da54f5ac32a49ba9e_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在没有做任何 head-mask 时, 可以看到 cls 的 attention 主要分配给和 query 和 title 中的共同 term &amp;ldquo;紫熨斗&amp;rdquo;，而 mask 掉 5 个 2~4 层的 head(具有 term 匹配功能)时, 第 10 层的 cls 注意力分配明显被改变，分散到更多的 term 中。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/80/v2-f02a2af3967dda0e4770082473040881_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这个 case 展示了高层 attention-head 是如何依赖底层的 head 的特征，进一步提取底层的特征并最后作为重要特征用于 query-title 分类。&lt;/p&gt;
+&lt;h3 id=&#34;结语&#34;&gt;&lt;strong&gt;结语&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;本文主要探讨了在 query-title 分类场景下,bert 模型的可解释性。主要从 attention-head 角度入手，发现 attention 一方面非常的冗余，去掉一部分 head 其实不会对模型造成多大的影响。另外一方面有一些 head 却非常的能影响模型，即使去掉一个都能让模型表现变差不少。同时发现不同的 head 实际上有特定的功能，比如底层的 head 负责对输入进行特征提取，如分词、提取输入的语序关系、提取 query 和 title(也就是上下句)中相同的 term 信息等。这部分底层的 head 提取到的特征会通过残差连接送到高层的 head 中，高层 head 会对这部分特征信息进行进一步融合，最终作为分类特征输入到分类器中。&lt;/p&gt;
+&lt;p&gt;本文重点讨论了哪些 head 是对模型有正面作用，也就是去掉这些 head 后模型表现变差了。但是如果知道了哪些 head 为什么对模型有负面作用，也就是为什么去掉某些 head 模型效果会更好，实际上对于我们有更多的指导作用。这部分信息能够帮助我们在模型加速，提升模型表现上少走弯路。&lt;/p&gt;
+&lt;h3 id=&#34;参考文献&#34;&gt;&lt;strong&gt;参考文献&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;[1] Clark K, Khandelwal U, Levy O, et al. What Does BERT Look At? An Analysis of BERT&amp;rsquo;s Attention[J]. arXiv preprint arXiv:1906.04341, 2019.&lt;/p&gt;
+&lt;p&gt;[2] Vig J. A multiscale visualization of attention in the transformer model[J]. arXiv preprint arXiv:1906.05714, 2019.&lt;/p&gt;
+&lt;p&gt;作者：vincehou，腾讯 TEG 应用研究员&lt;/p&gt;
+&lt;p&gt;更多干货尽在&lt;a href=&#34;https://www.zhihu.com/org/teng-xun-ji-zhu-gong-cheng&#34;&gt;腾讯技术&lt;/a&gt;，官方QQ交流群已建立，交流讨论可加：957411539。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Tensorflow</title>
+      <link>http://csyezheng.github.io/post/deep-learning/tensorflow/</link>
+      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/deep-learning/tensorflow/</guid>
+      
+        <description>&lt;h1 id=&#34;tensorflow&#34;&gt;TensorFlow&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;http://ww1.sinaimg.cn/large/0083FLjsgy1gg7bk10ef7j30qo0f03zd.jpg&#34; alt=&#34;https://blog.tensorflow.org/2019/09/tensorflow-20-is-now-available.html&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;install-tensorflow-2&#34;&gt;Install TensorFlow 2&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Version&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Python version&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Compiler&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Build tools&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;tensorflow-2.2.0&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;3.5-3.8&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;GCC 7.3.1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Bazel 2.0.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;tensorflow-2.1.0&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2.7, 3.5-3.7&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;GCC 7.3.1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Bazel 0.27.1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;tensorflow-2.0.0&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2.7, 3.3-3.7&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;GCC 7.3.1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Bazel 0.26.1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -U cuda-10.1.243-2-x86_64.pkg.tar.xz
+sudo pacman -U cudnn-7.6.5.32-2-x86_64.pkg.tar.xz
+pip install tensorflow-gpu
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;data-input-pipelines&#34;&gt;Data input pipelines&lt;/h2&gt;
+&lt;h2 id=&#34;keras&#34;&gt;Keras&lt;/h2&gt;
+&lt;h3 id=&#34;sequential-api&#34;&gt;Sequential API&lt;/h3&gt;
+&lt;h4 id=&#34;when-to-use-a-sequential-model&#34;&gt;When to use a Sequential model&lt;/h4&gt;
+&lt;p&gt;A Sequential model is appropriate for &lt;strong&gt;a plain stack of layers&lt;/strong&gt; where each layer has &lt;strong&gt;exactly one input tensor and one output tensor&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A Sequential model is &lt;strong&gt;not appropriate&lt;/strong&gt; when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Your model has multiple inputs or multiple outputs&lt;/li&gt;
+&lt;li&gt;Any of your layers has multiple inputs or multiple outputs&lt;/li&gt;
+&lt;li&gt;You need to do layer sharing&lt;/li&gt;
+&lt;li&gt;You want non-linear topology (e.g. a residual connection, a multi-branch model)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Sequential constructor accepts a &lt;code&gt;name&lt;/code&gt; argument, just like any layer or model in Keras. This is useful to annotate TensorBoard graphs with semantically meaningful names.&lt;/p&gt;
+&lt;h4 id=&#34;specifying-the-input-shape-in-advance&#34;&gt;Specifying the input shape in advance&lt;/h4&gt;
+&lt;p&gt;it can be very useful when building a Sequential model incrementally to be able to display the summary of the model so far, including the current output shape. In this case, you should start your model by passing an &lt;code&gt;Input&lt;/code&gt; object to your model, so that it knows its input shape from the start.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;model = keras.Sequential()
+model.add(keras.Input(shape=(4,)))
+model.add(layers.Dense(2, activation=&amp;quot;relu&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A simple alternative is to just pass an &lt;code&gt;input_shape&lt;/code&gt; argument to your first layer.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;model = keras.Sequential()
+model.add(layers.Dense(2, activation=&amp;quot;relu&amp;quot;, input_shape=(4,)))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In general, it&amp;rsquo;s a recommended &lt;strong&gt;best practice&lt;/strong&gt; to always specify the input shape of a Sequential model in advance if you know what it is.&lt;/p&gt;
+&lt;h4 id=&#34;a-common-debugging-workflow-add--summary&#34;&gt;A common debugging workflow: &lt;code&gt;add()&lt;/code&gt; + &lt;code&gt;summary()&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;When building a new Sequential architecture, it&amp;rsquo;s useful to incrementally stack layers with &lt;code&gt;add()&lt;/code&gt; and frequently print model summaries.&lt;/p&gt;
+&lt;h4 id=&#34;feature-extraction-with-a-sequential-model&#34;&gt;Feature extraction with a Sequential model&lt;/h4&gt;
+&lt;p&gt;quickly creating a model that extracts the outputs of all intermediate layers in a Sequential model:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;initial_model &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; keras&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Sequential(
+    [
+        keras&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Input(shape&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;)),
+        layers&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Conv2D(&lt;span style=&#34;color:#ae81ff&#34;&gt;32&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;, strides&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;, activation&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;relu&amp;#34;&lt;/span&gt;),
+        layers&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Conv2D(&lt;span style=&#34;color:#ae81ff&#34;&gt;32&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, activation&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;relu&amp;#34;&lt;/span&gt;),
+        &lt;span style=&#34;color:#75715e&#34;&gt;# layers.Conv2D(32, 3, activation=&amp;#34;relu&amp;#34;, name=&amp;#34;my_intermediate_layer&amp;#34;),&lt;/span&gt;
+        layers&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Conv2D(&lt;span style=&#34;color:#ae81ff&#34;&gt;32&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, activation&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;relu&amp;#34;&lt;/span&gt;),
+    ]
+)
+feature_extractor &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; keras&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Model(
+    inputs&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;initial_model&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;inputs,
+    outputs&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[layer&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;output &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; layer &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; initial_model&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layers],
+    &lt;span style=&#34;color:#75715e&#34;&gt;# only extract features from one layer:&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;# outputs=initial_model.get_layer(name=&amp;#34;my_intermediate_layer&amp;#34;).output,&lt;/span&gt;
+)
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Call feature extractor on test input.&lt;/span&gt;
+x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tf&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ones((&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;))
+features &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; feature_extractor(x)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;transfer-learning-with-a-sequential-model&#34;&gt;Transfer learning with a Sequential model&lt;/h4&gt;
+&lt;h3 id=&#34;keras-functional-api&#34;&gt;Keras functional API&lt;/h3&gt;
+&lt;h3 id=&#34;train_and_evaluate&#34;&gt;train_and_evaluate&lt;/h3&gt;
+&lt;h3 id=&#34;write-custom-layers-and-models&#34;&gt;Write custom layers and models&lt;/h3&gt;
+&lt;h3 id=&#34;save-and-serialize-models&#34;&gt;Save and serialize models&lt;/h3&gt;
+&lt;h3 id=&#34;customizing-what-happens-in-fit&#34;&gt;Customizing what happens in fit&lt;/h3&gt;
+&lt;h3 id=&#34;writing-a-training-loop-from-scratch&#34;&gt;Writing a training loop from scratch&lt;/h3&gt;
+&lt;h3 id=&#34;keras-recurrent-neural-networks&#34;&gt;Keras Recurrent Neural Networks&lt;/h3&gt;
+&lt;h3 id=&#34;masking-and-padding&#34;&gt;Masking and padding&lt;/h3&gt;
+&lt;h3 id=&#34;write-custom-callbacks&#34;&gt;Write custom callbacks&lt;/h3&gt;
+&lt;h3 id=&#34;transfer-learning&#34;&gt;Transfer learning&lt;/h3&gt;
+&lt;h2 id=&#34;estimators&#34;&gt;Estimators&lt;/h2&gt;
+&lt;h2 id=&#34;save-a-model&#34;&gt;Save a model&lt;/h2&gt;
+&lt;h1 id=&#34;reference&#34;&gt;Reference&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;[&lt;strong&gt;TensorFlow 2.0 is now available!&lt;/strong&gt;]([https://blog.tensorflow.org/2019/09/tensorflow-20-is-now-available.html#:~:text=Today%2C%20we&amp;rsquo;re%20delighted%20to,TensorFlow%202.0%20is%20now%20available!&amp;amp;text=TensorFlow%202.0%20provides%20a%20comprehensive,build%20scalable%20ML%2Dpowered%20applications.](&lt;a href=&#34;https://blog.tensorflow.org/2019/09/tensorflow-20-is-now-available.html#:~:text=Today%2C&#34;&gt;https://blog.tensorflow.org/2019/09/tensorflow-20-is-now-available.html#:~:text=Today%2C&lt;/a&gt; we&amp;rsquo;re delighted to,TensorFlow 2.0 is now available!&amp;amp;text=TensorFlow 2.0 provides a comprehensive,build scalable ML-powered applications.))&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://afteracademy.com/blog/getting-started-with-tensorflow-2-tutorial-step-by-step-guide&#34;&gt;&lt;strong&gt;Getting started with Tensorflow 2.0 Tutorial&lt;/strong&gt; &lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Multi-label classification</title>
       <link>http://csyezheng.github.io/post/machine-learning/multi-label-classification/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
@@ -2133,6 +2835,95 @@
 &lt;p&gt;&lt;a href=&#34;https://towardsdatascience.com/multi-label-text-classification-with-scikit-learn-30714b7819c5&#34;&gt;https://towardsdatascience.com/multi-label-text-classification-with-scikit-learn-30714b7819c5&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;questions-from-cross-validated-stack-exchangehttpswwwkagglecomstackoverflowstatsquestions&#34;&gt;&lt;a href=&#34;https://www.kaggle.com/stackoverflow/statsquestions&#34;&gt;Questions from Cross Validated Stack Exchange&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.mimacom.com/text-classification/&#34;&gt;https://blog.mimacom.com/text-classification/&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Python and Java Service</title>
+      <link>http://csyezheng.github.io/post/back-end/python-and-java-service/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/python-and-java-service/</guid>
+      
+        <description>&lt;h1 id=&#34;python和java服务器通信实现的理解和比较&#34;&gt;Python和Java服务器通信实现的理解和比较&lt;/h1&gt;
+&lt;h3 id=&#34;python的wsgi和java的servlet-api&#34;&gt;Python的WSGI和Java的Servlet API&lt;/h3&gt;
+&lt;h4 id=&#34;python的wsgi&#34;&gt;Python的WSGI&lt;/h4&gt;
+&lt;p&gt;最近在学习使用Python进行WebServer的编程，发现WSGI（Web Server Gateway Interface）的概念。PythonWeb服务器网关接口（Python Web Server Gateway Interface，缩写为WSGI）是Python应用程序或框架和Web服务器之间的一种接口，已经被广泛接受，它已基本达成它的可移植性方面的目标。WSGI 没有官方的实现，因为WSGI更像一个协议。只要遵照这些协议，WSGI应用(Application)都可以在任何服务器(Server)上运行，反之亦然。&lt;/p&gt;
+&lt;p&gt;如果没有WSGI，你选择的Python网络框架将会限制所能够使用的 Web 服务器。&lt;/p&gt;
+&lt;p&gt;这就意味着，你基本上只能使用能够正常运行的服务器与框架组合，而不能选择你希望使用的服务器或框架。&lt;/p&gt;
+&lt;p&gt;那么，你怎样确保可以在不修改 Web 服务器代码或网络框架代码的前提下，使用自己选择的服务器，并且匹配多个不同的网络框架呢？为了解决这个问题，就出现了PythonWeb 服务器网关接口（Web Server Gateway Interface，WSGI）。&lt;/p&gt;
+&lt;p&gt;WSGI的出现，让开发者可以将网络框架与 Web 服务器的选择分隔开来，不再相互限制。现在，你可以真正地将不同的 Web 服务器与网络开发框架进行混合搭配，选择满足自己需求的组合。例如，你可以使用Gunicorn或Nginx/uWSGI或Waitress服务器来运行Django、Flask或Pyramid应用。正是由于服务器和框架均支持WSGI，才真正得以实现二者之间的自由混合搭配。&lt;/p&gt;
+&lt;h4 id=&#34;java的servlet-api&#34;&gt;Java的Servlet API&lt;/h4&gt;
+&lt;p&gt;下面将类比Java来说明一下：&lt;/p&gt;
+&lt;p&gt;如果没有Java Servlet API，你选择的Java Web容器（Java Socket编程框架实现）将会限制所能够使用的Java Web框架（因为没有Java Servlet API，那么SpringMVC可能会实现一套SpringMVCHttpRequest和SpringMVCHttpResponse标准，Struts2可能会实现一套Struts2HttpRequest和Struts2HttpResponse标准，如果Tomcat只支持SpringMVC的API，那么选择Tomcat服务器就只能使用SpringMVC的Web框架来写服务端代码）。&lt;/p&gt;
+&lt;p&gt;这就意味着，你基本上只能使用能够正常运行的服务器（Tomcat）与框架（SpringMVC）组合，而不能选择你希望使用的服务器或框架（比如：我要换成Tomcat + Struts2的组合）。&lt;/p&gt;
+&lt;p&gt;注意：这里假设没有Java Servlet API，这样就相当于SpringMVC和Struts2可能都要自己实现一套Servlet封装HttpRequest和HttpResponse，这样从SpringMVC更换成Struts2就几乎需要重写服务器端的代码。为了解决这个问题，Java提出了Java Servlet API协议，让所有的Web服务框架都实现此Java Servlet API协议来和Java Web服务器（例如：Tomcat）交互，而复杂的网络连接控制等等都交由Java Web服务器来控制，Java Web服务器用Java Socket编程实现了复杂的网络连接管理。&lt;/p&gt;
+&lt;h4 id=&#34;详细说说python的wsgi&#34;&gt;详细说说Python的WSGI&lt;/h4&gt;
+&lt;p&gt;Python Web 开发中，服务端程序可以分为两个部分，一是服务器程序，二是应用程序。前者负责把客户端请求接收，整理，后者负责具体的逻辑处理。为了方便应用程序的开发，我们把常用的功能封装起来，成为各种Web开发框架，例如 Django, Flask, Tornado。不同的框架有不同的开发方式，但是无论如何，开发出的应用程序都要和服务器程序配合，才能为用户提供服务。这样，服务器程序就需要为不同的框架提供不同的支持。这样混乱的局面无论对于服务器还是框架，都是不好的。对服务器来说，需要支持各种不同框架，对框架来说，只有支持它的服务器才能被开发出的应用使用。&lt;/p&gt;
+&lt;p&gt;这时候，标准化就变得尤为重要。我们可以设立一个标准，只要服务器程序支持这个标准，框架也支持这个标准，那么他们就可以配合使用。一旦标准确定，双方各自实现。这样，服务器可以支持更多支持标准的框架，框架也可以使用更多支持标准的服务器。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;服务器端：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;服务器必须将可迭代对象的内容传递给客户端，可迭代对象会产生bytestrings，必须完全完成每个bytestring后才能请求下一个。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;应用程序：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;服务器程序会在每次客户端的请求传来时，调用我们写好的应用程序，并将处理好的结果返回给客户端。&lt;/p&gt;
+&lt;p&gt;总结：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Web Server Gateway Interface是Python编写Web业务统一接口。&lt;/li&gt;
+&lt;li&gt;无论多么复杂的Web应用程序，入口都是一个WSGI处理函数。&lt;/li&gt;
+&lt;li&gt;Web应用程序就是写一个WSGI的处理函数，主要功能在于交互式地浏览和修改数据，生成动态Web内容，针对每个HTTP请求进行响应。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;实现python的web应用程序能被访问的方式&#34;&gt;实现Python的Web应用程序能被访问的方式&lt;/h4&gt;
+&lt;p&gt;要使 Python 写的程序能在 Web 上被访问，还需要搭建一个支持 Python 的 HTTP 服务器（也就是实现了WSGI server（WSGI协议）的Http服务器）。有如下几种方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以自己使用Python Socket编程实现一个Http服务器&lt;/li&gt;
+&lt;li&gt;使用支持Python的开源的Http服务器（如：uWSGI，wsgiref，Mod_WSGI等等）。如果是使用Nginx，Apache，Lighttpd等Http服务器需要单独安装支持WSGI server的模块插件。&lt;/li&gt;
+&lt;li&gt;使用Python开源Web框架（如：Flask，Django等等）内置的Http服务器（Django自带的WSGI Server，一般测试使用）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;python标准库对wsgi的实现&#34;&gt;Python标准库对WSGI的实现&lt;/h5&gt;
+&lt;p&gt;wsgiref 是Python标准库给出的 WSGI 的参考实现。simple_server 这一模块实现了一个简单的 HTTP 服务器。&lt;/p&gt;
+&lt;p&gt;Python源码中的wsgiref的simple_server.py正好说明上面的分工情况，server的主要作用是接受client的请求，並把的收到的请求交給RequestHandlerClass处理，RequestHandlerClass处理完成后回传结果给client&lt;/p&gt;
+&lt;h5 id=&#34;uwsgi服务器&#34;&gt;uWSGI服务器&lt;/h5&gt;
+&lt;p&gt;uWSGI是一个Web服务器，它实现了WSGI协议、uwsgi、http等协议。注意uwsgi是一种通信协议，而uWSGI是实现uwsgi协议和WSGI协议的Web服务器。&lt;/p&gt;
+&lt;h5 id=&#34;django框架内置的wsgi-server服务器&#34;&gt;Django框架内置的WSGI Server服务器&lt;/h5&gt;
+&lt;p&gt;Django的WSGIServer继承自wsgiref.simple_server.WSGIServer，而WSGIRequestHandler继承自wsgiref.simple_server.WSGIRequestHandler&lt;/p&gt;
+&lt;p&gt;之前说到的application，在Django中一般是django.core.handlers.wsgi.WSGIHandler对象，WSGIHandler继承自django.core.handlers.base.BaseHandler，这个是Django处理request的核心逻辑，它会创建一个WSGIRequest实例，而WSGIRequest是从http.HttpRequest继承而来&lt;/p&gt;
+&lt;h4 id=&#34;python和java的类比&#34;&gt;Python和Java的类比&lt;/h4&gt;
+&lt;h5 id=&#34;python和java的服务器结构&#34;&gt;Python和Java的服务器结构&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;独立WSGI server（实现了Http服务器功能） + Python Web应用程序
+&lt;ul&gt;
+&lt;li&gt;例如：Gunicorn，uWSGI + Django，Flask&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;独立Servlet引擎（Java应用服务器）（实现了Http服务器功能） + Java Web应用程序
+&lt;ul&gt;
+&lt;li&gt;例如：Jetty，Tomcat + SpringMVC，Struts2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;python和java服务器共同点&#34;&gt;Python和Java服务器共同点&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;WSGI server（例如Gunicorn和uWSGI）
+&lt;ul&gt;
+&lt;li&gt;WSGI server服务器内部都有组建来实现Socket连接的创建和管理。&lt;/li&gt;
+&lt;li&gt;WSGI server服务器都实现了Http服务器功能，能接受Http请求，并且通过Python Web应用程序处理之后返回动态Web内容。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Java应用服务器（Jetty和Tomcat）
+&lt;ul&gt;
+&lt;li&gt;Java应用服务器内部都有Connector组件来实现Socket连接的创建和管理。&lt;/li&gt;
+&lt;li&gt;Java应用服务器都实现了Http服务器功能，能接受Http请求，并且通过Java Web应用程序处理之后返回动态Web内容。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考文章：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;%5Bhttps://birdben.github.io/2017/03/05/Java/Python%E5%92%8CJava%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%9A%E4%BF%A1%E5%AE%9E%E7%8E%B0%E7%9A%84%E7%90%86%E8%A7%A3%E5%92%8C%E6%AF%94%E8%BE%83/%5D(https://birdben.github.io/2017/03/05/Java/Python%E5%92%8CJava%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%9A%E4%BF%A1%E5%AE%9E%E7%8E%B0%E7%9A%84%E7%90%86%E8%A7%A3%E5%92%8C%E6%AF%94%E8%BE%83/)&#34;&gt;Python和Java服务器通信实现的理解和比较&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>
@@ -2355,6 +3146,368 @@ Check Your Understanding&lt;/p&gt;
     </item>
     
     <item>
+      <title>notes of deep learning with python</title>
+      <link>http://csyezheng.github.io/post/deep-learning/notes-deep-learning-with-python/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/deep-learning/notes-deep-learning-with-python/</guid>
+      
+        <description>&lt;h1 id=&#34;deep-learning-with-python&#34;&gt;Deep Learning with Python&lt;/h1&gt;
+&lt;h2 id=&#34;part-1---fundamentals-of-deep-learning&#34;&gt;PART 1 - FUNDAMENTALS OF DEEP LEARNING&lt;/h2&gt;
+&lt;h3 id=&#34;1what-is-deep-learning&#34;&gt;1.What is deep learning?&lt;/h3&gt;
+&lt;h4 id=&#34;artificial-intelligence-machine-learning-and-deep-learning&#34;&gt;Artificial intelligence, machine learning, and deep learning&lt;/h4&gt;
+&lt;h4 id=&#34;before-deep-learning-a-brief-history-of-machine-learning&#34;&gt;Before deep learning: a brief history of machine learning&lt;/h4&gt;
+&lt;h4 id=&#34;why-deep-learning-why-now&#34;&gt;Why deep learning? Why now?&lt;/h4&gt;
+&lt;h3 id=&#34;2before-we-begin-the-mathematical-building-blocks-of-neural-networks&#34;&gt;2.Before we begin: the mathematical building blocks of neural networks&lt;/h3&gt;
+&lt;h4 id=&#34;a-first-look-at-a-neural-network&#34;&gt;A first look at a neural network&lt;/h4&gt;
+&lt;h4 id=&#34;data-representations-for-neural-networks&#34;&gt;Data representations for neural networks&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;tensor&lt;/strong&gt;: it’s a container for numbers. You may be already familiar with matrices, which are 2D tensors: tensors are a generalization of matrices to an arbitrary number of dimensions (note that in the context of tensors, a &lt;strong&gt;dimension&lt;/strong&gt; is often called an &lt;strong&gt;axis&lt;/strong&gt;).&lt;/p&gt;
+&lt;p&gt;A tensor is defined by three key attributes: Number of axes (rank), Shape, Data type.&lt;/p&gt;
+&lt;p&gt;Because the contents of the tensors manipulated by tensor operations can be interpreted as coordinates of points in some geometric space, &lt;strong&gt;all tensor operations have a geometric interpretation&lt;/strong&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;the-gears-of-neural-networks-tensor-operations&#34;&gt;The gears of neural networks: tensor operations&lt;/h4&gt;
+&lt;p&gt;Neural networks consist entirely of chains of tensor operations and that all of these tensor operations are just geometric transformations of the input data. It follows that &lt;strong&gt;you can interpret a neural network as a very complex geometric transformation in a high-dimensional space&lt;/strong&gt;, implemented via a long series of simple steps.&lt;/p&gt;
+&lt;p&gt;Uncrumpling paper balls is what machine learning is about: &lt;strong&gt;finding neat representations for complex, highly folded data manifolds&lt;/strong&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;the-engine-of-neural-networks-gradient-based-optimization&#34;&gt;The engine of neural networks: gradient-based optimization&lt;/h4&gt;
+&lt;p&gt;training loop:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Draw a batch of training samples x and corresponding targets y.&lt;/li&gt;
+&lt;li&gt;Run the network on x (a step called the forward pass) to obtain predictions y_pred .&lt;/li&gt;
+&lt;li&gt;Compute the loss of the network on the batch, a measure of the mismatch
+between y_pred and y .&lt;/li&gt;
+&lt;li&gt;Update all weights of the network in a way that slightly reduces the loss on this batch.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;One naive solution would be to freeze all weights in the network except the one scalar coefficient being considered, and try different values for this coefficient. But such an approach would be horribly inefficient, because you’d need to compute two forward passes (which are expensive) for every individual coefficient (of which there are many, usually thousands and sometimes up to millions).&lt;/p&gt;
+&lt;p&gt;A much better approach is to take advantage of the fact that all operations used in the network are differentiable, and &lt;strong&gt;compute the gradient of the loss with regard to the network’s coefficients&lt;/strong&gt;. You can then &lt;strong&gt;move the coefficients in the opposite direction from the gradient, thus decreasing the loss&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;For every differentiable function f(x) (&lt;strong&gt;differentiable means “can be derived”&lt;/strong&gt;: for example, smooth, continuous functions can be derived),&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;gradient&lt;/strong&gt; is the derivative of a tensor operation. It’s the generalization of the concept of &lt;strong&gt;derivatives&lt;/strong&gt; to functions of multidimensional inputs: that is, to functions that take tensors as inputs.&lt;/p&gt;
+&lt;p&gt;You saw earlier that the derivative of a function f(x) of a single coefficient can be interpreted as the &lt;strong&gt;slope&lt;/strong&gt; of the curve of f. Likewise, gradient(f)(W0) can be interpreted as the &lt;strong&gt;tensor&lt;/strong&gt; describing the curvature of f(W) around W0.&lt;/p&gt;
+&lt;p&gt;For this reason, in much the same way that, for a function f(x), you can reduce the value of f(x) by moving x a little in the opposite direction from the derivative, with a function f(W) of a tensor, you can &lt;strong&gt;reduce f(W) by moving W in the opposite direction from the gradient&lt;/strong&gt;: for example, W1 = W0 - step * gradient(f)(W0)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;mini-batch stochastic gradient descent&lt;/strong&gt; (mini-batch SGD):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Draw a batch of training samples x and corresponding targets y.&lt;/li&gt;
+&lt;li&gt;Run the network on x to obtain predictions y_pred.&lt;/li&gt;
+&lt;li&gt;Compute the loss of the network on the batch, a measure of the mismatch
+between y_pred and y .&lt;/li&gt;
+&lt;li&gt;Compute the gradient of the loss with regard to the network’s parameters (a
+backward pass).&lt;/li&gt;
+&lt;li&gt;Move the parameters a little in the opposite direction from the gradient for example W -= step * gradient—thus reducing the loss on the batch a bit.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Note that a variant of the mini-batch SGD algorithm would be to draw a single sample and target at each iteration, rather than drawing a batch of data. This would be &lt;strong&gt;true SGD&lt;/strong&gt; (as opposed to &lt;strong&gt;mini-batch SGD&lt;/strong&gt;). Alternatively, going to the opposite extreme, you could run every step on all data available, which is called &lt;strong&gt;batch SGD&lt;/strong&gt;. Each update would then be more accurate, but far more expensive. The efficient compromise between these two extremes is to use mini-batches of reasonable size.&lt;/p&gt;
+&lt;p&gt;Additionally, there exist &lt;strong&gt;multiple variants of SGD&lt;/strong&gt; that differ by taking into account previous weight updates when computing the next weight update, rather than just looking at the current value of the gradients. There is, for instance, &lt;strong&gt;SGD with momentum&lt;/strong&gt;, as well as &lt;strong&gt;Adagrad&lt;/strong&gt;, &lt;strong&gt;RMSP rop&lt;/strong&gt;, and several others. Such variants are known as &lt;strong&gt;optimization methods&lt;/strong&gt; or &lt;strong&gt;optimizers&lt;/strong&gt;. In particular, the concept of momentum, which is used in many of these variants, deserves your attention. &lt;strong&gt;Momentum addresses two issues with SGD: convergence speed and local minima.&lt;/strong&gt;&lt;/p&gt;
+&lt;h6 id=&#34;chaining-derivatives-the-backpropagation-algorithm&#34;&gt;Chaining derivatives: the Backpropagation algorithm&lt;/h6&gt;
+&lt;p&gt;Calculus tells us that such a chain of functions can be derived using the following identity, called the &lt;strong&gt;chain rule&lt;/strong&gt;: f(g(x)) = f&amp;rsquo;(g(x)) * g&amp;rsquo;(x). Applying the chain rule to the computation of the gradient values of a neural network gives rise to an algorithm called &lt;strong&gt;Backpropagation&lt;/strong&gt; (also sometimes called &lt;strong&gt;reverse-mode differentiation&lt;/strong&gt;). Backpropagation starts with the final loss value and works backward from the top layers to the bottom layers, applying the chain rule to compute the contribution that each parameter had in the loss value.&lt;/p&gt;
+&lt;h4 id=&#34;looking-back-at-our-first-example&#34;&gt;Looking back at our first example&lt;/h4&gt;
+&lt;h3 id=&#34;3getting-started-with-neural-networks&#34;&gt;3.Getting started with neural networks&lt;/h3&gt;
+&lt;h4 id=&#34;anatomy-of-a-neural-network&#34;&gt;Anatomy of a neural network&lt;/h4&gt;
+&lt;p&gt;Figure 3.1 Relationship between the network, layers, loss function, and optimizer&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/03fig01.jpg&#34; alt=&#34;Relationship between the network, layers, loss function, and optimizer&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Different layers are appropriate for different tensor formats and different types of data processing. For instance, simple vector data, stored in 2D tensors of shape (samples, features) , is often processed by densely connected layers, also called fully connected or dense layers (the Dense class in Keras). Sequence data, stored in 3D tensors of shape (samples, timesteps, features), is typically processed by recurrent layers such as an LSTM layer. Image data, stored in 4D tensors, is usually processed by 2D convolution layers Conv2D).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from keras import layers
+
+# A dense layer with 32 output units
+layer = layers.Dense(32, input_shape=(784,))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once the network architecture is defined, you still have to choose two more things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Loss function&lt;/strong&gt; (objective function)—The quantity that will be minimized during
+training. It represents a measure of success for the task at hand.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Optimizer&lt;/strong&gt;—Determines how the network will be updated based on the loss function. It implements a specific variant of stochastic gradient descent (SGD). A neural network that has multiple outputs may have multiple loss functions (one per output).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Choosing the right objective function for the right problem is extremely important: your network will take any shortcut it can, to minimize the loss; so if the objective doesn’t fully correlate with success for the task at hand, your network will end up doing things you may not have wanted.&lt;/p&gt;
+&lt;p&gt;Fortunately, when it comes to common problems such as classification, regression, and sequence prediction, there are simple guidelines you can follow to choose the correct loss. For instance, you’ll use &lt;strong&gt;binary crossentropy&lt;/strong&gt; for a two-class classification problem, &lt;strong&gt;categorical crossentropy&lt;/strong&gt; for a many-class classification problem, &lt;strong&gt;mean-squared error&lt;/strong&gt; for a regression problem, &lt;strong&gt;connectionist temporal classification&lt;/strong&gt; (CTC) for a sequence-learning problem, and so on. Only when you’re working on truly new research problems will you have to develop your own objective functions. In the next few chapters, we’ll detail explicitly which loss functions to choose for a wide range of common tasks.&lt;/p&gt;
+&lt;h4 id=&#34;introduction-to-keras&#34;&gt;Introduction to Keras&lt;/h4&gt;
+&lt;p&gt;There are two ways to define a model: using the Sequential class (only for linear
+stacks of layers, which is the most common network architecture by far) or the functional API (for directed acyclic graphs of layers, which lets you build completely arbitrary architectures).&lt;/p&gt;
+&lt;p&gt;what type of network architectures work for different kinds of problems, how to pick the right learning configuration, and how to tweak a model until it gives the results you want to see.&lt;/p&gt;
+&lt;h4 id=&#34;setting-up-a-deep-learning-workstation&#34;&gt;Setting up a deep-learning workstation&lt;/h4&gt;
+&lt;h6 id=&#34;jupyter-notebooks-the-preferred-way-to-run-deep-learning-experiments&#34;&gt;Jupyter notebooks: the preferred way to run deep-learning experiments&lt;/h6&gt;
+&lt;p&gt;you don’t have to rerun all of your previous code if something goes wrong late in an experiment.&lt;/p&gt;
+&lt;h4 id=&#34;classifying-movie-reviews-a-binary-classification-example&#34;&gt;Classifying movie reviews: a binary classification example&lt;/h4&gt;
+&lt;p&gt;There are two key architecture decisions to be made about such a stack of Dense layers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How many layers to use&lt;/li&gt;
+&lt;li&gt;How many hidden units to choose for each layer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In chapter 4, you’ll learn formal principles to guide you in making these choices.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;relu&lt;/strong&gt; (rectified linear unit) is a function meant to zero out negative values
+&lt;img src=&#34;https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/03fig04_alt.jpg&#34; alt=&#34;Figure 3.4  The rectified linear unit function&#34;&gt;&lt;/p&gt;
+&lt;p&gt;whereas a &lt;strong&gt;sigmoid&lt;/strong&gt; “squashes” arbitrary values into the [0, 1] interval  outputting something that can be interpreted as a probability.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/03fig05_alt.jpg&#34; alt=&#34;Figure 3.5 The sigmoid function&#34;&gt;&lt;/p&gt;
+&lt;h6 id=&#34;what-are-activation-functions-and-why-are-they-necessary&#34;&gt;What are activation functions, and why are they necessary?&lt;/h6&gt;
+&lt;p&gt;Without an activation function like relu (also called a non-linearity), the Dense layer would consist of two linear operations—a dot product and an addition:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;output = dot(W, input) + b
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In order to get access to a much richer hypothesis space that would benefit from deep representations, you need a non-linearity, or activation function. &lt;strong&gt;relu&lt;/strong&gt; is the most popular activation function in deep learning, but there are many other candidates, which all come with similarly strange names: prelu, elu, and so on.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Crossentropy&lt;/strong&gt; is usually the best choice when you’re dealing with models that &lt;strong&gt;output probabilities&lt;/strong&gt;. Crossentropy is a quantity from the field of Information Theory &lt;strong&gt;that measures the distance between probability distributions&lt;/strong&gt; or, in this case, between the ground-truth distribution and your predictions.&lt;/p&gt;
+&lt;h6 id=&#34;wrapping-up&#34;&gt;Wrapping up&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;In a &lt;strong&gt;binary classification problem&lt;/strong&gt; (two output classes), your network &lt;strong&gt;should end with a Dense layer with one unit and a sigmoid activation&lt;/strong&gt;: the output of your network should be a scalar between 0 and 1, &lt;strong&gt;encoding a probability&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;With such a scalar &lt;strong&gt;sigmoid&lt;/strong&gt; output on a binary classification problem, the loss function you should use is &lt;strong&gt;binary_crossentropy&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;rmsprop&lt;/strong&gt; optimizer is generally a good enough choice, whatever your problem. That’s one less thing for you to worry about.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;classifying-newswires-a-multiclass-classification-example&#34;&gt;Classifying newswires: a multiclass classification example&lt;/h4&gt;
+&lt;p&gt;Because you have many classes, this problem is an instance of &lt;strong&gt;multi-class classification&lt;/strong&gt;; and because each data point should be classified into only one category, the problem is more specifically an instance of &lt;strong&gt;single-label, multiclass classification&lt;/strong&gt;. If each data point could belong to multiple categories (in this case, topics), you’d be facing a &lt;strong&gt;multilabel, multiclass classification&lt;/strong&gt; problem.&lt;/p&gt;
+&lt;p&gt;In the previous example, you used 16-dimensional intermediate layers, but a 16-dimensional space may be too limited to learn to separate 46 different classes: &lt;strong&gt;such small layers may act as information bottlenecks, permanently dropping relevant information&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from keras import models
+from keras import layers
+model = models.Sequential()
+model.add(layers.Dense(64, activation=&#39;relu&#39;, input_shape=(10000,)))
+model.add(layers.Dense(64, activation=&#39;relu&#39;))
+model.add(layers.Dense(46, activation=&#39;softmax&#39;))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are two other things you should note about this architecture:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;You end the network with a Dense layer of size 46. This means for each input sample, the network will output a 46-dimensional vector. &lt;strong&gt;Each entry in this vector (each dimension) will encode a different output class.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The last layer uses a &lt;strong&gt;softmax&lt;/strong&gt; activation. You saw this pattern in the MNIST example. It means the network will &lt;strong&gt;output a probability distribution over the 46 different output classes&lt;/strong&gt;—for every input sample, the network will produce a 46 dimensional output vector, &lt;strong&gt;where output[i] is the probability that the sample belongs to class i&lt;/strong&gt; . &lt;strong&gt;The 46 scores will sum to 1&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The best loss function to use in this case is &lt;strong&gt;categorical_crossentropy&lt;/strong&gt;. &lt;strong&gt;It measures the distance between two probability distributions&lt;/strong&gt;: here, &lt;strong&gt;between the probability distribution output by the network and the true distribution of the labels.&lt;/strong&gt; By minimizing the distance between these two distributions, you train the network to output something as close as possible to the true labels.&lt;/p&gt;
+&lt;p&gt;Plotting the training and validation loss:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import matplotlib.pyplot as plt
+loss = history.history[&#39;loss&#39;]
+val_loss = history.history[&#39;val_loss&#39;]
+epochs = range(1, len(loss) + 1)
+plt.plot(epochs, loss, &#39;bo&#39;, label=&#39;Training loss&#39;)
+plt.plot(epochs, val_loss, &#39;b&#39;, label=&#39;Validation loss&#39;)
+plt.title(&#39;Training and validation loss&#39;)
+plt.xlabel(&#39;Epochs&#39;)
+plt.ylabel(&#39;Loss&#39;)
+plt.legend()
+plt.show()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Plotting the training and validation accuracy:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;plt.clf()  # Clears the figure
+acc = history.history[&#39;acc&#39;]
+val_acc = history.history[&#39;val_acc&#39;]
+plt.plot(epochs, acc, &#39;bo&#39;, label=&#39;Training acc&#39;)
+plt.plot(epochs, val_acc, &#39;b&#39;, label=&#39;Validation acc&#39;)
+plt.title(&#39;Training and validation accuracy&#39;)
+plt.xlabel(&#39;Epochs&#39;)
+plt.ylabel(&#39;Loss&#39;)
+plt.legend()
+plt.show()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The only thing this approach would change is the choice of the loss function. The loss function used in listing 3.21, &lt;strong&gt;categorical_crossentropy&lt;/strong&gt;, expects the labels to follow a &lt;strong&gt;categorical encoding&lt;/strong&gt;. With &lt;strong&gt;integer labels&lt;/strong&gt;, you should use **sparse_categorical_ crossentropy**.&lt;/p&gt;
+&lt;h6 id=&#34;the-importance-of-having-sufficiently-large-intermediate-layers&#34;&gt;The importance of having sufficiently large intermediate layers&lt;/h6&gt;
+&lt;p&gt;We mentioned earlier that because the final outputs are 46-dimensional, you should avoid intermediate layers with many fewer than 46 hidden units.&lt;/p&gt;
+&lt;h6 id=&#34;wrapping-up-1&#34;&gt;Wrapping up&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;If you’re trying to classify data points among N classes, your network should &lt;strong&gt;end with a Dense layer of size N&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In a &lt;strong&gt;single-label, multiclass classification&lt;/strong&gt; problem, your network should end with a &lt;strong&gt;softmax&lt;/strong&gt; activation so that it will output a probability distribution over the N output classes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Categorical crossentropy&lt;/strong&gt; is almost always the loss function you should use for such problems. It minimizes the distance between the probability distributions output by the network and the true distribution of the targets.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;There are two ways to handle labels in &lt;strong&gt;multiclass classification&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Encoding the labels via categorical encoding (also known as one-hot encoding) and using &lt;strong&gt;categorical_crossentropy&lt;/strong&gt; as a loss function&lt;/li&gt;
+&lt;li&gt;Encoding the labels as integers and using the &lt;strong&gt;sparse_categorical_crossentropy&lt;/strong&gt; loss function&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you need to classify data into a large number of categories, you should &lt;strong&gt;avoid&lt;/strong&gt; creating information bottlenecks in your network due to &lt;strong&gt;intermediate layers that are too small&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;predicting-house-prices-a-regression-example&#34;&gt;Predicting house prices: a regression example&lt;/h4&gt;
+&lt;p&gt;And each feature in the input data (for example, the crime rate) has a different scale. For instance, some values are proportions, which take values between 0 and 1; others take values between 1 and 12, others between 0 and 100, and so on.&lt;/p&gt;
+&lt;p&gt;It would be problematic to feed into a neural network values that all take wildly different ranges. The network might be able to automatically adapt to such heterogeneous data, but it would definitely make learning more difficult. A widespread best practice to deal with such data is to do feature-wise normalization: for each feature in the input data (a column in the input data matrix), you subtract the mean of the feature and divide by the standard deviation, so that the feature is centered around 0 and has a unit standard deviation.&lt;/p&gt;
+&lt;p&gt;In general, the less training data you have, the worse overfitting will be, and &lt;strong&gt;using a small network is one way to mitigate overfitting&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;the &lt;strong&gt;mse&lt;/strong&gt; loss function—&lt;strong&gt;mean squared error&lt;/strong&gt;, the square of the difference between the predictions and the targets. This is a widely used loss function &lt;strong&gt;for regression problems&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You’re also monitoring a new metric during training: &lt;strong&gt;mean absolute error&lt;/strong&gt; (&lt;strong&gt;MAE&lt;/strong&gt;). It’s the absolute value of the difference between the predictions and the targets.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;K-fold validation&lt;/strong&gt;&lt;/p&gt;
+&lt;h6 id=&#34;wrapping-up-2&#34;&gt;Wrapping up&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Regression is done using different loss functions than what we used for classification. Mean squared error (MSE) is a loss function commonly used for regression.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Similarly, evaluation metrics to be used for regression differ from those used for classification; naturally, the concept of accuracy doesn’t apply for regression. A common regression metric is mean absolute error (MAE).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When features in the input data have values in different ranges, each feature should be scaled independently as a preprocessing step.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When there is little data available, using K-fold validation is a great way to reliably evaluate a model.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When little training data is available, it’s preferable to use a small network with few hidden layers (typically only one or two), in order to avoid severe overfitting.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4fundamentals-of-machine-learning&#34;&gt;4.Fundamentals of machine learning&lt;/h3&gt;
+&lt;h4 id=&#34;four-branches-of-machine-learning&#34;&gt;Four branches of machine learning&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Mini-batch&lt;/strong&gt; or &lt;strong&gt;batch&lt;/strong&gt;—A small set of samples (typically between 8 and 128)
+that are processed simultaneously by the model. &lt;strong&gt;The number of samples is&lt;/strong&gt;
+&lt;strong&gt;often a power of 2, to facilitate memory allocation on GPU&lt;/strong&gt;. When training, a
+&lt;strong&gt;mini-batch is used to compute a single gradient-descent update applied to&lt;/strong&gt;
+&lt;strong&gt;the weights of the model.&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;evaluating-machine-learning-models&#34;&gt;Evaluating machine-learning models&lt;/h4&gt;
+&lt;p&gt;In machine learning, the goal is to achieve models that &lt;strong&gt;generalize&lt;/strong&gt;—that perform well on never-before-seen data—and &lt;strong&gt;overfitting&lt;/strong&gt; is the central obstacle.&lt;/p&gt;
+&lt;p&gt;three classic &lt;strong&gt;evaluation recipes&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;simple hold-out validation&lt;/li&gt;
+&lt;li&gt;K-fold validation&lt;/li&gt;
+&lt;li&gt;iterated K-fold validation with shuffling.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Data representativeness: you usually should &lt;strong&gt;randomly shuffle your data before splitting it into training and test sets&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The arrow of time: If you’re trying to predict the future given the past (for example, tomorrow’s weather, stock movements, and so on), you &lt;strong&gt;should not randomly shuffle your data before splitting it&lt;/strong&gt;, because doing so will create a temporal leak.&lt;/p&gt;
+&lt;p&gt;Redundancy in your data: &lt;strong&gt;Make sure your training set and validation set are disjoint.&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;data-preprocessing-feature-engineering-and-feature-learning&#34;&gt;Data preprocessing, feature engineering, and feature learning&lt;/h4&gt;
+&lt;h5 id=&#34;data-preprocessing-for-neural-networks&#34;&gt;Data preprocessing for neural networks&lt;/h5&gt;
+&lt;p&gt;Data preprocessing aims at making the raw data at hand more amenable to neural networks. This includes &lt;strong&gt;vectorization&lt;/strong&gt;, &lt;strong&gt;normalization&lt;/strong&gt;, &lt;strong&gt;handling missing values&lt;/strong&gt;, and &lt;strong&gt;feature extraction&lt;/strong&gt;.&lt;/p&gt;
+&lt;h6 id=&#34;value-normalization&#34;&gt;VALUE NORMALIZATION&lt;/h6&gt;
+&lt;p&gt;In general, &lt;strong&gt;it isn’t safe to feed into&lt;/strong&gt; a neural network data that takes relatively large values (for example, multidigit integers, which are much larger than the initial values taken by the weights of a network) or data that is heterogeneous (for example, data where one feature is in the range 0–1 and another is in the range 100–200). &lt;strong&gt;Doing so can trigger large gradient updates that will prevent the network from converging&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;To make learning easier for your network, your data should have the following characteristics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Take small values—&lt;strong&gt;Typically, most values should be in the 0–1 range&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Be homogenous—That is, &lt;strong&gt;all features should take values in roughly the same range&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Additionally, the following stricter normalization practice is common and can help, although it isn’t always necessary&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Normalize each feature independently to &lt;strong&gt;have a mean of 0.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Normalize each feature independently to have a &lt;strong&gt;standard deviation of 1&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&#34;handling-missing-values&#34;&gt;HANDLING MISSING VALUES&lt;/h6&gt;
+&lt;p&gt;In general, with neural networks, &lt;strong&gt;it’s safe to input missing values as 0&lt;/strong&gt;, with the condition that 0 isn’t already a meaningful value. The network will learn from exposure to the data that the value 0 means missing data and will start ignoring the value.&lt;/p&gt;
+&lt;h5 id=&#34;feature-engineering&#34;&gt;Feature engineering&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Feature engineering&lt;/strong&gt; is the process of using your own knowledge about the data and about the machine-learning algorithm at hand (in this case, a neural network) to make the algorithm work better by applying hardcoded (nonlearned) transformations to the data before it goes into the model. In many cases, it isn’t reasonable to expect a machine learning model to be able to learn from completely arbitrary data. The data needs to be presented to the model in a way that will make the model’s job easier.&lt;/p&gt;
+&lt;p&gt;That’s the essence of feature engineering: making a problem easier by expressing it in a simpler way. It usually requires understanding the problem in depth.&lt;/p&gt;
+&lt;p&gt;Before deep learning, feature engineering used to be critical, because classical shallow algorithms didn’t have hypothesis spaces rich enough to learn useful features by themselves.&lt;/p&gt;
+&lt;p&gt;Fortunately, modern deep learning removes the need for most feature engineering, because neural networks are capable of automatically extracting useful features from raw data.&lt;/p&gt;
+&lt;p&gt;Good features let you solve a problem with far less data.&lt;/p&gt;
+&lt;h4 id=&#34;overfitting-and-underfitting&#34;&gt;Overfitting and underfitting&lt;/h4&gt;
+&lt;p&gt;You must evaluate an array of different architectures (on your validation set, not on your test set, of course) &lt;strong&gt;in order to find the correct model size for your data&lt;/strong&gt;. The general workflow to find an appropriate model size is &lt;strong&gt;to start with relatively few layers and parameters, and increase the size of the layers or add new layers until&lt;/strong&gt; you see diminishing returns with regard to validation loss.&lt;/p&gt;
+&lt;h6 id=&#34;adding-weight-regularization&#34;&gt;Adding weight regularization&lt;/h6&gt;
+&lt;p&gt;You may be familiar with the principle of Occam’s razor: given two explanations for something, the explanation most likely to be correct is the simplest one—the one that makes fewer assumptions.&lt;/p&gt;
+&lt;p&gt;Thus a common way to mitigate overfitting is to put constraints on the complexity of a network by forcing its weights to take only small values, which makes the distribution of weight values more regular. This is called weight regularization, and it’s done by adding to the loss function of the network a cost associated with having large weights.&lt;/p&gt;
+&lt;p&gt;This cost comes in two flavors:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;L1 regularization—The cost added is proportional to the absolute value of the weight coefficients (the L1 norm of the weights).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;L2 regularization—The cost added is proportional to the square of the value of the weight coefficients (the L2 norm of the weights).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that because &lt;strong&gt;this penalty is only added at training time&lt;/strong&gt;, &lt;strong&gt;the loss&lt;/strong&gt; for this network will be much &lt;strong&gt;higher at training than at test time&lt;/strong&gt;.&lt;/p&gt;
+&lt;h6 id=&#34;adding-dropout&#34;&gt;Adding dropout&lt;/h6&gt;
+&lt;p&gt;Let’s say a given layer would normally return a vector &lt;code&gt;[0.2, 0.5, 1.3, 0.8, 1.1] &lt;/code&gt; for a given input sample during training. &lt;strong&gt;After applying dropout, this vector will have a few zero entries distributed at random&lt;/strong&gt;: for example, [0, 0.5, 1.3, 0, 1.1]. &lt;strong&gt;The dropout rate is the fraction of the features that are zeroed out; it’s usually set between 0.2 and 0.5.&lt;/strong&gt; &lt;strong&gt;At test time, no units are dropped out&lt;/strong&gt;; instead, the layer’s output values are &lt;strong&gt;scaled down by a factor equal to the dropout rate&lt;/strong&gt;, &lt;strong&gt;to balance for&lt;/strong&gt; the fact that more units are active than at training time.&lt;/p&gt;
+&lt;p&gt;To recap, these are &lt;strong&gt;the most common ways to prevent overfitting in neural  networks&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Get more training data.&lt;/li&gt;
+&lt;li&gt;Reduce the capacity of the network.&lt;/li&gt;
+&lt;li&gt;Add weight regularization.&lt;/li&gt;
+&lt;li&gt;Add dropout.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;the-universal-workflow-of-machine-learning&#34;&gt;The universal workflow of machine learning&lt;/h4&gt;
+&lt;p&gt;For &lt;strong&gt;balanced-classification problems&lt;/strong&gt;, where every class is equally likely, &lt;strong&gt;accuracy&lt;/strong&gt; and &lt;strong&gt;area under the receiver operating characteristic curve&lt;/strong&gt; (ROC AUC) are common metrics. For &lt;strong&gt;class-imbalanced problems&lt;/strong&gt;, you can use &lt;strong&gt;precision&lt;/strong&gt; and &lt;strong&gt;recall&lt;/strong&gt;. For &lt;strong&gt;ranking problems&lt;/strong&gt; or &lt;strong&gt;multilabel classification&lt;/strong&gt;, you can use &lt;strong&gt;mean average precision&lt;/strong&gt;. And it isn’t uncommon to have to define your own &lt;strong&gt;custom metric&lt;/strong&gt; by which to measure success. To get a sense of the diversity of machine-learning success metrics and how they relate to different problem domains, it’s helpful to browse the data science competitions on &lt;strong&gt;Kaggle&lt;/strong&gt; (&lt;a href=&#34;https://kaggle.com&#34;&gt;https://kaggle.com&lt;/a&gt;); they showcase a wide range of problems and evaluation metrics.&lt;/p&gt;
+&lt;h6 id=&#34;preparing-your-data&#34;&gt;Preparing your data&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;As you saw previously, your data should be formatted as tensors.&lt;/li&gt;
+&lt;li&gt;The values taken by these tensors should usually be scaled to small values: for example, in the [-1, 1] range or [0, 1] range.&lt;/li&gt;
+&lt;li&gt;If different features take values in different ranges (heterogeneous data), then the data should be normalized.&lt;/li&gt;
+&lt;li&gt;You may want to do some feature engineering, especially for small-data problems.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&#34;developing-a-model-that-does-better-than-a-baseline&#34;&gt;Developing a model that does better than a baseline&lt;/h6&gt;
+&lt;p&gt;Assuming that things go well, you need to make three key choices to build your
+first working model:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Last-layer activation&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Loss function&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Optimization configuration&lt;/strong&gt;—What optimizer will you use? What will its learning rate be? In most cases, it’s safe to go with &lt;strong&gt;rmsprop&lt;/strong&gt; and its &lt;strong&gt;default learning rate&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Problem type&lt;/th&gt;
+&lt;th&gt;Last-layer activation&lt;/th&gt;
+&lt;th&gt;Loss function&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Binary classification&lt;/td&gt;
+&lt;td&gt;sigmoid&lt;/td&gt;
+&lt;td&gt;binary_crossentropy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Multiclass, single-label classification&lt;/td&gt;
+&lt;td&gt;softmax&lt;/td&gt;
+&lt;td&gt;categorical_crossentropy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Multiclass, multilabel classification&lt;/td&gt;
+&lt;td&gt;sigmoid&lt;/td&gt;
+&lt;td&gt;binary_crossentropy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Regression to arbitrary values&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;td&gt;mse&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Regression to values between 0 and 1&lt;/td&gt;
+&lt;td&gt;sigmoid&lt;/td&gt;
+&lt;td&gt;mse or binary_crossentropy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h6 id=&#34;scaling-up-developing-a-model-that-overfits&#34;&gt;Scaling up: developing a model that overfits&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;Add layers.&lt;/li&gt;
+&lt;li&gt;Make the layers bigger.&lt;/li&gt;
+&lt;li&gt;Train for more epochs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&#34;regularizing-your-model-and-tuning-your-hyperparameters&#34;&gt;Regularizing your model and tuning your hyperparameters&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;Add dropout.&lt;/li&gt;
+&lt;li&gt;Try different architectures: add or remove layers.&lt;/li&gt;
+&lt;li&gt;Add L1 and/or L2 regularization.&lt;/li&gt;
+&lt;li&gt;Try different hyperparameters (such as the number of units per layer or the learning rate of the optimizer) to find the optimal configuration.&lt;/li&gt;
+&lt;li&gt;Optionally, iterate on feature engineering: add new features, or remove features that don’t seem to be informative.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;part-2---deep-learning-in-practice&#34;&gt;PART 2 - DEEP LEARNING IN PRACTICE&lt;/h2&gt;
+&lt;h3 id=&#34;5deep-learning-for-computer-vision&#34;&gt;5.Deep learning for computer vision&lt;/h3&gt;
+&lt;h4 id=&#34;introduction-to-convnets&#34;&gt;Introduction to convnets&lt;/h4&gt;
+&lt;h4 id=&#34;training-a-convnet-from-scratch-on-a-small-dataset&#34;&gt;Training a convnet from scratch on a small dataset&lt;/h4&gt;
+&lt;h4 id=&#34;the-relevance-of-deep-learning-for-small-data-problems&#34;&gt;The relevance of deep learning for small-data problems&lt;/h4&gt;
+&lt;h4 id=&#34;using-a-pretrained-convnet&#34;&gt;Using a pretrained convnet&lt;/h4&gt;
+&lt;h4 id=&#34;visualizing-what-convnets-learn&#34;&gt;Visualizing what convnets learn&lt;/h4&gt;
+&lt;h3 id=&#34;6deep-learning-for-text-and-sequences&#34;&gt;6.Deep learning for text and sequences&lt;/h3&gt;
+&lt;h4 id=&#34;working-with-text-data&#34;&gt;Working with text data&lt;/h4&gt;
+&lt;h4 id=&#34;understanding-recurrent-neural-networks&#34;&gt;Understanding recurrent neural networks&lt;/h4&gt;
+&lt;h4 id=&#34;advanced-use-of-recurrent-neural-networks&#34;&gt;Advanced use of recurrent neural networks&lt;/h4&gt;
+&lt;h4 id=&#34;sequence-processing-with-convnets&#34;&gt;Sequence processing with convnets&lt;/h4&gt;
+&lt;h3 id=&#34;7advanced-deep-learning-best-practices&#34;&gt;7.Advanced deep-learning best practices&lt;/h3&gt;
+&lt;h4 id=&#34;going-beyond-the-sequential-model-the-keras-functional-api&#34;&gt;Going beyond the Sequential model: the Keras functional API&lt;/h4&gt;
+&lt;h4 id=&#34;inspecting-and-monitoring-deep-learning-models-using-keras-callbacks-and-tensorboard&#34;&gt;Inspecting and monitoring deep-learning models using Keras callbacks and TensorBoard&lt;/h4&gt;
+&lt;h4 id=&#34;getting-the-most-out-of-your-models&#34;&gt;Getting the most out of your models&lt;/h4&gt;
+&lt;h3 id=&#34;8generative-deep-learning&#34;&gt;8.Generative deep learning&lt;/h3&gt;
+&lt;h4 id=&#34;text-generation-with-lstm&#34;&gt;Text generation with LSTM&lt;/h4&gt;
+&lt;h4 id=&#34;deepdream&#34;&gt;DeepDream&lt;/h4&gt;
+&lt;h4 id=&#34;neural-style-transfer&#34;&gt;Neural style transfer&lt;/h4&gt;
+&lt;h4 id=&#34;generating-images-with-variational-autoencoders&#34;&gt;Generating images with variational autoencoders&lt;/h4&gt;
+&lt;h4 id=&#34;introduction-to-generative-adversarial-networks&#34;&gt;Introduction to generative adversarial networks&lt;/h4&gt;
+&lt;h3 id=&#34;9conclusions&#34;&gt;9.Conclusions&lt;/h3&gt;
+&lt;h4 id=&#34;key-concepts-in-review&#34;&gt;Key concepts in review&lt;/h4&gt;
+&lt;h4 id=&#34;the-limitations-of-deep-learning&#34;&gt;The limitations of deep learning&lt;/h4&gt;
+&lt;h4 id=&#34;the-future-of-deep-learning&#34;&gt;The future of deep learning&lt;/h4&gt;
+&lt;h4 id=&#34;staying-up-to-date-in-a-fast-moving-field&#34;&gt;Staying up to date in a fast-moving field&lt;/h4&gt;
+&lt;h4 id=&#34;final-wordscd-c&#34;&gt;Final wordscd C&lt;/h4&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>scikit-learn</title>
       <link>http://csyezheng.github.io/post/machine-learning/scikit-learn/</link>
       <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
@@ -2392,447 +3545,6 @@ Check Your Understanding&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Solution for imbalanced data</title>
-      <link>http://csyezheng.github.io/post/machine-learning/solution/</link>
-      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/machine-learning/solution/</guid>
-      
-        <description>&lt;h1 id=&#34;faq&#34;&gt;FAQ&lt;/h1&gt;
-&lt;h2 id=&#34;imbalanced-data&#34;&gt;imbalanced data&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.tensorflow.org/tutorials/structured_data/imbalanced_data&#34;&gt;https://www.tensorflow.org/tutorials/structured_data/imbalanced_data&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/43481490/keras-class-weights-class-weight-for-one-hot-encoding&#34;&gt;https://stackoverflow.com/questions/43481490/keras-class-weights-class-weight-for-one-hot-encoding&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/jbjorne/TEES/blob/master/Detectors/KerasDetectorBase.py&#34;&gt;https://github.com/jbjorne/TEES/blob/master/Detectors/KerasDetectorBase.py&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://towardsdatascience.com/practical-tips-for-class-imbalance-in-binary-classification-6ee29bcdb8a7&#34;&gt;https://towardsdatascience.com/practical-tips-for-class-imbalance-in-binary-classification-6ee29bcdb8a7&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/48485870/multi-label-classification-with-class-weights-in-keras&#34;&gt;https://stackoverflow.com/questions/48485870/multi-label-classification-with-class-weights-in-keras&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;class-weight-degrades-multi-label-classification-performance&#34;&gt;Class weight degrades Multi Label Classification Performance&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://datascience.stackexchange.com/questions/28040/class-weight-degrades-multi-label-classification-performance&#34;&gt;https://datascience.stackexchange.com/questions/28040/class-weight-degrades-multi-label-classification-performance&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;what-is-the-difference-between-multilabel-and-multiclass-classification&#34;&gt;What is the difference between multilabel and multiclass classification?&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.quora.com/What-is-the-difference-between-multilabel-and-multiclass-classification&#34;&gt;https://www.quora.com/What-is-the-difference-between-multilabel-and-multiclass-classification&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stats.stackexchange.com/questions/260505/should-i-use-a-categorical-cross-entropy-or-binary-cross-entropy-loss-for-binary&#34;&gt;https://stats.stackexchange.com/questions/260505/should-i-use-a-categorical-cross-entropy-or-binary-cross-entropy-loss-for-binary&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Few shot learning</title>
-      <link>http://csyezheng.github.io/post/machine-learning/few-shot-learning/</link>
-      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/machine-learning/few-shot-learning/</guid>
-      
-        <description>&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/AnthonyMRios/multi-label-zero-shot&#34;&gt;https://github.com/AnthonyMRios/multi-label-zero-shot&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.aclweb.org/anthology/D18-1352.pdf&#34;&gt;Few-Shot and Zero-Shot Multi-Label Learning for Structured Label Spaces&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://uknowledge.uky.edu/cgi/viewcontent.cgi?article=1076&amp;amp;context=cs_etds&#34;&gt;Deep Neural Networks for Multi-Label Text Classification&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/YujiaBao/Distributional-Signatures&#34;&gt;https://github.com/YujiaBao/Distributional-Signatures&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://paperswithcode.com/paper/few-shot-text-classification-with-induction&#34;&gt;Induction Networks for Few-Shot Text Classification&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/laohur/LearnToCompareText&#34;&gt;https://github.com/laohur/LearnToCompareText&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Learning Path for Machine Learning</title>
-      <link>http://csyezheng.github.io/post/machine-learning/learn-ml/</link>
-      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/machine-learning/learn-ml/</guid>
-      
-        <description>&lt;h1 id=&#34;learning-path-for-machine-learning&#34;&gt;Learning Path for Machine Learning&lt;/h1&gt;
-&lt;h2 id=&#34;basics-of-machine-learning-with-tensorflow&#34;&gt;Basics of machine learning with TensorFlow&lt;/h2&gt;
-&lt;h3 id=&#34;step-1-understand-what-ml-is-all-about&#34;&gt;Step 1: Understand what ML is all about&lt;/h3&gt;
-&lt;p&gt;The book ‘&lt;a href=&#34;https://www.manning.com/books/deep-learning-with-python&#34;&gt;Deep Learning in Python&lt;/a&gt;’ by Francois Chollet, creator of Keras, is a great place to get started. Read chapters 1-4 to understand the fundamentals of ML from a programmer’s perspective.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://developers.google.com/machine-learning/crash-course&#34;&gt;Google Developers Machine Learning Crash Course&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://developers.google.cn/machine-learning/glossary&#34;&gt;Machine Learning Glossary&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;step-2-beyond-the-basics&#34;&gt;Step 2: Beyond the basics&lt;/h3&gt;
-&lt;p&gt;Take the &lt;a href=&#34;https://www.coursera.org/specializations/tensorflow-in-practice&#34;&gt;TensorFlow in Practice Specialization&lt;/a&gt;, which takes you beyond the basics into introductory Computer Vision, NLP, and Sequence modelling.&lt;/p&gt;
-&lt;p&gt;Completing this step continues your introduction, and teaches you how to use TensorFlow to build basic models for a variety of scenarios, including image classification, understanding sentiment in text, generative algorithms, and more.&lt;/p&gt;
-&lt;h3 id=&#34;step-3-practice&#34;&gt;Step 3: Practice&lt;/h3&gt;
-&lt;p&gt;Try some of our &lt;a href=&#34;https://www.tensorflow.org/beta/tutorials/keras&#34;&gt;TensorFlow Core tutorials&lt;/a&gt;, which will allow you to practice the concepts you learned in steps 1 and 2. When you’re done, try some of the more advanced exercises on the left side of the page.&lt;/p&gt;
-&lt;p&gt;Completing this step will improve your understanding of the main concepts and scenarios you will encounter when building ML models.&lt;/p&gt;
-&lt;h3 id=&#34;step-4-go-deeper-with-tensorflow&#34;&gt;Step 4: Go deeper with TensorFlow&lt;/h3&gt;
-&lt;p&gt;Now it’s time to go back to ‘&lt;strong&gt;Deep Learning in Python’&lt;/strong&gt; by Francois and finish chapters 5-9. Every example in this book will work in TensorFlow 2.0, just by changing an import. You should also read the book &lt;a href=&#34;https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/&#34;&gt;Hands-on Machine Learning with Scikit-Learn, Keras, and TensorFlow&lt;/a&gt;, by Aurelien Geron. This book introduces ML using scikit-learn, and also deep learning using TensorFlow 2.0.&lt;/p&gt;
-&lt;p&gt;Completing this step will round out your introductory knowledge of ML, including expanding the platform to meet your needs.&lt;/p&gt;
-&lt;h2 id=&#34;theoretical-and-advanced-machine-learning-with-tensorflow&#34;&gt;Theoretical and advanced machine learning with TensorFlow&lt;/h2&gt;
-&lt;h3 id=&#34;step-1-refresh-your-understanding-of-math-concepts&#34;&gt;Step 1: Refresh your understanding of math concepts&lt;/h3&gt;
-&lt;p&gt;ML is a math heavy discipline. If you plan to modify ML models, or build new ones from scratch, familiarity with the underlying math concepts is important. You don&amp;rsquo;t have to learn all the math upfront, but instead you can look up concepts you are unfamiliar with as you come across them. If it’s been a while since you’ve taken a math course, try watching the &lt;a href=&#34;https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&#34;&gt;Essence of linear algebra&lt;/a&gt; and the &lt;a href=&#34;https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr&#34;&gt;Essence of calculus&lt;/a&gt; playlists from 3blue1brown for a refresher. We recommend that you continue by taking a class from a university, or watching open access lectures from MIT, such as &lt;a href=&#34;https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/&#34;&gt;Linear Algebra&lt;/a&gt; or &lt;a href=&#34;https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/&#34;&gt;Single Variable Calculus&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;step-2-deepen-your-understanding-of-deep-learning-with-these-courses-and-books&#34;&gt;Step 2: Deepen your understanding of deep learning with these courses and books&lt;/h3&gt;
-&lt;p&gt;There is no single course that will teach you everything you need to know about deep learning. One approach that may be helpful is to take a few courses at the same time. Although there will be overlap in the material, having multiple instructors explain concepts in different ways can be helpful, especially for complex topics. Below are several courses we recommend to help get you started. You can explore each of them together, or just choose the ones that feel the most relevant to you.&lt;/p&gt;
-&lt;p&gt;Remember, the more you learn, and reinforce these concepts through practice, the more adept you will be at building and evaluating your own ML models.&lt;/p&gt;
-&lt;h5 id=&#34;take-these-courses&#34;&gt;Take these courses:&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;http://cs231n.stanford.edu/index.html&#34;&gt;CS231n: Convolutional Neural Networks for Visual Recognition&lt;/a&gt; is a collection of lecture videos and slides from Stanford on the details of deep learning architectures, with a focus on learning end-to-end models for computer vision tasks. This is an excellent course and a great place to begin. The &lt;a href=&#34;http://introtodeeplearning.com/&#34;&gt;MIT course 6.S191: Introduction to Deep Learning&lt;/a&gt; is a shorter introductory course on Deep Learning with TensorFlow from MIT and also a wonderful resource. You can also try the &lt;a href=&#34;https://deeplearning.mit.edu/&#34;&gt;MIT Deep Learning&lt;/a&gt; collection of courses and lectures on deep learning, deep reinforcement learning, autonomous vehicles, and artificial intelligence, taught by &lt;a href=&#34;https://lexfridman.com/&#34;&gt;Lex Fridman&lt;/a&gt;.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;Finally, Andrew Ng’s seminal &lt;a href=&#34;https://www.coursera.org/specializations/deep-learning&#34;&gt;Deep Learning Specialization at Coursera&lt;/a&gt; has five courses in which you learn the foundations of deep learning, including Convolutional networks, RNNS, LSTMs, and more. This specialization is designed to help you apply deep learning in your work, and to build a career in AI.&lt;/p&gt;
-&lt;h5 id=&#34;-and--read-these-books&#34;&gt;⬆ And ⬇ Read these books:&lt;/h5&gt;
-&lt;p&gt;To complement what you learn in the courses listed above, we recommend that you dive deeper by reading the books below. Each book is available online, and offers supplementary materials to help you practice.&lt;/p&gt;
-&lt;p&gt;You can start by reading &lt;a href=&#34;https://www.deeplearningbook.org/&#34;&gt;Deep Learning: An MIT Press Book&lt;/a&gt; by Ian Goodfellow, Yoshua Bengio, and Aaron Courville. The Deep Learning textbook is an advanced resource intended to help students deepen their understanding. The book is accompanied by &lt;a href=&#34;http://www.deeplearningbook.org/&#34;&gt;a website&lt;/a&gt;, which provides a variety of supplementary materials, including exercises, lecture slides, corrections of mistakes, and other resources to give you hands on practice with the concepts.&lt;/p&gt;
-&lt;p&gt;You can also explore Michael Nielsen’s online book &lt;a href=&#34;http://neuralnetworksanddeeplearning.com/&#34;&gt;Neural Networks and Deep Learning&lt;/a&gt;. This book provides a theoretical background on neural networks. It does not use TensorFlow, but is a great reference for students interested in learning more.&lt;/p&gt;
-&lt;h3 id=&#34;step-3-read-and-implement-papers-with-tensorflow&#34;&gt;Step 3: Read and implement papers with TensorFlow&lt;/h3&gt;
-&lt;p&gt;At this point, we recommend reading papers and trying the advanced tutorials on our website, which contain implementations of a few well known publications. The best way to learn an advanced application, &lt;a href=&#34;https://www.tensorflow.org/tutorials/text/transformer&#34;&gt;machine translation&lt;/a&gt;, or &lt;a href=&#34;https://www.tensorflow.org/tutorials/text/image_captioning&#34;&gt;image captioning&lt;/a&gt;, is to read the paper linked from the tutorial. As you work through it, find the relevant sections of the code, and use them to help solidify your understanding.&lt;/p&gt;
-&lt;h2 id=&#34;kaggle&#34;&gt;Kaggle&lt;/h2&gt;
-&lt;h4 id=&#34;multi-class-classification-and-multi-label-classification&#34;&gt;multi-class classification and multi-label classification&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.kaggle.com/c/planet-understanding-the-amazon-from-space/&#34;&gt;Planet: Understanding the Amazon from Space&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.kaggle.com/philschmidt/multilabel-classification-rainforest-eda&#34;&gt;https://www.kaggle.com/philschmidt/multilabel-classification-rainforest-eda&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://medium.com/tensorflow/training-and-serving-ml-models-with-tf-keras-fd975cc0fa27#9ea4&#34;&gt;https://medium.com/tensorflow/training-and-serving-ml-models-with-tf-keras-fd975cc0fa27#9ea4&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;multi-label-classification&#34;&gt;multi-label classification&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.kaggle.com/cryptexcode/mpst-movie-plot-synopses-with-tags&#34;&gt;MPST: Movie Plot Synopses with Tags&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://towardsdatascience.com/automated-movie-tagging-a-multiclass-classification-problem-721eb7fb70c2&#34;&gt;https://towardsdatascience.com/automated-movie-tagging-a-multiclass-classification-problem-721eb7fb70c2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aihubprojects.com/movie-plot-synopses-with-tags-tags-prediction/&#34;&gt;https://aihubprojects.com/movie-plot-synopses-with-tags-tags-prediction/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://medium.com/analytics-vidhya/machine-learning-multi-label-classification-mpst-movie-plot-synopses-with-tags-tags-8314e6841e17&#34;&gt;https://medium.com/analytics-vidhya/machine-learning-multi-label-classification-mpst-movie-plot-synopses-with-tags-tags-8314e6841e17&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.kaggle.com/renatorangel/multi-label-classification&#34;&gt;https://www.kaggle.com/renatorangel/multi-label-classification&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://medium.com/towards-artificial-intelligence/keras-for-multi-label-text-classification-86d194311d0e&#34;&gt;https://medium.com/towards-artificial-intelligence/keras-for-multi-label-text-classification-86d194311d0e&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Wireshark</title>
-      <link>http://csyezheng.github.io/post/any-path/wireshark/</link>
-      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/any-path/wireshark/</guid>
-      
-        <description>&lt;pre&gt;&lt;code&gt;$ tshark -r all.pcapng.gz -i http==1 -O http -T fields -e http.request.method -e http.request.uri -e http.request.line -e http.response.line &amp;gt; dump.txt
-&lt;/code&gt;&lt;/pre&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Scraping with Scrapy and Django Integration</title>
-      <link>http://csyezheng.github.io/post/back-end/scrapy-with-django/</link>
-      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/back-end/scrapy-with-django/</guid>
-      
-        <description>&lt;h2 id=&#34;installing-dependencies-optional&#34;&gt;Installing Dependencies (Optional)&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;$ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ python -m pip install --user virtualenv
-$ python -m pip install --user virtualenvwrapper
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ vim ~/.bashrc
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
-source $HOME/.local/bin/virtualenvwrapper.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ source ~/.bashrc
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ mkvirtualenv stock-screener
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;creating-a-django-project&#34;&gt;Creating a Django Project&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;$ django-admin startproject stock_screener
-$ cd stock_screener
-
-$ mkdir stock_screener/apps/basic_info
-$ django-admin startapp basic_info stock_screener/apps/basic_info
-
-$ mkdir stock_screener/apps/northbound
-$ django-admin startapp northbound stock_screener/apps/northbound
-
-$ mkdir stock_screener/apps/financial_metrics
-$ django-admin startapp financial_metrics stock_screener/apps/financial_metrics
-
-$ mkdir stock_screener/apps/quotes
-$ django-admin startapp quotes stock_screener/apps/quotes
-
-$ mkdir stock_screener/apps/jobs
-$ django-admin startapp jobs stock_screener/apps/jobs
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Cannot add backslash suffix when run startapp command.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;INSTALLED_APPS = [
-    ...
-    &#39;rest_framework&#39;,
-    &#39;stock_screener.apps.basic_info&#39;,
-    &#39;stock_screener.apps.northbound&#39;,
-    &#39;stock_screener.apps.financial_metrics&#39;,
-]
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ python manage.py migrate
-$ python manage.py createsuperuser --email admin@example.com --username admin
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ vim stock_screener/apps/basic_info/models.py
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;from django.db import models
-
-class StockList(models.Model):
-    category = models.CharField(max_length=255)
-    code = models.CharField(max_length=255, primary_key=True)
-    name = models.CharField(max_length=255)
-    listing_date = models.DateField()
-    establish_date = models.DateField()
-    industry = models.CharField(max_length=255)
-    main_business = models.TextField()
-
-    class Meta:
-        ordering = [&#39;code&#39;]
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ python manage.py makemigrations basic_info
-$ python manage.py migrate basic_info
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ vim stock_screener/apps/northbound/models.py
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;from django.db import models
-
-class NetFlow(models.Model):
-    code = models.CharField(max_length=255, primary_key=True)
-    name = models.CharField(max_length=255)
-    inflow = models.FloatField()
-    change_pct = models.FloatField()
-    five_inflow = models.FloatField()
-    five_change = models.FloatField()
-    twenty_inflow = models.FloatField()
-    twenty_change = models.FloatField()
-    sixty_inflow = models.FloatField()
-    sixty_change = models.FloatField()
-    cost = models.FloatField()
-    profit_percent = models.FloatField()
-    market_code = models.IntegerField()
-    shares = models.IntegerField()
-
-    class Meta:
-        ordering = [&#39;inflow&#39;]
-
-
-class ShareHolding(models.Model):
-    # concept code
-    code = models.CharField(max_length=255, primary_key=True)
-    # concept name
-    name = models.CharField(max_length=255)
-    inflow = models.FloatField()
-    change_pct = models.FloatField()
-    five_inflow = models.FloatField()
-    five_change = models.FloatField()
-    twenty_inflow = models.FloatField()
-    twenty_change = models.FloatField()
-    sixty_inflow = models.FloatField()
-    sixty_change = models.FloatField()
-
-    class Meta:
-        ordering = [&#39;inflow&#39;]
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ python manage.py makemigrations northbound
-$ python manage.py migrate northbound
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ vim stock_screener/apps/northbound/views.py
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ vim stock_screener/apps/northbound/urls.py
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;from django.urls import path
-from stock_screener.apps.northbound import views
-
-urlpatterns = [
-    path(&#39;netflow/&#39;, views.netflow_list),
-    path(&#39;netflow_concept/&#39;, views.netflow_concept_list),
-]
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ vim stock_screener/urls.py
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;from django.contrib import admin
-from django.urls import path, include
-
-urlpatterns = [
-    path(&#39;admin/&#39;, admin.site.urls),
-    include(&#39;&#39;, include(&#39;northbound.urls&#39;)),
-]
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ vim stock_screener/apps/northbound/admin.py
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;from stock_screener.apps.northbound.models import NetFlow, NetFlowConcept
-
-for model in (NetFlow, NetFlowConcept):
-    admin.site.register(model)
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;scrapy-settings-set-up&#34;&gt;Scrapy settings set up&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;$ vim stock_screener/settings.py
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# integrate scrapy with django START
-
-import os
-from os.path import abspath, dirname, join
-from sys import path
-
-PROJECT_ROOT = abspath(dirname(__file__))
-root = lambda *x: abspath(join(abspath(PROJECT_ROOT), *x))
-SCRAPER_ROOT = root(&#39;apps/scraper&#39;)
-path.append(SCRAPER_ROOT)
-
-os.environ.setdefault(&#39;SCRAPY_SETTINGS_MODULE&#39;, &#39;scraper.settings&#39;)
-
-# integrate scrapy with django DONE
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;creating-the-scrapy-project&#34;&gt;Creating the Scrapy Project&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;$ cd stock_screener/apps/
-$ scrapy startproject scraper
-$ cd scraper
-$ scrapy genspider northbound &amp;lt;domain&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;django-settings-set-up&#34;&gt;Django settings set up&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;$ vim scraper/settings.py
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# DJANGO INTEGRATION START
-
-import os
-from os.path import abspath, dirname, join
-from sys import path
-
-here = lambda *x: join(abspath(dirname(__file__)), *x)
-PROJECT_ROOT = here(&#39;../../../../&#39;)     #  directory path of stock_screener
-path.append(abspath(PROJECT_ROOT))
-os.environ[&#39;DJANGO_SETTINGS_MODULE&#39;] = &#39;stock_screener.settings&#39;
-
-# This is required only if Django Version &amp;gt; 1.8
-# # https://docs.djangoproject.com/en/2.2/ref/applications/#troubleshooting
-import django
-django.setup()
-
-# DJANGO INTEGRATION DONE
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;write-scrapy-project&#34;&gt;write scrapy project&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;$ vim stock_screener/apps/scraper/scraper/items.py
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;from scrapy_djangoitem import DjangoItem
-from stock_screener.apps.northbound.models import NetFlowStocks, NetFlowConcepts, NetFlowStocksByConcept
-
-class NetFlowStocksItem(DjangoItem):
-    django_model = NetFlowStocks
-
-
-class NetFlowConceptsItem(DjangoItem):
-    django_model = NetFlowConcepts
-
-
-class NetFlowStocksByConceptItem(DjangoItem):
-    django_model = NetFlowStocksByConcept
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ stock_screener/apps/scraper/scraper/spiders/northbound.py
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;create a spider here
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ vim stock_screener/apps/scraper/scraper/pipelines.py
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;class NorthboundPipeline(BasePipeline):
-
-    def open_spider(self, spider):
-        self.items = []
-        self.netflow_concepts = []
-        self.netflow_stocks_by_concept = []
-
-    def process_item(self, item, spider):
-        self.items.append(item)
-        return item
-
-    def close_spider(self, spider):
-        try:
-            with transaction.atomic():
-                NetFlowStocks.objects.all().delete()
-                NetFlowConcepts.objects.all().delete()
-                NetFlowStocksByConcept.objects.all().delete()
-                for item in self.items:
-                    item.save()
-        except Exception as e:
-            spider.logger.error(e)
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;using-celery-with-django-to-call-scrapy&#34;&gt;Using Celery with Django to call Scrapy&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;$ sudo pacman -S docker
-$ systemctl start docker &amp;amp;&amp;amp; systemctl enable docker
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ code /etc/docker/daemon.json
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;storage-driver&amp;quot;: &amp;quot;overlay2&amp;quot;,
-  &amp;quot;registry-mirrors&amp;quot; : [
-    &amp;quot;http://docker.mirrors.ustc.edu.cn&amp;quot;,
-    &amp;quot;http://registry.docker-cn.com&amp;quot;,
-    &amp;quot;http://hub-mirror.c.163.com&amp;quot;,
-    &amp;quot;http://ovfftd6p.mirror.aliyuncs.com&amp;quot;
-  ]
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ sudo docker run -d -p 6379:6379 redis
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ vim stock_screener/settings.py
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;INSTALLED_APPS = [
-    ...
-    &#39;django_celery_results&#39;,
-    &#39;django_celery_beat&#39;,
-    ...
-]
-
-CELERY_BROKER_URL = os.environ.get(&#39;REDIS_URL&#39;, &#39;redis://localhost&#39;)
-CELERY_RESULT_BACKEND = &#39;django-db&#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ python manage.py migrate django_celery_results
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;defines-the-celery-instance&#34;&gt;defines the Celery instance&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;$ vim stock_screener/celery.py
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;from __future__ import absolute_import, unicode_literals
-import os
-from celery import Celery
-
-os.environ.setdefault(&#39;DJANGO_SETTINGS_MODULE&#39;, &#39;stock_screener.settings&#39;)
-app = Celery(&#39;stock_screener&#39;)
-app.config_from_object(&#39;django.conf:settings&#39;, namespace=&#39;CELERY&#39;)
-
-
-# Solve Django + Celery + Scrapy twisted reactor(ReactorNotRestartable) errors.
-app.conf.update(
-    worker_max_tasks_per_child=1,
-    broker_pool_limit=None
-)
-
-app.autodiscover_tasks()
-
-@app.task(bind=True)
-def debug_task(self):
-    print(&#39;Request: {0!r}&#39;.format(self.request))
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ vim stock_screener/__init__.py
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;from .celery import app as celery_app
-
-__all__ = (&#39;celery_app&#39;,)
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;create-tasks&#34;&gt;create tasks&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;$ vim stock_screener/apps/jobs/tasks.py
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;@shared_task
-def scrape_task(spider_name):
-    &amp;quot;&amp;quot;&amp;quot;Celery task to scrape website with Scrapy.
-    http://doc.scrapy.org/en/latest/topics/practices.html#run-scrapy-from-a-script
-    &amp;quot;&amp;quot;&amp;quot;
-    configure_logging()
-    s = get_project_settings()
-    s.update({&#39;LOG_FILE&#39;: &#39;scrapy.log&#39;})
-    process = CrawlerProcess(get_project_settings())
-    process.crawl(spider_name)
-    process.start()
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ vim stock_screener/apps/jobs/views.py
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;@csrf_exempt
-@api_view([&#39;POST&#39;])
-def scrape_job(request):
-    &amp;quot;&amp;quot;&amp;quot;
-    Retrieve a scrapy job status, or or create a new scrapy job.
-    &amp;quot;&amp;quot;&amp;quot;
-    spider_name = request.data.get(&#39;spider_name&#39;)
-    if spider_name in spider_names:
-        res = scrape_task.delay(spider_name)
-        return JsonResponse({&#39;task_id&#39;: res.task_id, &#39;status&#39;: &#39;started&#39;})
-    else:
-        return JsonResponse({&#39;task_id&#39;: None, &#39;status&#39;: &#39;no found&#39;})
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;starting-the-worker-process&#34;&gt;starting the worker process&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;celery -A stock_screener worker -l info
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ celery -A stock_screener beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;test&#34;&gt;test&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;$ python manage.py runserver 0.0.0.0:8000
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;curl -X POST \
-  http://localhost:8000/jobs/scrape_job/ \
-  -H &#39;content-type: application/json&#39; \
-  -d &#39;{&amp;quot;spider_name&amp;quot;: &amp;quot;northbound&amp;quot;}&#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;http://localhost:8000/admin/
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://medium.com/@ali_oguzhan/how-to-use-scrapy-with-django-application-c16fabd0e62e&#34;&gt;https://medium.com/@ali_oguzhan/how-to-use-scrapy-with-django-application-c16fabd0e62e&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.theodo.com/2019/01/data-scraping-scrapy-django-integration/&#34;&gt;https://blog.theodo.com/2019/01/data-scraping-scrapy-django-integration/&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/holgerd77/django-dynamic-scraper&#34;&gt;https://github.com/holgerd77/django-dynamic-scraper&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/snowunnotech/nicetomeetyou&#34;&gt;https://github.com/snowunnotech/nicetomeetyou&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/richardcornish/jobboardscraper&#34;&gt;https://github.com/richardcornish/jobboardscraper&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/cmwaura/Newspade&#34;&gt;https://github.com/cmwaura/Newspade&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 </description>
       
     </item>

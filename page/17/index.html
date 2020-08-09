@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.72.0" />
+<meta name="generator" content="Hugo 0.74.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-08-09T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,7 +295,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/go/package_download/">package_download</a>
+      <a class="post-link" href="/post/programming-languages/go/good-at/">Golang Pros and Cons</a>
     </h1>
     
     <div class="post-meta">
@@ -316,10 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      gopm get -g -v golang.org/x/sys 
+      Golang Pros  Modular design means the compiled binary is as small as possible and requires no dependencies. Like Java, it’s platform independent. You can compile it for any platform your servers and applications run on. Take that, Apple. Easy for your developers to learn because it’s based on C. You don’t need to go to a code bootcamp to become proficient. Has static type checking, meaning your code gets its bugs cleaned up at compile time, not in production.
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/package_download/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/go/good-at/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,7 +330,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/go/photoprism/">photoprism</a>
+      <a class="post-link" href="/post/programming-languages/go/gopm/">gopm</a>
     </h1>
     
     <div class="post-meta">
@@ -351,13 +351,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Step 1: Clone this project:
-git clone https://github.com/photoprism/photoprism.git Step 2: Start Docker containers:
-cd photoprism sudo docker-compose up Step 3: Open a new terminal to the photoprism container:
-sudo docker-compose exec photoprism bash 
+      go get -u github.com/gpmgo/gopm 
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/go/photoprism/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/go/gopm/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -368,7 +365,7 @@ sudo docker-compose exec photoprism bash
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/programming-languages/python/datetime/">Python datetime</a>
+      <a class="post-link" href="/post/programming-languages/go/gorm/">gorm</a>
     </h1>
     
     <div class="post-meta">
@@ -377,7 +374,7 @@ sudo docker-compose exec photoprism bash
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/python/"> Python </a>
+          <a href="http://csyezheng.github.io/categories/go/"> Go </a>
           
         </div>
       
@@ -389,13 +386,10 @@ sudo docker-compose exec photoprism bash
   <div class="post-content">
     
     <div class="post-summary">
-      datetime 8.1. datetime
-The datetime module, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation.
-There are two kinds of date and time objects: “naive” and “aware”.
-An aware object has sufficient knowledge of applicable algorithmic and political time adjustments, such as time zone and daylight saving time information, to locate itself relative to other aware objects. An aware object is used to represent a specific moment in time.
+      struct name and table name type User struct {} // default table name is `users` // Set User's table name to be `profiles` func (User) TableName() string { return &quot;profiles&quot; } gorm不定条件查询和分页操作 making dynamic query and pagination using gorm course := models.Course{} // The global db variable must be assigned to the local db variable. //
     </div>
     <div class="read-more">
-      <a href="/post/programming-languages/python/datetime/" class="read-more-link">Read more</a>
+      <a href="/post/programming-languages/go/gorm/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1175,6 +1169,48 @@ An aware object has sufficient knowledge of applicable algorithmic and political
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/18/">»</a></li>
@@ -1182,7 +1218,7 @@ An aware object has sufficient knowledge of applicable algorithmic and political
 
       
       
-      <li><a href="/page/30/">»»</a></li>
+      <li><a href="/page/32/">»»</a></li>
       
 
       </ul>

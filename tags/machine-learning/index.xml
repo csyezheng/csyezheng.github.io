@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Bert</title>
+      <link>http://csyezheng.github.io/post/deep-learning/bert/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/deep-learning/bert/</guid>
+      <description>BERT 可解释性-从&amp;quot;头&amp;quot;说起 一、背景介绍 搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大</description>
+    </item>
+    
+    <item>
       <title>Multi-label classification</title>
       <link>http://csyezheng.github.io/post/machine-learning/multi-label-classification/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>

@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.72.0" />
+<meta name="generator" content="Hugo 0.74.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-08-09T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,12 +295,46 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/make-a-web-site/">MAKE A WEBSITE</a>
+      <a class="post-link" href="/post/thinking/thinking/">Programming Thinking</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-03-18" class="post-time">
-        2018-03-18
+      <time datetime="2018-08-15" class="post-time">
+        2018-08-15
+      </time>
+      <div class="post-category">
+          <a href="http://csyezheng.github.io/categories/thinking/"> Thinking </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      基类的派生类的派生类需要做某些改动时，追溯到基类的一个虚函数做改动才能实现时，可以在此派生类中重写同名函数进行覆盖而不是继承这个虚函数，先拷
+    </div>
+    <div class="read-more">
+      <a href="/post/thinking/thinking/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/back-end/kafka/">Kafka</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2018-07-23" class="post-time">
+        2018-07-23
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
@@ -315,10 +349,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      GET A DOMAIN &amp; WEB HOSTING Register a domain name Namesilo Create New Account csyezheng csye3631 SEARCH Domain and REGISTER NameServers：域名解析服务器设置，未确定的可以等稍后在后台设置也一样； Auto-Renew
+      Quickstart &gt; tar -xzf kafka_2.11-1.1.0.tgz &gt; cd kafka_2.11-1.1.0 Start the server bin/zookeeper-server-start.sh config/zookeeper.properties bin/kafka-server-start.sh config/server.properties Create a topic bin/kaftopics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic my-topic bin/kafka-topics.sh --list --zookeeper localhost:2181 Send some messages bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning Python client for the Apache Kafka #!/usr/bin/env python3 import logging from kafka import KafkaProducer from kafka.errors import KafkaError import msgpack log = logging.getLogger(__name__) def send(): producer = KafkaProducer(bootstrap_servers=['localhost:9092'], value_serializer=msgpack.
     </div>
     <div class="read-more">
-      <a href="/post/back-end/make-a-web-site/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/kafka/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -329,15 +363,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/devops/nginx/">Nginx</a>
+      <a class="post-link" href="/post/deep-learning/keras/">keras</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-10-21" class="post-time">
-        2017-10-21
+      <time datetime="2018-03-26" class="post-time">
+        2018-03-26
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/devops/"> DevOps </a>
+          <a href="http://csyezheng.github.io/categories/deep-learning/"> deep-learning </a>
           
         </div>
       
@@ -349,47 +383,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      General configuration Managing server entries It is possible to put different server blocks in different files. This allows you to easily enable or disable certain sites.
-# mkdir /etc/nginx/sites-available # mkdir /etc/nginx/sites-enabled Create a file inside the sites-available directory that contains one or more server blocks:
-/etc/nginx/sites-available/example server { .. } Append the following line at the end of the http block in /etc/nginx/nginx.conf:
-include sites-enabled/*; To enable a server block, simple create a symlink:
+      Keras import tensorflow as tf from tensorflow import keras 
     </div>
     <div class="read-more">
-      <a href="/post/devops/nginx/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/back-end/postgresql/">PostgreSQL</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2017-09-30" class="post-time">
-        2017-09-30
-      </time>
-      <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Installing PostgreSQL $ sudo pacman -S postgresql $ sudo -u postgres -i [postgres]$ initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data' [postgres]$ exit $ pg_ctl -D /var/lib/postgres/data -l logfile start $ systemctl start postgresql.service $ systemctl enable postgresql.service Create your first database/user Access the database shell $ [postgres]$ psql -d myDatabaseName \help \c &lt;database&gt; \du # list all users and their permission levels \dt # show summary information about all tables \q \?
-    </div>
-    <div class="read-more">
-      <a href="/post/back-end/postgresql/" class="read-more-link">Read more</a>
+      <a href="/post/deep-learning/keras/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -445,9 +442,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -468,9 +463,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -491,9 +484,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -514,9 +505,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -537,9 +526,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -560,9 +547,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -583,9 +568,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -606,9 +589,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -629,9 +610,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -652,9 +631,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -675,9 +652,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -698,9 +673,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -721,9 +694,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -744,9 +715,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -767,9 +736,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -790,9 +757,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -813,9 +778,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
 
-          
           
 
         
@@ -836,42 +799,30 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
             
               
             
 
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/18/">
-              18
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
           
 
         
@@ -898,11 +849,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -929,11 +878,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -960,11 +907,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -991,11 +936,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1022,11 +965,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1053,11 +994,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1084,11 +1023,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1115,11 +1052,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1146,11 +1081,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1177,11 +1110,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1208,11 +1139,9 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1229,6 +1158,56 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/31/">
+              31
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/26/">»</a></li>
@@ -1236,7 +1215,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
 
       
       
-      <li><a href="/page/30/">»»</a></li>
+      <li><a href="/page/32/">»»</a></li>
       
 
       </ul>

@@ -6,10 +6,19 @@
     <description>Recent content in Django on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://csyezheng.github.io/tags/django/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python and Java Service</title>
+      <link>http://csyezheng.github.io/post/back-end/python-and-java-service/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/back-end/python-and-java-service/</guid>
+      <description>Python和Java服务器通信实现的理解和比较 Python的WSGI和Java的Servlet API Python的WSGI 最近在学习使用Pyt</description>
+    </item>
     
     <item>
       <title>Scraping with Scrapy and Django Integration</title>

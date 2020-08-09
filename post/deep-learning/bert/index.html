@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bert - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="BERT 可解释性-从&amp;quot;头&amp;quot;说起 一、背景介绍 搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大" />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.74.0" />
+
+
+<link rel="canonical" href="http://csyezheng.github.io/post/deep-learning/bert/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="Bert" />
+<meta property="og:description" content="BERT 可解释性-从&quot;头&quot;说起 一、背景介绍 搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://csyezheng.github.io/post/deep-learning/bert/" />
+<meta property="article:published_time" content="2020-06-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-05T00:00:00+00:00" />
+<meta itemprop="name" content="Bert">
+<meta itemprop="description" content="BERT 可解释性-从&quot;头&quot;说起 一、背景介绍 搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大">
+<meta itemprop="datePublished" content="2020-06-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-06-05T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="5445">
+
+
+
+<meta itemprop="keywords" content="machine learning,deep learning,Natural Language Processing,bert," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Bert"/>
+<meta name="twitter:description" content="BERT 可解释性-从&quot;头&quot;说起 一、背景介绍 搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Bert</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-06-05" class="post-time">
+          2020-06-05
+        </time>
+        <div class="post-category">
+            <a href="http://csyezheng.github.io/categories/deep-learning/"> deep-learning </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#二bert-模型-attention-head-实验"><strong>二、Bert 模型 Attention-Head 实验</strong></a></li>
+        <li><a href="#21-attention-head-比较冗余"><strong>2.1 Attention-Head 比较冗余</strong></a></li>
+        <li><a href="#22-某些-head-负责判断词的边界使得字模型带有分词信息"><strong>2.2 某些 head 负责判断词的边界(使得字模型带有分词信息)</strong></a></li>
+        <li><a href="#23-某些-head-负责编码输入的顺序"><strong>2.3 某些 head 负责编码输入的顺序</strong></a></li>
+        <li><a href="#24-某些-head-负责-query-和-title-中相同部分的-term-匹配"><strong>2.4 某些 head 负责 query 和 title 中相同部分的 term 匹配</strong></a></li>
+        <li><a href="#241-finetune-对于负责-term-匹配-attention-head-的影响"><strong>2.4.1 finetune 对于负责 term 匹配 attention-head 的影响</strong></a></li>
+        <li><a href="#242-是否有某个-head-特别能影响模型"><strong>2.4.2 是否有某个 head 特别能影响模型</strong></a></li>
+        <li><a href="#243-高层-head-是如何提取底层-head-特征-一个典型-case"><strong>2.4.3 高层 head 是如何提取底层 head 特征-一个典型 case</strong></a></li>
+        <li><a href="#结语"><strong>结语</strong></a></li>
+        <li><a href="#参考文献"><strong>参考文献</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h1 id="bert-可解释性-从头说起">BERT 可解释性-从&quot;头&quot;说起</h1>
+<p><strong>一、背景介绍</strong></p>
+<p>搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大帮助。query-title 分档任务要求针对 query 和 title 按文本相关性进行 5 个档位的分类(1~5 档)，各档位从需求满足及语义匹配这两方面对 query-doc 的相关度进行衡量，档位越大表示相关性越高，如 1 档表示文本和语义完全不相关，而 5 档表示文本和语义高度相关，完全符合 query 的需求。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-58cac5479dcc451b4d30133b67fb8c5d_1440w.jpg" alt="img"></p>
+<p>我们尝试将 Bert 模型应用在 query-title 分档任务上，将 query 和 title 作为句对输入到 bert 中，取最后一层 cls 向量用做 5 分类(如上图)，最后得到的结果比 LSTM-Attention 交互式匹配模型要好。虽然知道了 bert<strong>能</strong>解决这个问题，我们更好奇的是&rdquo;<strong>为什么</strong>&quot;：为什么 bert 的表现能这么好？这里面有没有可解释的部分呢？</p>
+<p>因为 Multi-head-attention 是 bert 的主要组成部分，所以我们从&quot;头&quot;入手，希望弄清楚各个 head 对 bert 模型有什么作用。为了研究某个 head 对模型的影响，我们需要比较有这个 head 和没有这个 head 模型的前后表现。这里定义一下 HEAD-MASK 操作，其实就是针对某个 head，直接将这个 head 的 attention 值置成 0，这样对于任何输入这个 head 都只能输出 0 向量。</p>
+<p>通过 HEAD-MASK 操作对各个 head 进行对比实验，发现了下面几个有趣的点</p>
+<ul>
+<li>
+<p>attention-head 很冗余/鲁棒，去掉 20%的 head 模型不受影响</p>
+</li>
+<li>
+<p>各层 transformer 之间不是串行关系，去掉一整层 attention-head 对下层影响不大</p>
+</li>
+<li>
+<p>各个 head 有固定的功能</p>
+</li>
+<li>
+<ul>
+<li>某些 head 负责分词</li>
+<li>某些 head 提取语序关系</li>
+<li>某些 head 负责提取 query-title 之间 term 匹配关系</li>
+</ul>
+</li>
+</ul>
+<p>下面我们开始实验正文，看看这些结论是怎么得到的</p>
+<h3 id="二bert-模型-attention-head-实验"><strong>二、Bert 模型 Attention-Head 实验</strong></h3>
+<p>attention-head 是 bert 的基本组成模块，本次实验想要研究各个 head 都对模型作出了什么贡献。通过 Mask 掉某个 head，对比模型前后表现的差异来研究这个 head 对模型有什么样的作用(对训练好的 bert 做 head-mask，不重新训练，对比测试集的表现)。</p>
+<p>bert-base 模型共 12 层每层有 12 个 head，下面实验各个 head 提取的特征是否有明显的模式(Bert 模型为在 query-title 数据上 finetune 好的中文<strong>字</strong>模型)</p>
+<h3 id="21-attention-head-比较冗余"><strong>2.1 Attention-Head 比较冗余</strong></h3>
+<p>标准大小的 bert 一共有 12*12 共 144 个 head.我们尝试对训练好的 bert 模型，随机 mask 掉一定比例的 head,再在测试数据集上测试分档的准确率(<strong>五分类</strong>)。</p>
+<p>下图的柱状图的数值表示相比于 bseline(也就是不做任何 head-mask)模型 acc 的相对提升,如+1%表示比 baseline 模型的 acc 相对提高了 1%，从下面的图可以看到，随机 mask 掉低于 20%的 head，在测试数据集上模型的 acc 不会降低，甚至当 mask 掉 10%的 head 的时候模型表现比不做 head mask 的时候还提升了 1%。当 mask 掉超过一定数量的 head 后，模型表现持续下降，mask 掉越多表现越差。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-5725214f86d8232f6060e7177d0e92ca_1440w.jpg" alt="img"></p>
+<p>同时为了弄清楚底层和高层的 transformer 哪个对于 query-title 分类更加的重要，分别对底层(layer0 ~ layer5 )和高层(layer6~layer11)的 head 做 mask, 去掉的 head 比例控制在 0~50%(占总 head 数量)之间，50%表示去掉了底层或者是高层 100%的 head 下面的图很清晰的说明了底层和高层的 attention-head 关系，橙色部分表示只 mask 掉高层(6 - 11 层)的 head,蓝色部分表示只 mask 掉底层(0 - 5 层)的 head。</p>
+<p>显然高层的 attention-head 非常的依赖底层的 head，底层的 attention-head 负责提取输入文本的各种特征，而高层的 attention 负责将这些特征结合起来。具体表现在当 mask 掉底层(0~5 层)的 80%的 head(图中横坐标为 40%)和 mask 掉底层的 100%的 head(图中横坐标为 50%)时，模型在测试数据集上表现下降剧烈(图中蓝色部分)，说明了去掉大部分的底层 head 后只依赖高层的 head 是不行的，高层的 head 并没有提取输入的特征。相反去掉大部分高层的 head 后模型下降的并没有那么剧烈(图中橙色部分)，说明了底层的 head 提取到了很多对于本任务有用的输入特征，这部分特征通过残差连接可以直接传导到最后一层用做分类。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-39143ffec66598679568a993dac38b69_1440w.jpg" alt="img"></p>
+<p>这个结论后面也可以用于指导模型蒸馏，实验结果表明底层的 transformer 比高层的 transformer 更加的重要，显然我们在蒸馏模型时需要保留更多的底层的 head</p>
+<p>那么对于模型来说是否有某些层的 head 特别能影响 query-title 分类呢？假设将 bert 中所有的 attention-head 看做一个 12*12 的方阵，下面是按行 mask 掉一整行 head 后模型在测试数据上的表现，柱状图上的数值表示相比 baseline 模型的相对提升。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-e19db86266c333175066bf06d28c21bb_1440w.jpg" alt="img"></p>
+<p>可以看到 mask 掉第 5 层～第 9 层的 head 都模型都有比较大的正面提升，特别是当去掉整个第 8 层的 attention-head 的时候测试数据准确率相对提升了 2.3%，从上图可以得到两个结论：</p>
+<ul>
+<li>Bert 模型非常的健壮或者是冗余度很高</li>
+<li>Bert 模型各层之间不是串行依赖的关系，信息并不是通过一层一层 transformer 层来传递的</li>
+</ul>
+<p>bert 模型非常的健壮或者是冗余度很高，直接去掉一整层的 attention-head 并不会对模型的最终表现有太大的影响。 直接去掉整层的 attention-head 模型表现并没有大幅度的下降，说明各层提取的特征信息并不是一层一层的串行传递到分类器的，而是通过残差连接直接传导到对应的层。</p>
+<h3 id="22-某些-head-负责判断词的边界使得字模型带有分词信息"><strong>2.2 某些 head 负责判断词的边界(使得字模型带有分词信息)</strong></h3>
+<p>在我们的 query-title 分档场景中，发现词粒度的 bert 和字粒度的 bert 最终的表现是差不多的，而对于 rnn 模型来说字粒度的 rnn 很难达到词粒度 rnn 的效果，我们希望研究一下为什么词粒度和字粒度的 bert 表现差不多。</p>
+<p>使用的 bert 可视化工具**<a href="https://link.zhihu.com/?target=https%3A//github.com/jessevig/bertviz">bert_viz</a>**<img src="https://www.zhihu.com/equation?tex=%5E%7B%5B2%5D%7D" alt="[公式]">观察各层 attention-head 的 attention 权重分布，可以发现某些 head 带有很明显的分词信息。推测这部分 attention-head 是专门用于提取分词信息的 head。当当前的字可能是词的结尾时，att 权重会偏向 sep,当这个字为词的结尾可能性越大(常见的词结尾)，sep 的权重会越高。当当前字不是词结尾时，att 会指向下一个字。**这种模式非常明显，直接拿这个 attention-head 的结果用于分词准确率为 70%。**</p>
+<p>下面 gif 为我们模型中第 1 层第 3 个 head 的 attention 分布权重图，可以发现 attention 权重很明显带有词的边界信息，当当前的字是结尾时 attention 权重最大的 token 为&quot;SEP&rdquo;，若当前字不是结尾时 attention 权重最大的为下一个字。</p>
+<p><img src="https://pic2.zhimg.com/v2-47dbfcf64677c3dfd7152735e64a58e9_b.jpg" alt="img"></p>
+<p>这种用于提取分词信息的 head 有很多，且不同的 head 有不同的分词粒度，如果将多个粒度的分词综合考虑(有一个 head 分词正确就行)，则直接用 attention-head 切词的准确率在 96%，这也是为什么词粒度 bert 和字粒度 bert 表现差不多的原因。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-bde0a5f3b6c50b5716e074306bca1cbd_1440w.jpg" alt="img"></p>
+<p>猜测字粒度 bert 带词边界信息是通过 bert 的预训练任务 MLM 带来的，语言模型的训练使得 bert 对各个字之间的组合非常的敏感，从而能够区分词的边界信息。</p>
+<h3 id="23-某些-head-负责编码输入的顺序"><strong>2.3 某些 head 负责编码输入的顺序</strong></h3>
+<p>我们知道 bert 的输入为 token_emb+pos_emb+seg_type_emb 这三个部分相加而成，而文本输入的顺序完全是用 pos_emb 来隐式的表达。bert 中某些 head 实际上负责提取输入中的位置信息。这种 attention-head 有明显的上下对齐的模式，如下图：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-11ce4ed825f4130f0d16f3e6562c8430_1440w.jpg" alt="img"></p>
+<p>原输入: query=&quot;京东小哥&rdquo;, title=&quot;京东小哥最近在干嘛&rdquo;,bert 模型判定为 4 档</p>
+<p>将 title 顺序打乱: query=&quot;京东小哥&rdquo;, title=&quot;近东嘛最都在干哥小京&rdquo;,bert 模型判定为<strong>2 档</strong> 将 title 顺序打乱: query=&quot;京东小哥&rdquo;, title=&quot;近东嘛最都在干哥小京&rdquo;,mask 掉 7 个怀疑用于提取语序的 head,bert 模型判定为<strong>3 档</strong></p>
+<p>下面的图分别对比了不做 mask，随机 mask 掉 7 个 head(重复 100 次取平均值)，mask 掉 7 个特定的 head(怀疑带有语序信息的 head) 从下面的图看到，mask 掉 7 个特定的 head 后整体分档提升为 3 档，而随机 mask 掉 7 个 head 结果仍然为 2 档，且档位概率分布和不 mask 的情况差别不大。</p>
+<p>这个 case 说明了我们 mask 掉的 7 个特定的 head 应该是负责提取输入的顺序信息，也就是语序信息。将这部分 head mask 掉后，bert 表现比较难察觉到 title 中的乱序，从而提升了分档。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-baf0efbdabfcf5459e942e5a5d609f8c_1440w.jpg" alt="img"></p>
+<h3 id="24-某些-head-负责-query-和-title-中相同部分的-term-匹配"><strong>2.4 某些 head 负责 query 和 title 中相同部分的 term 匹配</strong></h3>
+<p>query 和 title 中是否有相同的 term 是我们的分类任务中非常关键的特征，假如 query 中大部分 term 都能在 title 中找到，则 query 和 title 相关性一般比较高。如 query=&quot;京东小哥&quot;就能完全在 title=&quot;京东小哥最近在干嘛&quot;中找到，两者的文本相关性也很高。我们发现部分 attention-head 负责提取这种 term 匹配特征，这种 head 的 attention 权重分布一般如下图，可以看到上句和下句中相同 term 的权重很高(颜色越深表示权重越大)。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-c2fa3ba68b6cc0c7ccdbfe1d4c182dbb_1440w.jpg" alt="img"></p>
+<p>其中在第 2~第 4 层有 5 个 head 匹配的模式特别明显。我们发现虽然 bert 模型中 attention-head 很冗余，去掉一些 head 对模型不会有太大的影响，但是有少部分 head 对模型非常重要，下面展示这 5 个 head 对模型的影响，表格中的数值表示与 baseline 模型的 acc 相对提升值。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-e3302aae2032e8ff09b807f1f8e2a97c_1440w.jpg" alt="img"></p>
+<p>利用测试数据作为标准，分别测试随机 mask 掉 5 个 head 和 mask 掉 5 个指定的 head(这些 head 在 attention 可视化上都有明显的 query-title 匹配的模式)。从结果可以看到去掉这些负责 query-title 匹配的 head 后模型表现剧烈下降，只去掉这 5 个 head 就能让模型表现下降 50%。甚至 mask 掉 0~5 层其他 head，只保留这 5 个 head 时模型仍维持 baseline 模型 82%的表现，说明了 query-title 的 term 匹配在我们的任务中是非常重要的。</p>
+<p>这也许是为什么双塔 bert 在我们的场景下表现会那么差的原因(Bert+LSTM 实验中两个模型结合最后的表现差于只使用 Bert, Bert 的输入为双塔输入)，因为 query 和 title 分别输入，使得这些 head 没有办法提取 term 的匹配特征(相当于 mask 掉了这些 head)，而这些匹配特征对于我们的分类任务是至关重要的</p>
+<h3 id="241-finetune-对于负责-term-匹配-attention-head-的影响"><strong>2.4.1 finetune 对于负责 term 匹配 attention-head 的影响</strong></h3>
+<p>在 query-title 分档任务中 query 和 title 中是否有相同的 term 是很重要的特征，那么在 finetune 过程中负责 query-title 中相同 term 匹配的 head 是否有比较明显的增强呢？</p>
+<p>下面以 case 为例说明： query=&quot;我在伊朗长大&rdquo; title=&quot;假期电影《我在伊朗长大》&rdquo;</p>
+<p>下图展示了 query-title 数据<em><strong>finetune 前</strong></em><strong>某个</strong>负责 term 匹配的 head 的 attention 分配图</p>
+<p><img src="https://pic4.zhimg.com/80/v2-1fe9e219c26f2708b7f9e7cb1b251d2b_1440w.jpg" alt="img"></p>
+<p>在<strong>没有 finetune 前</strong>，可以看到某些 head 也会对上下句中重复的 term 分配比较大的 attention 值，这个特质可能是来自预训练任务 NSP(上下句预测)。因为假如上句和下句有出现相同的 term，则它们是上下句的概率比较大，所以 bert 有一些 head 专门负责提取这种匹配的信息。</p>
+<p>除了上下句相同的 term 有比较大的注意力，每个 term 对自身也有比较大的注意力权重（体现在图中对角线上的值都比较大) 为了更直观的看<strong>训练前后</strong>哪部分的 attention 值有比较大的改变，分别展示训练后 attention<strong>增强</strong>(微调前-微调后&gt;0)和训练后 attention<strong>减弱</strong>(微调前-微调后&lt;0)的 attention 分配图。可以观察到比较明显的几个点：</p>
+<ul>
+<li>query 和 title 中 term 匹配的 attention 值变大了 从下图可以看到, query 和 title 中具有相同 term 时 attention 相比于训练前是有比较大的增强。说明在下游任务(query-title 分档)训练中增强了这个 head 的相同 term 匹配信息的抽取能力。</li>
+</ul>
+<p><img src="https://pic4.zhimg.com/80/v2-edb5789f6481831d6f60495980be5d97_1440w.jpg" alt="img"></p>
+<ul>
+<li>term 和自身的 attention 变小了 模型将重点放在找 query 和 title 中是否有相同的 term，弱化了 term 对自身的注意力权重</li>
+</ul>
+<p><img src="https://pic3.zhimg.com/80/v2-3bd82ee8721a541b2b992490bc0d8b86_1440w.jpg" alt="img"></p>
+<ul>
+<li>分隔符 sep 的 attention 值变小了。 有**<a href="https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/1906.04341.pdf">论文</a>**指出当某个 token 的 attention 指向 sep 时表示一种不分配的状态(即此时没有找到合适的 attention 分配方式)，在经过 finetune 后 term 指向 sep 的权重变小了，表示经过 query-title 数据训练后这个 head 的 attention 分配更加的明确了。</li>
+</ul>
+<h3 id="242-是否有某个-head-特别能影响模型"><strong>2.4.2 是否有某个 head 特别能影响模型</strong></h3>
+<p>从上面的实验可以看到，bert 模型有比较多冗余的 head。去掉一部分这些 head 并不太影响模型，但是有少部分 head 特别能影响模型如上面提到的负责提取上下句中 term 匹配信息的 head，只去掉 5 个这种 head 就能让模型的表现下降 50%。那么是否有某个 head 特别能影响结果呢？</p>
+<p>下面实验每次只 mask 掉一个 head，看模型在测试数据中表现是否上升/下降。下图中将 bert 的 144 个 head 看作 12X12 的矩阵，矩阵内每个元素表示去掉这个 head 后模型在测试数据上的表现。其中 0 表示去掉后对模型的影响不太大。元素内的值表示相对于 baseline 的表现提升，如+1%表示相比 baseline 的 acc 提高了 1%。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-df23645337d194720fdc725f3ef16661_1440w.jpg" alt="img"></p>
+<p>可以看到对于 bert 的大部分 head，单独去掉这个 head 对模型并不会造成太大的影响，而有少部分 head 确实特别能影响模型，比如负责上下句(query-title)中相同 term 匹配的 head。即使去掉一个这种 head 也会使得模型的表现下降。同时注意到高层(第 10 层)有一个 head 去掉后模型表现变化也很大，实验发现这个 head 功能是负责抽取底层 head 输出的特征，也就是 3-4 层中 head 抽取到输入的 query-title 有哪些相同 term 特征后，这部分信息会传递到第 10 层进一步进行提取，最后影响分类。</p>
+<h3 id="243-高层-head-是如何提取底层-head-特征-一个典型-case"><strong>2.4.3 高层 head 是如何提取底层 head 特征-一个典型 case</strong></h3>
+<p>上图中，在第 10 层有一个 head 去掉后特别能影响模型，观察其 attention 的分布，cls 的 attention 都集中在 query 和 title 中相同的 term 上，似乎是在对底层 term 匹配 head 抽取到的特征进一步的提取，将这种匹配特征保存到 cls 中(cls 最后一层会用于分类)。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-eabcfa5e4f4cce8da54f5ac32a49ba9e_1440w.jpg" alt="img"></p>
+<p>在没有做任何 head-mask 时, 可以看到 cls 的 attention 主要分配给和 query 和 title 中的共同 term &ldquo;紫熨斗&rdquo;，而 mask 掉 5 个 2~4 层的 head(具有 term 匹配功能)时, 第 10 层的 cls 注意力分配明显被改变，分散到更多的 term 中。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-f02a2af3967dda0e4770082473040881_1440w.jpg" alt="img"></p>
+<p>这个 case 展示了高层 attention-head 是如何依赖底层的 head 的特征，进一步提取底层的特征并最后作为重要特征用于 query-title 分类。</p>
+<h3 id="结语"><strong>结语</strong></h3>
+<p>本文主要探讨了在 query-title 分类场景下,bert 模型的可解释性。主要从 attention-head 角度入手，发现 attention 一方面非常的冗余，去掉一部分 head 其实不会对模型造成多大的影响。另外一方面有一些 head 却非常的能影响模型，即使去掉一个都能让模型表现变差不少。同时发现不同的 head 实际上有特定的功能，比如底层的 head 负责对输入进行特征提取，如分词、提取输入的语序关系、提取 query 和 title(也就是上下句)中相同的 term 信息等。这部分底层的 head 提取到的特征会通过残差连接送到高层的 head 中，高层 head 会对这部分特征信息进行进一步融合，最终作为分类特征输入到分类器中。</p>
+<p>本文重点讨论了哪些 head 是对模型有正面作用，也就是去掉这些 head 后模型表现变差了。但是如果知道了哪些 head 为什么对模型有负面作用，也就是为什么去掉某些 head 模型效果会更好，实际上对于我们有更多的指导作用。这部分信息能够帮助我们在模型加速，提升模型表现上少走弯路。</p>
+<h3 id="参考文献"><strong>参考文献</strong></h3>
+<p>[1] Clark K, Khandelwal U, Levy O, et al. What Does BERT Look At? An Analysis of BERT&rsquo;s Attention[J]. arXiv preprint arXiv:1906.04341, 2019.</p>
+<p>[2] Vig J. A multiscale visualization of attention in the transformer model[J]. arXiv preprint arXiv:1906.05714, 2019.</p>
+<p>作者：vincehou，腾讯 TEG 应用研究员</p>
+<p>更多干货尽在<a href="https://www.zhihu.com/org/teng-xun-ji-zhu-gong-cheng">腾讯技术</a>，官方QQ交流群已建立，交流讨论可加：957411539。</p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2020-06-05
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://csyezheng.github.io/tags/machine-learning/">machine learning</a>
+          <a href="http://csyezheng.github.io/tags/deep-learning/">deep learning</a>
+          <a href="http://csyezheng.github.io/tags/natural-language-processing/">Natural Language Processing</a>
+          <a href="http://csyezheng.github.io/tags/bert/">bert</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/health/bigger-leaner-stronger/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">Bigger Leaner Stronger</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/deep-learning/tensorflow/">
+            <span class="next-text nav-default">Tensorflow</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

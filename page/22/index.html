@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.72.0" />
+<meta name="generator" content="Hugo 0.74.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-06-25T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-08-09T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -295,12 +295,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/jwt/">JSON Web Tokens</a>
+      <a class="post-link" href="/post/back-end/edx_oauth/">edx oauth</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-10-09" class="post-time">
-        2018-10-09
+      <time datetime="2018-11-22" class="post-time">
+        2018-11-22
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
@@ -315,11 +315,23 @@
   <div class="post-content">
     
     <div class="post-summary">
-      What is JSON Web Token? JSON Web Token (JWT) is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
-When should you use JSON Web Tokens? Here are some scenarios where JSON Web Tokens are useful:
+      Request URL: http://localhost:18381/api-auth/login/?next=/api/v1/courses/
+Query String Parameters: next: /api/v1/courses/
+Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18381/login/edx-oidc/?next=/api/v1/courses/
+Query String Parameters: next: /api/v1/courses/
+Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18000/oauth2/authorize/?redirect_uri=http://localhost:18381/complete/edx-oidc/&amp;client_id=discovery-key&amp;scope=openid+profile+email+permissions&amp;response_type=code&amp;state=W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x
+Query String Parameters:
+ redirect_uri: http://localhost:18381/complete/edx-oidc/ client_id: discovery-key scope: openid profile email permissions response_type: code state: W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x  Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18000/oauth2/authorize/confirm
+Request Method: GET
     </div>
     <div class="read-more">
-      <a href="/post/back-end/jwt/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/edx_oauth/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,12 +342,12 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/concurrent-programming-for-scalable-web-architectures/">Concurrent-Programming-for-Scalable-Web-Architectures</a>
+      <a class="post-link" href="/post/back-end/wagtail/">Wagtail</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-08-26" class="post-time">
-        2018-08-26
+      <time datetime="2018-11-02" class="post-time">
+        2018-11-02
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
@@ -350,12 +362,12 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
   <div class="post-content">
     
     <div class="post-summary">
-      Introduction Scope of this Thesis We will have a detailed look on concurrency in three distinct areas of web architectures&ndash;connection handling, application logic and backend persistence. For each stage, we will discuss its main challenges and issues and explain existing approaches to tackle concurrency.
-Web Applications distinguish two separate types of web applications &ndash; web sites and web services.
-Web Sites some popular types for web sites that are interesting in terms of scalability and concurrency
+      Getting started setting up a brand new Wagtail project $ pip install wagtail $ wagtail start mysite $ cd mysite $ pip install -r requirements.txt $ ./manage.py migrate $ ./manage.py createsuperuser $ ./manage.py runserver http://localhost:8000
+http://localhost:8000/admin/
+Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page.
     </div>
     <div class="read-more">
-      <a href="/post/back-end/concurrent-programming-for-scalable-web-architectures/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/wagtail/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -366,12 +378,12 @@ Web Sites some popular types for web sites that are interesting in terms of scal
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/distributed-systems/">distributed systems</a>
+      <a class="post-link" href="/post/back-end/grpc/">gRPC by Go</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-08-26" class="post-time">
-        2018-08-26
+      <time datetime="2018-10-13" class="post-time">
+        2018-10-13
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
@@ -386,10 +398,11 @@ Web Sites some popular types for web sites that are interesting in terms of scal
   <div class="post-content">
     
     <div class="post-summary">
-      
+      $ go version $ go get -u google.golang.org/grpc Install Protocol Buffers v3
+ download pre-compiled binaries for your platform(protoc-&lt;version&gt;-&lt;platform&gt;.zip) from here: https://github.com/google/protobuf/releases Unzip this file. Update the environment variable PATH to include the path to the protoc binary file.  $ go get -u github.com/golang/protobuf/protoc-gen-go $ export PATH=$PATH:$GOPATH/bin Build the example $ cd $GOPATH/src/google.golang.org/grpc/examples/helloworld 
     </div>
     <div class="read-more">
-      <a href="/post/back-end/distributed-systems/" class="read-more-link">Read more</a>
+      <a href="/post/back-end/grpc/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1169,6 +1182,48 @@ Web Sites some popular types for web sites that are interesting in terms of scal
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/23/">»</a></li>
@@ -1176,7 +1231,7 @@ Web Sites some popular types for web sites that are interesting in terms of scal
 
       
       
-      <li><a href="/page/30/">»»</a></li>
+      <li><a href="/page/32/">»»</a></li>
       
 
       </ul>

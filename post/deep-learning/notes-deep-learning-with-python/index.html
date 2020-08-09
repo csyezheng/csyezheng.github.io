@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>notes of deep learning with python - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="Deep Learning with Python PART 1 - FUNDAMENTALS OF DEEP LEARNING 1.What is deep learning? Artificial intelligence, machine learning, and deep learning Before deep learning: a brief history of machine learning Why deep learning? Why now? 2.Before we begin: the mathematical building blocks of neural networks A first look at a neural network Data representations for neural networks tensor: it’s a container for numbers. You may be already familiar with matrices, which are 2D tensors: tensors are a generalization of matrices to an arbitrary number of dimensions (note that in the context of tensors, a dimension is often called an axis)." />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.74.0" />
+
+
+<link rel="canonical" href="http://csyezheng.github.io/post/deep-learning/notes-deep-learning-with-python/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="notes of deep learning with python" />
+<meta property="og:description" content="Deep Learning with Python PART 1 - FUNDAMENTALS OF DEEP LEARNING 1.What is deep learning? Artificial intelligence, machine learning, and deep learning Before deep learning: a brief history of machine learning Why deep learning? Why now? 2.Before we begin: the mathematical building blocks of neural networks A first look at a neural network Data representations for neural networks tensor: it’s a container for numbers. You may be already familiar with matrices, which are 2D tensors: tensors are a generalization of matrices to an arbitrary number of dimensions (note that in the context of tensors, a dimension is often called an axis)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://csyezheng.github.io/post/deep-learning/notes-deep-learning-with-python/" />
+<meta property="article:published_time" content="2020-05-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-05T00:00:00+00:00" />
+<meta itemprop="name" content="notes of deep learning with python">
+<meta itemprop="description" content="Deep Learning with Python PART 1 - FUNDAMENTALS OF DEEP LEARNING 1.What is deep learning? Artificial intelligence, machine learning, and deep learning Before deep learning: a brief history of machine learning Why deep learning? Why now? 2.Before we begin: the mathematical building blocks of neural networks A first look at a neural network Data representations for neural networks tensor: it’s a container for numbers. You may be already familiar with matrices, which are 2D tensors: tensors are a generalization of matrices to an arbitrary number of dimensions (note that in the context of tensors, a dimension is often called an axis).">
+<meta itemprop="datePublished" content="2020-05-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-05-05T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="4023">
+
+
+
+<meta itemprop="keywords" content="deep learning," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="notes of deep learning with python"/>
+<meta name="twitter:description" content="Deep Learning with Python PART 1 - FUNDAMENTALS OF DEEP LEARNING 1.What is deep learning? Artificial intelligence, machine learning, and deep learning Before deep learning: a brief history of machine learning Why deep learning? Why now? 2.Before we begin: the mathematical building blocks of neural networks A first look at a neural network Data representations for neural networks tensor: it’s a container for numbers. You may be already familiar with matrices, which are 2D tensors: tensors are a generalization of matrices to an arbitrary number of dimensions (note that in the context of tensors, a dimension is often called an axis)."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">notes of deep learning with python</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-05-05" class="post-time">
+          2020-05-05
+        </time>
+        <div class="post-category">
+            <a href="http://csyezheng.github.io/categories/deep-learning/"> deep-learning </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#part-1---fundamentals-of-deep-learning">PART 1 - FUNDAMENTALS OF DEEP LEARNING</a>
+      <ul>
+        <li><a href="#1what-is-deep-learning">1.What is deep learning?</a></li>
+        <li><a href="#2before-we-begin-the-mathematical-building-blocks-of-neural-networks">2.Before we begin: the mathematical building blocks of neural networks</a></li>
+        <li><a href="#3getting-started-with-neural-networks">3.Getting started with neural networks</a></li>
+        <li><a href="#4fundamentals-of-machine-learning">4.Fundamentals of machine learning</a></li>
+      </ul>
+    </li>
+    <li><a href="#part-2---deep-learning-in-practice">PART 2 - DEEP LEARNING IN PRACTICE</a>
+      <ul>
+        <li><a href="#5deep-learning-for-computer-vision">5.Deep learning for computer vision</a></li>
+        <li><a href="#6deep-learning-for-text-and-sequences">6.Deep learning for text and sequences</a></li>
+        <li><a href="#7advanced-deep-learning-best-practices">7.Advanced deep-learning best practices</a></li>
+        <li><a href="#8generative-deep-learning">8.Generative deep learning</a></li>
+        <li><a href="#9conclusions">9.Conclusions</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h1 id="deep-learning-with-python">Deep Learning with Python</h1>
+<h2 id="part-1---fundamentals-of-deep-learning">PART 1 - FUNDAMENTALS OF DEEP LEARNING</h2>
+<h3 id="1what-is-deep-learning">1.What is deep learning?</h3>
+<h4 id="artificial-intelligence-machine-learning-and-deep-learning">Artificial intelligence, machine learning, and deep learning</h4>
+<h4 id="before-deep-learning-a-brief-history-of-machine-learning">Before deep learning: a brief history of machine learning</h4>
+<h4 id="why-deep-learning-why-now">Why deep learning? Why now?</h4>
+<h3 id="2before-we-begin-the-mathematical-building-blocks-of-neural-networks">2.Before we begin: the mathematical building blocks of neural networks</h3>
+<h4 id="a-first-look-at-a-neural-network">A first look at a neural network</h4>
+<h4 id="data-representations-for-neural-networks">Data representations for neural networks</h4>
+<p><strong>tensor</strong>: it’s a container for numbers. You may be already familiar with matrices, which are 2D tensors: tensors are a generalization of matrices to an arbitrary number of dimensions (note that in the context of tensors, a <strong>dimension</strong> is often called an <strong>axis</strong>).</p>
+<p>A tensor is defined by three key attributes: Number of axes (rank), Shape, Data type.</p>
+<p>Because the contents of the tensors manipulated by tensor operations can be interpreted as coordinates of points in some geometric space, <strong>all tensor operations have a geometric interpretation</strong>.</p>
+<h4 id="the-gears-of-neural-networks-tensor-operations">The gears of neural networks: tensor operations</h4>
+<p>Neural networks consist entirely of chains of tensor operations and that all of these tensor operations are just geometric transformations of the input data. It follows that <strong>you can interpret a neural network as a very complex geometric transformation in a high-dimensional space</strong>, implemented via a long series of simple steps.</p>
+<p>Uncrumpling paper balls is what machine learning is about: <strong>finding neat representations for complex, highly folded data manifolds</strong>.</p>
+<h4 id="the-engine-of-neural-networks-gradient-based-optimization">The engine of neural networks: gradient-based optimization</h4>
+<p>training loop:</p>
+<ol>
+<li>Draw a batch of training samples x and corresponding targets y.</li>
+<li>Run the network on x (a step called the forward pass) to obtain predictions y_pred .</li>
+<li>Compute the loss of the network on the batch, a measure of the mismatch
+between y_pred and y .</li>
+<li>Update all weights of the network in a way that slightly reduces the loss on this batch.</li>
+</ol>
+<p>One naive solution would be to freeze all weights in the network except the one scalar coefficient being considered, and try different values for this coefficient. But such an approach would be horribly inefficient, because you’d need to compute two forward passes (which are expensive) for every individual coefficient (of which there are many, usually thousands and sometimes up to millions).</p>
+<p>A much better approach is to take advantage of the fact that all operations used in the network are differentiable, and <strong>compute the gradient of the loss with regard to the network’s coefficients</strong>. You can then <strong>move the coefficients in the opposite direction from the gradient, thus decreasing the loss</strong>.</p>
+<p>For every differentiable function f(x) (<strong>differentiable means “can be derived”</strong>: for example, smooth, continuous functions can be derived),</p>
+<p>A <strong>gradient</strong> is the derivative of a tensor operation. It’s the generalization of the concept of <strong>derivatives</strong> to functions of multidimensional inputs: that is, to functions that take tensors as inputs.</p>
+<p>You saw earlier that the derivative of a function f(x) of a single coefficient can be interpreted as the <strong>slope</strong> of the curve of f. Likewise, gradient(f)(W0) can be interpreted as the <strong>tensor</strong> describing the curvature of f(W) around W0.</p>
+<p>For this reason, in much the same way that, for a function f(x), you can reduce the value of f(x) by moving x a little in the opposite direction from the derivative, with a function f(W) of a tensor, you can <strong>reduce f(W) by moving W in the opposite direction from the gradient</strong>: for example, W1 = W0 - step * gradient(f)(W0)</p>
+<p><strong>mini-batch stochastic gradient descent</strong> (mini-batch SGD):</p>
+<ol>
+<li>Draw a batch of training samples x and corresponding targets y.</li>
+<li>Run the network on x to obtain predictions y_pred.</li>
+<li>Compute the loss of the network on the batch, a measure of the mismatch
+between y_pred and y .</li>
+<li>Compute the gradient of the loss with regard to the network’s parameters (a
+backward pass).</li>
+<li>Move the parameters a little in the opposite direction from the gradient for example W -= step * gradient—thus reducing the loss on the batch a bit.</li>
+</ol>
+<p>Note that a variant of the mini-batch SGD algorithm would be to draw a single sample and target at each iteration, rather than drawing a batch of data. This would be <strong>true SGD</strong> (as opposed to <strong>mini-batch SGD</strong>). Alternatively, going to the opposite extreme, you could run every step on all data available, which is called <strong>batch SGD</strong>. Each update would then be more accurate, but far more expensive. The efficient compromise between these two extremes is to use mini-batches of reasonable size.</p>
+<p>Additionally, there exist <strong>multiple variants of SGD</strong> that differ by taking into account previous weight updates when computing the next weight update, rather than just looking at the current value of the gradients. There is, for instance, <strong>SGD with momentum</strong>, as well as <strong>Adagrad</strong>, <strong>RMSP rop</strong>, and several others. Such variants are known as <strong>optimization methods</strong> or <strong>optimizers</strong>. In particular, the concept of momentum, which is used in many of these variants, deserves your attention. <strong>Momentum addresses two issues with SGD: convergence speed and local minima.</strong></p>
+<h6 id="chaining-derivatives-the-backpropagation-algorithm">Chaining derivatives: the Backpropagation algorithm</h6>
+<p>Calculus tells us that such a chain of functions can be derived using the following identity, called the <strong>chain rule</strong>: f(g(x)) = f&rsquo;(g(x)) * g&rsquo;(x). Applying the chain rule to the computation of the gradient values of a neural network gives rise to an algorithm called <strong>Backpropagation</strong> (also sometimes called <strong>reverse-mode differentiation</strong>). Backpropagation starts with the final loss value and works backward from the top layers to the bottom layers, applying the chain rule to compute the contribution that each parameter had in the loss value.</p>
+<h4 id="looking-back-at-our-first-example">Looking back at our first example</h4>
+<h3 id="3getting-started-with-neural-networks">3.Getting started with neural networks</h3>
+<h4 id="anatomy-of-a-neural-network">Anatomy of a neural network</h4>
+<p>Figure 3.1 Relationship between the network, layers, loss function, and optimizer</p>
+<p><img src="https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/03fig01.jpg" alt="Relationship between the network, layers, loss function, and optimizer"></p>
+<p>Different layers are appropriate for different tensor formats and different types of data processing. For instance, simple vector data, stored in 2D tensors of shape (samples, features) , is often processed by densely connected layers, also called fully connected or dense layers (the Dense class in Keras). Sequence data, stored in 3D tensors of shape (samples, timesteps, features), is typically processed by recurrent layers such as an LSTM layer. Image data, stored in 4D tensors, is usually processed by 2D convolution layers Conv2D).</p>
+<pre><code>from keras import layers
+
+# A dense layer with 32 output units
+layer = layers.Dense(32, input_shape=(784,))
+</code></pre><p>Once the network architecture is defined, you still have to choose two more things:</p>
+<ul>
+<li>
+<p><strong>Loss function</strong> (objective function)—The quantity that will be minimized during
+training. It represents a measure of success for the task at hand.</p>
+</li>
+<li>
+<p><strong>Optimizer</strong>—Determines how the network will be updated based on the loss function. It implements a specific variant of stochastic gradient descent (SGD). A neural network that has multiple outputs may have multiple loss functions (one per output).</p>
+</li>
+</ul>
+<p>Choosing the right objective function for the right problem is extremely important: your network will take any shortcut it can, to minimize the loss; so if the objective doesn’t fully correlate with success for the task at hand, your network will end up doing things you may not have wanted.</p>
+<p>Fortunately, when it comes to common problems such as classification, regression, and sequence prediction, there are simple guidelines you can follow to choose the correct loss. For instance, you’ll use <strong>binary crossentropy</strong> for a two-class classification problem, <strong>categorical crossentropy</strong> for a many-class classification problem, <strong>mean-squared error</strong> for a regression problem, <strong>connectionist temporal classification</strong> (CTC) for a sequence-learning problem, and so on. Only when you’re working on truly new research problems will you have to develop your own objective functions. In the next few chapters, we’ll detail explicitly which loss functions to choose for a wide range of common tasks.</p>
+<h4 id="introduction-to-keras">Introduction to Keras</h4>
+<p>There are two ways to define a model: using the Sequential class (only for linear
+stacks of layers, which is the most common network architecture by far) or the functional API (for directed acyclic graphs of layers, which lets you build completely arbitrary architectures).</p>
+<p>what type of network architectures work for different kinds of problems, how to pick the right learning configuration, and how to tweak a model until it gives the results you want to see.</p>
+<h4 id="setting-up-a-deep-learning-workstation">Setting up a deep-learning workstation</h4>
+<h6 id="jupyter-notebooks-the-preferred-way-to-run-deep-learning-experiments">Jupyter notebooks: the preferred way to run deep-learning experiments</h6>
+<p>you don’t have to rerun all of your previous code if something goes wrong late in an experiment.</p>
+<h4 id="classifying-movie-reviews-a-binary-classification-example">Classifying movie reviews: a binary classification example</h4>
+<p>There are two key architecture decisions to be made about such a stack of Dense layers:</p>
+<ul>
+<li>How many layers to use</li>
+<li>How many hidden units to choose for each layer</li>
+</ul>
+<p>In chapter 4, you’ll learn formal principles to guide you in making these choices.</p>
+<p>A <strong>relu</strong> (rectified linear unit) is a function meant to zero out negative values
+<img src="https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/03fig04_alt.jpg" alt="Figure 3.4  The rectified linear unit function"></p>
+<p>whereas a <strong>sigmoid</strong> “squashes” arbitrary values into the [0, 1] interval  outputting something that can be interpreted as a probability.</p>
+<p><img src="https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/03fig05_alt.jpg" alt="Figure 3.5 The sigmoid function"></p>
+<h6 id="what-are-activation-functions-and-why-are-they-necessary">What are activation functions, and why are they necessary?</h6>
+<p>Without an activation function like relu (also called a non-linearity), the Dense layer would consist of two linear operations—a dot product and an addition:</p>
+<pre><code>output = dot(W, input) + b
+</code></pre><p>In order to get access to a much richer hypothesis space that would benefit from deep representations, you need a non-linearity, or activation function. <strong>relu</strong> is the most popular activation function in deep learning, but there are many other candidates, which all come with similarly strange names: prelu, elu, and so on.</p>
+<p><strong>Crossentropy</strong> is usually the best choice when you’re dealing with models that <strong>output probabilities</strong>. Crossentropy is a quantity from the field of Information Theory <strong>that measures the distance between probability distributions</strong> or, in this case, between the ground-truth distribution and your predictions.</p>
+<h6 id="wrapping-up">Wrapping up</h6>
+<ul>
+<li>In a <strong>binary classification problem</strong> (two output classes), your network <strong>should end with a Dense layer with one unit and a sigmoid activation</strong>: the output of your network should be a scalar between 0 and 1, <strong>encoding a probability</strong>.</li>
+<li>With such a scalar <strong>sigmoid</strong> output on a binary classification problem, the loss function you should use is <strong>binary_crossentropy</strong>.</li>
+<li>The <strong>rmsprop</strong> optimizer is generally a good enough choice, whatever your problem. That’s one less thing for you to worry about.</li>
+</ul>
+<h4 id="classifying-newswires-a-multiclass-classification-example">Classifying newswires: a multiclass classification example</h4>
+<p>Because you have many classes, this problem is an instance of <strong>multi-class classification</strong>; and because each data point should be classified into only one category, the problem is more specifically an instance of <strong>single-label, multiclass classification</strong>. If each data point could belong to multiple categories (in this case, topics), you’d be facing a <strong>multilabel, multiclass classification</strong> problem.</p>
+<p>In the previous example, you used 16-dimensional intermediate layers, but a 16-dimensional space may be too limited to learn to separate 46 different classes: <strong>such small layers may act as information bottlenecks, permanently dropping relevant information</strong>.</p>
+<pre><code>from keras import models
+from keras import layers
+model = models.Sequential()
+model.add(layers.Dense(64, activation='relu', input_shape=(10000,)))
+model.add(layers.Dense(64, activation='relu'))
+model.add(layers.Dense(46, activation='softmax'))
+</code></pre><p>There are two other things you should note about this architecture:</p>
+<ul>
+<li>
+<p>You end the network with a Dense layer of size 46. This means for each input sample, the network will output a 46-dimensional vector. <strong>Each entry in this vector (each dimension) will encode a different output class.</strong></p>
+</li>
+<li>
+<p>The last layer uses a <strong>softmax</strong> activation. You saw this pattern in the MNIST example. It means the network will <strong>output a probability distribution over the 46 different output classes</strong>—for every input sample, the network will produce a 46 dimensional output vector, <strong>where output[i] is the probability that the sample belongs to class i</strong> . <strong>The 46 scores will sum to 1</strong>.</p>
+</li>
+</ul>
+<p>The best loss function to use in this case is <strong>categorical_crossentropy</strong>. <strong>It measures the distance between two probability distributions</strong>: here, <strong>between the probability distribution output by the network and the true distribution of the labels.</strong> By minimizing the distance between these two distributions, you train the network to output something as close as possible to the true labels.</p>
+<p>Plotting the training and validation loss:</p>
+<pre><code>import matplotlib.pyplot as plt
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+epochs = range(1, len(loss) + 1)
+plt.plot(epochs, loss, 'bo', label='Training loss')
+plt.plot(epochs, val_loss, 'b', label='Validation loss')
+plt.title('Training and validation loss')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.legend()
+plt.show()
+</code></pre><p>Plotting the training and validation accuracy:</p>
+<pre><code>plt.clf()  # Clears the figure
+acc = history.history['acc']
+val_acc = history.history['val_acc']
+plt.plot(epochs, acc, 'bo', label='Training acc')
+plt.plot(epochs, val_acc, 'b', label='Validation acc')
+plt.title('Training and validation accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.legend()
+plt.show()
+</code></pre><p>The only thing this approach would change is the choice of the loss function. The loss function used in listing 3.21, <strong>categorical_crossentropy</strong>, expects the labels to follow a <strong>categorical encoding</strong>. With <strong>integer labels</strong>, you should use **sparse_categorical_ crossentropy**.</p>
+<h6 id="the-importance-of-having-sufficiently-large-intermediate-layers">The importance of having sufficiently large intermediate layers</h6>
+<p>We mentioned earlier that because the final outputs are 46-dimensional, you should avoid intermediate layers with many fewer than 46 hidden units.</p>
+<h6 id="wrapping-up-1">Wrapping up</h6>
+<ul>
+<li>
+<p>If you’re trying to classify data points among N classes, your network should <strong>end with a Dense layer of size N</strong>.</p>
+</li>
+<li>
+<p>In a <strong>single-label, multiclass classification</strong> problem, your network should end with a <strong>softmax</strong> activation so that it will output a probability distribution over the N output classes.</p>
+</li>
+<li>
+<p><strong>Categorical crossentropy</strong> is almost always the loss function you should use for such problems. It minimizes the distance between the probability distributions output by the network and the true distribution of the targets.</p>
+</li>
+<li>
+<p>There are two ways to handle labels in <strong>multiclass classification</strong>:</p>
+<ul>
+<li>Encoding the labels via categorical encoding (also known as one-hot encoding) and using <strong>categorical_crossentropy</strong> as a loss function</li>
+<li>Encoding the labels as integers and using the <strong>sparse_categorical_crossentropy</strong> loss function</li>
+</ul>
+</li>
+<li>
+<p>If you need to classify data into a large number of categories, you should <strong>avoid</strong> creating information bottlenecks in your network due to <strong>intermediate layers that are too small</strong>.</p>
+</li>
+</ul>
+<h4 id="predicting-house-prices-a-regression-example">Predicting house prices: a regression example</h4>
+<p>And each feature in the input data (for example, the crime rate) has a different scale. For instance, some values are proportions, which take values between 0 and 1; others take values between 1 and 12, others between 0 and 100, and so on.</p>
+<p>It would be problematic to feed into a neural network values that all take wildly different ranges. The network might be able to automatically adapt to such heterogeneous data, but it would definitely make learning more difficult. A widespread best practice to deal with such data is to do feature-wise normalization: for each feature in the input data (a column in the input data matrix), you subtract the mean of the feature and divide by the standard deviation, so that the feature is centered around 0 and has a unit standard deviation.</p>
+<p>In general, the less training data you have, the worse overfitting will be, and <strong>using a small network is one way to mitigate overfitting</strong>.</p>
+<p>the <strong>mse</strong> loss function—<strong>mean squared error</strong>, the square of the difference between the predictions and the targets. This is a widely used loss function <strong>for regression problems</strong>.</p>
+<p>You’re also monitoring a new metric during training: <strong>mean absolute error</strong> (<strong>MAE</strong>). It’s the absolute value of the difference between the predictions and the targets.</p>
+<p><strong>K-fold validation</strong></p>
+<h6 id="wrapping-up-2">Wrapping up</h6>
+<ul>
+<li>
+<p>Regression is done using different loss functions than what we used for classification. Mean squared error (MSE) is a loss function commonly used for regression.</p>
+</li>
+<li>
+<p>Similarly, evaluation metrics to be used for regression differ from those used for classification; naturally, the concept of accuracy doesn’t apply for regression. A common regression metric is mean absolute error (MAE).</p>
+</li>
+<li>
+<p>When features in the input data have values in different ranges, each feature should be scaled independently as a preprocessing step.</p>
+</li>
+<li>
+<p>When there is little data available, using K-fold validation is a great way to reliably evaluate a model.</p>
+</li>
+<li>
+<p>When little training data is available, it’s preferable to use a small network with few hidden layers (typically only one or two), in order to avoid severe overfitting.</p>
+</li>
+</ul>
+<h3 id="4fundamentals-of-machine-learning">4.Fundamentals of machine learning</h3>
+<h4 id="four-branches-of-machine-learning">Four branches of machine learning</h4>
+<p><strong>Mini-batch</strong> or <strong>batch</strong>—A small set of samples (typically between 8 and 128)
+that are processed simultaneously by the model. <strong>The number of samples is</strong>
+<strong>often a power of 2, to facilitate memory allocation on GPU</strong>. When training, a
+<strong>mini-batch is used to compute a single gradient-descent update applied to</strong>
+<strong>the weights of the model.</strong></p>
+<h4 id="evaluating-machine-learning-models">Evaluating machine-learning models</h4>
+<p>In machine learning, the goal is to achieve models that <strong>generalize</strong>—that perform well on never-before-seen data—and <strong>overfitting</strong> is the central obstacle.</p>
+<p>three classic <strong>evaluation recipes</strong>:</p>
+<ul>
+<li>simple hold-out validation</li>
+<li>K-fold validation</li>
+<li>iterated K-fold validation with shuffling.</li>
+</ul>
+<p>Data representativeness: you usually should <strong>randomly shuffle your data before splitting it into training and test sets</strong>.</p>
+<p>The arrow of time: If you’re trying to predict the future given the past (for example, tomorrow’s weather, stock movements, and so on), you <strong>should not randomly shuffle your data before splitting it</strong>, because doing so will create a temporal leak.</p>
+<p>Redundancy in your data: <strong>Make sure your training set and validation set are disjoint.</strong></p>
+<h4 id="data-preprocessing-feature-engineering-and-feature-learning">Data preprocessing, feature engineering, and feature learning</h4>
+<h5 id="data-preprocessing-for-neural-networks">Data preprocessing for neural networks</h5>
+<p>Data preprocessing aims at making the raw data at hand more amenable to neural networks. This includes <strong>vectorization</strong>, <strong>normalization</strong>, <strong>handling missing values</strong>, and <strong>feature extraction</strong>.</p>
+<h6 id="value-normalization">VALUE NORMALIZATION</h6>
+<p>In general, <strong>it isn’t safe to feed into</strong> a neural network data that takes relatively large values (for example, multidigit integers, which are much larger than the initial values taken by the weights of a network) or data that is heterogeneous (for example, data where one feature is in the range 0–1 and another is in the range 100–200). <strong>Doing so can trigger large gradient updates that will prevent the network from converging</strong>.</p>
+<p>To make learning easier for your network, your data should have the following characteristics:</p>
+<ul>
+<li>
+<p>Take small values—<strong>Typically, most values should be in the 0–1 range</strong>.</p>
+</li>
+<li>
+<p>Be homogenous—That is, <strong>all features should take values in roughly the same range</strong>.</p>
+</li>
+</ul>
+<p>Additionally, the following stricter normalization practice is common and can help, although it isn’t always necessary</p>
+<ul>
+<li>Normalize each feature independently to <strong>have a mean of 0.</strong></li>
+<li>Normalize each feature independently to have a <strong>standard deviation of 1</strong>.</li>
+</ul>
+<h6 id="handling-missing-values">HANDLING MISSING VALUES</h6>
+<p>In general, with neural networks, <strong>it’s safe to input missing values as 0</strong>, with the condition that 0 isn’t already a meaningful value. The network will learn from exposure to the data that the value 0 means missing data and will start ignoring the value.</p>
+<h5 id="feature-engineering">Feature engineering</h5>
+<p><strong>Feature engineering</strong> is the process of using your own knowledge about the data and about the machine-learning algorithm at hand (in this case, a neural network) to make the algorithm work better by applying hardcoded (nonlearned) transformations to the data before it goes into the model. In many cases, it isn’t reasonable to expect a machine learning model to be able to learn from completely arbitrary data. The data needs to be presented to the model in a way that will make the model’s job easier.</p>
+<p>That’s the essence of feature engineering: making a problem easier by expressing it in a simpler way. It usually requires understanding the problem in depth.</p>
+<p>Before deep learning, feature engineering used to be critical, because classical shallow algorithms didn’t have hypothesis spaces rich enough to learn useful features by themselves.</p>
+<p>Fortunately, modern deep learning removes the need for most feature engineering, because neural networks are capable of automatically extracting useful features from raw data.</p>
+<p>Good features let you solve a problem with far less data.</p>
+<h4 id="overfitting-and-underfitting">Overfitting and underfitting</h4>
+<p>You must evaluate an array of different architectures (on your validation set, not on your test set, of course) <strong>in order to find the correct model size for your data</strong>. The general workflow to find an appropriate model size is <strong>to start with relatively few layers and parameters, and increase the size of the layers or add new layers until</strong> you see diminishing returns with regard to validation loss.</p>
+<h6 id="adding-weight-regularization">Adding weight regularization</h6>
+<p>You may be familiar with the principle of Occam’s razor: given two explanations for something, the explanation most likely to be correct is the simplest one—the one that makes fewer assumptions.</p>
+<p>Thus a common way to mitigate overfitting is to put constraints on the complexity of a network by forcing its weights to take only small values, which makes the distribution of weight values more regular. This is called weight regularization, and it’s done by adding to the loss function of the network a cost associated with having large weights.</p>
+<p>This cost comes in two flavors:</p>
+<ul>
+<li>
+<p>L1 regularization—The cost added is proportional to the absolute value of the weight coefficients (the L1 norm of the weights).</p>
+</li>
+<li>
+<p>L2 regularization—The cost added is proportional to the square of the value of the weight coefficients (the L2 norm of the weights).</p>
+</li>
+</ul>
+<p>Note that because <strong>this penalty is only added at training time</strong>, <strong>the loss</strong> for this network will be much <strong>higher at training than at test time</strong>.</p>
+<h6 id="adding-dropout">Adding dropout</h6>
+<p>Let’s say a given layer would normally return a vector <code>[0.2, 0.5, 1.3, 0.8, 1.1] </code> for a given input sample during training. <strong>After applying dropout, this vector will have a few zero entries distributed at random</strong>: for example, [0, 0.5, 1.3, 0, 1.1]. <strong>The dropout rate is the fraction of the features that are zeroed out; it’s usually set between 0.2 and 0.5.</strong> <strong>At test time, no units are dropped out</strong>; instead, the layer’s output values are <strong>scaled down by a factor equal to the dropout rate</strong>, <strong>to balance for</strong> the fact that more units are active than at training time.</p>
+<p>To recap, these are <strong>the most common ways to prevent overfitting in neural  networks</strong>:</p>
+<ul>
+<li>Get more training data.</li>
+<li>Reduce the capacity of the network.</li>
+<li>Add weight regularization.</li>
+<li>Add dropout.</li>
+</ul>
+<h4 id="the-universal-workflow-of-machine-learning">The universal workflow of machine learning</h4>
+<p>For <strong>balanced-classification problems</strong>, where every class is equally likely, <strong>accuracy</strong> and <strong>area under the receiver operating characteristic curve</strong> (ROC AUC) are common metrics. For <strong>class-imbalanced problems</strong>, you can use <strong>precision</strong> and <strong>recall</strong>. For <strong>ranking problems</strong> or <strong>multilabel classification</strong>, you can use <strong>mean average precision</strong>. And it isn’t uncommon to have to define your own <strong>custom metric</strong> by which to measure success. To get a sense of the diversity of machine-learning success metrics and how they relate to different problem domains, it’s helpful to browse the data science competitions on <strong>Kaggle</strong> (<a href="https://kaggle.com">https://kaggle.com</a>); they showcase a wide range of problems and evaluation metrics.</p>
+<h6 id="preparing-your-data">Preparing your data</h6>
+<ul>
+<li>As you saw previously, your data should be formatted as tensors.</li>
+<li>The values taken by these tensors should usually be scaled to small values: for example, in the [-1, 1] range or [0, 1] range.</li>
+<li>If different features take values in different ranges (heterogeneous data), then the data should be normalized.</li>
+<li>You may want to do some feature engineering, especially for small-data problems.</li>
+</ul>
+<h6 id="developing-a-model-that-does-better-than-a-baseline">Developing a model that does better than a baseline</h6>
+<p>Assuming that things go well, you need to make three key choices to build your
+first working model:</p>
+<ul>
+<li><strong>Last-layer activation</strong></li>
+<li><strong>Loss function</strong></li>
+<li><strong>Optimization configuration</strong>—What optimizer will you use? What will its learning rate be? In most cases, it’s safe to go with <strong>rmsprop</strong> and its <strong>default learning rate</strong>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Problem type</th>
+<th>Last-layer activation</th>
+<th>Loss function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Binary classification</td>
+<td>sigmoid</td>
+<td>binary_crossentropy</td>
+</tr>
+<tr>
+<td>Multiclass, single-label classification</td>
+<td>softmax</td>
+<td>categorical_crossentropy</td>
+</tr>
+<tr>
+<td>Multiclass, multilabel classification</td>
+<td>sigmoid</td>
+<td>binary_crossentropy</td>
+</tr>
+<tr>
+<td>Regression to arbitrary values</td>
+<td>None</td>
+<td>mse</td>
+</tr>
+<tr>
+<td>Regression to values between 0 and 1</td>
+<td>sigmoid</td>
+<td>mse or binary_crossentropy</td>
+</tr>
+</tbody>
+</table>
+<h6 id="scaling-up-developing-a-model-that-overfits">Scaling up: developing a model that overfits</h6>
+<ul>
+<li>Add layers.</li>
+<li>Make the layers bigger.</li>
+<li>Train for more epochs.</li>
+</ul>
+<h6 id="regularizing-your-model-and-tuning-your-hyperparameters">Regularizing your model and tuning your hyperparameters</h6>
+<ul>
+<li>Add dropout.</li>
+<li>Try different architectures: add or remove layers.</li>
+<li>Add L1 and/or L2 regularization.</li>
+<li>Try different hyperparameters (such as the number of units per layer or the learning rate of the optimizer) to find the optimal configuration.</li>
+<li>Optionally, iterate on feature engineering: add new features, or remove features that don’t seem to be informative.</li>
+</ul>
+<h2 id="part-2---deep-learning-in-practice">PART 2 - DEEP LEARNING IN PRACTICE</h2>
+<h3 id="5deep-learning-for-computer-vision">5.Deep learning for computer vision</h3>
+<h4 id="introduction-to-convnets">Introduction to convnets</h4>
+<h4 id="training-a-convnet-from-scratch-on-a-small-dataset">Training a convnet from scratch on a small dataset</h4>
+<h4 id="the-relevance-of-deep-learning-for-small-data-problems">The relevance of deep learning for small-data problems</h4>
+<h4 id="using-a-pretrained-convnet">Using a pretrained convnet</h4>
+<h4 id="visualizing-what-convnets-learn">Visualizing what convnets learn</h4>
+<h3 id="6deep-learning-for-text-and-sequences">6.Deep learning for text and sequences</h3>
+<h4 id="working-with-text-data">Working with text data</h4>
+<h4 id="understanding-recurrent-neural-networks">Understanding recurrent neural networks</h4>
+<h4 id="advanced-use-of-recurrent-neural-networks">Advanced use of recurrent neural networks</h4>
+<h4 id="sequence-processing-with-convnets">Sequence processing with convnets</h4>
+<h3 id="7advanced-deep-learning-best-practices">7.Advanced deep-learning best practices</h3>
+<h4 id="going-beyond-the-sequential-model-the-keras-functional-api">Going beyond the Sequential model: the Keras functional API</h4>
+<h4 id="inspecting-and-monitoring-deep-learning-models-using-keras-callbacks-and-tensorboard">Inspecting and monitoring deep-learning models using Keras callbacks and TensorBoard</h4>
+<h4 id="getting-the-most-out-of-your-models">Getting the most out of your models</h4>
+<h3 id="8generative-deep-learning">8.Generative deep learning</h3>
+<h4 id="text-generation-with-lstm">Text generation with LSTM</h4>
+<h4 id="deepdream">DeepDream</h4>
+<h4 id="neural-style-transfer">Neural style transfer</h4>
+<h4 id="generating-images-with-variational-autoencoders">Generating images with variational autoencoders</h4>
+<h4 id="introduction-to-generative-adversarial-networks">Introduction to generative adversarial networks</h4>
+<h3 id="9conclusions">9.Conclusions</h3>
+<h4 id="key-concepts-in-review">Key concepts in review</h4>
+<h4 id="the-limitations-of-deep-learning">The limitations of deep learning</h4>
+<h4 id="the-future-of-deep-learning">The future of deep learning</h4>
+<h4 id="staying-up-to-date-in-a-fast-moving-field">Staying up to date in a fast-moving field</h4>
+<h4 id="final-wordscd-c">Final wordscd C</h4>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2020-05-05
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://csyezheng.github.io/tags/deep-learning/">deep learning</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/machine-learning/crash-course/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">Machine Learning Crash Course Courses</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/machine-learning/scikit-learn/">
+            <span class="next-text nav-default">scikit-learn</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

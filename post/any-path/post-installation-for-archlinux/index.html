@@ -34,7 +34,7 @@ sudo pacman -Syy &amp;amp;&amp;amp; sudo pacman -S archlinuxcn-keyring Fonts sud
 
 
 
-<meta name="generator" content="Hugo 0.72.0" />
+<meta name="generator" content="Hugo 0.74.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/any-path/post-installation-for-archlinux/" />
@@ -75,7 +75,7 @@ $ setfont sun12x22 Connect to the internet nmcli device wifi list nmcli device w
 sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman -S adobe-source-han-sans-cn-fonts sudo pacman -S adobe-source-han-sans-tw-fonts sudo pacman -S noto-fonts-emoji otf-latinmodern-math ttf-inconsolata Graphical user interface Display server sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight xorg-xrdb is using to loading a user-level configuration dotfile, typically located at ~/.">
 <meta itemprop="datePublished" content="2017-09-26T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2017-09-26T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="871">
+<meta itemprop="wordCount" content="940">
 
 
 
@@ -416,11 +416,13 @@ $ xbacklight -dec 10
 <pre><code>sudo pacman -S  xorg-apps xorg-xinit xorg-xrandr xorg-xinput
 </code></pre><h3 id="display-drivers">Display drivers</h3>
 <pre><code>lspci | grep -e VGA -e 3D
-sudo pacman -S xf86-video-intel mesa nvidia-lts nvidia-utils nvidia-settings 
+sudo pacman -S xf86-video-intel mesa nvidia-dkms nvidia-utils nvidia-settings 
 </code></pre><pre><code>sudo pacman -S wget git
 git clone https://aur.archlinux.org/yay.git
 cd yay/
 makepkg -si
+
+sudo rm /etc/X11/xorg.conf.d/10-xorg.conf /etc/X11/xorg.conf.d/20-*
 
 yay -S optimus-manager
 optimus-manager --switch nvidia
@@ -429,7 +431,6 @@ systemctl start optimus-manager.service
 
 vim /etc/X11/xorg.conf.d/10-optimus-manager.conf 
 
-sudo rm /etc/X11/xorg.conf.d/10-xorg.conf /etc/X11/xorg.conf.d/20-*
 systemctl status optimus-manager.service
 </code></pre><p><strong>Important notes :</strong></p>
 <ul>
@@ -448,7 +449,31 @@ systemctl status optimus-manager.service
     └── 10-optimus-manager.conf
 </code></pre><p>optimus-manager supported display managers are : SDDM, LightDM, GDM.</p>
 <p>optimus-manager can also work with other display managers (or with no display manager at all) but you have to configure them manually.</p>
-<h4 id="usage">usage</h4>
+<pre><code>sudo vim /etc/pacman.d/hooks/nvidia.hook
+</code></pre><pre><code>[Trigger]
+Operation=Install
+Operation=Upgrade
+Operation=Remove
+Type=Package
+Target=nvidia-dkms
+Target=linux-lts
+# Change the linux part above and in the Exec line if a different kernel is used
+
+[Action]
+Description=Update Nvidia module in initcpio
+Depends=mkinitcpio
+When=PostTransaction
+NeedsTargets
+Exec=/bin/sh -c 'while read -r trg; do case $trg in linux-lts) exit 0; esac; done; /usr/bin/mkinitcpio -P'
+</code></pre><h4 id="power-management-in-optimus-manager">power management in optimus-manager</h4>
+<pre><code>sudo pacman -S acpi_call-lts
+</code></pre><pre><code>sudo vim /etc/optimus-manager/optimus-manager.conf
+</code></pre><pre><code>[optimus]
+switching=acpi_call
+pci_power_control=no
+pci_remove=no
+pci_reset=no
+</code></pre><h4 id="usage">usage</h4>
 <pre><code>$ optimus-manager --switch intel    # Use Intel graphics
 $ optimus-manager --switch nvidia   # Use NVIDIA graphics
 $ optimus-manager --switch hybrid   # Use hybrid graphics (Requires a patch to xorg-server)
