@@ -1408,13 +1408,19 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/any-path/gcp_v2ray/</loc>
+    <loc>http://csyezheng.github.io/tags/gfw/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/any-path/pubg/</loc>
+    <loc>http://csyezheng.github.io/tags/shadowsocks/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/v2ray/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
