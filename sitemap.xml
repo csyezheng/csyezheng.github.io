@@ -100,6 +100,13 @@
   </url>
   
   <url>
+    <loc>http://csyezheng.github.io/categories/any-path/</loc>
+    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://csyezheng.github.io/tags/chatbots/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -107,7 +114,21 @@
   </url>
   
   <url>
+    <loc>http://csyezheng.github.io/post/any-path/circumvent-internet-censorship/</loc>
+    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://csyezheng.github.io/tags/dialogue-systems/</loc>
+    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/gfw/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -170,6 +191,13 @@
   </url>
   
   <url>
+    <loc>http://csyezheng.github.io/tags/shadowsocks/</loc>
+    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://csyezheng.github.io/post/interview/tencent-nlp-interview/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -185,6 +213,13 @@
   
   <url>
     <loc>http://csyezheng.github.io/post/machine-learning/top-websites/</loc>
+    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/v2ray/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -382,13 +417,6 @@
   <url>
     <loc>http://csyezheng.github.io/post/machine-learning/learn-ml/</loc>
     <lastmod>2020-04-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/categories/any-path/</loc>
-    <lastmod>2020-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1397,30 +1425,6 @@
   <url>
     <loc>http://csyezheng.github.io/post/front-end/html/</loc>
     <lastmod>2015-11-21T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/any-path/circumvent-internet-censorship/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/tags/gfw/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/tags/shadowsocks/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/tags/v2ray/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

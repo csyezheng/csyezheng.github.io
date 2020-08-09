@@ -66,6 +66,15 @@
     </item>
     
     <item>
+      <title>gfw</title>
+      <link>http://csyezheng.github.io/tags/gfw/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/gfw/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>machine learning</title>
       <link>http://csyezheng.github.io/tags/machine-learning/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
@@ -98,6 +107,24 @@
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>http://csyezheng.github.io/tags/question-answering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shadowsocks</title>
+      <link>http://csyezheng.github.io/tags/shadowsocks/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/shadowsocks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>v2ray</title>
+      <link>http://csyezheng.github.io/tags/v2ray/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/v2ray/</guid>
       <description></description>
     </item>
     
@@ -161,33 +188,6 @@
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
       
       <guid>http://csyezheng.github.io/tags/tensorflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>multi-label</title>
-      <link>http://csyezheng.github.io/tags/multi-label/</link>
-      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/multi-label/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Django</title>
-      <link>http://csyezheng.github.io/tags/django/</link>
-      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/django/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>scikit-learn</title>
-      <link>http://csyezheng.github.io/tags/scikit-learn/</link>
-      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/scikit-learn/</guid>
       <description></description>
     </item>
     
