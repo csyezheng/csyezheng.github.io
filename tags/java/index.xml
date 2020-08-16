@@ -22,13 +22,12 @@ There are three built-in build lifecycles: default, clean and site. The default 
     </item>
     
     <item>
-      <title>The Java™ Tutorials</title>
+      <title>Java Tutorials Learning Paths: Basics</title>
       <link>http://csyezheng.github.io/post/programming-languages/java/the-java-tutorials/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>http://csyezheng.github.io/post/programming-languages/java/the-java-tutorials/</guid>
-      <description>https://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html
-Basics Getting Started The Java programming language is a high-level language that can be characterized by all of the following buzzwords:
+      <description>Basics Getting Started The Java programming language is a high-level language that can be characterized by all of the following buzzwords:
  Simple Object oriented Distributed Multithreaded Dynamic Architecture neutral Portable High performance Robust Secure  An overview of the software development process:
 all source code is first written in plain text files ending with the .java extension. Those source files are then compiled into .class files by the javac compiler.</description>
     </item>

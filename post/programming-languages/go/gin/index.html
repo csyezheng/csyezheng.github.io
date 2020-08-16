@@ -33,7 +33,7 @@ $ go get github.com/gin-contrib/sessions import &amp;quot;github.com/gin-contrib
 
 
 
-<meta name="generator" content="Hugo 0.74.0" />
+<meta name="generator" content="Hugo 0.74.3" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/programming-languages/go/gin/" />
@@ -70,13 +70,14 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
 <meta itemprop="name" content="Gin">
 <meta itemprop="description" content="sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
 $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/sessions&quot; cookie-based Example import ( &quot;github.com/gin-contrib/sessions&quot; &quot;github.com/gin-contrib/sessions/cookie&quot; &quot;github.com/gin-gonic/gin&quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&quot;secret&quot;)) r.Use(sessions.Sessions(&quot;mysession&quot;, store)) r.GET(&quot;/incr&quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&quot;count&quot;) if v == nil { count = 0 } else { count = v.(int) count&#43;&#43; } session.Set(&quot;count&quot;, count) session.">
-<meta itemprop="datePublished" content="2019-03-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-03-01T00:00:00&#43;00:00" />
+<meta itemprop="datePublished" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-03-01T00:00:00+00:00" />
 <meta itemprop="wordCount" content="205">
 
 
 
-<meta itemprop="keywords" content="Go,Gin," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="Go,Gin," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Gin"/>
 <meta name="twitter:description" content="sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
 $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/sessions&quot; cookie-based Example import ( &quot;github.com/gin-contrib/sessions&quot; &quot;github.com/gin-contrib/sessions/cookie&quot; &quot;github.com/gin-gonic/gin&quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&quot;secret&quot;)) r.Use(sessions.Sessions(&quot;mysession&quot;, store)) r.GET(&quot;/incr&quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&quot;count&quot;) if v == nil { count = 0 } else { count = v.(int) count&#43;&#43; } session.Set(&quot;count&quot;, count) session."/>

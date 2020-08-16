@@ -34,7 +34,7 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
 
 
 
-<meta name="generator" content="Hugo 0.74.0" />
+<meta name="generator" content="Hugo 0.74.3" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/big-data/elk-stack/" />
@@ -73,13 +73,14 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
 <meta itemprop="description" content="Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
 Install Beats Install Filebeat Install Metricbeat sudo pacman -S metricbeat sudo vim /etc/metricbeat/metricbeat.yml setup.dashboards.enabled: true From the Metricbeat install directory, enable the system module
 cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricbeat.">
-<meta itemprop="datePublished" content="2019-05-15T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-05-15T00:00:00&#43;00:00" />
+<meta itemprop="datePublished" content="2019-05-15T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-05-15T00:00:00+00:00" />
 <meta itemprop="wordCount" content="132">
 
 
 
-<meta itemprop="keywords" content="Elasticsearch,Logstash,Kibana,elk," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="Elasticsearch,Logstash,Kibana,elk," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="elk stack"/>
 <meta name="twitter:description" content="Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
 Install Beats Install Filebeat Install Metricbeat sudo pacman -S metricbeat sudo vim /etc/metricbeat/metricbeat.yml setup.dashboards.enabled: true From the Metricbeat install directory, enable the system module
