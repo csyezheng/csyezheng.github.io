@@ -6,10 +6,30 @@
     <description>Recent content in programming-languages on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://csyezheng.github.io/categories/programming-languages/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Java 3rd Library</title>
+      <link>http://csyezheng.github.io/post/programming-languages/java/the-java-3rd-party-library/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/java/the-java-3rd-party-library/</guid>
+      <description>import org.alibaba.fastjson.JSONArray; import org.alibaba.fastjson.JSONObject; import com.amazonaws.Request; import com.amazonaws.utils.StringUtils; import com.atomikos.datasource.xa.StringUtils; import com.fasterxml.jackson.core.JsonParseException; import com.fasterxml.jackson.annotation.JsonFormat; import com.fasterxml.jackson.core.io.JsonStringEncoder; import com.fasterxml.jackson.core.type.TypeReference; import com.fasterxml.jackson.databind.JavaType; import com.fasterxml.jackson.databind.DeserializationFeature; import com.fasterxml.jackson.databind.JsonMappingException; import com.fasterxml.jackson.databind.ObjectMapper; import com.google.common.cache.CacheBuilder; import com.google.common.cache.CacheLoader; import com.google.common.cache.LoadingCache; import com.google.gson.Gson; import com.ibm.db2.jcc.am.re; import com.jayway.restassured.RestAssured; import com.jayway.restassured.path.json.JsonPath; import com.jayway.restassured.config.RestAssuredconfig; import com.jayway.restassured.response.Response; import com.jayway.restassured.response.ValidatableResponse; import com.jayway.restassured.specification.RequestSpecification; import freemarker.template.Template; import freemarker.template.TemplateException; import groovy.json.internal.JsonFastParser; import groovy.json.internal.ValueMap; import org.apache.ws.security.WSSecurityException; import org.apache.ws.security.util.Base64; net.sf.json JSONArray JSONNull JSONObject org.activiti.engine https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1 commons beanutils BeanUtils; collection</description>
+    </item>
+    
+    <item>
+      <title>The Java Standard Library</title>
+      <link>http://csyezheng.github.io/post/programming-languages/java/the-java-standard-library/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/java/the-java-standard-library/</guid>
+      <description>Collections Interfaces Note that all the core collection interfaces are generic. For example, this is the declaration of the Collection interface.
+public interface Collection&amp;lt;E&amp;gt;... The Collection Interface List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;(c); The Collection interface contains methods that perform basic operations, such as
+ int size() boolean isEmpty() boolean contains(Object element) boolean add(E element) boolean remove(Object element) Iterator&amp;lt;E&amp;gt; iterator()  It also contains methods that operate on entire collections, such as</description>
+    </item>
     
     <item>
       <title>C&#43;&#43; Library Management</title>
@@ -201,24 +221,6 @@ photoprism.md</description>
       
       <guid>http://csyezheng.github.io/post/programming-languages/go/good-at/</guid>
       <description>Golang Pros  Modular design means the compiled binary is as small as possible and requires no dependencies. Like Java, it’s platform independent. You can compile it for any platform your servers and applications run on. Take that, Apple. Easy for your developers to learn because it’s based on C. You don’t need to go to a code bootcamp to become proficient. Has static type checking, meaning your code gets its bugs cleaned up at compile time, not in production.</description>
-    </item>
-    
-    <item>
-      <title>gopm</title>
-      <link>http://csyezheng.github.io/post/programming-languages/go/gopm/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/go/gopm/</guid>
-      <description>go get -u github.com/gpmgo/gopm </description>
-    </item>
-    
-    <item>
-      <title>gorm</title>
-      <link>http://csyezheng.github.io/post/programming-languages/go/gorm/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/programming-languages/go/gorm/</guid>
-      <description>struct name and table name type User struct {} // default table name is `users` // Set User&#39;s table name to be `profiles` func (User) TableName() string { return &amp;quot;profiles&amp;quot; } gorm不定条件查询和分页操作 making dynamic query and pagination using gorm course := models.Course{} // The global db variable must be assigned to the local db variable. //</description>
     </item>
     
   </channel>

@@ -6,7 +6,7 @@
     <description>Recent content on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://csyezheng.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,6 +20,961 @@
       
         <description>&lt;p&gt;I&amp;rsquo;m graduated from the Hebei GEO University with a degree in marketing, because I thought computers were cool from an early age, so I chose programmers as my future employment direction in my third year of college. In the third year of college, I learned some front-end knowledge, and in the fourth year of college I learned some C ++ related knowledge. After graduating, I naturally found a job related to programming.&lt;/p&gt;
 &lt;p&gt;In the first company, I was mainly engaged in web crawling. I was responsible for scraping various financial data including stock exchanges, performing data cleaning, and completing an announcement classification system during the period. I worked as a data development engineer in the second company, and solved development problems such as real-time data forwarding, reception, and storage. I worked as a back-end development engineer at a third company and built the entire edx-based online learning system.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>The Java 3rd Library</title>
+      <link>http://csyezheng.github.io/post/programming-languages/java/the-java-3rd-party-library/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/java/the-java-3rd-party-library/</guid>
+      
+        <description>&lt;p&gt;import org.alibaba.fastjson.JSONArray;
+import org.alibaba.fastjson.JSONObject;
+import com.amazonaws.Request;
+import com.amazonaws.utils.StringUtils;
+import com.atomikos.datasource.xa.StringUtils;&lt;/p&gt;
+&lt;p&gt;import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.core.io.JsonStringEncoder;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JavaType;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;&lt;/p&gt;
+&lt;p&gt;import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;&lt;/p&gt;
+&lt;p&gt;import com.google.gson.Gson;&lt;/p&gt;
+&lt;p&gt;import com.ibm.db2.jcc.am.re;&lt;/p&gt;
+&lt;p&gt;import com.jayway.restassured.RestAssured;
+import com.jayway.restassured.path.json.JsonPath;
+import com.jayway.restassured.config.RestAssuredconfig;
+import com.jayway.restassured.response.Response;
+import com.jayway.restassured.response.ValidatableResponse;
+import com.jayway.restassured.specification.RequestSpecification;&lt;/p&gt;
+&lt;p&gt;import freemarker.template.Template;
+import freemarker.template.TemplateException;&lt;/p&gt;
+&lt;p&gt;import groovy.json.internal.JsonFastParser;
+import groovy.json.internal.ValueMap;&lt;/p&gt;
+&lt;p&gt;import org.apache.ws.security.WSSecurityException;
+import org.apache.ws.security.util.Base64;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;net.sf.json
+&lt;ul&gt;
+&lt;li&gt;JSONArray&lt;/li&gt;
+&lt;li&gt;JSONNull&lt;/li&gt;
+&lt;li&gt;JSONObject&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;org.activiti.engine
+&lt;a href=&#34;https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1&#34;&gt;https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;commons
+&lt;ul&gt;
+&lt;li&gt;beanutils
+&lt;ul&gt;
+&lt;li&gt;BeanUtils;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;collection
+&lt;ul&gt;
+&lt;li&gt;CollectionUtils&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;collections
+&lt;ul&gt;
+&lt;li&gt;CollectionUtils&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;httpclient
+&lt;ul&gt;
+&lt;li&gt;DefaultHttpMethodRetryHandler&lt;/li&gt;
+&lt;li&gt;HttpClient;&lt;/li&gt;
+&lt;li&gt;HttpException&lt;/li&gt;
+&lt;li&gt;HttpMethod;&lt;/li&gt;
+&lt;li&gt;HttpStatus;&lt;/li&gt;
+&lt;li&gt;NameValuePair;&lt;/li&gt;
+&lt;li&gt;UsernamePasswordCredentials&lt;/li&gt;
+&lt;li&gt;URIException;&lt;/li&gt;
+&lt;li&gt;methods
+&lt;ul&gt;
+&lt;li&gt;GetMethod;&lt;/li&gt;
+&lt;li&gt;PostMethod;&lt;/li&gt;
+&lt;li&gt;PutMehod&lt;/li&gt;
+&lt;li&gt;RequestEntity&lt;/li&gt;
+&lt;li&gt;StringRequestEntity;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;.HttpConnectionManagerParams;&lt;/li&gt;
+&lt;li&gt;params.
+&lt;ul&gt;
+&lt;li&gt;HttpMethodParams;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;io
+&lt;ul&gt;
+&lt;li&gt;FileUtils&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Lang
+&lt;ul&gt;
+&lt;li&gt;ClassUtils;&lt;/li&gt;
+&lt;li&gt;StringUtils;&lt;/li&gt;
+&lt;li&gt;EqualsBuilder&lt;/li&gt;
+&lt;li&gt;HashCodeBuilder&lt;/li&gt;
+&lt;li&gt;time
+&lt;ul&gt;
+&lt;li&gt;DateUtils&lt;/li&gt;
+&lt;li&gt;StopWatch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;lang3
+&lt;ul&gt;
+&lt;li&gt;BooleanUtils&lt;/li&gt;
+&lt;li&gt;StringUtils&lt;/li&gt;
+&lt;li&gt;time
+&lt;ul&gt;
+&lt;li&gt;DateFormatUtils&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;org.apache.http.client.HttpClient使用方法
+一.org.apache.commons&lt;/p&gt;
+&lt;p&gt;import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;&lt;/p&gt;
+&lt;p&gt;import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;&lt;/p&gt;
+&lt;p&gt;import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionDefinition;
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.DefaultTransactionDefinition;&lt;/p&gt;
+&lt;p&gt;import org.springframework.core.io.Resource;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.core.io.support.ResourcePatternResolver;&lt;/p&gt;
+&lt;p&gt;import org.springframework.util.ClassUtils;&lt;/p&gt;
+&lt;p&gt;import org.springframework.util.Assert;
+import org.springframework.util.CollectionUtils;
+import org.springframework.util.ReflectionUtils;
+import org.springframework.util.StringUtils;&lt;/p&gt;
+&lt;p&gt;import org.apache.ibatis.annotations.Param;
+session.Configuration
+Session.SqlsessionFactory&lt;/p&gt;
+&lt;p&gt;org.apache.http
+org.apache.commons.dbcp2
+org.apache.commons.collections&lt;/p&gt;
+&lt;p&gt;fastjson
+mysql-connector-java
+liquibase-core
+liquibase-maven-plugin
+commons.dbcp
+commons.collections
+commons-lang3
+import org.apache.commons.lang.StringUtils;
+jedis&lt;/p&gt;
+&lt;p&gt;junit
+dbunit
+spring-test-dbunit
+spring-test
+spring-boot-starter-test&lt;/p&gt;
+&lt;p&gt;disruptor&lt;/p&gt;
+&lt;p&gt;cxf-spring-boot-starter-jaxrs
+cxf-spring-boot-starter-jaxws
+cxf-rt-rs-service-description-swagger
+swagger-ui&lt;/p&gt;
+&lt;p&gt;aaa&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>The Java Standard Library</title>
+      <link>http://csyezheng.github.io/post/programming-languages/java/the-java-standard-library/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/java/the-java-standard-library/</guid>
+      
+        <description>&lt;h2 id=&#34;collections&#34;&gt;Collections&lt;/h2&gt;
+&lt;h3 id=&#34;interfaces&#34;&gt;Interfaces&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.oracle.com/javase/tutorial/figures/collections/colls-coreInterfaces.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Note that all the core collection interfaces are generic. For example, this is the declaration of the &lt;code&gt;Collection&lt;/code&gt; interface.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public interface Collection&amp;lt;E&amp;gt;...
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;the-collection-interface&#34;&gt;The Collection Interface&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;(c);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;Collection&lt;/code&gt; interface contains methods that perform basic operations, such as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;int size()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;boolean isEmpty()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;boolean contains(Object element)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;boolean add(E element)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;boolean remove(Object element)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Iterator&amp;lt;E&amp;gt; iterator()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It also contains methods that operate on entire collections, such as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;boolean containsAll(Collection&amp;lt;?&amp;gt; c)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;boolean addAll(Collection&amp;lt;? extends E&amp;gt; c)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;boolean removeAll(Collection&amp;lt;?&amp;gt; c)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;boolean retainAll(Collection&amp;lt;?&amp;gt; c)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void clear()&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Additional methods for &lt;strong&gt;array&lt;/strong&gt; operations (such as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Object[] toArray()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;T&amp;gt; T[] toArray(T[] a)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;obtaining sequential or parallel streams from the underlying collection.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Stream&amp;lt;E&amp;gt; stream()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Stream&amp;lt;E&amp;gt; parallelStream()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&#34;traversing-collections&#34;&gt;Traversing Collections&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Aggregate Operations&lt;/p&gt;
+&lt;p&gt;Aggregate operations are often used in conjunction with lambda expressions to make programming more expressive, using less lines of code.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;myShapesCollection.stream()
+.filter(e -&amp;gt; e.getColor() == Color.RED)
+.forEach(e -&amp;gt; System.out.println(e.getName()));
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;myShapesCollection.parallelStream()
+.filter(e -&amp;gt; e.getColor() == Color.RED)
+.forEach(e -&amp;gt; System.out.println(e.getName()));
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;String joined = elements.stream()
+.map(Object::toString)
+.collect(Collectors.joining(&amp;quot;, &amp;quot;));
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;for-each Construct&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;for (Object o : collection)
+    System.out.println(o);
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Iterators&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;static void filter(Collection&amp;lt;?&amp;gt; c) {
+    for (Iterator&amp;lt;?&amp;gt; it = c.iterator(); it.hasNext(); )
+        if (!cond(it.next()))
+            it.remove();
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&#34;collection-interface-bulk-operations&#34;&gt;Collection Interface Bulk Operations&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;containsAll&lt;/code&gt; — returns &lt;code&gt;true&lt;/code&gt; if the target &lt;code&gt;Collection&lt;/code&gt; contains all of the elements in the specified &lt;code&gt;Collection&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;addAll&lt;/code&gt; — adds all of the elements in the specified &lt;code&gt;Collection&lt;/code&gt; to the target &lt;code&gt;Collection&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;removeAll&lt;/code&gt; — removes from the target &lt;code&gt;Collection&lt;/code&gt; all of its elements that are also contained in the specified &lt;code&gt;Collection&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;retainAll&lt;/code&gt; — removes from the target &lt;code&gt;Collection&lt;/code&gt; all its elements that are &lt;em&gt;not&lt;/em&gt; also contained in the specified &lt;code&gt;Collection&lt;/code&gt;. That is, it retains only those elements in the target &lt;code&gt;Collection&lt;/code&gt; that are also contained in the specified &lt;code&gt;Collection&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;clear&lt;/code&gt; — removes all elements from the &lt;code&gt;Collection&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;c.removeAll(Collections.singleton(e));
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;c.removeAll(Collections.singleton(null));       // remove all of the null elements from a Collection
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;collection-interface-array-operations&#34;&gt;Collection Interface Array Operations&lt;/h6&gt;
+&lt;p&gt;The &lt;strong&gt;&lt;code&gt;toArray&lt;/code&gt;&lt;/strong&gt; methods are provided as a bridge between collections and older APIs that expect arrays on input.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Object[] a = c.toArray();
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;var staff = new LinkedList&amp;lt;String&amp;gt;();
+
+String[] values = staff.toArray(new String[0]);
+// or 
+// String[] values = staff.toArray(new String[staff.size()]);
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;the-set-interface&#34;&gt;The Set Interface&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;HashSet&lt;/p&gt;
+&lt;p&gt;which stores its elements in a hash table,  it makes no guarantees concerning the order of iteration.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Collection&amp;lt;Type&amp;gt; noDups = new HashSet&amp;lt;Type&amp;gt;(c);
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;c.stream()
+.collect(Collectors.toSet()); // no duplicates
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TreeSet&lt;/p&gt;
+&lt;p&gt;which stores its elements in a red-black tree, orders its elements based on their values.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Set&amp;lt;String&amp;gt; set = people.stream()
+.map(Person::getName)
+.collect(Collectors.toCollection(TreeSet::new));
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;LinkedHashSet&lt;/p&gt;
+&lt;p&gt;which is implemented as a hash table with a linked list running through it, orders its elements based on the insertion-order.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// preserves the order of the original collection while removing duplicate elements:
+Collection&amp;lt;Type&amp;gt; noDups = new LinkedHashSet&amp;lt;Type&amp;gt;(c);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The following is a &lt;strong&gt;generic method that encapsulates&lt;/strong&gt; the preceding idiom, returning a &lt;code&gt;Set&lt;/code&gt; of the same generic type as the one passed.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public static &amp;lt;E&amp;gt; Set&amp;lt;E&amp;gt; removeDups(Collection&amp;lt;E&amp;gt; c) {
+    return new LinkedHashSet&amp;lt;E&amp;gt;(c);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&#34;set-interface-basic-operations&#34;&gt;Set Interface Basic Operations&lt;/h6&gt;
+&lt;pre&gt;&lt;code&gt;String[] words = {&amp;quot;i&amp;quot;, &amp;quot;came&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;saw&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;left&amp;quot;};
+Set&amp;lt;String&amp;gt; distinctWords = Arrays.asList(words).stream().collect(Collectors.toSet());
+System.out.println(distinctWords.size()+ &amp;quot; distinct words: &amp;quot; + distinctWords);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Note that &lt;strong&gt;the code always refers to the &lt;code&gt;Collection&lt;/code&gt; by its interface type (&lt;code&gt;Set&lt;/code&gt;) rather than by its implementation type. This is a &lt;em&gt;strongly&lt;/em&gt; recommended programming practice&lt;/strong&gt; because it gives you the flexibility to change implementations merely by changing the constructor.&lt;/p&gt;
+&lt;h6 id=&#34;set-interface-bulk-operations&#34;&gt;Set Interface Bulk Operations&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;s1.containsAll(s2)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;s1.addAll(s2)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;s1.retainAll(s2)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;s1.removeAll(s2)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;To calculate the union, intersection, or set difference of two sets &lt;em&gt;nondestructively&lt;/em&gt; (without modifying either set), &lt;strong&gt;the caller must copy one set before calling the appropriate bulk operation.&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Set&amp;lt;String&amp;gt; uniques = new HashSet&amp;lt;String&amp;gt;();
+Set&amp;lt;String&amp;gt; dups    = new HashSet&amp;lt;String&amp;gt;();
+String[] words = {&amp;quot;i&amp;quot;, &amp;quot;came&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;saw&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;left&amp;quot;};
+  
+for (String a : words) {
+    if (!uniques.add(a))
+        dups.add(a);
+}                                     // uniques ==&amp;gt; [left, came, saw, i], dups ==&amp;gt; [i]
+  
+boolean isContain = uniques.containsAll(dups);         // ==&amp;gt; true    
+  
+Set&amp;lt;String&amp;gt; union = new HashSet&amp;lt;String&amp;gt;(dups);
+union.addAll(uniques);                // union ==&amp;gt; [left, came, saw, i]
+  
+Set&amp;lt;String&amp;gt; intersection = new HashSet&amp;lt;String&amp;gt;(uniques);
+intersection.retainAll(dups);         // intersection ==&amp;gt; [i]
+  
+Set&amp;lt;String&amp;gt; difference = new HashSet&amp;lt;String&amp;gt;(uniques);
+difference.removeAll(dups);           // difference ==&amp;gt; [left, came, saw]
+  
+System.out.println(&amp;quot;is contain:    &amp;quot; + isContain);    
+System.out.println(&amp;quot;union words: &amp;quot; + union);      
+System.out.println(&amp;quot;intersection words:    &amp;quot; + intersection);  
+System.out.println(&amp;quot;difference words: &amp;quot; + difference); 
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;the-list-interface&#34;&gt;The List Interface&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Positional access&lt;/code&gt; — manipulates elements based on their numerical position in the list. This includes methods such as &lt;code&gt;get&lt;/code&gt;, &lt;code&gt;set&lt;/code&gt;, &lt;code&gt;add&lt;/code&gt;, &lt;code&gt;addAll&lt;/code&gt;, and &lt;code&gt;remove&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public static &amp;lt;E&amp;gt; void swap(List&amp;lt;E&amp;gt; a, int i, int j) {
+    E tmp = a.get(i);
+    a.set(i, a.get(j));
+    a.set(j, tmp);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;public static void shuffle(List&amp;lt;?&amp;gt; list, Random rnd) {
+    for (int i = list.size(); i &amp;gt; 1; i--)
+        swap(list, i - 1, rnd.nextInt(i));
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;import java.util.*;
+  
+public class Shuffle {
+    public static void main(String[] args) {
+        List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;();
+        for (String a : args)
+            list.add(a);
+        Collections.shuffle(list, new Random());
+        System.out.println(list);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The Arrays class has a static factory method called &lt;strong&gt;&lt;code&gt;asList&lt;/code&gt;&lt;/strong&gt;, which allows an array to be viewed as a List. This method does not copy the array. Changes in the &lt;code&gt;List&lt;/code&gt; write through to the array and vice versa. &lt;strong&gt;The resulting List is not a general-purpose &lt;code&gt;List&lt;/code&gt; implementation, because it doesn&amp;rsquo;t implement the (optional) &lt;code&gt;add&lt;/code&gt; and &lt;code&gt;remove&lt;/code&gt; operations: Arrays are not resizable.&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import java.util.*;
+  
+public class Shuffle {
+    public static void main(String[] args) {
+        List&amp;lt;String&amp;gt; list = Arrays.asList(args);
+        Collections.shuffle(list);
+        System.out.println(list);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Search&lt;/code&gt; — searches for a specified object in the list and returns its numerical position. Search methods include &lt;code&gt;indexOf&lt;/code&gt; and &lt;code&gt;lastIndexOf&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Iteration&lt;/code&gt; — extends &lt;code&gt;Iterator&lt;/code&gt; semantics to take advantage of the list&amp;rsquo;s sequential nature. The &lt;code&gt;listIterator&lt;/code&gt; methods provide this behavior.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;for (ListIterator&amp;lt;Type&amp;gt; it = list.listIterator(list.size()); it.hasNext(); ) {
+    Type t = it.next();
+    ...
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;for (ListIterator&amp;lt;Type&amp;gt; it = list.listIterator(list.size()); it.hasPrevious(); ) {
+    Type t = it.previous();
+    ...
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;String[] words = {&amp;quot;i&amp;quot;, &amp;quot;came&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;saw&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;left&amp;quot;};
+List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;();
+for (String a : words) {
+  list.add(a);
+}
+ListIterator&amp;lt;String&amp;gt; it = list.listIterator()
+it.previousIndex();       // ==&amp;gt; -1
+var ret = it.next();      // ret ==&amp;gt; &amp;quot;i&amp;quot;
+it.previousIndex();       // ==&amp;gt; 0
+var obj = it.previous();  // obj ==&amp;gt; &amp;quot;i&amp;quot;
+it.previousIndex();       // ==&amp;gt; -1
+it.nextIndex();            // ==&amp;gt; 0
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;String[] words = {&amp;quot;i&amp;quot;, &amp;quot;came&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;saw&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;left&amp;quot;};
+List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;();
+for (String a : words) {
+  list.add(a);
+}
+public static &amp;lt;E&amp;gt; void replace(List&amp;lt;E&amp;gt; list, E val, E newVal) {
+    for (ListIterator&amp;lt;E&amp;gt; it = list.listIterator(); it.hasNext(); )
+        if (val == null ? it.next() == null : val.equals(it.next()))
+            it.set(newVal);
+}
+replace(list, &amp;quot;i&amp;quot;, &amp;quot;e&amp;quot;)           // list ==&amp;gt; [e, came, e, saw, e, left]
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;public static &amp;lt;E&amp;gt; 
+    void replace(List&amp;lt;E&amp;gt; list, E val, List&amp;lt;? extends E&amp;gt; newVals) {
+    for (ListIterator&amp;lt;E&amp;gt; it = list.listIterator(); it.hasNext(); ){
+        if (val == null ? it.next() == null : val.equals(it.next())) {
+            it.remove();
+            for (E e : newVals)
+                it.add(e);
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Range-view&lt;/code&gt; — The &lt;code&gt;sublist&lt;/code&gt; method performs arbitrary &lt;em&gt;range operations&lt;/em&gt; on the list.&lt;/p&gt;
+&lt;p&gt;removes a range of elements from a &lt;code&gt;List&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;list.subList(fromIndex, toIndex).clear();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;search for an element in a range&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int i = list.subList(fromIndex, toIndex).indexOf(o);
+int j = list.subList(fromIndex, toIndex).lastIndexOf(o);
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;List&amp;lt;String&amp;gt; lnkLst = new LinkedList&amp;lt;String&amp;gt;();
+lnkLst.add(&amp;quot;element1&amp;quot;);
+Iterator&amp;lt;String&amp;gt; itr = lnkLst.iterator();
+for (Iterator&amp;lt;String&amp;gt; it = lnkLst.iterator(); it.hasNext(); )
+    String str = (String) itr.next();
+    System.out.print(str + &amp;quot; &amp;quot;);
+System.out.println();
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;var staff = new LinkedList&amp;lt;String&amp;gt;();
+staff.add(&amp;quot;Amy&amp;quot;);
+staff.add(&amp;quot;Bob&amp;quot;);
+staff.add(&amp;quot;Carl&amp;quot;);
+ListIterator&amp;lt;String&amp;gt; iter = staff.listIterator();
+iter.next(); // skip past first element
+iter.add(&amp;quot;Juliet&amp;quot;);      // staff ==&amp;gt; [Amy, Juliet, Bob, Carl]
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;ArrayList&amp;lt;Employee&amp;gt; staff = new ArrayList&amp;lt;Employee&amp;gt;();
+staff.add(new Employee(&amp;quot;Harry Hacker&amp;quot;, . . .));
+staff.ensureCapacity(100);
+ArrayList&amp;lt;Employee&amp;gt; staff = new ArrayList&amp;lt;&amp;gt;(100);
+staff.size()
+
+new ArrayList&amp;lt;&amp;gt;(100) // capacity is 100
+is not the same as allocating a new array as
+Click here to view code image
+new Employee[100] // size is 100
+
+
+trimToSize
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;ArrayList&amp;lt;E&amp;gt;()    // constructs an empty array list.
+ArrayList&amp;lt;E&amp;gt;(int initialCapacity)    // constructs an empty array list with the specified capacity.
+boolean add(E obj)    // appends obj at the end of the array list. Always returns true.
+int size()    // returns the number of elements currently stored in the array list. (Of course, this is never larger than the array list’s capacity.)
+void ensureCapacity(int capacity)    // ensures that the array list has the capacity to store the given number of elements without reallocating its internal storage array.
+void trimToSize()    // reduces the storage capacity of the array list to its current size.
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;ArrayList&amp;lt;String&amp;gt; staff = new ArrayList&amp;lt;String&amp;gt;();
+staff.add(new String(&amp;quot;Harry Hacker&amp;quot;));
+staff.ensureCapacity(100);
+staff.size()                                      // ==&amp;gt; 1
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;the-queue-interface&#34;&gt;The Queue Interface&lt;/h4&gt;
+&lt;h4 id=&#34;the-deque-interface&#34;&gt;The Deque Interface&lt;/h4&gt;
+&lt;h4 id=&#34;the-map-interface&#34;&gt;The Map Interface&lt;/h4&gt;
+&lt;h4 id=&#34;object-ordering&#34;&gt;Object Ordering&lt;/h4&gt;
+&lt;h4 id=&#34;the-sortedset-interface&#34;&gt;The SortedSet Interface&lt;/h4&gt;
+&lt;h4 id=&#34;the-sortedmap-interface&#34;&gt;The SortedMap Interface&lt;/h4&gt;
+&lt;h3 id=&#34;aggregate-operations&#34;&gt;Aggregate Operations&lt;/h3&gt;
+&lt;h3 id=&#34;algorithms&#34;&gt;Algorithms&lt;/h3&gt;
+&lt;h2 id=&#34;lambda-expressions&#34;&gt;Lambda Expressions&lt;/h2&gt;
+&lt;h2 id=&#34;date-time-apis&#34;&gt;Date-Time APIs&lt;/h2&gt;
+&lt;h2 id=&#34;deployment&#34;&gt;Deployment&lt;/h2&gt;
+&lt;p&gt;How to package applications and &lt;strong&gt;applets&lt;/strong&gt; using JAR files, and deploy them using Java Web Start and Java Plug-in.
+Preparation for Java Programming Language Certification — List of available training and tutorial resources.&lt;/p&gt;
+&lt;h2 id=&#34;internationalization&#34;&gt;Internationalization&lt;/h2&gt;
+&lt;h2 id=&#34;reflection&#34;&gt;Reflection&lt;/h2&gt;
+&lt;h2 id=&#34;middleware-server-side-or-web-application&#34;&gt;Middleware, server-side, or web application&lt;/h2&gt;
+&lt;h3 id=&#34;jdbc-database-access&#34;&gt;JDBC Database Access&lt;/h3&gt;
+&lt;h3 id=&#34;concurrency&#34;&gt;Concurrency&lt;/h3&gt;
+&lt;h2 id=&#34;standard-edition&#34;&gt;Standard Edition&lt;/h2&gt;
+&lt;p&gt;java&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;io&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BufferedReader&lt;/li&gt;
+&lt;li&gt;BufferedWriter&lt;/li&gt;
+&lt;li&gt;ByteArrayInputStream&lt;/li&gt;
+&lt;li&gt;ByteArrayOutputStream&lt;/li&gt;
+&lt;li&gt;File&lt;/li&gt;
+&lt;li&gt;FileFilter&lt;/li&gt;
+&lt;li&gt;FileInputStream&lt;/li&gt;
+&lt;li&gt;FileOutputStream&lt;/li&gt;
+&lt;li&gt;IOException&lt;/li&gt;
+&lt;li&gt;InputStream&lt;/li&gt;
+&lt;li&gt;IntputStreamReader&lt;/li&gt;
+&lt;li&gt;OutputStream&lt;/li&gt;
+&lt;li&gt;OutputStreamWriter&lt;/li&gt;
+&lt;li&gt;PrintWriter&lt;/li&gt;
+&lt;li&gt;Reader&lt;/li&gt;
+&lt;li&gt;Serializable&lt;/li&gt;
+&lt;li&gt;StringReader&lt;/li&gt;
+&lt;li&gt;StringWriter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;lang&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;reflect
+&lt;ul&gt;
+&lt;li&gt;Field&lt;/li&gt;
+&lt;li&gt;Method&lt;/li&gt;
+&lt;li&gt;InvocationTargetException&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;math&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BigDecimal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;net&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HttpURLConnection&lt;/li&gt;
+&lt;li&gt;URL&lt;/li&gt;
+&lt;li&gt;URLConnection&lt;/li&gt;
+&lt;li&gt;URLDecoder&lt;/li&gt;
+&lt;li&gt;URLEncoder&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;nio&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;charset
+&lt;ul&gt;
+&lt;li&gt;Charset&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;security&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MessageDigest&lt;/li&gt;
+&lt;li&gt;SecureRandom&lt;/li&gt;
+&lt;li&gt;InvalidAlgorithmParameterException&lt;/li&gt;
+&lt;li&gt;InvalidKeyException&lt;/li&gt;
+&lt;li&gt;KeyManagementException&lt;/li&gt;
+&lt;li&gt;NoSuchAlgorithmException&lt;/li&gt;
+&lt;li&gt;NoSuchProviderException&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sql&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Date&lt;/li&gt;
+&lt;li&gt;ResultSet&lt;/li&gt;
+&lt;li&gt;ResultSetMetaData&lt;/li&gt;
+&lt;li&gt;SQLException&lt;/li&gt;
+&lt;li&gt;Timestamp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;text&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DateFormat&lt;/li&gt;
+&lt;li&gt;DecimalFormat&lt;/li&gt;
+&lt;li&gt;MessageFormat&lt;/li&gt;
+&lt;li&gt;Normalizer&lt;/li&gt;
+&lt;li&gt;NumberFormat&lt;/li&gt;
+&lt;li&gt;SimpleDateFormat&lt;/li&gt;
+&lt;li&gt;ParseException&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;util&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;ArrayList&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Arrays&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Base64.Decoder&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Base64.Encoder&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Calendar&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Collection&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Collections&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Comparator&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Date&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enumeration&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GregorianCalendar&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HashMap&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HashSet&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HashMap&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Iterator&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;LinkedHashMap&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;LinkedHashSet&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;LinkedList&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;List&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Locale&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;formatter.withLocale(Locale.CHINESE).format(apollo11launch);
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Map.Entry&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Map&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Queue&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Random&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ResourceBundle&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Set&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Timer&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TimerTask&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TimeZone&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;UUID&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;concurrent&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ConcurrentHashMap&lt;/li&gt;
+&lt;li&gt;ConcurrentLinkedQueue&lt;/li&gt;
+&lt;li&gt;Executors&lt;/li&gt;
+&lt;li&gt;ScheduledExecutorService&lt;/li&gt;
+&lt;li&gt;Semaphore&lt;/li&gt;
+&lt;li&gt;TimeUnit&lt;/li&gt;
+&lt;li&gt;ExecutionException&lt;/li&gt;
+&lt;li&gt;TimeoutException&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;util.logging&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Logger&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import java.util.logging.Logger;
+    
+public class Main {
+    
+  private static final Logger logger =
+Logger.getLogger(&amp;quot;com.mycompany.myapp&amp;quot;);
+    
+  public static void main(String[] args) {
+    logger.info(&amp;quot;Logging an INFO-level message&amp;quot;);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;regex&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Matcher&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pattern&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import java.io.*;
+import java.net.*;
+import java.nio.charset.*;
+import java.util.regex.*;
+    
+try
+{
+    String urlString = &amp;quot;http://openjdk.java.net/&amp;quot;;
+    
+    // read contents of URL
+    InputStream in = new URL(urlString).openStream();
+    var input = new String(in.readAllBytes(), StandardCharsets.UTF_8);
+    
+    // search for all occurrences of pattern
+    var patternString = &amp;quot;&amp;lt;a\\s+href\\s*=\\s*(\&amp;quot;[^\&amp;quot;]*\&amp;quot;|[^\\s&amp;gt;]*)\\s*&amp;gt;&amp;quot;;
+    Pattern pattern = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
+    pattern.matcher(input)
+    .results()
+    .map(MatchResult::group)
+    .forEach(System.out::println);
+}
+catch (IOException | PatternSyntaxException e)
+{
+    e.printStackTrace();
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;stream&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Collectors
+&lt;ul&gt;
+&lt;li&gt;toSet()&lt;/li&gt;
+&lt;li&gt;toList()&lt;/li&gt;
+&lt;li&gt;toMap()&lt;/li&gt;
+&lt;li&gt;joining()&lt;/li&gt;
+&lt;li&gt;toCollection()&lt;/li&gt;
+&lt;li&gt;summarizingInt()&lt;/li&gt;
+&lt;li&gt;groupingByConcurrent()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;import java.util.List;
+import java.util.Map;
+import java.util.HashMap;&lt;/p&gt;
+&lt;p&gt;import java.util.Date;
+import java.io.Serializable;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.oracle.com/javafx/2/collections/jfxpub-collections.htm&#34;&gt;https://docs.oracle.com/javafx/2/collections/jfxpub-collections.htm&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;extension&#34;&gt;extension&lt;/h3&gt;
+&lt;p&gt;javax&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;activation
+&lt;ul&gt;
+&lt;li&gt;DataHandler&lt;/li&gt;
+&lt;li&gt;MimetypesFileTypeMap&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;crypto
+&lt;ul&gt;
+&lt;li&gt;BadPaddingException&lt;/li&gt;
+&lt;li&gt;Cipher&lt;/li&gt;
+&lt;li&gt;IllegalBlockSizeException&lt;/li&gt;
+&lt;li&gt;NoSuchPaddingException&lt;/li&gt;
+&lt;li&gt;spec
+&lt;ul&gt;
+&lt;li&gt;IvParameterSpec&lt;/li&gt;
+&lt;li&gt;SecretKeySpec&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;net
+&lt;ul&gt;
+&lt;li&gt;ssl
+&lt;ul&gt;
+&lt;li&gt;HostnameVerifier&lt;/li&gt;
+&lt;li&gt;HttpsURLConnection&lt;/li&gt;
+&lt;li&gt;SSLSession&lt;/li&gt;
+&lt;li&gt;SSLContext&lt;/li&gt;
+&lt;li&gt;TrustManager&lt;/li&gt;
+&lt;li&gt;X509TrustManager&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;script
+&lt;ul&gt;
+&lt;li&gt;ScriptException&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;security
+&lt;ul&gt;
+&lt;li&gt;auth
+&lt;ul&gt;
+&lt;li&gt;login
+&lt;ul&gt;
+&lt;li&gt;LoginException&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;xml
+&lt;ul&gt;
+&lt;li&gt;bind
+&lt;ul&gt;
+&lt;li&gt;Unmarshaller&lt;/li&gt;
+&lt;li&gt;JAXBContext&lt;/li&gt;
+&lt;li&gt;annotation
+&lt;ul&gt;
+&lt;li&gt;XmlAccessType&lt;/li&gt;
+&lt;li&gt;XmlAccessorType&lt;/li&gt;
+&lt;li&gt;XmlElement&lt;/li&gt;
+&lt;li&gt;XmlElementWrapper&lt;/li&gt;
+&lt;li&gt;XmlRootElement&lt;/li&gt;
+&lt;li&gt;XmlType&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;namespace
+&lt;ul&gt;
+&lt;li&gt;QName&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;parsers
+&lt;ul&gt;
+&lt;li&gt;DocumentBuilder&lt;/li&gt;
+&lt;li&gt;DocumentBuilderFactory&lt;/li&gt;
+&lt;li&gt;SAXParser&lt;/li&gt;
+&lt;li&gt;SAXParserFactory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;soap
+&lt;ul&gt;
+&lt;li&gt;SOAPBody&lt;/li&gt;
+&lt;li&gt;SOAPBodyElement&lt;/li&gt;
+&lt;li&gt;SOAPEnvelope&lt;/li&gt;
+&lt;li&gt;SOAPMessage&lt;/li&gt;
+&lt;li&gt;SOAPPart&lt;/li&gt;
+&lt;li&gt;SOAPException&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;enterprise-edition&#34;&gt;Enterprise Edition&lt;/h2&gt;
+&lt;p&gt;javax&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;inject
+&lt;ul&gt;
+&lt;li&gt;Inject&lt;/li&gt;
+&lt;li&gt;Named&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;jms
+&lt;ul&gt;
+&lt;li&gt;Message&lt;/li&gt;
+&lt;li&gt;MessageListener&lt;/li&gt;
+&lt;li&gt;TextMessage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;persistence
+&lt;ul&gt;
+&lt;li&gt;Transient&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;servlet
+&lt;ul&gt;
+&lt;li&gt;Filter&lt;/li&gt;
+&lt;li&gt;FilterChain&lt;/li&gt;
+&lt;li&gt;FilterConfig&lt;/li&gt;
+&lt;li&gt;ServletInputStream&lt;/li&gt;
+&lt;li&gt;ServletOutputStream&lt;/li&gt;
+&lt;li&gt;ServletRequest&lt;/li&gt;
+&lt;li&gt;ServletResponse&lt;/li&gt;
+&lt;li&gt;ServletException&lt;/li&gt;
+&lt;li&gt;http
+&lt;ul&gt;
+&lt;li&gt;Cookie&lt;/li&gt;
+&lt;li&gt;HttpServlet&lt;/li&gt;
+&lt;li&gt;HttpServletRequest&lt;/li&gt;
+&lt;li&gt;HttpServletResponse&lt;/li&gt;
+&lt;li&gt;HttpServletRequestWrapper&lt;/li&gt;
+&lt;li&gt;HttpServletResponseWrapper&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;transaction
+&lt;ul&gt;
+&lt;li&gt;Transactional&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ws
+&lt;ul&gt;
+&lt;li&gt;rs
+&lt;ul&gt;
+&lt;li&gt;DELETE&lt;/li&gt;
+&lt;li&gt;GET&lt;/li&gt;
+&lt;li&gt;POST&lt;/li&gt;
+&lt;li&gt;PUT&lt;/li&gt;
+&lt;li&gt;Path&lt;/li&gt;
+&lt;li&gt;PathParam&lt;/li&gt;
+&lt;li&gt;Produces&lt;/li&gt;
+&lt;li&gt;QueryParam&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;core
+&lt;ul&gt;
+&lt;li&gt;Context&lt;/li&gt;
+&lt;li&gt;MediaType&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.Produces;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;&lt;/p&gt;
+&lt;p&gt;import javax.servlet.http.HttpServlet;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.oracle.com/cd/E19226-01/820-7627/6nisfjmk8/index.html&#34;&gt;https://docs.oracle.com/cd/E19226-01/820-7627/6nisfjmk8/index.html&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>
@@ -3056,585 +4011,6 @@ features &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; feature_extrac
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;%5Bhttps://birdben.github.io/2017/03/05/Java/Python%E5%92%8CJava%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%9A%E4%BF%A1%E5%AE%9E%E7%8E%B0%E7%9A%84%E7%90%86%E8%A7%A3%E5%92%8C%E6%AF%94%E8%BE%83/%5D(https://birdben.github.io/2017/03/05/Java/Python%E5%92%8CJava%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%9A%E4%BF%A1%E5%AE%9E%E7%8E%B0%E7%9A%84%E7%90%86%E8%A7%A3%E5%92%8C%E6%AF%94%E8%BE%83/)&#34;&gt;Python和Java服务器通信实现的理解和比较&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Machine Learning Crash Course Courses</title>
-      <link>http://csyezheng.github.io/post/machine-learning/crash-course/</link>
-      <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/machine-learning/crash-course/</guid>
-      
-        <description>&lt;h1 id=&#34;machine-learning-crash-course-courses&#34;&gt;Machine Learning Crash Course Courses&lt;/h1&gt;
-&lt;h2 id=&#34;ml-concepts&#34;&gt;ML Concepts&lt;/h2&gt;
-&lt;h4 id=&#34;introduction-to-ml&#34;&gt;Introduction to ML&lt;/h4&gt;
-&lt;p&gt;First, it gives you a tool to reduce the time you spend programming.&lt;/p&gt;
-&lt;p&gt;Second, it will allow you to customize your products, making them better for specific groups of people.&lt;/p&gt;
-&lt;p&gt;Third, machine learning lets you solve problems that you, as a programmer, have no idea how to do by hand.&lt;/p&gt;
-&lt;p&gt;machine learning &lt;strong&gt;changes the way you think about a problem&lt;/strong&gt;. Software engineers are trained to think logically and mathematically; we use assertions to prove properties of our program are correct.  With machine learning, the focus shifts from a mathematical science to a natural science: we&amp;rsquo;re making observations about an uncertain world, running experiments, and using statistics, not logic, to analyze the results of the experiment. The ability to think like a scientist  will expand your horizons and open up new areas that you couldn&amp;rsquo;t explore without it.&lt;/p&gt;
-&lt;h4 id=&#34;framing-框架处理&#34;&gt;Framing (框架处理)&lt;/h4&gt;
-&lt;p&gt;What is (supervised) machine learning? Concisely put, it is the following:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ML systems learn how to combine input to produce useful predictions on never-before-seen data.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&#34;labels-标签&#34;&gt;Labels (标签)&lt;/h6&gt;
-&lt;p&gt;A &lt;strong&gt;label&lt;/strong&gt; is the thing we&amp;rsquo;re predicting—the &lt;code&gt;y&lt;/code&gt; variable in simple linear regression.&lt;/p&gt;
-&lt;h6 id=&#34;features-特征&#34;&gt;Features (特征)&lt;/h6&gt;
-&lt;p&gt;A &lt;strong&gt;feature&lt;/strong&gt; is an input variable—the &lt;code&gt;x&lt;/code&gt; variable in simple linear regression. A simple machine learning project might use a single feature, while a more sophisticated machine learning project could use millions of features.&lt;/p&gt;
-&lt;h6 id=&#34;examples-样本&#34;&gt;Examples (样本)&lt;/h6&gt;
-&lt;p&gt;An &lt;strong&gt;example&lt;/strong&gt; is a particular instance of data, &lt;strong&gt;x&lt;/strong&gt;. (We put &lt;strong&gt;x&lt;/strong&gt; in boldface to indicate that it is a vector.) We break examples into two categories:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;labeled examples&lt;/p&gt;
-&lt;p&gt;A &lt;strong&gt;labeled example&lt;/strong&gt; includes both feature(s) and the label.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;unlabeled examples&lt;/p&gt;
-&lt;p&gt;An &lt;strong&gt;unlabeled example&lt;/strong&gt; contains features but not the label.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&#34;models-模型&#34;&gt;Models (模型)&lt;/h6&gt;
-&lt;p&gt;A model defines the relationship between features and label.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Training&lt;/strong&gt; means creating or &lt;strong&gt;learning&lt;/strong&gt; the model. That is, you show the model labeled examples and enable the model to gradually learn the relationships between features and label.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Inference&lt;/strong&gt; means applying the trained model to unlabeled examples. That is, you use the trained model to make useful predictions (&lt;code&gt;y&#39;&lt;/code&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&#34;regression-vs-classification-回归与分类&#34;&gt;Regression vs. classification (回归与分类)&lt;/h6&gt;
-&lt;p&gt;A &lt;strong&gt;regression&lt;/strong&gt; model predicts continuous values.&lt;/p&gt;
-&lt;p&gt;A &lt;strong&gt;classification&lt;/strong&gt; model predicts discrete values (离散值).&lt;/p&gt;
-&lt;h4 id=&#34;descending-into-ml&#34;&gt;Descending into ML&lt;/h4&gt;
-&lt;h6 id=&#34;linear-regression&#34;&gt;Linear Regression&lt;/h6&gt;
-&lt;p&gt;$$
-y&amp;rsquo; = b + w_1x_1 + w_2x_2 + w_3x_3
-$$&lt;/p&gt;
-&lt;p&gt;where:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$y′$ is the predicted &lt;strong&gt;label&lt;/strong&gt; (a desired output).&lt;/li&gt;
-&lt;li&gt;$b$ is the &lt;strong&gt;bias&lt;/strong&gt; (the y-intercept), sometimes referred to as $w_0$.&lt;/li&gt;
-&lt;li&gt;$w1$ is the &lt;strong&gt;weight&lt;/strong&gt; of &lt;strong&gt;feature&lt;/strong&gt; 1. Weight is the same concept as the &amp;ldquo;slope&amp;rdquo; m in the traditional equation of a line.&lt;/li&gt;
-&lt;li&gt;$x_1$ is a &lt;strong&gt;feature&lt;/strong&gt; (a known input).&lt;/li&gt;
-&lt;li&gt;a more sophisticated model might rely on multiple features, each having a separate weight ($w_1$, $w_2$, etc.).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&#34;training-and-loss&#34;&gt;Training and Loss&lt;/h6&gt;
-&lt;p&gt;&lt;strong&gt;Training&lt;/strong&gt; a model simply means learning (determining) good values for all the weights and the bias from labeled examples. In supervised learning, a machine learning algorithm builds a model by examining many examples and attempting to find a model that &lt;strong&gt;minimizes loss&lt;/strong&gt;; this process is called &lt;strong&gt;empirical risk minimization&lt;/strong&gt; (&lt;strong&gt;经验风险最小化&lt;/strong&gt;).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Loss is the penalty for a bad prediction&lt;/strong&gt;. That is, &lt;strong&gt;loss&lt;/strong&gt; is a number &lt;strong&gt;indicating how bad the model&amp;rsquo;s prediction was on a single example&lt;/strong&gt;. If the model&amp;rsquo;s prediction is perfect, the loss is zero; otherwise, the loss is greater. The goal of training a model is to find a set of weights and biases that have &lt;em&gt;low&lt;/em&gt; loss, on average, across all examples.&lt;/p&gt;
-&lt;p&gt;You might be wondering whether you could &lt;strong&gt;create a mathematical function—a loss function—that would aggregate the individual losses in a meaningful fashion.&lt;/strong&gt;&lt;/p&gt;
-&lt;h6 id=&#34;squared-loss-a-popular-loss-function&#34;&gt;Squared loss: a popular loss function&lt;/h6&gt;
-&lt;p&gt;The linear regression models we&amp;rsquo;ll examine here use a loss function called &lt;strong&gt;squared loss&lt;/strong&gt; (also known as &lt;strong&gt;L2 loss&lt;/strong&gt;).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Mean square error&lt;/strong&gt; (&lt;strong&gt;MSE&lt;/strong&gt;) is the average squared loss per example over the whole dataset. To calculate MSE, sum up all the squared losses for individual examples and then divide by the number of examples:
-$$
-MSE = \frac{1}{N}\sum_{(x,y)\in{D}} (y - prediction(x))^2
-$$&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$(x,y)$ is an example in which&lt;/li&gt;
-&lt;li&gt;$x$ is the set of features (for example, chirps/minute, age, gender) that the model uses to make predictions.&lt;/li&gt;
-&lt;li&gt;$y$ is the example&amp;rsquo;s label (for example, temperature).&lt;/li&gt;
-&lt;li&gt;$prediction(x)$ is a function of the &lt;strong&gt;weights&lt;/strong&gt; and &lt;strong&gt;bias&lt;/strong&gt; in combination with the set of &lt;strong&gt;features&lt;/strong&gt; x.&lt;/li&gt;
-&lt;li&gt;$D$ is a data set containing many labeled examples, which are $(x,y)$ pairs.&lt;/li&gt;
-&lt;li&gt;$N$ is the number of examples in $D$.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;reducing-loss-降低损失&#34;&gt;Reducing Loss (降低损失)&lt;/h4&gt;
-&lt;h6 id=&#34;an-iterative-approach-迭代方法&#34;&gt;An Iterative Approach (迭代方法)&lt;/h6&gt;
-&lt;p&gt;&lt;img src=&#34;https://developers.google.cn/machine-learning/crash-course/images/GradientDescentDiagram.svg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;A Machine Learning model is trained by starting with an initial guess for the weights and bias and iteratively adjusting those guesses until learning the weights and bias with the lowest possible loss.&lt;/p&gt;
-&lt;p&gt;Usually, you iterate until overall loss stops changing or at least changes extremely slowly. When that happens, we say that the model has &lt;strong&gt;converged&lt;/strong&gt; (&lt;strong&gt;收敛&lt;/strong&gt;).&lt;/p&gt;
-&lt;h6 id=&#34;gradient-descent-梯度下降法&#34;&gt;Gradient Descent (梯度下降法)&lt;/h6&gt;
-&lt;p&gt;For the kind of regression problems we&amp;rsquo;ve been examining, the resulting plot of loss vs. $w_1$ will always be &lt;strong&gt;convex&lt;/strong&gt; (凸形). In other words, the plot will always be bowl-shaped, &lt;strong&gt;Convex problems have only one minimum&lt;/strong&gt;; that is, only one place where the slope is exactly 0. That minimum is where the loss function converges.&lt;/p&gt;
-&lt;p&gt;Calculating the loss function for every conceivable value of $w_{1}$ **over the entire data set would be an inefficient way** of finding the convergence point. Let&amp;rsquo;s examine a better mechanism—very popular in machine learning—called **gradient descent**.&lt;/p&gt;
-&lt;p&gt;The first stage in gradient descent is to pick a starting value (a starting point) for $w_{1}$. **The starting point doesn&amp;rsquo;t matter much**; therefore, many algorithms simply set $w_{1}$ to 0 or pick a random value.&lt;/p&gt;
-&lt;p&gt;The gradient descent algorithm then calculates the gradient of the loss curve at the starting point. the gradient of the loss is equal to the &lt;strong&gt;derivative&lt;/strong&gt; (&lt;strong&gt;slope&lt;/strong&gt;) of the curve, and tells you which way is &amp;ldquo;warmer&amp;rdquo; or &amp;ldquo;colder.&amp;rdquo; When there are multiple weights, the &lt;strong&gt;gradient&lt;/strong&gt; is a &lt;strong&gt;vector&lt;/strong&gt; of &lt;strong&gt;partial derivatives&lt;/strong&gt; with respect to the weights.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note that a gradient is a vector&lt;/strong&gt;, so it has both of the following characteristics:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;a direction&lt;/li&gt;
-&lt;li&gt;a magnitude (大小)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://developers.google.cn/machine-learning/crash-course/images/GradientDescentGradientStep.svg?dcb_=0.336975579495699&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h6 id=&#34;learning-rate-学习速率&#34;&gt;Learning Rate (学习速率)&lt;/h6&gt;
-&lt;p&gt;As noted, the gradient vector has both a direction and a magnitude. Gradient descent algorithms multiply the gradient by a scalar known as the &lt;strong&gt;learning rate&lt;/strong&gt; (also sometimes called &lt;strong&gt;step size&lt;/strong&gt;) to determine the next point. For example, if the gradient magnitude is 2.5 and the learning rate is 0.01, then the gradient descent algorithm will pick the next point 0.025 away from the previous point.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Hyperparameters&lt;/strong&gt; are the knobs that programmers tweak in machine learning algorithms. Most machine learning programmers spend a fair amount of time tuning the learning rate.&lt;/p&gt;
-&lt;p&gt;If you pick a learning rate that is &lt;strong&gt;too small&lt;/strong&gt;, learning will take too long, Conversely, if you specify a learning rate that is &lt;strong&gt;too large&lt;/strong&gt;, the next point will perpetually bounce haphazardly across the bottom of the well like a quantum mechanics experiment gone horribly wrong.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The ideal learning rate:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The ideal learning rate in one-dimension is 1f(x)″ (the inverse of the second derivative of f(x) at x).&lt;/li&gt;
-&lt;li&gt;The ideal learning rate for 2 or more dimensions is the inverse of the &lt;a href=&#34;https://wikipedia.org/wiki/Hessian_matrix&#34;&gt;Hessian&lt;/a&gt; (matrix of second partial derivatives).&lt;/li&gt;
-&lt;li&gt;The story for general convex functions is more complex.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&#34;stochastic-gradient-descent-随机梯度下降法&#34;&gt;Stochastic Gradient Descent (随机梯度下降法)&lt;/h6&gt;
-&lt;p&gt;&lt;strong&gt;batch&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;In gradient descent, a &lt;strong&gt;batch&lt;/strong&gt; is the total number of examples you use to calculate the gradient in a single iteration.&lt;/p&gt;
-&lt;p&gt;A large data set with randomly sampled examples probably contains &lt;strong&gt;redundant&lt;/strong&gt; data. In fact, redundancy becomes more likely as the batch size grows. Some redundancy can be useful to &lt;strong&gt;smooth&lt;/strong&gt; out noisy gradients, but enormous batches tend not to carry much more predictive value than large batches.&lt;/p&gt;
-&lt;p&gt;By choosing examples at random from our data set, we could estimate (albeit, noisily) a big average from a much smaller one. &lt;strong&gt;Stochastic gradient descent&lt;/strong&gt; (&lt;strong&gt;SGD&lt;/strong&gt;) takes this idea to the extreme&amp;ndash;it uses &lt;strong&gt;only a single example (a batch size of 1) per iteration&lt;/strong&gt;. Given enough iterations, SGD works but is very noisy. The term &amp;ldquo;stochastic&amp;rdquo; indicates that the one example comprising each batch is chosen at random.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Mini-batch stochastic gradient descent&lt;/strong&gt; (&lt;strong&gt;mini-batch SGD&lt;/strong&gt;) is a compromise between full-batch iteration and SGD. A mini-batch is typically between 10 and 1,000 examples, chosen at random. Mini-batch SGD reduces the amount of noise in SGD but is still more efficient than full-batch.&lt;/p&gt;
-&lt;h4 id=&#34;first-steps-with-tf&#34;&gt;First Steps with TF&lt;/h4&gt;
-&lt;p&gt;Programming Exercises&lt;/p&gt;
-&lt;p&gt;If you are unfamiliar with NumPy or pandas, please begin by doing the following two Colab exercises:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/github/google/eng-edu/blob/master/ml/cc/exercises/numpy_ultraquick_tutorial.ipynb?utm_source=mlcc&amp;amp;utm_campaign=colab-external&amp;amp;utm_medium=referral&amp;amp;utm_content=numpy_tf2-colab&amp;amp;hl=en&#34;&gt;NumPy Ultraquick Tutorial&lt;/a&gt; Colab exercise, which provides all the NumPy information you need for this course.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/github/google/eng-edu/blob/master/ml/cc/exercises/pandas_dataframe_ultraquick_tutorial.ipynb?utm_source=mlcc&amp;amp;utm_campaign=colab-external&amp;amp;utm_medium=referral&amp;amp;utm_content=pandas_tf2-colab&amp;amp;hl=en&#34;&gt;pandas UltraQuick Tutorial&lt;/a&gt; Colab exercise, which provides all the pandas information you need for this course.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;After gaining competency in NumPy and pandas, do the following two Colab exercises to explore linear regression and hyperparameter tuning in tf.keras:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/github/google/eng-edu/blob/master/ml/cc/exercises/linear_regression_with_synthetic_data.ipynb?utm_source=mlcc&amp;amp;utm_campaign=colab-external&amp;amp;utm_medium=referral&amp;amp;utm_content=linear_regression_synthetic_tf2-colab&amp;amp;hl=en&#34;&gt;Linear Regression with Synthetic Data&lt;/a&gt; Colab exercise, which explores linear regression with a toy dataset.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/github/google/eng-edu/blob/master/ml/cc/exercises/linear_regression_with_a_real_dataset.ipynb?utm_source=mlcc&amp;amp;utm_campaign=colab-external&amp;amp;utm_medium=referral&amp;amp;utm_content=linear_regression_real_tf2-colab&amp;amp;hl=en&#34;&gt;Linear Regression with a Real Dataset&lt;/a&gt; Colab exercise, which guides you through the kinds of analysis you should do on a real dataset.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;generalization-泛化&#34;&gt;Generalization (泛化)&lt;/h4&gt;
-&lt;p&gt;Video Lecture
-Peril of Overfitting&lt;/p&gt;
-&lt;h4 id=&#34;training-and-test-sets&#34;&gt;Training and Test Sets&lt;/h4&gt;
-&lt;p&gt;Video Lecture
-Splitting Data
-Playground Exercise&lt;/p&gt;
-&lt;h4 id=&#34;validation-set&#34;&gt;Validation Set&lt;/h4&gt;
-&lt;p&gt;Check Your Intuition
-Video Lecture
-Another Partition
-Programming Exercise&lt;/p&gt;
-&lt;h4 id=&#34;representation-表示法&#34;&gt;Representation (表示法)&lt;/h4&gt;
-&lt;p&gt;Video Lecture
-Feature Engineering
-Qualities of Good Features
-Cleaning Data&lt;/p&gt;
-&lt;h4 id=&#34;feature-crosses-特征组合&#34;&gt;Feature Crosses (特征组合)&lt;/h4&gt;
-&lt;p&gt;Video Lecture
-Encoding Nonlinearity
-Crossing One-Hot Vectors
-Playground Exercises
-Programming Exercise&lt;/p&gt;
-&lt;p&gt;Check Your Understanding&lt;/p&gt;
-&lt;h4 id=&#34;regularization-simplicity-正则化简单性&#34;&gt;Regularization: Simplicity (正则化：简单性)&lt;/h4&gt;
-&lt;p&gt;Playground Exercise: Overcrossing?
-Video Lecture
-L2 Regularization
-Lambda
-Playground Exercise: L2 Regularization
-Check Your Understanding&lt;/p&gt;
-&lt;h4 id=&#34;logistic-regression&#34;&gt;Logistic Regression&lt;/h4&gt;
-&lt;p&gt;Video Lecture
-Calculating a Probability
-Loss and Regularization&lt;/p&gt;
-&lt;h4 id=&#34;classification&#34;&gt;Classification&lt;/h4&gt;
-&lt;p&gt;Video Lecture
-Thresholding
-True vs. False; Positive vs. Negative
-Accuracy
-Precision and Recall
-Check Your Understanding: Accuracy, Precision, Recall
-ROC Curve and AUC
-Check Your Understanding: ROC and AUC
-Prediction Bias
-Programming Exercise&lt;/p&gt;
-&lt;h4 id=&#34;regularization-sparsity-正则化稀疏性&#34;&gt;Regularization: Sparsity (正则化：稀疏性)&lt;/h4&gt;
-&lt;p&gt;Video Lecture
-L1 Regularization
-Playground Exercise
-Check Your Understanding&lt;/p&gt;
-&lt;h4 id=&#34;neural-networks&#34;&gt;Neural Networks&lt;/h4&gt;
-&lt;p&gt;Video Lecture
-Structure
-Playground Exercises
-Programming Exercise&lt;/p&gt;
-&lt;h4 id=&#34;training-neural-nets&#34;&gt;Training Neural Nets&lt;/h4&gt;
-&lt;p&gt;Video Lecture
-Best Practices&lt;/p&gt;
-&lt;h4 id=&#34;multi-class-neural-nets&#34;&gt;Multi-Class Neural Nets&lt;/h4&gt;
-&lt;p&gt;Video Lecture
-One vs. All
-Softmax
-Programming Exercise&lt;/p&gt;
-&lt;h4 id=&#34;embeddings-嵌入&#34;&gt;Embeddings (嵌入)&lt;/h4&gt;
-&lt;p&gt;Video Lecture
-Motivation from Collaborative Filtering
-Categorical Input Data
-Translating to a Lower-Dimensional Space
-Obtaining Embeddings&lt;/p&gt;
-&lt;h2 id=&#34;ml-engineering&#34;&gt;ML Engineering&lt;/h2&gt;
-&lt;h4 id=&#34;production-ml-systems&#34;&gt;Production ML Systems&lt;/h4&gt;
-&lt;h4 id=&#34;static-vs-dynamic-training&#34;&gt;Static vs. Dynamic Training&lt;/h4&gt;
-&lt;p&gt;Video Lecture
-Check Your Understanding&lt;/p&gt;
-&lt;h4 id=&#34;static-vs-dynamic-inference&#34;&gt;Static vs. Dynamic Inference&lt;/h4&gt;
-&lt;p&gt;Video Lecture
-Check Your Understanding&lt;/p&gt;
-&lt;h4 id=&#34;data-dependencies&#34;&gt;Data Dependencies&lt;/h4&gt;
-&lt;p&gt;Video Lecture
-Check Your Understanding&lt;/p&gt;
-&lt;h4 id=&#34;fairness&#34;&gt;Fairness&lt;/h4&gt;
-&lt;p&gt;Video Lecture
-Types of Bias
-Identifying Bias
-Evaluating for Bias
-Programming Exercise
-Check Your Understanding&lt;/p&gt;
-&lt;h2 id=&#34;ml-systems-in-the-real-world&#34;&gt;ML Systems in the Real World&lt;/h2&gt;
-&lt;h4 id=&#34;cancer-prediction&#34;&gt;Cancer Prediction&lt;/h4&gt;
-&lt;h4 id=&#34;literature&#34;&gt;Literature&lt;/h4&gt;
-&lt;h4 id=&#34;guidelines&#34;&gt;Guidelines&lt;/h4&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;h4 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h4&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>notes of deep learning with python</title>
-      <link>http://csyezheng.github.io/post/deep-learning/notes-deep-learning-with-python/</link>
-      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/deep-learning/notes-deep-learning-with-python/</guid>
-      
-        <description>&lt;h1 id=&#34;deep-learning-with-python&#34;&gt;Deep Learning with Python&lt;/h1&gt;
-&lt;h2 id=&#34;part-1---fundamentals-of-deep-learning&#34;&gt;PART 1 - FUNDAMENTALS OF DEEP LEARNING&lt;/h2&gt;
-&lt;h3 id=&#34;1what-is-deep-learning&#34;&gt;1.What is deep learning?&lt;/h3&gt;
-&lt;h4 id=&#34;artificial-intelligence-machine-learning-and-deep-learning&#34;&gt;Artificial intelligence, machine learning, and deep learning&lt;/h4&gt;
-&lt;h4 id=&#34;before-deep-learning-a-brief-history-of-machine-learning&#34;&gt;Before deep learning: a brief history of machine learning&lt;/h4&gt;
-&lt;h4 id=&#34;why-deep-learning-why-now&#34;&gt;Why deep learning? Why now?&lt;/h4&gt;
-&lt;h3 id=&#34;2before-we-begin-the-mathematical-building-blocks-of-neural-networks&#34;&gt;2.Before we begin: the mathematical building blocks of neural networks&lt;/h3&gt;
-&lt;h4 id=&#34;a-first-look-at-a-neural-network&#34;&gt;A first look at a neural network&lt;/h4&gt;
-&lt;h4 id=&#34;data-representations-for-neural-networks&#34;&gt;Data representations for neural networks&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;tensor&lt;/strong&gt;: it’s a container for numbers. You may be already familiar with matrices, which are 2D tensors: tensors are a generalization of matrices to an arbitrary number of dimensions (note that in the context of tensors, a &lt;strong&gt;dimension&lt;/strong&gt; is often called an &lt;strong&gt;axis&lt;/strong&gt;).&lt;/p&gt;
-&lt;p&gt;A tensor is defined by three key attributes: Number of axes (rank), Shape, Data type.&lt;/p&gt;
-&lt;p&gt;Because the contents of the tensors manipulated by tensor operations can be interpreted as coordinates of points in some geometric space, &lt;strong&gt;all tensor operations have a geometric interpretation&lt;/strong&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;the-gears-of-neural-networks-tensor-operations&#34;&gt;The gears of neural networks: tensor operations&lt;/h4&gt;
-&lt;p&gt;Neural networks consist entirely of chains of tensor operations and that all of these tensor operations are just geometric transformations of the input data. It follows that &lt;strong&gt;you can interpret a neural network as a very complex geometric transformation in a high-dimensional space&lt;/strong&gt;, implemented via a long series of simple steps.&lt;/p&gt;
-&lt;p&gt;Uncrumpling paper balls is what machine learning is about: &lt;strong&gt;finding neat representations for complex, highly folded data manifolds&lt;/strong&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;the-engine-of-neural-networks-gradient-based-optimization&#34;&gt;The engine of neural networks: gradient-based optimization&lt;/h4&gt;
-&lt;p&gt;training loop:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Draw a batch of training samples x and corresponding targets y.&lt;/li&gt;
-&lt;li&gt;Run the network on x (a step called the forward pass) to obtain predictions y_pred .&lt;/li&gt;
-&lt;li&gt;Compute the loss of the network on the batch, a measure of the mismatch
-between y_pred and y .&lt;/li&gt;
-&lt;li&gt;Update all weights of the network in a way that slightly reduces the loss on this batch.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;One naive solution would be to freeze all weights in the network except the one scalar coefficient being considered, and try different values for this coefficient. But such an approach would be horribly inefficient, because you’d need to compute two forward passes (which are expensive) for every individual coefficient (of which there are many, usually thousands and sometimes up to millions).&lt;/p&gt;
-&lt;p&gt;A much better approach is to take advantage of the fact that all operations used in the network are differentiable, and &lt;strong&gt;compute the gradient of the loss with regard to the network’s coefficients&lt;/strong&gt;. You can then &lt;strong&gt;move the coefficients in the opposite direction from the gradient, thus decreasing the loss&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;For every differentiable function f(x) (&lt;strong&gt;differentiable means “can be derived”&lt;/strong&gt;: for example, smooth, continuous functions can be derived),&lt;/p&gt;
-&lt;p&gt;A &lt;strong&gt;gradient&lt;/strong&gt; is the derivative of a tensor operation. It’s the generalization of the concept of &lt;strong&gt;derivatives&lt;/strong&gt; to functions of multidimensional inputs: that is, to functions that take tensors as inputs.&lt;/p&gt;
-&lt;p&gt;You saw earlier that the derivative of a function f(x) of a single coefficient can be interpreted as the &lt;strong&gt;slope&lt;/strong&gt; of the curve of f. Likewise, gradient(f)(W0) can be interpreted as the &lt;strong&gt;tensor&lt;/strong&gt; describing the curvature of f(W) around W0.&lt;/p&gt;
-&lt;p&gt;For this reason, in much the same way that, for a function f(x), you can reduce the value of f(x) by moving x a little in the opposite direction from the derivative, with a function f(W) of a tensor, you can &lt;strong&gt;reduce f(W) by moving W in the opposite direction from the gradient&lt;/strong&gt;: for example, W1 = W0 - step * gradient(f)(W0)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;mini-batch stochastic gradient descent&lt;/strong&gt; (mini-batch SGD):&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Draw a batch of training samples x and corresponding targets y.&lt;/li&gt;
-&lt;li&gt;Run the network on x to obtain predictions y_pred.&lt;/li&gt;
-&lt;li&gt;Compute the loss of the network on the batch, a measure of the mismatch
-between y_pred and y .&lt;/li&gt;
-&lt;li&gt;Compute the gradient of the loss with regard to the network’s parameters (a
-backward pass).&lt;/li&gt;
-&lt;li&gt;Move the parameters a little in the opposite direction from the gradient for example W -= step * gradient—thus reducing the loss on the batch a bit.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Note that a variant of the mini-batch SGD algorithm would be to draw a single sample and target at each iteration, rather than drawing a batch of data. This would be &lt;strong&gt;true SGD&lt;/strong&gt; (as opposed to &lt;strong&gt;mini-batch SGD&lt;/strong&gt;). Alternatively, going to the opposite extreme, you could run every step on all data available, which is called &lt;strong&gt;batch SGD&lt;/strong&gt;. Each update would then be more accurate, but far more expensive. The efficient compromise between these two extremes is to use mini-batches of reasonable size.&lt;/p&gt;
-&lt;p&gt;Additionally, there exist &lt;strong&gt;multiple variants of SGD&lt;/strong&gt; that differ by taking into account previous weight updates when computing the next weight update, rather than just looking at the current value of the gradients. There is, for instance, &lt;strong&gt;SGD with momentum&lt;/strong&gt;, as well as &lt;strong&gt;Adagrad&lt;/strong&gt;, &lt;strong&gt;RMSP rop&lt;/strong&gt;, and several others. Such variants are known as &lt;strong&gt;optimization methods&lt;/strong&gt; or &lt;strong&gt;optimizers&lt;/strong&gt;. In particular, the concept of momentum, which is used in many of these variants, deserves your attention. &lt;strong&gt;Momentum addresses two issues with SGD: convergence speed and local minima.&lt;/strong&gt;&lt;/p&gt;
-&lt;h6 id=&#34;chaining-derivatives-the-backpropagation-algorithm&#34;&gt;Chaining derivatives: the Backpropagation algorithm&lt;/h6&gt;
-&lt;p&gt;Calculus tells us that such a chain of functions can be derived using the following identity, called the &lt;strong&gt;chain rule&lt;/strong&gt;: f(g(x)) = f&amp;rsquo;(g(x)) * g&amp;rsquo;(x). Applying the chain rule to the computation of the gradient values of a neural network gives rise to an algorithm called &lt;strong&gt;Backpropagation&lt;/strong&gt; (also sometimes called &lt;strong&gt;reverse-mode differentiation&lt;/strong&gt;). Backpropagation starts with the final loss value and works backward from the top layers to the bottom layers, applying the chain rule to compute the contribution that each parameter had in the loss value.&lt;/p&gt;
-&lt;h4 id=&#34;looking-back-at-our-first-example&#34;&gt;Looking back at our first example&lt;/h4&gt;
-&lt;h3 id=&#34;3getting-started-with-neural-networks&#34;&gt;3.Getting started with neural networks&lt;/h3&gt;
-&lt;h4 id=&#34;anatomy-of-a-neural-network&#34;&gt;Anatomy of a neural network&lt;/h4&gt;
-&lt;p&gt;Figure 3.1 Relationship between the network, layers, loss function, and optimizer&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/03fig01.jpg&#34; alt=&#34;Relationship between the network, layers, loss function, and optimizer&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Different layers are appropriate for different tensor formats and different types of data processing. For instance, simple vector data, stored in 2D tensors of shape (samples, features) , is often processed by densely connected layers, also called fully connected or dense layers (the Dense class in Keras). Sequence data, stored in 3D tensors of shape (samples, timesteps, features), is typically processed by recurrent layers such as an LSTM layer. Image data, stored in 4D tensors, is usually processed by 2D convolution layers Conv2D).&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;from keras import layers
-
-# A dense layer with 32 output units
-layer = layers.Dense(32, input_shape=(784,))
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once the network architecture is defined, you still have to choose two more things:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Loss function&lt;/strong&gt; (objective function)—The quantity that will be minimized during
-training. It represents a measure of success for the task at hand.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Optimizer&lt;/strong&gt;—Determines how the network will be updated based on the loss function. It implements a specific variant of stochastic gradient descent (SGD). A neural network that has multiple outputs may have multiple loss functions (one per output).&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Choosing the right objective function for the right problem is extremely important: your network will take any shortcut it can, to minimize the loss; so if the objective doesn’t fully correlate with success for the task at hand, your network will end up doing things you may not have wanted.&lt;/p&gt;
-&lt;p&gt;Fortunately, when it comes to common problems such as classification, regression, and sequence prediction, there are simple guidelines you can follow to choose the correct loss. For instance, you’ll use &lt;strong&gt;binary crossentropy&lt;/strong&gt; for a two-class classification problem, &lt;strong&gt;categorical crossentropy&lt;/strong&gt; for a many-class classification problem, &lt;strong&gt;mean-squared error&lt;/strong&gt; for a regression problem, &lt;strong&gt;connectionist temporal classification&lt;/strong&gt; (CTC) for a sequence-learning problem, and so on. Only when you’re working on truly new research problems will you have to develop your own objective functions. In the next few chapters, we’ll detail explicitly which loss functions to choose for a wide range of common tasks.&lt;/p&gt;
-&lt;h4 id=&#34;introduction-to-keras&#34;&gt;Introduction to Keras&lt;/h4&gt;
-&lt;p&gt;There are two ways to define a model: using the Sequential class (only for linear
-stacks of layers, which is the most common network architecture by far) or the functional API (for directed acyclic graphs of layers, which lets you build completely arbitrary architectures).&lt;/p&gt;
-&lt;p&gt;what type of network architectures work for different kinds of problems, how to pick the right learning configuration, and how to tweak a model until it gives the results you want to see.&lt;/p&gt;
-&lt;h4 id=&#34;setting-up-a-deep-learning-workstation&#34;&gt;Setting up a deep-learning workstation&lt;/h4&gt;
-&lt;h6 id=&#34;jupyter-notebooks-the-preferred-way-to-run-deep-learning-experiments&#34;&gt;Jupyter notebooks: the preferred way to run deep-learning experiments&lt;/h6&gt;
-&lt;p&gt;you don’t have to rerun all of your previous code if something goes wrong late in an experiment.&lt;/p&gt;
-&lt;h4 id=&#34;classifying-movie-reviews-a-binary-classification-example&#34;&gt;Classifying movie reviews: a binary classification example&lt;/h4&gt;
-&lt;p&gt;There are two key architecture decisions to be made about such a stack of Dense layers:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;How many layers to use&lt;/li&gt;
-&lt;li&gt;How many hidden units to choose for each layer&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In chapter 4, you’ll learn formal principles to guide you in making these choices.&lt;/p&gt;
-&lt;p&gt;A &lt;strong&gt;relu&lt;/strong&gt; (rectified linear unit) is a function meant to zero out negative values
-&lt;img src=&#34;https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/03fig04_alt.jpg&#34; alt=&#34;Figure 3.4  The rectified linear unit function&#34;&gt;&lt;/p&gt;
-&lt;p&gt;whereas a &lt;strong&gt;sigmoid&lt;/strong&gt; “squashes” arbitrary values into the [0, 1] interval  outputting something that can be interpreted as a probability.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/03fig05_alt.jpg&#34; alt=&#34;Figure 3.5 The sigmoid function&#34;&gt;&lt;/p&gt;
-&lt;h6 id=&#34;what-are-activation-functions-and-why-are-they-necessary&#34;&gt;What are activation functions, and why are they necessary?&lt;/h6&gt;
-&lt;p&gt;Without an activation function like relu (also called a non-linearity), the Dense layer would consist of two linear operations—a dot product and an addition:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;output = dot(W, input) + b
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In order to get access to a much richer hypothesis space that would benefit from deep representations, you need a non-linearity, or activation function. &lt;strong&gt;relu&lt;/strong&gt; is the most popular activation function in deep learning, but there are many other candidates, which all come with similarly strange names: prelu, elu, and so on.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Crossentropy&lt;/strong&gt; is usually the best choice when you’re dealing with models that &lt;strong&gt;output probabilities&lt;/strong&gt;. Crossentropy is a quantity from the field of Information Theory &lt;strong&gt;that measures the distance between probability distributions&lt;/strong&gt; or, in this case, between the ground-truth distribution and your predictions.&lt;/p&gt;
-&lt;h6 id=&#34;wrapping-up&#34;&gt;Wrapping up&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;In a &lt;strong&gt;binary classification problem&lt;/strong&gt; (two output classes), your network &lt;strong&gt;should end with a Dense layer with one unit and a sigmoid activation&lt;/strong&gt;: the output of your network should be a scalar between 0 and 1, &lt;strong&gt;encoding a probability&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;With such a scalar &lt;strong&gt;sigmoid&lt;/strong&gt; output on a binary classification problem, the loss function you should use is &lt;strong&gt;binary_crossentropy&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;The &lt;strong&gt;rmsprop&lt;/strong&gt; optimizer is generally a good enough choice, whatever your problem. That’s one less thing for you to worry about.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;classifying-newswires-a-multiclass-classification-example&#34;&gt;Classifying newswires: a multiclass classification example&lt;/h4&gt;
-&lt;p&gt;Because you have many classes, this problem is an instance of &lt;strong&gt;multi-class classification&lt;/strong&gt;; and because each data point should be classified into only one category, the problem is more specifically an instance of &lt;strong&gt;single-label, multiclass classification&lt;/strong&gt;. If each data point could belong to multiple categories (in this case, topics), you’d be facing a &lt;strong&gt;multilabel, multiclass classification&lt;/strong&gt; problem.&lt;/p&gt;
-&lt;p&gt;In the previous example, you used 16-dimensional intermediate layers, but a 16-dimensional space may be too limited to learn to separate 46 different classes: &lt;strong&gt;such small layers may act as information bottlenecks, permanently dropping relevant information&lt;/strong&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;from keras import models
-from keras import layers
-model = models.Sequential()
-model.add(layers.Dense(64, activation=&#39;relu&#39;, input_shape=(10000,)))
-model.add(layers.Dense(64, activation=&#39;relu&#39;))
-model.add(layers.Dense(46, activation=&#39;softmax&#39;))
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are two other things you should note about this architecture:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;You end the network with a Dense layer of size 46. This means for each input sample, the network will output a 46-dimensional vector. &lt;strong&gt;Each entry in this vector (each dimension) will encode a different output class.&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The last layer uses a &lt;strong&gt;softmax&lt;/strong&gt; activation. You saw this pattern in the MNIST example. It means the network will &lt;strong&gt;output a probability distribution over the 46 different output classes&lt;/strong&gt;—for every input sample, the network will produce a 46 dimensional output vector, &lt;strong&gt;where output[i] is the probability that the sample belongs to class i&lt;/strong&gt; . &lt;strong&gt;The 46 scores will sum to 1&lt;/strong&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The best loss function to use in this case is &lt;strong&gt;categorical_crossentropy&lt;/strong&gt;. &lt;strong&gt;It measures the distance between two probability distributions&lt;/strong&gt;: here, &lt;strong&gt;between the probability distribution output by the network and the true distribution of the labels.&lt;/strong&gt; By minimizing the distance between these two distributions, you train the network to output something as close as possible to the true labels.&lt;/p&gt;
-&lt;p&gt;Plotting the training and validation loss:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import matplotlib.pyplot as plt
-loss = history.history[&#39;loss&#39;]
-val_loss = history.history[&#39;val_loss&#39;]
-epochs = range(1, len(loss) + 1)
-plt.plot(epochs, loss, &#39;bo&#39;, label=&#39;Training loss&#39;)
-plt.plot(epochs, val_loss, &#39;b&#39;, label=&#39;Validation loss&#39;)
-plt.title(&#39;Training and validation loss&#39;)
-plt.xlabel(&#39;Epochs&#39;)
-plt.ylabel(&#39;Loss&#39;)
-plt.legend()
-plt.show()
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Plotting the training and validation accuracy:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;plt.clf()  # Clears the figure
-acc = history.history[&#39;acc&#39;]
-val_acc = history.history[&#39;val_acc&#39;]
-plt.plot(epochs, acc, &#39;bo&#39;, label=&#39;Training acc&#39;)
-plt.plot(epochs, val_acc, &#39;b&#39;, label=&#39;Validation acc&#39;)
-plt.title(&#39;Training and validation accuracy&#39;)
-plt.xlabel(&#39;Epochs&#39;)
-plt.ylabel(&#39;Loss&#39;)
-plt.legend()
-plt.show()
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The only thing this approach would change is the choice of the loss function. The loss function used in listing 3.21, &lt;strong&gt;categorical_crossentropy&lt;/strong&gt;, expects the labels to follow a &lt;strong&gt;categorical encoding&lt;/strong&gt;. With &lt;strong&gt;integer labels&lt;/strong&gt;, you should use **sparse_categorical_ crossentropy**.&lt;/p&gt;
-&lt;h6 id=&#34;the-importance-of-having-sufficiently-large-intermediate-layers&#34;&gt;The importance of having sufficiently large intermediate layers&lt;/h6&gt;
-&lt;p&gt;We mentioned earlier that because the final outputs are 46-dimensional, you should avoid intermediate layers with many fewer than 46 hidden units.&lt;/p&gt;
-&lt;h6 id=&#34;wrapping-up-1&#34;&gt;Wrapping up&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;If you’re trying to classify data points among N classes, your network should &lt;strong&gt;end with a Dense layer of size N&lt;/strong&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In a &lt;strong&gt;single-label, multiclass classification&lt;/strong&gt; problem, your network should end with a &lt;strong&gt;softmax&lt;/strong&gt; activation so that it will output a probability distribution over the N output classes.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Categorical crossentropy&lt;/strong&gt; is almost always the loss function you should use for such problems. It minimizes the distance between the probability distributions output by the network and the true distribution of the targets.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;There are two ways to handle labels in &lt;strong&gt;multiclass classification&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Encoding the labels via categorical encoding (also known as one-hot encoding) and using &lt;strong&gt;categorical_crossentropy&lt;/strong&gt; as a loss function&lt;/li&gt;
-&lt;li&gt;Encoding the labels as integers and using the &lt;strong&gt;sparse_categorical_crossentropy&lt;/strong&gt; loss function&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If you need to classify data into a large number of categories, you should &lt;strong&gt;avoid&lt;/strong&gt; creating information bottlenecks in your network due to &lt;strong&gt;intermediate layers that are too small&lt;/strong&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;predicting-house-prices-a-regression-example&#34;&gt;Predicting house prices: a regression example&lt;/h4&gt;
-&lt;p&gt;And each feature in the input data (for example, the crime rate) has a different scale. For instance, some values are proportions, which take values between 0 and 1; others take values between 1 and 12, others between 0 and 100, and so on.&lt;/p&gt;
-&lt;p&gt;It would be problematic to feed into a neural network values that all take wildly different ranges. The network might be able to automatically adapt to such heterogeneous data, but it would definitely make learning more difficult. A widespread best practice to deal with such data is to do feature-wise normalization: for each feature in the input data (a column in the input data matrix), you subtract the mean of the feature and divide by the standard deviation, so that the feature is centered around 0 and has a unit standard deviation.&lt;/p&gt;
-&lt;p&gt;In general, the less training data you have, the worse overfitting will be, and &lt;strong&gt;using a small network is one way to mitigate overfitting&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;the &lt;strong&gt;mse&lt;/strong&gt; loss function—&lt;strong&gt;mean squared error&lt;/strong&gt;, the square of the difference between the predictions and the targets. This is a widely used loss function &lt;strong&gt;for regression problems&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;You’re also monitoring a new metric during training: &lt;strong&gt;mean absolute error&lt;/strong&gt; (&lt;strong&gt;MAE&lt;/strong&gt;). It’s the absolute value of the difference between the predictions and the targets.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;K-fold validation&lt;/strong&gt;&lt;/p&gt;
-&lt;h6 id=&#34;wrapping-up-2&#34;&gt;Wrapping up&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Regression is done using different loss functions than what we used for classification. Mean squared error (MSE) is a loss function commonly used for regression.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Similarly, evaluation metrics to be used for regression differ from those used for classification; naturally, the concept of accuracy doesn’t apply for regression. A common regression metric is mean absolute error (MAE).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;When features in the input data have values in different ranges, each feature should be scaled independently as a preprocessing step.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;When there is little data available, using K-fold validation is a great way to reliably evaluate a model.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;When little training data is available, it’s preferable to use a small network with few hidden layers (typically only one or two), in order to avoid severe overfitting.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;4fundamentals-of-machine-learning&#34;&gt;4.Fundamentals of machine learning&lt;/h3&gt;
-&lt;h4 id=&#34;four-branches-of-machine-learning&#34;&gt;Four branches of machine learning&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Mini-batch&lt;/strong&gt; or &lt;strong&gt;batch&lt;/strong&gt;—A small set of samples (typically between 8 and 128)
-that are processed simultaneously by the model. &lt;strong&gt;The number of samples is&lt;/strong&gt;
-&lt;strong&gt;often a power of 2, to facilitate memory allocation on GPU&lt;/strong&gt;. When training, a
-&lt;strong&gt;mini-batch is used to compute a single gradient-descent update applied to&lt;/strong&gt;
-&lt;strong&gt;the weights of the model.&lt;/strong&gt;&lt;/p&gt;
-&lt;h4 id=&#34;evaluating-machine-learning-models&#34;&gt;Evaluating machine-learning models&lt;/h4&gt;
-&lt;p&gt;In machine learning, the goal is to achieve models that &lt;strong&gt;generalize&lt;/strong&gt;—that perform well on never-before-seen data—and &lt;strong&gt;overfitting&lt;/strong&gt; is the central obstacle.&lt;/p&gt;
-&lt;p&gt;three classic &lt;strong&gt;evaluation recipes&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;simple hold-out validation&lt;/li&gt;
-&lt;li&gt;K-fold validation&lt;/li&gt;
-&lt;li&gt;iterated K-fold validation with shuffling.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Data representativeness: you usually should &lt;strong&gt;randomly shuffle your data before splitting it into training and test sets&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;The arrow of time: If you’re trying to predict the future given the past (for example, tomorrow’s weather, stock movements, and so on), you &lt;strong&gt;should not randomly shuffle your data before splitting it&lt;/strong&gt;, because doing so will create a temporal leak.&lt;/p&gt;
-&lt;p&gt;Redundancy in your data: &lt;strong&gt;Make sure your training set and validation set are disjoint.&lt;/strong&gt;&lt;/p&gt;
-&lt;h4 id=&#34;data-preprocessing-feature-engineering-and-feature-learning&#34;&gt;Data preprocessing, feature engineering, and feature learning&lt;/h4&gt;
-&lt;h5 id=&#34;data-preprocessing-for-neural-networks&#34;&gt;Data preprocessing for neural networks&lt;/h5&gt;
-&lt;p&gt;Data preprocessing aims at making the raw data at hand more amenable to neural networks. This includes &lt;strong&gt;vectorization&lt;/strong&gt;, &lt;strong&gt;normalization&lt;/strong&gt;, &lt;strong&gt;handling missing values&lt;/strong&gt;, and &lt;strong&gt;feature extraction&lt;/strong&gt;.&lt;/p&gt;
-&lt;h6 id=&#34;value-normalization&#34;&gt;VALUE NORMALIZATION&lt;/h6&gt;
-&lt;p&gt;In general, &lt;strong&gt;it isn’t safe to feed into&lt;/strong&gt; a neural network data that takes relatively large values (for example, multidigit integers, which are much larger than the initial values taken by the weights of a network) or data that is heterogeneous (for example, data where one feature is in the range 0–1 and another is in the range 100–200). &lt;strong&gt;Doing so can trigger large gradient updates that will prevent the network from converging&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;To make learning easier for your network, your data should have the following characteristics:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Take small values—&lt;strong&gt;Typically, most values should be in the 0–1 range&lt;/strong&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Be homogenous—That is, &lt;strong&gt;all features should take values in roughly the same range&lt;/strong&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Additionally, the following stricter normalization practice is common and can help, although it isn’t always necessary&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Normalize each feature independently to &lt;strong&gt;have a mean of 0.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Normalize each feature independently to have a &lt;strong&gt;standard deviation of 1&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&#34;handling-missing-values&#34;&gt;HANDLING MISSING VALUES&lt;/h6&gt;
-&lt;p&gt;In general, with neural networks, &lt;strong&gt;it’s safe to input missing values as 0&lt;/strong&gt;, with the condition that 0 isn’t already a meaningful value. The network will learn from exposure to the data that the value 0 means missing data and will start ignoring the value.&lt;/p&gt;
-&lt;h5 id=&#34;feature-engineering&#34;&gt;Feature engineering&lt;/h5&gt;
-&lt;p&gt;&lt;strong&gt;Feature engineering&lt;/strong&gt; is the process of using your own knowledge about the data and about the machine-learning algorithm at hand (in this case, a neural network) to make the algorithm work better by applying hardcoded (nonlearned) transformations to the data before it goes into the model. In many cases, it isn’t reasonable to expect a machine learning model to be able to learn from completely arbitrary data. The data needs to be presented to the model in a way that will make the model’s job easier.&lt;/p&gt;
-&lt;p&gt;That’s the essence of feature engineering: making a problem easier by expressing it in a simpler way. It usually requires understanding the problem in depth.&lt;/p&gt;
-&lt;p&gt;Before deep learning, feature engineering used to be critical, because classical shallow algorithms didn’t have hypothesis spaces rich enough to learn useful features by themselves.&lt;/p&gt;
-&lt;p&gt;Fortunately, modern deep learning removes the need for most feature engineering, because neural networks are capable of automatically extracting useful features from raw data.&lt;/p&gt;
-&lt;p&gt;Good features let you solve a problem with far less data.&lt;/p&gt;
-&lt;h4 id=&#34;overfitting-and-underfitting&#34;&gt;Overfitting and underfitting&lt;/h4&gt;
-&lt;p&gt;You must evaluate an array of different architectures (on your validation set, not on your test set, of course) &lt;strong&gt;in order to find the correct model size for your data&lt;/strong&gt;. The general workflow to find an appropriate model size is &lt;strong&gt;to start with relatively few layers and parameters, and increase the size of the layers or add new layers until&lt;/strong&gt; you see diminishing returns with regard to validation loss.&lt;/p&gt;
-&lt;h6 id=&#34;adding-weight-regularization&#34;&gt;Adding weight regularization&lt;/h6&gt;
-&lt;p&gt;You may be familiar with the principle of Occam’s razor: given two explanations for something, the explanation most likely to be correct is the simplest one—the one that makes fewer assumptions.&lt;/p&gt;
-&lt;p&gt;Thus a common way to mitigate overfitting is to put constraints on the complexity of a network by forcing its weights to take only small values, which makes the distribution of weight values more regular. This is called weight regularization, and it’s done by adding to the loss function of the network a cost associated with having large weights.&lt;/p&gt;
-&lt;p&gt;This cost comes in two flavors:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;L1 regularization—The cost added is proportional to the absolute value of the weight coefficients (the L1 norm of the weights).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;L2 regularization—The cost added is proportional to the square of the value of the weight coefficients (the L2 norm of the weights).&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Note that because &lt;strong&gt;this penalty is only added at training time&lt;/strong&gt;, &lt;strong&gt;the loss&lt;/strong&gt; for this network will be much &lt;strong&gt;higher at training than at test time&lt;/strong&gt;.&lt;/p&gt;
-&lt;h6 id=&#34;adding-dropout&#34;&gt;Adding dropout&lt;/h6&gt;
-&lt;p&gt;Let’s say a given layer would normally return a vector &lt;code&gt;[0.2, 0.5, 1.3, 0.8, 1.1] &lt;/code&gt; for a given input sample during training. &lt;strong&gt;After applying dropout, this vector will have a few zero entries distributed at random&lt;/strong&gt;: for example, [0, 0.5, 1.3, 0, 1.1]. &lt;strong&gt;The dropout rate is the fraction of the features that are zeroed out; it’s usually set between 0.2 and 0.5.&lt;/strong&gt; &lt;strong&gt;At test time, no units are dropped out&lt;/strong&gt;; instead, the layer’s output values are &lt;strong&gt;scaled down by a factor equal to the dropout rate&lt;/strong&gt;, &lt;strong&gt;to balance for&lt;/strong&gt; the fact that more units are active than at training time.&lt;/p&gt;
-&lt;p&gt;To recap, these are &lt;strong&gt;the most common ways to prevent overfitting in neural  networks&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Get more training data.&lt;/li&gt;
-&lt;li&gt;Reduce the capacity of the network.&lt;/li&gt;
-&lt;li&gt;Add weight regularization.&lt;/li&gt;
-&lt;li&gt;Add dropout.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;the-universal-workflow-of-machine-learning&#34;&gt;The universal workflow of machine learning&lt;/h4&gt;
-&lt;p&gt;For &lt;strong&gt;balanced-classification problems&lt;/strong&gt;, where every class is equally likely, &lt;strong&gt;accuracy&lt;/strong&gt; and &lt;strong&gt;area under the receiver operating characteristic curve&lt;/strong&gt; (ROC AUC) are common metrics. For &lt;strong&gt;class-imbalanced problems&lt;/strong&gt;, you can use &lt;strong&gt;precision&lt;/strong&gt; and &lt;strong&gt;recall&lt;/strong&gt;. For &lt;strong&gt;ranking problems&lt;/strong&gt; or &lt;strong&gt;multilabel classification&lt;/strong&gt;, you can use &lt;strong&gt;mean average precision&lt;/strong&gt;. And it isn’t uncommon to have to define your own &lt;strong&gt;custom metric&lt;/strong&gt; by which to measure success. To get a sense of the diversity of machine-learning success metrics and how they relate to different problem domains, it’s helpful to browse the data science competitions on &lt;strong&gt;Kaggle&lt;/strong&gt; (&lt;a href=&#34;https://kaggle.com&#34;&gt;https://kaggle.com&lt;/a&gt;); they showcase a wide range of problems and evaluation metrics.&lt;/p&gt;
-&lt;h6 id=&#34;preparing-your-data&#34;&gt;Preparing your data&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;As you saw previously, your data should be formatted as tensors.&lt;/li&gt;
-&lt;li&gt;The values taken by these tensors should usually be scaled to small values: for example, in the [-1, 1] range or [0, 1] range.&lt;/li&gt;
-&lt;li&gt;If different features take values in different ranges (heterogeneous data), then the data should be normalized.&lt;/li&gt;
-&lt;li&gt;You may want to do some feature engineering, especially for small-data problems.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&#34;developing-a-model-that-does-better-than-a-baseline&#34;&gt;Developing a model that does better than a baseline&lt;/h6&gt;
-&lt;p&gt;Assuming that things go well, you need to make three key choices to build your
-first working model:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Last-layer activation&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Loss function&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Optimization configuration&lt;/strong&gt;—What optimizer will you use? What will its learning rate be? In most cases, it’s safe to go with &lt;strong&gt;rmsprop&lt;/strong&gt; and its &lt;strong&gt;default learning rate&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Problem type&lt;/th&gt;
-&lt;th&gt;Last-layer activation&lt;/th&gt;
-&lt;th&gt;Loss function&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Binary classification&lt;/td&gt;
-&lt;td&gt;sigmoid&lt;/td&gt;
-&lt;td&gt;binary_crossentropy&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Multiclass, single-label classification&lt;/td&gt;
-&lt;td&gt;softmax&lt;/td&gt;
-&lt;td&gt;categorical_crossentropy&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Multiclass, multilabel classification&lt;/td&gt;
-&lt;td&gt;sigmoid&lt;/td&gt;
-&lt;td&gt;binary_crossentropy&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Regression to arbitrary values&lt;/td&gt;
-&lt;td&gt;None&lt;/td&gt;
-&lt;td&gt;mse&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Regression to values between 0 and 1&lt;/td&gt;
-&lt;td&gt;sigmoid&lt;/td&gt;
-&lt;td&gt;mse or binary_crossentropy&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h6 id=&#34;scaling-up-developing-a-model-that-overfits&#34;&gt;Scaling up: developing a model that overfits&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;Add layers.&lt;/li&gt;
-&lt;li&gt;Make the layers bigger.&lt;/li&gt;
-&lt;li&gt;Train for more epochs.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&#34;regularizing-your-model-and-tuning-your-hyperparameters&#34;&gt;Regularizing your model and tuning your hyperparameters&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;Add dropout.&lt;/li&gt;
-&lt;li&gt;Try different architectures: add or remove layers.&lt;/li&gt;
-&lt;li&gt;Add L1 and/or L2 regularization.&lt;/li&gt;
-&lt;li&gt;Try different hyperparameters (such as the number of units per layer or the learning rate of the optimizer) to find the optimal configuration.&lt;/li&gt;
-&lt;li&gt;Optionally, iterate on feature engineering: add new features, or remove features that don’t seem to be informative.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;part-2---deep-learning-in-practice&#34;&gt;PART 2 - DEEP LEARNING IN PRACTICE&lt;/h2&gt;
-&lt;h3 id=&#34;5deep-learning-for-computer-vision&#34;&gt;5.Deep learning for computer vision&lt;/h3&gt;
-&lt;h4 id=&#34;introduction-to-convnets&#34;&gt;Introduction to convnets&lt;/h4&gt;
-&lt;h4 id=&#34;training-a-convnet-from-scratch-on-a-small-dataset&#34;&gt;Training a convnet from scratch on a small dataset&lt;/h4&gt;
-&lt;h4 id=&#34;the-relevance-of-deep-learning-for-small-data-problems&#34;&gt;The relevance of deep learning for small-data problems&lt;/h4&gt;
-&lt;h4 id=&#34;using-a-pretrained-convnet&#34;&gt;Using a pretrained convnet&lt;/h4&gt;
-&lt;h4 id=&#34;visualizing-what-convnets-learn&#34;&gt;Visualizing what convnets learn&lt;/h4&gt;
-&lt;h3 id=&#34;6deep-learning-for-text-and-sequences&#34;&gt;6.Deep learning for text and sequences&lt;/h3&gt;
-&lt;h4 id=&#34;working-with-text-data&#34;&gt;Working with text data&lt;/h4&gt;
-&lt;h4 id=&#34;understanding-recurrent-neural-networks&#34;&gt;Understanding recurrent neural networks&lt;/h4&gt;
-&lt;h4 id=&#34;advanced-use-of-recurrent-neural-networks&#34;&gt;Advanced use of recurrent neural networks&lt;/h4&gt;
-&lt;h4 id=&#34;sequence-processing-with-convnets&#34;&gt;Sequence processing with convnets&lt;/h4&gt;
-&lt;h3 id=&#34;7advanced-deep-learning-best-practices&#34;&gt;7.Advanced deep-learning best practices&lt;/h3&gt;
-&lt;h4 id=&#34;going-beyond-the-sequential-model-the-keras-functional-api&#34;&gt;Going beyond the Sequential model: the Keras functional API&lt;/h4&gt;
-&lt;h4 id=&#34;inspecting-and-monitoring-deep-learning-models-using-keras-callbacks-and-tensorboard&#34;&gt;Inspecting and monitoring deep-learning models using Keras callbacks and TensorBoard&lt;/h4&gt;
-&lt;h4 id=&#34;getting-the-most-out-of-your-models&#34;&gt;Getting the most out of your models&lt;/h4&gt;
-&lt;h3 id=&#34;8generative-deep-learning&#34;&gt;8.Generative deep learning&lt;/h3&gt;
-&lt;h4 id=&#34;text-generation-with-lstm&#34;&gt;Text generation with LSTM&lt;/h4&gt;
-&lt;h4 id=&#34;deepdream&#34;&gt;DeepDream&lt;/h4&gt;
-&lt;h4 id=&#34;neural-style-transfer&#34;&gt;Neural style transfer&lt;/h4&gt;
-&lt;h4 id=&#34;generating-images-with-variational-autoencoders&#34;&gt;Generating images with variational autoencoders&lt;/h4&gt;
-&lt;h4 id=&#34;introduction-to-generative-adversarial-networks&#34;&gt;Introduction to generative adversarial networks&lt;/h4&gt;
-&lt;h3 id=&#34;9conclusions&#34;&gt;9.Conclusions&lt;/h3&gt;
-&lt;h4 id=&#34;key-concepts-in-review&#34;&gt;Key concepts in review&lt;/h4&gt;
-&lt;h4 id=&#34;the-limitations-of-deep-learning&#34;&gt;The limitations of deep learning&lt;/h4&gt;
-&lt;h4 id=&#34;the-future-of-deep-learning&#34;&gt;The future of deep learning&lt;/h4&gt;
-&lt;h4 id=&#34;staying-up-to-date-in-a-fast-moving-field&#34;&gt;Staying up to date in a fast-moving field&lt;/h4&gt;
-&lt;h4 id=&#34;final-wordscd-c&#34;&gt;Final wordscd C&lt;/h4&gt;
 </description>
       
     </item>

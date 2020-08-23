@@ -6,10 +6,30 @@
     <description>Recent content in Posts on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://csyezheng.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Java 3rd Library</title>
+      <link>http://csyezheng.github.io/post/programming-languages/java/the-java-3rd-party-library/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/java/the-java-3rd-party-library/</guid>
+      <description>import org.alibaba.fastjson.JSONArray; import org.alibaba.fastjson.JSONObject; import com.amazonaws.Request; import com.amazonaws.utils.StringUtils; import com.atomikos.datasource.xa.StringUtils; import com.fasterxml.jackson.core.JsonParseException; import com.fasterxml.jackson.annotation.JsonFormat; import com.fasterxml.jackson.core.io.JsonStringEncoder; import com.fasterxml.jackson.core.type.TypeReference; import com.fasterxml.jackson.databind.JavaType; import com.fasterxml.jackson.databind.DeserializationFeature; import com.fasterxml.jackson.databind.JsonMappingException; import com.fasterxml.jackson.databind.ObjectMapper; import com.google.common.cache.CacheBuilder; import com.google.common.cache.CacheLoader; import com.google.common.cache.LoadingCache; import com.google.gson.Gson; import com.ibm.db2.jcc.am.re; import com.jayway.restassured.RestAssured; import com.jayway.restassured.path.json.JsonPath; import com.jayway.restassured.config.RestAssuredconfig; import com.jayway.restassured.response.Response; import com.jayway.restassured.response.ValidatableResponse; import com.jayway.restassured.specification.RequestSpecification; import freemarker.template.Template; import freemarker.template.TemplateException; import groovy.json.internal.JsonFastParser; import groovy.json.internal.ValueMap; import org.apache.ws.security.WSSecurityException; import org.apache.ws.security.util.Base64; net.sf.json JSONArray JSONNull JSONObject org.activiti.engine https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1 commons beanutils BeanUtils; collection</description>
+    </item>
+    
+    <item>
+      <title>The Java Standard Library</title>
+      <link>http://csyezheng.github.io/post/programming-languages/java/the-java-standard-library/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/programming-languages/java/the-java-standard-library/</guid>
+      <description>Collections Interfaces Note that all the core collection interfaces are generic. For example, this is the declaration of the Collection interface.
+public interface Collection&amp;lt;E&amp;gt;... The Collection Interface List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;(c); The Collection interface contains methods that perform basic operations, such as
+ int size() boolean isEmpty() boolean contains(Object element) boolean add(E element) boolean remove(Object element) Iterator&amp;lt;E&amp;gt; iterator()  It also contains methods that operate on entire collections, such as</description>
+    </item>
     
     <item>
       <title>Mybatis Spring Boot</title>
@@ -180,32 +200,6 @@ amounts to independently training one binary classifier for each label.</descrip
       
       <guid>http://csyezheng.github.io/post/machine-learning/crash-course/</guid>
       <description>Machine Learning Crash Course Courses ML Concepts Introduction to ML First, it gives you a tool to reduce the time you spend programming. Second, it will allow you to customize your products, making them better for specific groups of people. Third, machine learning lets you solve problems that you, as a programmer, have no idea how to do by hand. machine learning changes the way you think about a problem.</description>
-    </item>
-    
-    <item>
-      <title>notes of deep learning with python</title>
-      <link>http://csyezheng.github.io/post/deep-learning/notes-deep-learning-with-python/</link>
-      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/deep-learning/notes-deep-learning-with-python/</guid>
-      <description>Deep Learning with Python PART 1 - FUNDAMENTALS OF DEEP LEARNING 1.What is deep learning? Artificial intelligence, machine learning, and deep learning Before deep learning: a brief history of machine learning Why deep learning? Why now? 2.Before we begin: the mathematical building blocks of neural networks A first look at a neural network Data representations for neural networks tensor: it’s a container for numbers. You may be already familiar with matrices, which are 2D tensors: tensors are a generalization of matrices to an arbitrary number of dimensions (note that in the context of tensors, a dimension is often called an axis).</description>
-    </item>
-    
-    <item>
-      <title>scikit-learn</title>
-      <link>http://csyezheng.github.io/post/machine-learning/scikit-learn/</link>
-      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/machine-learning/scikit-learn/</guid>
-      <description>scikit-learn   sklearn
-  preprocessing
-  MultiLabelBinarizer
-Transforms between iterable of iterables and a multilabel format (binary matrix)
-    utils
-  class_weight
-  compute_class_weight
-Estimate class weights for unbalanced datasets.
-        </description>
     </item>
     
   </channel>

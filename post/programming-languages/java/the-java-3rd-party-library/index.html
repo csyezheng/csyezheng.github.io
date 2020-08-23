@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>C&#43;&#43; Library Management - Ye Zheng&#39;s Blog</title>
+  <title>The Java 3rd Library - Ye Zheng&#39;s Blog</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,8 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="In general, you are going to have to end up with
- Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&#39;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for)." />
+  <meta name="description" content="import org.alibaba.fastjson.JSONArray; import org.alibaba.fastjson.JSONObject; import com.amazonaws.Request; import com.amazonaws.utils.StringUtils; import com.atomikos.datasource.xa.StringUtils; import com.fasterxml.jackson.core.JsonParseException; import com.fasterxml.jackson.annotation.JsonFormat; import com.fasterxml.jackson.core.io.JsonStringEncoder; import com.fasterxml.jackson.core.type.TypeReference; import com.fasterxml.jackson.databind.JavaType; import com.fasterxml.jackson.databind.DeserializationFeature; import com.fasterxml.jackson.databind.JsonMappingException; import com.fasterxml.jackson.databind.ObjectMapper; import com.google.common.cache.CacheBuilder; import com.google.common.cache.CacheLoader; import com.google.common.cache.LoadingCache; import com.google.gson.Gson; import com.ibm.db2.jcc.am.re; import com.jayway.restassured.RestAssured; import com.jayway.restassured.path.json.JsonPath; import com.jayway.restassured.config.RestAssuredconfig; import com.jayway.restassured.response.Response; import com.jayway.restassured.response.ValidatableResponse; import com.jayway.restassured.specification.RequestSpecification; import freemarker.template.Template; import freemarker.template.TemplateException; import groovy.json.internal.JsonFastParser; import groovy.json.internal.ValueMap; import org.apache.ws.security.WSSecurityException; import org.apache.ws.security.util.Base64; net.sf.json JSONArray JSONNull JSONObject org.activiti.engine https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1 commons beanutils BeanUtils; collection" />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -33,10 +32,10 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.74.3" />
 
 
-<link rel="canonical" href="http://csyezheng.github.io/content/post/programming-languages/cpp/cpp-library-management/" />
+<link rel="canonical" href="http://csyezheng.github.io/post/programming-languages/java/the-java-3rd-party-library/" />
 
 
 
@@ -54,32 +53,30 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0995afa14b62cd93e93cfc066b646c4c17a3eddca0e9d52a1d9dcf5d90aaacd3.css" integrity="sha256-CZWvoUtizZPpPPwGa2RsTBej7dyg6dUqHZ3PXZCqrNM=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
 
 
 
 
 
-<meta property="og:title" content="C&#43;&#43; Library Management" />
-<meta property="og:description" content="In general, you are going to have to end up with
- Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&#39;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for)." />
+<meta property="og:title" content="The Java 3rd Library" />
+<meta property="og:description" content="import org.alibaba.fastjson.JSONArray; import org.alibaba.fastjson.JSONObject; import com.amazonaws.Request; import com.amazonaws.utils.StringUtils; import com.atomikos.datasource.xa.StringUtils; import com.fasterxml.jackson.core.JsonParseException; import com.fasterxml.jackson.annotation.JsonFormat; import com.fasterxml.jackson.core.io.JsonStringEncoder; import com.fasterxml.jackson.core.type.TypeReference; import com.fasterxml.jackson.databind.JavaType; import com.fasterxml.jackson.databind.DeserializationFeature; import com.fasterxml.jackson.databind.JsonMappingException; import com.fasterxml.jackson.databind.ObjectMapper; import com.google.common.cache.CacheBuilder; import com.google.common.cache.CacheLoader; import com.google.common.cache.LoadingCache; import com.google.gson.Gson; import com.ibm.db2.jcc.am.re; import com.jayway.restassured.RestAssured; import com.jayway.restassured.path.json.JsonPath; import com.jayway.restassured.config.RestAssuredconfig; import com.jayway.restassured.response.Response; import com.jayway.restassured.response.ValidatableResponse; import com.jayway.restassured.specification.RequestSpecification; import freemarker.template.Template; import freemarker.template.TemplateException; import groovy.json.internal.JsonFastParser; import groovy.json.internal.ValueMap; import org.apache.ws.security.WSSecurityException; import org.apache.ws.security.util.Base64; net.sf.json JSONArray JSONNull JSONObject org.activiti.engine https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1 commons beanutils BeanUtils; collection" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://csyezheng.github.io/content/post/programming-languages/cpp/cpp-library-management/" />
-<meta property="article:published_time" content="2019-09-16T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-09-16T00:00:00+00:00" />
-<meta itemprop="name" content="C&#43;&#43; Library Management">
-<meta itemprop="description" content="In general, you are going to have to end up with
- Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&#39;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).">
-<meta itemprop="datePublished" content="2019-09-16T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-09-16T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="808">
+<meta property="og:url" content="http://csyezheng.github.io/post/programming-languages/java/the-java-3rd-party-library/" />
+<meta property="article:published_time" content="2020-08-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-08-23T00:00:00+00:00" />
+<meta itemprop="name" content="The Java 3rd Library">
+<meta itemprop="description" content="import org.alibaba.fastjson.JSONArray; import org.alibaba.fastjson.JSONObject; import com.amazonaws.Request; import com.amazonaws.utils.StringUtils; import com.atomikos.datasource.xa.StringUtils; import com.fasterxml.jackson.core.JsonParseException; import com.fasterxml.jackson.annotation.JsonFormat; import com.fasterxml.jackson.core.io.JsonStringEncoder; import com.fasterxml.jackson.core.type.TypeReference; import com.fasterxml.jackson.databind.JavaType; import com.fasterxml.jackson.databind.DeserializationFeature; import com.fasterxml.jackson.databind.JsonMappingException; import com.fasterxml.jackson.databind.ObjectMapper; import com.google.common.cache.CacheBuilder; import com.google.common.cache.CacheLoader; import com.google.common.cache.LoadingCache; import com.google.gson.Gson; import com.ibm.db2.jcc.am.re; import com.jayway.restassured.RestAssured; import com.jayway.restassured.path.json.JsonPath; import com.jayway.restassured.config.RestAssuredconfig; import com.jayway.restassured.response.Response; import com.jayway.restassured.response.ValidatableResponse; import com.jayway.restassured.specification.RequestSpecification; import freemarker.template.Template; import freemarker.template.TemplateException; import groovy.json.internal.JsonFastParser; import groovy.json.internal.ValueMap; import org.apache.ws.security.WSSecurityException; import org.apache.ws.security.util.Base64; net.sf.json JSONArray JSONNull JSONObject org.activiti.engine https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1 commons beanutils BeanUtils; collection">
+<meta itemprop="datePublished" content="2020-08-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-08-23T00:00:00+00:00" />
+<meta itemprop="wordCount" content="229">
 
 
 
-<meta itemprop="keywords" content="Cpp," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="C&#43;&#43; Library Management"/>
-<meta name="twitter:description" content="In general, you are going to have to end up with
- Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&#39;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for)."/>
+<meta itemprop="keywords" content="Java," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Java 3rd Library"/>
+<meta name="twitter:description" content="import org.alibaba.fastjson.JSONArray; import org.alibaba.fastjson.JSONObject; import com.amazonaws.Request; import com.amazonaws.utils.StringUtils; import com.atomikos.datasource.xa.StringUtils; import com.fasterxml.jackson.core.JsonParseException; import com.fasterxml.jackson.annotation.JsonFormat; import com.fasterxml.jackson.core.io.JsonStringEncoder; import com.fasterxml.jackson.core.type.TypeReference; import com.fasterxml.jackson.databind.JavaType; import com.fasterxml.jackson.databind.DeserializationFeature; import com.fasterxml.jackson.databind.JsonMappingException; import com.fasterxml.jackson.databind.ObjectMapper; import com.google.common.cache.CacheBuilder; import com.google.common.cache.CacheLoader; import com.google.common.cache.LoadingCache; import com.google.gson.Gson; import com.ibm.db2.jcc.am.re; import com.jayway.restassured.RestAssured; import com.jayway.restassured.path.json.JsonPath; import com.jayway.restassured.config.RestAssuredconfig; import com.jayway.restassured.response.Response; import com.jayway.restassured.response.ValidatableResponse; import com.jayway.restassured.specification.RequestSpecification; import freemarker.template.Template; import freemarker.template.TemplateException; import groovy.json.internal.JsonFastParser; import groovy.json.internal.ValueMap; import org.apache.ws.security.WSSecurityException; import org.apache.ws.security.util.Base64; net.sf.json JSONArray JSONNull JSONObject org.activiti.engine https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1 commons beanutils BeanUtils; collection"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -297,141 +294,211 @@
       <div class="content-wrapper">
         <div id="content" class="content container">
           <article class="post bg-white">
-  
-  <header class="post-header">
-    <h1 class="post-title">C&#43;&#43; Library Management</h1>
     
-    <div class="post-meta">
-      <time datetime="2019-09-16" class="post-time">
-        2019-09-16
-      </time>
-    </div>
-  </header>
+    <header class="post-header">
+      <h1 class="post-title">The Java 3rd Library</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-08-23" class="post-time">
+          2020-08-23
+        </time>
+        <div class="post-category">
+            <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
+            <a href="http://csyezheng.github.io/categories/java/"> Java </a>
+            
+          </div>
+        
 
-  
-  
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#linux">Linux</a>
-      <ul>
-        <li><a href="#use-linux-distributions-packaging-system">Use Linux distribution's packaging system</a></li>
-        <li><a href="#build-and-install">build and install</a></li>
-        <li><a href="#header-only-library">header-only library</a></li>
-      </ul>
-    </li>
-    <li><a href="#windows">Windows</a>
-      <ul>
-        <li><a href="#configuring-ms-visual-c-to-use-external-libraries">Configuring MS Visual C++ to use external libraries</a></li>
-        <li><a href="#vcpkg">vcpkg</a></li>
-        <li><a href="#qt">QT</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
 
-  
-  <div class="post-content">
-      <p>In general, you are going to have to end up with</p>
+    
+    <div class="post-content">
+      <p>import org.alibaba.fastjson.JSONArray;
+import org.alibaba.fastjson.JSONObject;
+import com.amazonaws.Request;
+import com.amazonaws.utils.StringUtils;
+import com.atomikos.datasource.xa.StringUtils;</p>
+<p>import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.core.io.JsonStringEncoder;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JavaType;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;</p>
+<p>import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;</p>
+<p>import com.google.gson.Gson;</p>
+<p>import com.ibm.db2.jcc.am.re;</p>
+<p>import com.jayway.restassured.RestAssured;
+import com.jayway.restassured.path.json.JsonPath;
+import com.jayway.restassured.config.RestAssuredconfig;
+import com.jayway.restassured.response.Response;
+import com.jayway.restassured.response.ValidatableResponse;
+import com.jayway.restassured.specification.RequestSpecification;</p>
+<p>import freemarker.template.Template;
+import freemarker.template.TemplateException;</p>
+<p>import groovy.json.internal.JsonFastParser;
+import groovy.json.internal.ValueMap;</p>
+<p>import org.apache.ws.security.WSSecurityException;
+import org.apache.ws.security.util.Base64;</p>
 <ul>
-<li>Header files in a directory somewhere</li>
-<li>library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won't need this.</li>
-</ul>
-<p>You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).</p>
-<p>When you try to compile with the library, you may need a command line option (eg <code>-I</code>) to specify the directory containing the header files, and you may need a linker option (eg <code>-l</code>) to tell the linker to link against your library.</p>
-<h2 id="linux">Linux</h2>
-<h3 id="use-linux-distributions-packaging-system">Use Linux distribution's packaging system</h3>
-<p>If you are installing the libraries with a package manager, they will probably all end up in the right place. If not you can get the compiler to search for the by providing the an additional search path using the <code>-L &lt;path&gt;</code> flag. You should be able to pass this extra flag to CMake.</p>
-<h3 id="build-and-install">build and install</h3>
-<pre><code>./configure
-make
-make install
-</code></pre><p>two main options for where to put the library:</p>
+<li>net.sf.json
 <ul>
-<li><code>/usr/local</code> (libraries under <code>/usr/local/lib</code>, headers under <code>/usr/local/include</code>).</li>
-<li>Under your project directory, as you did under Windows. This has the advantages of not requiring root access and not making systemwide changes, but you'll have to update your project's include paths and library paths, and you'll have to put any shared library files someplace where the <a href="http://www.kernel.org/doc/man-pages/online/pages/man8/ld.so.8.html">dynamic linker</a> can find them (using <code>LD_LIBRARY_PATH</code> or <code>ld.so.conf</code> - see the link for more details).</li>
+<li>JSONArray</li>
+<li>JSONNull</li>
+<li>JSONObject</li>
 </ul>
-<h3 id="header-only-library">header-only library</h3>
-<p>No linking against pre-compiled code is required for header-only library. It can be included directly by</p>
-<pre><code>#include &lt;boost/numeric/odeint.hpp&gt;
-using namespace boost::numeric::odeint;
-</code></pre><hr>
-<p>In a unix environment for boost you can install it in a path where your compiler looks for headers, or specify the path manually.</p>
-<p>In unix /usr/include or /usr/local/include is the location where the compiler looks for headers.</p>
-<p>While compiling you have to link your project with boost.
-For example:
-g++ -I /usr/local/boost -lboost_system <!-- raw HTML omitted -->.cpp</p>
-<p>Or, if you are using cmake in your project, there is a findboost option where you can specify which boost headers you want to be included in your project.</p>
-<p><code>/usr/local/lib/</code> should be the right folder for this. It is the normal place for keeping shared library files installed manually from source code. If you build a library by running <code>./configure</code>, <code>make</code>, and <code>sudo make install</code>, it will <em>usually</em> install there automatically.</p>
-<hr>
-<p>Example</p>
-<p>Eigen c++ is a header only library: you don't have to install it, you just download it, unzip it and link your code against it.</p>
-<p>For example, if your code is in <code>my_favorite_cpp_folder</code>, you do:</p>
-<pre><code>cd my_favorite_cpp_folder
-</code></pre><p>and, assuming your compiler is <code>gcc</code> and the eigen headers are in<code>/usr/local/include/eigen3/unsupported/</code> and the name of your source file is <code>my_favorite_cpp_source_file.cpp</code>, you compile and code and link it to the eigen headers by doing:</p>
-<pre><code>g++ -I /usr/local/include/eigen3/ my_favorite_cpp_source_file.cpp -o my_favorite_cpp_source_file
-</code></pre><p>(from your code output posted above, the eigen headers are in <code>/usr/local/include/eigen3/</code> in your computer)</p>
-<p>Since the header files are in <code>/usr/local/include/</code> folder you don't need to compile your source-code files against them using &ldquo;<code>g++ -I</code> &hellip;. .&rdquo;</p>
-<hr>
-<p><a href="">up vote</a>6<a href="">down vote</a>accepted</p>
-<ol>
-<li>Use the <code>-I</code> compiler option to point to the 3rd party libraries directory (<code>-I/usr/local/include/ohNet</code>)</li>
-<li>Use <code>#include &quot;[whatever you need from oHNet].h&quot;</code> in your header files and compilation units as needed (<strong>Note:</strong> you might need to put relative prefix pathes for subdirecories in the 3rd party include paths tree here!)</li>
-<li>Use the <code>-L</code> linker option to specify a path to the 3rd party libs you need (<code>-L/usr/local/lib</code> probably)</li>
-<li>Use the <code>-l</code> linker option to specify any concrete 3rd libs you need (<code>-l[oHNet]</code>probably)</li>
-</ol>
-<p>Look in the directories what actually was installed there to figure what to place for <code>[whatever you need from oHNet].h</code> and <code>[oHNet]</code>, s.th. like <code>liboHNet.a</code> for the latter.</p>
-<p>You didn't tag [tag:Eclipse CDT] explicitly here, but go to the Project-&gt;Properties-&gt;C++ Builder-&gt;Settings Dialog and look for C/C++ Includes and Linker Options.</p>
-<hr>
-<h2 id="windows">Windows</h2>
-<h3 id="configuring-ms-visual-c-to-use-external-libraries">Configuring MS Visual C++ to use external libraries</h3>
-<ol>
-<li>
-<p>decompress file and then have the binary part of the Boost library built.</p>
 </li>
-<li>
-<p>Set up the include directory</p>
-<p>This is the directory that contains the header files (<em>.h/hpp</em>)</p>
-<p><img src="https://upload.wikimedia.org/wikibooks/en/c/ce/Visual_studio_includedirectories.png" alt="include directories"></p>
+</ul>
+<p>org.activiti.engine
+<a href="https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1">https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1</a></p>
+<ul>
+<li>commons
+<ul>
+<li>beanutils
+<ul>
+<li>BeanUtils;</li>
+</ul>
 </li>
-<li>
-<p>Set up the library directory</p>
-<p>This is the directory that contains the pre-compiled library files (<em>.lib</em>)</p>
-<p><img src="https://upload.wikimedia.org/wikibooks/en/0/01/Visual_studio_librarydirectories.png" alt="library directories"></p>
+<li>collection
+<ul>
+<li>CollectionUtils</li>
+</ul>
 </li>
-<li>
-<p>Library files</p>
-<p>Enter library filenames in <em>additional dependencies</em> for the libraries to use, if your compiler or the library don't supports auto-linking.</p>
-<p><img src="https://upload.wikimedia.org/wikibooks/en/0/08/Visual_studio_additionaldependencies.png" alt="library filenames (the Boost &ldquo;REGEXP&rdquo;-library in this example)"></p>
+<li>collections
+<ul>
+<li>CollectionUtils</li>
+</ul>
 </li>
-<li>
-<p>Dynamic libraries</p>
-<p>In case of dynamically loaded (.dll) libraries, one also has to place the DLL-files either in the same folder as the executable, or in the system PATH.</p>
+<li>httpclient
+<ul>
+<li>DefaultHttpMethodRetryHandler</li>
+<li>HttpClient;</li>
+<li>HttpException</li>
+<li>HttpMethod;</li>
+<li>HttpStatus;</li>
+<li>NameValuePair;</li>
+<li>UsernamePasswordCredentials</li>
+<li>URIException;</li>
+<li>methods
+<ul>
+<li>GetMethod;</li>
+<li>PostMethod;</li>
+<li>PutMehod</li>
+<li>RequestEntity</li>
+<li>StringRequestEntity;</li>
+</ul>
 </li>
-<li>
-<p>Run-time library</p>
-<p>The libraries also have to be compiled with the same run-time library as the one used in your project.</p>
-<p><img src="https://upload.wikimedia.org/wikibooks/en/3/35/Visual_studio_runtimelibrary.png" alt="selection of run-time library"></p>
-<p><a href="https://blog.csdn.net/tjq980303/article/details/54585369">https://blog.csdn.net/tjq980303/article/details/54585369</a></p>
-<p><a href="https://techoverflow.net/2013/03/15/simple-c-http-download-using-libcurl-easy-api/">https://techoverflow.net/2013/03/15/simple-c-http-download-using-libcurl-easy-api/</a></p>
+<li>.HttpConnectionManagerParams;</li>
+<li>params.
+<ul>
+<li>HttpMethodParams;</li>
+</ul>
 </li>
-</ol>
-<h3 id="vcpkg">vcpkg</h3>
-<p><a href="https://link.zhihu.com/?target=https%3A//github.com/Microsoft/vcpkg">Microsoft/vcpkg: VC++ Packaging Tool</a></p>
-<p><a href="https://link.zhihu.com/?target=https%3A//blogs.msdn.microsoft.com/vcblog/category/vcpkg/">Visual C++ Team Blog</a></p>
-<p><a href="https://www.zhihu.com/question/47331502">https://www.zhihu.com/question/47331502</a></p>
-<p><a href="https://www.zhihu.com/question/263416411">https://www.zhihu.com/question/263416411</a></p>
-<h3 id="qt">QT</h3>
-<p><a href="http://doc.qt.io/qtcreator/creator-project-qmake-libraries.html">http://doc.qt.io/qtcreator/creator-project-qmake-libraries.html</a></p>
+</ul>
+</li>
+<li>io
+<ul>
+<li>FileUtils</li>
+</ul>
+</li>
+<li>Lang
+<ul>
+<li>ClassUtils;</li>
+<li>StringUtils;</li>
+<li>EqualsBuilder</li>
+<li>HashCodeBuilder</li>
+<li>time
+<ul>
+<li>DateUtils</li>
+<li>StopWatch</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>lang3
+<ul>
+<li>BooleanUtils</li>
+<li>StringUtils</li>
+<li>time
+<ul>
+<li>DateFormatUtils</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>org.apache.http.client.HttpClient使用方法
+一.org.apache.commons</p>
+<p>import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;</p>
+<p>import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;</p>
+<p>import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionDefinition;
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.DefaultTransactionDefinition;</p>
+<p>import org.springframework.core.io.Resource;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.core.io.support.ResourcePatternResolver;</p>
+<p>import org.springframework.util.ClassUtils;</p>
+<p>import org.springframework.util.Assert;
+import org.springframework.util.CollectionUtils;
+import org.springframework.util.ReflectionUtils;
+import org.springframework.util.StringUtils;</p>
+<p>import org.apache.ibatis.annotations.Param;
+session.Configuration
+Session.SqlsessionFactory</p>
+<p>org.apache.http
+org.apache.commons.dbcp2
+org.apache.commons.collections</p>
+<p>fastjson
+mysql-connector-java
+liquibase-core
+liquibase-maven-plugin
+commons.dbcp
+commons.collections
+commons-lang3
+import org.apache.commons.lang.StringUtils;
+jedis</p>
+<p>junit
+dbunit
+spring-test-dbunit
+spring-test
+spring-boot-starter-test</p>
+<p>disruptor</p>
+<p>cxf-spring-boot-starter-jaxrs
+cxf-spring-boot-starter-jaxws
+cxf-rt-rs-service-description-swagger
+swagger-ui</p>
+<p>aaa</p>
 
-  </div>
+    </div>
 
-  
-  
+    
+    
 <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
@@ -440,7 +507,7 @@ g++ -I /usr/local/boost -lboost_system <!-- raw HTML omitted -->.cpp</p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-      2019-09-16
+      2020-08-23
       
     </span>
   </p>
@@ -452,12 +519,41 @@ g++ -I /usr/local/boost -lboost_system <!-- raw HTML omitted -->.cpp</p>
 </div>
 
 
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://csyezheng.github.io/tags/java/">Java</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/programming-languages/java/the-java-standard-library/">
+            <span class="next-text nav-default">The Java Standard Library</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
   
   
-</article>
 
-
-
+  
+  
 
   
 
