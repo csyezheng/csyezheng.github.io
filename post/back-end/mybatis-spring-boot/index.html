@@ -23,8 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="Creating a project spring init -d=web --build=maven mysite Declare Dependencies &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis.spring.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis-spring-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.1.3&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; MyBatis-Spring-Boot-Starter will:
- Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers, link them to the SqlSessionTemplate and register them to Spring context so they can be injected into your beans  MyBatis integration with Spring Boot spring init -d=web,mybatis,h2 --build=maven mysite Create sql files vim src/main/resources/schema." />
+  <meta name="description" content="Creating a project spring init -d=web --build=maven mysite Declare Dependencies cd mysite vim pom.xml &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.liquibase&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;liquibase-core&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.10.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis.spring.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis-spring-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.1.3&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;8.0.20&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; MyBatis-Spring-Boot-Starter will: Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers," />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -61,26 +60,23 @@
 
 
 <meta property="og:title" content="Mybatis Spring Boot" />
-<meta property="og:description" content="Creating a project spring init -d=web --build=maven mysite Declare Dependencies &lt;dependency&gt; &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt; &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt; &lt;version&gt;2.1.3&lt;/version&gt; &lt;/dependency&gt; MyBatis-Spring-Boot-Starter will:
- Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers, link them to the SqlSessionTemplate and register them to Spring context so they can be injected into your beans  MyBatis integration with Spring Boot spring init -d=web,mybatis,h2 --build=maven mysite Create sql files vim src/main/resources/schema." />
+<meta property="og:description" content="Creating a project spring init -d=web --build=maven mysite Declare Dependencies cd mysite vim pom.xml &lt;dependency&gt; &lt;groupId&gt;org.liquibase&lt;/groupId&gt; &lt;artifactId&gt;liquibase-core&lt;/artifactId&gt; &lt;version&gt;3.10.2&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt; &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt; &lt;version&gt;2.1.3&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;mysql&lt;/groupId&gt; &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt; &lt;version&gt;8.0.20&lt;/version&gt; &lt;/dependency&gt; MyBatis-Spring-Boot-Starter will: Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers," />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://csyezheng.github.io/post/back-end/mybatis-spring-boot/" />
 <meta property="article:published_time" content="2020-08-09T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-08-09T00:00:00+00:00" />
 <meta itemprop="name" content="Mybatis Spring Boot">
-<meta itemprop="description" content="Creating a project spring init -d=web --build=maven mysite Declare Dependencies &lt;dependency&gt; &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt; &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt; &lt;version&gt;2.1.3&lt;/version&gt; &lt;/dependency&gt; MyBatis-Spring-Boot-Starter will:
- Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers, link them to the SqlSessionTemplate and register them to Spring context so they can be injected into your beans  MyBatis integration with Spring Boot spring init -d=web,mybatis,h2 --build=maven mysite Create sql files vim src/main/resources/schema.">
+<meta itemprop="description" content="Creating a project spring init -d=web --build=maven mysite Declare Dependencies cd mysite vim pom.xml &lt;dependency&gt; &lt;groupId&gt;org.liquibase&lt;/groupId&gt; &lt;artifactId&gt;liquibase-core&lt;/artifactId&gt; &lt;version&gt;3.10.2&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt; &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt; &lt;version&gt;2.1.3&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;mysql&lt;/groupId&gt; &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt; &lt;version&gt;8.0.20&lt;/version&gt; &lt;/dependency&gt; MyBatis-Spring-Boot-Starter will: Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers,">
 <meta itemprop="datePublished" content="2020-08-09T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2020-08-09T00:00:00+00:00" />
-<meta itemprop="wordCount" content="655">
+<meta itemprop="wordCount" content="999">
 
 
 
 <meta itemprop="keywords" content="Mybatis,Spring," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mybatis Spring Boot"/>
-<meta name="twitter:description" content="Creating a project spring init -d=web --build=maven mysite Declare Dependencies &lt;dependency&gt; &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt; &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt; &lt;version&gt;2.1.3&lt;/version&gt; &lt;/dependency&gt; MyBatis-Spring-Boot-Starter will:
- Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers, link them to the SqlSessionTemplate and register them to Spring context so they can be injected into your beans  MyBatis integration with Spring Boot spring init -d=web,mybatis,h2 --build=maven mysite Create sql files vim src/main/resources/schema."/>
+<meta name="twitter:description" content="Creating a project spring init -d=web --build=maven mysite Declare Dependencies cd mysite vim pom.xml &lt;dependency&gt; &lt;groupId&gt;org.liquibase&lt;/groupId&gt; &lt;artifactId&gt;liquibase-core&lt;/artifactId&gt; &lt;version&gt;3.10.2&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt; &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt; &lt;version&gt;2.1.3&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;mysql&lt;/groupId&gt; &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt; &lt;version&gt;8.0.20&lt;/version&gt; &lt;/dependency&gt; MyBatis-Spring-Boot-Starter will: Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers,"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -330,7 +326,12 @@
     <li><a href="#creating-a-project">Creating a project</a></li>
     <li><a href="#declare-dependencies">Declare Dependencies</a>
       <ul>
-        <li><a href="#mybatis-integration-with-spring-boot">MyBatis integration with Spring Boot</a></li>
+        <li><a href="#applicationproperties">application.properties</a></li>
+        <li><a href="#dbchangelog">dbchangelog</a></li>
+        <li><a href="#run-a-spring-boot-application">Run a spring boot application</a></li>
+        <li><a href="#create-table">Create table</a></li>
+        <li><a href="#create-a-domain-class">Create a domain class</a></li>
+        <li><a href="#create-a-dao">Create a DAO</a></li>
       </ul>
     </li>
   </ul>
@@ -343,10 +344,22 @@
       <h2 id="creating-a-project">Creating a project</h2>
 <pre><code>spring init -d=web --build=maven mysite
 </code></pre><h2 id="declare-dependencies">Declare Dependencies</h2>
-<pre><code>&lt;dependency&gt;
+<pre><code>cd mysite
+vim pom.xml
+</code></pre><pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.liquibase&lt;/groupId&gt;
+    &lt;artifactId&gt;liquibase-core&lt;/artifactId&gt;
+    &lt;version&gt;3.10.2&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre><pre><code>&lt;dependency&gt;
     &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;
     &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;
     &lt;version&gt;2.1.3&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre><pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;mysql&lt;/groupId&gt;
+    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+    &lt;version&gt;8.0.20&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre><p>MyBatis-Spring-Boot-Starter will:</p>
 <ul>
@@ -355,29 +368,121 @@
 <li>Will create and register an instance of a <code>SqlSessionTemplate</code> got out of the <code>SqlSessionFactory</code></li>
 <li>Auto-scan your mappers, link them to the <code>SqlSessionTemplate</code> and register them to Spring context so they can be injected into your beans</li>
 </ul>
-<h3 id="mybatis-integration-with-spring-boot">MyBatis integration with Spring Boot</h3>
-<pre><code>spring init -d=web,mybatis,h2 --build=maven mysite
-</code></pre><h6 id="create-sql-files">Create sql files</h6>
-<pre><code>vim src/main/resources/schema.sql
-</code></pre><pre><code>DROP TABLE IF EXISTS city;
-DROP TABLE IF EXISTS hotel;
+<h3 id="applicationproperties">application.properties</h3>
+<pre><code>spring.datasource.username=root
+spring.datasource.password=123456
+spring.datasource.url=jdbc:mysql://127.0.0.1:3306/discovery?characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=false&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=GMT%2B8&amp;nullCatalogMeansCurrent=true&amp;allowPublicKeyRetrieval=true
+spring.datasource.driver=com.mysql.cj.jdbc.Driver
 
-CREATE TABLE city
-(
-  id      INT PRIMARY KEY auto_increment,
-  name    VARCHAR,
-  state   VARCHAR,
-  country VARCHAR
-);
+# https://docs.spring.io/spring-boot/docs/2.1.1.RELEASE/reference/html/howto-database-initialization.html#howto-execute-liquibase-database-migrations-on-startup
+spring.liquibase.change-log=classpath:/db/changelog/db.changelog-master.xml
+spring.liquibase.enabled=true
+spring.liquibase.contexts=dev, faker
+</code></pre><h3 id="dbchangelog">dbchangelog</h3>
+<pre><code>vim src/main/resources/db/changelog/db.changelog-master.xml
+</code></pre><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;databaseChangeLog
+        xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog&quot;
+        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+        xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog
+	  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd&quot;&gt;
+    &lt;include file=&quot;db/changelog/db.changelog-1.0.xml&quot; relativeToChangelogFile=&quot;false&quot;/&gt;
+&lt;/databaseChangeLog&gt;
+</code></pre><pre><code>vim src/main/resources/db/changelog/db.changelog-1.0.xml
+</code></pre><pre><code>&lt;databaseChangeLog
+        xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog&quot;
+        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+        xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd&quot;&gt;
+&lt;/databaseChangeLog&gt;
+</code></pre><h3 id="run-a-spring-boot-application">Run a spring boot application</h3>
+<p>Hot Swapping</p>
+<pre><code>    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;
+        &lt;scope&gt;runtime&lt;/scope&gt;
+        &lt;optional&gt;true&lt;/optional&gt;
+    &lt;/dependency&gt;
+</code></pre><pre><code>&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+            &lt;!-- enable forking --&gt;
+            &lt;configuration&gt;
+                &lt;fork&gt;true&lt;/fork&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre><p>Run a created application using the Spring Boot Maven Plugin.</p>
+<pre><code>vim pom.xml
+</code></pre><pre><code>&lt;properties&gt;
+  &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;
+  &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;
+&lt;/properties&gt;
+</code></pre><pre><code>&lt;build&gt;
+  &lt;plugins&gt;
+    &lt;plugin&gt;
+      &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+      &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+      &lt;version&gt;3.6.1&lt;/version&gt;
+      &lt;configuration&gt;
+        &lt;source&gt;1.8&lt;/source&gt;
+        &lt;target&gt;1.8&lt;/target&gt;
+      &lt;/configuration&gt;
+    &lt;/plugin&gt;
+  &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre><pre><code>./mvnw spring-boot:run
+</code></pre><p>Database generate two table:</p>
+<ul>
+<li>DATABASECHANGELOG</li>
+<li>DATABASECHANGELOGLOCK</li>
+</ul>
+<p><strong>atabasechangelog ：用于 Liquibase 操作记录，以行的形式跟踪每个</strong>*<strong>变更集*****，并由“ id”，“ author”和“ filename”列的组合标识。</strong></p>
+<p><strong>databasechangeloglock ：来确保一次仅运行一个</strong> <strong>Liquibase</strong> <strong>实例。</strong></p>
+<h3 id="create-table">Create table</h3>
+<pre><code>vim src/main/resources/db/changelog/db.changelog-1.0.xml
+</code></pre><pre><code>&lt;databaseChangeLog
+        xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog&quot;
+        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+        xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd&quot;&gt;
 
-CREATE TABLE hotel 
-(
-  city    INT,
-  name    VARCHAR,
-  address VARCHAR,
-  zip     VARCHAR
-);
-</code></pre><h6 id="create-a-domain-class">Create a domain class</h6>
+    &lt;changeSet author=&quot;liquibase-docs&quot; id=&quot;create-city&quot;&gt;
+        &lt;preConditions onFail=&quot;MARK_RAN&quot;&gt;
+            &lt;not&gt;
+                &lt;tableExists tableName=&quot;city&quot;/&gt;
+            &lt;/not&gt;
+        &lt;/preConditions&gt;
+        &lt;createTable remarks=&quot;城市&quot; tableName=&quot;city&quot;&gt;
+            &lt;column name=&quot;id&quot; type=&quot;BIGINT&quot; autoIncrement=&quot;true&quot;&gt;
+                &lt;constraints primaryKey=&quot;true&quot;/&gt;
+            &lt;/column&gt;
+            &lt;column name=&quot;name&quot; remarks=&quot;名称&quot; type=&quot;VARCHAR(255)&quot;/&gt;
+            &lt;column name=&quot;state&quot; remarks=&quot;州&quot; type=&quot;VARCHAR(255)&quot;/&gt;
+            &lt;column name=&quot;country&quot; remarks=&quot;国家&quot; type=&quot;VARCHAR(255)&quot;/&gt;
+        &lt;/createTable&gt;
+    &lt;/changeSet&gt;
+
+    &lt;changeSet author=&quot;liquibase-docs&quot; id=&quot;create-hotel&quot;&gt;
+        &lt;preConditions onFail=&quot;MARK_RAN&quot;&gt;
+            &lt;not&gt;
+                &lt;tableExists tableName=&quot;hotel&quot;/&gt;
+            &lt;/not&gt;
+        &lt;/preConditions&gt;
+        &lt;createTable remarks=&quot;酒店&quot; tableName=&quot;hotel&quot;&gt;
+            &lt;column name=&quot;id&quot; type=&quot;BIGINT&quot;/&gt;
+            &lt;column name=&quot;city&quot; remarks=&quot;城市&quot; type=&quot;VARCHAR(255)&quot;/&gt;
+            &lt;column name=&quot;name&quot; remarks=&quot;名称&quot; type=&quot;VARCHAR(255)&quot;/&gt;
+            &lt;column name=&quot;address&quot; remarks=&quot;地址&quot; type=&quot;VARCHAR(255)&quot;/&gt;
+            &lt;column name=&quot;zip&quot; remarks=&quot;邮编&quot; type=&quot;VARCHAR(255)&quot;/&gt;
+        &lt;/createTable&gt;
+    &lt;/changeSet&gt;
+
+&lt;/databaseChangeLog&gt;
+</code></pre><h3 id="create-a-domain-class">Create a domain class</h3>
 <pre><code>mkdir src/main/java/com/example/mysite/domain
 </code></pre><pre><code>vim src/main/java/com/example/mysite/City.java
 </code></pre><pre><code>package com.example.mysite.domain;
@@ -489,7 +594,7 @@ public class Hotel implements Serializable {
   }
 
 }
-</code></pre><h6 id="create-a-dao">Create a DAO</h6>
+</code></pre><h3 id="create-a-dao">Create a DAO</h3>
 <pre><code>mkdir src/main/java/com/example/mysite/dao
 </code></pre><pre><code>vim src/main/java/com/example/mysite/dao/CityDao.java
 </code></pre><pre><code>package com.example.mysite.dao;
@@ -600,46 +705,6 @@ logging.level.com.example.mysite.mapper=TRACE
         &lt;mapper resource=&quot;com/example/mysite/mapper/HotelMapper.xml&quot;/&gt;
     &lt;/mappers&gt;
 &lt;/configuration&gt;
-</code></pre><h6 id="run-a-spring-boot-application">Run a spring boot application</h6>
-<p>Hot Swapping</p>
-<pre><code>    &lt;dependency&gt;
-        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-        &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;
-        &lt;scope&gt;runtime&lt;/scope&gt;
-        &lt;optional&gt;true&lt;/optional&gt;
-    &lt;/dependency&gt;
-</code></pre><pre><code>&lt;build&gt;
-    &lt;plugins&gt;
-        &lt;plugin&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
-            &lt;!-- enable forking --&gt;
-            &lt;configuration&gt;
-                &lt;fork&gt;true&lt;/fork&gt;
-            &lt;/configuration&gt;
-        &lt;/plugin&gt;
-    &lt;/plugins&gt;
-&lt;/build&gt;
-</code></pre><p>Run a created application using the Spring Boot Maven Plugin.</p>
-<pre><code>vim pom.xml
-</code></pre><pre><code>&lt;properties&gt;
-  &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;
-  &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;
-&lt;/properties&gt;
-</code></pre><pre><code>&lt;build&gt;
-  &lt;plugins&gt;
-    &lt;plugin&gt;
-      &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
-      &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
-      &lt;version&gt;3.6.1&lt;/version&gt;
-      &lt;configuration&gt;
-        &lt;source&gt;1.8&lt;/source&gt;
-        &lt;target&gt;1.8&lt;/target&gt;
-      &lt;/configuration&gt;
-    &lt;/plugin&gt;
-  &lt;/plugins&gt;
-&lt;/build&gt;
-</code></pre><pre><code>./mvnw spring-boot:run
 </code></pre>
     </div>
 

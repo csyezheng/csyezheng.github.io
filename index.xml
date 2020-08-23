@@ -34,10 +34,22 @@
         <description>&lt;h2 id=&#34;creating-a-project&#34;&gt;Creating a project&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;spring init -d=web --build=maven mysite
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;declare-dependencies&#34;&gt;Declare Dependencies&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;dependency&amp;gt;
+&lt;pre&gt;&lt;code&gt;cd mysite
+vim pom.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;org.liquibase&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;liquibase-core&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;3.10.2&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;dependency&amp;gt;
     &amp;lt;groupId&amp;gt;org.mybatis.spring.boot&amp;lt;/groupId&amp;gt;
     &amp;lt;artifactId&amp;gt;mybatis-spring-boot-starter&amp;lt;/artifactId&amp;gt;
     &amp;lt;version&amp;gt;2.1.3&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;8.0.20&amp;lt;/version&amp;gt;
 &amp;lt;/dependency&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;MyBatis-Spring-Boot-Starter will:&lt;/p&gt;
 &lt;ul&gt;
@@ -46,29 +58,121 @@
 &lt;li&gt;Will create and register an instance of a &lt;code&gt;SqlSessionTemplate&lt;/code&gt; got out of the &lt;code&gt;SqlSessionFactory&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Auto-scan your mappers, link them to the &lt;code&gt;SqlSessionTemplate&lt;/code&gt; and register them to Spring context so they can be injected into your beans&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;mybatis-integration-with-spring-boot&#34;&gt;MyBatis integration with Spring Boot&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;spring init -d=web,mybatis,h2 --build=maven mysite
-&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;create-sql-files&#34;&gt;Create sql files&lt;/h6&gt;
-&lt;pre&gt;&lt;code&gt;vim src/main/resources/schema.sql
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;DROP TABLE IF EXISTS city;
-DROP TABLE IF EXISTS hotel;
+&lt;h3 id=&#34;applicationproperties&#34;&gt;application.properties&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;spring.datasource.username=root
+spring.datasource.password=123456
+spring.datasource.url=jdbc:mysql://127.0.0.1:3306/discovery?characterEncoding=utf8&amp;amp;zeroDateTimeBehavior=convertToNull&amp;amp;useSSL=false&amp;amp;useJDBCCompliantTimezoneShift=true&amp;amp;useLegacyDatetimeCode=false&amp;amp;serverTimezone=GMT%2B8&amp;amp;nullCatalogMeansCurrent=true&amp;amp;allowPublicKeyRetrieval=true
+spring.datasource.driver=com.mysql.cj.jdbc.Driver
 
-CREATE TABLE city
-(
-  id      INT PRIMARY KEY auto_increment,
-  name    VARCHAR,
-  state   VARCHAR,
-  country VARCHAR
-);
+# https://docs.spring.io/spring-boot/docs/2.1.1.RELEASE/reference/html/howto-database-initialization.html#howto-execute-liquibase-database-migrations-on-startup
+spring.liquibase.change-log=classpath:/db/changelog/db.changelog-master.xml
+spring.liquibase.enabled=true
+spring.liquibase.contexts=dev, faker
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;dbchangelog&#34;&gt;dbchangelog&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;vim src/main/resources/db/changelog/db.changelog-master.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;databaseChangeLog
+        xmlns=&amp;quot;http://www.liquibase.org/xml/ns/dbchangelog&amp;quot;
+        xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+        xsi:schemaLocation=&amp;quot;http://www.liquibase.org/xml/ns/dbchangelog
+	  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd&amp;quot;&amp;gt;
+    &amp;lt;include file=&amp;quot;db/changelog/db.changelog-1.0.xml&amp;quot; relativeToChangelogFile=&amp;quot;false&amp;quot;/&amp;gt;
+&amp;lt;/databaseChangeLog&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim src/main/resources/db/changelog/db.changelog-1.0.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;databaseChangeLog
+        xmlns=&amp;quot;http://www.liquibase.org/xml/ns/dbchangelog&amp;quot;
+        xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+        xsi:schemaLocation=&amp;quot;http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd&amp;quot;&amp;gt;
+&amp;lt;/databaseChangeLog&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;run-a-spring-boot-application&#34;&gt;Run a spring boot application&lt;/h3&gt;
+&lt;p&gt;Hot Swapping&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    &amp;lt;dependency&amp;gt;
+        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;spring-boot-devtools&amp;lt;/artifactId&amp;gt;
+        &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt;
+        &amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;build&amp;gt;
+    &amp;lt;plugins&amp;gt;
+        &amp;lt;plugin&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
+            &amp;lt;!-- enable forking --&amp;gt;
+            &amp;lt;configuration&amp;gt;
+                &amp;lt;fork&amp;gt;true&amp;lt;/fork&amp;gt;
+            &amp;lt;/configuration&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+    &amp;lt;/plugins&amp;gt;
+&amp;lt;/build&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Run a created application using the Spring Boot Maven Plugin.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;vim pom.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;properties&amp;gt;
+  &amp;lt;maven.compiler.target&amp;gt;1.8&amp;lt;/maven.compiler.target&amp;gt;
+  &amp;lt;maven.compiler.source&amp;gt;1.8&amp;lt;/maven.compiler.source&amp;gt;
+&amp;lt;/properties&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;build&amp;gt;
+  &amp;lt;plugins&amp;gt;
+    &amp;lt;plugin&amp;gt;
+      &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;maven-compiler-plugin&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;3.6.1&amp;lt;/version&amp;gt;
+      &amp;lt;configuration&amp;gt;
+        &amp;lt;source&amp;gt;1.8&amp;lt;/source&amp;gt;
+        &amp;lt;target&amp;gt;1.8&amp;lt;/target&amp;gt;
+      &amp;lt;/configuration&amp;gt;
+    &amp;lt;/plugin&amp;gt;
+  &amp;lt;/plugins&amp;gt;
+&amp;lt;/build&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;./mvnw spring-boot:run
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Database generate two table:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DATABASECHANGELOG&lt;/li&gt;
+&lt;li&gt;DATABASECHANGELOGLOCK&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;atabasechangelog ：用于 Liquibase 操作记录，以行的形式跟踪每个&lt;/strong&gt;*&lt;strong&gt;变更集*****，并由“ id”，“ author”和“ filename”列的组合标识。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;databasechangeloglock ：来确保一次仅运行一个&lt;/strong&gt; &lt;strong&gt;Liquibase&lt;/strong&gt; &lt;strong&gt;实例。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;create-table&#34;&gt;Create table&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;vim src/main/resources/db/changelog/db.changelog-1.0.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;databaseChangeLog
+        xmlns=&amp;quot;http://www.liquibase.org/xml/ns/dbchangelog&amp;quot;
+        xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+        xsi:schemaLocation=&amp;quot;http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd&amp;quot;&amp;gt;
 
-CREATE TABLE hotel 
-(
-  city    INT,
-  name    VARCHAR,
-  address VARCHAR,
-  zip     VARCHAR
-);
-&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;create-a-domain-class&#34;&gt;Create a domain class&lt;/h6&gt;
+    &amp;lt;changeSet author=&amp;quot;liquibase-docs&amp;quot; id=&amp;quot;create-city&amp;quot;&amp;gt;
+        &amp;lt;preConditions onFail=&amp;quot;MARK_RAN&amp;quot;&amp;gt;
+            &amp;lt;not&amp;gt;
+                &amp;lt;tableExists tableName=&amp;quot;city&amp;quot;/&amp;gt;
+            &amp;lt;/not&amp;gt;
+        &amp;lt;/preConditions&amp;gt;
+        &amp;lt;createTable remarks=&amp;quot;城市&amp;quot; tableName=&amp;quot;city&amp;quot;&amp;gt;
+            &amp;lt;column name=&amp;quot;id&amp;quot; type=&amp;quot;BIGINT&amp;quot; autoIncrement=&amp;quot;true&amp;quot;&amp;gt;
+                &amp;lt;constraints primaryKey=&amp;quot;true&amp;quot;/&amp;gt;
+            &amp;lt;/column&amp;gt;
+            &amp;lt;column name=&amp;quot;name&amp;quot; remarks=&amp;quot;名称&amp;quot; type=&amp;quot;VARCHAR(255)&amp;quot;/&amp;gt;
+            &amp;lt;column name=&amp;quot;state&amp;quot; remarks=&amp;quot;州&amp;quot; type=&amp;quot;VARCHAR(255)&amp;quot;/&amp;gt;
+            &amp;lt;column name=&amp;quot;country&amp;quot; remarks=&amp;quot;国家&amp;quot; type=&amp;quot;VARCHAR(255)&amp;quot;/&amp;gt;
+        &amp;lt;/createTable&amp;gt;
+    &amp;lt;/changeSet&amp;gt;
+
+    &amp;lt;changeSet author=&amp;quot;liquibase-docs&amp;quot; id=&amp;quot;create-hotel&amp;quot;&amp;gt;
+        &amp;lt;preConditions onFail=&amp;quot;MARK_RAN&amp;quot;&amp;gt;
+            &amp;lt;not&amp;gt;
+                &amp;lt;tableExists tableName=&amp;quot;hotel&amp;quot;/&amp;gt;
+            &amp;lt;/not&amp;gt;
+        &amp;lt;/preConditions&amp;gt;
+        &amp;lt;createTable remarks=&amp;quot;酒店&amp;quot; tableName=&amp;quot;hotel&amp;quot;&amp;gt;
+            &amp;lt;column name=&amp;quot;id&amp;quot; type=&amp;quot;BIGINT&amp;quot;/&amp;gt;
+            &amp;lt;column name=&amp;quot;city&amp;quot; remarks=&amp;quot;城市&amp;quot; type=&amp;quot;VARCHAR(255)&amp;quot;/&amp;gt;
+            &amp;lt;column name=&amp;quot;name&amp;quot; remarks=&amp;quot;名称&amp;quot; type=&amp;quot;VARCHAR(255)&amp;quot;/&amp;gt;
+            &amp;lt;column name=&amp;quot;address&amp;quot; remarks=&amp;quot;地址&amp;quot; type=&amp;quot;VARCHAR(255)&amp;quot;/&amp;gt;
+            &amp;lt;column name=&amp;quot;zip&amp;quot; remarks=&amp;quot;邮编&amp;quot; type=&amp;quot;VARCHAR(255)&amp;quot;/&amp;gt;
+        &amp;lt;/createTable&amp;gt;
+    &amp;lt;/changeSet&amp;gt;
+
+&amp;lt;/databaseChangeLog&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;create-a-domain-class&#34;&gt;Create a domain class&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;mkdir src/main/java/com/example/mysite/domain
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim src/main/java/com/example/mysite/City.java
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;package com.example.mysite.domain;
@@ -180,7 +284,7 @@ public class Hotel implements Serializable {
   }
 
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;create-a-dao&#34;&gt;Create a DAO&lt;/h6&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;create-a-dao&#34;&gt;Create a DAO&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;mkdir src/main/java/com/example/mysite/dao
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim src/main/java/com/example/mysite/dao/CityDao.java
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;package com.example.mysite.dao;
@@ -291,46 +395,6 @@ logging.level.com.example.mysite.mapper=TRACE
         &amp;lt;mapper resource=&amp;quot;com/example/mysite/mapper/HotelMapper.xml&amp;quot;/&amp;gt;
     &amp;lt;/mappers&amp;gt;
 &amp;lt;/configuration&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;run-a-spring-boot-application&#34;&gt;Run a spring boot application&lt;/h6&gt;
-&lt;p&gt;Hot Swapping&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    &amp;lt;dependency&amp;gt;
-        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
-        &amp;lt;artifactId&amp;gt;spring-boot-devtools&amp;lt;/artifactId&amp;gt;
-        &amp;lt;scope&amp;gt;runtime&amp;lt;/scope&amp;gt;
-        &amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt;
-    &amp;lt;/dependency&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;build&amp;gt;
-    &amp;lt;plugins&amp;gt;
-        &amp;lt;plugin&amp;gt;
-            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
-            &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
-            &amp;lt;!-- enable forking --&amp;gt;
-            &amp;lt;configuration&amp;gt;
-                &amp;lt;fork&amp;gt;true&amp;lt;/fork&amp;gt;
-            &amp;lt;/configuration&amp;gt;
-        &amp;lt;/plugin&amp;gt;
-    &amp;lt;/plugins&amp;gt;
-&amp;lt;/build&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Run a created application using the Spring Boot Maven Plugin.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;vim pom.xml
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;properties&amp;gt;
-  &amp;lt;maven.compiler.target&amp;gt;1.8&amp;lt;/maven.compiler.target&amp;gt;
-  &amp;lt;maven.compiler.source&amp;gt;1.8&amp;lt;/maven.compiler.source&amp;gt;
-&amp;lt;/properties&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;build&amp;gt;
-  &amp;lt;plugins&amp;gt;
-    &amp;lt;plugin&amp;gt;
-      &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
-      &amp;lt;artifactId&amp;gt;maven-compiler-plugin&amp;lt;/artifactId&amp;gt;
-      &amp;lt;version&amp;gt;3.6.1&amp;lt;/version&amp;gt;
-      &amp;lt;configuration&amp;gt;
-        &amp;lt;source&amp;gt;1.8&amp;lt;/source&amp;gt;
-        &amp;lt;target&amp;gt;1.8&amp;lt;/target&amp;gt;
-      &amp;lt;/configuration&amp;gt;
-    &amp;lt;/plugin&amp;gt;
-  &amp;lt;/plugins&amp;gt;
-&amp;lt;/build&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;./mvnw spring-boot:run
 &lt;/code&gt;&lt;/pre&gt;</description>
       
     </item>
