@@ -6,11 +6,7 @@
     <description>Recent content in scikit-learn on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 May 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://csyezheng.github.io/tags/scikit-learn/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 05 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/scikit-learn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>scikit-learn</title>
       <link>http://csyezheng.github.io/post/machine-learning/scikit-learn/</link>

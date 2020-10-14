@@ -6,11 +6,7 @@
     <description>Recent content in crawler on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Jan 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://csyezheng.github.io/tags/crawler/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 15 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/crawler/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>proxy for crawler</title>
       <link>http://csyezheng.github.io/post/web-scraping/proxy/</link>

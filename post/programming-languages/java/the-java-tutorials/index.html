@@ -34,7 +34,7 @@ all source code is first written in plain text files ending with the .java exten
 
 
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.75.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/programming-languages/java/the-java-tutorials/" />
@@ -1646,11 +1646,11 @@ public class Subclass extends Superclass {
 <li>
 <pre><code>public int hashCode()
 </code></pre><p>The value returned by <code>hashCode()</code> is the object&rsquo;s hash code, which is the object&rsquo;s memory address in hexadecimal.</p>
-<p>By definition, if two objects are equal, their hash code <em>must also</em> be equal. If you override the <code>equals()</code> method, you change the way two objects are equated and <code>Object</code>'s implementation of <code>hashCode()</code> is no longer valid. <strong>Therefore, if you override the <code>equals()</code> method, you must also override the <code>hashCode()</code> method as well.</strong></p>
+<p>By definition, if two objects are equal, their hash code <em>must also</em> be equal. If you override the <code>equals()</code> method, you change the way two objects are equated and <code>Object</code>&rsquo;s implementation of <code>hashCode()</code> is no longer valid. <strong>Therefore, if you override the <code>equals()</code> method, you must also override the <code>hashCode()</code> method as well.</strong></p>
 </li>
 <li>
 <pre><code>public String toString()
-</code></pre><p><strong>You should always consider overriding the <code>toString()</code> method in your classes.</strong> The <code>Object</code>'s <code>toString()</code> method returns a <code>String</code> representation of the object, <strong>which is very useful for debugging</strong>.</p>
+</code></pre><p><strong>You should always consider overriding the <code>toString()</code> method in your classes.</strong> The <code>Object</code>&rsquo;s <code>toString()</code> method returns a <code>String</code> representation of the object, <strong>which is very useful for debugging</strong>.</p>
 <pre><code>System.out.println(firstBook.toString());
 </code></pre></li>
 </ul>

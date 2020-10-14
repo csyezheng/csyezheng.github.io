@@ -6,11 +6,7 @@
     <description>Recent content in shadowsocks on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://csyezheng.github.io/tags/shadowsocks/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/shadowsocks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>circumvent Internet censorship</title>
       <link>http://csyezheng.github.io/post/any-path/circumvent-internet-censorship/</link>

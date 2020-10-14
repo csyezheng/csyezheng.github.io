@@ -6,11 +6,7 @@
     <description>Recent content in tensorflow on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 May 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://csyezheng.github.io/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 30 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tensorflow</title>
       <link>http://csyezheng.github.io/post/deep-learning/tensorflow/</link>

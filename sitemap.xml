@@ -1444,6 +1444,12 @@
   </url>
   
   <url>
+    <loc>http://csyezheng.github.io/post/back-end/spring-boot-cxf-jax-rs-starter/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://csyezheng.github.io/post/other/ios-tweak/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

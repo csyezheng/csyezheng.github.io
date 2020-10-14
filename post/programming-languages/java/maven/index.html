@@ -33,7 +33,7 @@ There are three built-in build lifecycles: default, clean and site. The default 
 
 
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.75.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/programming-languages/java/maven/" />
@@ -400,7 +400,7 @@ There are three built-in build lifecycles: default, clean and site. The default 
 <h4 id="packaging">Packaging</h4>
 <p>The first, and most common way, is to set the packaging for your project via the equally named POM element <strong><code>&lt;packaging&gt;</code></strong>. Some of the valid packaging values are <strong><code>jar</code></strong>, <strong><code>war</code></strong>, <strong><code>ear</code></strong> and <strong><code>pom</code></strong>. If no packaging value has been specified, it will default to <strong><code>jar</code></strong>.</p>
 <p>Each packaging contains a list of goals to bind to a particular phase.</p>
-<p>Note that for some packaging types to be available, you may also need to include a particular plugin in the <strong><code>&lt;build&gt;</code></strong> section of your POM and specify <strong><code>&lt;extensions&gt;</code></strong>true<strong><code>&lt;/extensions&gt;</code></strong> for that plugin.</p>
+<p>Note that for some packaging types to be available, you may also need to include a particular plugin in the <strong><code>&lt;build&gt;</code></strong> section of your POM and specify <strong><code>&lt;extensions&gt;</code><strong>true</strong><code>&lt;/extensions&gt;</code></strong> for that plugin.</p>
 <h4 id="plugins">Plugins</h4>
 <p>The second way to add goals to phases is to configure plugins in your project. Plugins are artifacts that provide goals to Maven. Furthermore, a plugin may have one or more goals wherein each goal represents a capability of that plugin, plugins can contain information that <strong>indicates which lifecycle phase to bind a goal to</strong>.</p>
 <p>The goals that are configured will be added to the goals already bound to the lifecycle from the packaging selected. If more than one goal is bound to a particular phase, the order used is that those from the packaging are executed first, followed by those configured in the POM. Note that you can use the <strong><code>&lt;executions&gt;</code></strong> element to gain more control over the order of particular goals.</p>

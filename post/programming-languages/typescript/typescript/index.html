@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.75.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/programming-languages/typescript/typescript/" />
@@ -69,7 +69,7 @@
 <meta itemprop="description" content="TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件">
 <meta itemprop="datePublished" content="2019-03-01T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2019-03-01T00:00:00+00:00" />
-<meta itemprop="wordCount" content="4737">
+<meta itemprop="wordCount" content="4736">
 
 
 
@@ -365,7 +365,7 @@ let counter : number;
 联合类型：
 let path: string[] | string;
 path = &lsquo;/temp/log.xml&rsquo;;
-path = ['/temp/log.xml&rsquo;, &lsquo;/temp/errors.xml&rsquo;]
+path = ['/temp/log.xml', &lsquo;/temp/errors.xml&rsquo;]
 path = 1;     // error
 类型守护：
 typeof:
@@ -384,19 +384,46 @@ interface: ICustomConsole {
 log(arg: string): void;
 }
 declare var customConsole: ICustomConsole;
-算术运算符：
-+
--
-*
-/
-%
-++                          a++
-&ndash;                           a&ndash;
-比较运算符：
-==                             // 仅比较值
-===                           // 比较值与类型
-!=
-!==</p>
+算术运算符：</p>
+<table>
+<thead>
+<tr>
+<th>+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+</tr>
+<tr>
+<td>/</td>
+</tr>
+<tr>
+<td>%</td>
+</tr>
+<tr>
+<td>++                          a++</td>
+</tr>
+<tr>
+<td>&ndash;                           a&ndash;</td>
+</tr>
+<tr>
+<td>比较运算符：</td>
+</tr>
+<tr>
+<td>==                             // 仅比较值</td>
+</tr>
+<tr>
+<td>===                           // 比较值与类型</td>
+</tr>
+<tr>
+<td>!=</td>
+</tr>
+<tr>
+<td>!==</td>
+</tr>
+</tbody>
+</table>
 <pre><code>&gt;
 &lt;
 &gt;=
@@ -601,7 +628,7 @@ this._y *= len;
 let vector: Geometry.Vector2dInterface = new Geometry.Vector2d(2, 3);
 vector.normalize();
 vector.toArray(function(vectorArray: number[]) {
-alert(&rsquo; x: ' + vectorAsArray[0] + ' y: ' + vectorAsArray[1]);
+alert(' x: ' + vectorAsArray[0] + ' y: ' + vectorAsArray[1]);
 });</p>
 <p>自动化工作流程
 版本控制工具

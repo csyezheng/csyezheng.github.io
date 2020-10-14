@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.75.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/deep-learning/notes-deep-learning-with-python/" />
@@ -390,7 +390,7 @@ backward pass).</li>
 <p>Note that a variant of the mini-batch SGD algorithm would be to draw a single sample and target at each iteration, rather than drawing a batch of data. This would be <strong>true SGD</strong> (as opposed to <strong>mini-batch SGD</strong>). Alternatively, going to the opposite extreme, you could run every step on all data available, which is called <strong>batch SGD</strong>. Each update would then be more accurate, but far more expensive. The efficient compromise between these two extremes is to use mini-batches of reasonable size.</p>
 <p>Additionally, there exist <strong>multiple variants of SGD</strong> that differ by taking into account previous weight updates when computing the next weight update, rather than just looking at the current value of the gradients. There is, for instance, <strong>SGD with momentum</strong>, as well as <strong>Adagrad</strong>, <strong>RMSP rop</strong>, and several others. Such variants are known as <strong>optimization methods</strong> or <strong>optimizers</strong>. In particular, the concept of momentum, which is used in many of these variants, deserves your attention. <strong>Momentum addresses two issues with SGD: convergence speed and local minima.</strong></p>
 <h6 id="chaining-derivatives-the-backpropagation-algorithm">Chaining derivatives: the Backpropagation algorithm</h6>
-<p>Calculus tells us that such a chain of functions can be derived using the following identity, called the <strong>chain rule</strong>: f(g(x)) = f&rsquo;(g(x)) * g&rsquo;(x). Applying the chain rule to the computation of the gradient values of a neural network gives rise to an algorithm called <strong>Backpropagation</strong> (also sometimes called <strong>reverse-mode differentiation</strong>). Backpropagation starts with the final loss value and works backward from the top layers to the bottom layers, applying the chain rule to compute the contribution that each parameter had in the loss value.</p>
+<p>Calculus tells us that such a chain of functions can be derived using the following identity, called the <strong>chain rule</strong>: f(g(x)) = f'(g(x)) * g'(x). Applying the chain rule to the computation of the gradient values of a neural network gives rise to an algorithm called <strong>Backpropagation</strong> (also sometimes called <strong>reverse-mode differentiation</strong>). Backpropagation starts with the final loss value and works backward from the top layers to the bottom layers, applying the chain rule to compute the contribution that each parameter had in the loss value.</p>
 <h4 id="looking-back-at-our-first-example">Looking back at our first example</h4>
 <h3 id="3getting-started-with-neural-networks">3.Getting started with neural networks</h3>
 <h4 id="anatomy-of-a-neural-network">Anatomy of a neural network</h4>

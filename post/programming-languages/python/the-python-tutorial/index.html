@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.75.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/programming-languages/python/the-python-tutorial/" />
@@ -701,20 +701,20 @@ if x &lt; 0: a.remove(x)</p>
 <h4 id="473-arbitrary-argument-lists">4.7.3. Arbitrary Argument Lists</h4>
 <p>When a final formal parameter of the form **name is present, it receives a dictionary (see Mapping Types — dict) containing all keyword arguments except for those corresponding to a formal parameter.  This may be combined with a formal parameter of the form *name which receives a tuple containing the positional arguments beyond the formal parameter list.  (*name must occur before **name.) For example, if we define a function like this:</p>
 <p>def cheeseshop(kind, *arguments, **keywords):</p>
-<p>​    print(&quot;&ndash; Do you have any&rdquo;, kind, &ldquo;?&quot;)</p>
+<p>​    print(&quot;&ndash; Do you have any&quot;, kind, &ldquo;?&quot;)</p>
 <p>​    print(&quot;&ndash; I&rsquo;m sorry, we&rsquo;re all out of&rdquo;, kind)</p>
 <p>​    for arg in arguments:</p>
 <p>​        print(arg)</p>
-<p>​    print(&quot;-&rdquo; * 40)</p>
+<p>​    print(&quot;-&quot; * 40)</p>
 <p>​    keys = sorted(keywords.keys())</p>
 <p>​    for kw in keys:</p>
 <p>​        print(kw, &ldquo;:&rdquo;, keywords[kw])</p>
-<p>&gt;&raquo; def concat(*args, sep=&rdquo;/&quot;):</p>
+<p>&gt;&raquo; def concat(*args, sep=&quot;/&quot;):</p>
 <p>&hellip;     return sep.join(args)</p>
 <p>&hellip;</p>
 <p>&gt;&raquo; concat(&ldquo;earth&rdquo;, &ldquo;mars&rdquo;, &ldquo;venus&rdquo;)</p>
 <p>&lsquo;earth/mars/venus&rsquo;</p>
-<p>&gt;&raquo; concat(&ldquo;earth&rdquo;, &ldquo;mars&rdquo;, &ldquo;venus&rdquo;, sep=&rdquo;.&quot;)</p>
+<p>&gt;&raquo; concat(&ldquo;earth&rdquo;, &ldquo;mars&rdquo;, &ldquo;venus&rdquo;, sep=&quot;.&quot;)</p>
 <p>&lsquo;earth.mars.venus&rsquo;</p>
 <p>Any formal parameters which occur after the *args parameter are ‘keyword-only’ arguments, meaning that they can only be used as keywords rather than positional arguments.</p>
 <h4 id="474-unpacking-argument-lists">4.7.4. Unpacking Argument Lists</h4>
@@ -724,8 +724,8 @@ if x &lt; 0: a.remove(x)</p>
 <p>&gt;&raquo; list(range(*args))            # call with arguments unpacked from a list</p>
 <p>[3, 4, 5]</p>
 <p>In the same fashion, dictionaries can deliver keyword arguments with the **-operator:</p>
-<p>&gt;&raquo; def parrot(voltage, state='a stiff&rsquo;, action='voom&rsquo;):</p>
-<p>&hellip;     print(&quot;&ndash; This parrot wouldn&rsquo;t&rdquo;, action, end=&rsquo; &lsquo;)</p>
+<p>&gt;&raquo; def parrot(voltage, state=&lsquo;a stiff&rsquo;, action=&lsquo;voom&rsquo;):</p>
+<p>&hellip;     print(&quot;&ndash; This parrot wouldn&rsquo;t&quot;, action, end=' &lsquo;)</p>
 <p>&hellip;     print(&ldquo;if you put&rdquo;, voltage, &ldquo;volts through it.&rdquo;, end=&rsquo; &lsquo;)</p>
 <p>&hellip;     print(&ldquo;E&rsquo;s&rdquo;, state, &ldquo;!&quot;)</p>
 <p>&hellip;</p>
@@ -747,7 +747,7 @@ if x &lt; 0: a.remove(x)</p>
 <p>&hellip;     return ham + ' and ' + eggs</p>
 <p>&hellip;</p>
 <p>&gt;&raquo; f(&lsquo;spam&rsquo;)</p>
-<p>Annotations: {&lsquo;ham&rsquo;: &lt;class &lsquo;str'&gt;, &lsquo;return&rsquo;: &lt;class &lsquo;str'&gt;, &lsquo;eggs&rsquo;: &lt;class &lsquo;str'&gt;}</p>
+<p>Annotations: {&lsquo;ham&rsquo;: &lt;class &lsquo;str&rsquo;&gt;, &lsquo;return&rsquo;: &lt;class &lsquo;str&rsquo;&gt;, &lsquo;eggs&rsquo;: &lt;class &lsquo;str&rsquo;&gt;}</p>
 <p>Arguments: spam eggs</p>
 <p>&lsquo;spam and eggs&rsquo;</p>
 <h3 id="48-intermezzo-coding-style">4.8. Intermezzo: Coding Style</h3>
@@ -844,19 +844,19 @@ if x &lt; 0: a.remove(x)</p>
 <p>&gt;&raquo; a = set(&lsquo;abracadabra&rsquo;)</p>
 <p>&gt;&raquo; b = set(&lsquo;alacazam&rsquo;)</p>
 <p>&gt;&raquo; a                                  # unique letters in a</p>
-<p>{&lsquo;a&rsquo;, &lsquo;r&rsquo;, &lsquo;b&rsquo;, &lsquo;c&rsquo;, &rsquo;d&rsquo;}</p>
+<p>{&lsquo;a&rsquo;, &lsquo;r&rsquo;, &lsquo;b&rsquo;, &lsquo;c&rsquo;, &rsquo;d'}</p>
 <p>&gt;&raquo; a - b                              # letters in a but not in b</p>
-<p>{&lsquo;r&rsquo;, &rsquo;d&rsquo;, &lsquo;b&rsquo;}</p>
+<p>{&lsquo;r&rsquo;, &rsquo;d', &lsquo;b&rsquo;}</p>
 <p>&gt;&raquo; a | b                              # letters in either a or b</p>
-<p>{&lsquo;a&rsquo;, &lsquo;c&rsquo;, &lsquo;r&rsquo;, &rsquo;d&rsquo;, &lsquo;b&rsquo;, &rsquo;m&rsquo;, &lsquo;z&rsquo;, &lsquo;l&rsquo;}</p>
+<p>{&lsquo;a&rsquo;, &lsquo;c&rsquo;, &lsquo;r&rsquo;, &rsquo;d', &lsquo;b&rsquo;, &rsquo;m', &lsquo;z&rsquo;, &lsquo;l&rsquo;}</p>
 <p>&gt;&raquo; a &amp; b                              # letters in both a and b</p>
 <p>{&lsquo;a&rsquo;, &lsquo;c&rsquo;}</p>
 <p>&gt;&raquo; a ^ b                              # letters in a or b but not both</p>
-<p>{&lsquo;r&rsquo;, &rsquo;d&rsquo;, &lsquo;b&rsquo;, &rsquo;m&rsquo;, &lsquo;z&rsquo;, &lsquo;l&rsquo;}</p>
+<p>{&lsquo;r&rsquo;, &rsquo;d', &lsquo;b&rsquo;, &rsquo;m', &lsquo;z&rsquo;, &lsquo;l&rsquo;}</p>
 <p>Similarly to list comprehensions, set comprehensions are also supported:</p>
 <p>&gt;&raquo; a = {x for x in &lsquo;abracadabra&rsquo; if x not in &lsquo;abc&rsquo;}</p>
 <p>&gt;&raquo; a</p>
-<p>{&lsquo;r&rsquo;, &rsquo;d&rsquo;}</p>
+<p>{&lsquo;r&rsquo;, &rsquo;d'}</p>
 <h3 id="55-dictionaries">5.5. Dictionaries</h3>
 <p>Unlike sequences, which are indexed by a range of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key.</p>
 <p>A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs within the braces adds initial key:value pairs to the dictionary.</p>
@@ -1051,7 +1051,7 @@ from ..filters import equalizer</p>
 &lsquo;3.14159265359&rsquo;</p>
 <p>&gt;&raquo; print(&lsquo;We are the {} who say &ldquo;{}!&quot;'.format(&lsquo;knights&rsquo;, &lsquo;Ni&rsquo;))</p>
 <p>&gt;&raquo; print('{1} and {0}'.format(&lsquo;spam&rsquo;, &lsquo;eggs&rsquo;))</p>
-<p>&gt;&raquo; print(&lsquo;This {food} is {adjective}.'.format(food='spam&rsquo;, adjective='absolutely horrible&rsquo;))</p>
+<p>&gt;&raquo; print(&lsquo;This {food} is {adjective}.'.format(food=&lsquo;spam&rsquo;, adjective=&lsquo;absolutely horrible&rsquo;))</p>
 <p>&lsquo;!a&rsquo; (apply ascii()), &lsquo;!s&rsquo; (apply str()) and &lsquo;!r&rsquo; (apply repr()) can be used to convert the value before it is formatted.</p>
 <p>&gt;&raquo; contents = &lsquo;eels&rsquo;
 &gt;&raquo; print(&lsquo;My hovercraft is full of {!r}.'.format(contents))
@@ -1087,7 +1087,7 @@ Sjoerd     ==&gt;       4127</p>
 <p>f.readline() reads a single line from the file; a newline character (\n) is left at the end of the string, and is only omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by &lsquo;\n&rsquo;, a string containing only a single newline.</p>
 <p>For reading lines from a file, you can loop over the file object.</p>
 <p>&gt;&raquo; for line in f:</p>
-<p>&hellip;     print(line, end=&rsquo;')</p>
+<p>&hellip;     print(line, end='')</p>
 <p>If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().</p>
 <p>f.write(string) writes the contents of string to the file, returning the number of characters written.</p>
 <p>f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from the beginning of the file when in binary mode and an opaque number when in text mode.</p>
@@ -1577,12 +1577,12 @@ to separate the wrapped lines.</p>
 <p>The <a href="">string</a> module includes a versatile <a href="">Template</a> class with a simplified syntax suitable for editing by end-users. This allows users to customize their applications without having to alter the application.</p>
 <p>The format uses placeholder names formed by $ with valid Python identifiers (alphanumeric characters and underscores). Surrounding the placeholder with braces allows it to be followed by more alphanumeric letters with no intervening spaces. Writing $$ creates a single escaped $:</p>
 <p>&gt;&raquo; from string import Template
-&gt;&raquo; t = Template(&lsquo;${village}folk send $$10 to $cause.')
-&gt;&raquo; t.substitute(village='Nottingham&rsquo;, cause='the ditch fund&rsquo;)
+&gt;&raquo; t = Template('${village}folk send $$10 to $cause.')
+&gt;&raquo; t.substitute(village=&lsquo;Nottingham&rsquo;, cause=&lsquo;the ditch fund&rsquo;)
 &lsquo;Nottinghamfolk send $10 to the ditch fund.&rsquo;</p>
 <p>The <a href="">substitute()</a> method raises a <a href="">KeyError</a> when a placeholder is not supplied in a dictionary or a keyword argument. For mail-merge style applications, user supplied data may be incomplete and the <a href="">safe_substitute()</a> method may be more appropriate — it will leave placeholders unchanged if data is missing:</p>
 <p>&gt;&raquo; t = Template(&lsquo;Return the $item to $owner.')
-&gt;&raquo; d = dict(item='unladen swallow&rsquo;)
+&gt;&raquo; d = dict(item=&lsquo;unladen swallow&rsquo;)
 &gt;&raquo; t.substitute(d)
 Traceback (most recent call last):
 &hellip;
@@ -1614,7 +1614,7 @@ data = f.read()</p>
 <p>start = 0
 for i in range(3):                      # show the first 3 file headers
 start += 14
-fields = struct.unpack(&lsquo;&lt;IIIHH&rsquo;, data[start:start+16])
+fields = struct.unpack('&lt;IIIHH&rsquo;, data[start:start+16])
 crc32, comp_size, uncomp_size, filenamesize, extra_size = fields</p>
 <p>start += 16
 filename = data[start:start+filenamesize]

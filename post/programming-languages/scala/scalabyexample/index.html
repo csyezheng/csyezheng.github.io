@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.75.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/programming-languages/scala/scalabyexample/" />
@@ -3630,8 +3630,8 @@ plus1.apply(2)
 <p>Another use of lazy values is to resolve the initialization order of applications com-posed of several modules. Before lazy values were introduced, the same effect wasachieved by using object deﬁnitions. As a second example, we consider a compilercomposed of several modules. We look ﬁrst at a simple symbol table that deﬁnes aclass for symbols and two predeﬁned functions.</p>
 <p>class Symbols(val compiler: Compiler) {</p>
 <p>import compiler.types._</p>
-<p>val Add = new Symbol(&ldquo;+&rdquo;, FunType(List(IntType, IntType), IntType))</p>
-<p>val Sub = new Symbol(&quot;-&rdquo;, FunType(List(IntType, IntType), IntType))</p>
+<p>val Add = new Symbol(&quot;+&rdquo;, FunType(List(IntType, IntType), IntType))</p>
+<p>val Sub = new Symbol(&quot;-&quot;, FunType(List(IntType, IntType), IntType))</p>
 <p>class Symbol(name: String, tpe: Type) {</p>
 <p>override def toString = name + &ldquo;: &quot; + tpe</p>
 <p>}</p>
@@ -3733,7 +3733,7 @@ plus1.apply(2)
 <p>As can be seen from the example, it is possible to combine normal and implicitparameters. However, there may only be one implicit parameter list for a method orconstructor, and it must come last.</p>
 <p>implicit can also be used as a modiﬁer for deﬁnitions and declarations. Examples:implicit object stringMonoid extends Monoid[String] {</p>
 <p>def add(x: String, y: String): String = x.concat(y)</p>
-<p>def unit: String = &quot;&rdquo;</p>
+<p>def unit: String = &quot;&quot;</p>
 <p>}</p>
 <p>implicit object intMonoid extends Monoid[Int] {</p>
 <p>def add(x: Int, y: Int): Int = x + y</p>
@@ -3899,7 +3899,7 @@ plus1.apply(2)
 <p>}</p>
 <p>Hindley/Milner Type Inferencecase class Tycon(k: String, ts: List[Type]) extends Type {</p>
 <p>override def toString =</p>
-<p>k + (if (ts.isEmpty) &quot;&rdquo; else ts.mkString(&quot;[&rdquo;, &ldquo;,&rdquo;, &ldquo;]&quot;))</p>
+<p>k + (if (ts.isEmpty) &quot;&rdquo; else ts.mkString(&quot;[&quot;, &ldquo;,&rdquo;, &ldquo;]&quot;))</p>
 <p>}</p>
 <p>There are three type constructors: Tyvar for type variables, Arrow for function typesand Tycon for type constructors such as Boolean or List. Type constructors have ascomponent a list of their type parameters. This list is empty for type constants suchas Boolean. Again, the type constructors implement the toString method in orderto display types legibly.</p>
 <p>Note that Type is a sealed class. This means that no subclasses or data constructorsthat extend Type can be formed outside the sequence of deﬁnitions in which Type isdeﬁned. This makes Type a closed algebraic data type with exactly three alternatives.By contrast, type Term is an open algebraic type for which further alternatives can bedeﬁned.</p>

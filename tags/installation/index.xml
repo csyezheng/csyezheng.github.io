@@ -6,11 +6,7 @@
     <description>Recent content in installation on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 25 Sep 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://csyezheng.github.io/tags/installation/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 25 Sep 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/installation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setup a Archlinux / Windows10 dual booting system</title>
       <link>http://csyezheng.github.io/post/any-path/setup-a-archlinux-windows10-dual-booting-system/</link>

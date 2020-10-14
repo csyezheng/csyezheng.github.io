@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.75.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/post/front-end/dom/" />
@@ -69,7 +69,7 @@
 <meta itemprop="description" content="所有 HTML 元素被定义为对象，而编程接口则是对象方法和对象属性。 方法是您能够执行的动作（比如添加或修改元素）。 属性是您能够获取或设置的值（比如节点">
 <meta itemprop="datePublished" content="2016-02-01T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2016-02-01T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1186">
+<meta itemprop="wordCount" content="1188">
 
 
 
@@ -387,11 +387,11 @@ var elems = document.getElementById(&ldquo;main&rdquo;).getElementsByTagName(&ld
 var  elements = document.getElementsByClassName(&ldquo;intro&rdquo;);</p>
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; DOM 修改 &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</p>
 <p>内容
-document.getElementById(&ldquo;p1&rdquo;).innerHTML=&quot;New text!&quot;;
+document.getElementById(&ldquo;p1&rdquo;).innerHTML=&ldquo;New text!&quot;;
 样式
-document.getElementById(&ldquo;p2&rdquo;).style.color=&quot;blue&rdquo;;
-document.getElementById(&ldquo;p2&rdquo;).style.fontFamily=&quot;Arial&rdquo;;
-document.getElementById(&ldquo;p2&rdquo;).style.fontSize=&quot;larger&rdquo;;
+document.getElementById(&ldquo;p2&rdquo;).style.color=&ldquo;blue&rdquo;;
+document.getElementById(&ldquo;p2&rdquo;).style.fontFamily=&ldquo;Arial&rdquo;;
+document.getElementById(&ldquo;p2&rdquo;).style.fontSize=&ldquo;larger&rdquo;;
 属性
 创建元素
 var para=document.createElement(&ldquo;p&rdquo;);
@@ -415,15 +415,15 @@ HTML DOM 允许您在事件发生时执行代码。</p>
 </code></pre>
 <p>​
 ​	<!-- raw HTML omitted -->
-​	function ChangeBackground(){document.body.style.backgroundColor=&quot;lavender&rdquo;;}<!-- raw HTML omitted -->
-​	&lt;input type=&quot;button&rdquo; onclick=&quot;ChangeBackground()&ldquo;value=&quot;Change background color&rdquo; /&gt;</p>
+​	function ChangeBackground(){document.body.style.backgroundColor=&ldquo;lavender&rdquo;;}<!-- raw HTML omitted -->
+​	&lt;input type=&ldquo;button&rdquo; onclick=&ldquo;ChangeBackground()&ldquo;value=&ldquo;Change background color&rdquo; /&gt;</p>
 <p>​
-​	<!-- raw HTML omitted -->function ChangeText(){document.getElementById(&ldquo;p1&rdquo;).innerHTML=&quot;New text!&quot;;}<!-- raw HTML omitted -->
+​	<!-- raw HTML omitted -->function ChangeText(){document.getElementById(&ldquo;p1&rdquo;).innerHTML=&ldquo;New text!&quot;;}<!-- raw HTML omitted -->
 ​	<!-- raw HTML omitted --></p>
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- 事件 &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 HTML 事件的例子：
 • 当用户点击鼠标时
-<!-- raw HTML omitted -->function changetext(id){id.innerHTML=&quot;hello!&quot;;}<!-- raw HTML omitted --><!-- raw HTML omitted -->请点击这段文本!<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->function changetext(id){id.innerHTML=&ldquo;hello!&quot;;}<!-- raw HTML omitted --><!-- raw HTML omitted -->请点击这段文本!<!-- raw HTML omitted -->
 • 当网页已加载时
 • 当图片已加载时
 • 当鼠标移动到元素上时
