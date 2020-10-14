@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Infrastructure on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/categories/infrastructure/</link>
+    <description>Recent content in Infrastructure on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 12 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/categories/infrastructure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to Cloud Infrastructure Technologies</title>
+      <link>http://csyezheng.github.io/post/infrastructure/introduction-to-cloud-infrastructure-technologies/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/infrastructure/introduction-to-cloud-infrastructure-technologies/</guid>
+      <description>Chapter 1. Virtualization Introduction and Learning Objectives Introduction to Cloud Computing and Technologies Historically, the word cloud was used as a metaphor for Internet. Later on, it was used to depict the Internet in computer network diagrams. To find out more about the origin of the cloud, you can take a look at the details provided on Wikipedia.
+Cloud computing can be referred as the allocation of resources on the cloud.</description>
+    </item>
+    
+  </channel>
+</rss>
