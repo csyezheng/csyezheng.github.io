@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/thinking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Programming Thinking</title>
-      <link>http://csyezheng.github.io/post/thinking/thinking/</link>
+      <link>http://csyezheng.github.io/post/other/thinking/thinking/</link>
       <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/thinking/thinking/</guid>
+      <guid>http://csyezheng.github.io/post/other/thinking/thinking/</guid>
       <description>基类的派生类的派生类需要做某些改动时，追溯到基类的一个虚函数做改动才能实现时，可以在此派生类中重写同名函数进行覆盖而不是继承这个虚函数，先拷</description>
     </item>
     

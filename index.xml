@@ -681,10 +681,10 @@ It is part of the Telemetry project and provides data collection services for bi
     
     <item>
       <title>The Java 3rd Library</title>
-      <link>http://csyezheng.github.io/post/programming-languages/java/the-java-3rd-party-library/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-3rd-party-library/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/programming-languages/java/the-java-3rd-party-library/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-3rd-party-library/</guid>
       
         <description>&lt;p&gt;import org.alibaba.fastjson.JSONArray;
 import org.alibaba.fastjson.JSONObject;
@@ -858,10 +858,10 @@ swagger-ui&lt;/p&gt;
     
     <item>
       <title>The Java Standard Library</title>
-      <link>http://csyezheng.github.io/post/programming-languages/java/the-java-standard-library/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-standard-library/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/programming-languages/java/the-java-standard-library/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-standard-library/</guid>
       
         <description>&lt;h2 id=&#34;collections&#34;&gt;Collections&lt;/h2&gt;
 &lt;h3 id=&#34;interfaces&#34;&gt;Interfaces&lt;/h3&gt;
@@ -1636,10 +1636,10 @@ import javax.ws.rs.core.MediaType;&lt;/p&gt;
     
     <item>
       <title>Mybatis Spring Boot</title>
-      <link>http://csyezheng.github.io/post/back-end/mybatis-spring-boot/</link>
+      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/mybatis-spring-boot/</link>
       <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/back-end/mybatis-spring-boot/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/mybatis-spring-boot/</guid>
       
         <description>&lt;h2 id=&#34;creating-a-project&#34;&gt;Creating a project&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;spring init -d=web --build=maven mysite
@@ -2011,10 +2011,10 @@ logging.level.com.example.mysite.mapper=TRACE
     
     <item>
       <title>Spring</title>
-      <link>http://csyezheng.github.io/post/back-end/spring/</link>
+      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring/</link>
       <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/back-end/spring/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring/</guid>
       
         <description>&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 &lt;h3 id=&#34;install-jdk&#34;&gt;Install JDK&lt;/h3&gt;
@@ -2423,11 +2423,71 @@ public class DemoApplication {
     </item>
     
     <item>
+      <title>Spring Boot CXF JAX-RS Starter</title>
+      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring-boot-cxf-jax-rs-starter/</link>
+      <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring-boot-cxf-jax-rs-starter/</guid>
+      
+        <description>&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;p&gt;Registers CXF Servlet with a  &amp;ldquo;/services/*&amp;rdquo; URL pattern for serving CXF JAX-RS endpoints.&lt;/p&gt;
+&lt;p&gt;Optionally auto-discovers JAX-RS root resources and providers and creates a JAX-RS endpoint.&lt;/p&gt;
+&lt;p&gt;Note the use of CXF JAX-RS Clients in SpringBoot Application is covered in &lt;a href=&#34;https://cxf.apache.org/docs/jaxrsclientspringboot.html&#34;&gt;this section&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;databases&#34;&gt;Databases&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;sudo docker container start mysql-container-id
+sudo docker exec -it mysql-container-name mysql -u root -p
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;mysql&amp;gt; create database demo;
+mysql&amp;gt; USE demo;
+mysql&amp;gt; SET FOREIGN_KEY_CHECKS=0;
+mysql&amp;gt; DROP TABLE IF EXISTS `student`;
+mysql&amp;gt; CREATE TABLE `student` (
+    -&amp;gt;   `id` int(10) NOT NULL,
+    -&amp;gt;   `name` varchar(100) DEFAULT NULL,
+    -&amp;gt;   `sex` char(6) DEFAULT NULL,
+    -&amp;gt;   `address` varchar(255) DEFAULT NULL,
+    -&amp;gt;   `age` int(10) DEFAULT NULL,
+    -&amp;gt;   PRIMARY KEY (`id`)
+    -&amp;gt; ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+mysql&amp;gt; INSERT INTO `student` VALUES (&#39;1&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;22&#39;);
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;creating-a-project&#34;&gt;Creating a project&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;spring init -d=web,mybatis,mysql --build=maven mysite
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;dependency&#34;&gt;dependency&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.apache.cxf&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;cxf-spring-boot-starter-jaxrs&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;${project.version}&amp;lt;/version&amp;gt;
+            &amp;lt;exclusions&amp;gt;&amp;lt;!-- CXF uses java.util.logging by default --&amp;gt;
+                &amp;lt;exclusion&amp;gt;
+                    &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+                    &amp;lt;artifactId&amp;gt;spring-boot-starter-logging&amp;lt;/artifactId&amp;gt;
+                &amp;lt;/exclusion&amp;gt;
+            &amp;lt;/exclusions&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.webjars&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;swagger-ui&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;${cxf.swagger.ui.version}&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.apache.cxf&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;cxf-rt-rs-service-description-swagger&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;${project.version}&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.apache.cxf&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;cxf-rt-features-metrics&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;${project.version}&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>欣宸Blog</title>
-      <link>http://csyezheng.github.io/post/devops/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/devops/</link>
       <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/devops/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/devops/</guid>
       
         <description>&lt;p&gt;&lt;a href=&#34;https://cloud.tencent.com/developer/column/1662&#34;&gt;https://cloud.tencent.com/developer/column/1662&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -2504,10 +2564,10 @@ public class DemoApplication {
     
     <item>
       <title>Question answering</title>
-      <link>http://csyezheng.github.io/post/natural-language-processing/question-answering/</link>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/natural-language-processing/question-answering/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</guid>
       
         <description>&lt;p&gt;Reference&lt;/p&gt;
 &lt;ol&gt;
@@ -2534,10 +2594,10 @@ public class DemoApplication {
     
     <item>
       <title>tencent nlp interview</title>
-      <link>http://csyezheng.github.io/post/interview/tencent-nlp-interview/</link>
+      <link>http://csyezheng.github.io/post/other/interview/tencent-nlp-interview/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/interview/tencent-nlp-interview/</guid>
+      <guid>http://csyezheng.github.io/post/other/interview/tencent-nlp-interview/</guid>
       
         <description>&lt;h2 id=&#34;一面技术面&#34;&gt;一面（技术面）&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;面试形式：电话面试&lt;/strong&gt;。&lt;/p&gt;
@@ -2694,10 +2754,10 @@ public class DemoApplication {
     
     <item>
       <title>Top 20 Python Libraries for Data Science</title>
-      <link>http://csyezheng.github.io/post/machine-learning/top-20-python-libraries/</link>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/machine-learning/top-20-python-libraries/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</guid>
       
         <description>&lt;h2 id=&#34;core-libraries--statistics&#34;&gt;Core Libraries &amp;amp; Statistics&lt;/h2&gt;
 &lt;ol&gt;
@@ -2746,10 +2806,10 @@ public class DemoApplication {
     
     <item>
       <title>Top Websites for Machine Learning</title>
-      <link>http://csyezheng.github.io/post/machine-learning/top-websites/</link>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-websites/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/machine-learning/top-websites/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-websites/</guid>
       
         <description>&lt;p&gt;&lt;a href=&#34;https://aihub.cloud.google.com/&#34;&gt;AI Hub&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -2758,10 +2818,10 @@ public class DemoApplication {
     
     <item>
       <title>Skincare</title>
-      <link>http://csyezheng.github.io/post/health/skincare/</link>
+      <link>http://csyezheng.github.io/post/other/health/skincare/</link>
       <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/health/skincare/</guid>
+      <guid>http://csyezheng.github.io/post/other/health/skincare/</guid>
       
         <description>&lt;h1 id=&#34;skincare&#34;&gt;Skincare&lt;/h1&gt;
 &lt;h2 id=&#34;cleanse-清洁&#34;&gt;Cleanse (清洁)&lt;/h2&gt;
@@ -2816,10 +2876,10 @@ public class DemoApplication {
     
     <item>
       <title>Bigger Leaner Stronger 5-DAY WORKOUT ROUTINE</title>
-      <link>http://csyezheng.github.io/post/health/bls-5-day-workout-routine/</link>
+      <link>http://csyezheng.github.io/post/other/health/bls-5-day-workout-routine/</link>
       <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/health/bls-5-day-workout-routine/</guid>
+      <guid>http://csyezheng.github.io/post/other/health/bls-5-day-workout-routine/</guid>
       
         <description>&lt;h2 id=&#34;phase-1&#34;&gt;PHASE 1&lt;/h2&gt;
 &lt;h4 id=&#34;workout-1--push&#34;&gt;WORKOUT 1 | PUSH&lt;/h4&gt;
@@ -4087,10 +4147,10 @@ public class DemoApplication {
     
     <item>
       <title>workout</title>
-      <link>http://csyezheng.github.io/post/health/workout/</link>
+      <link>http://csyezheng.github.io/post/other/health/workout/</link>
       <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/health/workout/</guid>
+      <guid>http://csyezheng.github.io/post/other/health/workout/</guid>
       
         <description>&lt;ul&gt;
 &lt;li&gt;
@@ -4141,10 +4201,10 @@ public class DemoApplication {
     
     <item>
       <title>Search Architecture</title>
-      <link>http://csyezheng.github.io/post/back-end/search-architecture/</link>
+      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/search-architecture/</link>
       <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/back-end/search-architecture/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/search-architecture/</guid>
       
         <description>&lt;h2 id=&#34;搜索服务使用说明&#34;&gt;搜索服务使用说明&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;&lt;script src=&#34;http://csyezheng.github.io/js/raphael.min.js&#34;&gt;&lt;/script&gt;
@@ -4233,10 +4293,10 @@ public class DemoApplication {
     
     <item>
       <title>Bigger Leaner Stronger</title>
-      <link>http://csyezheng.github.io/post/health/bigger-leaner-stronger/</link>
+      <link>http://csyezheng.github.io/post/other/health/bigger-leaner-stronger/</link>
       <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/health/bigger-leaner-stronger/</guid>
+      <guid>http://csyezheng.github.io/post/other/health/bigger-leaner-stronger/</guid>
       
         <description>&lt;h3 id=&#34;workouts&#34;&gt;Workouts&lt;/h3&gt;
 &lt;h3 id=&#34;meal-plans&#34;&gt;Meal Plans&lt;/h3&gt;
@@ -4292,10 +4352,10 @@ public class DemoApplication {
     
     <item>
       <title>Bert</title>
-      <link>http://csyezheng.github.io/post/deep-learning/bert/</link>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/bert/</link>
       <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/deep-learning/bert/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/bert/</guid>
       
         <description>&lt;h1 id=&#34;bert-可解释性-从头说起&#34;&gt;BERT 可解释性-从&amp;quot;头&amp;quot;说起&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;一、背景介绍&lt;/strong&gt;&lt;/p&gt;
@@ -4408,10 +4468,10 @@ public class DemoApplication {
     
     <item>
       <title>Tensorflow</title>
-      <link>http://csyezheng.github.io/post/deep-learning/tensorflow/</link>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/tensorflow/</link>
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/deep-learning/tensorflow/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/tensorflow/</guid>
       
         <description>&lt;h1 id=&#34;tensorflow&#34;&gt;TensorFlow&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;http://ww1.sinaimg.cn/large/0083FLjsgy1gg7bk10ef7j30qo0f03zd.jpg&#34; alt=&#34;https://blog.tensorflow.org/2019/09/tensorflow-20-is-now-available.html&#34;&gt;&lt;/p&gt;
@@ -4512,71 +4572,6 @@ features &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; feature_extrac
 &lt;li&gt;[&lt;strong&gt;TensorFlow 2.0 is now available!&lt;/strong&gt;]([https://blog.tensorflow.org/2019/09/tensorflow-20-is-now-available.html#:~:text=Today%2C%20we&amp;rsquo;re%20delighted%20to,TensorFlow%202.0%20is%20now%20available!&amp;amp;text=TensorFlow%202.0%20provides%20a%20comprehensive,build%20scalable%20ML%2Dpowered%20applications.](&lt;a href=&#34;https://blog.tensorflow.org/2019/09/tensorflow-20-is-now-available.html#:~:text=Today%2C&#34;&gt;https://blog.tensorflow.org/2019/09/tensorflow-20-is-now-available.html#:~:text=Today%2C&lt;/a&gt; we&amp;rsquo;re delighted to,TensorFlow 2.0 is now available!&amp;amp;text=TensorFlow 2.0 provides a comprehensive,build scalable ML-powered applications.))&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://afteracademy.com/blog/getting-started-with-tensorflow-2-tutorial-step-by-step-guide&#34;&gt;&lt;strong&gt;Getting started with Tensorflow 2.0 Tutorial&lt;/strong&gt; &lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Multi-label classification</title>
-      <link>http://csyezheng.github.io/post/machine-learning/multi-label-classification/</link>
-      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/machine-learning/multi-label-classification/</guid>
-      
-        <description>&lt;p&gt;In the multi-label problem there is no constraint on how many of the classes the instance can be assigned to. Formally, multi-label classification is the problem of finding a model that maps inputs &lt;strong&gt;x&lt;/strong&gt; to binary vectors &lt;strong&gt;y&lt;/strong&gt; (assigning a value of 0 or 1 for each element (label) in &lt;strong&gt;y&lt;/strong&gt;).&lt;/p&gt;
-&lt;h2 id=&#34;problem-transformation-methods&#34;&gt;Problem transformation methods&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Transformation into binary classification problems&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;binary relevance&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;amounts to independently training one binary classifier for each label.&lt;/p&gt;
-&lt;p&gt;Although this method of dividing the task into multiple binary tasks may resemble superficially the one-vs.-all (OvA) and one-vs.-rest (OvR) methods for multiclass classification, it is essentially different from both, because a single classifier under binary relevance deals with a single label, without any regard to other labels whatsoever.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;classifier chain&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;It differs from binary relevance in that labels are predicted sequentially, and the output of all previous classifiers (i.e. positive or negative for a particular label) are input as features to subsequent classifiers.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Transformation into multi-class classification problem&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;label powerset&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Ensemble methods&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A set of multi-class classifiers can be used to create a multi-label ensemble classifier. For a given example, each classifier outputs a single class (corresponding to a single label in the multi-label problem). These predictions are then combined by an ensemble method, usually a voting scheme where every class that receives a requisite percentage of votes from individual classifiers (often referred to as the discrimination threshold[8]) is predicted as a present label in the multi-label output.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;adapted-algorithms&#34;&gt;Adapted algorithms&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ML-kNN&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Clare&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;kernel methods for vector output&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;BP-MLL&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;statistics-and-evaluation-metrics&#34;&gt;Statistics and evaluation metrics&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Hamming loss&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;the fraction of the wrong labels to the total number of labels&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;**Precision, recall and $F_{1}$ score**&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;implementations-and-datasets&#34;&gt;Implementations and datasets&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/multiclass.html&#34;&gt;multi-labels algorithms and metrics&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A list of commonly used multi-label data-sets is available at the &lt;a href=&#34;http://mulan.sourceforge.net/datasets.html&#34;&gt;Mulan website&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;competition&#34;&gt;Competition&lt;/h2&gt;
-&lt;h3 id=&#34;toxic-comment-classification-challengehttpswwwkagglecomcjigsaw-toxic-comment-classification-challenge&#34;&gt;&lt;a href=&#34;https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge&#34;&gt;Toxic Comment Classification Challenge&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://stackabuse.com/python-for-nlp-multi-label-text-classification-with-keras/&#34;&gt;https://stackabuse.com/python-for-nlp-multi-label-text-classification-with-keras/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://towardsdatascience.com/multi-label-text-classification-with-scikit-learn-30714b7819c5&#34;&gt;https://towardsdatascience.com/multi-label-text-classification-with-scikit-learn-30714b7819c5&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;questions-from-cross-validated-stack-exchangehttpswwwkagglecomstackoverflowstatsquestions&#34;&gt;&lt;a href=&#34;https://www.kaggle.com/stackoverflow/statsquestions&#34;&gt;Questions from Cross Validated Stack Exchange&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.mimacom.com/text-classification/&#34;&gt;https://blog.mimacom.com/text-classification/&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>

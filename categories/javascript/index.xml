@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Debugging JavaScript in Chrome DevTools</title>
-      <link>http://csyezheng.github.io/post/programming-languages/javascript/debug/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/javascript/debug/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/programming-languages/javascript/debug/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/javascript/debug/</guid>
       <description>Get Started Step 2: Get familiar with the Sources panel UI The Sources panel is where you debug JavaScript.
 Open DevTools by pressing Command+Option+I (Mac) or Control+Shift+I (Windows, Linux). This shortcut opens the Consolepanel.
 Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: Set a line-of-code breakpoint Step 6: Check variable values </description>
@@ -20,10 +20,10 @@ Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: S
     
     <item>
       <title>JavaScript</title>
-      <link>http://csyezheng.github.io/post/programming-languages/javascript/javascript/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/javascript/javascript/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/programming-languages/javascript/javascript/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/javascript/javascript/</guid>
       <description>概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //</description>
     </item>
     

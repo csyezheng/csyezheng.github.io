@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 15 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/elk/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>elk stack</title>
-      <link>http://csyezheng.github.io/post/big-data/elk-stack/</link>
+      <link>http://csyezheng.github.io/post/specialization/big-data/elk-stack/</link>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/big-data/elk-stack/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/big-data/elk-stack/</guid>
       <description>Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &amp;quot;localhost&amp;quot; elasticsearch.hosts: [&amp;quot;http://localhost:9200&amp;quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
 Install Beats Install Filebeat Install Metricbeat sudo pacman -S metricbeat sudo vim /etc/metricbeat/metricbeat.yml setup.dashboards.enabled: true From the Metricbeat install directory, enable the system module
 cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricbeat.</description>

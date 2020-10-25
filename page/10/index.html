@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.75.1" />
+<meta name="generator" content="Hugo 0.76.5" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -296,7 +296,41 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/scrapy-with-django/">Scraping with Scrapy and Django Integration</a>
+      <a class="post-link" href="/post/any-path/wireshark/">Wireshark</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-03-07" class="post-time">
+        2020-03-07
+      </time>
+      <div class="post-category">
+          <a href="http://csyezheng.github.io/categories/any-path/"> any-path </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      $ tshark -r all.pcapng.gz -i http==1 -O http -T fields -e http.request.method -e http.request.uri -e http.request.line -e http.response.line &gt; dump.txt 
+    </div>
+    <div class="read-more">
+      <a href="/post/any-path/wireshark/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/specialization/computer-and-network-security/web-application/back-end/scrapy-with-django/">Scraping with Scrapy and Django Integration</a>
     </h1>
     
     <div class="post-meta">
@@ -319,7 +353,7 @@
       Installing Dependencies (Optional) $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple $ python -m pip install --user virtualenv $ python -m pip install --user virtualenvwrapper $ vim ~/.bashrc export WORKON_HOME=$HOME/.virtualenvs export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv source $HOME/.local/bin/virtualenvwrapper.sh $ source ~/.bashrc $ mkvirtualenv stock-screener pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat Creating a Django Project $ django-admin startproject stock_screener $ cd stock_screener $ mkdir stock_screener/apps/basic_info $ django-admin startapp basic_info stock_screener/apps/basic_info $ mkdir stock_screener/apps/northbound $ django-admin startapp northbound stock_screener/apps/northbound $ mkdir stock_screener/apps/financial_metrics $ django-admin startapp financial_metrics stock_screener/apps/financial_metrics $ mkdir stock_screener/apps/quotes $ django-admin startapp quotes stock_screener/apps/quotes $ mkdir stock_screener/apps/jobs $ django-admin startapp jobs stock_screener/apps/jobs Cannot add backslash suffix when run startapp command.
     </div>
     <div class="read-more">
-      <a href="/post/back-end/scrapy-with-django/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/computer-and-network-security/web-application/back-end/scrapy-with-django/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,7 +364,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/web-scraping/proxy/">proxy for crawler</a>
+      <a class="post-link" href="/post/specialization/information/web-scraping/proxy/">proxy for crawler</a>
     </h1>
     
     <div class="post-meta">
@@ -353,43 +387,7 @@
       from proxybroker import Broker, Checker async def check(proxy): broker = Broker() ip = await broker._resolver.get_real_ext_ip() checker = Checker(judges=None, real_ext_ip=ip) results = [] for proto in ['HTTPS', 'HTTP']: result = await checker._check(proxy, proto) results.append(result) return True if any(results) else False 
     </div>
     <div class="read-more">
-      <a href="/post/web-scraping/proxy/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/programming-languages/cpp/cpp-library-management/">C&#43;&#43; Library Management</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-09-16" class="post-time">
-        2019-09-16
-      </time>
-      <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/cpp/"> cpp </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      In general, you are going to have to end up with
- Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&rsquo;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).
-    </div>
-    <div class="read-more">
-      <a href="/post/programming-languages/cpp/cpp-library-management/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/information/web-scraping/proxy/" class="read-more-link">Read more</a>
     </div>
     
   </div>

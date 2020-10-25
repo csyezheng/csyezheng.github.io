@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 01 Feb 2016 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/dom/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DOM</title>
-      <link>http://csyezheng.github.io/post/front-end/dom/</link>
+      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/front-end/dom/</link>
       <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/front-end/dom/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/front-end/dom/</guid>
       <description>所有 HTML 元素被定义为对象，而编程接口则是对象方法和对象属性。 方法是您能够执行的动作（比如添加或修改元素）。 属性是您能够获取或设置的值（比如节点</description>
     </item>
     

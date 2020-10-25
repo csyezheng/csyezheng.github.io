@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>TypeScript - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件" />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+<link rel="canonical" href="http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/typescript/typescript/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="TypeScript" />
+<meta property="og:description" content="TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/typescript/typescript/" />
+<meta property="article:published_time" content="2019-03-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="name" content="TypeScript">
+<meta itemprop="description" content="TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件">
+<meta itemprop="datePublished" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="4736">
+
+
+
+<meta itemprop="keywords" content="TypeScript," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="TypeScript"/>
+<meta name="twitter:description" content="TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">TypeScript</h1>
+      
+      <div class="post-meta">
+        <time datetime="2019-03-01" class="post-time">
+          2019-03-01
+        </time>
+        <div class="post-category">
+            <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
+            <a href="http://csyezheng.github.io/categories/typescript/"> TypeScript </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>TypeScript简介
+install node.js
+npm install -g typescript
+tsc test.ts           // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件</p>
+<p>声明:
+var: 最近的函数作用域变量
+let:  块作用域变量
+const: 块作用域常量
+类型：
+boolean:
+true, false
+number: <br>
+所有数字都是浮点数
+string:
+单双引号
+array:    <br>
+let list:number[] = [1,2,3];
+let list:Array<!-- raw HTML omitted --> = [1, 2, 3]
+enum:<br>
+默认为数字集合，0起始，手动设置成员值可改变默认行为
+enum Color { Red, Green, Blue};
+let c: Color = Color.Green;
+void:
+any的对立面，所有的类型都不存在的时候，函数没有返回值时可使用
+function warnUser(): void {
+alert(&ldquo;this is my warning message&rdquo;);
+}
+any:
+以上全部都为Any Type的子类型，对any类型的值操作会最小化静态检查，是与现有的JavaScript代码一起工作的高效方式。
+null, underfined 不能当作类型使用
+类型推导：
+let counter;     // 无法类型推导
+let counter = 0;     // 类型推导
+let counter : number;
+联合类型：
+let path: string[] | string;
+path = &lsquo;/temp/log.xml&rsquo;;
+path = ['/temp/log.xml', &lsquo;/temp/errors.xml&rsquo;]
+path = 1;     // error
+类型守护：
+typeof:
+let x: any = { /*&mdash; */ };
+if (typeof x == &lsquo;string&rsquo;) {
+}
+instanceof:
+类型别名：
+type PrimitiveArray = Array&lt;string|number|boolean&gt;;
+type MyNumber = number;
+type NgScope = ng.IScope;
+type Callback = () =&gt; void;
+环境声明：
+创建一个不会被编译到JavaScript中的变量
+interface: ICustomConsole {
+log(arg: string): void;
+}
+declare var customConsole: ICustomConsole;
+算术运算符：</p>
+<table>
+<thead>
+<tr>
+<th>+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+</tr>
+<tr>
+<td>/</td>
+</tr>
+<tr>
+<td>%</td>
+</tr>
+<tr>
+<td>++                          a++</td>
+</tr>
+<tr>
+<td>&ndash;                           a&ndash;</td>
+</tr>
+<tr>
+<td>比较运算符：</td>
+</tr>
+<tr>
+<td>==                             // 仅比较值</td>
+</tr>
+<tr>
+<td>===                           // 比较值与类型</td>
+</tr>
+<tr>
+<td>!=</td>
+</tr>
+<tr>
+<td>!==</td>
+</tr>
+</tbody>
+</table>
+<pre><code>&gt;
+&lt;
+&gt;=
+&lt;=
+</code></pre>
+<p>逻辑运算符：
+&amp;&amp;
+||
+!
+位运算符：
+&amp;
+|
+^
+~
+&laquo;
+&raquo;
+&raquo;&gt;
+赋值运算符：
+=
++=
+-=
+*=
+/=
+%=
+控制语句：
+if (isValid) {
+alert(&ldquo;Is valid!&quot;);
+}
+else {
+alert(&ldquo;Is NOT valid&rdquo;);
+}</p>
+<pre><code>let message = isValid ? &quot;Is valid!&quot; : &quot;Is NOT valid!&quot;;
+
+switch(n) {
+    case 1:
+        statements
+        break;
+    case 2;
+        statements
+        break;
+    default:
+        statements
+        break;
+}
+
+while (n &gt; 1) {
+    product *= n;
+    n--;
+}
+
+let i: number = 0;
+do {
+    i += 1;
+    console.log(i);
+} while (i &lt; 5);
+
+for (let i: number = 0; i &lt; 9; i++) {
+    console.log(i);
+}
+
+// for .. in  迭代对象的属性（包括继承的属性）
+let obj: any = { a: 1, b: 2, c: 3 };
+for (let key in obj) {
+    if (obj.hasOwnProperty(prop)) {           // hasOwnProperty只枚举对象自己的属性
+        // prop 没有被继承
+    }
+}
+</code></pre>
+<p>函数：
+// 具名函数
+function greet(name?: string): string {
+if (name) {
+return &ldquo;Hi! &quot; + name;
+}
+else{
+return &ldquo;Hi!&quot;;
+}
+}
+// 函数可指定返回值类型
+// 匿名函数
+let gree = function(name?: string): string {
+if (name) {
+return &ldquo;Hi! &quot; + name;
+}
+else {
+return &ldquo;Hi&rdquo;;
+}
+}
+// 箭头函数
+var greet = (name: string): string =&gt; {
+if (name) {
+retun &ldquo;Hi! &quot; + name;
+}
+else {
+return &ldquo;Hi! my name is &quot; + this.fullname;
+}
+};
+// 加上匹配匿名函数的类型
+let greet: (name: string) =&gt; string = function(name: string):
+string {
+if (name) {
+return &ldquo;Hi! &quot; + name;
+}
+else {
+return &ldquo;Hi!&quot;;
+}
+}
+// 回调函数
+function sume(a: number, b: number, callback: (result, number) =&gt; void) {
+callback(a + b);
+}</p>
+<p>类：
+class Character {
+fullname: string;
+constructor (firstname: string, lastname: string {
+this.fullname = firstname + &quot; &quot; + lastname;
+}
+greet(name?: string) {
+if (name) {
+return &ldquo;Hi! &quot; + name + &ldquo;! my name is &quot; + this.fullname;
+} else {
+return &ldquo;Hi ! my name is &quot; + this.fullname;
+}
+}
+}
+let spark = new Character(&ldquo;Jacob&rdquo;, &ldquo;Keys&rdquo;);
+let msg = spark.greet();
+alert(msj);
+let msj = spark.greet(&ldquo;Dr. Halsey&rdquo;);
+alert(msg);</p>
+<p>接口：
+// 使用接口确保类拥有指定的结构
+interface LoggerInterface {
+log(arg: any): void;
+}
+class Logger implements LoggerInterface {
+log (arg) {
+if (typeof console.log === &ldquo;function&rdquo;) {
+console.log(arg);
+else {
+alert(arg);
+}
+}
+}
+//  使用接口来约束对象，避免潜在的小错误，尤其在写对象字面量时
+interface UserInterface {
+name: string;
+password: string;
+}
+let user: UserInterface = {
+name: &quot; &ldquo;;
+pasword: &quot; &ldquo;;            // 错误属性导致遗漏会有提示
+};</p>
+<p>命名空间（内部模块）：
+namespace Geometry {
+interface VectorInterface {
+/* &hellip; */
+}
+export interface Vector2dInterface {
+/* &hellip; */
+}
+export interface Vector3dInterface {
+/* &hellip; */
+}
+export class Vector2d implements VectorInterface, Vector2dInterface {
+/* &hellip; */
+}
+export class Vector3d implements VectorInterface, Vector3dInterface {
+/* &hellip; */
+}
+}
+// VectorInterface 没有 export 所以无法访问
+let vector2dInstance: Geometry.Vector2dInterface = new Geometry.Vector2d();
+let vector3dInstance: Geometry.Vector3dInterface = new Geometry.Vector3d();
+综合运用：
+module Geometry {
+export interface Vector2dInterface {
+toArray(callback: (x: number[]) =&gt; void): void;
+length(): number;
+normalize();
+}
+export class Vector2d implements Vector2dInterface {
+private _x: number;
+private _y: number;
+constructor(x: number, y: number) {
+this._x = x;
+this._y = y;
+}
+toArray(callback: (x: numbers[]) =&gt; void): void {
+callback([this._x, this._y]);
+}
+length(): number {
+return Math.sqrt(this._x * this._x + this._y * this._y);
+}
+normalize() {
+let len=1 / this.length();
+this._x *= len;
+this._y *= len;
+}
+}
+}
+let vector: Geometry.Vector2dInterface = new Geometry.Vector2d(2, 3);
+vector.normalize();
+vector.toArray(function(vectorArray: number[]) {
+alert(' x: ' + vectorAsArray[0] + ' y: ' + vectorAsArray[1]);
+});</p>
+<p>自动化工作流程
+版本控制工具
+git
+包管理工具
+npm init                                    // package.json
+npm install gulp-typescript &ndash;save-dev
+npm install typescript -g             <br>
+// 全局安装的包并不会出现在package.json中，手动添加到package.json的devDependencies或peerDependencies中
+npm install jquery &ndash;save</p>
+<pre><code>    https://api.jquery.com
+    package.json的某些字段必须手动配置 https://docs.nomjs.com/files/package.json
+	
+    .gitignore 忽略node_modules目录，以后clone下来 npm install即可
+	
+    npm install -g bower                 // 只用于管理前端的依赖包
+    bower init                                // 
+    bower install jquery
+    bower install jquery --save
+    bower install jasmine --save-dev
+	
+    http://bower.io/docs/ config/
+    .gitignore 忽略bower_components目录，以后clone下来 bower install即可
+	
+    npm install tsd -g                  // 管理TypeScript应用描述文件的工具
+    tsd init                           // 生成tsd.json
+    tsd install jquery --save             // 安装jQuery描述符文件
+    https://github.com/borisyankov/DefinitelyTyped 搜索tsd包
+	
+自动化任务工具
+    $ npm install -g gulp
+    $ npm install --save-dev gulp
+	
+    ---------------- gulpfile.js -----------------------
+    let gulp = require('gulp');
+    gulp.task('default', function() {
+        console.log('Hello Gulp!');
+    });
+	
+    $ gulp
+	
+    检查代码质量的任务
+        npm install gulp-tslint --save-dev
+		
+        ---------------- gulpfile.js -----------------------
+        let tslint = require('gulp-tslint');
+        gulp.task('lint', function() {
+            return gulp.src([
+                './source/ts/**/**.ts', './test/**/**.test.ts'
+        ]).pipe(tslint())
+           .pipe(tslint.report('verbose'));
+        ));
+		
+        Gulp的src函数会查找./source/ts目录及其子目录下所有扩展名为.ts的文件，同样还会查找./test目录及其子目录下所有扩展名为.test.ts的文件
+        src函数的输出流将会被pipe函数重定向为tslint函数的输入
+        将tslint函数的输出重定向为tslint.report函数的输入
+		
+        ---------------- gulpfile.js -----------------------
+        gulp.task('default', ['lint']);
+	
+    编译TypeScript代码的任务
+        npm install gulp-typescript --save-dev
+		
+        ---------------- gulp-typescript -----------------------
+        let ts = require('gulp-typescript');
+        let tsProject = ts.createProject((
+            removeComments: true,
+            noImplicitAny: true,
+            target: 'ES3',
+            module: 'commonjs',
+            declarationFiles: false
+        });
+		
+        tsconfig.json
+		
+        ---------------- gulp-typescript -----------------------
+        gulp.task('tsc', function() {
+            return gulp.src('/source/ts/**/**.ts')
+                .pipe(ts(tsProject))
+                .js.pipe(gulp.desc('./temp/source/js'));
+        ));
+		
+        tsc任务会查找./source/ts目录及其子目录下所有扩展名为.ts的文件，src函数的输出流将会传递给TypeScript的编译器，编译器会使用tsProject对象的属性作为编译时的参数，将编译后的JavaScript代码保存在./temp/sources/js目录中
+		
+        ---------------- tsTestProject -----------------------
+        let tsTestProject = ts.create.Project({
+            removeComments : true,
+            noImplicitAny: true,
+            target: 'ES3',
+            module: 'commonjs',
+            declarationFiles: false
+        });
+		
+        ---------------- tsTestProject -----------------------
+        gulp.task('tsc-tests', function() {
+            return gulp.src('./test/**/**.tests.js')
+                .pipe(ts(tsTestProject))
+                .js.pipe(gulp.desc('./temp/test/'));
+        });
+		
+        在浏览器中使用JavaScript的三种方式
+            □ HTML标签的&lt;script&gt;引入
+            □ RequireJS库，用AJAX按需加载各个文件，异步模块加载，配置TypeScript的编译器模块参数为异步模块定义AMD
+            □ 配置TypeScript的编译器模块参数为CommonJS, Browserify解析应用的模块和以来，生成一个包含所有模块且高度优化的JavaScript文件。
+		
+        ---------------- tsTestProject -----------------------
+        ///&lt;reference path=&quot;./references.d.ts&quot;/&gt;
+		
+        import { headerView } from './header_view';
+        import { footerView } from './footer_view';
+        import { loadingView } from '.loading_view';
+		
+        headerView.render();
+        footerView.render();
+        loadingView.render(); 
+		
+    npm install browserify viny-transform gulp-uglify gulp-sourcemaps
+	
+    let browserify = require('browserfiy'),
+        transform = require('vinyl-transform'),
+        uglify = require('gulp-uglify'),
+        sourcemaps = require('gulp-sourcemaps');
+    let browserified = transform(function(filename) {
+        let b = browserify({ entries: filename, debug: true });
+        return b.bundle();
+    });
+	
+    browserified会把一个普通的Node.js流转换为一个Gulp流
+	
+    gulp.task('bundle-js', function() {
+        return gulp.src('./temp/source/js/main.js')
+            .pipe(browserified)
+            .pipe(sourcemaps.init( { loadMaps: true }))
+            .pipe(uglify())
+            .pipe(sourcemaps.write('./'))
+            .pipe(gulp.dest('./dist/source/js/'));
+    });
+	
+    gulp.task('bundle-test', function () {
+        return gulp.src('./temp/test/**/**.test.js')
+        .pipe(browserified)
+        .pipe(browserified)
+        .pipe(gulp.desc('./dist/test/'));
+    });
+	
+    gulp.task('default', ['lint', 'tsc', 'tsc-tests', 'bundle-js', 'bundle-test']);
+	
+自动化测试工具
+    npm install mocha chai sinon --save-dev
+    npm install karma karma-mocha karma-chai karma-sinon karma-coverage karma-phantomjs-launcher gulp-karma --save-dev
+    npm install -g browser-sync
+持续集成工具
+    Travis CI
+    ---------- travis.yml -----------
+    language: node_js
+    node_js:
+    - &quot;0.10&quot;
+脚手架工具
+    npm install -g yo
+    npm install -g generator-typescript
+    yo typescript
+    npm install -g generator-gulp-sass-typescript
+    yo generator-gulp-sass-typescript
+</code></pre>
+<p>使用函数
+函数声明和函数表达式：
+console.log(greetNamed(&ldquo;John&rdquo;));
+console.log(greetNamed(&ldquo;John&rdquo;));
+// 代码解析阶段就执行函数申明，变量提升
+function greetNamed(name: string): string {
+if (name) {
+return &ldquo;Hi! &quot; + name;
+}
+}
+// 等到函数表达式被赋值，才有相关变量
+let greetUnnamed = function (name: string): string {
+if (name) {
+return &ldquo;Hi! &quot; + name;
+}
+}
+函数类型：
+// 添加函数类型声明不是必要的，冗余的类型注解不是好的实践
+let greetUnnamed : (name : string) =&gt; string;
+greetUnnamed = function (name: string) : string {
+if (name) {
+return &ldquo;Hi! &quot; + name;
+}
+}
+有可选参数的函数：
+function add(foo : number, bar : number, foobar? : number) : number {
+let result = foo + bar;
+if (foobar !== underfined) {
+result += foobar;
+}
+return result;
+}
+有默认实参的函数：
+function add(foo : number, bar : number, foobar : number = 0) : number {
+return foo + bar + foobar;
+}
+有剩余参数的函数：
+// 剩余参数必须包含一个数组类型
+function add(&hellip;foo : number[]) : number {
+let result = 0;
+for (let i = 0; i &lt; foo.length; i++) {
+result += foo[i];
+}
+return result;
+}
+// 若考虑是否会对性能造成问题，可使用一个数组作为参数而不用剩余实参
+函数重载：
+// 声明一个啊还念书的所有函数签名，然后在定义实现
+function test(name : string) : string;
+function test(age : number) : string;
+function test(single : boolean) : string;
+function test(value: (string | number | boolean) : string {
+switch (typeof value) {
+case &ldquo;string&rdquo;:
+return <code>My name is ${value}.</code>;
+case &ldquo;number&rdquo;:
+return <code>I'm ${value} years old.</code>;
+case &ldquo;boolean&rdquo;:
+return value ? &ldquo;I&rsquo;m single.&rdquo; : &ldquo;I&rsquo;m not single.&quot;;
+default:
+console.log(&ldquo;Invalid Operation!&quot;);
+}
+}
+// `` 反引号包围的为模板字符串，包含占位符
+// 实现签名必须兼容所有的重载签名，并且在参数列表最后接受一个any类型或联合类型的参数作为它的参数
+特定重载签名：
+// 将函数的参数类型指定为一个字符串，即为特定重载签名
+interface Document {
+createElement(tagName: &ldquo;div&rdquo;): HTMLDivElement;
+createElement(tagName: &ldquo;span&rdquo;) : HTMLSpanElement;
+createElement(tagName: &ldquo;cancas&rdquo;) : HTMLCanvasElement;
+createElement(tagName: string) : HTMLElement;   // 必须在最后列出非重载函数签名
+}
+函数作用域和块作用域：
+垃圾回收，垃圾回收器在变量脱离作用域时清理。理解变量的生命周期。
+一些编程语言使用源码结构指定哪些变量被引用，词法作用域。（TypeScript)
+一些编程语言使用程序运行时堆栈状态指定哪些变量被引用，动态作用域。
+var, 函数作用域，变量提升，提升至函数的顶部，可以在变量生命前直接使用。
+let, const, 块作用域
+立即调用函数：
+// 立即调用函数表达式（IIFE）是一种设计模式，使函数作用域作为一个词法作用域
+// 用于方式全局作用域中的变量提升导致的污染
+let bar = 0;     // global
+(function() {
+let foo : number = 0;     // local
+bar = 1;      // gloabl
+console.log(bar);   // 1
+console.log(foo);     // 0
+})();
+console.log(bar);     // 1
+console.log(foo);          // error</p>
+<pre><code>// 传递一个变量，更好的控制作用域之外创建的变量
+let bar = 0;    // gloabl
+(function(global) {
+    let foo : number = 0;   //local
+    bar = 1;   // global
+    console.log(global.bar);        // 1
+    console.log(foo);            // 0
+})(this);
+consolg.log(bar);                // 1
+console.log(foo);           // error
+
+class Counter {
+    private _i : number;                             // _开始的变量为私有变量名
+    constructor() {
+        this._i = 0;
+    }
+    get() : number {
+        return this._i;
+    }
+    set(val : number) : void {
+        this._i = val;
+    }
+    increment() : void {
+        this._i++;
+    }
+}
+let counter = new Counter();
+console.log(counter.get());
+counter.set(2);
+console.log(counter.get());
+counter.increment();
+</code></pre>
+<p>泛型：
+class User {
+name : string;
+age : number;
+}
+class Order {
+id : number;
+total : number;
+items : any[]
+}
+// 使用泛型避免代码重复，实例化时作为参数指定具体类型
+function getEntities<!-- raw HTML omitted -->(url : string, cb : (list : T[]) =&gt; void) : void {
+$.ajax({
+url : url,
+method : &ldquo;GET&rdquo;,
+success : function(data) {
+cb(data.items);
+},
+error : function (error) {
+cb(null);
+}
+});
+}
+getEntities<!-- raw HTML omitted -->(&quot;/api/users&rdquo;, function(users : Users[]) {
+for(let i; users.length; i++) {
+console.log(users[i].name)
+}
+});
+getEntities<!-- raw HTML omitted -->(&quot;/api/orders&rdquo;, function(orders : Orders[]) {
+for (let i; orders.length; i++) {
+console.log(orders[i].total);
+}
+});
+tag函数和标签模板：
+// 在模板字符串上应用一个tag函数时，这个模板字符串变成了标签模板
+// 实现一个tag函数
+function htmlEscape (literals, &hellip;placeholers) {
+let result = &ldquo;&quot;;
+for (let i = 0; i &lt; placeholders.length; i++) {
+result += literals[i];
+result += placeholders[i]
+.replace(/&amp;/g, &lsquo;&amp;')
+.replace(/''/g, &lsquo;&quot;')
+.replace(/'/g, &lsquo;'')
+.replace(/&lt;/g, &lsquo;&lt;')
+.replace(/&gt;/g, &lsquo;&gt;');
+}
+result += literals[literals.length - 1];
+return result;
+}
+let name = &lsquo;remo&rsquo;;
+let surname = &lsquo;jansen&rsquo;;
+let html = htmlEscape <code>&lt;h1&gt;${name} ${surname&lt;h1&gt;</code>;</p>
+<p>异步编程
+回调和高阶函数
+接受函数为参数（回调）或返回另一个函数的函数称为高阶函数。回调常用于异步函数中
+let foo = function() {
+console.log(&lsquo;foo&rsquo;);
+}
+function bar(cb : () =&gt; void) {
+console.log(&lsquo;bar&rsquo;);
+cb();
+}
+bar(foo);    <br>
+箭头函数
+class Person {
+name : string;
+constructor (name : string) {
+this.name = name;
+}
+greet() {
+alert(<code>Hi! My name is ${ this.name }</code>);
+}
+// 当定义了包含回调的异步函数，this关键字会改变它指向的值，指向匿名函数
+greetDelay(time : number) {
+setTimeout(function() {
+alert(<code>Hi! My name is ${this.name}</code>);
+}, time);
+}
+}
+let remo = new Person(&ldquo;remo&rdquo;);
+remo.greet();         // &ldquo;Hi! My name is remo&rdquo;
+remo.greetDelay(1000);    // &ldquo;Hi! My name is &quot;</p>
+<pre><code>class Person {
+    name : string;
+    constructor (name : string) {
+        this.name = name;
+    }
+    greet() {
+        alert(`Hi! My name is ${ this.name }`);
+    }
+    // 箭头函数表达式的词法会在其作用域内绑定this操作符
+    greetDelay(time : number) {
+        setTimeout(function() {
+            alert(`Hi! My name is ${this.name}`);
+        }, time);
+    }
+}
+let remo = new Person(&quot;remo&quot;);
+remo.greet();         // &quot;Hi! My name is remo&quot;
+remo.greetDelay(1000);    // &quot;Hi! My name is remo&quot;
+</code></pre>
+<p>回调地狱：
+npm install handlebars
+npm install jQuery
+tsd handlebars
+tsd  jQuery</p>
+<pre><code>///&lt;reference path=&quot;../typings/handlebars/handlebars.d.ts&quot; /&gt;
+///&lt;reference path=&quot;../typings/jquery/jquery.d.ts&quot; /&gt;
+
+// Alias for callback
+type cb = (json: any) =&gt; void;
+
+class View {
+    private _container: string;
+    private _templateUrl: string;
+    private _serviceUrl: string;
+    private _args: any;
+
+    constructor(config) {
+        this._container = config.container;
+        this._templateUrl = config.templateUrl;
+        this._serviceUrl = config.serviceUrl;
+        this._args = config.args;
+    }
+
+    //...
+    private _loadJson(url: string, args: any, cb: cb, errorCb: cb) {
+        $.ajax({
+            url: url,
+            type: &quot;GET&quot;,
+            dataType: &quot;json&quot;,
+            data: args,
+            success: (json) =&gt; {
+                cb(json);
+            },
+            error: (e) =&gt; {
+                errorCb(e);
+            }
+        });
+    }
+
+    //...
+    private _loadHbs(url: string, cb: cb, errorCb: cb) {
+        $.ajax({
+            url: url,
+            type: &quot;GET&quot;,
+            dataType: &quot;text&quot;,
+            success: (hbs) =&gt; {
+                cb(hbs);
+            },
+            error: (e) =&gt; {
+                errorCb(e);
+            }
+        });
+    }
+
+    //...
+    private _compileHbs(hbs: string, cb: cb, errorCb: cb) {
+        try {
+            var template = Handlebars.compile(hbs);
+            cb(template);
+        }
+        catch (e) {
+            errorCb(e);
+        }
+    }
+
+    //...
+    private _jsonToHtml(template: any, json: any, cb: cb, errorCb: cb) {
+        try {
+            var html = template(json);
+            cb(html);
+        }
+        catch (e) {
+            errorCb(e);
+        }
+    }
+
+    //...
+    private _appendHtml(html: string, cb: cb, errorCb: cb) {
+        try {
+            if ($(this._container).length === 0) {
+                throw new Error(&quot;Container not found!&quot;);
+            }
+            $(this._container).html(html);
+            cb($(this._container));
+        }
+        catch (e) {
+            errorCb(e);
+        }
+    }
+
+    //...
+    public render(cb: cb, errorCb: cb) {
+        try {
+            this._loadJson(this._serviceUrl, this._args, (json) =&gt; {
+                this._loadHbs(this._templateUrl, (hbs) =&gt; {
+                    this._compileHbs(hbs, (template) =&gt; {
+                        this._jsonToHtml(template, json, (html) =&gt; {
+                            this._appendHtml(html, cb);
+                        }, errorCb);
+                    }, errorCb);
+                }, errorCb);
+            }, errorCb);
+        }
+        catch (e) {
+            errorCb(e);
+        }
+    }
+}
+
+应当避免这样嵌套的回调，嵌套回调导致：难以理解，难以重构/重用，难以异常处理
+</code></pre>
+<p>promise:
+promise背后的思想是对异步操作结果的一个承诺，一个promise一定处于一下状态之一：
+pending: 初始状态
+fulfilled: 代表异步操作成功
+rejected: 代表异步操作失败
+当promise处于fulfilled或rejected状态之后，状态就永不可更改了</p>
+<pre><code>promise 构造接受一个函数为参数，这个函数有resolve和reject两个参数，这个函数需要成功时执行resolve, 失败时执行reject.
+
+function foo() {
+    return new Promise( (fulfill, reject) =&gt; {
+        try {                                               // 其实并不需要try catch, 出现错误会自动rejected
+            // do something
+            fulfill(value);
+        }
+        catch(e) {
+            reject(reason);
+        }
+    });
+}
+foo().then(function(value) { console.log(value); })
+    .catch(function(e) { console.log(e); });
+	
+foo函数返回一个promise，promise处于fulfilled状态调用then方法，then方法接受一个函数。promise处于rejected状态调用catch方法，catch方法接受一个函数。
+
+///&lt;reference path=&quot;../typings/handlebars/handlebars.d.ts&quot; /&gt;
+///&lt;reference path=&quot;../typings/jquery/jquery.d.ts&quot; /&gt;
+///&lt;reference path=&quot;../typings/q/q.d.ts&quot; /&gt;
+
+// 命名约定，将Async放在函数名后面，来指定一个函数是异步的
+class ViewAsync {
+    private _container: string;
+    private _templateUrl: string;
+    private _serviceUrl: string;
+    private _args: any;
+
+    constructor(config) {
+        this._container = config.container;
+        this._templateUrl = config.templateUrl;
+        this._serviceUrl = config.serviceUrl;
+        this._args = config.args;
+    }
+
+    //在参数中移除回调的定义，将这个函数用promise对象包裹
+   // 在异步任务成功或失败的时候调用resolve和reject
+    private _loadJsonAsync(url: string, args: any) {
+        return Q.Promise(function (resolve, reject) {
+            $.ajax({
+                url: url,
+                type: &quot;GET&quot;,
+                dataType: &quot;json&quot;,
+                data: args,
+                success: (json) =&gt; {
+                    resolve(json);
+                },
+                error: (e) =&gt; {
+                    reject(e);
+                }
+            });
+        });
+    }
+
+    //...
+    private _loadHbsAsync(url: string) {
+        return Q.Promise(function (resolve, reject) {
+            $.ajax({
+                url: url,
+                type: &quot;GET&quot;,
+                dataType: &quot;text&quot;,
+                success: (hbs) =&gt; {
+                    resolve(hbs);
+                },
+                error: (e) =&gt; {
+                    reject(e);
+                }
+            });
+        });
+    }
+
+    //...
+    private _compileHbsAsync(hbs: string) {
+        return Q.Promise(function (resolve, reject) {
+            try {
+                var template: any = Handlebars.compile(hbs);
+                resolve(template);
+            }
+            catch (e) {
+                reject(e);
+            }
+        });
+    }
+
+    //...
+    private _jsonToHtmlAsync(template: any, json: any) {
+        return Q.Promise(function (resolve, reject) {
+            try {
+                var html = template(json);
+                resolve(html);
+            }
+            catch (e) {
+                reject(e);
+            }
+        });
+    }
+
+    //...
+    private _appendHtmlAsync(html: string, container: string) {
+        return Q.Promise((resolve, reject) =&gt; {
+            try {
+                var $container: any = $(container);
+                if ($container.length === 0) {
+                    throw new Error(&quot;Container not found!&quot;);
+                }
+                $container.html(html);
+                resolve($container);
+            }
+            catch (e) {
+                reject(e);
+            }
+        });
+    }
+
+    //...
+    public renderAsync() {
+        return Q.Promise((resolve, reject) =&gt; {
+            try {
+                var getJson = this._loadJsonAsync(this._serviceUrl, this._args);
+
+                var getTemplate = this._loadHbsAsync(this._templateUrl)
+                    .then(this._compileHbsAsync);
+	     
+         // 并行执行两个promises
+                Q.all([getJson, getTemplate]).then((results) =&gt; {
+
+                    var json = results[0];
+                    var template = results[1];
+
+                    this._jsonToHtmlAsync(template, json)
+                        .then((html: string) =&gt; {
+                            return this._appendHtmlAsync(html, this._container);
+                        })
+                        .then(($container: any) =&gt; {
+                            resolve($container);
+                        });
+                });
+            }
+            catch (error) {
+                reject(error);
+            }
+        });
+    }
+}
+
+// $ 起始的属性名为私有属性
+</code></pre>
+<p>​
+​
+TypeScript面向对象编程
+运行时
+应用性能
+应用测试
+装饰器
+应用架构
+汇总</p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2019-03-01
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://csyezheng.github.io/tags/typescript/">TypeScript</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/engineering-fundamentals/programming-languages/scala/a-tour-of-scala/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">The tour of Scala</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/engineering-fundamentals/programming-languages/java/learn-java-in-y-minutes/">
+            <span class="next-text nav-default">learn Java in Y minutes</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

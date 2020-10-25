@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 15 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>proxy for crawler</title>
-      <link>http://csyezheng.github.io/post/web-scraping/proxy/</link>
+      <link>http://csyezheng.github.io/post/specialization/information/web-scraping/proxy/</link>
       <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/web-scraping/proxy/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/information/web-scraping/proxy/</guid>
       <description>from proxybroker import Broker, Checker async def check(proxy): broker = Broker() ip = await broker._resolver.get_real_ext_ip() checker = Checker(judges=None, real_ext_ip=ip) results = [] for proto in [&#39;HTTPS&#39;, &#39;HTTP&#39;]: result = await checker._check(proxy, proto) results.append(result) return True if any(results) else False </description>
     </item>
     

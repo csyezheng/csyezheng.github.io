@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>maven - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="Introduction to the Build Lifecycle Build Lifecycle Basics Maven is based around the central concept of a build lifecycle. What this means is that the process for building and distributing a particular artifact (project) is clearly defined.
+There are three built-in build lifecycles: default, clean and site. The default lifecycle handles your project deployment, the clean lifecycle handles project cleaning, while the site lifecycle handles the creation of your project&amp;rsquo;s site documentation." />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+<link rel="canonical" href="http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/maven/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="maven" />
+<meta property="og:description" content="Introduction to the Build Lifecycle Build Lifecycle Basics Maven is based around the central concept of a build lifecycle. What this means is that the process for building and distributing a particular artifact (project) is clearly defined.
+There are three built-in build lifecycles: default, clean and site. The default lifecycle handles your project deployment, the clean lifecycle handles project cleaning, while the site lifecycle handles the creation of your project&rsquo;s site documentation." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/maven/" />
+<meta property="article:published_time" content="2019-07-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-07-15T00:00:00+00:00" />
+<meta itemprop="name" content="maven">
+<meta itemprop="description" content="Introduction to the Build Lifecycle Build Lifecycle Basics Maven is based around the central concept of a build lifecycle. What this means is that the process for building and distributing a particular artifact (project) is clearly defined.
+There are three built-in build lifecycles: default, clean and site. The default lifecycle handles your project deployment, the clean lifecycle handles project cleaning, while the site lifecycle handles the creation of your project&rsquo;s site documentation.">
+<meta itemprop="datePublished" content="2019-07-15T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-07-15T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1655">
+
+
+
+<meta itemprop="keywords" content="Java,maven," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="maven"/>
+<meta name="twitter:description" content="Introduction to the Build Lifecycle Build Lifecycle Basics Maven is based around the central concept of a build lifecycle. What this means is that the process for building and distributing a particular artifact (project) is clearly defined.
+There are three built-in build lifecycles: default, clean and site. The default lifecycle handles your project deployment, the clean lifecycle handles project cleaning, while the site lifecycle handles the creation of your project&rsquo;s site documentation."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">maven</h1>
+      
+      <div class="post-meta">
+        <time datetime="2019-07-15" class="post-time">
+          2019-07-15
+        </time>
+        <div class="post-category">
+            <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
+            <a href="http://csyezheng.github.io/categories/java/"> Java </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction-to-the-build-lifecycle">Introduction to the Build Lifecycle</a>
+      <ul>
+        <li><a href="#build-lifecycle-basics">Build Lifecycle Basics</a></li>
+        <li><a href="#setting-up-your-project-to-use-the-build-lifecycle">Setting Up Your Project to Use the Build Lifecycle</a></li>
+        <li><a href="#building-a-maven-project">Building a Maven Project</a></li>
+      </ul>
+    </li>
+    <li><a href="#introduction-to-the-pom">Introduction to the POM</a>
+      <ul>
+        <li><a href="#what-is-a-pom">What is a POM?</a></li>
+        <li><a href="#super-pom">Super POM</a></li>
+        <li><a href="#minimal-pom">Minimal POM</a></li>
+        <li><a href="#project-inheritance">Project Inheritance</a></li>
+        <li><a href="#project-aggregation">Project Aggregation</a></li>
+        <li><a href="#project-inheritance-vs-project-aggregation">Project Inheritance vs Project Aggregation</a></li>
+        <li><a href="#project-interpolation-and-variables">Project Interpolation and Variables</a></li>
+      </ul>
+    </li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h2 id="introduction-to-the-build-lifecycle">Introduction to the Build Lifecycle</h2>
+<h3 id="build-lifecycle-basics">Build Lifecycle Basics</h3>
+<p>Maven is based around the central concept of a build lifecycle. What this means is that the process for building and distributing a particular artifact (project) is clearly defined.</p>
+<p>There are three built-in build lifecycles: default, clean and site. The <strong><code>default</code></strong> lifecycle handles your project deployment, the <strong><code>clean</code></strong> lifecycle handles project cleaning, while the <strong><code>site</code></strong> lifecycle handles the creation of your project&rsquo;s site documentation.</p>
+<h4 id="a-build-lifecycle-is-made-up-of-phases">A Build Lifecycle is Made Up of Phases</h4>
+<p>Each of these build lifecycles is defined by a different list of build phases, wherein a build phase represents a stage in the lifecycle.</p>
+<p>The <strong><code>clean</code></strong> lifecycle comprises of the following phases:</p>
+<ul>
+<li><strong><code>pre-clean</code></strong> - execute processes needed prior to the actual project cleaning</li>
+<li><strong><code>clean</code></strong> - remove all files generated by the previous build</li>
+<li><strong><code>post-clean</code></strong> -  execute processes needed to finalize the project cleaning</li>
+</ul>
+<p>Here are some of the most important phases in the  <strong><code>default</code></strong> lifecycle:</p>
+<ul>
+<li><strong><code>validate</code></strong> - validate the project is correct and all necessary information is available</li>
+<li><strong><code>compile</code></strong> - compile the source code of the project</li>
+<li><strong><code>test</code></strong> - test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed</li>
+<li><strong><code>package</code></strong> - take the compiled code and package it in its distributable format, such as a JAR.</li>
+<li><strong><code>verify</code></strong> - run any checks on results of integration tests to ensure quality criteria are met</li>
+<li><strong><code>install</code></strong> - install the package into the local repository, for use as a dependency in other projects locally</li>
+<li><strong><code>deploy</code></strong> - done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.</li>
+</ul>
+<p>These lifecycle phases (plus the other lifecycle phases not shown here) <strong>are executed sequentially</strong> to complete the <strong><code>default</code></strong> lifecycle.</p>
+<p>The <strong><code>Site</code></strong> lifecycle comprises of the following phases:</p>
+<ul>
+<li><strong><code>pre-site</code></strong>	execute processes needed prior to the actual project site generation</li>
+<li><strong><code>site</code></strong>	generate the project&rsquo;s site documentation</li>
+<li><strong><code>post-site</code></strong>	execute processes needed to finalize the site generation, and to prepare for site deployment</li>
+<li><strong><code>site-deploy</code></strong>	deploy the generated site documentation to the specified web server</li>
+</ul>
+<h4 id="usual-command-line-calls">Usual Command Line Calls</h4>
+<p>Phases are executed in a specific order. This means that if we run a specific phase using the command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn &lt;PHASE&gt;
+</code></pre></div><p>This won&rsquo;t only execute the specified phase <strong>but all the preceding phases as well</strong>. When a phase is given, Maven will <strong>execute every phase in the sequence up to and including the one defined</strong>.</p>
+<p>In a build environment, use the following call to cleanly build and deploy artifacts into the shared repository.</p>
+<pre><code>mvn clean deploy
+</code></pre><p>Maven executes <code>clean</code>, then executes <code>deploy</code> (<strong>including all of the prior build phase steps</strong>).</p>
+<h4 id="a-build-phase-is-made-up-of-plugin-goals">A Build Phase is Made Up of Plugin Goals</h4>
+<p>A plugin goal represents a specific task (finer than a build phase) which contributes to the building and managing of a project. It may be bound to zero or more build phases. A goal not bound to any build phase could be executed outside of the build lifecycle by direct invocation. The order of execution depends on the order in which the goal(s) and the build phase(s) are invoked.</p>
+<pre><code>mvn clean dependency:copy-dependencies package
+</code></pre><h4 id="some-phases-are-not-usually-called-from-the-command-line">Some Phases Are Not Usually Called From the Command Line</h4>
+<p>The phases named with hyphenated-words (<code>pre-*</code>, <code>post-*</code>, or <code>process-*</code>) are not usually directly called from the command line.</p>
+<h3 id="setting-up-your-project-to-use-the-build-lifecycle">Setting Up Your Project to Use the Build Lifecycle</h3>
+<h4 id="packaging">Packaging</h4>
+<p>The first, and most common way, is to set the packaging for your project via the equally named POM element <strong><code>&lt;packaging&gt;</code></strong>. Some of the valid packaging values are <strong><code>jar</code></strong>, <strong><code>war</code></strong>, <strong><code>ear</code></strong> and <strong><code>pom</code></strong>. If no packaging value has been specified, it will default to <strong><code>jar</code></strong>.</p>
+<p>Each packaging contains a list of goals to bind to a particular phase.</p>
+<p>Note that for some packaging types to be available, you may also need to include a particular plugin in the <strong><code>&lt;build&gt;</code></strong> section of your POM and specify <strong><code>&lt;extensions&gt;</code><strong>true</strong><code>&lt;/extensions&gt;</code></strong> for that plugin.</p>
+<h4 id="plugins">Plugins</h4>
+<p>The second way to add goals to phases is to configure plugins in your project. Plugins are artifacts that provide goals to Maven. Furthermore, a plugin may have one or more goals wherein each goal represents a capability of that plugin, plugins can contain information that <strong>indicates which lifecycle phase to bind a goal to</strong>.</p>
+<p>The goals that are configured will be added to the goals already bound to the lifecycle from the packaging selected. If more than one goal is bound to a particular phase, the order used is that those from the packaging are executed first, followed by those configured in the POM. Note that you can use the <strong><code>&lt;executions&gt;</code></strong> element to gain more control over the order of particular goals.</p>
+<p>For example, let&rsquo;s say you have a goal <code>display:time</code> that echos the current time to the commandline, and you want it to run in the <code>process-test-resources</code> phase to indicate when the tests were started. This would be configured like so:</p>
+<pre><code>...
+ &lt;plugin&gt;
+   &lt;groupId&gt;com.mycompany.example&lt;/groupId&gt;
+   &lt;artifactId&gt;display-maven-plugin&lt;/artifactId&gt;
+   &lt;version&gt;1.0&lt;/version&gt;
+   &lt;executions&gt;
+     &lt;execution&gt;
+       &lt;phase&gt;process-test-resources&lt;/phase&gt;
+       &lt;goals&gt;
+         &lt;goal&gt;time&lt;/goal&gt;
+       &lt;/goals&gt;
+     &lt;/execution&gt;
+   &lt;/executions&gt;
+ &lt;/plugin&gt;
+...
+</code></pre><p>We can use the following command to <strong>list all goals in a specific plugin</strong>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn &lt;PLUGIN&gt;:help
+</code></pre></div><p>For example, to list all goals in the Failsafe plugin:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn display:help
+</code></pre></div><p>To run a specific goal, without executing its entire phase (and the preceding phases) we can use the command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn &lt;PLUGIN&gt;:&lt;GOAL&gt;
+</code></pre></div><h3 id="building-a-maven-project">Building a Maven Project</h3>
+<p>To build a Maven project, we need to execute one of the life cycles by running one of their phases:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn deploy
+</code></pre></div><p>This will execute the entire <em>default</em> lifecycle. Alternatively, we can stop at the <em>install</em> phase:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn install
+</code></pre></div><p>But usually we&rsquo;ll use the command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn clean install
+</code></pre></div><p>To clean the project first – by running the <em>clean</em> lifecycle – before the new build.</p>
+<p>We can also run only a specific goal of the plugin:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn compiler:compile
+</code></pre></div><h2 id="introduction-to-the-pom">Introduction to the POM</h2>
+<h3 id="what-is-a-pom">What is a POM?</h3>
+<p>A Project Object Model or POM is the fundamental unit of work in Maven. It is an XML file that contains information about the project and configuration details used by Maven to build the project. It <strong>contains default values</strong> for most projects.</p>
+<h3 id="super-pom">Super POM</h3>
+<p>The Super POM is Maven&rsquo;s default POM. All POMs extend the Super POM unless explicitly set, meaning the configuration specified in the Super POM is inherited by the POMs you created for your projects.</p>
+<h3 id="minimal-pom">Minimal POM</h3>
+<p>The minimum requirement for a POM are the following:</p>
+<ul>
+<li><code>project</code> root</li>
+<li><code>modelVersion</code> - should be set to 4.0.0</li>
+<li><code>groupId</code> - the id of the project&rsquo;s group.</li>
+<li><code>artifactId</code> - the id of the artifact (project)</li>
+<li><code>version</code> - the version of the artifact under the specified group</li>
+</ul>
+<h3 id="project-inheritance">Project Inheritance</h3>
+<p>Elements in the POM that are merged are the following:</p>
+<ul>
+<li>dependencies</li>
+<li>developers and contributors</li>
+<li>plugin lists (including reports)</li>
+<li>plugin executions with matching ids</li>
+<li>plugin configuration</li>
+<li>resources</li>
+</ul>
+<h5 id="the-scenario-1">The Scenario 1</h5>
+<p>And let us specify their directory structure as the following:</p>
+<pre><code>.
+ |-- my-module
+ |   `-- pom.xml
+ `-- pom.xml
+</code></pre><p><strong>com.mycompany.app:my-module:1&rsquo;s POM</strong></p>
+<pre><code>&lt;project&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+ 
+  &lt;parent&gt;
+    &lt;groupId&gt;com.mycompany.app&lt;/groupId&gt;
+    &lt;artifactId&gt;my-app&lt;/artifactId&gt;
+    &lt;version&gt;1&lt;/version&gt;
+  &lt;/parent&gt;
+ 
+  &lt;groupId&gt;com.mycompany.app&lt;/groupId&gt;
+  &lt;artifactId&gt;my-module&lt;/artifactId&gt;
+  &lt;version&gt;1&lt;/version&gt;
+&lt;/project&gt;
+</code></pre><p>With this setup, our module can now inherit some of the properties of our parent POM.</p>
+<h5 id="the-scenario-2">The Scenario 2</h5>
+<pre><code>.
+ |-- my-module
+ |   `-- pom.xml
+ `-- parent
+     `-- pom.xml
+</code></pre><p>To address this directory structure (or any other directory structure), we would have to add the <strong><code>&lt;relativePath&gt;</code></strong> element to our parent section.</p>
+<pre><code>&lt;project&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+ 
+  &lt;parent&gt;
+    &lt;groupId&gt;com.mycompany.app&lt;/groupId&gt;
+    &lt;artifactId&gt;my-app&lt;/artifactId&gt;
+    &lt;version&gt;1&lt;/version&gt;
+    &lt;relativePath&gt;../parent/pom.xml&lt;/relativePath&gt;
+  &lt;/parent&gt;
+ 
+  &lt;artifactId&gt;my-module&lt;/artifactId&gt;
+&lt;/project&gt;
+</code></pre><h3 id="project-aggregation">Project Aggregation</h3>
+<p>Project Aggregation is similar to Project Inheritance. But instead of specifying the parent POM from the module, it specifies the modules from the parent POM. By doing so, the parent project now knows its modules, and if a Maven command is invoked against the parent project, that Maven command will then be executed to the parent&rsquo;s modules as well. To do Project Aggregation, you must do the following:</p>
+<ul>
+<li>Change the parent POMs <strong>packaging</strong> to the value &ldquo;<strong>pom</strong>&rdquo;.</li>
+<li>Specify in the parent POM the directories of its <strong>modules</strong> (children POMs).</li>
+</ul>
+<h5 id="the-scenario-1-1">The Scenario 1</h5>
+<p><strong>directory structure</strong></p>
+<pre><code>.
+ |-- my-module
+ |   `-- pom.xml
+ `-- pom.xml
+</code></pre><p>If we are to aggregate my-module into my-app, we would only have to modify my-app.</p>
+<pre><code>&lt;project&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+ 
+  &lt;groupId&gt;com.mycompany.app&lt;/groupId&gt;
+  &lt;artifactId&gt;my-app&lt;/artifactId&gt;
+  &lt;version&gt;1&lt;/version&gt;
+  &lt;packaging&gt;pom&lt;/packaging&gt;
+ 
+  &lt;modules&gt;
+    &lt;module&gt;my-module&lt;/module&gt;
+  &lt;/modules&gt;
+&lt;/project&gt;
+</code></pre><p>Now, whenever a Maven command processes com.mycompany.app:my-app:1, that same Maven command would be ran against com.mycompany.app:my-module:1 as well.</p>
+<h5 id="the-scenario-2-1">The Scenario 2</h5>
+<p>directory structure:</p>
+<pre><code>.
+ |-- my-module
+ |   `-- pom.xml
+ `-- parent
+     `-- pom.xml
+</code></pre><pre><code>&lt;project&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+ 
+  &lt;groupId&gt;com.mycompany.app&lt;/groupId&gt;
+  &lt;artifactId&gt;my-app&lt;/artifactId&gt;
+  &lt;version&gt;1&lt;/version&gt;
+  &lt;packaging&gt;pom&lt;/packaging&gt;
+ 
+  &lt;modules&gt;
+    &lt;module&gt;../my-module&lt;/module&gt;
+  &lt;/modules&gt;
+&lt;/project&gt;
+</code></pre><h3 id="project-inheritance-vs-project-aggregation">Project Inheritance vs Project Aggregation</h3>
+<p>If you have several Maven projects, and they all have similar configurations, you can <strong>refactor your projects</strong> by <strong>pulling out those similar configurations</strong> and making a parent project. Thus, all you have to do is to let your Maven projects inherit that parent project, and those configurations would then be applied to all of them.</p>
+<p>And if you have a group of projects that are <strong>built or processed together</strong>, you can create a parent project and have that parent project declare those projects as its modules. By doing so, you&rsquo;d only have to build the parent and the rest will follow.</p>
+<p>But of course, you can have both Project Inheritance and Project Aggregation.</p>
+<h3 id="project-interpolation-and-variables">Project Interpolation and Variables</h3>
+<p>One of the practices that Maven encourages is <em>don&rsquo;t repeat yourself</em>. However, there are circumstances where you will need to use the same value in several different locations. To assist in ensuring the value is only specified once, Maven allows you to use both your own and pre-defined variables in the POM.</p>
+<p>For example, to access the <code>project.version</code> variable, you would reference it like so:</p>
+<pre><code>  &lt;version&gt;${project.version}&lt;/version&gt;
+</code></pre><h4 id="available-variables">Available Variables</h4>
+<h5 id="project-model-variables">Project Model Variables</h5>
+<p>Any field of the model that is a single value element can be referenced as a variable. For example, <code>${project.groupId}</code>, <code>${project.version}</code>, <code>${project.build.sourceDirectory}</code> and so on.</p>
+<h5 id="special-variables">Special Variables</h5>
+<p><code>${project.basedir}</code>, <code>${project.baseUri}</code>, <code>${maven.build.timestamp}</code> and so on.</p>
+<h5 id="properties">Properties</h5>
+<p>You are also able to reference any properties defined in the project as a variable.</p>
+<pre><code>&lt;project&gt;
+  ...
+  &lt;properties&gt;
+    &lt;mavenVersion&gt;3.0&lt;/mavenVersion&gt;
+  &lt;/properties&gt;
+ 
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.apache.maven&lt;/groupId&gt;
+      &lt;artifactId&gt;maven-artifact&lt;/artifactId&gt;
+      &lt;version&gt;${mavenVersion}&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.apache.maven&lt;/groupId&gt;
+      &lt;artifactId&gt;maven-core&lt;/artifactId&gt;
+      &lt;version&gt;${mavenVersion}&lt;/version&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+  ...
+&lt;/project&gt;
+</code></pre><h2 id="reference">Reference</h2>
+<ol>
+<li><a href="https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html">Introduction to the Build Lifecycle</a></li>
+<li><a href="https://www.baeldung.com/maven-goals-phases">Maven Goals and Phases</a></li>
+</ol>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2019-07-15
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://csyezheng.github.io/tags/java/">Java</a>
+          <a href="http://csyezheng.github.io/tags/maven/">maven</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/specialization/artificial-intelligence/machine-learning/kaggle/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">kaggle</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/specialization/computer-and-network-security/web-application/back-end/oauth2/">
+            <span class="next-text nav-default">Django oauth2 provider</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 23 Jul 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/message-queue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kafka</title>
-      <link>http://csyezheng.github.io/post/back-end/kafka/</link>
+      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/kafka/</link>
       <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/back-end/kafka/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/kafka/</guid>
       <description>Quickstart &amp;gt; tar -xzf kafka_2.11-1.1.0.tgz &amp;gt; cd kafka_2.11-1.1.0 Start the server bin/zookeeper-server-start.sh config/zookeeper.properties bin/kafka-server-start.sh config/server.properties Create a topic bin/kaftopics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic my-topic bin/kafka-topics.sh --list --zookeeper localhost:2181 Send some messages bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning Python client for the Apache Kafka #!/usr/bin/env python3 import logging from kafka import KafkaProducer from kafka.errors import KafkaError import msgpack log = logging.getLogger(__name__) def send(): producer = KafkaProducer(bootstrap_servers=[&#39;localhost:9092&#39;], value_serializer=msgpack.</description>
     </item>
     

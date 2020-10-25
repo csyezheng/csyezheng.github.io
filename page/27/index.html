@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.75.1" />
+<meta name="generator" content="Hugo 0.76.5" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -296,7 +296,41 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/back-end/kafka/">Kafka</a>
+      <a class="post-link" href="/post/other/thinking/thinking/">Programming Thinking</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2018-08-15" class="post-time">
+        2018-08-15
+      </time>
+      <div class="post-category">
+          <a href="http://csyezheng.github.io/categories/thinking/"> Thinking </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      基类的派生类的派生类需要做某些改动时，追溯到基类的一个虚函数做改动才能实现时，可以在此派生类中重写同名函数进行覆盖而不是继承这个虚函数，先拷
+    </div>
+    <div class="read-more">
+      <a href="/post/other/thinking/thinking/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/specialization/computer-and-network-security/web-application/back-end/kafka/">Kafka</a>
     </h1>
     
     <div class="post-meta">
@@ -319,7 +353,7 @@
       Quickstart &gt; tar -xzf kafka_2.11-1.1.0.tgz &gt; cd kafka_2.11-1.1.0 Start the server bin/zookeeper-server-start.sh config/zookeeper.properties bin/kafka-server-start.sh config/server.properties Create a topic bin/kaftopics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic my-topic bin/kafka-topics.sh --list --zookeeper localhost:2181 Send some messages bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning Python client for the Apache Kafka #!/usr/bin/env python3 import logging from kafka import KafkaProducer from kafka.errors import KafkaError import msgpack log = logging.getLogger(__name__) def send(): producer = KafkaProducer(bootstrap_servers=['localhost:9092'], value_serializer=msgpack.
     </div>
     <div class="read-more">
-      <a href="/post/back-end/kafka/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/computer-and-network-security/web-application/back-end/kafka/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,7 +364,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/deep-learning/keras/">keras</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/deep-learning/keras/">keras</a>
     </h1>
     
     <div class="post-meta">
@@ -353,41 +387,7 @@
       Keras import tensorflow as tf from tensorflow import keras 
     </div>
     <div class="read-more">
-      <a href="/post/deep-learning/keras/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/back-end/make-a-web-site/">MAKE A WEBSITE</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2018-03-18" class="post-time">
-        2018-03-18
-      </time>
-      <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      GET A DOMAIN &amp; WEB HOSTING Register a domain name Namesilo Create New Account csyezheng csye3631 SEARCH Domain and REGISTER NameServers：域名解析服务器设置，未确定的可以等稍后在后台设置也一样； Auto-Renew
-    </div>
-    <div class="read-more">
-      <a href="/post/back-end/make-a-web-site/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/deep-learning/keras/" class="read-more-link">Read more</a>
     </div>
     
   </div>

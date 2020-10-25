@@ -19,19 +19,19 @@ Cloud computing can be referred as the allocation of resources on the cloud.</de
     
     <item>
       <title>The Java 3rd Library</title>
-      <link>http://csyezheng.github.io/post/programming-languages/java/the-java-3rd-party-library/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-3rd-party-library/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/programming-languages/java/the-java-3rd-party-library/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-3rd-party-library/</guid>
       <description>import org.alibaba.fastjson.JSONArray; import org.alibaba.fastjson.JSONObject; import com.amazonaws.Request; import com.amazonaws.utils.StringUtils; import com.atomikos.datasource.xa.StringUtils; import com.fasterxml.jackson.core.JsonParseException; import com.fasterxml.jackson.annotation.JsonFormat; import com.fasterxml.jackson.core.io.JsonStringEncoder; import com.fasterxml.jackson.core.type.TypeReference; import com.fasterxml.jackson.databind.JavaType; import com.fasterxml.jackson.databind.DeserializationFeature; import com.fasterxml.jackson.databind.JsonMappingException; import com.fasterxml.jackson.databind.ObjectMapper; import com.google.common.cache.CacheBuilder; import com.google.common.cache.CacheLoader; import com.google.common.cache.LoadingCache; import com.google.gson.Gson; import com.ibm.db2.jcc.am.re; import com.jayway.restassured.RestAssured; import com.jayway.restassured.path.json.JsonPath; import com.jayway.restassured.config.RestAssuredconfig; import com.jayway.restassured.response.Response; import com.jayway.restassured.response.ValidatableResponse; import com.jayway.restassured.specification.RequestSpecification; import freemarker.template.Template; import freemarker.template.TemplateException; import groovy.json.internal.JsonFastParser; import groovy.json.internal.ValueMap; import org.apache.ws.security.WSSecurityException; import org.apache.ws.security.util.Base64; net.sf.json JSONArray JSONNull JSONObject org.activiti.engine https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1 commons beanutils BeanUtils; collection</description>
     </item>
     
     <item>
       <title>The Java Standard Library</title>
-      <link>http://csyezheng.github.io/post/programming-languages/java/the-java-standard-library/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-standard-library/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/programming-languages/java/the-java-standard-library/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-standard-library/</guid>
       <description>Collections Interfaces Note that all the core collection interfaces are generic. For example, this is the declaration of the Collection interface.
 public interface Collection&amp;lt;E&amp;gt;... The Collection Interface List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;(c); The Collection interface contains methods that perform basic operations, such as
  int size() boolean isEmpty() boolean contains(Object element) boolean add(E element) boolean remove(Object element) Iterator&amp;lt;E&amp;gt; iterator()  It also contains methods that operate on entire collections, such as</description>
@@ -39,19 +39,19 @@ public interface Collection&amp;lt;E&amp;gt;... The Collection Interface List&am
     
     <item>
       <title>Mybatis Spring Boot</title>
-      <link>http://csyezheng.github.io/post/back-end/mybatis-spring-boot/</link>
+      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/mybatis-spring-boot/</link>
       <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/back-end/mybatis-spring-boot/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/mybatis-spring-boot/</guid>
       <description>Creating a project spring init -d=web --build=maven mysite Declare Dependencies cd mysite vim pom.xml &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.liquibase&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;liquibase-core&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.10.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis.spring.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis-spring-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.1.3&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;8.0.20&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; MyBatis-Spring-Boot-Starter will: Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers,</description>
     </item>
     
     <item>
       <title>Spring</title>
-      <link>http://csyezheng.github.io/post/back-end/spring/</link>
+      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring/</link>
       <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/back-end/spring/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring/</guid>
       <description>Installation Install JDK Download jdk-8u261-linux-x64.tar.gz from Oracle
 sudo pacman -S jdk8-openjdk vim ~/.bashrc export JAVA_HOME=/usr/lib/jvm/java-8-openjdk source ~/.bashrc Install maven sudo pacman -S maven cp /opt/maven/conf/settings.xml ~/.m2/ vim ~/.m2/settings.xml &amp;lt;mirror&amp;gt; &amp;lt;id&amp;gt;alimaven&amp;lt;/id&amp;gt; &amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt; &amp;lt;name&amp;gt;aliyun maven&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public&amp;lt;/url&amp;gt; &amp;lt;/mirror&amp;gt; Installing the Spring Boot CLI Download the Spring Boot CLI
 wget https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-cli/2.3.3.BUILD-SNAPSHOT/spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip Extract to a directory that supports file execution.
@@ -60,11 +60,23 @@ export PATH=/opt/spring-2.</description>
     </item>
     
     <item>
+      <title>Spring Boot CXF JAX-RS Starter</title>
+      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring-boot-cxf-jax-rs-starter/</link>
+      <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring-boot-cxf-jax-rs-starter/</guid>
+      <description>Features Registers CXF Servlet with a &amp;ldquo;/services/*&amp;rdquo; URL pattern for serving CXF JAX-RS endpoints.
+Optionally auto-discovers JAX-RS root resources and providers and creates a JAX-RS endpoint.
+Note the use of CXF JAX-RS Clients in SpringBoot Application is covered in this section.
+Databases sudo docker container start mysql-container-id sudo docker exec -it mysql-container-name mysql -u root -p mysql&amp;gt; create database demo; mysql&amp;gt; USE demo; mysql&amp;gt; SET FOREIGN_KEY_CHECKS=0; mysql&amp;gt; DROP TABLE IF EXISTS `student`; mysql&amp;gt; CREATE TABLE `student` ( -&amp;gt; `id` int(10) NOT NULL, -&amp;gt; `name` varchar(100) DEFAULT NULL, -&amp;gt; `sex` char(6) DEFAULT NULL, -&amp;gt; `address` varchar(255) DEFAULT NULL, -&amp;gt; `age` int(10) DEFAULT NULL, -&amp;gt; PRIMARY KEY (`id`) -&amp;gt; ) ENGINE=InnoDB DEFAULT CHARSET=utf8; mysql&amp;gt; INSERT INTO `student` VALUES (&#39;1&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;22&#39;); Creating a project spring init -d=web,mybatis,mysql --build=maven mysite dependency  &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
+    </item>
+    
+    <item>
       <title>欣宸Blog</title>
-      <link>http://csyezheng.github.io/post/devops/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/devops/</link>
       <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/devops/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/devops/</guid>
       <description>https://cloud.tencent.com/developer/column/1662</description>
     </item>
     
@@ -79,124 +91,115 @@ export PATH=/opt/spring-2.</description>
     
     <item>
       <title>Question answering</title>
-      <link>http://csyezheng.github.io/post/natural-language-processing/question-answering/</link>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/natural-language-processing/question-answering/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</guid>
       <description>Reference
  https://github.com/deepmipt/DeepPavlov https://github.com/deepset-ai/FARM https://github.com/huggingface/transformers https://github.com/deepset-ai/haystack https://github.com/deepset-ai/COVID-QA https://demo.allennlp.org/reading-comprehension https://github.com/baidu/AnyQ https://github.com/allenai/bi-att-flow https://github.com/google-research/language/tree/master/language/question_answering BERT Question Answering Inference with Mixed Precision in TensorFlow https://www.kaggle.com/c/tensorflow2-question-answering/ https://github.com/chrischute/squad https://github.com/ColasGael/QA-squad https://github.com/IBM/MAX-Question-Answering http://web.stanford.edu/class/cs224n/project/default-final-project-handout.pdf https://github.com/baidu/DuReader  </description>
     </item>
     
     <item>
       <title>tencent nlp interview</title>
-      <link>http://csyezheng.github.io/post/interview/tencent-nlp-interview/</link>
+      <link>http://csyezheng.github.io/post/other/interview/tencent-nlp-interview/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/interview/tencent-nlp-interview/</guid>
+      <guid>http://csyezheng.github.io/post/other/interview/tencent-nlp-interview/</guid>
       <description>一面（技术面） 面试形式：电话面试。 简要的自我介绍。 研究生阶段最有挑战的项目是什么？ 对于这个项目，传统的方法是怎么样的？ 列举下这个任务在传统用</description>
     </item>
     
     <item>
       <title>Top 20 Python Libraries for Data Science</title>
-      <link>http://csyezheng.github.io/post/machine-learning/top-20-python-libraries/</link>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/machine-learning/top-20-python-libraries/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</guid>
       <description>Core Libraries &amp;amp; Statistics  NumPy SciPy Pandas StatsModels  Visualization Matplotlib Seaborn Plotly Bokeh Pydot  Machine Learning Scikit-learn XGBoost Eli5  Deep Learning TensorFlow PyTorch Keras  Distributed Deep Learning Dist-keras / elephas / spark-deep-learning  Natural Language Processing NLTK SpaCy Gensim  Data Scraping Scrapy  </description>
     </item>
     
     <item>
       <title>Top Websites for Machine Learning</title>
-      <link>http://csyezheng.github.io/post/machine-learning/top-websites/</link>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-websites/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/machine-learning/top-websites/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-websites/</guid>
       <description>AI Hub</description>
     </item>
     
     <item>
       <title>Skincare</title>
-      <link>http://csyezheng.github.io/post/health/skincare/</link>
+      <link>http://csyezheng.github.io/post/other/health/skincare/</link>
       <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/health/skincare/</guid>
+      <guid>http://csyezheng.github.io/post/other/health/skincare/</guid>
       <description>Skincare Cleanse (清洁) oil cleanser mild cleanser 油性皮肤用用 38～40 度的热水比较好。比皮表温度稍高但又不觉得烫，容易把溢出的油脂洗掉。 使用尽量柔软的毛巾，毛巾每周清洗</description>
     </item>
     
     <item>
       <title>Bigger Leaner Stronger 5-DAY WORKOUT ROUTINE</title>
-      <link>http://csyezheng.github.io/post/health/bls-5-day-workout-routine/</link>
+      <link>http://csyezheng.github.io/post/other/health/bls-5-day-workout-routine/</link>
       <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/health/bls-5-day-workout-routine/</guid>
+      <guid>http://csyezheng.github.io/post/other/health/bls-5-day-workout-routine/</guid>
       <description>PHASE 1 WORKOUT 1 | PUSH Barbell Bench Press (杠铃卧推) Warm-up and 3 hard sets Incline Barbell Bench Press(斜杠铃卧推) 3 hard sets Dumbbell Bench Press(哑铃卧推) 3 hard sets Triceps Pushdown(肱三头肌下拉</description>
     </item>
     
     <item>
       <title>workout</title>
-      <link>http://csyezheng.github.io/post/health/workout/</link>
+      <link>http://csyezheng.github.io/post/other/health/workout/</link>
       <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/health/workout/</guid>
+      <guid>http://csyezheng.github.io/post/other/health/workout/</guid>
       <description>Barbell Bench Press (杠铃卧推) Incline Barbell Bench Press(斜杠铃卧推) Dumbbell Bench Press(哑铃卧推) Triceps Pushdown(肱三头肌下拉) Barbell Deadlift (杠铃硬拉) One-Arm Dumbbell Row (单臂哑铃</description>
     </item>
     
     <item>
       <title>Search Architecture</title>
-      <link>http://csyezheng.github.io/post/back-end/search-architecture/</link>
+      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/search-architecture/</link>
       <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/back-end/search-architecture/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/search-architecture/</guid>
       <description>搜索服务使用说明 &#34;\nst=\u003estart: 开始\ne=\u003eend: 结束\n\nop1=\u003eoperation: 服务订阅\ncond1=\u003ec</description>
     </item>
     
     <item>
       <title>Bigger Leaner Stronger</title>
-      <link>http://csyezheng.github.io/post/health/bigger-leaner-stronger/</link>
+      <link>http://csyezheng.github.io/post/other/health/bigger-leaner-stronger/</link>
       <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/health/bigger-leaner-stronger/</guid>
+      <guid>http://csyezheng.github.io/post/other/health/bigger-leaner-stronger/</guid>
       <description>Workouts Meal Plans Part 1: What’s in This for You? 1. The Promise You absolutely, positively can have the lean, muscular, and powerful body that you dream about.
 2. Who Is Mike Matthews and Why Should I Care? 3. Why Bigger Leaner Stronger Is Different Part 2: Key Things “They” Aren’t Telling You 4. The Hidden Barrier 5. What Most Men Will Never Know about Getting Fit – Part 1 6.</description>
     </item>
     
     <item>
       <title>Bert</title>
-      <link>http://csyezheng.github.io/post/deep-learning/bert/</link>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/bert/</link>
       <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/deep-learning/bert/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/bert/</guid>
       <description>BERT 可解释性-从&amp;quot;头&amp;quot;说起 一、背景介绍 搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大</description>
     </item>
     
     <item>
       <title>Tensorflow</title>
-      <link>http://csyezheng.github.io/post/deep-learning/tensorflow/</link>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/tensorflow/</link>
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/deep-learning/tensorflow/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/tensorflow/</guid>
       <description>TensorFlow Install TensorFlow 2    Version Python version Compiler Build tools     tensorflow-2.2.0 3.5-3.8 GCC 7.3.1 Bazel 2.0.0   tensorflow-2.1.0 2.7, 3.5-3.7 GCC 7.3.1 Bazel 0.27.1   tensorflow-2.0.0 2.7, 3.3-3.7 GCC 7.3.1 Bazel 0.26.1    sudo pacman -U cuda-10.1.243-2-x86_64.pkg.tar.xz sudo pacman -U cudnn-7.6.5.32-2-x86_64.pkg.tar.xz pip install tensorflow-gpu Data input pipelines Keras Sequential API When to use a Sequential model A Sequential model is appropriate for a plain stack of layers where each layer has exactly one input tensor and one output tensor.</description>
     </item>
     
     <item>
       <title>Multi-label classification</title>
-      <link>http://csyezheng.github.io/post/machine-learning/multi-label-classification/</link>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/multi-label-classification/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/machine-learning/multi-label-classification/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/multi-label-classification/</guid>
       <description>In the multi-label problem there is no constraint on how many of the classes the instance can be assigned to. Formally, multi-label classification is the problem of finding a model that maps inputs x to binary vectors y (assigning a value of 0 or 1 for each element (label) in y).
 Problem transformation methods   Transformation into binary classification problems
   binary relevance
 amounts to independently training one binary classifier for each label.</description>
-    </item>
-    
-    <item>
-      <title>Python and Java Service</title>
-      <link>http://csyezheng.github.io/post/back-end/python-and-java-service/</link>
-      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/back-end/python-and-java-service/</guid>
-      <description>Python和Java服务器通信实现的理解和比较 Python的WSGI和Java的Servlet API Python的WSGI 最近在学习使用Pyt</description>
     </item>
     
   </channel>

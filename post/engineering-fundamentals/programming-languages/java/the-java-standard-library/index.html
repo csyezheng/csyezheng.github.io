@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The Java Standard Library - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="Collections Interfaces Note that all the core collection interfaces are generic. For example, this is the declaration of the Collection interface.
+public interface Collection&amp;lt;E&amp;gt;... The Collection Interface List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;(c); The Collection interface contains methods that perform basic operations, such as
+ int size() boolean isEmpty() boolean contains(Object element) boolean add(E element) boolean remove(Object element) Iterator&amp;lt;E&amp;gt; iterator()  It also contains methods that operate on entire collections, such as" />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+<link rel="canonical" href="http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-standard-library/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="The Java Standard Library" />
+<meta property="og:description" content="Collections Interfaces Note that all the core collection interfaces are generic. For example, this is the declaration of the Collection interface.
+public interface Collection&lt;E&gt;... The Collection Interface List&lt;String&gt; list = new ArrayList&lt;String&gt;(c); The Collection interface contains methods that perform basic operations, such as
+ int size() boolean isEmpty() boolean contains(Object element) boolean add(E element) boolean remove(Object element) Iterator&lt;E&gt; iterator()  It also contains methods that operate on entire collections, such as" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-standard-library/" />
+<meta property="article:published_time" content="2020-08-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-08-23T00:00:00+00:00" />
+<meta itemprop="name" content="The Java Standard Library">
+<meta itemprop="description" content="Collections Interfaces Note that all the core collection interfaces are generic. For example, this is the declaration of the Collection interface.
+public interface Collection&lt;E&gt;... The Collection Interface List&lt;String&gt; list = new ArrayList&lt;String&gt;(c); The Collection interface contains methods that perform basic operations, such as
+ int size() boolean isEmpty() boolean contains(Object element) boolean add(E element) boolean remove(Object element) Iterator&lt;E&gt; iterator()  It also contains methods that operate on entire collections, such as">
+<meta itemprop="datePublished" content="2020-08-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-08-23T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1731">
+
+
+
+<meta itemprop="keywords" content="Java," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Java Standard Library"/>
+<meta name="twitter:description" content="Collections Interfaces Note that all the core collection interfaces are generic. For example, this is the declaration of the Collection interface.
+public interface Collection&lt;E&gt;... The Collection Interface List&lt;String&gt; list = new ArrayList&lt;String&gt;(c); The Collection interface contains methods that perform basic operations, such as
+ int size() boolean isEmpty() boolean contains(Object element) boolean add(E element) boolean remove(Object element) Iterator&lt;E&gt; iterator()  It also contains methods that operate on entire collections, such as"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">The Java Standard Library</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-08-23" class="post-time">
+          2020-08-23
+        </time>
+        <div class="post-category">
+            <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
+            <a href="http://csyezheng.github.io/categories/java/"> Java </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#collections">Collections</a>
+      <ul>
+        <li><a href="#interfaces">Interfaces</a></li>
+        <li><a href="#aggregate-operations">Aggregate Operations</a></li>
+        <li><a href="#algorithms">Algorithms</a></li>
+      </ul>
+    </li>
+    <li><a href="#lambda-expressions">Lambda Expressions</a></li>
+    <li><a href="#date-time-apis">Date-Time APIs</a></li>
+    <li><a href="#deployment">Deployment</a></li>
+    <li><a href="#internationalization">Internationalization</a></li>
+    <li><a href="#reflection">Reflection</a></li>
+    <li><a href="#middleware-server-side-or-web-application">Middleware, server-side, or web application</a>
+      <ul>
+        <li><a href="#jdbc-database-access">JDBC Database Access</a></li>
+        <li><a href="#concurrency">Concurrency</a></li>
+      </ul>
+    </li>
+    <li><a href="#standard-edition">Standard Edition</a>
+      <ul>
+        <li><a href="#extension">extension</a></li>
+      </ul>
+    </li>
+    <li><a href="#enterprise-edition">Enterprise Edition</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h2 id="collections">Collections</h2>
+<h3 id="interfaces">Interfaces</h3>
+<p><img src="https://docs.oracle.com/javase/tutorial/figures/collections/colls-coreInterfaces.gif" alt=""></p>
+<p>Note that all the core collection interfaces are generic. For example, this is the declaration of the <code>Collection</code> interface.</p>
+<pre><code>public interface Collection&lt;E&gt;...
+</code></pre><h4 id="the-collection-interface">The Collection Interface</h4>
+<pre><code>List&lt;String&gt; list = new ArrayList&lt;String&gt;(c);
+</code></pre><p>The <code>Collection</code> interface contains methods that perform basic operations, such as</p>
+<ul>
+<li><code>int size()</code></li>
+<li><code>boolean isEmpty()</code></li>
+<li><code>boolean contains(Object element)</code></li>
+<li><code>boolean add(E element)</code></li>
+<li><code>boolean remove(Object element)</code></li>
+<li><code>Iterator&lt;E&gt; iterator()</code></li>
+</ul>
+<p>It also contains methods that operate on entire collections, such as</p>
+<ul>
+<li><code>boolean containsAll(Collection&lt;?&gt; c)</code></li>
+<li><code>boolean addAll(Collection&lt;? extends E&gt; c)</code></li>
+<li><code>boolean removeAll(Collection&lt;?&gt; c)</code></li>
+<li><code>boolean retainAll(Collection&lt;?&gt; c)</code></li>
+<li><code>void clear()</code>.</li>
+</ul>
+<p>Additional methods for <strong>array</strong> operations (such as</p>
+<ul>
+<li><code>Object[] toArray()</code></li>
+<li><code>&lt;T&gt; T[] toArray(T[] a)</code></li>
+</ul>
+<p>obtaining sequential or parallel streams from the underlying collection.</p>
+<ul>
+<li><code>Stream&lt;E&gt; stream()</code></li>
+<li><code>Stream&lt;E&gt; parallelStream()</code></li>
+</ul>
+<h6 id="traversing-collections">Traversing Collections</h6>
+<ul>
+<li>
+<p>Aggregate Operations</p>
+<p>Aggregate operations are often used in conjunction with lambda expressions to make programming more expressive, using less lines of code.</p>
+<pre><code>myShapesCollection.stream()
+.filter(e -&gt; e.getColor() == Color.RED)
+.forEach(e -&gt; System.out.println(e.getName()));
+</code></pre><pre><code>myShapesCollection.parallelStream()
+.filter(e -&gt; e.getColor() == Color.RED)
+.forEach(e -&gt; System.out.println(e.getName()));
+</code></pre><pre><code>String joined = elements.stream()
+.map(Object::toString)
+.collect(Collectors.joining(&quot;, &quot;));
+</code></pre></li>
+<li>
+<p>for-each Construct</p>
+<pre><code>for (Object o : collection)
+    System.out.println(o);
+</code></pre></li>
+<li>
+<p>Iterators</p>
+<pre><code>static void filter(Collection&lt;?&gt; c) {
+    for (Iterator&lt;?&gt; it = c.iterator(); it.hasNext(); )
+        if (!cond(it.next()))
+            it.remove();
+}
+</code></pre></li>
+</ul>
+<h6 id="collection-interface-bulk-operations">Collection Interface Bulk Operations</h6>
+<ul>
+<li><code>containsAll</code> — returns <code>true</code> if the target <code>Collection</code> contains all of the elements in the specified <code>Collection</code>.</li>
+<li><code>addAll</code> — adds all of the elements in the specified <code>Collection</code> to the target <code>Collection</code>.</li>
+<li><code>removeAll</code> — removes from the target <code>Collection</code> all of its elements that are also contained in the specified <code>Collection</code>.</li>
+<li><code>retainAll</code> — removes from the target <code>Collection</code> all its elements that are <em>not</em> also contained in the specified <code>Collection</code>. That is, it retains only those elements in the target <code>Collection</code> that are also contained in the specified <code>Collection</code>.</li>
+<li><code>clear</code> — removes all elements from the <code>Collection</code>.</li>
+</ul>
+<pre><code>c.removeAll(Collections.singleton(e));
+</code></pre><pre><code>c.removeAll(Collections.singleton(null));       // remove all of the null elements from a Collection
+</code></pre><h6 id="collection-interface-array-operations">Collection Interface Array Operations</h6>
+<p>The <strong><code>toArray</code></strong> methods are provided as a bridge between collections and older APIs that expect arrays on input.</p>
+<pre><code>Object[] a = c.toArray();
+</code></pre><pre><code>var staff = new LinkedList&lt;String&gt;();
+
+String[] values = staff.toArray(new String[0]);
+// or 
+// String[] values = staff.toArray(new String[staff.size()]);
+</code></pre><h4 id="the-set-interface">The Set Interface</h4>
+<ul>
+<li>
+<p>HashSet</p>
+<p>which stores its elements in a hash table,  it makes no guarantees concerning the order of iteration.</p>
+<pre><code>Collection&lt;Type&gt; noDups = new HashSet&lt;Type&gt;(c);
+</code></pre><pre><code>c.stream()
+.collect(Collectors.toSet()); // no duplicates
+</code></pre></li>
+<li>
+<p>TreeSet</p>
+<p>which stores its elements in a red-black tree, orders its elements based on their values.</p>
+<pre><code>Set&lt;String&gt; set = people.stream()
+.map(Person::getName)
+.collect(Collectors.toCollection(TreeSet::new));
+</code></pre></li>
+<li>
+<p>LinkedHashSet</p>
+<p>which is implemented as a hash table with a linked list running through it, orders its elements based on the insertion-order.</p>
+<pre><code>// preserves the order of the original collection while removing duplicate elements:
+Collection&lt;Type&gt; noDups = new LinkedHashSet&lt;Type&gt;(c);
+</code></pre><p>The following is a <strong>generic method that encapsulates</strong> the preceding idiom, returning a <code>Set</code> of the same generic type as the one passed.</p>
+<pre><code>public static &lt;E&gt; Set&lt;E&gt; removeDups(Collection&lt;E&gt; c) {
+    return new LinkedHashSet&lt;E&gt;(c);
+}
+</code></pre></li>
+</ul>
+<h6 id="set-interface-basic-operations">Set Interface Basic Operations</h6>
+<pre><code>String[] words = {&quot;i&quot;, &quot;came&quot;, &quot;i&quot;, &quot;saw&quot;, &quot;i&quot;, &quot;left&quot;};
+Set&lt;String&gt; distinctWords = Arrays.asList(words).stream().collect(Collectors.toSet());
+System.out.println(distinctWords.size()+ &quot; distinct words: &quot; + distinctWords);
+</code></pre><p>Note that <strong>the code always refers to the <code>Collection</code> by its interface type (<code>Set</code>) rather than by its implementation type. This is a <em>strongly</em> recommended programming practice</strong> because it gives you the flexibility to change implementations merely by changing the constructor.</p>
+<h6 id="set-interface-bulk-operations">Set Interface Bulk Operations</h6>
+<ul>
+<li>
+<p><code>s1.containsAll(s2)</code></p>
+</li>
+<li>
+<p><code>s1.addAll(s2)</code></p>
+</li>
+<li>
+<p><code>s1.retainAll(s2)</code></p>
+</li>
+<li>
+<p><code>s1.removeAll(s2)</code></p>
+<p>To calculate the union, intersection, or set difference of two sets <em>nondestructively</em> (without modifying either set), <strong>the caller must copy one set before calling the appropriate bulk operation.</strong></p>
+<pre><code>Set&lt;String&gt; uniques = new HashSet&lt;String&gt;();
+Set&lt;String&gt; dups    = new HashSet&lt;String&gt;();
+String[] words = {&quot;i&quot;, &quot;came&quot;, &quot;i&quot;, &quot;saw&quot;, &quot;i&quot;, &quot;left&quot;};
+  
+for (String a : words) {
+    if (!uniques.add(a))
+        dups.add(a);
+}                                     // uniques ==&gt; [left, came, saw, i], dups ==&gt; [i]
+  
+boolean isContain = uniques.containsAll(dups);         // ==&gt; true    
+  
+Set&lt;String&gt; union = new HashSet&lt;String&gt;(dups);
+union.addAll(uniques);                // union ==&gt; [left, came, saw, i]
+  
+Set&lt;String&gt; intersection = new HashSet&lt;String&gt;(uniques);
+intersection.retainAll(dups);         // intersection ==&gt; [i]
+  
+Set&lt;String&gt; difference = new HashSet&lt;String&gt;(uniques);
+difference.removeAll(dups);           // difference ==&gt; [left, came, saw]
+  
+System.out.println(&quot;is contain:    &quot; + isContain);    
+System.out.println(&quot;union words: &quot; + union);      
+System.out.println(&quot;intersection words:    &quot; + intersection);  
+System.out.println(&quot;difference words: &quot; + difference); 
+</code></pre></li>
+</ul>
+<h4 id="the-list-interface">The List Interface</h4>
+<ul>
+<li>
+<p><code>Positional access</code> — manipulates elements based on their numerical position in the list. This includes methods such as <code>get</code>, <code>set</code>, <code>add</code>, <code>addAll</code>, and <code>remove</code>.</p>
+<pre><code>public static &lt;E&gt; void swap(List&lt;E&gt; a, int i, int j) {
+    E tmp = a.get(i);
+    a.set(i, a.get(j));
+    a.set(j, tmp);
+}
+</code></pre><pre><code>public static void shuffle(List&lt;?&gt; list, Random rnd) {
+    for (int i = list.size(); i &gt; 1; i--)
+        swap(list, i - 1, rnd.nextInt(i));
+}
+</code></pre><pre><code>import java.util.*;
+  
+public class Shuffle {
+    public static void main(String[] args) {
+        List&lt;String&gt; list = new ArrayList&lt;String&gt;();
+        for (String a : args)
+            list.add(a);
+        Collections.shuffle(list, new Random());
+        System.out.println(list);
+    }
+}
+</code></pre><p>The Arrays class has a static factory method called <strong><code>asList</code></strong>, which allows an array to be viewed as a List. This method does not copy the array. Changes in the <code>List</code> write through to the array and vice versa. <strong>The resulting List is not a general-purpose <code>List</code> implementation, because it doesn&rsquo;t implement the (optional) <code>add</code> and <code>remove</code> operations: Arrays are not resizable.</strong></p>
+<pre><code>import java.util.*;
+  
+public class Shuffle {
+    public static void main(String[] args) {
+        List&lt;String&gt; list = Arrays.asList(args);
+        Collections.shuffle(list);
+        System.out.println(list);
+    }
+}
+</code></pre></li>
+<li>
+<p><code>Search</code> — searches for a specified object in the list and returns its numerical position. Search methods include <code>indexOf</code> and <code>lastIndexOf</code>.</p>
+</li>
+<li>
+<p><code>Iteration</code> — extends <code>Iterator</code> semantics to take advantage of the list&rsquo;s sequential nature. The <code>listIterator</code> methods provide this behavior.</p>
+<pre><code>for (ListIterator&lt;Type&gt; it = list.listIterator(list.size()); it.hasNext(); ) {
+    Type t = it.next();
+    ...
+}
+</code></pre><pre><code>for (ListIterator&lt;Type&gt; it = list.listIterator(list.size()); it.hasPrevious(); ) {
+    Type t = it.previous();
+    ...
+}
+</code></pre><pre><code>String[] words = {&quot;i&quot;, &quot;came&quot;, &quot;i&quot;, &quot;saw&quot;, &quot;i&quot;, &quot;left&quot;};
+List&lt;String&gt; list = new ArrayList&lt;String&gt;();
+for (String a : words) {
+  list.add(a);
+}
+ListIterator&lt;String&gt; it = list.listIterator()
+it.previousIndex();       // ==&gt; -1
+var ret = it.next();      // ret ==&gt; &quot;i&quot;
+it.previousIndex();       // ==&gt; 0
+var obj = it.previous();  // obj ==&gt; &quot;i&quot;
+it.previousIndex();       // ==&gt; -1
+it.nextIndex();            // ==&gt; 0
+</code></pre><pre><code>String[] words = {&quot;i&quot;, &quot;came&quot;, &quot;i&quot;, &quot;saw&quot;, &quot;i&quot;, &quot;left&quot;};
+List&lt;String&gt; list = new ArrayList&lt;String&gt;();
+for (String a : words) {
+  list.add(a);
+}
+public static &lt;E&gt; void replace(List&lt;E&gt; list, E val, E newVal) {
+    for (ListIterator&lt;E&gt; it = list.listIterator(); it.hasNext(); )
+        if (val == null ? it.next() == null : val.equals(it.next()))
+            it.set(newVal);
+}
+replace(list, &quot;i&quot;, &quot;e&quot;)           // list ==&gt; [e, came, e, saw, e, left]
+</code></pre><pre><code>public static &lt;E&gt; 
+    void replace(List&lt;E&gt; list, E val, List&lt;? extends E&gt; newVals) {
+    for (ListIterator&lt;E&gt; it = list.listIterator(); it.hasNext(); ){
+        if (val == null ? it.next() == null : val.equals(it.next())) {
+            it.remove();
+            for (E e : newVals)
+                it.add(e);
+        }
+    }
+}
+</code></pre></li>
+<li>
+<p><code>Range-view</code> — The <code>sublist</code> method performs arbitrary <em>range operations</em> on the list.</p>
+<p>removes a range of elements from a <code>List</code></p>
+<pre><code>list.subList(fromIndex, toIndex).clear();
+</code></pre><p>search for an element in a range</p>
+<pre><code>int i = list.subList(fromIndex, toIndex).indexOf(o);
+int j = list.subList(fromIndex, toIndex).lastIndexOf(o);
+</code></pre></li>
+</ul>
+<pre><code>List&lt;String&gt; lnkLst = new LinkedList&lt;String&gt;();
+lnkLst.add(&quot;element1&quot;);
+Iterator&lt;String&gt; itr = lnkLst.iterator();
+for (Iterator&lt;String&gt; it = lnkLst.iterator(); it.hasNext(); )
+    String str = (String) itr.next();
+    System.out.print(str + &quot; &quot;);
+System.out.println();
+</code></pre><pre><code>var staff = new LinkedList&lt;String&gt;();
+staff.add(&quot;Amy&quot;);
+staff.add(&quot;Bob&quot;);
+staff.add(&quot;Carl&quot;);
+ListIterator&lt;String&gt; iter = staff.listIterator();
+iter.next(); // skip past first element
+iter.add(&quot;Juliet&quot;);      // staff ==&gt; [Amy, Juliet, Bob, Carl]
+</code></pre><pre><code>ArrayList&lt;Employee&gt; staff = new ArrayList&lt;Employee&gt;();
+staff.add(new Employee(&quot;Harry Hacker&quot;, . . .));
+staff.ensureCapacity(100);
+ArrayList&lt;Employee&gt; staff = new ArrayList&lt;&gt;(100);
+staff.size()
+
+new ArrayList&lt;&gt;(100) // capacity is 100
+is not the same as allocating a new array as
+Click here to view code image
+new Employee[100] // size is 100
+
+
+trimToSize
+</code></pre><pre><code>ArrayList&lt;E&gt;()    // constructs an empty array list.
+ArrayList&lt;E&gt;(int initialCapacity)    // constructs an empty array list with the specified capacity.
+boolean add(E obj)    // appends obj at the end of the array list. Always returns true.
+int size()    // returns the number of elements currently stored in the array list. (Of course, this is never larger than the array list’s capacity.)
+void ensureCapacity(int capacity)    // ensures that the array list has the capacity to store the given number of elements without reallocating its internal storage array.
+void trimToSize()    // reduces the storage capacity of the array list to its current size.
+</code></pre><pre><code>ArrayList&lt;String&gt; staff = new ArrayList&lt;String&gt;();
+staff.add(new String(&quot;Harry Hacker&quot;));
+staff.ensureCapacity(100);
+staff.size()                                      // ==&gt; 1
+</code></pre><h4 id="the-queue-interface">The Queue Interface</h4>
+<h4 id="the-deque-interface">The Deque Interface</h4>
+<h4 id="the-map-interface">The Map Interface</h4>
+<h4 id="object-ordering">Object Ordering</h4>
+<h4 id="the-sortedset-interface">The SortedSet Interface</h4>
+<h4 id="the-sortedmap-interface">The SortedMap Interface</h4>
+<h3 id="aggregate-operations">Aggregate Operations</h3>
+<h3 id="algorithms">Algorithms</h3>
+<h2 id="lambda-expressions">Lambda Expressions</h2>
+<h2 id="date-time-apis">Date-Time APIs</h2>
+<h2 id="deployment">Deployment</h2>
+<p>How to package applications and <strong>applets</strong> using JAR files, and deploy them using Java Web Start and Java Plug-in.
+Preparation for Java Programming Language Certification — List of available training and tutorial resources.</p>
+<h2 id="internationalization">Internationalization</h2>
+<h2 id="reflection">Reflection</h2>
+<h2 id="middleware-server-side-or-web-application">Middleware, server-side, or web application</h2>
+<h3 id="jdbc-database-access">JDBC Database Access</h3>
+<h3 id="concurrency">Concurrency</h3>
+<h2 id="standard-edition">Standard Edition</h2>
+<p>java</p>
+<ul>
+<li>
+<p>io</p>
+<ul>
+<li>BufferedReader</li>
+<li>BufferedWriter</li>
+<li>ByteArrayInputStream</li>
+<li>ByteArrayOutputStream</li>
+<li>File</li>
+<li>FileFilter</li>
+<li>FileInputStream</li>
+<li>FileOutputStream</li>
+<li>IOException</li>
+<li>InputStream</li>
+<li>IntputStreamReader</li>
+<li>OutputStream</li>
+<li>OutputStreamWriter</li>
+<li>PrintWriter</li>
+<li>Reader</li>
+<li>Serializable</li>
+<li>StringReader</li>
+<li>StringWriter</li>
+</ul>
+</li>
+<li>
+<p>lang</p>
+<ul>
+<li>reflect
+<ul>
+<li>Field</li>
+<li>Method</li>
+<li>InvocationTargetException</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>math</p>
+<ul>
+<li>BigDecimal</li>
+</ul>
+</li>
+<li>
+<p>net</p>
+<ul>
+<li>HttpURLConnection</li>
+<li>URL</li>
+<li>URLConnection</li>
+<li>URLDecoder</li>
+<li>URLEncoder</li>
+</ul>
+</li>
+<li>
+<p>nio</p>
+<ul>
+<li>charset
+<ul>
+<li>Charset</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>security</p>
+<ul>
+<li>MessageDigest</li>
+<li>SecureRandom</li>
+<li>InvalidAlgorithmParameterException</li>
+<li>InvalidKeyException</li>
+<li>KeyManagementException</li>
+<li>NoSuchAlgorithmException</li>
+<li>NoSuchProviderException</li>
+</ul>
+</li>
+<li>
+<p>sql</p>
+<ul>
+<li>Date</li>
+<li>ResultSet</li>
+<li>ResultSetMetaData</li>
+<li>SQLException</li>
+<li>Timestamp</li>
+</ul>
+</li>
+<li>
+<p>text</p>
+<ul>
+<li>DateFormat</li>
+<li>DecimalFormat</li>
+<li>MessageFormat</li>
+<li>Normalizer</li>
+<li>NumberFormat</li>
+<li>SimpleDateFormat</li>
+<li>ParseException</li>
+</ul>
+</li>
+<li>
+<p>util</p>
+<ul>
+<li>
+<p>ArrayList</p>
+</li>
+<li>
+<p>Arrays</p>
+</li>
+<li>
+<p>Base64.Decoder</p>
+</li>
+<li>
+<p>Base64.Encoder</p>
+</li>
+<li>
+<p>Calendar</p>
+</li>
+<li>
+<p>Collection</p>
+</li>
+<li>
+<p>Collections</p>
+</li>
+<li>
+<p>Comparator</p>
+</li>
+<li>
+<p>Date</p>
+</li>
+<li>
+<p>Enumeration</p>
+</li>
+<li>
+<p>GregorianCalendar</p>
+</li>
+<li>
+<p>HashMap</p>
+</li>
+<li>
+<p>HashSet</p>
+</li>
+<li>
+<p>HashMap</p>
+</li>
+<li>
+<p>Iterator</p>
+</li>
+<li>
+<p>LinkedHashMap</p>
+</li>
+<li>
+<p>LinkedHashSet</p>
+</li>
+<li>
+<p>LinkedList</p>
+</li>
+<li>
+<p>List</p>
+</li>
+<li>
+<p>Locale</p>
+<pre><code>formatter.withLocale(Locale.CHINESE).format(apollo11launch);
+</code></pre></li>
+<li>
+<p>Map.Entry</p>
+</li>
+<li>
+<p>Map</p>
+</li>
+<li>
+<p>Queue</p>
+</li>
+<li>
+<p>Random</p>
+</li>
+<li>
+<p>ResourceBundle</p>
+</li>
+<li>
+<p>Set</p>
+</li>
+<li>
+<p>Timer</p>
+</li>
+<li>
+<p>TimerTask</p>
+</li>
+<li>
+<p>TimeZone</p>
+</li>
+<li>
+<p>UUID</p>
+</li>
+</ul>
+</li>
+<li>
+<p>concurrent</p>
+<ul>
+<li>ConcurrentHashMap</li>
+<li>ConcurrentLinkedQueue</li>
+<li>Executors</li>
+<li>ScheduledExecutorService</li>
+<li>Semaphore</li>
+<li>TimeUnit</li>
+<li>ExecutionException</li>
+<li>TimeoutException</li>
+</ul>
+</li>
+<li>
+<p>util.logging</p>
+<ul>
+<li>
+<p>Logger</p>
+<pre><code>import java.util.logging.Logger;
+    
+public class Main {
+    
+  private static final Logger logger =
+Logger.getLogger(&quot;com.mycompany.myapp&quot;);
+    
+  public static void main(String[] args) {
+    logger.info(&quot;Logging an INFO-level message&quot;);
+  }
+}
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p>regex</p>
+<ul>
+<li>
+<p>Matcher</p>
+</li>
+<li>
+<p>Pattern</p>
+<pre><code>import java.io.*;
+import java.net.*;
+import java.nio.charset.*;
+import java.util.regex.*;
+    
+try
+{
+    String urlString = &quot;http://openjdk.java.net/&quot;;
+    
+    // read contents of URL
+    InputStream in = new URL(urlString).openStream();
+    var input = new String(in.readAllBytes(), StandardCharsets.UTF_8);
+    
+    // search for all occurrences of pattern
+    var patternString = &quot;&lt;a\\s+href\\s*=\\s*(\&quot;[^\&quot;]*\&quot;|[^\\s&gt;]*)\\s*&gt;&quot;;
+    Pattern pattern = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
+    pattern.matcher(input)
+    .results()
+    .map(MatchResult::group)
+    .forEach(System.out::println);
+}
+catch (IOException | PatternSyntaxException e)
+{
+    e.printStackTrace();
+}
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p>stream</p>
+<ul>
+<li>Collectors
+<ul>
+<li>toSet()</li>
+<li>toList()</li>
+<li>toMap()</li>
+<li>joining()</li>
+<li>toCollection()</li>
+<li>summarizingInt()</li>
+<li>groupingByConcurrent()</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>import java.util.List;
+import java.util.Map;
+import java.util.HashMap;</p>
+<p>import java.util.Date;
+import java.io.Serializable;</p>
+<p><a href="https://docs.oracle.com/javafx/2/collections/jfxpub-collections.htm">https://docs.oracle.com/javafx/2/collections/jfxpub-collections.htm</a></p>
+<h3 id="extension">extension</h3>
+<p>javax</p>
+<ul>
+<li>activation
+<ul>
+<li>DataHandler</li>
+<li>MimetypesFileTypeMap</li>
+</ul>
+</li>
+<li>crypto
+<ul>
+<li>BadPaddingException</li>
+<li>Cipher</li>
+<li>IllegalBlockSizeException</li>
+<li>NoSuchPaddingException</li>
+<li>spec
+<ul>
+<li>IvParameterSpec</li>
+<li>SecretKeySpec</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>net
+<ul>
+<li>ssl
+<ul>
+<li>HostnameVerifier</li>
+<li>HttpsURLConnection</li>
+<li>SSLSession</li>
+<li>SSLContext</li>
+<li>TrustManager</li>
+<li>X509TrustManager</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>script
+<ul>
+<li>ScriptException</li>
+</ul>
+</li>
+<li>security
+<ul>
+<li>auth
+<ul>
+<li>login
+<ul>
+<li>LoginException</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>xml
+<ul>
+<li>bind
+<ul>
+<li>Unmarshaller</li>
+<li>JAXBContext</li>
+<li>annotation
+<ul>
+<li>XmlAccessType</li>
+<li>XmlAccessorType</li>
+<li>XmlElement</li>
+<li>XmlElementWrapper</li>
+<li>XmlRootElement</li>
+<li>XmlType</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>namespace
+<ul>
+<li>QName</li>
+</ul>
+</li>
+<li>parsers
+<ul>
+<li>DocumentBuilder</li>
+<li>DocumentBuilderFactory</li>
+<li>SAXParser</li>
+<li>SAXParserFactory</li>
+</ul>
+</li>
+<li>soap
+<ul>
+<li>SOAPBody</li>
+<li>SOAPBodyElement</li>
+<li>SOAPEnvelope</li>
+<li>SOAPMessage</li>
+<li>SOAPPart</li>
+<li>SOAPException</li>
+</ul>
+</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<h2 id="enterprise-edition">Enterprise Edition</h2>
+<p>javax</p>
+<ul>
+<li>inject
+<ul>
+<li>Inject</li>
+<li>Named</li>
+</ul>
+</li>
+<li>jms
+<ul>
+<li>Message</li>
+<li>MessageListener</li>
+<li>TextMessage</li>
+</ul>
+</li>
+<li>persistence
+<ul>
+<li>Transient</li>
+</ul>
+</li>
+<li>servlet
+<ul>
+<li>Filter</li>
+<li>FilterChain</li>
+<li>FilterConfig</li>
+<li>ServletInputStream</li>
+<li>ServletOutputStream</li>
+<li>ServletRequest</li>
+<li>ServletResponse</li>
+<li>ServletException</li>
+<li>http
+<ul>
+<li>Cookie</li>
+<li>HttpServlet</li>
+<li>HttpServletRequest</li>
+<li>HttpServletResponse</li>
+<li>HttpServletRequestWrapper</li>
+<li>HttpServletResponseWrapper</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>transaction
+<ul>
+<li>Transactional</li>
+</ul>
+</li>
+<li>ws
+<ul>
+<li>rs
+<ul>
+<li>DELETE</li>
+<li>GET</li>
+<li>POST</li>
+<li>PUT</li>
+<li>Path</li>
+<li>PathParam</li>
+<li>Produces</li>
+<li>QueryParam</li>
+</ul>
+</li>
+<li>core
+<ul>
+<li>Context</li>
+<li>MediaType</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.Produces;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;</p>
+<p>import javax.servlet.http.HttpServlet;</p>
+<p><a href="https://docs.oracle.com/cd/E19226-01/820-7627/6nisfjmk8/index.html">https://docs.oracle.com/cd/E19226-01/820-7627/6nisfjmk8/index.html</a></p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2020-08-23
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://csyezheng.github.io/tags/java/">Java</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/engineering-fundamentals/programming-languages/java/the-java-3rd-party-library/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">The Java 3rd Library</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/specialization/computer-and-network-security/web-application/back-end/mybatis-spring-boot/">
+            <span class="next-text nav-default">Mybatis Spring Boot</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

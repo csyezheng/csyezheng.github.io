@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TypeScript</title>
-      <link>http://csyezheng.github.io/post/programming-languages/typescript/typescript/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/typescript/typescript/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/programming-languages/typescript/typescript/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/typescript/typescript/</guid>
       <description>TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件</description>
     </item>
     

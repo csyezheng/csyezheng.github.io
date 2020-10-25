@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/few-shot-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Few shot learning</title>
-      <link>http://csyezheng.github.io/post/machine-learning/few-shot-learning/</link>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/machine-learning/few-shot-learning/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/</guid>
       <description>Reference  https://github.com/AnthonyMRios/multi-label-zero-shot Few-Shot and Zero-Shot Multi-Label Learning for Structured Label Spaces Deep Neural Networks for Multi-Label Text Classification https://github.com/YujiaBao/Distributional-Signatures Induction Networks for Few-Shot Text Classification https://github.com/laohur/LearnToCompareText  </description>
     </item>
     

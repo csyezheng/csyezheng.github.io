@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The Python Tutorial - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="The Python Tutorial 1. Whetting Your Appetite The Python interpreter is easily extended with new functions and data types implemented in C or C&#43;&#43; (or other languages callable from C). Python allows you to split your program into modules that can be reused in other Python programs. It comes with a large collection of standard modules that you can use as the basis of your programs — or as examples" />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+<link rel="canonical" href="http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/python/the-python-tutorial/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="The Python Tutorial" />
+<meta property="og:description" content="The Python Tutorial 1. Whetting Your Appetite The Python interpreter is easily extended with new functions and data types implemented in C or C&#43;&#43; (or other languages callable from C). Python allows you to split your program into modules that can be reused in other Python programs. It comes with a large collection of standard modules that you can use as the basis of your programs — or as examples" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/python/the-python-tutorial/" />
+<meta property="article:published_time" content="2019-03-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="name" content="The Python Tutorial">
+<meta itemprop="description" content="The Python Tutorial 1. Whetting Your Appetite The Python interpreter is easily extended with new functions and data types implemented in C or C&#43;&#43; (or other languages callable from C). Python allows you to split your program into modules that can be reused in other Python programs. It comes with a large collection of standard modules that you can use as the basis of your programs — or as examples">
+<meta itemprop="datePublished" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="18445">
+
+
+
+<meta itemprop="keywords" content="Python," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Python Tutorial"/>
+<meta name="twitter:description" content="The Python Tutorial 1. Whetting Your Appetite The Python interpreter is easily extended with new functions and data types implemented in C or C&#43;&#43; (or other languages callable from C). Python allows you to split your program into modules that can be reused in other Python programs. It comes with a large collection of standard modules that you can use as the basis of your programs — or as examples"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">The Python Tutorial</h1>
+      
+      <div class="post-meta">
+        <time datetime="2019-03-01" class="post-time">
+          2019-03-01
+        </time>
+        <div class="post-category">
+            <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
+            <a href="http://csyezheng.github.io/categories/python/"> Python </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-whetting-your-appetite">1. Whetting Your Appetite</a></li>
+    <li><a href="#2-using-the-python-interpreter">2. Using the Python Interpreter</a>
+      <ul>
+        <li><a href="#21-invoking-the-interpreter">2.1. Invoking the Interpreter</a></li>
+        <li><a href="#22-the-interpreter-and-its-environment">2.2. The Interpreter and Its Environment</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-an-informal-introduction-to-python">3. An Informal Introduction to Python</a>
+      <ul>
+        <li><a href="#31-using-python-as-a-calculator">3.1. Using Python as a Calculator</a></li>
+        <li><a href="#32-first-steps-towards-programming">3.2. First Steps Towards Programming</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-more-control-flow-tools">4. More Control Flow Tools</a>
+      <ul>
+        <li><a href="#41-if-statements">4.1. if Statements</a></li>
+        <li><a href="#42-for-statements">4.2. for Statements</a></li>
+        <li><a href="#43-the-range-function">4.3. The range() Function</a></li>
+        <li><a href="#44-break-and-continue-statements-and-else-clauses-on-loops">4.4. break and continue Statements, and else Clauses on Loops</a></li>
+        <li><a href="#45-pass-statements">4.5. pass Statements</a></li>
+        <li><a href="#46-defining-functions">4.6. Defining Functions</a></li>
+        <li><a href="#47-more-on-defining-functions">4.7. More on Defining Functions</a></li>
+        <li><a href="#48-intermezzo-coding-style">4.8. Intermezzo: Coding Style</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-data-structures">5. Data Structures</a>
+      <ul>
+        <li><a href="#51-more-on-lists">5.1. More on Lists</a></li>
+        <li><a href="#52-the-del-statement">5.2. The del statement</a></li>
+        <li><a href="#53-tuples-and-sequences">5.3. Tuples and Sequences</a></li>
+        <li><a href="#54-sets">5.4. Sets</a></li>
+        <li><a href="#55-dictionaries">5.5. Dictionaries</a></li>
+        <li><a href="#56-looping-techniques">5.6. Looping Techniques</a></li>
+        <li><a href="#57-more-on-conditions">5.7. More on Conditions</a></li>
+        <li><a href="#58-comparing-sequences-and-other-types">5.8. Comparing Sequences and Other Types</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-modules">6. Modules</a>
+      <ul>
+        <li><a href="#61-more-on-modules">6.1. More on Modules</a></li>
+        <li><a href="#62-standard-modules">6.2. Standard Modules</a></li>
+        <li><a href="#63-the-dir-function">6.3. The dir() Function</a></li>
+        <li><a href="#64-packages">6.4. Packages</a></li>
+        <li><a href="#71-fancier-output-formatting">7.1. Fancier Output Formatting</a></li>
+        <li><a href="#72-reading-and-writing-files">7.2. Reading and Writing Files</a></li>
+        <li><a href="#83-handling-exceptions">8.3. Handling Exceptions</a></li>
+      </ul>
+    </li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h1 id="the-python-tutorial">The Python Tutorial</h1>
+<h2 id="1-whetting-your-appetite">1. Whetting Your Appetite</h2>
+<p>The Python interpreter is easily extended with new functions and data types implemented in C or C++ (or other languages callable from C).</p>
+<p>Python allows you to split your program into modules that can be reused in other Python programs. It comes with a large collection of standard modules that you can use as the basis of your programs — or as examples to start learning to program in Python. Some of these modules provide things like file I/O, system calls, sockets, and even interfaces to graphical user interface toolkits like Tk.</p>
+<p>The interpreter can be used interactively, which makes it easy to experiment with features of the language, to write throw-away programs, or to test functions during bottom-up program development.</p>
+<p>Python is extensible: if you know how to program in C <strong>it is easy to add a new built-in function or module to the interpreter</strong>, either to perform critical operations at maximum speed, or to link Python programs to libraries that may only be available in binary form (such as a vendor-specific graphics library). Once you are really hooked, you can link the Python interpreter into an application written in C and use it as an extension or command language for that application.</p>
+<h2 id="2-using-the-python-interpreter">2. Using the Python Interpreter</h2>
+<h3 id="21-invoking-the-interpreter">2.1. Invoking the Interpreter</h3>
+<p>Typing an end-of-file character (<code>Control-D</code> on Unix, <code>Control-Z</code> on Windows) at the primary prompt causes the interpreter to exit with a zero exit status.</p>
+<p><code>python -c command [arg] ...</code>, which executes the statement(s) in command, analogous to the shell’s <a href="">-c</a> option.</p>
+<p>When a script file is used, it is sometimes useful to be able to run the script and enter interactive mode afterwards. This can be done by passing <code>-i</code> before the script.</p>
+<h4 id="211-argument-passing">2.1.1. Argument Passing</h4>
+<p>When known to the interpreter, <strong>the script name and additional arguments</strong> thereafter are turned into <strong>a list of strings</strong> and assigned to the <strong><code>argv</code></strong> variable in the <strong><code>sys</code></strong> module. You can access this list by executing <code>import sys</code>. The length of the list is at least one; when no script and no arguments are given, <code>sys.argv[0]</code> is an empty string. When the script name is given as &lsquo;-&rsquo; (meaning standard input), <code>sys.argv[0]</code> is set to &lsquo;-&rsquo;. When <code>-c</code> command is used, <code>sys.argv[0]</code> is set to &lsquo;-c&rsquo;. When <code>-m</code> module is used, <code>sys.argv[0]</code> is set to the full name of the located module. Options found after <code>-c</code> command or <code>-m</code> module are not consumed by the Python interpreter’s option processing but left in <code>sys.argv</code> for the command or module to handle.</p>
+<h4 id="212-interactive-mode">2.1.2. Interactive Mode</h4>
+<p>In this mode it prompts for the next command with the primary prompt, usually three greater-than signs (<code>&gt;&gt;&gt;</code>); for continuation lines it prompts with the secondary prompt, by default three dots (<code>...</code>).</p>
+<h3 id="22-the-interpreter-and-its-environment">2.2. The Interpreter and Its Environment</h3>
+<p>2.2.1. Source Code Encoding</p>
+<p>the source code starts with a UNIX “<strong>shebang</strong>” line.</p>
+<pre><code>#!/usr/bin/env python3
+</code></pre><p>By default, Python source files are treated as encoded in UTF-8. To declare an encoding other than the default one:</p>
+<pre><code># -*- coding: encoding -*-
+</code></pre><h2 id="3-an-informal-introduction-to-python">3. An Informal Introduction to Python</h2>
+<p>Note that a secondary prompt on a line by itself in an example means you must type a blank line; this is used to end a multi-line command.</p>
+<p>Comments in Python start with the hash character, <strong><code>#</code></strong>, and extend to the end of the physical line.</p>
+<pre><code>spam = 1  # this is the second comment
+</code></pre><h3 id="31-using-python-as-a-calculator">3.1. Using Python as a Calculator</h3>
+<h4 id="311-numbers">3.1.1. Numbers</h4>
+<pre><code>&gt;&gt;&gt; 2 + 2
+4
+&gt;&gt;&gt; 50 - 5*6
+20
+&gt;&gt;&gt; (50 - 5*6) / 4  # parentheses can be used for grouping.
+5.0
+&gt;&gt;&gt; 8 / 5  # classic division always returns a float
+1.6
+&gt;&gt;&gt; 17 // 3  # floor division discards the fractional part
+5
+&gt;&gt;&gt; 17 % 3  # the % operator returns the remainder of the division
+2
+&gt;&gt;&gt; 2 ** 7  # the ** operator to calculate powers
+128
+&gt;&gt;&gt; height = 5 * 9  # The equal sign is used to assign a value to a variable.
+</code></pre><p>In addition to <strong><code>int</code></strong> and <strong><code>float</code></strong>, Python supports other types of numbers, such as <strong><code>Decimal</code></strong> and <strong><code>Fraction</code></strong>. Python also has built-in support for <strong><code>complex numbers</code></strong>, and uses the j or J suffix to indicate the imaginary part (e.g. 3+5j).</p>
+<h4 id="312-strings">3.1.2. Strings</h4>
+<p>They can be enclosed in single quotes (<strong><code>'...'</code></strong>) or double quotes (<strong><code>&quot;...&quot;</code></strong>) with the same result. Unlike other languages, special characters such as <strong><code>\n</code></strong> have the same meaning with both single (<strong><code>'...'</code></strong>) and double (<strong><code>&quot;...&quot;</code></strong>) quotes.</p>
+<p>If you don’t want characters prefaced by <code>\</code> to be interpreted as special characters, you can use <em><strong>raw strings</strong></em> by adding an <code>r</code> before the first quote:</p>
+<pre><code>&gt;&gt;&gt; print('C:\some\name')  # here \n means newline!
+C:\some
+ame
+&gt;&gt;&gt; print(r'C:\some\name')  # note the r before the quote
+C:\some\name
+</code></pre><p>String literals can span multiple lines. One way is using triple-quotes: <code>&quot;&quot;&quot;...&quot;&quot;&quot;</code> or <code>'''...'''</code>. <strong>End of lines are automatically included in the string, but it’s possible to prevent this by adding a <code>\</code> at the end of the line.</strong></p>
+<pre><code>print(&quot;&quot;&quot;\
+Usage: thingy [OPTIONS]
+     -h                        Display this usage message
+     -H hostname               Hostname to connect to
+&quot;&quot;&quot;)
+</code></pre><p>Strings can be concatenated (glued together) with the <code>+</code> operator, and repeated with <code>*</code>:</p>
+<pre><code>&gt;&gt;&gt; # 3 times 'un', followed by 'ium'
+&gt;&gt;&gt; 3 * 'un' + 'ium'
+'unununium'
+</code></pre><pre><code>&gt;&gt;&gt; 'Py' 'thon'
+'Python'
+</code></pre><pre><code>&gt;&gt;&gt; prefix = 'Py'
+&gt;&gt;&gt; prefix + 'thon'
+'Python'
+</code></pre><p>Strings can be indexed (subscripted), with the first character having index 0, last character having index -1. Attempting to use an index that is too large will result in an error:</p>
+<pre><code>&gt;&gt;&gt; word = 'Python'
+&gt;&gt;&gt; word[0]  # character in position 0
+'P'
+&gt;&gt;&gt; word[-1]  # last character
+'n'
+&gt;&gt;&gt; word[-2]  # second-last character
+'o'
+</code></pre><p>slicing:  string_variable[included_start : excluded_end] . Out of range slice indexes are handled gracefully when used for slicing. <strong>Note how the start is always included, and the end always excluded.</strong></p>
+<pre><code>&gt;&gt;&gt; word = 'Python'
+&gt;&gt;&gt; word[0:2]  
+'Py'
+&gt;&gt;&gt; word[2:5]  
+'tho'
+&gt;&gt;&gt; word[:2] + word[2:]
+'Python'
+</code></pre><p>Python strings cannot be changed — they are <strong>immutable</strong>. Therefore, assigning to an indexed position in the string results in an error. <strong>Immutable objects include numbers, strings and tuples.</strong> A new object has to be created if a different value has to be stored.</p>
+<p>The built-in function <strong><code>len</code></strong>(s) returns the length of a sequence (such as a string, bytes, tuple, list,  or range) or a collection (such as a disctionary, set, or frozen set).</p>
+<pre><code>&gt;&gt;&gt; s = 'supercalifragilisticexpialidocious'
+&gt;&gt;&gt; len(s)
+34
+</code></pre><h4 id="common-sequence-operations">Common Sequence Operations</h4>
+<p>In the table, s and t are sequences of the same type, n, i, j and k are integers and x is an arbitrary object.</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Result</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x in s</td>
+<td>True if an item of s is equal to x, else False</td>
+<td>(1)</td>
+</tr>
+<tr>
+<td>x not in s</td>
+<td>False if an item of s is equal to x, else True</td>
+<td>(1)</td>
+</tr>
+<tr>
+<td>s + t</td>
+<td>the   concatenation of s and t</td>
+<td>(6)(7)</td>
+</tr>
+<tr>
+<td>s * n or n * s</td>
+<td>equivalent   to adding s to itself n times</td>
+<td>(2)(7)</td>
+</tr>
+<tr>
+<td>s[i]</td>
+<td>ith item of s, origin 0</td>
+<td>(3)</td>
+</tr>
+<tr>
+<td>s[i:j]</td>
+<td>slice   of s from i to j</td>
+<td>(3)(4)</td>
+</tr>
+<tr>
+<td>s[i:j:k]</td>
+<td>slice   of s from i to j with   step k</td>
+<td>(3)(5)</td>
+</tr>
+<tr>
+<td>len(s)</td>
+<td>length   of s</td>
+<td></td>
+</tr>
+<tr>
+<td>min(s)</td>
+<td>smallest   item of s</td>
+<td></td>
+</tr>
+<tr>
+<td>max(s)</td>
+<td>largest   item of s</td>
+<td></td>
+</tr>
+<tr>
+<td>s.index(x[, i[, j]])</td>
+<td>index   of the first occurrence of x in s (at or after index i and before index j)</td>
+<td>(8)</td>
+</tr>
+<tr>
+<td>s.count(x)</td>
+<td>total   number of occurrences ofx in s</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>(2) Values of n less than 0 are treated as 0 (which yields an empty sequence of the same type as s). Note that items in the sequence s are not copied; they are referenced multiple times. This often haunts new Python programmers; consider:</p>
+<p>What has happened is that [[]] is a one-element list containing an empty list, so all three elements of [[]] * 3 are references to this single empty list. Modifying any of the elements of lists modifies this single list. You can create a list of different lists this way:</p>
+<p>(6) Concatenating immutable sequences always results in a new object. This means that building up a sequence by repeated concatenation will have a quadratic runtime cost in the total sequence length. <strong>To get a linear runtime cost, you must switch to one of the alternatives below</strong>:</p>
+<ul>
+<li>if concatenating <strong><code>str</code></strong> objects, you can build a list and use <strong><code>str.join()</code></strong> at the end or else write to an  <strong><code>io.StringIO</code></strong> instance and retrieve its value when complete</li>
+<li>if concatenating <strong><code>bytes</code></strong> objects, you can similarly use <strong><code>bytes.join()</code></strong> or <strong><code>io.BytesIO</code></strong>, or you can do in-place concatenation with a <strong><code>bytearray</code></strong> object. <strong><code>bytearray</code></strong> objects are mutable and have an efficient      overallocation mechanism</li>
+<li>if concatenating <strong>tuple</strong> objects, extend a <strong><code>list</code></strong> instead</li>
+<li>for other types, investigate the relevant class      documentation</li>
+</ul>
+<p>(7)  range don’t support sequence concatenation or repetition.</p>
+<h4 id="313-lists">3.1.3. Lists</h4>
+<p>Lists might contain items of different types, but usually the items all have the same type.</p>
+<p>List support sequence operation, can be indexed, sliced, concatenated. All slice operations return a new list.</p>
+<pre><code>&gt;&gt;&gt; squares = [1, 4, 9, 16, 25]
+&gt;&gt;&gt; squares[0]  # indexing returns the item
+1
+&gt;&gt;&gt; squares[-1]
+25
+&gt;&gt;&gt; squares[-3:]  # slicing returns a new list
+[9, 16, 25]
+&gt;&gt;&gt; squares + [36, 49, 64, 81, 100]
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+</code></pre><p>Lists are a <strong>mutable</strong> type.</p>
+<pre><code>&gt;&gt;&gt; cubes = [1, 8, 27, 65, 125]  
+&gt;&gt;&gt; cubes[3] = 64  
+&gt;&gt;&gt; cubes
+[1, 8, 27, 64, 125]
+</code></pre><p>You can also add new items at the end of the list, by using the <strong><code>append()</code></strong> <em>method</em></p>
+<pre><code>&gt;&gt;&gt; cubes.append(216)  # add the cube of 6
+</code></pre><p>Assignment to slices is also possible, and this can even change the size of the list or clear it entirely.</p>
+<pre><code>&gt;&gt;&gt; letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+&gt;&gt;&gt; letters
+['a', 'b', 'c', 'd', 'e', 'f', 'g']
+&gt;&gt;&gt; # replace some values
+&gt;&gt;&gt; letters[2:5] = ['C', 'D', 'E']
+&gt;&gt;&gt; letters
+['a', 'b', 'C', 'D', 'E', 'f', 'g']
+&gt;&gt;&gt; # now remove them
+&gt;&gt;&gt; letters[2:5] = []
+&gt;&gt;&gt; letters
+['a', 'b', 'f', 'g']
+</code></pre><p>The built-in function <strong><code>len()</code></strong> also applies to lists:</p>
+<pre><code>&gt;&gt;&gt; letters = ['a', 'b', 'c', 'd']
+&gt;&gt;&gt; len(letters)
+4
+</code></pre><p>It is possible to nest lists (create lists containing other lists)</p>
+<pre><code>&gt;&gt;&gt; a = ['a', 'b', 'c']
+&gt;&gt;&gt; n = [1, 2, 3]
+&gt;&gt;&gt; x = [a, n]
+&gt;&gt;&gt; x
+[['a', 'b', 'c'], [1, 2, 3]]
+&gt;&gt;&gt; x[0]
+['a', 'b', 'c']
+&gt;&gt;&gt; x[0][1]
+'b'
+</code></pre><h3 id="32-first-steps-towards-programming">3.2. First Steps Towards Programming</h3>
+<p><code>a, b = b, a+b</code></p>
+<p><code>while condition:</code></p>
+<p><strong>Any non-zero integer value is true; zero is false. Anything with a non-zero length is true, empty sequences are false.</strong></p>
+<p>&lt;(less than), &gt; (greater than), == (equal to), &lt;= (less than or equal to), &gt;= (greater than or equal to) and != (not equal to).</p>
+<p>Each line within a basic block must be indented by the same amount.</p>
+<h2 id="4-more-control-flow-tools">4. More Control Flow Tools</h2>
+<h3 id="41-if-statements">4.1. if Statements</h3>
+<pre><code>&gt;&gt;&gt; x = int(input(&quot;Please enter an integer: &quot;))
+Please enter an integer: 42
+&gt;&gt;&gt; if x &lt; 0:
+...     x = 0
+...     print('Negative changed to zero')
+... elif x == 0:
+...     print('Zero')
+... elif x == 1:
+...     print('Single')
+... else:
+...     print('More')
+...
+More
+</code></pre><p>An <code>if</code> … <code>elif</code> … <code>elif</code> … sequence is a substitute for the <code>switch</code> or <code>case</code> statements found in other languages.</p>
+<h3 id="42-for-statements">4.2. for Statements</h3>
+<p>The for statement is used to iterate over the elements of a sequence (such as a string, tuple or list) or other iterable object:</p>
+<p>for target_list in expression_list:</p>
+<p>suit</p>
+<p>Names in the target list are not deleted when the loop is finished.</p>
+<p>the built-in function range() returns an iterator of integers suitable to emulate.</p>
+<p>There is a subtlety when the sequence is being modified by the loop (this can only occur for mutable sequences, i.e. lists). An internal counter is used to keep track of which item is used next, and this is incremented on each iteration. This means that if the suite deletes the current (or a previous) item from the sequence, the next item will be skipped (since it gets the index of the current item which has already been treated). Likewise, if the suite inserts an item in the sequence before the current item, the current item will be treated again the next time through the loop. This can lead to nasty bugs that can be avoided by making a temporary copy using a slice of the whole sequence, e.g.,</p>
+<p>for x in a[:]:
+if x &lt; 0: a.remove(x)</p>
+<p># then a changed</p>
+<h3 id="43-the-range-function">4.3. The range() Function</h3>
+<p>The given end point is never part of the generated sequence;</p>
+<p>class range(start, stop[, step])</p>
+<p>The built-in function range() iterate over a sequence of numbers.</p>
+<h3 id="44-break-and-continue-statements-and-else-clauses-on-loops">4.4. break and continue Statements, and else Clauses on Loops</h3>
+<p>Loop statements may have an else clause; it is executed when the loop terminates through exhaustion of the list (with for) or when the condition becomes false (with while), but not when the loop is terminated by a break statement.(Yes, this is the correct code. Look closely: the else clause belongs to the for loop, not the if statement.)</p>
+<p>When used with a loop, the else clause has more in common with the else clause of a try statement than it does that of if statements: a try statement’s else clause runs when no exception occurs, and a loop’s else clause runs when no break occurs.</p>
+<h3 id="45-pass-statements">4.5. pass Statements</h3>
+<p>The pass statement does nothing. It can be used when a statement is required syntactically but the program requires no action.This is commonly used for creating minimal classes. Another place pass can be used is as a place-holder for a function or conditional body when you are working on new code, allowing you to keep thinking at a more abstract level.</p>
+<h3 id="46-defining-functions">4.6. Defining Functions</h3>
+<p>The keyword def introduces a function definition. It must be followed by the function name and the parenthesized list of formal parameters. The statements that form the body of the function start at the next line, and must be indented. The first statement of the function body can optionally be a string literal; this string literal is the function’s documentation string, or docstring.</p>
+<p>The execution of a function introduces a new symbol table used for the local variables of the function. More precisely, all variable assignments in a function store the value in the local symbol table; whereas variable references first look in the local symbol table, then in the local symbol tables of enclosing functions, then in the global symbol table, and finally in the table of built-in names. Thus, global variables cannot be directly assigned a value within a function (unless named in a global statement), although they may be referenced.</p>
+<p>The actual parameters (arguments) to a function call are introduced in the local symbol table of the called function when it is called; thus, arguments are passed using call by value (where the value is always an object reference, not the value of the object). [1] When a function calls another function, a new local symbol table is created for that call.</p>
+<p>Actually, call by object reference would be a better description, since if a mutable object is passed, the caller will see any changes the callee makes to it (items inserted into a list).</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-  passe argument using call by object &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+<p>在python中, parameter sent to function 使用的全部是 by object。</p>
+<p>也就是，这无法通过by value或者 by reference 来定义。这是python的独到之处。</p>
+<p>如果object本身是immutable的，例如一个不是太长的整数，那么你可以看作是传值。因为每一次对这个object赋值，都会创建一个新的object，如下：</p>
+<p>a=10</p>
+<p>def function1(value):</p>
+<p>value=20</p>
+<p>print(value)</p>
+<p>function1(a)</p>
+<p>print(a)</p>
+<p>结果是</p>
+<p>20</p>
+<p>10</p>
+<p>虽然传过去的是a这个object，但当function1对a赋值的时候，其实他并没有改变a，而是创建了一个新的object，这个object叫做value了。global当中的a并没有变。</p>
+<p>如果object本身是mutable，例如一个list，因为每一次对这个object赋值，都会改变这个object本身。那么就可以看作是传reference。如下：</p>
+<p>a=[10,11,12,13]</p>
+<p>def function1(value):</p>
+<p>value[1:3]=[]</p>
+<p>print(value)</p>
+<p>function1(a)</p>
+<p>print(a)</p>
+<p>结果是</p>
+<p>[10,13]</p>
+<p>[10,13]</p>
+<p>list.reverse 是一个in-place method。也就是说，reverse是在原来object上操作，而不会创造一个新的object。上面t=s，按照python传object的标准，那么就是t=s 是同一个object。.reverse作用在这个object上，那么t,s都变了。他们只是名字而已。而slicing [::] 这个，会创造一个新的object。最好的办法是deep copy</p>
+<p>-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</p>
+<p>A function definition introduces the function name in the current symbol table. The value of the function name has a type that is recognized by the interpreter as a user-defined function. This value can be assigned to another name which can then also be used as a function.</p>
+<p>In fact, even functions without a return statement do return a value, albeit a rather boring one. This value is called None (it’s a built-in name).</p>
+<h3 id="47-more-on-defining-functions">4.7. More on Defining Functions</h3>
+<h4 id="471-default-argument-values">4.7.1. Default Argument Values</h4>
+<p>i = 5</p>
+<p>def f(arg=i):</p>
+<p>​    print(arg)</p>
+<p>i = 6</p>
+<p>f()</p>
+<p>will print 5.</p>
+<p>Important warning: The default value is evaluated only once. This makes a difference when the default is a mutable object such as a list, dictionary, or instances of most classes. For example, the following function accumulates the arguments passed to it on subsequent calls:</p>
+<p>def f(a, L=[]):</p>
+<p>​    L.append(a)</p>
+<p>​    return L</p>
+<p>print(f(1))</p>
+<p>print(f(2))</p>
+<p>print(f(3))</p>
+<p>[1]</p>
+<p>[1, 2]</p>
+<p>[1, 2, 3]</p>
+<p>If you don’t want the default to be shared between subsequent calls, you can write the function like this instead:</p>
+<p>def f(a, L=None):</p>
+<p>​    if L is None:</p>
+<p>​        L = []</p>
+<p>​    L.append(a)</p>
+<p>​    return L</p>
+<h4 id="472-keyword-arguments">4.7.2. Keyword Arguments</h4>
+<p>Functions can also be called using keyword arguments of the form kwarg=value.</p>
+<p>parrot(1000)                                          # 1 positional argument</p>
+<p>parrot(voltage=1000)                                  # 1 keyword argument</p>
+<p>In a function call, keyword arguments must follow positional arguments. All the keyword arguments passed must match one of the arguments accepted by the function, and their order is not important.</p>
+<h4 id="473-arbitrary-argument-lists">4.7.3. Arbitrary Argument Lists</h4>
+<p>When a final formal parameter of the form **name is present, it receives a dictionary (see Mapping Types — dict) containing all keyword arguments except for those corresponding to a formal parameter.  This may be combined with a formal parameter of the form *name which receives a tuple containing the positional arguments beyond the formal parameter list.  (*name must occur before **name.) For example, if we define a function like this:</p>
+<p>def cheeseshop(kind, *arguments, **keywords):</p>
+<p>​    print(&quot;&ndash; Do you have any&quot;, kind, &ldquo;?&quot;)</p>
+<p>​    print(&quot;&ndash; I&rsquo;m sorry, we&rsquo;re all out of&rdquo;, kind)</p>
+<p>​    for arg in arguments:</p>
+<p>​        print(arg)</p>
+<p>​    print(&quot;-&quot; * 40)</p>
+<p>​    keys = sorted(keywords.keys())</p>
+<p>​    for kw in keys:</p>
+<p>​        print(kw, &ldquo;:&rdquo;, keywords[kw])</p>
+<p>&gt;&raquo; def concat(*args, sep=&quot;/&quot;):</p>
+<p>&hellip;     return sep.join(args)</p>
+<p>&hellip;</p>
+<p>&gt;&raquo; concat(&ldquo;earth&rdquo;, &ldquo;mars&rdquo;, &ldquo;venus&rdquo;)</p>
+<p>&lsquo;earth/mars/venus&rsquo;</p>
+<p>&gt;&raquo; concat(&ldquo;earth&rdquo;, &ldquo;mars&rdquo;, &ldquo;venus&rdquo;, sep=&quot;.&quot;)</p>
+<p>&lsquo;earth.mars.venus&rsquo;</p>
+<p>Any formal parameters which occur after the *args parameter are ‘keyword-only’ arguments, meaning that they can only be used as keywords rather than positional arguments.</p>
+<h4 id="474-unpacking-argument-lists">4.7.4. Unpacking Argument Lists</h4>
+<p>&gt;&raquo; list(range(3, 6))            # normal call with separate arguments</p>
+<p>[3, 4, 5]</p>
+<p>&gt;&raquo; args = [3, 6]</p>
+<p>&gt;&raquo; list(range(*args))            # call with arguments unpacked from a list</p>
+<p>[3, 4, 5]</p>
+<p>In the same fashion, dictionaries can deliver keyword arguments with the **-operator:</p>
+<p>&gt;&raquo; def parrot(voltage, state=&lsquo;a stiff&rsquo;, action=&lsquo;voom&rsquo;):</p>
+<p>&hellip;     print(&quot;&ndash; This parrot wouldn&rsquo;t&quot;, action, end=' &lsquo;)</p>
+<p>&hellip;     print(&ldquo;if you put&rdquo;, voltage, &ldquo;volts through it.&rdquo;, end=&rsquo; &lsquo;)</p>
+<p>&hellip;     print(&ldquo;E&rsquo;s&rdquo;, state, &ldquo;!&quot;)</p>
+<p>&hellip;</p>
+<p>&gt;&raquo; d = {&ldquo;voltage&rdquo;: &ldquo;four million&rdquo;, &ldquo;state&rdquo;: &ldquo;bleedin&rsquo; demised&rdquo;, &ldquo;action&rdquo;: &ldquo;VOOM&rdquo;}</p>
+<p>&gt;&raquo; parrot(**d)</p>
+<h4 id="475-lambda-expressions">4.7.5. Lambda Expressions</h4>
+<p>Small anonymous functions can be created with the lambda keyword.</p>
+<p>lambda argument_lists : expressions.</p>
+<p>Lambda functions can be used wherever function objects are required. uses a lambda expression to return a function. or pass a small function as an argument:</p>
+<h4 id="476-documentation-strings">4.7.6. Documentation Strings</h4>
+<p>The first line should always be a short, concise summary of the object’s purpose.</p>
+<p>If there are more lines in the documentation string, the second line should be blank, visually separating the summary from the rest of the description.</p>
+<p>Equivalence of whitespace should be tested after expansion of tabs (to 8 spaces, normally).</p>
+<h4 id="477-function-annotations">4.7.7. Function Annotations</h4>
+<p>Annotations are stored in the <strong>annotations</strong> attribute of the function as a dictionary and have no effect on any other part of the function. Parameter annotations are defined by a colon after the parameter name, followed by an expression evaluating to the value of the annotation. Return annotations are defined by a literal -&gt;, followed by an expression, between the parameter list and the colon denoting the end of the def statement.</p>
+<p>&gt;&raquo; def f(ham: str, eggs: str = &lsquo;eggs&rsquo;) -&gt; str:</p>
+<p>&hellip;     print(&ldquo;Annotations:&rdquo;, f.<strong>annotations</strong>)</p>
+<p>&hellip;     print(&ldquo;Arguments:&rdquo;, ham, eggs)</p>
+<p>&hellip;     return ham + ' and ' + eggs</p>
+<p>&hellip;</p>
+<p>&gt;&raquo; f(&lsquo;spam&rsquo;)</p>
+<p>Annotations: {&lsquo;ham&rsquo;: &lt;class &lsquo;str&rsquo;&gt;, &lsquo;return&rsquo;: &lt;class &lsquo;str&rsquo;&gt;, &lsquo;eggs&rsquo;: &lt;class &lsquo;str&rsquo;&gt;}</p>
+<p>Arguments: spam eggs</p>
+<p>&lsquo;spam and eggs&rsquo;</p>
+<h3 id="48-intermezzo-coding-style">4.8. Intermezzo: Coding Style</h3>
+<p>For Python,  <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> has emerged as the style guide that most projects adhere to; it promotes a very readable and eye-pleasing coding style. Every Python developer should read it at some point;</p>
+<ol>
+<li>Use 4-space indentation, and      no tabs.</li>
+<li>Wrap lines so that they don’t      exceed 79 characters.</li>
+<li>Use blank lines to separate      functions and classes, and larger blocks of code inside functions.</li>
+<li>When possible, put comments      on a line of their own.</li>
+<li>Use docstrings.</li>
+<li>Use spaces around operators      and after commas, but not directly inside bracketing constructs: a = f(1,      2) + g(3, 4).</li>
+<li>Name your classes and      functions consistently; the convention is to use CamelCase for classes and      lower_case_with_underscores for functions and methods. Always use self as      the name for the first method argument (see A First Look at Classes for      more on classes and methods)</li>
+<li>Don’t use fancy encodings if      your code is meant to be used in international environments. Python’s      default, UTF-8, or even plain ASCII work best in any case.</li>
+<li>Likewise, don’t use non-ASCII      characters in identifiers if there is only the slightest chance people      speaking a different language will read or maintain the code.</li>
+</ol>
+<h2 id="5-data-structures">5. Data Structures</h2>
+<h3 id="51-more-on-lists">5.1. More on Lists</h3>
+<p>list.append(x)</p>
+<p>list.extend(L)</p>
+<p>list.insert(i, x)       # The first argument is the index of the element before which to insert, so a.insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).</p>
+<p>list.remove(x)        # Remove the first item from the list whose value is x.  It is an error if there is no such item.</p>
+<p>list.pop([i])         # Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and returns the last item in the list.</p>
+<p>list.clear()          # Equivalent to del a[:].</p>
+<p>list.index(x)         # Return the index in the list of the first item whose value is x. It is an error if there is no such item.</p>
+<p>list.count(x)</p>
+<p>list.sort(key=None, reverse=False)     # Sort the items of the list in place.</p>
+<p>sorted(iterable[, key][, reverse])   Return a new sorted list from the items in iterable. key specifies a function of one argument . reverse is a boolean value.</p>
+<p>list.reverse()         # in place.</p>
+<p>list.copy()           #  shallow copy</p>
+<p>insert, remove or sort that only modify the list have no return value</p>
+<h4 id="511-using-lists-as-stacks">5.1.1. Using Lists as Stacks</h4>
+<p>append()    pop()</p>
+<h4 id="512-using-lists-as-queues">5.1.2. Using Lists as Queues</h4>
+<p>&gt;&raquo; from collections import deque</p>
+<p>&gt;&raquo; queue = deque([&ldquo;Eric&rdquo;, &ldquo;John&rdquo;, &ldquo;Michael&rdquo;])</p>
+<p>&gt;&raquo; queue.append(&ldquo;Graham&rdquo;)          # Graham arrives</p>
+<p>&gt;&raquo; queue.popleft() # The first to arrive now leaves</p>
+<p>&lsquo;Eric&rsquo;</p>
+<h4 id="513-list-comprehensions">5.1.3. List Comprehensions</h4>
+<p>①</p>
+<p>&gt;&raquo; squares = []</p>
+<p>&gt;&raquo; for x in range(10):</p>
+<p>&hellip;     squares.append(x**2)</p>
+<p>②</p>
+<p>squares = list(map(lambda x: x**2, range(10)))</p>
+<p>③</p>
+<p>squares = [x**2 for x in range(10)]</p>
+<p>④</p>
+<p>A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for or if clauses.</p>
+<p>&gt;&raquo; [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]</p>
+<h4 id="514-nested-list-comprehensions">5.1.4. Nested List Comprehensions</h4>
+<p>&gt;&raquo; matrix = [</p>
+<p>&hellip;     [1, 2, 3, 4],</p>
+<p>&hellip;     [5, 6, 7, 8],</p>
+<p>&hellip;     [9, 10, 11, 12],</p>
+<p>&hellip; ]</p>
+<p>&gt;&raquo; [[row[i] for row in matrix] for i in range(4)]</p>
+<p>The zip() function would do a great job for this use case:</p>
+<p>&gt;&raquo; list(zip(*matrix))</p>
+<p>[(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]</p>
+<h3 id="52-the-del-statement">5.2. The del statement</h3>
+<p>&gt;&raquo; a = [-1, 1, 66.25, 333, 333, 1234.5]</p>
+<p>&gt;&raquo; del a[0]</p>
+<p>&gt;&raquo; a</p>
+<p>[1, 66.25, 333, 333, 1234.5]</p>
+<p>&gt;&raquo; del a[2:4]</p>
+<p>&gt;&raquo; a</p>
+<p>[1, 66.25, 1234.5]</p>
+<p>&gt;&raquo; del a[:]</p>
+<p>&gt;&raquo; a</p>
+<p>[]</p>
+<h3 id="53-tuples-and-sequences">5.3. Tuples and Sequences</h3>
+<p>A tuple consists of a number of values separated by commas.Tuples may be nested.Tuples are immutable.</p>
+<p>&gt;&raquo; t = 12345, 54321, &lsquo;hello!&rsquo;</p>
+<p>&gt;&raquo; t[0]</p>
+<p>they may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple is part of a larger expression).</p>
+<p>Tuples are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements are usually homogeneous and are accessed by iterating over the list.</p>
+<p>&gt;&raquo; empty = ()              # Empty tuples are constructed by an empty pair of parentheses</p>
+<p>&gt;&raquo; singleton = &lsquo;hello&rsquo;,    # a tuple with one item is constructed by following a value with a comma (it is not sufficient to enclose a single value in parentheses)</p>
+<p>&gt;&raquo; x, y, z = t             # unpacking</p>
+<p>Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.</p>
+<h3 id="54-sets">5.4. Sets</h3>
+<p>A set is an unordered collection with no duplicate elements. Basic uses include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like union, intersection, difference, and symmetric difference.</p>
+<p>Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(), not {}; the latter creates an empty dictionary</p>
+<p>&gt;&raquo; basket = {&lsquo;apple&rsquo;, &lsquo;orange&rsquo;, &lsquo;apple&rsquo;, &lsquo;pear&rsquo;, &lsquo;orange&rsquo;, &lsquo;banana&rsquo;}</p>
+<p>&gt;&raquo; print(basket)                      # show that duplicates have been removed</p>
+<p>{&lsquo;orange&rsquo;, &lsquo;banana&rsquo;, &lsquo;pear&rsquo;, &lsquo;apple&rsquo;}</p>
+<p>&gt;&raquo; &lsquo;orange&rsquo; in basket                 # fast membership testing</p>
+<p>True</p>
+<p>&gt;&raquo; &lsquo;crabgrass&rsquo; in basket</p>
+<p>False</p>
+<p>&gt;&raquo; # Demonstrate set operations on unique letters from two words</p>
+<p>&hellip;</p>
+<p>&gt;&raquo; a = set(&lsquo;abracadabra&rsquo;)</p>
+<p>&gt;&raquo; b = set(&lsquo;alacazam&rsquo;)</p>
+<p>&gt;&raquo; a                                  # unique letters in a</p>
+<p>{&lsquo;a&rsquo;, &lsquo;r&rsquo;, &lsquo;b&rsquo;, &lsquo;c&rsquo;, &rsquo;d'}</p>
+<p>&gt;&raquo; a - b                              # letters in a but not in b</p>
+<p>{&lsquo;r&rsquo;, &rsquo;d', &lsquo;b&rsquo;}</p>
+<p>&gt;&raquo; a | b                              # letters in either a or b</p>
+<p>{&lsquo;a&rsquo;, &lsquo;c&rsquo;, &lsquo;r&rsquo;, &rsquo;d', &lsquo;b&rsquo;, &rsquo;m', &lsquo;z&rsquo;, &lsquo;l&rsquo;}</p>
+<p>&gt;&raquo; a &amp; b                              # letters in both a and b</p>
+<p>{&lsquo;a&rsquo;, &lsquo;c&rsquo;}</p>
+<p>&gt;&raquo; a ^ b                              # letters in a or b but not both</p>
+<p>{&lsquo;r&rsquo;, &rsquo;d', &lsquo;b&rsquo;, &rsquo;m', &lsquo;z&rsquo;, &lsquo;l&rsquo;}</p>
+<p>Similarly to list comprehensions, set comprehensions are also supported:</p>
+<p>&gt;&raquo; a = {x for x in &lsquo;abracadabra&rsquo; if x not in &lsquo;abc&rsquo;}</p>
+<p>&gt;&raquo; a</p>
+<p>{&lsquo;r&rsquo;, &rsquo;d'}</p>
+<h3 id="55-dictionaries">5.5. Dictionaries</h3>
+<p>Unlike sequences, which are indexed by a range of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key.</p>
+<p>A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs within the braces adds initial key:value pairs to the dictionary.</p>
+<p>It is also possible to delete a key:value pair with del. It is an error to extract a value using a non-existent key.</p>
+<p>Performing list(d.keys()) on a dictionary returns a list of all the keys used in the dictionary, in arbitrary order (if you want it sorted, just use sorted(d.keys()) instead). [2] To check whether a single key is in the dictionary, use the in keyword.</p>
+<p>&gt;&raquo; &lsquo;guido&rsquo; in tel</p>
+<p>&gt;&raquo; &lsquo;jack&rsquo; not in tel</p>
+<p>The dict() constructor builds dictionaries directly from sequences of key-value pairs:</p>
+<p>&gt;&raquo;</p>
+<p>&gt;&raquo; dict([(&lsquo;sape&rsquo;, 4139), (&lsquo;guido&rsquo;, 4127), (&lsquo;jack&rsquo;, 4098)])</p>
+<p>{&lsquo;sape&rsquo;: 4139, &lsquo;jack&rsquo;: 4098, &lsquo;guido&rsquo;: 4127}</p>
+<p>In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:</p>
+<p>&gt;&raquo;</p>
+<p>&gt;&raquo; {x: x**2 for x in (2, 4, 6)}</p>
+<p>{2: 4, 4: 16, 6: 36}</p>
+<p>When the keys are simple strings, it is sometimes easier to specify pairs using keyword arguments:</p>
+<p>&gt;&raquo;</p>
+<p>&gt;&raquo; dict(sape=4139, guido=4127, jack=4098)</p>
+<p>{&lsquo;sape&rsquo;: 4139, &lsquo;jack&rsquo;: 4098, &lsquo;guido&rsquo;: 4127}</p>
+<h3 id="56-looping-techniques">5.6. Looping Techniques</h3>
+<p>When looping through dictionaries, the key and corresponding value can be retrieved at the same time using the items() method.</p>
+<p>&gt;&raquo; knights = {&lsquo;gallahad&rsquo;: &lsquo;the pure&rsquo;, &lsquo;robin&rsquo;: &lsquo;the brave&rsquo;}</p>
+<p>&gt;&raquo; for k, v in knights.items():</p>
+<p>When looping through a sequence, the position index and corresponding value can be retrieved at the same time using the enumerate() function.</p>
+<p>enumerate(iterable, start=0)  Return an enumerate object. iterable must be a sequence, an iterator, or some other object which supports iteration.</p>
+<p>&gt;&raquo; for i, v in enumerate([&lsquo;tic&rsquo;, &lsquo;tac&rsquo;, &lsquo;toe&rsquo;]):</p>
+<p>&hellip;     print(i, v)</p>
+<p>To loop over two or more sequences at the same time, the entries can be paired with the zip() function.</p>
+<p>&gt;&raquo; questions = [&lsquo;name&rsquo;, &lsquo;quest&rsquo;, &lsquo;favorite color&rsquo;]</p>
+<p>&gt;&raquo; answers = [&lsquo;lancelot&rsquo;, &lsquo;the holy grail&rsquo;, &lsquo;blue&rsquo;]</p>
+<p>&gt;&raquo; for q, a in zip(questions, answers):</p>
+<p>&hellip;     print(&lsquo;What is your {0}?  It is {1}.'.format(q, a))</p>
+<p>To loop over a sequence in reverse,  call the reversed() function.</p>
+<p>To loop over a sequence in sorted order, use the sorted() function which returns a new sorted list.</p>
+<p>It is sometimes tempting to change a list while you are looping over it; however, it is often simpler and safer to create a new list instead, then append after loop and check.</p>
+<h3 id="57-more-on-conditions">5.7. More on Conditions</h3>
+<p>comparison operators:</p>
+<p>The comparison operators in and not in check whether a value occurs (does not occur) in a sequence. The operators is and is not compare whether two objects are really the same object; this only matters for mutable objects like lists.</p>
+<p>Comparisons can be chained. For example, a &lt; b == c tests whether a is less than b and moreover b equals c.</p>
+<p>Boolean operators:</p>
+<p>Comparisons may be combined using the Boolean operators and and or, and the outcome of a comparison (or of any other Boolean expression) may be negated with not.</p>
+<p>between them, not has the highest priority and or the lowest, so that A and not B or C is equivalent to (A and (not B)) or C. As always, parentheses can be used to express the desired composition.</p>
+<p>The Boolean operators and and or are so-called short-circuit operators.</p>
+<p>When used as a general value and not as a Boolean, the return value of a short-circuit operator is the last evaluated argument.</p>
+<h3 id="58-comparing-sequences-and-other-types">5.8. Comparing Sequences and Other Types</h3>
+<p>Sequence objects may be compared to other objects with the same sequence type. The comparison uses lexicographical ordering.  If one sequence is an initial sub-sequence of the other, the shorter sequence is the smaller (lesser) one. Note that comparing objects of different types with &lt; or &gt; is legal provided that the objects have appropriate comparison methods. Otherwise, rather than providing an arbitrary ordering, the interpreter will raise a TypeError exception.</p>
+<h2 id="6-modules">6. Modules</h2>
+<p>As your program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a handy function that you’ve written in several programs without copying its definition into each program.</p>
+<p>A module is a file containing Python definitions and statements. The file name is the module name with the suffix .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable <strong>name</strong>.</p>
+<p>&gt;&raquo; import fibo</p>
+<p>This does not enter the names of the functions defined in fibo directly in the current symbol table; it only enters the module name fibo there. Using the module name you can access the functions.</p>
+<p>&gt;&raquo; fibo.fib(1000)</p>
+<p>If you intend to use a function often you can assign it to a local name.</p>
+<p>&gt;&raquo; fib = fibo.fib</p>
+<h3 id="61-more-on-modules">6.1. More on Modules</h3>
+<p>In fact function definitions are also ‘statements’ that are ‘executed’; the execution of a module-level function definition enters the function name in the module’s global symbol table.They are executed only the first time the module name is encountered in an import statement.</p>
+<p>&gt;&raquo; from fibo import fib, fib2</p>
+<p>&gt;&raquo; from fibo import *</p>
+<p>This imports all names except those beginning with an underscore (_).  Python programmers do not use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you have already defined.</p>
+<p>Each module has its own private symbol table, which is used as the global symbol table by all functions defined in the module. modname.itemname.\</p>
+<p>For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use importlib.reload(), e.g. import importlib; importlib.reload(modulename).</p>
+<h4 id="611-executing-modules-as-scripts">6.1.1. Executing modules as scripts</h4>
+<p>When you run a Python module with python fibo.py <!-- raw HTML omitted -->   the code in the module will be executed, just as if you imported it, but with the <strong>name</strong> set to &ldquo;<strong>main</strong>&rdquo;.</p>
+<p>if <strong>name</strong> == &ldquo;<strong>main</strong>&quot;:</p>
+<p>​    import sys</p>
+<p>​    fib(int(sys.argv[1]))</p>
+<p>By adding this code at the end of your module, you can make the file usable as a script as well as an importable module.</p>
+<p>If the module is imported, the code is not run.</p>
+<h4 id="612-the-module-search-path">6.1.2. The Module Search Path</h4>
+<p>When a module named spam is imported, the interpreter first searches for a built-in module with that name. If not found, it then searches for a file named spam.py in a list of directories given by the variable sys.path. sys.path is initialized from these locations:</p>
+<p>The directory containing the input script (or the current directory when no file is specified).</p>
+<p>PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).</p>
+<p>The installation-dependent default.</p>
+<p>the directory containing the symlink is not added to the module search path.</p>
+<p>After initialization, Python programs can modify sys.path. The directory containing the script being run is placed at the beginning of the search path, ahead of the standard library path. This means that scripts in that directory will be loaded instead of modules of the same name in the library directory. This is an error unless the replacement is intended.</p>
+<h4 id="613-compiled-python-files">6.1.3. “Compiled” Python files</h4>
+<p>To speed up loading modules, Python caches the compiled version of each module in the <strong>pycache</strong> directory under the name module.version.pyc, where the version encodes the format of the compiled file; it generally contains the Python version number.</p>
+<p>You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. The -O switch removes assert statements, the -OO switch removes both assert statements and <strong>doc</strong> strings. Since some programs may rely on having these available, you should only use this option if you know what you’re doing. “Optimized” modules have an opt- tag and are usually smaller. Future releases may change the effects of optimization.</p>
+<p>A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only thing that’s faster about .pyc files is the speed with which they are loaded.</p>
+<p>The module compileall can create .pyc files for all modules in a directory.</p>
+<h3 id="62-standard-modules">6.2. Standard Modules</h3>
+<p>Python comes with a library of standard modules, described in a separate document, the Python Library Reference (“Library Reference” hereafter).</p>
+<p>One particular module deserves some attention:  sys  which is built into every Python interpreter. The variables sys.ps1 and sys.ps2 define the strings used as primary and secondary prompts. These two variables are only defined if the interpreter is in interactive mode.</p>
+<p>The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not set.</p>
+<h3 id="63-the-dir-function">6.3. The dir() Function</h3>
+<p>The built-in function dir(imported_module) is used to find out which names a module defines. It returns a sorted list of strings.</p>
+<p>Without arguments, dir() lists the names you have defined currently. it lists all types of names: variables, modules, functions, etc.</p>
+<p>&gt;&raquo; a = [1, 2, 3, 4, 5]</p>
+<p>&gt;&raquo; import fibo</p>
+<p>&gt;&raquo; fib = fibo.fib</p>
+<p>&gt;&raquo; dir()</p>
+<p>['<strong>builtins</strong>&rsquo;, &lsquo;<strong>name</strong>&rsquo;, &lsquo;a&rsquo;, &lsquo;fib&rsquo;, &lsquo;fibo&rsquo;, &lsquo;sys&rsquo;]</p>
+<p>dir() does not list the names of built-in functions and variables. If you want a list of those, they are defined in the standard module builtins:</p>
+<p>&gt;&raquo; import builtins</p>
+<p>&gt;&raquo; dir(builtins)</p>
+<h3 id="64-packages">6.4. Packages</h3>
+<p>Packages are a way of structuring Python’s module namespace by using “dotted module names”.</p>
+<p>sound/                          Top-level package</p>
+<p>​      <strong>init</strong>.py               Initialize the sound package</p>
+<p>​      formats/                  Subpackage for file format conversions</p>
+<p>​              <strong>init</strong>.py</p>
+<p>​              wavread.py</p>
+<p>​              wavwrite.py</p>
+<p>​              aiffread.py</p>
+<p>​              aiffwrite.py</p>
+<p>​              auread.py</p>
+<p>​              auwrite.py</p>
+<p>​              &hellip;</p>
+<p>​      effects/                  Subpackage for sound effects</p>
+<p>​              <strong>init</strong>.py</p>
+<p>​              echo.py</p>
+<p>​              surround.py</p>
+<p>​              reverse.py</p>
+<p>​              &hellip;</p>
+<p>​      filters/                  Subpackage for filters</p>
+<p>​              <strong>init</strong>.py</p>
+<p>​              equalizer.py</p>
+<p>​              vocoder.py</p>
+<p>​              karaoke.py</p>
+<p>When importing the package, Python searches through the directories on sys.path looking for the package subdirectory.</p>
+<p>The <strong>init</strong>.py files are required to make Python treat the directories as containing packages. In the simplest case, <strong>init</strong>.py can just be an empty file, but it can also execute initialization code for the package or set the <strong>all</strong> variable, described later.</p>
+<p>Users of the package can import individual modules from the package, for example:</p>
+<p>import sound.effects.echo</p>
+<p>This loads the submodule sound.effects.echo. It must be referenced with its full name.</p>
+<p>sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)</p>
+<p>An alternative way of importing the submodule is:</p>
+<p>from sound.effects import echo</p>
+<p>This also loads the submodule echo, and makes it available without its package prefix, so it can be used as follows:</p>
+<p>echo.echofilter(input, output, delay=0.7, atten=4)</p>
+<p>Yet another variation is to import the desired function or variable directly:</p>
+<p>from sound.effects.echo import echofilter</p>
+<p>Again, this loads the submodule echo, but this makes its function echofilter() directly available:</p>
+<p>echofilter(input, output, delay=0.7, atten=4)</p>
+<p>Note that when using from package import item, the item can be either a submodule (or subpackage) of the package, or some other name defined in the package, like a function, class or variable. The import statement first tests whether the item is defined in the package; if not, it assumes it is a module and attempts to load it. If it fails to find it, an ImportError exception is raised.</p>
+<p>Contrarily, when using syntax like import item.subitem.subsubitem, each item except for the last must be a package; the last item can be a module or a package but can’t be a class or function or variable defined in the previous item.</p>
+<h4 id="641-importing--from-a-package">6.4.1. Importing * From a Package</h4>
+<p>The import statement uses the following convention: if a package’s <strong>init</strong>.py code defines a list named <strong>all</strong>, it is taken to be the list of module names that should be imported when from package import * is encountered. It is up to the package author to keep this list up-to-date when a new version of the package is released. Package authors may also decide not to support it, if they don’t see a use for importing * from their package.</p>
+<p>If <strong>all</strong> is not defined, the statement from sound.effects import * does not import all submodules from the package sound.effects into the current namespace; it only ensures that the package sound.effects has been imported (possibly running any initialization code in <strong>init</strong>.py) and then imports whatever names are defined in the package. This includes any names defined (and submodules explicitly loaded) by <strong>init</strong>.py. It also includes any submodules of the package that were explicitly loaded by previous import statements.</p>
+<p>using from Package import specific_submodule! In fact, this is the recommended notation unless the importing module needs to use submodules with the same name from different packages.</p>
+<h4 id="642-intra-package-references">6.4.2. Intra-package References</h4>
+<p>When packages are structured into subpackages (as with the sound package in the example), you can use absolute imports to refer to submodules of siblings packages.</p>
+<p>You can also write relative imports, with the from module import name form of import statement. These imports use leading dots to indicate the current and parent packages involved in the relative import.</p>
+<p>from . import echo
+from .. import formats
+from ..filters import equalizer</p>
+<p>Note that relative imports are based on the name of the current module. Since the name of the main module is always &ldquo;<strong>main</strong>&rdquo;, modules intended for use as the main module of a Python application must always use absolute imports.</p>
+<p>if <strong>name</strong> == &lsquo;<strong>main</strong>':</p>
+<p>6.4.3. Packages in Multiple Directories</p>
+<p>Packages support one more special attribute, <strong>path</strong>. This is initialized to be a list containing the name of the directory holding the package’s <strong>init</strong>.py before the code in that file is executed. This variable can be modified; doing so affects future searches for modules and subpackages contained in the package.</p>
+<p>\7. Input and Output</p>
+<p>data can be printed in a human-readable form, or written to a file for future use.</p>
+<h3 id="71-fancier-output-formatting">7.1. Fancier Output Formatting</h3>
+<p>two ways of writing values: expression statements and the print() function. (A third way is using the write() method of file objects; the standard output file can be referenced as sys.stdout.</p>
+<p>There are two ways to format your output; the first way is to do all the string handling yourself; using string slicing and concatenation operations you can create any layout you can imagine. The string type has some methods that perform useful operations for padding strings to a given column width; these will be discussed shortly. The second way is to use the str.format() method.</p>
+<p>convert any value to a string: pass it to the repr() or str() functions.</p>
+<p>Many values, such as numbers or structures like lists and dictionaries, have the same representation using either function. Strings, in particular, have two distinct representations.</p>
+<p>&gt;&raquo; s = &lsquo;Hello, world.&rsquo;
+&gt;&raquo; str(s)
+&lsquo;Hello, world.&rsquo;
+&gt;&raquo; repr(s)
+&ldquo;&lsquo;Hello, world.'&rdquo;</p>
+<p>&gt;&raquo; # The repr() of a string adds string quotes and backslashes:
+&hellip; hello = &lsquo;hello, world\n&rsquo;
+&gt;&raquo; hellos = repr(hello)
+&gt;&raquo; print(hellos)
+&lsquo;hello, world\n&rsquo;</p>
+<p>&gt;&raquo; # The argument to repr() may be any Python object:
+&hellip; repr((x, y, (&lsquo;spam&rsquo;, &lsquo;eggs&rsquo;)))
+&ldquo;(32.5, 40000, (&lsquo;spam&rsquo;, &lsquo;eggs&rsquo;))&rdquo;</p>
+<p>This example demonstrates the str.rjust() method of string objects, which right-justifies a string in a field of a given width by padding it with spaces on the left. There are similar methods str.ljust() and str.center(). These methods do not write anything, they just return a new string. If the input string is too long, they don’t truncate it, but return it unchanged.</p>
+<p>&gt;&raquo; for x in range(1, 11):
+&hellip;     print(repr(x).rjust(2), repr(x<em>x).rjust(3), end=&rsquo; &lsquo;)             # it adds spaces between its arguments
+&hellip;     # Note use of &lsquo;end&rsquo; on previous line
+&hellip;     print(repr(x</em>x*x).rjust(4))
+&hellip;
+1   1    1
+2   4    8
+3   9   27
+4  16   64
+5  25  125
+6  36  216
+7  49  343
+8  64  512
+9  81  729
+10 100 1000</p>
+<p>There is another method, str.zfill(), which pads a numeric string on the left with zeros. It understands about plus and minus signs</p>
+<p>&gt;&raquo; &lsquo;12&rsquo;.zfill(5)
+&lsquo;00012&rsquo;
+&gt;&raquo; &lsquo;-3.14&rsquo;.zfill(7)
+&lsquo;-003.14&rsquo;
+&gt;&raquo; &lsquo;3.14159265359&rsquo;.zfill(5)
+&lsquo;3.14159265359&rsquo;</p>
+<p>&gt;&raquo; print(&lsquo;We are the {} who say &ldquo;{}!&quot;'.format(&lsquo;knights&rsquo;, &lsquo;Ni&rsquo;))</p>
+<p>&gt;&raquo; print('{1} and {0}'.format(&lsquo;spam&rsquo;, &lsquo;eggs&rsquo;))</p>
+<p>&gt;&raquo; print(&lsquo;This {food} is {adjective}.'.format(food=&lsquo;spam&rsquo;, adjective=&lsquo;absolutely horrible&rsquo;))</p>
+<p>&lsquo;!a&rsquo; (apply ascii()), &lsquo;!s&rsquo; (apply str()) and &lsquo;!r&rsquo; (apply repr()) can be used to convert the value before it is formatted.</p>
+<p>&gt;&raquo; contents = &lsquo;eels&rsquo;
+&gt;&raquo; print(&lsquo;My hovercraft is full of {!r}.'.format(contents))
+My hovercraft is full of &lsquo;eels&rsquo;.</p>
+<p>An optional &lsquo;:&rsquo; and format specifier can follow the field name. This allows greater control over how the value is formatted. The following example rounds Pi to three places after the decimal.</p>
+<p>&gt;&raquo; import math
+&gt;&raquo; print(&lsquo;The value of PI is approximately {0:.3f}.'.format(math.pi))
+The value of PI is approximately 3.142.</p>
+<p>Passing an integer after the &lsquo;:&rsquo; will cause that field to be a minimum number of characters wide.</p>
+<p>&gt;&raquo; table = {&lsquo;Sjoerd&rsquo;: 4127, &lsquo;Jack&rsquo;: 4098, &lsquo;Dcab&rsquo;: 7678}
+&gt;&raquo; for name, phone in table.items():
+&hellip;     print('{0:10} ==&gt; {1:10d}'.format(name, phone))
+&hellip;
+Jack       ==&gt;       4098
+Dcab       ==&gt;       7678
+Sjoerd     ==&gt;       4127</p>
+<p>If you have a really long format string that you don’t want to split up, it would be nice if you could reference the variables to be formatted by name instead of by position</p>
+<p>&gt;&raquo; table = {&lsquo;Sjoerd&rsquo;: 4127, &lsquo;Jack&rsquo;: 4098, &lsquo;Dcab&rsquo;: 8637678}</p>
+<p>&gt;&raquo; print(&lsquo;Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; '</p>
+<p>&hellip;       &lsquo;Dcab: {0[Dcab]:d}'.format(table))</p>
+<p>This could also be done by passing the table as keyword arguments with the ‘**’ notation.</p>
+<p>&gt;&raquo; table = {&lsquo;Sjoerd&rsquo;: 4127, &lsquo;Jack&rsquo;: 4098, &lsquo;Dcab&rsquo;: 8637678}</p>
+<p>&gt;&raquo; print(&lsquo;Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))</p>
+<p>This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing all local variables.</p>
+<h3 id="72-reading-and-writing-files">7.2. Reading and Writing Files</h3>
+<p>f = open(filename, mode)  returns a file object</p>
+<p>mode can be &lsquo;r&rsquo; when the file will only be read, &lsquo;w&rsquo; for only writing (an existing file with the same name will be erased), and &lsquo;a&rsquo; opens the file for appending; any data written to the file is automatically added to the end. &lsquo;r+&rsquo; opens the file for both reading and writing. The mode argument is optional; &lsquo;r&rsquo; will be assumed if it’s omitted.</p>
+<p>If encoding is not specified, the default is platform dependent. &lsquo;b&rsquo; appended to the mode opens the file in binary mode: now the data is read and written in the form of bytes objects. This mode should be used for all files that don’t contain text.</p>
+<p>In text mode, the default when reading is to convert platform-specific line endings (\n on Unix, \r\n on Windows) to just \n. When writing in text mode, the default is to convert occurrences of \n back to platform-specific line endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.</p>
+<h4 id="721-methods-of-file-objects">7.2.1. Methods of File Objects</h4>
+<p>str = f.read([size])  # which reads some quantity of data and returns it as a string (in text mode) or bytes object (in binary mode).</p>
+<p>If the end of the file has been reached, f.read() will return an empty string ('').</p>
+<p>f.readline() reads a single line from the file; a newline character (\n) is left at the end of the string, and is only omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by &lsquo;\n&rsquo;, a string containing only a single newline.</p>
+<p>For reading lines from a file, you can loop over the file object.</p>
+<p>&gt;&raquo; for line in f:</p>
+<p>&hellip;     print(line, end='')</p>
+<p>If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().</p>
+<p>f.write(string) writes the contents of string to the file, returning the number of characters written.</p>
+<p>f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from the beginning of the file when in binary mode and an opaque number when in text mode.</p>
+<p>To change the file object’s position, use f.seek(offset, from_what).The position is computed from adding offset to a reference point; the reference point is selected by the from_what argument. A from_what value of 0 measures from the beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. from_what can be omitted and defaults to 0, using the beginning of the file as the reference point.</p>
+<p>&gt;&raquo; f.seek(-3, 2)  # Go to the 3rd byte before the end</p>
+<p>In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned from the f.tell(), or zero. Any other offset value produces undefined behaviour.</p>
+<p>When you’re done with a file, call f.close() to close it and free up any system resources taken up by the open file. After calling f.close(), attempts to use the file object will automatically fail.</p>
+<p>&gt;&raquo; f.close()</p>
+<p>&gt;&raquo; f.read()</p>
+<p>Traceback (most recent call last):</p>
+<p>File &ldquo;<!-- raw HTML omitted -->&rdquo;, line 1, in ?</p>
+<p>ValueError: I/O operation on closed file</p>
+<p>It is good practice to use the with keyword when dealing with file objects. This has the advantage that the file is properly closed after its suite finishes, even if an exception is raised on the way. It is also much shorter than writing equivalent try-finally blocks:</p>
+<p>&gt;&raquo; with open(&lsquo;workfile&rsquo;, &lsquo;r&rsquo;) as f:</p>
+<p>&hellip;     read_data = f.read()</p>
+<p>&gt;&raquo; f.closed</p>
+<p>True</p>
+<p>File objects have some additional methods, such as isatty() and truncate() which are less frequently used; consult the Library Reference for a complete guide to file objects.</p>
+<h4 id="722-saving-structured-data-with-json">7.2.2. Saving structured data with json</h4>
+<p>int(), which takes a string like &lsquo;123&rsquo; and returns its numeric value 123.</p>
+<p>Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called json can take Python data hierarchies, and convert them to string representations; this process is called serializing. Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing, the string representing the object may have been stored in a file or data, or sent over a network connection to some distant machine.</p>
+<p>The JSON format is commonly used by modern applications to allow for data exchange.</p>
+<p>dumps() function view its JSON string representation with a simple line of code.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>json.dumps([1, &lsquo;simple&rsquo;, &lsquo;list&rsquo;])</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>&lsquo;[1, &ldquo;simple&rdquo;, &ldquo;list&rdquo;]&rsquo;</p>
+<p>dump(), simply serializes the object to a text file. So if f is a text file object opened for writing,</p>
+<p>json.dump(x, f)</p>
+<p>To decode the object again, if f is a text file object which has been opened for reading:</p>
+<p>x = json.load(f)</p>
+<p>This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON requires a bit of extra effort. The reference for the json module contains an explanation of this.</p>
+<p>Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects.</p>
+<p>\8. Errors and Exceptions</p>
+<p>8.1. Syntax Errors</p>
+<p>The error is caused by (or at least detected at) the token preceding the arrow.</p>
+<p>8.2. Exceptions</p>
+<p>Errors detected during execution are called exceptions and are not unconditionally fatal: you will soon learn how to handle them in Python programs.</p>
+<p>Exceptions come in different types, and the type is printed as part of the message.</p>
+<p>Standard exception names are built-in identifiers (not reserved keywords).</p>
+<p>Built-in Exceptions see the standard library 5. Built-in Exceptions.</p>
+<h3 id="83-handling-exceptions">8.3. Handling Exceptions</h3>
+<p>the following example asks the user for input until a valid integer has been entered, but allows the user to interrupt the program (using Control-C or whatever the operating system supports); note that a user-generated interruption is signalled by raising the KeyboardInterrupt exception.</p>
+<p>&gt;&raquo; while True:</p>
+<p>&hellip;     try:</p>
+<p>&hellip;         x = int(input(&ldquo;Please enter a number: &ldquo;))</p>
+<p>&hellip;         break</p>
+<p>&hellip;     except ValueError:</p>
+<p>&hellip;         print(&ldquo;Oops! That was no valid number. Try again&hellip;&quot;)</p>
+<p>If an exception occurs which does not match the exception named in the except clause, it is passed on to outer try statements; if no handler is found, it is an unhandled exception and execution stops with a message as shown above.</p>
+<p>A try statement may have more than one except clause, to specify handlers for different exceptions. At most one handler will be executed. An except clause may name multiple exceptions as a parenthesized tuple.</p>
+<p>A class in an except clause is compatible with an exception if it is the same class or a base class thereof (but not the other way around — an except clause listing a derived class is not compatible with a base class). For example, the following code will print B, C, D in that order:</p>
+<p>class B(Exception):</p>
+<p>​    pass</p>
+<p>class C(B):</p>
+<p>​    pass</p>
+<p>class D(C):</p>
+<p>​    pass</p>
+<p>for cls in [B, C, D]:</p>
+<p>​    try:</p>
+<p>​        raise cls()</p>
+<p>​    except D:</p>
+<p>​        print(&ldquo;D&rdquo;)</p>
+<p>​    except C:</p>
+<p>​        print(&ldquo;C&rdquo;)</p>
+<p>​    except B:</p>
+<p>​        print(&ldquo;B&rdquo;)</p>
+<p>Note that if the except clauses were reversed (with except B first), it would have printed B, B, B — the first matching except clause is triggered.</p>
+<p>The last except clause may omit the exception name(s), to serve as a wildcard. Use this with extreme caution, since it is easy to mask a real programming error in this way! It can also be used to print an error message and then re-raise the exception (allowing a caller to handle the exception as well):</p>
+<p>import sys</p>
+<p>try:</p>
+<p>​    f = open(&lsquo;myfile.txt&rsquo;)</p>
+<p>​    s = f.readline()</p>
+<p>​    i = int(s.strip())</p>
+<p>except OSError as err:</p>
+<p>​    print(&ldquo;OS error: {0}&quot;.format(err))</p>
+<p>except ValueError:</p>
+<p>​    print(&ldquo;Could not convert data to an integer.&quot;)</p>
+<p>except:</p>
+<p>​    print(&ldquo;Unexpected error:&rdquo;, sys.exc_info()[0])</p>
+<p>​    raise</p>
+<p>The try &hellip; except statement has an optional else clause, which, when present, must follow all except clauses. It is useful for code that must be executed if the try clause does not raise an exception.</p>
+<p>for arg in sys.argv[1:]: try:</p>
+<p>​        f = open(arg, &lsquo;r&rsquo;)</p>
+<p>​    except IOError:</p>
+<p>​        print(&lsquo;cannot open&rsquo;, arg)</p>
+<p>​    else:</p>
+<p>​        print(arg, &lsquo;has&rsquo;, len(f.readlines()), &lsquo;lines&rsquo;)</p>
+<p>​        f.close()</p>
+<p>The use of the else clause is better than adding additional code to the try clause because it avoids accidentally catching an exception that wasn’t raised by the code being protected by the try &hellip; except statement.</p>
+<p>When an exception occurs, it may have an associated value, also known as the exception’s argument. The presence and type of the argument depend on the exception type.</p>
+<p>The except clause may specify a variable after the exception name. The variable is bound to an exception instance with the arguments stored in instance.args. For convenience, the exception instance defines <strong>str</strong>() so the arguments can be printed directly without having to reference .args.</p>
+<p>8.4. Raising Exceptions</p>
+<p>The raise statement allows the programmer to force a specified exception to occur.</p>
+<p>The sole argument to raise indicates the exception to be raised. This must be either an exception instance or an exception class (a class that derives from Exception).</p>
+<p>&gt;&raquo; raise NameError(&lsquo;HiThere&rsquo;)</p>
+<p>raise ValueError  # shorthand for &lsquo;raise ValueError()&rsquo;</p>
+<p>If you need to determine whether an exception was raised but don’t intend to handle it, a simpler form of the raise statement allows you to re-raise the exception:</p>
+<p>&gt;&raquo; try:</p>
+<p>&hellip;     raise NameError(&lsquo;HiThere&rsquo;)</p>
+<p>&hellip; except NameError:</p>
+<p>&hellip;     print(&lsquo;An exception flew by!')</p>
+<p>&hellip;     raise</p>
+<p>8.5. User-defined Exceptions</p>
+<p>Programs may name their own exceptions by creating a new exception class. Exceptions should typically be derived from the Exception class, either directly or indirectly. When creating a module that can raise several distinct errors, a common practice is to create a base class for exceptions defined by that module, and subclass that to create specific exception classes for different error conditions.</p>
+<p>Most exceptions are defined with names that end in “Error,” similar to the naming of the standard exceptions. Many standard modules define their own exceptions to report errors that may occur in functions they define.</p>
+<p>8.6. Defining Clean-up Actions</p>
+<p>The try statement has another optional clause which is intended to define clean-up actions that must be executed under all circumstances. A finally clause is always executed before leaving the try statement, whether an exception has occurred or not (it is re-raised after the finally clause has been executed).</p>
+<p>The finally clause is also executed “on the way out” when any other clause of the try statement is left via a break, continue or return statement.</p>
+<p>In real world applications, the finally clause is useful for releasing external resources (such as files or network connections), regardless of whether the use of the resource was successful.</p>
+<p>8.7. Predefined Clean-up Actions</p>
+<p>Some objects define standard clean-up actions to be undertaken when the object is no longer needed, regardless of whether or not the operation using the object succeeded or failed.</p>
+<p>with open(&ldquo;myfile.txt&rdquo;) as f:</p>
+<p>After the statement is executed, the file f is always closed, even if a problem was encountered while processing the lines.</p>
+<p>\9. Classes</p>
+<p>the class inheritance mechanism allows multiple base classes, a derived class can override any methods of its base class or classes, and a method can call the method of a base class with the same name. Objects can contain arbitrary amounts and kinds of data.</p>
+<p>①the method function is declared with an explicit first argument representing the object, which is provided implicitly by the call. ②classes themselves are objects. This provides semantics for importing and renaming.</p>
+<p>③most built-in operators with special syntax (arithmetic operators, subscripting etc.) can be redefined for class instances. ④ normally class members (including the data members) are public (except see below Private Variables), and all member functions are virtual. ⑤ built-in types can be used as base classes for extension by the user.</p>
+<p>9.1. A Word About Names and Objects</p>
+<p>Objects have individuality, and multiple names (in multiple scopes) can be bound to the same object. can be safely ignored when dealing with immutable basic types (numbers, strings, tuples).  However, aliasing has a possibly surprising effect on the semantics of Python code involving mutable objects such as lists, dictionaries, and most other types.</p>
+<p>9.2. Python Scopes and Namespaces</p>
+<p>A namespace is a mapping from names to objects. Examples of namespaces are: the set of built-in names (containing functions such as abs(), and built-in exception names); the global names in a module; and the local names in a function invocation. In a sense the set of attributes of an object also form a namespace. The important thing to know about namespaces is that there is absolutely no relation between names in different namespaces.</p>
+<p>use the word attribute for any name following a dot — for example, in the expression z.real, real is an attribute of the object z. Strictly speaking, references to names in modules are attribute references: in the expression modname.funcname, modname is a module object and funcname is an attribute of it.</p>
+<p>Module objects have a secret read-only attribute called <strong>dict</strong> which returns the dictionary used to implement the module’s namespace;</p>
+<p>Attributes may be read-only or writable. In the latter case, assignment to attributes is possible. Module attributes are writable: you can write modname.the_answer = 42. Writable attributes may also be deleted with the del statement. For example, del modname.the_answer will remove the attribute the_answer from the object named by modname.</p>
+<p>Namespaces are created at different moments and have different lifetimes. The namespace containing the built-in names is created when the Python interpreter starts up, and is never deleted. The global namespace for a module is created when the module definition is read in; normally, module namespaces also last until the interpreter quits. The statements executed by the top-level invocation of the interpreter, either read from a script file or interactively, are considered part of a module called <strong>main</strong>, so they have their own global namespace. (The built-in names actually also live in a module; this is called builtins.)</p>
+<p>The local namespace for a function is created when the function is called, and deleted when the function returns or raises an exception that is not handled within the function. Of course, recursive invocations each have their own local namespace.</p>
+<p>A scope is a textual region of a Python program where a namespace is directly accessible. “Directly accessible” here means that an unqualified reference to a name attempts to find the name in the namespace.</p>
+<p>Although scopes are determined statically, they are used dynamically. At any time during execution, there are at least three nested scopes whose namespaces are directly accessible:</p>
+<ul>
+<li>the innermost scope, which is      searched first, contains the local names</li>
+<li>the scopes of any enclosing      functions, which are searched starting with the nearest enclosing scope,      contains non-local, but also non-global names</li>
+<li>the next-to-last scope      contains the current module’s global names</li>
+<li>the outermost scope (searched      last) is the namespace containing built-in names</li>
+</ul>
+<p>If a name is declared global, then all references and assignments go directly to the middle scope containing the module’s global names. To rebind variables found outside of the innermost scope, the nonlocal statement can be used; if not declared nonlocal, those variables are read-only (an attempt to write to such a variable will simply create a new local variable in the innermost scope, leaving the identically named outer variable unchanged).</p>
+<p>Class definitions place yet another namespace in the local scope.</p>
+<p>It is important to realize that scopes are determined textually: the global scope of a function defined in a module is that module’s namespace, no matter from where or by what alias the function is called. On the other hand, the actual search for names is done dynamically, at run time.</p>
+<p>if no global statement is in effect – assignments to names always go into the innermost scope. Assignments do not copy data — they just bind names to objects. The same is true for deletions: the statement del x removes the binding of x from the namespace referenced by the local scope. In fact, all operations that introduce new names use the local scope: in particular, import statements and function definitions bind the module or function name in the local scope.</p>
+<p>The global statement can be used to indicate that particular variables live in the global scope and should be rebound there; the nonlocal statement indicates that particular variables live in an enclosing scope and should be rebound there.  nonlocal语句表示否定当前命名空间的作用域，寻找父函数的作用域并绑定对象。</p>
+<p>9.2.1. Scopes and Namespaces Example</p>
+<p>def scope_test():
+def do_local():
+spam = &ldquo;local spam&rdquo;</p>
+<p>​    def do_nonlocal():
+​         nonlocal spam
+​         spam = &ldquo;nonlocal spam&rdquo;</p>
+<p>​    def do_global():
+​         global spam
+​         spam = &ldquo;global spam&rdquo;</p>
+<p>​    spam = &ldquo;test spam&rdquo;
+​     do_local()
+​     print(&ldquo;After local assignment:&rdquo;, spam)
+​     do_nonlocal()
+​     print(&ldquo;After nonlocal assignment:&rdquo;, spam)
+​     do_global()
+​     print(&ldquo;After global assignment:&rdquo;, spam)</p>
+<p>scope_test()
+print(&ldquo;In global scope:&rdquo;, spam)</p>
+<p>The output of the example code is:</p>
+<p>After local assignment: test spam
+After nonlocal assignment: nonlocal spam
+After global assignment: nonlocal spam
+In global scope: global spam</p>
+<p>9.3. A First Look at Classes</p>
+<p>9.3.1. Class Definition Syntax</p>
+<p>class ClassName:
+<!-- raw HTML omitted -->
+.
+<!-- raw HTML omitted --></p>
+<p>Class definitions, like function definitions (def statements) must be executed before they have any effect. (You could conceivably place a class definition in a branch of an if statement, or inside a function.)</p>
+<p>When a class definition is entered, a new namespace is created, and used as the local scope — thus, all assignments to local variables go into this new namespace.</p>
+<p>When a class definition is left normally (via the end), a class object is created. This is basically a wrapper around the contents of the namespace created by the class definition, the class object is bound here to the class name given in the class definition header (ClassName in the example).</p>
+<p>9.3.2. Class Objects</p>
+<p>Attribute references use the standard syntax used for all attribute references in Python: obj.name, then MyClass.i and MyClass.f are valid attribute references, returning an integer and a function object, respectively. Class attributes can also be assigned to, so you can change the value of MyClass.i by assignment. <strong>doc</strong> is also a valid attribute, returning the docstring belonging to the class.</p>
+<p>class MyClass:
+&ldquo;&ldquo;&ldquo;A simple example class&rdquo;&rdquo;&rdquo;
+i = 12345</p>
+<p>​    def f(self):
+​         return &lsquo;hello world&rsquo;</p>
+<p>Class instantiation uses function notation. Just pretend that the class object is a parameterless function that returns a new instance of the class.  x = MyClass().  Many classes like to create objects with instances customized to a specific initial state. Therefore a class may define a special method named <strong>init</strong>(),</p>
+<p>def <strong>init</strong>(self):
+self.data = []</p>
+<p>When a class defines an <strong>init</strong>() method, class instantiation automatically invokes <strong>init</strong>() for the newly-created class instance.   the <strong>init</strong>() method may have arguments for greater flexibility.</p>
+<p>&gt;&raquo; class Complex:
+&hellip;     def <strong>init</strong>(self, realpart, imagpart):
+&hellip;         self.r = realpart
+&hellip;         self.i = imagpart
+&hellip;
+&gt;&raquo; x = Complex(3.0, -4.5)</p>
+<p>9.3.3. Instance Objects</p>
+<p>data attributes and methods.</p>
+<p>Data attributes need not be declared; like local variables, they spring into existence when they are first assigned to.</p>
+<p>x.counter = 1
+while x.counter &lt; 10:
+x.counter = x.counter * 2
+print(x.counter)
+del x.counter</p>
+<p>The other kind of instance attribute reference is a method. A method is a function that “belongs to” an object.</p>
+<p>But x.f is not the same thing as MyClass.f — it is a method object, not a function object.</p>
+<p>9.3.4. Method Objects</p>
+<p>Usually, a method is called right after it is bound:   x.f()</p>
+<p>However, it is not necessary to call a method right away: x.f is a method object, and can be stored away and called at a later time.  xf = x.f     print(xf())</p>
+<p>the special thing about methods is that the object is passed as the first argument of the function. In our example, the call x.f() is exactly equivalent to MyClass.f(x). In general, calling a method with a list of n arguments is equivalent to calling the corresponding function with an argument list that is created by inserting the method’s object before the first argument.</p>
+<p>When an instance attribute is referenced that isn’t a data attribute, its class is searched. If the name denotes a valid class attribute that is a function object, a method object is created by packing (pointers to) the instance object and the function object just found together in an abstract object: this is the method object. When the method object is called with an argument list, a new argument list is constructed from the instance object and the argument list, and the function object is called with this new argument list.</p>
+<p>9.3.5. Class and Instance Variables</p>
+<p>Generally speaking, instance variables are for data unique to each instance and class variables are for attributes and methods shared by all instances of the class.</p>
+<p>class Dog:</p>
+<p>kind = &lsquo;canine&rsquo;         # class variable shared by all instances</p>
+<p>def <strong>init</strong>(self, name):
+self.name = name    # instance variable unique to each instance</p>
+<p>shared data can have possibly surprising effects with involving mutable objects such as lists and dictionaries. For example, the tricks list in the following code should not be used as a class variable because just a single list would be shared by all Dog instances:</p>
+<p>class Dog:</p>
+<p>tricks = []             # mistaken use of a class variable</p>
+<p>def <strong>init</strong>(self, name):
+self.name = name</p>
+<p>def add_trick(self, trick):
+self.tricks.append(trick)</p>
+<p>Correct design of the class should use an instance variable instead:</p>
+<p>class Dog:</p>
+<p>def <strong>init</strong>(self, name):
+self.name = name
+self.tricks = []    # creates a new empty list for each dog</p>
+<p>def add_trick(self, trick):
+self.tricks.append(trick)</p>
+<p>9.4. Random Remarks</p>
+<p>Possible conventions include capitalizing method names, prefixing data attribute names with a small unique string (perhaps just an underscore), or using verbs for methods and nouns for data attributes.</p>
+<p>Data attributes may be referenced by methods as well as by ordinary users (“clients”) of an object. In other words, classes are not usable to implement pure abstract data types. In fact, nothing in Python makes it possible to enforce data hiding — it is all based upon convention. (On the other hand, the Python implementation, written in C, can completely hide implementation details and control access to an object if necessary; this can be used by extensions to Python written in C.)</p>
+<p>Clients should use data attributes with care — clients may mess up invariants maintained by the methods by stamping on their data attributes. Note that clients may add data attributes of their own to an instance object without affecting the validity of the methods, as long as name conflicts are avoided — again, a naming convention can save a lot of headaches here.</p>
+<p>There is no shorthand for referencing data attributes (or other methods!) from within methods.</p>
+<p>Often, the first argument of a method is called self.</p>
+<p>Any function object that is a class attribute defines a method for instances of that class. It is not necessary that the function definition is textually enclosed in the class definition: assigning a function object to a local variable in the class is also ok.</p>
+<p># Function defined outside the class
+def f1(self, x, y):
+return min(x, x+y)</p>
+<p>class C:
+f = f1</p>
+<p>​    def g(self):
+​         return &lsquo;hello world&rsquo;</p>
+<p>​    h = g</p>
+<p>Now f, g and h are all attributes of class C that refer to function objects, and consequently they are all methods of instances of C.</p>
+<p>Methods may reference global names in the same way as ordinary functions. The global scope associated with a method is the module containing its definition. (A class is never used as a global scope.)</p>
+<p>functions and modules imported into the global scope can be used by methods, as well as functions and classes defined in it.</p>
+<p>Each value is an object, and therefore has a class (also called its type). It is stored as object.<strong>class</strong>.</p>
+<p>9.5. Inheritance</p>
+<p>class DerivedClassName(BaseClassName):
+<!-- raw HTML omitted -->
+.
+.
+<!-- raw HTML omitted --></p>
+<p>class DerivedClassName(modname.BaseClassName):</p>
+<p>When the class object is constructed, the base class is remembered. This is used for resolving attribute references: if a requested attribute is not found in the class, the search proceeds to look in the base class. This rule is applied recursively if the base class itself is derived from some other class.</p>
+<p>Method references are resolved as follows: the corresponding class attribute is searched, descending down the chain of base classes if necessary, and the method reference is valid if this yields a function object.</p>
+<p>Derived classes may override methods of their base classes. Because methods have no special privileges when calling other methods of the same object, a method of a base class that calls another method defined in the same base class may end up calling a method of a derived class that overrides it. (For C++ programmers: all methods in Python are effectively virtual.)</p>
+<p>An overriding method in a derived class may in fact want to extend rather than simply replace the base class method of the same name. There is a simple way to call the base class method directly: just call BaseClassName.methodname(self, arguments). This is occasionally useful to clients as well. (Note that this only works if the base class is accessible as BaseClassName in the global scope.)</p>
+<p>Python has two built-in functions that work with inheritance:</p>
+<ul>
+<li>Use <a href="">isinstance()</a> to      check an instance’s type: isinstance(obj, int) will      be True only if obj.<strong>class</strong> is <a href="">int</a> or      some class derived from <a href="">int</a>.</li>
+<li>Use <a href="">issubclass()</a> to      check class inheritance: issubclass(bool, int) is True since <a href="">bool</a> is a      subclass of <a href="">int</a>.      However, issubclass(float, int) is False since <a href="">float</a> is not      a subclass of <a href="">int</a>.</li>
+</ul>
+<p>9.5.1. Multiple Inheritance</p>
+<p>class DerivedClassName(Base1, Base2, Base3):
+<!-- raw HTML omitted -->
+.
+.
+<!-- raw HTML omitted --></p>
+<p>the search for attributes inherited from a parent class as depth-first, left-to-right, not searching twice in the same class where there is an overlap in the hierarchy.</p>
+<p>In fact, it is slightly more complex than that; the method resolution order changes dynamically to support cooperative calls to super(). This approach is known in some other multiple-inheritance languages as call-next-method and is more powerful than the super call found in single-inheritance languages.</p>
+<p>Dynamic ordering is necessary because all cases of multiple inheritance exhibit one or more diamond relationships (where at least one of the parent classes can be accessed through multiple paths from the bottommost class).  To keep the base classes from being accessed more than once, the dynamic algorithm linearizes the search order in a way that preserves the left-to-right ordering specified in each class, that calls each parent only once, and that is monotonic (meaning that a class can be subclassed without affecting the precedence order of its parents).</p>
+<p>9.6. Private Variables</p>
+<p>“Private” instance variables that cannot be accessed except from inside an object don’t exist in Python. However, there is a convention that is followed by most Python code: a name prefixed with an underscore (e.g. _spam) should be treated as a non-public part of the API (whether it is a function, a method or a data member). It should be considered an implementation detail and subject to change without notice.</p>
+<p>Since there is a valid use-case for class-private members (namely to avoid name clashes of names with names defined by subclasses), there is limited support for such a mechanism, called name mangling. Any identifier of the form __spam (at least two leading underscores, at most one trailing underscore) is textually replaced with _classname__spam, where classname is the current class name with leading underscore(s) stripped. This mangling is done without regard to the syntactic position of the identifier, as long as it occurs within the definition of a class.</p>
+<p>Name mangling is helpful for letting subclasses override methods without breaking intraclass method calls.</p>
+<p>class Mapping:
+def <strong>init</strong>(self, iterable):
+self.items_list = []
+self.__update(iterable)</p>
+<p>def update(self, iterable):
+for item in iterable:
+self.items_list.append(item)</p>
+<p>__update = update   # private copy of original update() method</p>
+<p>class MappingSubclass(Mapping):</p>
+<p>def update(self, keys, values):
+# provides new signature for update()
+# but does not break <strong>init</strong>()
+for item in zip(keys, values):
+self.items_list.append(item)</p>
+<p>Note that the mangling rules are designed mostly to avoid accidents; it still is possible to access or modify a variable that is considered private. This can even be useful in special circumstances, such as in the debugger.</p>
+<p>Notice that code passed to exec() or eval() does not consider the classname of the invoking class to be the current class; this is similar to the effect of the global statement, the effect of which is likewise restricted to code that is byte-compiled together. The same restriction applies to getattr(), setattr() and delattr(), as well as when referencing <strong>dict</strong> directly.</p>
+<p>9.7. Odds and Ends</p>
+<p>bundling together a few named data items. An empty class definition will do nicely:</p>
+<p>class Employee:
+pass</p>
+<p>john = Employee()  # Create an empty employee record</p>
+<p># Fill the fields of the record
+john.name = &lsquo;John Doe&rsquo;
+john.dept = &lsquo;computer lab&rsquo;
+john.salary = 1000</p>
+<p>A piece of Python code that expects a particular abstract data type can often be passed a class that emulates the methods of that data type instead. For instance, if you have a function that formats some data from a file object, you can define a class with methods read() and readline() that get the data from a string buffer instead, and pass it as an argument.</p>
+<p>Instance method objects have attributes, too: m.<strong>self</strong> is the instance object with the method m(), and m.<strong>func</strong> is the function object corresponding to the method.</p>
+<p>9.8. Exceptions Are Classes Too</p>
+<p>9.9. Iterators</p>
+<p>for element in iterator:      iterator can be list, tuple, dict, string, openfd</p>
+<p>Behind the scenes, the for statement calls iter() on the container object. The function returns an iterator object that defines the method <strong>next</strong>() which accesses elements in the container one at a time. When there are no more elements, <strong>next</strong>() raises a StopIteration exception which tells the for loop to terminate. You can call the <strong>next</strong>() method using the next() built-in function</p>
+<p>Having seen the mechanics behind the iterator protocol, it is easy to add iterator behavior to your classes. Define an <strong>iter</strong>() method which returns an object with a <strong>next</strong>() method. If the class defines <strong>next</strong>(), then <strong>iter</strong>() can just return self:</p>
+<p>class Reverse:
+&ldquo;&ldquo;&ldquo;Iterator for looping over a sequence backwards.&rdquo;&rdquo;&rdquo;
+def <strong>init</strong>(self, data):
+self.data = data
+self.index = len(data)</p>
+<p>​    def <strong>iter</strong>(self):
+​         return self</p>
+<p>​    def <strong>next</strong>(self):
+​         if self.index == 0:
+​             raise StopIteration
+​         self.index = self.index - 1
+​         return self.data[self.index]</p>
+<p>9.10. Generators</p>
+<p>Generators are a simple and powerful tool for creating iterators. They are written like regular functions but use the yield statement whenever they want to return data. Each time next() is called on it, the generator resumes where it left off (it remembers all the data values and which statement was last executed).</p>
+<p>def reverse(data):
+for index in range(len(data)-1, -1, -1):
+yield data[index]
+&gt;&raquo; for char in reverse(&lsquo;golf&rsquo;):
+&hellip;     print(char)
+&hellip;
+f
+l
+o
+g</p>
+<p>Anything that can be done with generators can also be done with class-based iterators as described in the previous section. What makes generators so compact is that the <strong>iter</strong>() and <strong>next</strong>() methods are created automatically.</p>
+<p>Another key feature is that the local variables and execution state are automatically saved between calls.</p>
+<p>In addition to automatic method creation and saving program state, when generators terminate, they automatically raise StopIteration.</p>
+<p>9.11. Generator Expressions</p>
+<p>Some simple generators can be coded succinctly as expressions using a syntax similar to list comprehensions but with parentheses instead of brackets. These expressions are designed for situations where the generator is used right away by an enclosing function. Generator expressions are more compact but less versatile than full generator definitions and tend to be more memory friendly than equivalent list comprehensions.</p>
+<p>&gt;&raquo; sum(i*i for i in range(10))                 # sum of squares
+285</p>
+<p>&gt;&raquo; xvec = [10, 20, 30]
+&gt;&raquo; yvec = [7, 5, 3]
+&gt;&raquo; sum(x*y for x,y in zip(xvec, yvec))         # dot product
+260</p>
+<p>&gt;&raquo; from math import pi, sin
+&gt;&raquo; sine_table = {x: sin(x*pi/180) for x in range(0, 91)}</p>
+<p>&gt;&raquo; unique_words = set(word  for line in page  for word in line.split())</p>
+<p>&gt;&raquo; valedictorian = max((student.gpa, student.name) for student in graduates)</p>
+<p>&gt;&raquo; data = &lsquo;golf&rsquo;
+&gt;&raquo; list(data[i] for i in range(len(data)-1, -1, -1))
+[&lsquo;f&rsquo;, &lsquo;l&rsquo;, &lsquo;o&rsquo;, &lsquo;g&rsquo;]</p>
+<p>\10. Brief Tour of the Standard Library</p>
+<p>The built-in dir() and help() functions are useful as interactive aids for working with large modules like os:</p>
+<p>&gt;&raquo; dir(os)
+<!-- raw HTML omitted --></p>
+<p>&gt;&raquo; help(os)
+&lt;returns an extensive manual page created from the module&rsquo;s docstrings&gt;</p>
+<p>10.1. Operating System Interface</p>
+<p>The os module provides dozens of functions for interacting with the operating system:</p>
+<p>Be sure to use the import os style instead of from os import *. This will keep <a href="https://docs.python.org/3/library/os.html#os.open">os.open()</a> from shadowing the built-in <a href="https://docs.python.org/3/library/functions.html#open">open()</a> function which operates much differently.</p>
+<p>os.getcwd()      # Return the current working directory</p>
+<p>os.chdir('/server/accesslogs&rsquo;)   # Change current working directory</p>
+<p>os.system(&lsquo;mkdir today&rsquo;)   # Run the command mkdir in the system shell</p>
+<p>For daily file and directory management tasks, the shutil module provides a higher level interface that is easier to use:
+shutil.copyfile(&lsquo;data.db&rsquo;, &lsquo;archive.db&rsquo;)
+shutil.move('/build/executables&rsquo;, &lsquo;installdir&rsquo;)</p>
+<p>10.2. File Wildcards</p>
+<p>The glob module provides a function for making file lists from directory wildcard searches:</p>
+<p>&gt;&raquo; import glob
+&gt;&raquo; glob.glob('*.py&rsquo;)
+[&lsquo;primes.py&rsquo;, &lsquo;random.py&rsquo;, &lsquo;quote.py&rsquo;]</p>
+<p>10.3. Command Line Arguments</p>
+<p>command line arguments are stored in the sys module’s argv attribute as a list.</p>
+<p>sys.argv is a list which first argument is the script name.</p>
+<p>The getopt module processes sys.argv using the conventions of the Unix getopt() function. More powerful and flexible command line processing is provided by the argparse module.</p>
+<p>10.4. Error Output Redirection and Program Termination</p>
+<p>The sys module also has attributes for stdin, stdout, and stderr. The latter is useful for emitting warnings and error messages to make them visible even when stdout has been redirected:</p>
+<p>&gt;&raquo; sys.stderr.write(&lsquo;Warning, log file not found starting a new one\n&rsquo;)
+Warning, log file not found starting a new one</p>
+<p>The most direct way to terminate a script is to use sys.exit().</p>
+<p>10.5. String Pattern Matching</p>
+<p>The re module provides regular expression tools for advanced string processing.</p>
+<p>&gt;&raquo; import re
+&gt;&raquo; re.findall(r&rsquo;\bf[a-z]*&rsquo;, &lsquo;which foot or hand fell fastest&rsquo;)
+[&lsquo;foot&rsquo;, &lsquo;fell&rsquo;, &lsquo;fastest&rsquo;]
+&gt;&raquo; re.sub(r&rsquo;(\b[a-z]+) \1&rsquo;, r&rsquo;\1&rsquo;, &lsquo;cat in the the hat&rsquo;)
+&lsquo;cat in the hat&rsquo;</p>
+<p>When only simple capabilities are needed, string methods are preferred because they are easier to read and debug.</p>
+<p>10.6. Mathematics</p>
+<p>The math module gives access to the underlying C library functions for floating point math.</p>
+<p>math.cos(math.pi / 4)</p>
+<p>math.log(1024, 2)</p>
+<p>The random module provides tools for making random selections:</p>
+<p>random.choice([&lsquo;apple&rsquo;, &lsquo;pear&rsquo;, &lsquo;banana&rsquo;])</p>
+<p>The statistics module calculates basic statistical properties (the mean, median, variance, etc.) of numeric data</p>
+<p>&gt;&raquo; data = [2.75, 1.75, 1.25, 0.25, 0.5, 1.25, 3.5]
+&gt;&raquo; statistics.mean(data)
+&gt;&raquo; statistics.median(data)
+&gt;&raquo; statistics.variance(data)</p>
+<p>The SciPy project &laquo;<a href="https://scipy.org">https://scipy.org</a>&raquo; has many other modules for numerical computations.</p>
+<p>10.7. Internet Access</p>
+<p>urllib.request module for retrieving data from URLs and smtplib module for sending mail:</p>
+<p>&gt;&raquo; from urllib.request import urlopen
+&gt;&raquo; with urlopen(&lsquo;<a href="http://tycho.usno.navy.mil/cgi-bin/timer.pl'">http://tycho.usno.navy.mil/cgi-bin/timer.pl'</a>) as response:
+&hellip;     for line in response:
+&hellip;         line = line.decode(&lsquo;utf-8&rsquo;)  # Decoding the binary data to text.
+&hellip;         if &lsquo;EST&rsquo; in line or &lsquo;EDT&rsquo; in line:  # look for Eastern Time
+&hellip;             print(line)</p>
+<p><!-- raw HTML omitted -->Nov. 25, 09:43:32 PM EST</p>
+<p>&gt;&raquo; import smtplib
+&gt;&raquo; server = smtplib.SMTP(&lsquo;localhost&rsquo;)
+&gt;&raquo; server.sendmail(&lsquo;<a href="mailto:soothsayer@example.org">soothsayer@example.org</a>&rsquo;, &lsquo;<a href="mailto:jcaesar@example.org">jcaesar@example.org</a>&rsquo;,
+&hellip; &ldquo;&ldquo;&ldquo;To: <a href="mailto:jcaesar@example.org">jcaesar@example.org</a>
+&hellip; From: <a href="mailto:soothsayer@example.org">soothsayer@example.org</a>
+&hellip;
+&hellip; Beware the Ides of March.
+&hellip; &ldquo;&quot;&quot;)
+&gt;&raquo; server.quit()</p>
+<p>this example needs a mailserver running on localhost.</p>
+<p>10.8. Dates and Times</p>
+<p>The datetime module supplies classes for manipulating dates and times,  extraction for output formatting.</p>
+<p>&gt;&raquo; # dates support calendar arithmetic
+&gt;&raquo; birthday = date(1964, 7, 31)
+&gt;&raquo; age = now - birthday
+&gt;&raquo; age.days
+14368</p>
+<p>10.9. Data Compression</p>
+<p>Common data archiving and compression formats are directly supported by modules including:  <a href="https://docs.python.org/3/library/zlib.html#module-zlib">zlib</a>, <a href="https://docs.python.org/3/library/gzip.html#module-gzip">gzip</a>, <a href="https://docs.python.org/3/library/bz2.html#module-bz2">bz2</a>, <a href="https://docs.python.org/3/library/lzma.html#module-lzma">lzma</a>, <a href="https://docs.python.org/3/library/zipfile.html#module-zipfile">zipfile</a> and <a href="https://docs.python.org/3/library/tarfile.html#module-tarfile">tarfile</a>.</p>
+<p>10.10. Performance Measurement</p>
+<p>The timeit module quickly demonstrates a modest performance advantage:</p>
+<p>&gt;&raquo; from timeit import Timer
+&gt;&raquo; Timer(&rsquo;t=a; a=b; b=t&rsquo;, &lsquo;a=1; b=2&rsquo;).timeit()
+0.57535828626024577
+&gt;&raquo; Timer(&lsquo;a,b = b,a&rsquo;, &lsquo;a=1; b=2&rsquo;).timeit()
+0.54962537085770791</p>
+<p>In contrast to <a href="https://docs.python.org/3/library/timeit.html#module-timeit">timeit</a>‘s fine level of granularity, the <a href="https://docs.python.org/3/library/profile.html#module-profile">profile</a> and <a href="https://docs.python.org/3/library/profile.html#module-pstats">pstats</a> modules provide tools for identifying time critical sections in larger blocks of code.</p>
+<p>10.11. Quality Control</p>
+<p>One approach for developing high quality software is to write tests for each function as it is developed and to run those tests frequently during the development process.</p>
+<p>The <a href="https://docs.python.org/3/library/doctest.html#module-doctest">doctest</a> module provides a tool for scanning a module and validating tests embedded in a program’s docstrings.</p>
+<p>def average(values):
+&ldquo;&ldquo;&ldquo;Computes the arithmetic mean of a list of numbers.</p>
+<p>​    &raquo;&gt; print(average([20, 30, 70]))
+​     40.0
+​     &quot;&rdquo;&rdquo;
+​     return sum(values) / len(values)</p>
+<p>import doctest
+doctest.testmod()   # automatically validate the embedded tests</p>
+<p>The <a href="https://docs.python.org/3/library/unittest.html#module-unittest">unittest</a> module is not as effortless as the <a href="https://docs.python.org/3/library/doctest.html#module-doctest">doctest</a> module, but it allows a more comprehensive set of tests to be maintained in a separate file:</p>
+<p>import unittest</p>
+<p>class TestStatisticalFunctions(unittest.TestCase):</p>
+<p>​    def test_average(self):
+​         self.assertEqual(average([20, 30, 70]), 40.0)
+​         self.assertEqual(round(average([1, 5, 7]), 1), 4.3)
+​         with self.assertRaises(ZeroDivisionError):
+​             average([])
+​         with self.assertRaises(TypeError):
+​             average(20, 30, 70)</p>
+<p>unittest.main()  # Calling from the command line invokes all tests</p>
+<p>10.12. Batteries Included</p>
+<ul>
+<li>The <a href="https://docs.python.org/3/library/xmlrpc.client.html#module-xmlrpc.client">xmlrpc.client</a> and <a href="https://docs.python.org/3/library/xmlrpc.server.html#module-xmlrpc.server">xmlrpc.server</a> modules make implementing remote procedure calls      into an almost trivial task. Despite the modules names, no direct      knowledge or handling of XML is needed.</li>
+<li>The <a href="https://docs.python.org/3/library/email.html#module-email">email</a> package is a library for managing email messages,      including MIME and other RFC 2822-based message documents. Unlike <a href="https://docs.python.org/3/library/smtplib.html#module-smtplib">smtplib</a> and <a href="https://docs.python.org/3/library/poplib.html#module-poplib">poplib</a> which actually send and receive messages, the      email package has a complete toolset for building or decoding complex      message structures (including attachments) and for implementing internet      encoding and header protocols.</li>
+<li>The <a href="https://docs.python.org/3/library/json.html#module-json">json</a> package provides robust support for parsing this      popular data interchange format. The <a href="https://docs.python.org/3/library/csv.html#module-csv">csv</a> module supports direct reading and writing of      files in Comma-Separated Value format, commonly supported by databases and      spreadsheets. XML processing is supported by the <a href="https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree">xml.etree.ElementTree</a>, <a href="https://docs.python.org/3/library/xml.dom.html#module-xml.dom">xml.dom</a> and <a href="https://docs.python.org/3/library/xml.sax.html#module-xml.sax">xml.sax</a>packages. Together, these modules and packages greatly      simplify data interchange between Python applications and other tools.</li>
+<li>The <a href="https://docs.python.org/3/library/sqlite3.html#module-sqlite3">sqlite3</a> module is a wrapper for the SQLite database      library, providing a persistent database that can be updated and accessed      using slightly nonstandard SQL syntax.</li>
+<li>Internationalization is supported      by a number of modules including <a href="https://docs.python.org/3/library/gettext.html#module-gettext">gettext</a>, <a href="https://docs.python.org/3/library/locale.html#module-locale">locale</a>, and the <a href="https://docs.python.org/3/library/codecs.html#module-codecs">codecs</a> package.</li>
+</ul>
+<p>\11. Brief Tour of the Standard Library – Part II</p>
+<p>11.1. Output Formatting</p>
+<p>The <a href="">reprlib</a> module provides a version of <a href="">repr()</a> customized for abbreviated displays of large or deeply nested containers:</p>
+<p>&gt;&raquo; import reprlib
+&gt;&raquo; reprlib.repr(set(&lsquo;supercalifragilisticexpialidocious&rsquo;))
+&ldquo;{&lsquo;a&rsquo;, &lsquo;c&rsquo;, &rsquo;d&rsquo;, &lsquo;e&rsquo;, &lsquo;f&rsquo;, &lsquo;g&rsquo;, &hellip;}&rdquo;</p>
+<p>The <a href="">pprint</a> module offers more sophisticated control over printing both built-in and user defined objects in a way that is readable by the interpreter. When the result is longer than one line, the “pretty printer” adds line breaks and indentation to more clearly reveal data structure:</p>
+<p>The <a href="">textwrap</a> module formats paragraphs of text to fit a given screen width:</p>
+<p>&gt;&raquo; import textwrap
+&gt;&raquo; doc = &ldquo;&ldquo;&ldquo;The wrap() method is just like fill() except that it returns
+&hellip; a list of strings instead of one big string with newlines to separate
+&hellip; the wrapped lines.&rdquo;&rdquo;&rdquo;
+&hellip;
+&gt;&raquo; print(textwrap.fill(doc, width=40))
+The wrap() method is just like fill()
+except that it returns a list of strings
+instead of one big string with newlines
+to separate the wrapped lines.</p>
+<p>The <a href="">locale</a> module accesses a database of culture specific data formats. The grouping attribute of locale’s format function provides a direct way of formatting numbers with group separators:</p>
+<p>11.2. Templating</p>
+<p>The <a href="">string</a> module includes a versatile <a href="">Template</a> class with a simplified syntax suitable for editing by end-users. This allows users to customize their applications without having to alter the application.</p>
+<p>The format uses placeholder names formed by $ with valid Python identifiers (alphanumeric characters and underscores). Surrounding the placeholder with braces allows it to be followed by more alphanumeric letters with no intervening spaces. Writing $$ creates a single escaped $:</p>
+<p>&gt;&raquo; from string import Template
+&gt;&raquo; t = Template('${village}folk send $$10 to $cause.')
+&gt;&raquo; t.substitute(village=&lsquo;Nottingham&rsquo;, cause=&lsquo;the ditch fund&rsquo;)
+&lsquo;Nottinghamfolk send $10 to the ditch fund.&rsquo;</p>
+<p>The <a href="">substitute()</a> method raises a <a href="">KeyError</a> when a placeholder is not supplied in a dictionary or a keyword argument. For mail-merge style applications, user supplied data may be incomplete and the <a href="">safe_substitute()</a> method may be more appropriate — it will leave placeholders unchanged if data is missing:</p>
+<p>&gt;&raquo; t = Template(&lsquo;Return the $item to $owner.')
+&gt;&raquo; d = dict(item=&lsquo;unladen swallow&rsquo;)
+&gt;&raquo; t.substitute(d)
+Traceback (most recent call last):
+&hellip;
+KeyError: &lsquo;owner&rsquo;
+&gt;&raquo; t.safe_substitute(d)
+&lsquo;Return the unladen swallow to $owner.&rsquo;</p>
+<p>Template subclasses can specify a custom delimiter. For example, a batch renaming utility for a photo browser may elect to use percent signs for placeholders such as the current date, image sequence number, or file format:</p>
+<p>&gt;&raquo; import time, os.path
+&gt;&raquo; photofiles = [&lsquo;img_1074.jpg&rsquo;, &lsquo;img_1076.jpg&rsquo;, &lsquo;img_1077.jpg&rsquo;]
+&gt;&raquo; class BatchRename(Template):
+&hellip;     delimiter = &lsquo;%&rsquo;
+&gt;&raquo; fmt = input(&lsquo;Enter rename style (%d-date %n-seqnum %f-format):  &lsquo;)
+Enter rename style (%d-date %n-seqnum %f-format):  Ashley_%n%f</p>
+<p>&gt;&raquo; t = BatchRename(fmt)
+&gt;&raquo; date = time.strftime('%d%b%y&rsquo;)
+&gt;&raquo; for i, filename in enumerate(photofiles):
+&hellip;     base, ext = os.path.splitext(filename)
+&hellip;     newname = t.substitute(d=date, n=i, f=ext)
+&hellip;     print('{0} &ndash;&gt; {1}'.format(filename, newname))</p>
+<p>img_1074.jpg &ndash;&gt; Ashley_0.jpg
+img_1076.jpg &ndash;&gt; Ashley_1.jpg
+img_1077.jpg &ndash;&gt; Ashley_2.jpg</p>
+<p>Another application for templating is separating program logic from the details of multiple output formats. This makes it possible to substitute custom templates for XML files, plain text reports, and HTML web reports.</p>
+<p>11.3. Working with Binary Data Record Layouts</p>
+<p>The <a href="">struct</a> module provides <a href="">pack()</a> and <a href="">unpack()</a> functions for working with variable length binary record formats. The following example shows how to loop through header information in a ZIP file without using the <a href="">zipfile</a> module. Pack codes &ldquo;H&rdquo; and &ldquo;I&rdquo; represent two and four byte unsigned numbers respectively. The &ldquo;&lt;&rdquo; indicates that they are standard size and in little-endian byte order:</p>
+<p>import struct</p>
+<p>with open(&lsquo;myfile.zip&rsquo;, &lsquo;rb&rsquo;) as f:
+data = f.read()</p>
+<p>start = 0
+for i in range(3):                      # show the first 3 file headers
+start += 14
+fields = struct.unpack('&lt;IIIHH&rsquo;, data[start:start+16])
+crc32, comp_size, uncomp_size, filenamesize, extra_size = fields</p>
+<p>start += 16
+filename = data[start:start+filenamesize]
+start += filenamesize
+extra = data[start:start+extra_size]
+print(filename, hex(crc32), comp_size, uncomp_size)</p>
+<p>​    start += extra_size + comp_size     # skip to the next header</p>
+<p>11.4. Multi-threading</p>
+<p>Threading is a technique for decoupling tasks which are not sequentially dependent. Threads can be used to improve the responsiveness of applications that accept user input while other tasks run in the background. A related use case is running I/O in parallel with computations in another thread.</p>
+<p>The following code shows how the high level <a href="">threading</a> module can run tasks in background while the main program continues to run:</p>
+<p>import threading, zipfile</p>
+<p>class AsyncZip(threading.Thread):
+def <strong>init</strong>(self, infile, outfile):
+threading.Thread.<strong>init</strong>(self)
+self.infile = infile
+self.outfile = outfile</p>
+<p>def run(self):
+f = zipfile.ZipFile(self.outfile, &lsquo;w&rsquo;, zipfile.ZIP_DEFLATED)
+f.write(self.infile)
+f.close()
+print(&lsquo;Finished background zip of:&rsquo;, self.infile)</p>
+<p>background = AsyncZip(&lsquo;mydata.txt&rsquo;, &lsquo;myarchive.zip&rsquo;)
+background.start()
+print(&lsquo;The main program continues to run in foreground.')</p>
+<p>background.join()    # Wait for the background task to finish
+print(&lsquo;Main program waited until background was done.')</p>
+<p>The principal challenge of multi-threaded applications is coordinating threads that share data or other resources. To that end, the threading module provides a number of synchronization primitives including locks, events, condition variables, and semaphores.</p>
+<p>While those tools are powerful, minor design errors can result in problems that are difficult to reproduce. So, the preferred approach to task coordination is to concentrate all access to a resource in a single thread and then use the <a href="">queue</a> module to feed that thread with requests from other threads. Applications using <a href="">Queue</a> objects for inter-thread communication and coordination are easier to design, more readable, and more reliable.</p>
+<p>11.5. Logging</p>
+<p>The <a href="">logging</a> module offers a full featured and flexible logging system. At its simplest, log messages are sent to a file or to sys.stderr:</p>
+<p>import logging
+logging.debug(&lsquo;Debugging information&rsquo;)
+logging.info(&lsquo;Informational message&rsquo;)
+logging.warning(&lsquo;Warning:config file %s not found&rsquo;, &lsquo;server.conf&rsquo;)
+logging.error(&lsquo;Error occurred&rsquo;)
+logging.critical(&lsquo;Critical error &ndash; shutting down&rsquo;)</p>
+<p>This produces the following output:</p>
+<p>WARNING:root:Warning:config file server.conf not found
+ERROR:root:Error occurred
+CRITICAL:root:Critical error &ndash; shutting down</p>
+<p>By default, informational and debugging messages are suppressed and the output is sent to standard error. Other output options include routing messages through email, datagrams, sockets, or to an HTTP Server. New filters can select different routing based on message priority: DEBUG, INFO, WARNING, ERROR, and CRITICAL.</p>
+<p>The logging system can be configured directly from Python or can be loaded from a user editable configuration file for customized logging without altering the application.</p>
+<p>11.6. Weak References</p>
+<p>Python does automatic memory management (reference counting for most objects and <a href="">garbage collection</a> to eliminate cycles). The memory is freed shortly after the last reference to it has been eliminated.</p>
+<p>This approach works fine for most applications but occasionally there is a need to track objects only as long as they are being used by something else. Unfortunately, just tracking them creates a reference that makes them permanent. The <a href="">weakref</a> module provides tools for tracking objects without creating a reference. When the object is no longer needed, it is automatically removed from a weakref table and a callback is triggered for weakref objects. Typical applications include caching objects that are expensive to create:</p>
+<p>11.7. Tools for Working with Lists</p>
+<p>Many data structure needs can be met with the built-in list type. However, sometimes there is a need for alternative implementations with different performance trade-offs.</p>
+<p>The <a href="">array</a> module provides an <a href="">array()</a> object that is like a list that stores only homogeneous data and stores it more compactly. The following example shows an array of numbers stored as two byte unsigned binary numbers (typecode &ldquo;H&rdquo;) rather than the usual 16 bytes per entry for regular lists of Python int objects:</p>
+<p>&gt;&raquo; from array import array
+&gt;&raquo; a = array(&lsquo;H&rsquo;, [4000, 10, 700, 22222])
+&gt;&raquo; sum(a)
+26932
+&gt;&raquo; a[1:3]
+array(&lsquo;H&rsquo;, [10, 700])</p>
+<p>The <a href="">collections</a> module provides a <a href="">deque()</a> object that is like a list with faster appends and pops from the left side but slower lookups in the middle. These objects are well suited for implementing queues and breadth first tree searches:</p>
+<p>&gt;&raquo; from collections import deque
+&gt;&raquo; d = deque([&ldquo;task1&rdquo;, &ldquo;task2&rdquo;, &ldquo;task3&rdquo;])
+&gt;&raquo; d.append(&ldquo;task4&rdquo;)
+&gt;&raquo; print(&ldquo;Handling&rdquo;, d.popleft())
+Handling task1</p>
+<p>unsearched = deque([starting_node])
+def breadth_first_search(unsearched):
+node = unsearched.popleft()
+for m in gen_moves(node):
+if is_goal(m):
+return m
+unsearched.append(m)</p>
+<p>In addition to alternative list implementations, the library also offers other tools such as the <a href="">bisect</a> module with functions for manipulating sorted lists:</p>
+<p>The <a href="">heapq</a> module provides functions for implementing heaps based on regular lists. The lowest valued entry is always kept at position zero. This is useful for applications which repeatedly access the smallest element but do not want to run a full list sort:</p>
+<p>11.8. Decimal Floating Point Arithmetic</p>
+<p>The <a href="">decimal</a> module offers a <a href="">Decimal</a> datatype for decimal floating point arithmetic. Compared to the built-in <a href="">float</a> implementation of binary floating point, the class is especially helpful for</p>
+<ul>
+<li>financial      applications and other uses which require exact decimal representation,</li>
+<li>control over      precision,</li>
+<li>control over rounding      to meet legal or regulatory requirements,</li>
+<li>tracking of      significant decimal places, or</li>
+<li>applications where      the user expects the results to match calculations done by hand.</li>
+</ul>
+<p>For example, calculating a 5% tax on a 70 cent phone charge gives different results in decimal floating point and binary floating point. The difference becomes significant if the results are rounded to the nearest cent:</p>
+<p>&gt;&raquo; from decimal import *
+&gt;&raquo; round(Decimal(&lsquo;0.70&rsquo;) * Decimal(&lsquo;1.05&rsquo;), 2)
+Decimal(&lsquo;0.74&rsquo;)
+&gt;&raquo; round(.70 * 1.05, 2)
+0.73</p>
+<p>The <a href="">Decimal</a> result keeps a trailing zero, automatically inferring four place significance from multiplicands with two place significance. Decimal reproduces mathematics as done by hand and avoids issues that can arise when binary floating point cannot exactly represent decimal quantities.</p>
+<p>Exact representation enables the <a href="">Decimal</a> class to perform modulo calculations and equality tests that are unsuitable for binary floating point:</p>
+<p>&gt;&raquo; Decimal(&lsquo;1.00&rsquo;) % Decimal('.10&rsquo;)
+Decimal(&lsquo;0.00&rsquo;)
+&gt;&raquo; 1.00 % 0.10
+0.09999999999999995</p>
+<p>&gt;&raquo; sum([Decimal(&lsquo;0.1&rsquo;)]*10) == Decimal(&lsquo;1.0&rsquo;)
+True
+&gt;&raquo; sum([0.1]*10) == 1.0
+False</p>
+<p>The <a href="">decimal</a> module provides arithmetic with as much precision as needed:</p>
+<p>&gt;&raquo; getcontext().prec = 36
+&gt;&raquo; Decimal(1) / Decimal(7)
+Decimal(&lsquo;0.142857142857142857142857142857142857&rsquo;)</p>
+<p>\12. Virtual Environments and Packages</p>
+<p>12.1. Introduction</p>
+<p>If application A needs version 1.0 of a particular module but application B needs version 2.0, then the requirements are in conflict and installing either version 1.0 or 2.0 will leave one application unable to run.</p>
+<p>The solution for this problem is to create a virtual environment (often shortened to “virtualenv”), a self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages.</p>
+<p>Different applications can then use different virtual environments.</p>
+<p>12.2. Creating Virtual Environments</p>
+<p>The script used to create and manage virtual environments is called pyvenv. if you have multiple versions of Python on your system you can select a specific Python version by running pyvenv-3.4 or whichever version you want.</p>
+<p>To create a virtualenv, decide upon a directory where you want to place it and run pyvenv with the directory path:</p>
+<p>pyvenv tutorial-env</p>
+<p>This will create the tutorial-env directory if it doesn’t exist, and also create directories inside it containing a copy of the Python interpreter, the standard library, and various supporting files.</p>
+<p>Once you’ve created a virtual environment, you need to activate it.</p>
+<p>On Windows, run:</p>
+<p>tutorial-env/Scripts/activate</p>
+<p>On Unix or MacOS, run:</p>
+<p>source tutorial-env/bin/activate</p>
+<p>(This script is written for the bash shell. If you use the csh or fish shells, there are alternate activate.csh and activate.fish scripts you should use instead.)</p>
+<p>12.3. Managing Packages with pip</p>
+<p>Once you’ve activated a virtual environment, you can install, upgrade, and remove packages using a program called pip.</p>
+<p>pip has a number of subcommands: “search”, “install”, “uninstall”, “freeze”, etc. (Consult the <a href="https://docs.python.org/3/installing/index.html#installing-index">Installing Python Modules</a> guide for complete documentation for pip.)</p>
+<p>(tutorial-env) -&gt; pip search astronomy</p>
+<p>-&gt; pip install novas</p>
+<p>You can also install a specific version of a package by giving the package name followed by == and the version number:</p>
+<p>-&gt; pip install requests==2.6.0</p>
+<p>you can run pip install &ndash;upgrade to upgrade the package to the latest version:</p>
+<p>-&gt; pip install &ndash;upgrade requests</p>
+<p>pip uninstall followed by one or more package names will remove the packages from the virtual environment.</p>
+<p>pip show will display information about a particular package</p>
+<p>(tutorial-env) -&gt; pip show requests</p>
+<p>pip list will display all of the packages installed in the virtual environment:</p>
+<p>pip freeze will produce a similar list of the installed packages, but the output uses the format that pip install expects. A common convention is to put this list in a requirements.txt file:</p>
+<p>(tutorial-env) -&gt; pip freeze &gt; requirements.txt
+(tutorial-env) -&gt; cat requirements.txt
+novas==3.1.1.3
+numpy==1.9.2
+requests==2.7.0</p>
+<p>The requirements.txt can then be committed to version control and shipped as part of an application. Users can then install all the necessary packages with install -r:</p>
+<p>-&gt; pip install -r requirements.txt</p>
+<p>pip has many more options. Consult the <a href="https://docs.python.org/3/installing/index.html#installing-index">Installing Python Modules</a> guide for complete documentation for pip. When you’ve written a package and want to make it available on the Python Package Index, consult the <a href="https://docs.python.org/3/distributing/index.html#distributing-index">Distributing Python Modules</a> guide.</p>
+<p>\13. What Now?</p>
+<p><a href="https://docs.python.org/3/library/index.html#library-index">The Python Standard Library</a>: You should browse through this manual.</p>
+<p><a href="https://docs.python.org/3/installing/index.html#installing-index">Installing Python Modules</a>: explains how to install additional modules written by other Python users.</p>
+<p><a href="https://docs.python.org/3/reference/index.html#reference-index">The Python Language Reference</a>: A detailed explanation of Python’s syntax and semantics. It’s heavy reading, but is useful as a complete guide to the language itself.</p>
+<p><a href="https://www.python.org">https://www.python.org</a>:  It contains code, documentation, and pointers to Python-related pages around the Web.</p>
+<p><a href="https://docs.python.org">https://docs.python.org</a></p>
+<p><a href="https://pypi.python.org/pypi">https://pypi.python.org/pypi</a>: The Python Package Index</p>
+<p><a href="https://code.activestate.com/recipes/langs/python/">https://code.activestate.com/recipes/langs/python/</a>: The Python Cookbook is a sizable collection of code examples, larger modules, and useful scripts.Particularly notable contributions are collected in a book also titled Python Cookbook.</p>
+<p><a href="http://www.pyvideo.org">http://www.pyvideo.org</a> collects links to Python-related videos from conferences and user-group meetings.</p>
+<p><a href="https://scipy.org">https://scipy.org</a>: The Scientific Python project includes modules for fast array computations and manipulations plus a host of packages for such things as linear algebra, Fourier transforms, non-linear solvers, random number distributions, statistical analysis and the like.</p>
+<p><a href="https://docs.python.org/3/faq/index.html#faq-index">Frequently Asked Questions</a></p>
+<p>\14. Interactive Input Editing and History Substitution</p>
+<p>14.1. Tab Completion and History Editing</p>
+<p>Note that tab completion may execute application-defined code if an object with a <strong>getattr</strong>() method is part of the expression. The default configuration also saves your history into a file named .python_history in your user directory. The history will be available again during the next interactive interpreter session.</p>
+<p>14.2. Alternatives to the Interactive Interpreter</p>
+<p>One alternative enhanced interactive interpreter that has been around for quite some time is <a href="https://ipython.org/">IPython</a>, which features tab completion, object exploration and advanced history management. It can also be thoroughly customized and embedded into other applications. Another similar enhanced interactive environment is <a href="http://www.bpython-interpreter.org/">bpython</a>.</p>
+<p>\15. Floating Point Arithmetic: Issues and Limitations</p>
+<p>Floating-point numbers are represented in computer hardware as base 2 (binary) fractions.</p>
+<p>the decimal fraction 0.125 has value 1/10 + 2/100 + 5/1000</p>
+<p>the binary fraction 0.001 has value 0/2 + 0/4 + 1/8.</p>
+<p>These two fractions have identical values, the only real difference being that the first is written in base 10 fractional notation, and the second in base 2.</p>
+<p>Unfortunately, most decimal fractions cannot be represented exactly as binary fractions. A consequence is that, in general, the decimal floating-point numbers you enter are only approximated by the binary floating-point numbers actually stored in the machine.</p>
+<p>floats are approximated using a binary fraction with the numerator using the first 53 bits starting with the most significant bit and with the denominator as a power of two.</p>
+<p>That is more digits than most people find useful, so Python keeps the number of digits manageable by displaying a rounded value instead. Just remember, even though the printed result looks like the exact value of 1/10, the actual stored value is the nearest representable binary fraction.</p>
+<p>Historically, the Python prompt and built-in repr() function would choose the one with 17 significant digits, 0.10000000000000001. Starting with Python 3.1, Python (on most systems) is now able to choose the shortest of these and simply display 0.1.</p>
+<p>For more pleasant output, you may wish to use string formatting to produce a limited number of significant digits:</p>
+<p>&gt;&raquo; format(math.pi, &lsquo;.12g&rsquo;)  # give 12 significant digits
+&lsquo;3.14159265359&rsquo;</p>
+<p>&gt;&raquo; format(math.pi, &lsquo;.2f&rsquo;)   # give 2 digits after the point
+&lsquo;3.14&rsquo;</p>
+<p>&gt;&raquo; repr(math.pi)
+&lsquo;3.141592653589793&rsquo;</p>
+<p>It’s important to realize that this is simply rounding the display of the true machine value.</p>
+<p>&gt;&raquo; .1 + .1 + .1 == .3
+False</p>
+<p>&gt;&raquo; round(.1, 1) + round(.1, 1) + round(.1, 1) == round(.3, 1)
+False</p>
+<p>Though the numbers cannot be made closer to their intended exact values, the round() function can be useful for post-rounding so that results with inexact values become comparable to one another:</p>
+<p>&gt;&raquo; round(.1, 1) + round(.1, 1) + round(.1, 1) == round(.3, 1)
+False</p>
+<p>Still, don’t be unduly wary of floating-point, but you do need to keep in mind that it’s not decimal arithmetic and that every float operation can suffer a new rounding error.</p>
+<p>for most casual use of floating-point arithmetic you’ll see the result you expect in the end if you simply round the display of your final results to the number of decimal digits you expect. <a href="https://docs.python.org/3/library/stdtypes.html#str">str()</a> usually suffices, and for finer control see the <a href="https://docs.python.org/3/library/stdtypes.html#str.format">str.format()</a> method’s format specifiers in <a href="https://docs.python.org/3/library/string.html#formatstrings">Format String Syntax</a>.</p>
+<p>For use cases which require exact decimal representation, try using the <a href="https://docs.python.org/3/library/decimal.html#module-decimal">decimal</a> module which implements decimal arithmetic suitable for accounting applications and high-precision applications.</p>
+<p>Another form of exact arithmetic is supported by the <a href="https://docs.python.org/3/library/fractions.html#module-fractions">fractions</a> module which implements arithmetic based on rational numbers (so the numbers like 1/3 can be represented exactly).</p>
+<p>If you are a heavy user of floating point operations you should take a look at the Numerical Python package and many other packages for mathematical and statistical operations supplied by the SciPy project. See &laquo;<a href="https://scipy.org">https://scipy.org</a>&raquo;.</p>
+<p>when you really do want to know the exact value of a float. The<a href="https://docs.python.org/3/library/stdtypes.html#float.as_integer_ratio">float.as_integer_ratio()</a> method expresses the value of a float as a fraction:</p>
+<p>&gt;&raquo; x = 3.14159
+&gt;&raquo; x.as_integer_ratio()
+(3537115888337719, 1125899906842624)</p>
+<p>Since the ratio is exact, it can be used to losslessly recreate the original value:</p>
+<p>&gt;&raquo; x == 3537115888337719 / 1125899906842624
+True</p>
+<p>The <a href="https://docs.python.org/3/library/stdtypes.html#float.hex">float.hex()</a> method expresses a float in hexadecimal (base 16), again giving the exact value stored by your computer:</p>
+<p>&gt;&raquo; x.hex()
+&lsquo;0x1.921f9f01b866ep+1&rsquo;</p>
+<p>This precise hexadecimal representation can be used to reconstruct the float value exactly:</p>
+<p>&gt;&raquo; x == float.fromhex(&lsquo;0x1.921f9f01b866ep+1&rsquo;)
+True</p>
+<p>Since the representation is exact, it is useful for reliably porting values across different versions of Python (platform independence) and exchanging data with other languages that support the same format (such as Java and C99).</p>
+<p>Another helpful tool is the <a href="https://docs.python.org/3/library/math.html#math.fsum">math.fsum()</a> function which helps mitigate loss-of-precision during summation. It tracks “lost digits” as values are added onto a running total. That can make a difference in overall accuracy so that the errors do not accumulate to the point where they affect the final total:</p>
+<p>&gt;&raquo; sum([0.1] * 10) == 1.0
+False
+&gt;&raquo; math.fsum([0.1] * 10) == 1.0
+True</p>
+<p>15.1. Representation Error</p>
+<p>Representation error refers to the fact that some (most, actually) decimal fractions cannot be represented exactly as binary (base 2) fractions.</p>
+<p>input the computer strives to convert 0.1 to the closest fraction it can of the form J/2<strong>N where J is an integer containing exactly 53 bits. Rewriting  1 / 10 ~= J / (2</strong>N)  as  J ~= 2**N / 10</p>
+<p>and recalling that J has exactly 53 bits (is &gt;= 2<strong>52 but &lt; 2</strong>53), the best value for N is 56:</p>
+<p>&gt;&raquo; 2<strong>52 &lt;=  2</strong>56 // 10  &lt; 2**53</p>
+<p>That is, 56 is the only value for N that leaves J with exactly 53 bits.</p>
+<p>&gt;&raquo; q, r = divmod(2**56, 10)</p>
+<p>Since the remainder is more than half of 10, the best approximation is obtained by rounding up:</p>
+<p>&gt;&raquo; q+1</p>
+<p>7205759403792794</p>
+<p>Therefore the best possible approximation to 1/10 in 754 double precision is: 7205759403792794 / 2 ** 56</p>
+<p>Dividing both the numerator and denominator by two reduces the fraction to: 3602879701896397 / 2 ** 55</p>
+<p>&gt;&raquo; format(0.1, &lsquo;.17f&rsquo;)</p>
+<p>The <a href="https://docs.python.org/3/library/fractions.html#module-fractions">fractions</a> and <a href="https://docs.python.org/3/library/decimal.html#module-decimal">decimal</a> modules make these calculations easy:</p>
+<p>&gt;&raquo; from decimal import Decimal
+&gt;&raquo; from fractions import Fraction</p>
+<p>&gt;&raquo; Fraction.from_float(0.1)
+Fraction(3602879701896397, 36028797018963968)</p>
+<p>&gt;&raquo; (0.1).as_integer_ratio()
+(3602879701896397, 36028797018963968)</p>
+<p>&gt;&raquo; Decimal.from_float(0.1)
+Decimal(&lsquo;0.1000000000000000055511151231257827021181583404541015625&rsquo;)</p>
+<p>&gt;&raquo; format(Decimal.from_float(0.1), &lsquo;.17&rsquo;)
+&lsquo;0.10000000000000001&rsquo;</p>
+<p>\16. Appendix</p>
+<p>16.1. Interactive Mode</p>
+<p>16.1.1. Error Handling</p>
+<p>When an error occurs, the interpreter prints an error message and a stack trace.</p>
+<p>Some errors are unconditionally fatal and cause an exit with a nonzero exit; this applies to internal inconsistencies and some cases of running out of memory. All error messages are written to the standard error stream; normal output from executed commands is written to standard output.</p>
+<p>Typing the interrupt character (usually Control-C or Delete) to the primary or secondary prompt cancels the input and returns to the primary prompt. [1] Typing an interrupt while a command is executing raises the KeyboardInterrupt exception, which may be handled by a try statement.</p>
+<p>16.1.2. Executable Python Scripts</p>
+<p>On BSD’ish Unix systems, Python scripts can be made directly executable, like shell scripts, by putting the line</p>
+<p>#!/usr/bin/env python3.5</p>
+<p>(assuming that the interpreter is on the user’s PATH) at the beginning of the script and giving the file an executable mode.</p>
+<p>The script can be given an executable mode, or permission, using the chmod command.</p>
+<p>$ chmod +x myscript.py</p>
+<p>$ ./myscript.py</p>
+<p>On Windows systems, there is no notion of an “executable mode”. The Python installer automatically associates .py files with python.exe</p>
+<p>16.1.3. The Interactive Startup File</p>
+<p>When you use Python interactively, it is frequently handy to have some standard commands executed every time the interpreter is started. You can do this by setting an environment variable named PYTHONSTARTUP to the name of a file containing your start-up commands. This is similar to the .profile feature of the Unix shells.</p>
+<p>If you want to read an additional start-up file from the current directory, you can program this in the global start-up file using code like ifos.path.isfile('.pythonrc.py&rsquo;): exec(open('.pythonrc.py&rsquo;).read()). If you want to use the startup file in a script, you must do this explicitly in the script:</p>
+<p>import os
+filename = os.environ.get(&lsquo;PYTHONSTARTUP&rsquo;)
+if filename and os.path.isfile(filename):
+with open(filename) as fobj:
+startup_file = fobj.read()
+exec(startup_file)</p>
+<p>16.1.4. The Customization Modules</p>
+<p>Python provides two hooks to let you customize it: sitecustomize and usercustomize. To see how it works, you need first to find the location of your user site-packages directory. Start Python and run this code:</p>
+<p>&gt;&raquo; import site
+&gt;&raquo; site.getusersitepackages()
+&lsquo;/home/user/.local/lib/python3.5/site-packages&rsquo;</p>
+<p>Now you can create a file named usercustomize.py in that directory and put anything you want in it. It will affect every invocation of Python, unless it is started with the <a href="https://docs.python.org/3/using/cmdline.html#cmdoption-s">-s</a> option to disable the automatic import.</p>
+<p>sitecustomize works in the same way, but is typically created by an administrator of the computer in the global site-packages directory, and is imported before usercustomize. See the documentation of the <a href="https://docs.python.org/3/library/site.html#module-site">site</a> module for more details.</p>
+<h2 id="reference">Reference</h2>
+<ol>
+<li><a href="https://docs.python.org/3/tutorial/index.html">https://docs.python.org/3/tutorial/index.html</a></li>
+</ol>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2019-03-01
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://csyezheng.github.io/tags/python/">Python</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/engineering-fundamentals/programming-languages/python/standard-library-by-example/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">The Python Standard Library</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/engineering-fundamentals/programming-languages/scala/a-tour-of-scala/">
+            <span class="next-text nav-default">The tour of Scala</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

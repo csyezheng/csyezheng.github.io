@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 22 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/search/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Search Architecture</title>
-      <link>http://csyezheng.github.io/post/back-end/search-architecture/</link>
+      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/search-architecture/</link>
       <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/back-end/search-architecture/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/search-architecture/</guid>
       <description>搜索服务使用说明 &#34;\nst=\u003estart: 开始\ne=\u003eend: 结束\n\nop1=\u003eoperation: 服务订阅\ncond1=\u003ec</description>
     </item>
     
