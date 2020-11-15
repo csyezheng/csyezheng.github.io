@@ -6,45 +6,45 @@
     <description>Recent content in Categories on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 12 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Infrastructure</title>
-      <link>http://csyezheng.github.io/categories/infrastructure/</link>
-      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      <title>big-data</title>
+      <link>http://csyezheng.github.io/categories/big-data/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/categories/infrastructure/</guid>
+      <guid>http://csyezheng.github.io/categories/big-data/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Java</title>
-      <link>http://csyezheng.github.io/categories/java/</link>
+      <title>cloud-computing</title>
+      <link>http://csyezheng.github.io/categories/cloud-computing/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/cloud-computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>engineering-fundamentals</title>
+      <link>http://csyezheng.github.io/categories/engineering-fundamentals/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/categories/java/</guid>
+      <guid>http://csyezheng.github.io/categories/engineering-fundamentals/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>programming-languages</title>
-      <link>http://csyezheng.github.io/categories/programming-languages/</link>
-      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/categories/programming-languages/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>back-end</title>
-      <link>http://csyezheng.github.io/categories/back-end/</link>
+      <title>web-application</title>
+      <link>http://csyezheng.github.io/categories/web-application/</link>
       <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/categories/back-end/</guid>
+      <guid>http://csyezheng.github.io/categories/web-application/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>DevOps</title>
+      <title>devops</title>
       <link>http://csyezheng.github.io/categories/devops/</link>
       <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
       
@@ -62,128 +62,38 @@
     </item>
     
     <item>
-      <title>interview</title>
-      <link>http://csyezheng.github.io/categories/interview/</link>
+      <title>artificial-intelligence</title>
+      <link>http://csyezheng.github.io/categories/artificial-intelligence/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/categories/interview/</guid>
+      <guid>http://csyezheng.github.io/categories/artificial-intelligence/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>machine learning</title>
-      <link>http://csyezheng.github.io/categories/machine-learning/</link>
+      <title>master-path</title>
+      <link>http://csyezheng.github.io/categories/master-path/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/categories/machine-learning/</guid>
+      <guid>http://csyezheng.github.io/categories/master-path/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Natural Language Processing</title>
-      <link>http://csyezheng.github.io/categories/natural-language-processing/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/categories/natural-language-processing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>health</title>
-      <link>http://csyezheng.github.io/categories/health/</link>
+      <title>other</title>
+      <link>http://csyezheng.github.io/categories/other/</link>
       <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/categories/health/</guid>
+      <guid>http://csyezheng.github.io/categories/other/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>deep-learning</title>
-      <link>http://csyezheng.github.io/categories/deep-learning/</link>
-      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/categories/deep-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web-scraping</title>
-      <link>http://csyezheng.github.io/categories/web-scraping/</link>
+      <title>information-management-and-analytics</title>
+      <link>http://csyezheng.github.io/categories/information-management-and-analytics/</link>
       <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/categories/web-scraping/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cpp</title>
-      <link>http://csyezheng.github.io/categories/cpp/</link>
-      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/categories/cpp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>big-data</title>
-      <link>http://csyezheng.github.io/categories/big-data/</link>
-      <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/categories/big-data/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>http://csyezheng.github.io/categories/go/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/categories/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JavaScript</title>
-      <link>http://csyezheng.github.io/categories/javascript/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/categories/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>http://csyezheng.github.io/categories/python/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Scala</title>
-      <link>http://csyezheng.github.io/categories/scala/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/categories/scala/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TypeScript</title>
-      <link>http://csyezheng.github.io/categories/typescript/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/categories/typescript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Thinking</title>
-      <link>http://csyezheng.github.io/categories/thinking/</link>
-      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/categories/thinking/</guid>
+      <guid>http://csyezheng.github.io/categories/information-management-and-analytics/</guid>
       <description></description>
     </item>
     

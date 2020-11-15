@@ -9,8 +9,71 @@
   </url>
   
   <url>
+    <loc>http://csyezheng.github.io/categories/big-data/</loc>
+    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://csyezheng.github.io/categories/</loc>
-    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/flink/</loc>
+    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/specialization/big-data/flink/</loc>
+    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/</loc>
+    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/</loc>
+    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/</loc>
+    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/specialization/cloud-computing/15-319/</loc>
+    <lastmod>2020-10-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/cloud-computing/</loc>
+    <lastmod>2020-10-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/categories/cloud-computing/</loc>
+    <lastmod>2020-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -23,14 +86,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/infrastructure/</loc>
-    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/infrastructure/introduction-to-cloud-infrastructure-technologies/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/cloud-computing/infrastructure/introduction-to-cloud-infrastructure-technologies/</loc>
     <lastmod>2020-10-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -51,22 +107,8 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/</loc>
-    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/tags/</loc>
-    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/</loc>
-    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
+    <loc>http://csyezheng.github.io/categories/engineering-fundamentals/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -79,36 +121,15 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/java/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-3rd-party-library/</loc>
     <lastmod>2020-08-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/programming-languages/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-standard-library/</loc>
     <lastmod>2020-08-23T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-3rd-party-library/</loc>
-    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-standard-library/</loc>
-    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/categories/back-end/</loc>
-    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -121,7 +142,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/mybatis-spring-boot/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/mybatis-spring-boot/</loc>
     <lastmod>2020-08-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -135,7 +156,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/spring/</loc>
     <lastmod>2020-08-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -149,7 +170,14 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring-boot-cxf-jax-rs-starter/</loc>
+    <loc>http://csyezheng.github.io/categories/web-application/</loc>
+    <lastmod>2020-08-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/spring-boot-cxf-jax-rs-starter/</loc>
     <lastmod>2020-08-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -170,7 +198,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/devops/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/devops/xc/</loc>
     <lastmod>2020-07-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -178,6 +206,13 @@
   
   <url>
     <loc>http://csyezheng.github.io/categories/any-path/</loc>
+    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/categories/artificial-intelligence/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -212,7 +247,14 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/interview/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/devops/grafana/</loc>
+    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/grafana/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -226,7 +268,14 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/machine-learning/</loc>
+    <loc>http://csyezheng.github.io/categories/master-path/</loc>
+    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/monitoring/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -240,7 +289,14 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/natural-language-processing/</loc>
+    <loc>http://csyezheng.github.io/tags/prometheus/</loc>
+    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/specialization/devops/prometheus/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -275,7 +331,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/other/interview/tencent-nlp-interview/</loc>
+    <loc>http://csyezheng.github.io/post/master-path/carees/tencent-nlp-interview/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -303,7 +359,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/health/</loc>
+    <loc>http://csyezheng.github.io/categories/other/</loc>
     <lastmod>2020-06-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -359,7 +415,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/search-architecture/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/search-architecture/</loc>
     <lastmod>2020-06-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -394,8 +450,22 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/deep-learning/</loc>
-    <lastmod>2020-06-05T00:00:00+00:00</lastmod>
+    <loc>http://csyezheng.github.io/tags/apm/</loc>
+    <lastmod>2020-05-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/specialization/devops/pinpoint/</loc>
+    <lastmod>2020-05-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/pinpoint/</loc>
+    <lastmod>2020-05-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -436,7 +506,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/python-and-java-service/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/python-and-java-service/</loc>
     <lastmod>2020-05-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -520,7 +590,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/scrapy-with-django/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/scrapy-with-django/</loc>
     <lastmod>2020-02-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -541,6 +611,13 @@
   </url>
   
   <url>
+    <loc>http://csyezheng.github.io/categories/information-management-and-analytics/</loc>
+    <lastmod>2020-01-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://csyezheng.github.io/tags/proxy/</loc>
     <lastmod>2020-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -548,7 +625,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/information/web-scraping/proxy/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/information-management-and-analytics/web-scraping/proxy/</loc>
     <lastmod>2020-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -562,14 +639,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/web-scraping/</loc>
-    <lastmod>2020-01-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/cpp/cpp-library-management/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/cpp/cpp-library-management/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -583,21 +653,14 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/cpp/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/cpp/curl/</loc>
     <lastmod>2019-09-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/cpp/curl/</loc>
-    <lastmod>2019-09-16T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/cpp/3rd-libraries/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/cpp/3rd-libraries/</loc>
     <lastmod>2019-09-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -611,14 +674,14 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/cpp/jsoncpp/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/cpp/jsoncpp/</loc>
     <lastmod>2019-09-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/cpp/cmake/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/cpp/cmake/</loc>
     <lastmod>2019-09-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -632,7 +695,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/cpp/tools/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/cpp/tools/</loc>
     <lastmod>2019-09-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -660,14 +723,42 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/maven/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/java/maven/</loc>
     <lastmod>2019-07-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/oauth2/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/devops/devops/</loc>
+    <lastmod>2019-05-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/specialization/devops/docker-mysql/</loc>
+    <lastmod>2019-05-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/kubernetes/</loc>
+    <lastmod>2019-05-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/specialization/devops/kubernetes/</loc>
+    <lastmod>2019-05-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/oauth2/</loc>
     <lastmod>2019-05-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -681,13 +772,6 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/big-data/</loc>
-    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://csyezheng.github.io/tags/elasticsearch/</loc>
     <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -695,7 +779,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/elasticsearch/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/elasticsearch/</loc>
     <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -730,6 +814,20 @@
   </url>
   
   <url>
+    <loc>http://csyezheng.github.io/tags/docker/</loc>
+    <lastmod>2019-04-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/specialization/devops/docker/</loc>
+    <lastmod>2019-04-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://csyezheng.github.io/tags/microservices/</loc>
     <lastmod>2019-04-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -737,49 +835,49 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/microservices/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/microservices/</loc>
     <lastmod>2019-04-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/go/a-tour-of-go/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/go/a-tour-of-go/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring-boot/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/spring-boot/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/javascript/debug/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/javascript/debug/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/go/debugging-with-delve/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/go/debugging-with-delve/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/go/generate-model-structs-from-database/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/go/generate-model-structs-from-database/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/scala/getting-started/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/scala/getting-started/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -793,7 +891,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/go/gin/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/go/gin/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -807,7 +905,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/go/glide/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/go/glide/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -821,35 +919,28 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/go/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/go/modules/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/go/modules/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/go/go-get-golang-x-solution/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/go/go-get-golang-x-solution/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/go/go/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/go/go/</loc>
-    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/go/good-at/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/go/good-at/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -863,7 +954,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/go/gopm/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/go/gopm/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -877,7 +968,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/go/gorm/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/go/gorm/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -891,21 +982,14 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/javascript/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/javascript/javascript/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/javascript/javascript/</loc>
-    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/go/package_download/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/go/package_download/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -919,28 +1003,21 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/go/photoprism/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/go/photoprism/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/python/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/python/datetime/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/python/datetime/</loc>
-    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/go/quick-start/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/go/quick-start/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -954,49 +1031,42 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/scala/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/scala/scalabyexample/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/scala/scalabyexample/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/go/standard-library/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/go/standard-library/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-tutorials/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-tutorials/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/python/standard-library-by-example/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/python/standard-library-by-example/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/python/the-python-tutorial/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/python/the-python-tutorial/</loc>
-    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/scala/a-tour-of-scala/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/scala/a-tour-of-scala/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1010,28 +1080,21 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/typescript/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/typescript/typescript/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/typescript/typescript/</loc>
-    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/learn-java-in-y-minutes/</loc>
+    <loc>http://csyezheng.github.io/post/engineering-fundamentals/java/learn-java-in-y-minutes/</loc>
     <lastmod>2019-02-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/edx_oauth/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/edx_oauth/</loc>
     <lastmod>2018-11-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1052,7 +1115,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/wagtail/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/wagtail/</loc>
     <lastmod>2018-11-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1066,7 +1129,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/grpc/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/grpc/</loc>
     <lastmod>2018-10-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1087,7 +1150,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/jwt/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/jwt/</loc>
     <lastmod>2018-10-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1101,7 +1164,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/concurrent-programming-for-scalable-web-architectures/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/</loc>
     <lastmod>2018-08-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1122,7 +1185,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/distributed-systems/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/distributed-systems/</loc>
     <lastmod>2018-08-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1136,14 +1199,14 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/high-concurrency/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/high-concurrency/</loc>
     <lastmod>2018-08-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/mysql/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/mysql/</loc>
     <lastmod>2018-08-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1171,7 +1234,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/oidc/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/oidc/</loc>
     <lastmod>2018-08-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1180,6 +1243,20 @@
   <url>
     <loc>http://csyezheng.github.io/tags/system-design/</loc>
     <lastmod>2018-08-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/ios/</loc>
+    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/other/ios-tweak/</loc>
+    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1199,13 +1276,6 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/thinking/</loc>
-    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://csyezheng.github.io/tags/kafka/</loc>
     <lastmod>2018-07-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1213,7 +1283,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/kafka/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/kafka/</loc>
     <lastmod>2018-07-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1241,7 +1311,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/make-a-web-site/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/make-a-web-site/</loc>
     <lastmod>2018-03-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1255,6 +1325,20 @@
   </url>
   
   <url>
+    <loc>http://csyezheng.github.io/tags/nginx/</loc>
+    <lastmod>2017-10-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/post/specialization/devops/nginx/</loc>
+    <lastmod>2017-10-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://csyezheng.github.io/tags/postgresql/</loc>
     <lastmod>2017-09-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1262,7 +1346,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/postgresql/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/postgresql/</loc>
     <lastmod>2017-09-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1311,7 +1395,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/front-end/bootstrap/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/front-end/bootstrap/</loc>
     <lastmod>2017-07-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1325,13 +1409,6 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/categories/front-end/</loc>
-    <lastmod>2017-07-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://csyezheng.github.io/tags/angular/</loc>
     <lastmod>2017-06-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1339,21 +1416,21 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/front-end/angular/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/front-end/angular/</loc>
     <lastmod>2017-06-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/django/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/back-end/django/</loc>
     <lastmod>2017-05-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/other/materials/materials/</loc>
+    <loc>http://csyezheng.github.io/post/master-path/materials/</loc>
     <lastmod>2016-12-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1361,13 +1438,6 @@
   
   <url>
     <loc>http://csyezheng.github.io/tags/materials/</loc>
-    <lastmod>2016-12-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://csyezheng.github.io/categories/materials/</loc>
     <lastmod>2016-12-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1444,7 +1514,7 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/front-end/jquery/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/front-end/jquery/</loc>
     <lastmod>2016-02-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1458,14 +1528,14 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/front-end/dom/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/front-end/dom/</loc>
     <lastmod>2016-02-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/front-end/getting-started-with-the-web/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/front-end/getting-started-with-the-web/</loc>
     <lastmod>2015-12-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1486,20 +1556,36 @@
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/front-end/html/</loc>
+    <loc>http://csyezheng.github.io/post/specialization/web-application/front-end/html/</loc>
     <lastmod>2015-11-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/other/ios-tweak/</loc>
+    <loc>http://csyezheng.github.io/tags/computer-science/</loc>
+    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://csyezheng.github.io/post/other/materials/learning-path/</loc>
+    <loc>http://csyezheng.github.io/post/master-path/learning-path/</loc>
+    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/programing/</loc>
+    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://csyezheng.github.io/tags/tutorial/</loc>
+    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

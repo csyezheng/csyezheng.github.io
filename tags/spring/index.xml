@@ -9,19 +9,19 @@
     <lastBuildDate>Sun, 09 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mybatis Spring Boot</title>
-      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/mybatis-spring-boot/</link>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/mybatis-spring-boot/</link>
       <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/mybatis-spring-boot/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/mybatis-spring-boot/</guid>
       <description>Creating a project spring init -d=web --build=maven mysite Declare Dependencies cd mysite vim pom.xml &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.liquibase&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;liquibase-core&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.10.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis.spring.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis-spring-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.1.3&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;8.0.20&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; MyBatis-Spring-Boot-Starter will: Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers,</description>
     </item>
     
     <item>
       <title>Spring</title>
-      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring/</link>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/spring/</link>
       <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/spring/</guid>
       <description>Installation Install JDK Download jdk-8u261-linux-x64.tar.gz from Oracle
 sudo pacman -S jdk8-openjdk vim ~/.bashrc export JAVA_HOME=/usr/lib/jvm/java-8-openjdk source ~/.bashrc Install maven sudo pacman -S maven cp /opt/maven/conf/settings.xml ~/.m2/ vim ~/.m2/settings.xml &amp;lt;mirror&amp;gt; &amp;lt;id&amp;gt;alimaven&amp;lt;/id&amp;gt; &amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt; &amp;lt;name&amp;gt;aliyun maven&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public&amp;lt;/url&amp;gt; &amp;lt;/mirror&amp;gt; Installing the Spring Boot CLI Download the Spring Boot CLI
 wget https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-cli/2.3.3.BUILD-SNAPSHOT/spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip Extract to a directory that supports file execution.
@@ -31,19 +31,19 @@ export PATH=/opt/spring-2.</description>
     
     <item>
       <title>Python and Java Service</title>
-      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/python-and-java-service/</link>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/python-and-java-service/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/python-and-java-service/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/python-and-java-service/</guid>
       <description>Python和Java服务器通信实现的理解和比较 Python的WSGI和Java的Servlet API Python的WSGI 最近在学习使用Pyt</description>
     </item>
     
     <item>
       <title>Building Java Projects with Maven</title>
-      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring-boot/</link>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/spring-boot/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring-boot/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/spring-boot/</guid>
       <description>Install Maven Maven is downloadable as a zip file at https://maven.apache.org/download.cgi.
 Once you have downloaded the zip file, unzip it to your computer. Then add the bin folder to your path.
 $ mvn -v Define a simple Maven build Maven projects are defined with an XML file named pom.xml. Create a file named pom.xml at the root of the project (i.e. put it next to the src folder) and give it the following contents:</description>

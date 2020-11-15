@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web-application on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/categories/web-application/</link>
+    <description>Recent content in web-application on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 09 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/categories/web-application/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mybatis Spring Boot</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/mybatis-spring-boot/</link>
+      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/mybatis-spring-boot/</guid>
+      <description>Creating a project spring init -d=web --build=maven mysite Declare Dependencies cd mysite vim pom.xml &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.liquibase&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;liquibase-core&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.10.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis.spring.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis-spring-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.1.3&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;8.0.20&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; MyBatis-Spring-Boot-Starter will: Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers,</description>
+    </item>
+    
+    <item>
+      <title>Spring</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/spring/</link>
+      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/spring/</guid>
+      <description>Installation Install JDK Download jdk-8u261-linux-x64.tar.gz from Oracle
+sudo pacman -S jdk8-openjdk vim ~/.bashrc export JAVA_HOME=/usr/lib/jvm/java-8-openjdk source ~/.bashrc Install maven sudo pacman -S maven cp /opt/maven/conf/settings.xml ~/.m2/ vim ~/.m2/settings.xml &amp;lt;mirror&amp;gt; &amp;lt;id&amp;gt;alimaven&amp;lt;/id&amp;gt; &amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt; &amp;lt;name&amp;gt;aliyun maven&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public&amp;lt;/url&amp;gt; &amp;lt;/mirror&amp;gt; Installing the Spring Boot CLI Download the Spring Boot CLI
+wget https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-cli/2.3.3.BUILD-SNAPSHOT/spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip Extract to a directory that supports file execution.
+sudo unzip spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip -d /opt/ vim ~/.bashrc Add the following line to the file
+export PATH=/opt/spring-2.</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot CXF JAX-RS Starter</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/spring-boot-cxf-jax-rs-starter/</link>
+      <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/spring-boot-cxf-jax-rs-starter/</guid>
+      <description>Features Registers CXF Servlet with a &amp;ldquo;/services/*&amp;rdquo; URL pattern for serving CXF JAX-RS endpoints.
+Optionally auto-discovers JAX-RS root resources and providers and creates a JAX-RS endpoint.
+Note the use of CXF JAX-RS Clients in SpringBoot Application is covered in this section.
+Databases sudo docker container start mysql-container-id sudo docker exec -it mysql-container-name mysql -u root -p mysql&amp;gt; create database demo; mysql&amp;gt; USE demo; mysql&amp;gt; SET FOREIGN_KEY_CHECKS=0; mysql&amp;gt; DROP TABLE IF EXISTS `student`; mysql&amp;gt; CREATE TABLE `student` ( -&amp;gt; `id` int(10) NOT NULL, -&amp;gt; `name` varchar(100) DEFAULT NULL, -&amp;gt; `sex` char(6) DEFAULT NULL, -&amp;gt; `address` varchar(255) DEFAULT NULL, -&amp;gt; `age` int(10) DEFAULT NULL, -&amp;gt; PRIMARY KEY (`id`) -&amp;gt; ) ENGINE=InnoDB DEFAULT CHARSET=utf8; mysql&amp;gt; INSERT INTO `student` VALUES (&#39;1&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;22&#39;); Creating a project spring init -d=web,mybatis,mysql --build=maven mysite dependency  &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
+    </item>
+    
+    <item>
+      <title>Search Architecture</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/search-architecture/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/search-architecture/</guid>
+      <description>搜索服务使用说明 &#34;\nst=\u003estart: 开始\ne=\u003eend: 结束\n\nop1=\u003eoperation: 服务订阅\ncond1=\u003ec</description>
+    </item>
+    
+    <item>
+      <title>Python and Java Service</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/python-and-java-service/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/python-and-java-service/</guid>
+      <description>Python和Java服务器通信实现的理解和比较 Python的WSGI和Java的Servlet API Python的WSGI 最近在学习使用Pyt</description>
+    </item>
+    
+    <item>
+      <title>Scraping with Scrapy and Django Integration</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/scrapy-with-django/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/scrapy-with-django/</guid>
+      <description>Installing Dependencies (Optional) $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple $ python -m pip install --user virtualenv $ python -m pip install --user virtualenvwrapper $ vim ~/.bashrc export WORKON_HOME=$HOME/.virtualenvs export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv source $HOME/.local/bin/virtualenvwrapper.sh $ source ~/.bashrc $ mkvirtualenv stock-screener pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat Creating a Django Project $ django-admin startproject stock_screener $ cd stock_screener $ mkdir stock_screener/apps/basic_info $ django-admin startapp basic_info stock_screener/apps/basic_info $ mkdir stock_screener/apps/northbound $ django-admin startapp northbound stock_screener/apps/northbound $ mkdir stock_screener/apps/financial_metrics $ django-admin startapp financial_metrics stock_screener/apps/financial_metrics $ mkdir stock_screener/apps/quotes $ django-admin startapp quotes stock_screener/apps/quotes $ mkdir stock_screener/apps/jobs $ django-admin startapp jobs stock_screener/apps/jobs Cannot add backslash suffix when run startapp command.</description>
+    </item>
+    
+    <item>
+      <title>Django oauth2 provider</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/oauth2/</link>
+      <pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/oauth2/</guid>
+      <description>Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... &#39;provider&#39;, &#39;provider.oauth2&#39;, ) # urls.py url(r&#39;^oauth2/&#39;, include(&#39;provider.oauth2.urls&#39;, namespace = &#39;oauth2&#39;)), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ?   Create a client entry in your database
+To find out which type of client you need to create, read Section 2.1.
+To create a new entry simply use the Django admin panel.</description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch Tutorial</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/elasticsearch/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/elasticsearch/</guid>
+      <description>Getting Started Installing and Running Elasticsearch Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &amp;quot;localhost&amp;quot; elasticsearch.hosts: [&amp;quot;http://localhost:9200&amp;quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
+Installing Sense Sense is a Kibana app that provides an interactive console for submitting requests to Elasticsearch directly from your browser.</description>
+    </item>
+    
+    <item>
+      <title>microservices</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/microservices/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/microservices/</guid>
+      <description>第1章 微服务 1.1 什么是微服务 微服务就是一些协同工作的小而自治的服务 1.1.1 很小，专注于做好一件事 在一个单块系统内，通常会创建一些抽象层或者模块来保证</description>
+    </item>
+    
+    <item>
+      <title>Building Java Projects with Maven</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/spring-boot/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/spring-boot/</guid>
+      <description>Install Maven Maven is downloadable as a zip file at https://maven.apache.org/download.cgi.
+Once you have downloaded the zip file, unzip it to your computer. Then add the bin folder to your path.
+$ mvn -v Define a simple Maven build Maven projects are defined with an XML file named pom.xml. Create a file named pom.xml at the root of the project (i.e. put it next to the src folder) and give it the following contents:</description>
+    </item>
+    
+    <item>
+      <title>edx oauth</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/edx_oauth/</link>
+      <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/edx_oauth/</guid>
+      <description>Request URL: http://localhost:18381/api-auth/login/?next=/api/v1/courses/
+Query String Parameters: next: /api/v1/courses/
+Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18381/login/edx-oidc/?next=/api/v1/courses/
+Query String Parameters: next: /api/v1/courses/
+Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18000/oauth2/authorize/?redirect_uri=http://localhost:18381/complete/edx-oidc/&amp;amp;client_id=discovery-key&amp;amp;scope=openid+profile+email+permissions&amp;amp;response_type=code&amp;amp;state=W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x
+Query String Parameters:
+ redirect_uri: http://localhost:18381/complete/edx-oidc/ client_id: discovery-key scope: openid profile email permissions response_type: code state: W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x  Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18000/oauth2/authorize/confirm
+Request Method: GET</description>
+    </item>
+    
+    <item>
+      <title>Wagtail</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/wagtail/</link>
+      <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/wagtail/</guid>
+      <description>Getting started setting up a brand new Wagtail project $ pip install wagtail $ wagtail start mysite $ cd mysite $ pip install -r requirements.txt $ ./manage.py migrate $ ./manage.py createsuperuser $ ./manage.py runserver http://localhost:8000
+http://localhost:8000/admin/
+Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page.</description>
+    </item>
+    
+    <item>
+      <title>gRPC by Go</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/grpc/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/grpc/</guid>
+      <description>$ go version $ go get -u google.golang.org/grpc Install Protocol Buffers v3
+ download pre-compiled binaries for your platform(protoc-&amp;lt;version&amp;gt;-&amp;lt;platform&amp;gt;.zip) from here: https://github.com/google/protobuf/releases Unzip this file. Update the environment variable PATH to include the path to the protoc binary file.  $ go get -u github.com/golang/protobuf/protoc-gen-go $ export PATH=$PATH:$GOPATH/bin Build the example $ cd $GOPATH/src/google.golang.org/grpc/examples/helloworld </description>
+    </item>
+    
+    <item>
+      <title>JSON Web Tokens</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/jwt/</link>
+      <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/jwt/</guid>
+      <description>What is JSON Web Token? JSON Web Token (JWT) is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
+When should you use JSON Web Tokens? Here are some scenarios where JSON Web Tokens are useful:</description>
+    </item>
+    
+    <item>
+      <title>Concurrent-Programming-for-Scalable-Web-Architectures</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/</guid>
+      <description>Introduction Scope of this Thesis We will have a detailed look on concurrency in three distinct areas of web architectures&amp;ndash;connection handling, application logic and backend persistence. For each stage, we will discuss its main challenges and issues and explain existing approaches to tackle concurrency.
+Web Applications distinguish two separate types of web applications &amp;ndash; web sites and web services.
+Web Sites some popular types for web sites that are interesting in terms of scalability and concurrency</description>
+    </item>
+    
+    <item>
+      <title>distributed systems</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/distributed-systems/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/distributed-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>high concurrency</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/high-concurrency/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/high-concurrency/</guid>
+      <description>高并发 高并发其实挺容易的，当你明白了一万并发的原理，然后扩展到百万、千万、亿万级很easy 要点有如下几项： 1、垂直分层：DNS层、跨机房部署</description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/mysql/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/mysql/</guid>
+      <description>MySQL Shell Guide Connecting to and Disconnecting from the Server shell&amp;gt; mysql -h host -u user -p mysql&amp;gt; QUIT User Account Management Adding User Accounts shell&amp;gt; mysql --user=root --password mysql shell&amp;gt; mysql --u root -p mysql mysql&amp;gt; CREATE USER &#39;custom&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;localhost&#39; -&amp;gt; WITH GRANT OPTION; mysql&amp;gt; CREATE USER &#39;custom&#39;@&#39;%&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;%&#39; -&amp;gt; WITH GRANT OPTION; mysql&amp;gt; CREATE USER &#39;admin&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT RELOAD,PROCESS ON *.</description>
+    </item>
+    
+    <item>
+      <title>OpenID Connect</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/oidc/</link>
+      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/oidc/</guid>
+      <description>OpenID Connect References http://www.cnblogs.com/zhaojianwei/p/4667864.html
+https://github.com/edx/edx-oauth2-provider</description>
+    </item>
+    
+    <item>
+      <title>Kafka</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/kafka/</link>
+      <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/kafka/</guid>
+      <description>Quickstart &amp;gt; tar -xzf kafka_2.11-1.1.0.tgz &amp;gt; cd kafka_2.11-1.1.0 Start the server bin/zookeeper-server-start.sh config/zookeeper.properties bin/kafka-server-start.sh config/server.properties Create a topic bin/kaftopics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic my-topic bin/kafka-topics.sh --list --zookeeper localhost:2181 Send some messages bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning Python client for the Apache Kafka #!/usr/bin/env python3 import logging from kafka import KafkaProducer from kafka.errors import KafkaError import msgpack log = logging.getLogger(__name__) def send(): producer = KafkaProducer(bootstrap_servers=[&#39;localhost:9092&#39;], value_serializer=msgpack.</description>
+    </item>
+    
+  </channel>
+</rss>

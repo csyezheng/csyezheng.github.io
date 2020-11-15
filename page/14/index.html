@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.76.5" />
+<meta name="generator" content="Hugo 0.78.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-10-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,15 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/computer-and-network-security/web-application/back-end/elasticsearch/">Elasticsearch Tutorial</a>
+      <a class="post-link" href="/post/engineering-fundamentals/cpp/cmake/">CMake</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-05-15" class="post-time">
-        2019-05-15
+      <time datetime="2019-09-13" class="post-time">
+        2019-09-13
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -316,11 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Getting Started Installing and Running Elasticsearch Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
-Installing Sense Sense is a Kibana app that provides an interactive console for submitting requests to Elasticsearch directly from your browser.
+      如果工程存在多个目录,需要确保每个要管理的目录都存在一个 CMakeLists.txt． Set a name, version, and enable languages for the entire project. project(&lt;PROJECT-NAME&gt; [LANGUAGES] [&lt;language-name&gt;...]) Sets the name of the project and stores the name in the PROJECT_NAME
     </div>
     <div class="read-more">
-      <a href="/post/specialization/computer-and-network-security/web-application/back-end/elasticsearch/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/cpp/cmake/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,15 +330,15 @@ Installing Sense Sense is a Kibana app that provides an interactive console for 
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/big-data/elk-stack/">elk stack</a>
+      <a class="post-link" href="/post/engineering-fundamentals/cpp/tools/">C&#43;&#43; tools</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-05-15" class="post-time">
-        2019-05-15
+      <time datetime="2019-09-09" class="post-time">
+        2019-09-09
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/big-data/"> big-data </a>
+          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -351,12 +350,10 @@ Installing Sense Sense is a Kibana app that provides an interactive console for 
   <div class="post-content">
     
     <div class="post-summary">
-      Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
-Install Beats Install Filebeat Install Metricbeat sudo pacman -S metricbeat sudo vim /etc/metricbeat/metricbeat.yml setup.dashboards.enabled: true From the Metricbeat install directory, enable the system module
-cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricbeat.
+      Tools clang-format 格式化c++代码，同类工具还有astyle。保持代码风格统一是个好习惯。 qt creator vs以外我觉得最好用的c++ ide，代码补全质量高（基于li
     </div>
     <div class="read-more">
-      <a href="/post/specialization/big-data/elk-stack/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/cpp/tools/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -367,15 +364,15 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/computer-and-network-security/web-application/back-end/microservices/">microservices</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/machine-learning/kaggle/">kaggle</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-04-20" class="post-time">
-        2019-04-20
+      <time datetime="2019-08-25" class="post-time">
+        2019-08-25
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          <a href="http://csyezheng.github.io/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -387,10 +384,18 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
   <div class="post-content">
     
     <div class="post-summary">
-      第1章 微服务 1.1 什么是微服务 微服务就是一些协同工作的小而自治的服务 1.1.1 很小，专注于做好一件事 在一个单块系统内，通常会创建一些抽象层或者模块来保证
+      https://www.kaggle.com/stackoverflow/statsquestions
+https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
+https://developer.ibm.com/exchanges/models/all/max-toxic-comment-classifier/
+https://www.quora.com/Is-binary-relevance-same-as-one-vs-all
+https://stackoverflow.com/questions/44674847/what-are-the-differences-between-all-these-cross-entropy-losses-in-keras-and-ten
+https://vict0rs.ch/2018/06/17/multilabel-text-classification-tensorflow/
+https://github.com/tensorflow/skflow/issues/113
+https://towardsdatascience.com/journey-to-the-center-of-multi-label-classification-384c40229bff
+https://www.reddit.com/r/MLQuestions/comments/5n82zb/loss_function_for_sparse_multilabel_classification/
     </div>
     <div class="read-more">
-      <a href="/post/specialization/computer-and-network-security/web-application/back-end/microservices/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/machine-learning/kaggle/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1233,6 +1238,90 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/15/">»</a></li>
@@ -1240,7 +1329,7 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
 
       
       
-      <li><a href="/page/33/">»»</a></li>
+      <li><a href="/page/37/">»»</a></li>
       
 
       </ul>

@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.76.5" />
+<meta name="generator" content="Hugo 0.78.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-10-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,15 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/computer-and-network-security/web-application/front-end/jquery/">jQuery Tutorial</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/postgresql/">PostgreSQL</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2016-02-17" class="post-time">
-        2016-02-17
+      <time datetime="2017-09-30" class="post-time">
+        2017-09-30
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/front-end/"> front-end </a>
+          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -316,10 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      jQuery Get Started Downloading jQuery &lt;head&gt; &lt;script src=&quot;jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt; &lt;/head&gt; jQuery CDN &lt;head&gt; &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt; &lt;/head&gt; &lt;head&gt; &lt;script src=&quot;https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt; &lt;/head&gt; jQuery Syntax Basic syntax is: $(selector).action() // Examples: $(this).hide() // hides the current element. $(&quot;p&quot;).hide() // hides all &lt;p&gt; elements. $(&quot;.test&quot;).hide() // hides all elements with class=&quot;test&quot;. $(&quot;#test&quot;).hide() // hides the element with id=&quot;test&quot;. $(document).ready(function(){ // all jQuery methods inside a document ready event to prevent // any jQuery code from
+      Installing PostgreSQL $ sudo pacman -S postgresql $ sudo -u postgres -i [postgres]$ initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data' [postgres]$ exit $ pg_ctl -D /var/lib/postgres/data -l logfile start $ systemctl start postgresql.service $ systemctl enable postgresql.service Create your first database/user Access the database shell $ [postgres]$ psql -d myDatabaseName \help \c &lt;database&gt; \du # list all users and their permission levels \dt # show summary information about all tables \q \?
     </div>
     <div class="read-more">
-      <a href="/post/specialization/computer-and-network-security/web-application/front-end/jquery/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/postgresql/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,15 +330,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/computer-and-network-security/web-application/front-end/dom/">DOM</a>
+      <a class="post-link" href="/post/any-path/post-installation-for-archlinux/">Post-installation for archlinux</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2016-02-01" class="post-time">
-        2016-02-01
+      <time datetime="2017-09-26" class="post-time">
+        2017-09-26
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/front-end/"> front-end </a>
+          <a href="http://csyezheng.github.io/categories/any-path/"> any-path </a>
           
         </div>
       
@@ -350,10 +350,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      所有 HTML 元素被定义为对象，而编程接口则是对象方法和对象属性。 方法是您能够执行的动作（比如添加或修改元素）。 属性是您能够获取或设置的值（比如节点
+      Reboot into the new system Set the keyboard layout and Console fonts If you have the 4K display, console fonts will be extremely small.
+$ setfont sun12x22 Connect to the internet nmcli device wifi list nmcli device wifi connect TP-LINK_GZS password a3628436 ping baidu.com Unofficial user repositories sudo vim /etc/pacman.conf [archlinuxcn] Server = https://repo.archlinuxcn.org/$arch Adding unofficial keys
+sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman -S adobe-source-han-sans-cn-fonts sudo pacman -S adobe-source-han-sans-tw-fonts sudo pacman -S noto-fonts-emoji otf-latinmodern-math ttf-inconsolata Graphical user interface Display server sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight xorg-xrdb is using to loading a user-level configuration dotfile, typically located at ~/.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/computer-and-network-security/web-application/front-end/dom/" class="read-more-link">Read more</a>
+      <a href="/post/any-path/post-installation-for-archlinux/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -364,15 +366,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/computer-and-network-security/web-application/front-end/getting-started-with-the-web/">Getting started with the Web</a>
+      <a class="post-link" href="/post/any-path/setup-a-archlinux-windows10-dual-booting-system/">Setup a Archlinux / Windows10 dual booting system</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2015-12-01" class="post-time">
-        2015-12-01
+      <time datetime="2017-09-25" class="post-time">
+        2017-09-25
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/front-end/"> front-end </a>
+          <a href="http://csyezheng.github.io/categories/any-path/"> any-path </a>
           
         </div>
       
@@ -384,11 +386,15 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Naming name folders and files completely in lowercase with no spaces. This is because:
- Many computers, particularly web servers, are case-sensitive. Browsers, web servers, and programming languages do not handle spaces consistently. It&rsquo;s better to separate words with dashes, rather than underscores: my-file.html vs. my_file.html.  The short answer is that you should use a hyphen for your file names. The Google search engine treats a hyphen as a word separator but does not regard an underscore that way.
+      Before   Check the hardware, three disks on my Lenovo ThinkPad P50
+  Samsung SSD 970 EVO Plus 250GB for installing windows
+  Samsung SSD 960 EVO 250GB for installling archlinux
+  WDC WD5000LPLX-0 HHD 500GB for data storage
+    Disable Windows Fast Startup if start from windows
+  Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)
     </div>
     <div class="read-more">
-      <a href="/post/specialization/computer-and-network-security/web-application/front-end/getting-started-with-the-web/" class="read-more-link">Read more</a>
+      <a href="/post/any-path/setup-a-archlinux-windows10-dual-booting-system/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -905,8 +911,6 @@
 
             
             
-              
-            
 
           
           
@@ -915,12 +919,6 @@
         
 
         
-        
-          <li class="">
-            <a href="/page/21/">
-              21
-            </a>
-          </li>
         
 
       
@@ -936,8 +934,6 @@
 
             
             
-              
-            
 
           
           
@@ -946,12 +942,6 @@
         
 
         
-        
-          <li class="">
-            <a href="/page/22/">
-              22
-            </a>
-          </li>
         
 
       
@@ -967,8 +957,6 @@
 
             
             
-              
-            
 
           
           
@@ -977,12 +965,6 @@
         
 
         
-        
-          <li class="">
-            <a href="/page/23/">
-              23
-            </a>
-          </li>
         
 
       
@@ -998,8 +980,6 @@
 
             
             
-              
-            
 
           
           
@@ -1008,12 +988,6 @@
         
 
         
-        
-          <li class="">
-            <a href="/page/24/">
-              24
-            </a>
-          </li>
         
 
       
@@ -1297,6 +1271,130 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/34/">
+              34
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/35/">
+              35
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/36/">
+              36
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/37/">
+              37
+            </a>
+          </li>
+        
+
+      
+
       
       
       <li><a href="/page/33/">»</a></li>
@@ -1304,7 +1402,7 @@
 
       
       
-      <li><a href="/page/33/">»»</a></li>
+      <li><a href="/page/37/">»»</a></li>
       
 
       </ul>

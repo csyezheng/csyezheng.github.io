@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 02 Nov 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/cms/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wagtail</title>
-      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/wagtail/</link>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/wagtail/</link>
       <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/wagtail/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/wagtail/</guid>
       <description>Getting started setting up a brand new Wagtail project $ pip install wagtail $ wagtail start mysite $ cd mysite $ pip install -r requirements.txt $ ./manage.py migrate $ ./manage.py createsuperuser $ ./manage.py runserver http://localhost:8000
 http://localhost:8000/admin/
 Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page.</description>

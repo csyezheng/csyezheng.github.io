@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 15 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/maven/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>maven</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/maven/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/java/maven/</link>
       <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/maven/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/java/maven/</guid>
       <description>Introduction to the Build Lifecycle Build Lifecycle Basics Maven is based around the central concept of a build lifecycle. What this means is that the process for building and distributing a particular artifact (project) is clearly defined.
 There are three built-in build lifecycles: default, clean and site. The default lifecycle handles your project deployment, the clean lifecycle handles project cleaning, while the site lifecycle handles the creation of your project&amp;rsquo;s site documentation.</description>
     </item>

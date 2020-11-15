@@ -9,10 +9,10 @@
     <lastBuildDate>Sun, 26 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/oauth2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Django oauth2 provider</title>
-      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/oauth2/</link>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/oauth2/</link>
       <pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/oauth2/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/oauth2/</guid>
       <description>Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... &#39;provider&#39;, &#39;provider.oauth2&#39;, ) # urls.py url(r&#39;^oauth2/&#39;, include(&#39;provider.oauth2.urls&#39;, namespace = &#39;oauth2&#39;)), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ?   Create a client entry in your database
 To find out which type of client you need to create, read Section 2.1.
 To create a new entry simply use the Django admin panel.</description>

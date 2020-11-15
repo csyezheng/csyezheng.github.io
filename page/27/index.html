@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.76.5" />
+<meta name="generator" content="Hugo 0.78.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-10-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,15 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/other/thinking/thinking/">Programming Thinking</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/edx_oauth/">edx oauth</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-08-15" class="post-time">
-        2018-08-15
+      <time datetime="2018-11-22" class="post-time">
+        2018-11-22
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/thinking/"> Thinking </a>
+          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -316,10 +316,23 @@
   <div class="post-content">
     
     <div class="post-summary">
-      基类的派生类的派生类需要做某些改动时，追溯到基类的一个虚函数做改动才能实现时，可以在此派生类中重写同名函数进行覆盖而不是继承这个虚函数，先拷
+      Request URL: http://localhost:18381/api-auth/login/?next=/api/v1/courses/
+Query String Parameters: next: /api/v1/courses/
+Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18381/login/edx-oidc/?next=/api/v1/courses/
+Query String Parameters: next: /api/v1/courses/
+Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18000/oauth2/authorize/?redirect_uri=http://localhost:18381/complete/edx-oidc/&amp;client_id=discovery-key&amp;scope=openid+profile+email+permissions&amp;response_type=code&amp;state=W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x
+Query String Parameters:
+ redirect_uri: http://localhost:18381/complete/edx-oidc/ client_id: discovery-key scope: openid profile email permissions response_type: code state: W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x  Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18000/oauth2/authorize/confirm
+Request Method: GET
     </div>
     <div class="read-more">
-      <a href="/post/other/thinking/thinking/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/edx_oauth/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,15 +343,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/computer-and-network-security/web-application/back-end/kafka/">Kafka</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/wagtail/">Wagtail</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-07-23" class="post-time">
-        2018-07-23
+      <time datetime="2018-11-02" class="post-time">
+        2018-11-02
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -350,10 +363,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Quickstart &gt; tar -xzf kafka_2.11-1.1.0.tgz &gt; cd kafka_2.11-1.1.0 Start the server bin/zookeeper-server-start.sh config/zookeeper.properties bin/kafka-server-start.sh config/server.properties Create a topic bin/kaftopics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic my-topic bin/kafka-topics.sh --list --zookeeper localhost:2181 Send some messages bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning Python client for the Apache Kafka #!/usr/bin/env python3 import logging from kafka import KafkaProducer from kafka.errors import KafkaError import msgpack log = logging.getLogger(__name__) def send(): producer = KafkaProducer(bootstrap_servers=['localhost:9092'], value_serializer=msgpack.
+      Getting started setting up a brand new Wagtail project $ pip install wagtail $ wagtail start mysite $ cd mysite $ pip install -r requirements.txt $ ./manage.py migrate $ ./manage.py createsuperuser $ ./manage.py runserver http://localhost:8000
+http://localhost:8000/admin/
+Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/computer-and-network-security/web-application/back-end/kafka/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/wagtail/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -364,15 +379,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/artificial-intelligence/deep-learning/keras/">keras</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/grpc/">gRPC by Go</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-03-26" class="post-time">
-        2018-03-26
+      <time datetime="2018-10-13" class="post-time">
+        2018-10-13
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/deep-learning/"> deep-learning </a>
+          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -384,10 +399,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Keras import tensorflow as tf from tensorflow import keras 
+      $ go version $ go get -u google.golang.org/grpc Install Protocol Buffers v3
+ download pre-compiled binaries for your platform(protoc-&lt;version&gt;-&lt;platform&gt;.zip) from here: https://github.com/google/protobuf/releases Unzip this file. Update the environment variable PATH to include the path to the protoc binary file.  $ go get -u github.com/golang/protobuf/protoc-gen-go $ export PATH=$PATH:$GOPATH/bin Build the example $ cd $GOPATH/src/google.golang.org/grpc/examples/helloworld 
     </div>
     <div class="read-more">
-      <a href="/post/specialization/artificial-intelligence/deep-learning/keras/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/grpc/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -443,9 +459,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -466,9 +480,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -489,9 +501,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -512,9 +522,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -535,9 +543,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -558,9 +564,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -581,9 +585,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -604,9 +606,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -627,9 +627,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -650,9 +648,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -673,9 +669,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -696,9 +690,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -719,9 +711,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -742,9 +732,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -765,9 +753,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -788,9 +774,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -811,9 +795,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -834,9 +816,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -857,9 +837,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -880,9 +858,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -902,12 +878,10 @@
           
           
 
-            
             
               
             
 
-          
           
 
         
@@ -934,11 +908,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -965,11 +937,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -996,11 +966,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1027,11 +995,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1058,11 +1024,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1089,11 +1053,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1120,11 +1082,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1151,11 +1111,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1182,11 +1140,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1213,11 +1169,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1244,11 +1198,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1275,11 +1227,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1296,6 +1246,90 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/28/">»</a></li>
@@ -1303,7 +1337,7 @@
 
       
       
-      <li><a href="/page/33/">»»</a></li>
+      <li><a href="/page/37/">»»</a></li>
       
 
       </ul>

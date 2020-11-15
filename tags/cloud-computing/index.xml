@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cloud-computing on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/cloud-computing/</link>
+    <description>Recent content in cloud-computing on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 27 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/cloud-computing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Computing</title>
+      <link>http://csyezheng.github.io/post/specialization/cloud-computing/15-319/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/cloud-computing/15-319/</guid>
+      <description>Introduction and Course Logistics Data Analytics Big Data Analytics Elasticity and Auto Scaling Containers and Kubernetes Serverless Computing and Functions-as-a-Service Flat Files and Databases &amp;amp; Team Project Social Network, Heterogenous Storage and DBaaS &amp;amp; Team Project Replication and Consistency and Team Project Phase 1 Team Project Phase 1 Iterative Batch Processing in Spark and Team Project Phase 2 Team Project Phase 2 and Live Test Machine Learning on the Cloud and Team Project Phase 3 Team Project Phase 3 and Live Test Stream Processing with Kafka &amp;amp; Samza Reference  https://www.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prometheus on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/prometheus/</link>
+    <description>Recent content in Prometheus on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/prometheus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prometheus</title>
+      <link>http://csyezheng.github.io/post/specialization/devops/prometheus/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/devops/prometheus/</guid>
+      <description>Prometheus 入门与实践 吴 莉, 殷 一鸣, 和 蔡 林 2018 年 5 月 30 日发布 随着容器技术的迅速发展，Kubernetes 已然成为大家追捧的容器集群管理系统。Promet</description>
+    </item>
+    
+  </channel>
+</rss>

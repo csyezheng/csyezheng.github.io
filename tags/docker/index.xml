@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/docker/</link>
+    <description>Recent content in Docker on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 25 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker</title>
+      <link>http://csyezheng.github.io/post/specialization/devops/docker/</link>
+      <pubDate>Thu, 25 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/devops/docker/</guid>
+      <description>Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&amp;ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&amp;ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker add your user to the docker group.</description>
+    </item>
+    
+  </channel>
+</rss>

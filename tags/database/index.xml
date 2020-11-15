@@ -9,19 +9,19 @@
     <lastBuildDate>Sun, 26 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MySQL</title>
-      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/mysql/</link>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/mysql/</link>
       <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/mysql/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/mysql/</guid>
       <description>MySQL Shell Guide Connecting to and Disconnecting from the Server shell&amp;gt; mysql -h host -u user -p mysql&amp;gt; QUIT User Account Management Adding User Accounts shell&amp;gt; mysql --user=root --password mysql shell&amp;gt; mysql --u root -p mysql mysql&amp;gt; CREATE USER &#39;custom&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;localhost&#39; -&amp;gt; WITH GRANT OPTION; mysql&amp;gt; CREATE USER &#39;custom&#39;@&#39;%&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;%&#39; -&amp;gt; WITH GRANT OPTION; mysql&amp;gt; CREATE USER &#39;admin&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT RELOAD,PROCESS ON *.</description>
     </item>
     
     <item>
       <title>PostgreSQL</title>
-      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/postgresql/</link>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/postgresql/</link>
       <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/postgresql/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/postgresql/</guid>
       <description>Installing PostgreSQL $ sudo pacman -S postgresql $ sudo -u postgres -i [postgres]$ initdb --locale $LANG -E UTF8 -D &#39;/var/lib/postgres/data&#39; [postgres]$ exit $ pg_ctl -D /var/lib/postgres/data -l logfile start $ systemctl start postgresql.service $ systemctl enable postgresql.service Create your first database/user Access the database shell $ [postgres]$ psql -d myDatabaseName \help \c &amp;lt;database&amp;gt; \du # list all users and their permission levels \dt # show summary information about all tables \q \?</description>
     </item>
     

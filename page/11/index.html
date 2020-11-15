@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.76.5" />
+<meta name="generator" content="Hugo 0.78.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-10-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,16 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/programming-languages/cpp/cpp-library-management/">C&#43;&#43; Library Management</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/">Few shot learning</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-09-16" class="post-time">
-        2019-09-16
+      <time datetime="2020-04-27" class="post-time">
+        2020-04-27
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/cpp/"> cpp </a>
+          <a href="http://csyezheng.github.io/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -317,11 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      In general, you are going to have to end up with
- Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&rsquo;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).
+      Reference  https://github.com/AnthonyMRios/multi-label-zero-shot Few-Shot and Zero-Shot Multi-Label Learning for Structured Label Spaces Deep Neural Networks for Multi-Label Text Classification https://github.com/YujiaBao/Distributional-Signatures Induction Networks for Few-Shot Text Classification https://github.com/laohur/LearnToCompareText  
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/programming-languages/cpp/cpp-library-management/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -332,16 +330,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/programming-languages/cpp/curl/">libcurl</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/machine-learning/learn-ml/">Learning Path for Machine Learning</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-09-16" class="post-time">
-        2019-09-16
+      <time datetime="2020-04-27" class="post-time">
+        2020-04-27
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/cpp/"> cpp </a>
+          <a href="http://csyezheng.github.io/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -353,11 +350,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      #include &lt;curl/curl.h&gt; When using an external library you must link with it:
-$ g++ main.cpp -lcurl 
+      Learning Path for Machine Learning Basics of machine learning with TensorFlow Step 1: Understand what ML is all about The book ‘Deep Learning in Python’ by Francois Chollet, creator of Keras, is a great place to get started. Read chapters 1-4 to understand the fundamentals of ML from a programmer’s perspective.
+Google Developers Machine Learning Crash Course
+Machine Learning Glossary
+Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which takes you beyond the basics into introductory Computer Vision, NLP, and Sequence modelling.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/programming-languages/cpp/curl/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/machine-learning/learn-ml/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -368,16 +367,15 @@ $ g++ main.cpp -lcurl
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/programming-languages/cpp/3rd-libraries/">C&#43;&#43; 3rd party libraries</a>
+      <a class="post-link" href="/post/any-path/wireshark/">Wireshark</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-09-15" class="post-time">
-        2019-09-15
+      <time datetime="2020-03-07" class="post-time">
+        2020-03-07
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/cpp/"> Cpp </a>
+          <a href="http://csyezheng.github.io/categories/any-path/"> any-path </a>
           
         </div>
       
@@ -389,10 +387,10 @@ $ g++ main.cpp -lcurl
   <div class="post-content">
     
     <div class="post-summary">
-      grpc/libevent/libev/libasio 实现高性能网络服务器 protobuf 数据结构序列化/反序列化，方便数据交换 LevelDB/RocksDB 嵌入式KV数据库 snappy/zlib/lz4 数据压缩，解压缩 jemalloc/tcmalloc 高效内存分配器，尤其多线程场景 jerasure Reed Sol
+      $ tshark -r all.pcapng.gz -i http==1 -O http -T fields -e http.request.method -e http.request.uri -e http.request.line -e http.response.line &gt; dump.txt 
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/programming-languages/cpp/3rd-libraries/" class="read-more-link">Read more</a>
+      <a href="/post/any-path/wireshark/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1235,6 +1233,90 @@ $ g++ main.cpp -lcurl
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/12/">»</a></li>
@@ -1242,7 +1324,7 @@ $ g++ main.cpp -lcurl
 
       
       
-      <li><a href="/page/33/">»»</a></li>
+      <li><a href="/page/37/">»»</a></li>
       
 
       </ul>

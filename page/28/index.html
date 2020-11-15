@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.76.5" />
+<meta name="generator" content="Hugo 0.78.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-10-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,15 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/computer-and-network-security/web-application/back-end/make-a-web-site/">MAKE A WEBSITE</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/jwt/">JSON Web Tokens</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-03-18" class="post-time">
-        2018-03-18
+      <time datetime="2018-10-09" class="post-time">
+        2018-10-09
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -316,10 +316,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      GET A DOMAIN &amp; WEB HOSTING Register a domain name Namesilo Create New Account csyezheng csye3631 SEARCH Domain and REGISTER NameServers：域名解析服务器设置，未确定的可以等稍后在后台设置也一样； Auto-Renew
+      What is JSON Web Token? JSON Web Token (JWT) is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
+When should you use JSON Web Tokens? Here are some scenarios where JSON Web Tokens are useful:
     </div>
     <div class="read-more">
-      <a href="/post/specialization/computer-and-network-security/web-application/back-end/make-a-web-site/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/jwt/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,15 +331,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/computer-and-network-security/web-application/back-end/postgresql/">PostgreSQL</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/">Concurrent-Programming-for-Scalable-Web-Architectures</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-09-30" class="post-time">
-        2017-09-30
+      <time datetime="2018-08-26" class="post-time">
+        2018-08-26
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/back-end/"> back-end </a>
+          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -350,10 +351,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Installing PostgreSQL $ sudo pacman -S postgresql $ sudo -u postgres -i [postgres]$ initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data' [postgres]$ exit $ pg_ctl -D /var/lib/postgres/data -l logfile start $ systemctl start postgresql.service $ systemctl enable postgresql.service Create your first database/user Access the database shell $ [postgres]$ psql -d myDatabaseName \help \c &lt;database&gt; \du # list all users and their permission levels \dt # show summary information about all tables \q \?
+      Introduction Scope of this Thesis We will have a detailed look on concurrency in three distinct areas of web architectures&ndash;connection handling, application logic and backend persistence. For each stage, we will discuss its main challenges and issues and explain existing approaches to tackle concurrency.
+Web Applications distinguish two separate types of web applications &ndash; web sites and web services.
+Web Sites some popular types for web sites that are interesting in terms of scalability and concurrency
     </div>
     <div class="read-more">
-      <a href="/post/specialization/computer-and-network-security/web-application/back-end/postgresql/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -364,15 +367,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/any-path/post-installation-for-archlinux/">Post-installation for archlinux</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/distributed-systems/">distributed systems</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-09-26" class="post-time">
-        2017-09-26
+      <time datetime="2018-08-26" class="post-time">
+        2018-08-26
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/any-path/"> any-path </a>
+          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -384,12 +387,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Reboot into the new system Set the keyboard layout and Console fonts If you have the 4K display, console fonts will be extremely small.
-$ setfont sun12x22 Connect to the internet nmcli device wifi list nmcli device wifi connect TP-LINK_GZS password a3628436 ping baidu.com Unofficial user repositories sudo vim /etc/pacman.conf [archlinuxcn] Server = https://repo.archlinuxcn.org/$arch Adding unofficial keys
-sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman -S adobe-source-han-sans-cn-fonts sudo pacman -S adobe-source-han-sans-tw-fonts sudo pacman -S noto-fonts-emoji otf-latinmodern-math ttf-inconsolata Graphical user interface Display server sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight xorg-xrdb is using to loading a user-level configuration dotfile, typically located at ~/.
+      
     </div>
     <div class="read-more">
-      <a href="/post/any-path/post-installation-for-archlinux/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/distributed-systems/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -445,9 +446,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -468,9 +467,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -491,9 +488,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -514,9 +509,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -537,9 +530,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -560,9 +551,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -583,9 +572,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -606,9 +593,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -629,9 +614,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -652,9 +635,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -675,9 +656,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -698,9 +677,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -721,9 +698,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -744,9 +719,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -767,9 +740,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -790,9 +761,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -813,9 +782,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -836,9 +803,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -859,9 +824,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -882,9 +845,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
 
-          
           
 
         
@@ -905,42 +866,30 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
             
               
             
 
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/21/">
-              21
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
           
 
         
@@ -967,11 +916,9 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
               
             
 
-          
           
 
         
@@ -998,11 +945,9 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1029,11 +974,9 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1060,11 +1003,9 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1091,11 +1032,9 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1122,11 +1061,9 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1153,11 +1090,9 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1184,11 +1119,9 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1215,11 +1148,9 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1246,11 +1177,9 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1277,11 +1206,9 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1298,6 +1225,98 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/34/">
+              34
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/29/">»</a></li>
@@ -1305,7 +1324,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
 
       
       
-      <li><a href="/page/33/">»»</a></li>
+      <li><a href="/page/37/">»»</a></li>
       
 
       </ul>

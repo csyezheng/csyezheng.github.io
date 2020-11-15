@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Prometheus - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="Prometheus 入门与实践 吴 莉, 殷 一鸣, 和 蔡 林 2018 年 5 月 30 日发布 随着容器技术的迅速发展，Kubernetes 已然成为大家追捧的容器集群管理系统。Promet" />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.78.1" />
+
+
+<link rel="canonical" href="http://csyezheng.github.io/post/specialization/devops/prometheus/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="Prometheus" />
+<meta property="og:description" content="Prometheus 入门与实践 吴 莉, 殷 一鸣, 和 蔡 林 2018 年 5 月 30 日发布 随着容器技术的迅速发展，Kubernetes 已然成为大家追捧的容器集群管理系统。Promet" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://csyezheng.github.io/post/specialization/devops/prometheus/" />
+<meta property="article:published_time" content="2020-06-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-25T00:00:00+00:00" />
+<meta itemprop="name" content="Prometheus">
+<meta itemprop="description" content="Prometheus 入门与实践 吴 莉, 殷 一鸣, 和 蔡 林 2018 年 5 月 30 日发布 随着容器技术的迅速发展，Kubernetes 已然成为大家追捧的容器集群管理系统。Promet">
+<meta itemprop="datePublished" content="2020-06-25T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-06-25T00:00:00+00:00" />
+<meta itemprop="wordCount" content="5005">
+
+
+
+<meta itemprop="keywords" content="DevOps,monitoring,Prometheus," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Prometheus"/>
+<meta name="twitter:description" content="Prometheus 入门与实践 吴 莉, 殷 一鸣, 和 蔡 林 2018 年 5 月 30 日发布 随着容器技术的迅速发展，Kubernetes 已然成为大家追捧的容器集群管理系统。Promet"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Prometheus</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-06-25" class="post-time">
+          2020-06-25
+        </time>
+        <div class="post-category">
+            <a href="http://csyezheng.github.io/categories/devops/"> devops </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#prometheus-简介">Prometheus 简介</a></li>
+    <li><a href="#prometheus-组成及架构">Prometheus 组成及架构</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#prometheus-相关概念">Prometheus 相关概念</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#node-exporter-安装">Node exporter 安装</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#prometheus-安装和配置">Prometheus 安装和配置</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#alertmanager-安装和配置">Alertmanager 安装和配置</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#prometheus-实例演示">Prometheus 实例演示</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#总结">总结</a></li>
+    <li><a href="#参考资源">参考资源</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h1 id="prometheus-入门与实践">Prometheus 入门与实践</h1>
+<p>吴 莉, 殷 一鸣, 和 蔡 林
+2018 年 5 月 30 日发布</p>
+<p>随着容器技术的迅速发展，Kubernetes 已然成为大家追捧的容器集群管理系统。Prometheus 作为生态圈 Cloud Native Computing Foundation（简称：CNCF）中的重要一员,其活跃度仅次于 Kubernetes, 现已广泛用于 Kubernetes 集群的监控系统中。本文将简要介绍 Prometheus 的组成和相关概念，并实例演示 Prometheus 的安装，配置及使用，以便开发人员和云平台运维人员可以快速的掌握 Prometheus。</p>
+<h2 id="prometheus-简介">Prometheus 简介</h2>
+<p>Prometheus 是一套开源的系统监控报警框架。它启发于 Google 的 borgmon 监控系统，由工作在 SoundCloud 的 google 前员工在 2012 年创建，作为社区开源项目进行开发，并于 2015 年正式发布。2016 年，Prometheus 正式加入 Cloud Native Computing Foundation，成为受欢迎度仅次于 Kubernetes 的项目。</p>
+<p>作为新一代的监控框架，Prometheus 具有以下特点：</p>
+<ul>
+<li>
+<p>强大的多维度数据模型：</p>
+<ol>
+<li>时间序列数据通过 metric 名和键值对来区分。</li>
+<li>所有的 metrics 都可以设置任意的多维标签。</li>
+<li>数据模型更随意，不需要刻意设置为以点分隔的字符串。</li>
+<li>可以对数据模型进行聚合，切割和切片操作。</li>
+<li>支持双精度浮点类型，标签可以设为全 unicode。</li>
+</ol>
+</li>
+<li>
+<p>灵活而强大的查询语句（PromQL）：在同一个查询语句，可以对多个 metrics 进行乘法、加法、连接、取分数位等操作。</p>
+</li>
+<li>
+<p>易于管理： Prometheus server 是一个单独的二进制文件，可直接在本地工作，不依赖于分布式存储。</p>
+</li>
+<li>
+<p>高效：平均每个采样点仅占 3.5 bytes，且一个 Prometheus server 可以处理数百万的 metrics。</p>
+</li>
+<li>
+<p>使用 pull 模式采集时间序列数据，这样不仅有利于本机测试而且可以避免有问题的服务器推送坏的 metrics。</p>
+</li>
+<li>
+<p>可以采用 push gateway 的方式把时间序列数据推送至 Prometheus server 端。</p>
+</li>
+<li>
+<p>可以通过服务发现或者静态配置去获取监控的 targets。</p>
+</li>
+<li>
+<p>有多种可视化图形界面。</p>
+</li>
+<li>
+<p>易于伸缩。</p>
+</li>
+</ul>
+<p>需要指出的是，由于数据采集可能会有丢失，所以 Prometheus 不适用对采集数据要 100% 准确的情形。但如果用于记录时间序列数据，Prometheus 具有很大的查询优势，此外，Prometheus 适用于微服务的体系架构。</p>
+<h2 id="prometheus-组成及架构">Prometheus 组成及架构</h2>
+<p>Prometheus 生态圈中包含了多个组件，其中许多组件是可选的：</p>
+<ul>
+<li><strong>Prometheus Server</strong>: 用于收集和存储时间序列数据。</li>
+<li><strong>Client Library</strong>: 客户端库，为需要监控的服务生成相应的 metrics 并暴露给 Prometheus server。当 Prometheus server 来 pull 时，直接返回实时状态的 metrics。</li>
+<li><strong>Push Gateway</strong>: 主要用于短期的 jobs。由于这类 jobs 存在时间较短，可能在 Prometheus 来 pull 之前就消失了。为此，这次 jobs 可以直接向 Prometheus server 端推送它们的 metrics。这种方式主要用于服务层面的 metrics，对于机器层面的 metrices，需要使用 node exporter。</li>
+<li><strong>Exporters</strong>: 用于暴露已有的第三方服务的 metrics 给 Prometheus。</li>
+<li><strong>Alertmanager</strong>: 从 Prometheus server 端接收到 alerts 后，会进行去除重复数据，分组，并路由到对收的接受方式，发出报警。常见的接收方式有：电子邮件，pagerduty，OpsGenie, webhook 等。</li>
+<li>一些其他的工具。</li>
+</ul>
+<p>图 1 为 Prometheus 官方文档中的架构图：</p>
+<h5 id="图-1-prometheus-架构图">图 1. Prometheus 架构图</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image001.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N100B0">点击查看大图</a></p>
+<p>从上图可以看出，Prometheus 的主要模块包括：Prometheus server, exporters, Pushgateway, PromQL, Alertmanager 以及图形界面。</p>
+<p>其大概的工作流程是：</p>
+<ol>
+<li>Prometheus server 定期从配置好的 jobs 或者 exporters 中拉 metrics，或者接收来自 Pushgateway 发过来的 metrics，或者从其他的 Prometheus server 中拉 metrics。</li>
+<li>Prometheus server 在本地存储收集到的 metrics，并运行已定义好的 alert.rules，记录新的时间序列或者向 Alertmanager 推送警报。</li>
+<li>Alertmanager 根据配置文件，对接收到的警报进行处理，发出告警。</li>
+<li>在图形界面中，可视化采集数据。</li>
+</ol>
+<h2 id="prometheus-相关概念">Prometheus 相关概念</h2>
+<p>下面将对 Prometheus 中的数据模型，metric 类型以及 instance 和 job 等概念进行介绍，以便读者在 Prometheus 的配置和使用中可以有一个更好的理解。</p>
+<p><strong>数据模型</strong></p>
+<p>Prometheus 中存储的数据为时间序列，是由 metric 的名字和一系列的标签（键值对）唯一标识的，不同的标签则代表不同的时间序列。</p>
+<ul>
+<li>metric 名字：该名字应该具有语义，一般用于表示 metric 的功能，例如：http_requests_total, 表示 http 请求的总数。其中，metric 名字由 ASCII 字符，数字，下划线，以及冒号组成，且必须满足正则表达式 [a-zA-Z_:][a-zA-Z0-9_:]*。</li>
+<li>标签：使同一个时间序列有了不同维度的识别。例如 http_requests_total{method=&ldquo;Get&rdquo;} 表示所有 http 请求中的 Get 请求。当 method=&ldquo;post&rdquo; 时，则为新的一个 metric。标签中的键由 ASCII 字符，数字，以及下划线组成，且必须满足正则表达式 [a-zA-Z_:][a-zA-Z0-9_:]*。</li>
+<li>样本：实际的时间序列，每个序列包括一个 float64 的值和一个毫秒级的时间戳。</li>
+<li>格式：<!-- raw HTML omitted -->{<!-- raw HTML omitted -->=<!-- raw HTML omitted -->, …}，例如：http_requests_total{method=&ldquo;POST&rdquo;,endpoint=&quot;/api/tracks&quot;}。</li>
+</ul>
+<p><strong>四种 Metric 类型</strong></p>
+<p>Prometheus 客户端库主要提供四种主要的 metric 类型：</p>
+<p><strong>Counter</strong></p>
+<ul>
+<li>一种累加的 metric，典型的应用如：请求的个数，结束的任务数， 出现的错误数等等。</li>
+</ul>
+<p>例如，查询 http_requests_total{method=&ldquo;get&rdquo;, job=&ldquo;Prometheus&rdquo;, handler=&ldquo;query&rdquo;} 返回 8，10 秒后，再次查询，则返回 14。</p>
+<p><strong>Gauge</strong></p>
+<ul>
+<li>一种常规的 metric，典型的应用如：温度，运行的 goroutines 的个数。</li>
+<li>可以任意加减。</li>
+</ul>
+<p>例如：go_goroutines{instance=&ldquo;172.17.0.2&rdquo;, job=&ldquo;Prometheus&rdquo;} 返回值 147，10 秒后返回 124。</p>
+<p><strong>Histogram</strong></p>
+<ul>
+<li>可以理解为柱状图，典型的应用如：请求持续时间，响应大小。</li>
+<li>可以对观察结果采样，分组及统计。</li>
+</ul>
+<p>例如，查询 http_request_duration_microseconds_sum{job=&ldquo;Prometheus&rdquo;, handler=&ldquo;query&rdquo;} 时，返回结果如下：</p>
+<h5 id="图-2-histogram-metric-返回结果图">图 2. Histogram metric 返回结果图</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image002.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N100FE">点击查看大图</a></p>
+<p><strong>Summary</strong></p>
+<ul>
+<li>类似于 Histogram, 典型的应用如：请求持续时间，响应大小。</li>
+<li>提供观测值的 count 和 sum 功能。</li>
+<li>提供百分位的功能，即可以按百分比划分跟踪结果。</li>
+</ul>
+<p><strong>instance 和 jobs</strong></p>
+<p><strong>instance:</strong> 一个单独 scrape 的目标， 一般对应于一个进程。</p>
+<p><strong>jobs:</strong> 一组同种类型的 instances（主要用于保证可扩展性和可靠性），例如：</p>
+<h5 id="清单-1-job-和-instance-的关系">清单 1. job 和 instance 的关系</h5>
+<pre><code>job: api-server` `  ``instance 1: 1.2.3.4:5670``  ``instance 2: 1.2.3.4:5671``  ``instance 3: 5.6.7.8:5670``  ``instance 4: 5.6.7.8:5671
+</code></pre><p>当 scrape 目标时，Prometheus 会自动给这个 scrape 的时间序列附加一些标签以便更好的分别，例如： instance，job。</p>
+<p>下面以实际的 metric 为例，对上述概念进行说明。</p>
+<h5 id="图-3-metrics-示例">图 3. Metrics 示例</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image003.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10129">点击查看大图</a></p>
+<p>如上图所示，这三个 metric 的名字都一样，他们仅凭 handler 不同而被标识为不同的 metrics。这类 metrics 只会向上累加，是属于 Counter 类型的 metric，且 metrics 中都含有 instance 和 job 这两个标签。</p>
+<h2 id="node-exporter-安装">Node exporter 安装</h2>
+<p>为了更好的演示 Prometheus 从配置，到监控，到报警的功能，本实例将引入本机 ubuntu server 的监控。由于 Prometheus 主要用于监控 web 服务，如果需要监控 ubuntu server，则需要在本机上安装 node exporter。 Node exporter 主要用于暴露 metrics 给 Prometheus，其中 metrics 包括：cpu 的负载，内存的使用情况，网络等。</p>
+<p>安装 node export 首先需要从 github 中下载最新的 node exporter 包，放在指定的目录并解压安装包，在本实例中，放在 /home/lilly/prom/exporters/ 中。</p>
+<h5 id="清单-2-安装-node-exporter">清单 2. 安装 Node exporter</h5>
+<pre><code>cd /home/lilly/prom/exporters/``wget https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.linux-amd64.tar.gz``tar -xvzf node_exporter-0.14.0.linux-amd64.tar.gz
+</code></pre><p>为了更好的启动和停止 node exporter，可以把 node exporter 转换为一个服务。</p>
+<h5 id="清单-3-配置-node-exporter-为服务">清单 3. 配置 node exporter 为服务</h5>
+<pre><code>vim /etc/init/node_exporter.conf``#Prometheus Node Exporter Upstart script`` ``start on startup`` ``script`` ``/home/lilly/prom/exporters/node_exporter/node_exporter`` ``end script
+</code></pre><p>此时，node exporter 已经是一个服务，可以直接用 service 命令进行启停和查看。</p>
+<h5 id="清单-4-查看-node-exporter-状态">清单 4. 查看 node exporter 状态</h5>
+<pre><code>root@ubuntu1404-dev:~/alertmanager# service node_exporter start``node_exporter start/running, process 11017``root@ubuntu1404-dev:~/alertmanager# service node_exporter status``node_exporter start/running, process 11017``此时，node exporter 已经监听在 9100 端口。``root@ubuntu1404-dev:~/prom# netstat -anp | grep 9100``tcp6    0   0 :::9100         :::*          LISTEN   155/node_exporter
+</code></pre><p>当 node exporter 启动时，可以通过 curl http://localhost:9100/metrics 或者在浏览器中查看 ubuntu server 里面的 metrics，部分 metrics 信息如下：</p>
+<h5 id="清单-5-验证-node-exporter">清单 5. 验证 node exporter</h5>
+<pre><code>root@ubuntu1404-dev:~/prom# curl http://localhost:9100/metrics``……``# HELP node_cpu Seconds the cpus spent in each mode.``# TYPE node_cpu counter``node_cpu{cpu=&quot;cpu0&quot;,mode=&quot;guest&quot;} 0``node_cpu{cpu=&quot;cpu0&quot;,mode=&quot;idle&quot;} 30.02``node_cpu{cpu=&quot;cpu0&quot;,mode=&quot;iowait&quot;} 0.5``node_cpu{cpu=&quot;cpu0&quot;,mode=&quot;irq&quot;} 0``node_cpu{cpu=&quot;cpu0&quot;,mode=&quot;nice&quot;} 0``node_cpu{cpu=&quot;cpu0&quot;,mode=&quot;softirq&quot;} 0.34``node_cpu{cpu=&quot;cpu0&quot;,mode=&quot;steal&quot;} 0``node_cpu{cpu=&quot;cpu0&quot;,mode=&quot;system&quot;} 5.38``node_cpu{cpu=&quot;cpu0&quot;,mode=&quot;user&quot;} 11.34``# HELP node_disk_bytes_read The total number of bytes read successfully.``# TYPE node_disk_bytes_read counter``node_disk_bytes_read{device=&quot;sda&quot;} 5.50009856e+08``node_disk_bytes_read{device=&quot;sr0&quot;} 67584``# HELP node_disk_bytes_written The total number of bytes written successfully.``# TYPE node_disk_bytes_written counter``node_disk_bytes_written{device=&quot;sda&quot;} 2.0160512e+07``node_disk_bytes_written{device=&quot;sr0&quot;} 0``# HELP node_disk_io_now The number of I/Os currently in progress.``# TYPE node_disk_io_now gauge``node_disk_io_now{device=&quot;sda&quot;} 0``node_disk_io_now{device=&quot;sr0&quot;} 0``# HELP node_disk_io_time_ms Total Milliseconds spent doing I/Os.``# TYPE node_disk_io_time_ms counter``node_disk_io_time_ms{device=&quot;sda&quot;} 3484``node_disk_io_time_ms{device=&quot;sr0&quot;} 12``……``# HELP node_memory_MemAvailable Memory information field MemAvailable.``# TYPE node_memory_MemAvailable gauge``node_memory_MemAvailable 1.373270016e+09``# HELP node_memory_MemFree Memory information field MemFree.``# TYPE node_memory_MemFree gauge``node_memory_MemFree 9.2403712e+08``# HELP node_memory_MemTotal Memory information field MemTotal.``# TYPE node_memory_MemTotal gauge``node_memory_MemTotal 2.098388992e+09``……``# HELP node_network_receive_drop Network device statistic receive_drop.``# TYPE node_network_receive_drop gauge``node_network_receive_drop{device=&quot;docker0&quot;} 0``node_network_receive_drop{device=&quot;eth0&quot;} 0``node_network_receive_drop{device=&quot;eth1&quot;} 0``node_network_receive_drop{device=&quot;lo&quot;} 0
+</code></pre><h2 id="prometheus-安装和配置">Prometheus 安装和配置</h2>
+<p>Prometheus 可以采用多种方式安装，本文直接用官网的 docker image（prom/prometheus）启动一个 Prometheus server, 并配置相应的静态监控 targets，jobs 和 alert.rules 文件。</p>
+<p>启动 Prometheus 容器，并把服务绑定在本机的 9090 端口。命令如下：</p>
+<h5 id="清单-6-安装-prometheus">清单 6. 安装 Prometheus</h5>
+<pre><code>docker run -d -p 9090:9090 \``      ``-v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml \``      ``-v $PWD/alert.rules:/etc/prometheus/alert.rules \``      ``--name prometheus \``      ``prom/prometheus \``      ``-config.file=/etc/prometheus/prometheus.yml \``      ``-alertmanager.url=http://10.0.2.15:9093
+</code></pre><p>其中 Prometheus 的配置文件 prometheus.yml 内容为：</p>
+<h5 id="清单-7-prometheusyml-配置文件">清单 7. Prometheus.yml 配置文件</h5>
+<pre><code>global:         # 全局设置，可以被覆盖`` ``scrape_interval:   15s # 默认值为 15s，用于设置每次数据收集的间隔` ` ``external_labels:  # 所有时间序列和警告与外部通信时用的外部标签``  ``monitor: 'codelab-monitor'` `rule_files: # 警告规则设置文件`` ``- '/etc/prometheus/alert.rules'` `# 用于配置 scrape 的 endpoint 配置需要 scrape 的 targets 以及相应的参数``scrape_configs: `` ``# The job name is added as a label `job=&lt;``job_name``&gt;` to any timeseries scraped from this config.`` ``- job_name: 'prometheus' # 一定要全局唯一, 采集 Prometheus 自身的 metrics` `  ``# 覆盖全局的 scrape_interval``  ``scrape_interval: 5s` `  ``static_configs: # 静态目标的配置``   ``- targets: ['172.17.0.2:9090']` ` ``- job_name: 'node' # 一定要全局唯一, 采集本机的 metrics，需要在本机安装 node_exporter` `  ``scrape_interval: 10s` `  ``static_configs:``   ``- targets: ['10.0.2.15:9100'] # 本机 node_exporter 的 endpoint
+</code></pre><p>alert 规则文件的内容如下：</p>
+<h5 id="清单-8-alertrules-配置文件">清单 8. alert.rules 配置文件</h5>
+<pre><code># Alert for any instance that is unreachable for &gt;5 minutes.``ALERT InstanceDown  # alert 名字`` ``IF up == 0      # 判断条件`` ``FOR 5m       # 条件保持 5m 才会发出 alert`` ``LABELS { severity = &quot;critical&quot; } # 设置 alert 的标签`` ``ANNOTATIONS {       # alert 的其他标签，但不用于标识 alert``  ``summary = &quot;Instance {{ $labels.instance }} down&quot;,``  ``description = &quot;{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 5 minutes.&quot;,`` ``}
+</code></pre><p>当 Prometheus server 起来时，可以在 Prometheus 容器的日志中看到：</p>
+<h5 id="清单-9-prometheus-日志">清单 9. Prometheus 日志</h5>
+<pre><code>time=&quot;2017-09-05T08:18:02Z&quot; level=info msg=&quot;Starting prometheus (version=1.7.1, branch=master, ``revision=3afb3fffa3a29c3de865e1172fb740442e9d0133)&quot; source=&quot;main.go:88&quot; ``time=&quot;2017-09-05T08:18:02Z&quot; level=info msg=&quot;Build context (go=go1.8.3, user=root@0aa1b7fc430d, date=20170612-``11:44:05)&quot; source=&quot;main.go:89&quot; ``time=&quot;2017-09-05T08:18:02Z&quot; level=info msg=&quot;Host details (Linux 3.19.0-75-generic #83~14.04.1-Ubuntu SMP Thu Nov ``10 10:51:40 UTC 2016 x86_64 71984d75e6a1 (none))&quot; source=&quot;main.go:90&quot; ``time=&quot;2017-09-05T08:18:02Z&quot; level=info msg=&quot;Loading configuration file /etc/prometheus/prometheus.yml&quot; ``source=&quot;main.go:252&quot; ``time=&quot;2017-09-05T08:18:03Z&quot; level=info msg=&quot;Loading series map and head chunks...&quot; source=&quot;storage.go:428&quot; ``time=&quot;2017-09-05T08:18:03Z&quot; level=info msg=&quot;0 series loaded.&quot; source=&quot;storage.go:439&quot; ``time=&quot;2017-09-05T08:18:03Z&quot; level=info msg=&quot;Starting target manager...&quot; source=&quot;targetmanager.go:63&quot; ``time=&quot;2017-09-05T08:18:03Z&quot; level=info msg=&quot;Listening on :9090&quot; source=&quot;web.go:259&quot;
+</code></pre><p>在浏览器中访问 Prometheus 的主页 <a href="http://localhost:9091/">http://localhost:9091</a>, 可以看到 Prometheus 的信息如下：</p>
+<h5 id="图-4-prometheus-状态信息">图 4. Prometheus 状态信息</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image004.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N1019D">点击查看大图</a></p>
+<p>为了保证 Prometheus 确实从 node exporter 中收集数据，可以在 Graph 页面中搜索 metric 名字，如 node_cpu 并点击 Execute，可以在 console 中看到 metric 如下。</p>
+<h5 id="图-5-prometheus-中-metric-查询结果-console-输出示例">图 5. Prometheus 中 metric 查询结果 console 输出示例</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image005.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N101A9">点击查看大图</a></p>
+<p>其中第一条为来自 node exporter 的 metric，此时 ubuntu server 上 goroutines 的个数为 13。点击 Graph 可以观察 metrics 的历史数据。如下图所示：</p>
+<h5 id="图-6-prometheus-中-metric-查询结果-graph-输出示例">图 6. Prometheus 中 metric 查询结果 Graph 输出示例</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image006.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N101B5">点击查看大图</a></p>
+<h2 id="alertmanager-安装和配置">Alertmanager 安装和配置</h2>
+<p>当接收到 Prometheus 端发送过来的 alerts 时，Alertmanager 会对 alerts 进行去重复，分组，路由到对应集成的接受端，包括：slack，电子邮件，pagerduty，hitchat，webhook。</p>
+<p>在 Alertmanager 的配置文件中，需要进行如下配置：</p>
+<h5 id="清单-10-alermanager-中-configyml-文件">清单 10. Alermanager 中 config.yml 文件</h5>
+<pre><code>root@ubuntu1404-dev:~/alertmanager# cat config.yml``global:``  ``resolve_timeout: 5m``route:``  ``receiver: 'default-receiver'``  ``group_wait: 30s``  ``group_interval: 1m``  ``repeat_interval: 1m``  ``group_by: ['alertname']` `  ``routes:``  ``- match:``    ``severity: critical``   ``receiver: my-slack` `receivers:``- name: 'my-slack'`` ``slack_configs:`` ``- send_resolved: true``  ``api_url: https://hooks.slack.com/services/***``  ``channel: '#alertmanager-critical'``  ``text: &quot;{{ .CommonAnnotations.description }}&quot;` `- name: 'default-receiver'`` ``slack_configs:`` ``- send_resolved: true``  ``api_url: https://hooks.slack.com/services/***``  ``channel: '#alertmanager-default'``  ``text: &quot;{{ .CommonAnnotations.description }}&quot;
+</code></pre><p>创建好 config.yml 文件后，可以直接用 docker 启动一个 Alertmanager 的容器，如下：</p>
+<h5 id="清单-11-安装-alertmanager">清单 11. 安装 Alertmanager</h5>
+<pre><code>docker run -d -p 9093:9093 ``         ``–v /home/lilly/alertmanager/config.yml:/etc/alertmanager/config.yml \``         ``--name alertmanager \``         ``prom/alertmanager` `docker ps | grep alert``d1b7a753a688    prom/alertmanager  &quot;/bin/alertmanager -c&quot;  25 hours ago    Up 25 hours     ``0.0.0.0:9093-&gt;9093/tcp  alertmanager
+</code></pre><p>当 Alertmanager 服务起来时，可以通过浏览器访 Alertmanager 的主页 <a href="http://localhost:9093/">http://localhost:9093</a>，其状态信息如下：</p>
+<h5 id="图-7-alertmanager-状态信息">图 7. Alertmanager 状态信息</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image007.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N101E0">点击查看大图</a></p>
+<p>在 alerts 的页面中，我们可以看到从 Prometheus sever 端发过来的 alerts，此外，还可以做 alerts 搜索，分组，静音等操作。</p>
+<h5 id="图-8-alertmanager-报警页面">图 8. Alertmanager 报警页面</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image008.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N101EC">点击查看大图</a></p>
+<h2 id="prometheus-实例演示">Prometheus 实例演示</h2>
+<p>下面将通过一个具体的实例来演示 Prometheus 的使用。在 alert.ruels 中定义了 alert 触发的条件是 up 为 0。下面，手动停止 node exporter 服务。</p>
+<h5 id="清单-12-停止-node-exporter-服务">清单 12. 停止 node exporter 服务</h5>
+<pre><code>root@ubuntu1404-dev:~/prom# service node_exporter stop``node_exporter stop/waiting``root@ubuntu1404-dev:~/prom# service node_exporter status``node_exporter stop/waiting
+</code></pre><p>此时，Prometheus 中查询 metric up,可以看到此时 up{instance=&ldquo;10.0.2.15&rdquo;,job=&ldquo;node&rdquo;} 的值为 0，如下所示：</p>
+<h5 id="图-9-metric-up-的返回值停">图 9. Metric up 的返回值（停）</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image009.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10207">点击查看大图</a></p>
+<p>此时，Alerts 页面中显示 InstanceDown，状态为 PENDING。因为 alert 规则中定义需要保持 5 分钟，所以在这之前，alerts 还没有发送至 Alertmanager。</p>
+<h5 id="图-10-alert-pending-界面">图 10. Alert Pending 界面</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image010.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10213">点击查看大图</a></p>
+<p>5 分钟后，状态由 PENDING 变为 FIRING，于此同时，在 Alertmanager 中可以看到有一个 alert。</p>
+<h5 id="图-11-alert-firing-界面">图 11. Alert Firing 界面</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image011.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N1021F">点击查看大图</a></p>
+<h5 id="图-12-alertmanager-警报界面">图 12. Alertmanager 警报界面</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image012.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10229">点击查看大图</a></p>
+<p>在 Alertmanager 的配置文件中定义，党 severity 为 critical 的时候，往 Alertmanager-critical channel 中发送警告，且每隔两分钟重复发送。如下图所示。</p>
+<h5 id="图-13-slack-告警界面">图 13. Slack 告警界面</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image013.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10235">点击查看大图</a></p>
+<p>由上可知，当目标失败时，不仅可以在 Prometheus 的主页上实时的查看目标和 alerts 的状态，还可以使用 Alertmanager 发送警告，以便运维人员尽快解决问题。</p>
+<p>当问题解决后，Prometheus 不仅会实时更新 metrics 的状态，Alertmanager 也会在 slack 通知 resolved 的消息。以下演示问题解决后的，Prometheus 的操作。</p>
+<p>手动启动 node exporter。首先 metric 在 Graph 中恢复至正常值 1。</p>
+<h5 id="图-14-metric-up-的返回值启">图 14. Metric up 的返回值（启）</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image014.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10245">点击查看大图</a></p>
+<p>targets 中现实 node 这个 job 是 up 的状态。</p>
+<h5 id="图-15-targets-界面">图 15. Targets 界面</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image015.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10251">点击查看大图</a></p>
+<p>Alerts 为绿色，显示有 0 个激活态的警告。</p>
+<h5 id="图-16-alers-resolved-界面">图 16. Alers resolved 界面</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image016.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N1025D">点击查看大图</a></p>
+<p>而在 Alertmanager 刚刚的 alert 也被清空，显示 No alerts found。</p>
+<h5 id="图-17-alertmanager-resolved-界面">图 17. Alertmanager resolved 界面</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image017.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10269">点击查看大图</a></p>
+<p>在 slack 端，在多次红色 FRING 报警后，也收到了绿色了 RESOLVED 消息。</p>
+<h5 id="图-18-slack-resolved-界面">图 18. Slack resolved 界面</h5>
+<p><img src="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image018.png" alt="img"></p>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10275">点击查看大图</a></p>
+<h2 id="总结">总结</h2>
+<p>本文对 Prometheus 的组成，架构和基本概念进行了介绍，并实例演示了 node exporter, Prometheus 和 Alermanager 的配置和运行。最后，以一个监控的 target 的启停为例，演示 Prometheus 的一系列响应以及如何在 Prometheus 和 Alertmanager 中查看服务，警报和告警的状态。对于 Prometheus 中更高级的使用，如查询函数的使用，更多图形界面的集成，请参考官方文档。</p>
+<h2 id="参考资源">参考资源</h2>
+<ul>
+<li>Prometheus 概念及详细配置请参阅 <a href="https://prometheus.io/docs/introduction/overview/">Prometheus 官方文档</a></li>
+<li>Node exporter 安装请参考 <a href="https://github.com/prometheus/node_exporter">node_exporter github 仓库</a></li>
+<li>Slack 信息发送请参考 <a href="https://api.slack.com/incoming-webhooks">Incoming Webhooks</a></li>
+</ul>
+<p><img src="https://m.media-amazon.com/images/I/71riIyCXHaL._AC_UY436_FMwebp_QL65_.jpg" alt=""></p>
+<h2 id="reference">Reference</h2>
+<ol>
+<li>
+<p><a href="https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html">Prometheus 入门与实践</a></p>
+</li>
+<li>
+<p><a href="https://prometheus.io/docs/prometheus/latest/getting_started/">https://prometheus.io/docs/prometheus/latest/getting_started/</a></p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2020-06-25
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://csyezheng.github.io/tags/devops/">DevOps</a>
+          <a href="http://csyezheng.github.io/tags/monitoring/">monitoring</a>
+          <a href="http://csyezheng.github.io/tags/prometheus/">Prometheus</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/specialization/devops/grafana/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">Grafana</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/specialization/artificial-intelligence/natural-language-processing/question-answering/">
+            <span class="next-text nav-default">Question answering</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

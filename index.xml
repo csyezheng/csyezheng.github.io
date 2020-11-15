@@ -6,7 +6,7 @@
     <description>Recent content on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 12 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://csyezheng.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -25,11 +25,54 @@
     </item>
     
     <item>
+      <title>flink</title>
+      <link>http://csyezheng.github.io/post/specialization/big-data/flink/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/big-data/flink/</guid>
+      
+        <description>&lt;p&gt;&lt;a href=&#34;https://github.com/apache/flink/tree/master/flink-runtime-web&#34;&gt;Apache Flink Web Dashboard&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Cloud Computing</title>
+      <link>http://csyezheng.github.io/post/specialization/cloud-computing/15-319/</link>
+      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/cloud-computing/15-319/</guid>
+      
+        <description>&lt;h2 id=&#34;introduction-and-course-logistics&#34;&gt;Introduction and Course Logistics&lt;/h2&gt;
+&lt;h2 id=&#34;data-analytics&#34;&gt;Data Analytics&lt;/h2&gt;
+&lt;h2 id=&#34;big-data-analytics&#34;&gt;Big Data Analytics&lt;/h2&gt;
+&lt;h2 id=&#34;elasticity-and-auto-scaling&#34;&gt;Elasticity and Auto Scaling&lt;/h2&gt;
+&lt;h2 id=&#34;containers-and-kubernetes&#34;&gt;Containers and Kubernetes&lt;/h2&gt;
+&lt;h2 id=&#34;serverless-computing-and-functions-as-a-service&#34;&gt;Serverless Computing and Functions-as-a-Service&lt;/h2&gt;
+&lt;h2 id=&#34;flat-files-and-databases--team-project&#34;&gt;Flat Files and Databases &amp;amp; Team Project&lt;/h2&gt;
+&lt;h2 id=&#34;social-network-heterogenous-storage-and-dbaas--team-project&#34;&gt;Social Network, Heterogenous Storage and DBaaS &amp;amp; Team Project&lt;/h2&gt;
+&lt;h2 id=&#34;replication-and-consistency-and-team-project-phase-1&#34;&gt;Replication and Consistency and Team Project Phase 1&lt;/h2&gt;
+&lt;h2 id=&#34;team-project-phase-1&#34;&gt;Team Project Phase 1&lt;/h2&gt;
+&lt;h2 id=&#34;iterative-batch-processing-in-spark-and-team-project-phase-2&#34;&gt;Iterative Batch Processing in Spark and Team Project Phase 2&lt;/h2&gt;
+&lt;h2 id=&#34;team-project-phase-2-and-live-test&#34;&gt;Team Project Phase 2 and Live Test&lt;/h2&gt;
+&lt;h2 id=&#34;machine-learning-on-the-cloud-and-team-project-phase-3&#34;&gt;Machine Learning on the Cloud and Team Project Phase 3&lt;/h2&gt;
+&lt;h2 id=&#34;team-project-phase-3-and-live-test&#34;&gt;Team Project Phase 3 and Live Test&lt;/h2&gt;
+&lt;h2 id=&#34;stream-processing-with-kafka--samza&#34;&gt;Stream Processing with Kafka &amp;amp; Samza&lt;/h2&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cs.cmu.edu/~msakr/15619-s20/recitations.html&#34;&gt;https://www.cs.cmu.edu/~msakr/15619-s20/recitations.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Introduction to Cloud Infrastructure Technologies</title>
-      <link>http://csyezheng.github.io/post/infrastructure/introduction-to-cloud-infrastructure-technologies/</link>
+      <link>http://csyezheng.github.io/post/specialization/cloud-computing/infrastructure/introduction-to-cloud-infrastructure-technologies/</link>
       <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/infrastructure/introduction-to-cloud-infrastructure-technologies/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/cloud-computing/infrastructure/introduction-to-cloud-infrastructure-technologies/</guid>
       
         <description>&lt;h2 id=&#34;chapter-1-virtualization&#34;&gt;Chapter 1. Virtualization&lt;/h2&gt;
 &lt;h3 id=&#34;introduction-and-learning-objectives&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
@@ -681,10 +724,10 @@ It is part of the Telemetry project and provides data collection services for bi
     
     <item>
       <title>The Java 3rd Library</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-3rd-party-library/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-3rd-party-library/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-3rd-party-library/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-3rd-party-library/</guid>
       
         <description>&lt;p&gt;import org.alibaba.fastjson.JSONArray;
 import org.alibaba.fastjson.JSONObject;
@@ -858,10 +901,10 @@ swagger-ui&lt;/p&gt;
     
     <item>
       <title>The Java Standard Library</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-standard-library/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-standard-library/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-standard-library/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-standard-library/</guid>
       
         <description>&lt;h2 id=&#34;collections&#34;&gt;Collections&lt;/h2&gt;
 &lt;h3 id=&#34;interfaces&#34;&gt;Interfaces&lt;/h3&gt;
@@ -1550,25 +1593,45 @@ import java.io.Serializable;&lt;/p&gt;
 &lt;h2 id=&#34;enterprise-edition&#34;&gt;Enterprise Edition&lt;/h2&gt;
 &lt;p&gt;javax&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;inject
+&lt;li&gt;
+&lt;p&gt;inject&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Inject&lt;/li&gt;
-&lt;li&gt;Named&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Inject&lt;/p&gt;
+&lt;p&gt;Identifies injectable constructors, methods, and fields.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://dzone.com/articles/cdi-di-p1&#34;&gt;https://dzone.com/articles/cdi-di-p1&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public class Car {
+    // Injectable constructor
+    @Inject public Car(Engine engine) { ... }
+    
+    // Injectable field
+    @Inject private Provider&amp;lt;Seat&amp;gt; seatProvider;
+    
+    // Injectable package-private method
+    @Inject void install(Windshield windshield, Trunk trunk) { ... }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Named&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;jms
+&lt;li&gt;
+&lt;p&gt;jms&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Message&lt;/li&gt;
 &lt;li&gt;MessageListener&lt;/li&gt;
 &lt;li&gt;TextMessage&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;persistence
+&lt;li&gt;
+&lt;p&gt;persistence&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Transient&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;servlet
+&lt;li&gt;
+&lt;p&gt;servlet&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Filter&lt;/li&gt;
 &lt;li&gt;FilterChain&lt;/li&gt;
@@ -1590,12 +1653,14 @@ import java.io.Serializable;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;transaction
+&lt;li&gt;
+&lt;p&gt;transaction&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Transactional&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;ws
+&lt;li&gt;
+&lt;p&gt;ws&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;rs
 &lt;ul&gt;
@@ -1636,10 +1701,10 @@ import javax.ws.rs.core.MediaType;&lt;/p&gt;
     
     <item>
       <title>Mybatis Spring Boot</title>
-      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/mybatis-spring-boot/</link>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/mybatis-spring-boot/</link>
       <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/mybatis-spring-boot/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/mybatis-spring-boot/</guid>
       
         <description>&lt;h2 id=&#34;creating-a-project&#34;&gt;Creating a project&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;spring init -d=web --build=maven mysite
@@ -2011,10 +2076,10 @@ logging.level.com.example.mysite.mapper=TRACE
     
     <item>
       <title>Spring</title>
-      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring/</link>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/spring/</link>
       <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/spring/</guid>
       
         <description>&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 &lt;h3 id=&#34;install-jdk&#34;&gt;Install JDK&lt;/h3&gt;
@@ -2424,10 +2489,10 @@ public class DemoApplication {
     
     <item>
       <title>Spring Boot CXF JAX-RS Starter</title>
-      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring-boot-cxf-jax-rs-starter/</link>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/spring-boot-cxf-jax-rs-starter/</link>
       <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/spring-boot-cxf-jax-rs-starter/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/spring-boot-cxf-jax-rs-starter/</guid>
       
         <description>&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
 &lt;p&gt;Registers CXF Servlet with a  &amp;ldquo;/services/*&amp;rdquo; URL pattern for serving CXF JAX-RS endpoints.&lt;/p&gt;
@@ -2484,10 +2549,10 @@ mysql&amp;gt; INSERT INTO `student` VALUES (&#39;1&#39;, &#39;&#39;, &#39;&#39;,
     
     <item>
       <title>欣宸Blog</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/devops/</link>
+      <link>http://csyezheng.github.io/post/specialization/devops/xc/</link>
       <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/devops/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/devops/xc/</guid>
       
         <description>&lt;p&gt;&lt;a href=&#34;https://cloud.tencent.com/developer/column/1662&#34;&gt;https://cloud.tencent.com/developer/column/1662&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -2563,6 +2628,266 @@ mysql&amp;gt; INSERT INTO `student` VALUES (&#39;1&#39;, &#39;&#39;, &#39;&#39;,
     </item>
     
     <item>
+      <title>Grafana</title>
+      <link>http://csyezheng.github.io/post/specialization/devops/grafana/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/devops/grafana/</guid>
+      
+        <description>&lt;p&gt;Reference&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://grafana.com/grafana/dashboards/893&#34;&gt;https://grafana.com/grafana/dashboards/893&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Prometheus</title>
+      <link>http://csyezheng.github.io/post/specialization/devops/prometheus/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/devops/prometheus/</guid>
+      
+        <description>&lt;h1 id=&#34;prometheus-入门与实践&#34;&gt;Prometheus 入门与实践&lt;/h1&gt;
+&lt;p&gt;吴 莉, 殷 一鸣, 和 蔡 林
+2018 年 5 月 30 日发布&lt;/p&gt;
+&lt;p&gt;随着容器技术的迅速发展，Kubernetes 已然成为大家追捧的容器集群管理系统。Prometheus 作为生态圈 Cloud Native Computing Foundation（简称：CNCF）中的重要一员,其活跃度仅次于 Kubernetes, 现已广泛用于 Kubernetes 集群的监控系统中。本文将简要介绍 Prometheus 的组成和相关概念，并实例演示 Prometheus 的安装，配置及使用，以便开发人员和云平台运维人员可以快速的掌握 Prometheus。&lt;/p&gt;
+&lt;h2 id=&#34;prometheus-简介&#34;&gt;Prometheus 简介&lt;/h2&gt;
+&lt;p&gt;Prometheus 是一套开源的系统监控报警框架。它启发于 Google 的 borgmon 监控系统，由工作在 SoundCloud 的 google 前员工在 2012 年创建，作为社区开源项目进行开发，并于 2015 年正式发布。2016 年，Prometheus 正式加入 Cloud Native Computing Foundation，成为受欢迎度仅次于 Kubernetes 的项目。&lt;/p&gt;
+&lt;p&gt;作为新一代的监控框架，Prometheus 具有以下特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;强大的多维度数据模型：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;时间序列数据通过 metric 名和键值对来区分。&lt;/li&gt;
+&lt;li&gt;所有的 metrics 都可以设置任意的多维标签。&lt;/li&gt;
+&lt;li&gt;数据模型更随意，不需要刻意设置为以点分隔的字符串。&lt;/li&gt;
+&lt;li&gt;可以对数据模型进行聚合，切割和切片操作。&lt;/li&gt;
+&lt;li&gt;支持双精度浮点类型，标签可以设为全 unicode。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;灵活而强大的查询语句（PromQL）：在同一个查询语句，可以对多个 metrics 进行乘法、加法、连接、取分数位等操作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;易于管理： Prometheus server 是一个单独的二进制文件，可直接在本地工作，不依赖于分布式存储。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;高效：平均每个采样点仅占 3.5 bytes，且一个 Prometheus server 可以处理数百万的 metrics。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用 pull 模式采集时间序列数据，这样不仅有利于本机测试而且可以避免有问题的服务器推送坏的 metrics。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可以采用 push gateway 的方式把时间序列数据推送至 Prometheus server 端。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可以通过服务发现或者静态配置去获取监控的 targets。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有多种可视化图形界面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;易于伸缩。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;需要指出的是，由于数据采集可能会有丢失，所以 Prometheus 不适用对采集数据要 100% 准确的情形。但如果用于记录时间序列数据，Prometheus 具有很大的查询优势，此外，Prometheus 适用于微服务的体系架构。&lt;/p&gt;
+&lt;h2 id=&#34;prometheus-组成及架构&#34;&gt;Prometheus 组成及架构&lt;/h2&gt;
+&lt;p&gt;Prometheus 生态圈中包含了多个组件，其中许多组件是可选的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Prometheus Server&lt;/strong&gt;: 用于收集和存储时间序列数据。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Client Library&lt;/strong&gt;: 客户端库，为需要监控的服务生成相应的 metrics 并暴露给 Prometheus server。当 Prometheus server 来 pull 时，直接返回实时状态的 metrics。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Push Gateway&lt;/strong&gt;: 主要用于短期的 jobs。由于这类 jobs 存在时间较短，可能在 Prometheus 来 pull 之前就消失了。为此，这次 jobs 可以直接向 Prometheus server 端推送它们的 metrics。这种方式主要用于服务层面的 metrics，对于机器层面的 metrices，需要使用 node exporter。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Exporters&lt;/strong&gt;: 用于暴露已有的第三方服务的 metrics 给 Prometheus。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Alertmanager&lt;/strong&gt;: 从 Prometheus server 端接收到 alerts 后，会进行去除重复数据，分组，并路由到对收的接受方式，发出报警。常见的接收方式有：电子邮件，pagerduty，OpsGenie, webhook 等。&lt;/li&gt;
+&lt;li&gt;一些其他的工具。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;图 1 为 Prometheus 官方文档中的架构图：&lt;/p&gt;
+&lt;h5 id=&#34;图-1-prometheus-架构图&#34;&gt;图 1. Prometheus 架构图&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image001.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N100B0&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;从上图可以看出，Prometheus 的主要模块包括：Prometheus server, exporters, Pushgateway, PromQL, Alertmanager 以及图形界面。&lt;/p&gt;
+&lt;p&gt;其大概的工作流程是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Prometheus server 定期从配置好的 jobs 或者 exporters 中拉 metrics，或者接收来自 Pushgateway 发过来的 metrics，或者从其他的 Prometheus server 中拉 metrics。&lt;/li&gt;
+&lt;li&gt;Prometheus server 在本地存储收集到的 metrics，并运行已定义好的 alert.rules，记录新的时间序列或者向 Alertmanager 推送警报。&lt;/li&gt;
+&lt;li&gt;Alertmanager 根据配置文件，对接收到的警报进行处理，发出告警。&lt;/li&gt;
+&lt;li&gt;在图形界面中，可视化采集数据。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;prometheus-相关概念&#34;&gt;Prometheus 相关概念&lt;/h2&gt;
+&lt;p&gt;下面将对 Prometheus 中的数据模型，metric 类型以及 instance 和 job 等概念进行介绍，以便读者在 Prometheus 的配置和使用中可以有一个更好的理解。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;数据模型&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Prometheus 中存储的数据为时间序列，是由 metric 的名字和一系列的标签（键值对）唯一标识的，不同的标签则代表不同的时间序列。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;metric 名字：该名字应该具有语义，一般用于表示 metric 的功能，例如：http_requests_total, 表示 http 请求的总数。其中，metric 名字由 ASCII 字符，数字，下划线，以及冒号组成，且必须满足正则表达式 [a-zA-Z_:][a-zA-Z0-9_:]*。&lt;/li&gt;
+&lt;li&gt;标签：使同一个时间序列有了不同维度的识别。例如 http_requests_total{method=&amp;ldquo;Get&amp;rdquo;} 表示所有 http 请求中的 Get 请求。当 method=&amp;ldquo;post&amp;rdquo; 时，则为新的一个 metric。标签中的键由 ASCII 字符，数字，以及下划线组成，且必须满足正则表达式 [a-zA-Z_:][a-zA-Z0-9_:]*。&lt;/li&gt;
+&lt;li&gt;样本：实际的时间序列，每个序列包括一个 float64 的值和一个毫秒级的时间戳。&lt;/li&gt;
+&lt;li&gt;格式：&lt;!-- raw HTML omitted --&gt;{&lt;!-- raw HTML omitted --&gt;=&lt;!-- raw HTML omitted --&gt;, …}，例如：http_requests_total{method=&amp;ldquo;POST&amp;rdquo;,endpoint=&amp;quot;/api/tracks&amp;quot;}。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;四种 Metric 类型&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Prometheus 客户端库主要提供四种主要的 metric 类型：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Counter&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一种累加的 metric，典型的应用如：请求的个数，结束的任务数， 出现的错误数等等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如，查询 http_requests_total{method=&amp;ldquo;get&amp;rdquo;, job=&amp;ldquo;Prometheus&amp;rdquo;, handler=&amp;ldquo;query&amp;rdquo;} 返回 8，10 秒后，再次查询，则返回 14。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Gauge&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一种常规的 metric，典型的应用如：温度，运行的 goroutines 的个数。&lt;/li&gt;
+&lt;li&gt;可以任意加减。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如：go_goroutines{instance=&amp;ldquo;172.17.0.2&amp;rdquo;, job=&amp;ldquo;Prometheus&amp;rdquo;} 返回值 147，10 秒后返回 124。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Histogram&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以理解为柱状图，典型的应用如：请求持续时间，响应大小。&lt;/li&gt;
+&lt;li&gt;可以对观察结果采样，分组及统计。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如，查询 http_request_duration_microseconds_sum{job=&amp;ldquo;Prometheus&amp;rdquo;, handler=&amp;ldquo;query&amp;rdquo;} 时，返回结果如下：&lt;/p&gt;
+&lt;h5 id=&#34;图-2-histogram-metric-返回结果图&#34;&gt;图 2. Histogram metric 返回结果图&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image002.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N100FE&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;类似于 Histogram, 典型的应用如：请求持续时间，响应大小。&lt;/li&gt;
+&lt;li&gt;提供观测值的 count 和 sum 功能。&lt;/li&gt;
+&lt;li&gt;提供百分位的功能，即可以按百分比划分跟踪结果。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;instance 和 jobs&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;instance:&lt;/strong&gt; 一个单独 scrape 的目标， 一般对应于一个进程。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;jobs:&lt;/strong&gt; 一组同种类型的 instances（主要用于保证可扩展性和可靠性），例如：&lt;/p&gt;
+&lt;h5 id=&#34;清单-1-job-和-instance-的关系&#34;&gt;清单 1. job 和 instance 的关系&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;job: api-server` `  ``instance 1: 1.2.3.4:5670``  ``instance 2: 1.2.3.4:5671``  ``instance 3: 5.6.7.8:5670``  ``instance 4: 5.6.7.8:5671
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;当 scrape 目标时，Prometheus 会自动给这个 scrape 的时间序列附加一些标签以便更好的分别，例如： instance，job。&lt;/p&gt;
+&lt;p&gt;下面以实际的 metric 为例，对上述概念进行说明。&lt;/p&gt;
+&lt;h5 id=&#34;图-3-metrics-示例&#34;&gt;图 3. Metrics 示例&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image003.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10129&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如上图所示，这三个 metric 的名字都一样，他们仅凭 handler 不同而被标识为不同的 metrics。这类 metrics 只会向上累加，是属于 Counter 类型的 metric，且 metrics 中都含有 instance 和 job 这两个标签。&lt;/p&gt;
+&lt;h2 id=&#34;node-exporter-安装&#34;&gt;Node exporter 安装&lt;/h2&gt;
+&lt;p&gt;为了更好的演示 Prometheus 从配置，到监控，到报警的功能，本实例将引入本机 ubuntu server 的监控。由于 Prometheus 主要用于监控 web 服务，如果需要监控 ubuntu server，则需要在本机上安装 node exporter。 Node exporter 主要用于暴露 metrics 给 Prometheus，其中 metrics 包括：cpu 的负载，内存的使用情况，网络等。&lt;/p&gt;
+&lt;p&gt;安装 node export 首先需要从 github 中下载最新的 node exporter 包，放在指定的目录并解压安装包，在本实例中，放在 /home/lilly/prom/exporters/ 中。&lt;/p&gt;
+&lt;h5 id=&#34;清单-2-安装-node-exporter&#34;&gt;清单 2. 安装 Node exporter&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;cd /home/lilly/prom/exporters/``wget https://github.com/prometheus/node_exporter/releases/download/v0.14.0/node_exporter-0.14.0.linux-amd64.tar.gz``tar -xvzf node_exporter-0.14.0.linux-amd64.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;为了更好的启动和停止 node exporter，可以把 node exporter 转换为一个服务。&lt;/p&gt;
+&lt;h5 id=&#34;清单-3-配置-node-exporter-为服务&#34;&gt;清单 3. 配置 node exporter 为服务&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;vim /etc/init/node_exporter.conf``#Prometheus Node Exporter Upstart script`` ``start on startup`` ``script`` ``/home/lilly/prom/exporters/node_exporter/node_exporter`` ``end script
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;此时，node exporter 已经是一个服务，可以直接用 service 命令进行启停和查看。&lt;/p&gt;
+&lt;h5 id=&#34;清单-4-查看-node-exporter-状态&#34;&gt;清单 4. 查看 node exporter 状态&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;root@ubuntu1404-dev:~/alertmanager# service node_exporter start``node_exporter start/running, process 11017``root@ubuntu1404-dev:~/alertmanager# service node_exporter status``node_exporter start/running, process 11017``此时，node exporter 已经监听在 9100 端口。``root@ubuntu1404-dev:~/prom# netstat -anp | grep 9100``tcp6    0   0 :::9100         :::*          LISTEN   155/node_exporter
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;当 node exporter 启动时，可以通过 curl http://localhost:9100/metrics 或者在浏览器中查看 ubuntu server 里面的 metrics，部分 metrics 信息如下：&lt;/p&gt;
+&lt;h5 id=&#34;清单-5-验证-node-exporter&#34;&gt;清单 5. 验证 node exporter&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;root@ubuntu1404-dev:~/prom# curl http://localhost:9100/metrics``……``# HELP node_cpu Seconds the cpus spent in each mode.``# TYPE node_cpu counter``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;guest&amp;quot;} 0``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;idle&amp;quot;} 30.02``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;iowait&amp;quot;} 0.5``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;irq&amp;quot;} 0``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;nice&amp;quot;} 0``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;softirq&amp;quot;} 0.34``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;steal&amp;quot;} 0``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;system&amp;quot;} 5.38``node_cpu{cpu=&amp;quot;cpu0&amp;quot;,mode=&amp;quot;user&amp;quot;} 11.34``# HELP node_disk_bytes_read The total number of bytes read successfully.``# TYPE node_disk_bytes_read counter``node_disk_bytes_read{device=&amp;quot;sda&amp;quot;} 5.50009856e+08``node_disk_bytes_read{device=&amp;quot;sr0&amp;quot;} 67584``# HELP node_disk_bytes_written The total number of bytes written successfully.``# TYPE node_disk_bytes_written counter``node_disk_bytes_written{device=&amp;quot;sda&amp;quot;} 2.0160512e+07``node_disk_bytes_written{device=&amp;quot;sr0&amp;quot;} 0``# HELP node_disk_io_now The number of I/Os currently in progress.``# TYPE node_disk_io_now gauge``node_disk_io_now{device=&amp;quot;sda&amp;quot;} 0``node_disk_io_now{device=&amp;quot;sr0&amp;quot;} 0``# HELP node_disk_io_time_ms Total Milliseconds spent doing I/Os.``# TYPE node_disk_io_time_ms counter``node_disk_io_time_ms{device=&amp;quot;sda&amp;quot;} 3484``node_disk_io_time_ms{device=&amp;quot;sr0&amp;quot;} 12``……``# HELP node_memory_MemAvailable Memory information field MemAvailable.``# TYPE node_memory_MemAvailable gauge``node_memory_MemAvailable 1.373270016e+09``# HELP node_memory_MemFree Memory information field MemFree.``# TYPE node_memory_MemFree gauge``node_memory_MemFree 9.2403712e+08``# HELP node_memory_MemTotal Memory information field MemTotal.``# TYPE node_memory_MemTotal gauge``node_memory_MemTotal 2.098388992e+09``……``# HELP node_network_receive_drop Network device statistic receive_drop.``# TYPE node_network_receive_drop gauge``node_network_receive_drop{device=&amp;quot;docker0&amp;quot;} 0``node_network_receive_drop{device=&amp;quot;eth0&amp;quot;} 0``node_network_receive_drop{device=&amp;quot;eth1&amp;quot;} 0``node_network_receive_drop{device=&amp;quot;lo&amp;quot;} 0
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;prometheus-安装和配置&#34;&gt;Prometheus 安装和配置&lt;/h2&gt;
+&lt;p&gt;Prometheus 可以采用多种方式安装，本文直接用官网的 docker image（prom/prometheus）启动一个 Prometheus server, 并配置相应的静态监控 targets，jobs 和 alert.rules 文件。&lt;/p&gt;
+&lt;p&gt;启动 Prometheus 容器，并把服务绑定在本机的 9090 端口。命令如下：&lt;/p&gt;
+&lt;h5 id=&#34;清单-6-安装-prometheus&#34;&gt;清单 6. 安装 Prometheus&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;docker run -d -p 9090:9090 \``      ``-v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml \``      ``-v $PWD/alert.rules:/etc/prometheus/alert.rules \``      ``--name prometheus \``      ``prom/prometheus \``      ``-config.file=/etc/prometheus/prometheus.yml \``      ``-alertmanager.url=http://10.0.2.15:9093
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;其中 Prometheus 的配置文件 prometheus.yml 内容为：&lt;/p&gt;
+&lt;h5 id=&#34;清单-7-prometheusyml-配置文件&#34;&gt;清单 7. Prometheus.yml 配置文件&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;global:         # 全局设置，可以被覆盖`` ``scrape_interval:   15s # 默认值为 15s，用于设置每次数据收集的间隔` ` ``external_labels:  # 所有时间序列和警告与外部通信时用的外部标签``  ``monitor: &#39;codelab-monitor&#39;` `rule_files: # 警告规则设置文件`` ``- &#39;/etc/prometheus/alert.rules&#39;` `# 用于配置 scrape 的 endpoint 配置需要 scrape 的 targets 以及相应的参数``scrape_configs: `` ``# The job name is added as a label `job=&amp;lt;``job_name``&amp;gt;` to any timeseries scraped from this config.`` ``- job_name: &#39;prometheus&#39; # 一定要全局唯一, 采集 Prometheus 自身的 metrics` `  ``# 覆盖全局的 scrape_interval``  ``scrape_interval: 5s` `  ``static_configs: # 静态目标的配置``   ``- targets: [&#39;172.17.0.2:9090&#39;]` ` ``- job_name: &#39;node&#39; # 一定要全局唯一, 采集本机的 metrics，需要在本机安装 node_exporter` `  ``scrape_interval: 10s` `  ``static_configs:``   ``- targets: [&#39;10.0.2.15:9100&#39;] # 本机 node_exporter 的 endpoint
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;alert 规则文件的内容如下：&lt;/p&gt;
+&lt;h5 id=&#34;清单-8-alertrules-配置文件&#34;&gt;清单 8. alert.rules 配置文件&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;# Alert for any instance that is unreachable for &amp;gt;5 minutes.``ALERT InstanceDown  # alert 名字`` ``IF up == 0      # 判断条件`` ``FOR 5m       # 条件保持 5m 才会发出 alert`` ``LABELS { severity = &amp;quot;critical&amp;quot; } # 设置 alert 的标签`` ``ANNOTATIONS {       # alert 的其他标签，但不用于标识 alert``  ``summary = &amp;quot;Instance {{ $labels.instance }} down&amp;quot;,``  ``description = &amp;quot;{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 5 minutes.&amp;quot;,`` ``}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;当 Prometheus server 起来时，可以在 Prometheus 容器的日志中看到：&lt;/p&gt;
+&lt;h5 id=&#34;清单-9-prometheus-日志&#34;&gt;清单 9. Prometheus 日志&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;time=&amp;quot;2017-09-05T08:18:02Z&amp;quot; level=info msg=&amp;quot;Starting prometheus (version=1.7.1, branch=master, ``revision=3afb3fffa3a29c3de865e1172fb740442e9d0133)&amp;quot; source=&amp;quot;main.go:88&amp;quot; ``time=&amp;quot;2017-09-05T08:18:02Z&amp;quot; level=info msg=&amp;quot;Build context (go=go1.8.3, user=root@0aa1b7fc430d, date=20170612-``11:44:05)&amp;quot; source=&amp;quot;main.go:89&amp;quot; ``time=&amp;quot;2017-09-05T08:18:02Z&amp;quot; level=info msg=&amp;quot;Host details (Linux 3.19.0-75-generic #83~14.04.1-Ubuntu SMP Thu Nov ``10 10:51:40 UTC 2016 x86_64 71984d75e6a1 (none))&amp;quot; source=&amp;quot;main.go:90&amp;quot; ``time=&amp;quot;2017-09-05T08:18:02Z&amp;quot; level=info msg=&amp;quot;Loading configuration file /etc/prometheus/prometheus.yml&amp;quot; ``source=&amp;quot;main.go:252&amp;quot; ``time=&amp;quot;2017-09-05T08:18:03Z&amp;quot; level=info msg=&amp;quot;Loading series map and head chunks...&amp;quot; source=&amp;quot;storage.go:428&amp;quot; ``time=&amp;quot;2017-09-05T08:18:03Z&amp;quot; level=info msg=&amp;quot;0 series loaded.&amp;quot; source=&amp;quot;storage.go:439&amp;quot; ``time=&amp;quot;2017-09-05T08:18:03Z&amp;quot; level=info msg=&amp;quot;Starting target manager...&amp;quot; source=&amp;quot;targetmanager.go:63&amp;quot; ``time=&amp;quot;2017-09-05T08:18:03Z&amp;quot; level=info msg=&amp;quot;Listening on :9090&amp;quot; source=&amp;quot;web.go:259&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在浏览器中访问 Prometheus 的主页 &lt;a href=&#34;http://localhost:9091/&#34;&gt;http://localhost:9091&lt;/a&gt;, 可以看到 Prometheus 的信息如下：&lt;/p&gt;
+&lt;h5 id=&#34;图-4-prometheus-状态信息&#34;&gt;图 4. Prometheus 状态信息&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image004.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N1019D&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;为了保证 Prometheus 确实从 node exporter 中收集数据，可以在 Graph 页面中搜索 metric 名字，如 node_cpu 并点击 Execute，可以在 console 中看到 metric 如下。&lt;/p&gt;
+&lt;h5 id=&#34;图-5-prometheus-中-metric-查询结果-console-输出示例&#34;&gt;图 5. Prometheus 中 metric 查询结果 console 输出示例&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image005.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N101A9&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中第一条为来自 node exporter 的 metric，此时 ubuntu server 上 goroutines 的个数为 13。点击 Graph 可以观察 metrics 的历史数据。如下图所示：&lt;/p&gt;
+&lt;h5 id=&#34;图-6-prometheus-中-metric-查询结果-graph-输出示例&#34;&gt;图 6. Prometheus 中 metric 查询结果 Graph 输出示例&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image006.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N101B5&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;alertmanager-安装和配置&#34;&gt;Alertmanager 安装和配置&lt;/h2&gt;
+&lt;p&gt;当接收到 Prometheus 端发送过来的 alerts 时，Alertmanager 会对 alerts 进行去重复，分组，路由到对应集成的接受端，包括：slack，电子邮件，pagerduty，hitchat，webhook。&lt;/p&gt;
+&lt;p&gt;在 Alertmanager 的配置文件中，需要进行如下配置：&lt;/p&gt;
+&lt;h5 id=&#34;清单-10-alermanager-中-configyml-文件&#34;&gt;清单 10. Alermanager 中 config.yml 文件&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;root@ubuntu1404-dev:~/alertmanager# cat config.yml``global:``  ``resolve_timeout: 5m``route:``  ``receiver: &#39;default-receiver&#39;``  ``group_wait: 30s``  ``group_interval: 1m``  ``repeat_interval: 1m``  ``group_by: [&#39;alertname&#39;]` `  ``routes:``  ``- match:``    ``severity: critical``   ``receiver: my-slack` `receivers:``- name: &#39;my-slack&#39;`` ``slack_configs:`` ``- send_resolved: true``  ``api_url: https://hooks.slack.com/services/***``  ``channel: &#39;#alertmanager-critical&#39;``  ``text: &amp;quot;{{ .CommonAnnotations.description }}&amp;quot;` `- name: &#39;default-receiver&#39;`` ``slack_configs:`` ``- send_resolved: true``  ``api_url: https://hooks.slack.com/services/***``  ``channel: &#39;#alertmanager-default&#39;``  ``text: &amp;quot;{{ .CommonAnnotations.description }}&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;创建好 config.yml 文件后，可以直接用 docker 启动一个 Alertmanager 的容器，如下：&lt;/p&gt;
+&lt;h5 id=&#34;清单-11-安装-alertmanager&#34;&gt;清单 11. 安装 Alertmanager&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;docker run -d -p 9093:9093 ``         ``–v /home/lilly/alertmanager/config.yml:/etc/alertmanager/config.yml \``         ``--name alertmanager \``         ``prom/alertmanager` `docker ps | grep alert``d1b7a753a688    prom/alertmanager  &amp;quot;/bin/alertmanager -c&amp;quot;  25 hours ago    Up 25 hours     ``0.0.0.0:9093-&amp;gt;9093/tcp  alertmanager
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;当 Alertmanager 服务起来时，可以通过浏览器访 Alertmanager 的主页 &lt;a href=&#34;http://localhost:9093/&#34;&gt;http://localhost:9093&lt;/a&gt;，其状态信息如下：&lt;/p&gt;
+&lt;h5 id=&#34;图-7-alertmanager-状态信息&#34;&gt;图 7. Alertmanager 状态信息&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image007.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N101E0&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在 alerts 的页面中，我们可以看到从 Prometheus sever 端发过来的 alerts，此外，还可以做 alerts 搜索，分组，静音等操作。&lt;/p&gt;
+&lt;h5 id=&#34;图-8-alertmanager-报警页面&#34;&gt;图 8. Alertmanager 报警页面&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image008.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N101EC&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;prometheus-实例演示&#34;&gt;Prometheus 实例演示&lt;/h2&gt;
+&lt;p&gt;下面将通过一个具体的实例来演示 Prometheus 的使用。在 alert.ruels 中定义了 alert 触发的条件是 up 为 0。下面，手动停止 node exporter 服务。&lt;/p&gt;
+&lt;h5 id=&#34;清单-12-停止-node-exporter-服务&#34;&gt;清单 12. 停止 node exporter 服务&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;root@ubuntu1404-dev:~/prom# service node_exporter stop``node_exporter stop/waiting``root@ubuntu1404-dev:~/prom# service node_exporter status``node_exporter stop/waiting
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;此时，Prometheus 中查询 metric up,可以看到此时 up{instance=&amp;ldquo;10.0.2.15&amp;rdquo;,job=&amp;ldquo;node&amp;rdquo;} 的值为 0，如下所示：&lt;/p&gt;
+&lt;h5 id=&#34;图-9-metric-up-的返回值停&#34;&gt;图 9. Metric up 的返回值（停）&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image009.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10207&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此时，Alerts 页面中显示 InstanceDown，状态为 PENDING。因为 alert 规则中定义需要保持 5 分钟，所以在这之前，alerts 还没有发送至 Alertmanager。&lt;/p&gt;
+&lt;h5 id=&#34;图-10-alert-pending-界面&#34;&gt;图 10. Alert Pending 界面&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image010.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10213&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5 分钟后，状态由 PENDING 变为 FIRING，于此同时，在 Alertmanager 中可以看到有一个 alert。&lt;/p&gt;
+&lt;h5 id=&#34;图-11-alert-firing-界面&#34;&gt;图 11. Alert Firing 界面&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image011.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N1021F&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;图-12-alertmanager-警报界面&#34;&gt;图 12. Alertmanager 警报界面&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image012.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10229&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在 Alertmanager 的配置文件中定义，党 severity 为 critical 的时候，往 Alertmanager-critical channel 中发送警告，且每隔两分钟重复发送。如下图所示。&lt;/p&gt;
+&lt;h5 id=&#34;图-13-slack-告警界面&#34;&gt;图 13. Slack 告警界面&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image013.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10235&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;由上可知，当目标失败时，不仅可以在 Prometheus 的主页上实时的查看目标和 alerts 的状态，还可以使用 Alertmanager 发送警告，以便运维人员尽快解决问题。&lt;/p&gt;
+&lt;p&gt;当问题解决后，Prometheus 不仅会实时更新 metrics 的状态，Alertmanager 也会在 slack 通知 resolved 的消息。以下演示问题解决后的，Prometheus 的操作。&lt;/p&gt;
+&lt;p&gt;手动启动 node exporter。首先 metric 在 Graph 中恢复至正常值 1。&lt;/p&gt;
+&lt;h5 id=&#34;图-14-metric-up-的返回值启&#34;&gt;图 14. Metric up 的返回值（启）&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image014.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10245&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;targets 中现实 node 这个 job 是 up 的状态。&lt;/p&gt;
+&lt;h5 id=&#34;图-15-targets-界面&#34;&gt;图 15. Targets 界面&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image015.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10251&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Alerts 为绿色，显示有 0 个激活态的警告。&lt;/p&gt;
+&lt;h5 id=&#34;图-16-alers-resolved-界面&#34;&gt;图 16. Alers resolved 界面&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image016.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N1025D&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;而在 Alertmanager 刚刚的 alert 也被清空，显示 No alerts found。&lt;/p&gt;
+&lt;h5 id=&#34;图-17-alertmanager-resolved-界面&#34;&gt;图 17. Alertmanager resolved 界面&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image017.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10269&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在 slack 端，在多次红色 FRING 报警后，也收到了绿色了 RESOLVED 消息。&lt;/p&gt;
+&lt;h5 id=&#34;图-18-slack-resolved-界面&#34;&gt;图 18. Slack resolved 界面&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/image018.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html#N10275&#34;&gt;点击查看大图&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;本文对 Prometheus 的组成，架构和基本概念进行了介绍，并实例演示了 node exporter, Prometheus 和 Alermanager 的配置和运行。最后，以一个监控的 target 的启停为例，演示 Prometheus 的一系列响应以及如何在 Prometheus 和 Alertmanager 中查看服务，警报和告警的状态。对于 Prometheus 中更高级的使用，如查询函数的使用，更多图形界面的集成，请参考官方文档。&lt;/p&gt;
+&lt;h2 id=&#34;参考资源&#34;&gt;参考资源&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Prometheus 概念及详细配置请参阅 &lt;a href=&#34;https://prometheus.io/docs/introduction/overview/&#34;&gt;Prometheus 官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Node exporter 安装请参考 &lt;a href=&#34;https://github.com/prometheus/node_exporter&#34;&gt;node_exporter github 仓库&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Slack 信息发送请参考 &lt;a href=&#34;https://api.slack.com/incoming-webhooks&#34;&gt;Incoming Webhooks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://m.media-amazon.com/images/I/71riIyCXHaL._AC_UY436_FMwebp_QL65_.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ibm.com/developerworks/cn/cloud/library/cl-lo-prometheus-getting-started-and-practice/index.html&#34;&gt;Prometheus 入门与实践&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://prometheus.io/docs/prometheus/latest/getting_started/&#34;&gt;https://prometheus.io/docs/prometheus/latest/getting_started/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Question answering</title>
       <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
@@ -2594,10 +2919,10 @@ mysql&amp;gt; INSERT INTO `student` VALUES (&#39;1&#39;, &#39;&#39;, &#39;&#39;,
     
     <item>
       <title>tencent nlp interview</title>
-      <link>http://csyezheng.github.io/post/other/interview/tencent-nlp-interview/</link>
+      <link>http://csyezheng.github.io/post/master-path/carees/tencent-nlp-interview/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/other/interview/tencent-nlp-interview/</guid>
+      <guid>http://csyezheng.github.io/post/master-path/carees/tencent-nlp-interview/</guid>
       
         <description>&lt;h2 id=&#34;一面技术面&#34;&gt;一面（技术面）&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;面试形式：电话面试&lt;/strong&gt;。&lt;/p&gt;
@@ -4195,383 +4520,6 @@ mysql&amp;gt; INSERT INTO `student` VALUES (&#39;1&#39;, &#39;&#39;, &#39;&#39;,
 &lt;p&gt;&lt;img src=&#34;http://5b0988e595225.cdn.sohucs.com/images/20180717/73993cb12ac544abbc06207695cbbfff.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Search Architecture</title>
-      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/search-architecture/</link>
-      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/search-architecture/</guid>
-      
-        <description>&lt;h2 id=&#34;搜索服务使用说明&#34;&gt;搜索服务使用说明&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&lt;script src=&#34;http://csyezheng.github.io/js/raphael.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://csyezheng.github.io/js/flowchart.min.js&#34;&gt;&lt;/script&gt;
-&lt;div id=&#34;diagram-draw&#34; align=&#34;center&#34;&gt;&lt;/div&gt;
-&lt;script id=&#34;code&#34;&gt;
-	&#34;\nst=\u003estart: 开始\ne=\u003eend: 结束\n\nop1=\u003eoperation: 服务订阅\ncond1=\u003econdition: 是否已创建应用\nop2=\u003eoperation: 订阅成功\nop3=\u003eoperation: 服务管理\nop4=\u003eoperation: 服务创建\npara1=\u003eparallel: 选择服务类型\nst(right)-\u003eop1-\u003econd1\ncond1(yes)-\u003eop2-\u003eop3-\u003eop4-\u003epara1\ncond1(no)-\u003eop1\n\nop5=\u003eoperation: 垂直搜索\nop6=\u003eoperation: 统一搜索\nop7=\u003eoperation: 空白模板\npara2=\u003eparallel: 数据接入\nop201=\u003eoperation: 勾选垂直搜索\nop202=\u003eoperation: 流程配置\ncond201=\u003econdition: 用户是否分流\npara1(path1, bottom)-\u003eop5-\u003eop7-\u003epara2\npara1(path2, right)-\u003eop6-\u003eop201-\u003eop202-\u003econd201\n\nop8=\u003eoperation: 流计算-\u003eMySQL: \npara3=\u003eparallel: 搜索配置\npara2(path1, left)-\u003eop8\npara2(path2, bottom)-\u003epara3\n\nop11=\u003eoperation: Query参数\nop12=\u003eoperation: Query理解\nop13=\u003eoperation: Query理解\npara4=\u003eparallel: 智能交互\npara3(path1, left)-\u003eop11(bottom)-\u003eop12(bottom)-\u003eop13\npara3(path2, bottom)-\u003epara4\n\nop14=\u003eoperation: 联想字段\nop15=\u003eoperation: 测试\nop16=\u003eoperation: 发布\nop17=\u003eoperation: 生成服务ID\npara4(path1, right)-\u003eop14\npara4(path2, bottom)-\u003eop15-\u003eop16-\u003eop17\n\ncond202=\u003econdition: 是否识别意图\nop203=\u003eoperation: 内容节点\nop204=\u003eoperation: 测试\nop205=\u003eoperation: 发布\ncond201(yes)-\u003econd202\ncond201(no)-\u003eop203\ncond202(yes)-\u003eop203\ncond202(no)-\u003eop203\nop203-\u003eop204-\u003eop205-\u003eop17\n&#34;
-	var source = document.getElementById( &#34;code&#34; ).innerText;
-	source = source.replace(/\\n/g, &#39;\n&#39;);
-	source = source.replace(/\\u003e/g, &#39;&gt;&#39;);
-	source = source.replace(/\\&#34;/g, &#39;&#34;&#39;);
-	var diagram = flowchart.parse( source );
-	diagram.drawSVG( &#39;diagram-draw&#39; );
-&lt;/script&gt;
-
-
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;
-&lt;script src=&#34;http://csyezheng.github.io/js/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://csyezheng.github.io/js/mindmap.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://csyezheng.github.io/js/kity.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://csyezheng.github.io/js/kityminder.core.min.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;link rel=&#34;stylesheet&#34; href=&#34;http://csyezheng.github.io/css/mindmap.css&#34; /&gt;
-
-
-&lt;div id=&#34;&#34; class=&#34;mindmap mindmap-lg&#34;&gt;
-    &lt;ul&gt;
-&lt;li&gt;搜索运营
-&lt;ul&gt;
-&lt;li&gt;运营分析
-&lt;ul&gt;
-&lt;li&gt;Dashboard
-&lt;ul&gt;
-&lt;li&gt;TopN&lt;/li&gt;
-&lt;li&gt;dashboard&lt;/li&gt;
-&lt;li&gt;badcase&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;热搜词统计&lt;/li&gt;
-&lt;li&gt;用户行为明细&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;词库管理
-&lt;ul&gt;
-&lt;li&gt;同义词
-&lt;ul&gt;
-&lt;li&gt;手动新增&lt;/li&gt;
-&lt;li&gt;自动挖掘&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;专有名词&lt;/li&gt;
-&lt;li&gt;听用词&lt;/li&gt;
-&lt;li&gt;核心词&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;业务管理
-&lt;ul&gt;
-&lt;li&gt;直通车&lt;/li&gt;
-&lt;li&gt;黑名单&lt;/li&gt;
-&lt;li&gt;提示次&lt;/li&gt;
-&lt;li&gt;敏感词&lt;/li&gt;
-&lt;li&gt;纠错词&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;query-understanding-framework-architecture&#34;&gt;Query Understanding Framework Architecture&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.mdpi.com/applsci/applsci-10-01127/article_deploy/html/images/applsci-10-01127-g003-550.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;spatial-and-temporal-parsing&#34;&gt;Spatial and Temporal Parsing&lt;/h4&gt;
-&lt;h4 id=&#34;concept-recognition&#34;&gt;Concept Recognition&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.mdpi.com/applsci/applsci-10-01127/article_deploy/html/images/applsci-10-01127-g004-550.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;named-entity-recognition&#34;&gt;Named Entity Recognition&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.mdpi.com/applsci/applsci-10-01127/article_deploy/html/images/applsci-10-01127-g005-550.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;query-expansion&#34;&gt;Query Expansion&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.mdpi.com/applsci/applsci-10-01127/article_deploy/html/images/applsci-10-01127-g006-550.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;system-design&#34;&gt;System Design&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.mdpi.com/applsci/applsci-10-01127/article_deploy/html/images/applsci-10-01127-g007.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Bigger Leaner Stronger</title>
-      <link>http://csyezheng.github.io/post/other/health/bigger-leaner-stronger/</link>
-      <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/other/health/bigger-leaner-stronger/</guid>
-      
-        <description>&lt;h3 id=&#34;workouts&#34;&gt;Workouts&lt;/h3&gt;
-&lt;h3 id=&#34;meal-plans&#34;&gt;Meal Plans&lt;/h3&gt;
-&lt;h2 id=&#34;part-1-whats-in-this-for-you&#34;&gt;Part 1: What’s in This for You?&lt;/h2&gt;
-&lt;h4 id=&#34;1-the-promise&#34;&gt;1. The Promise&lt;/h4&gt;
-&lt;p&gt;You absolutely, positively can have the lean, muscular, and powerful body that you dream about.&lt;/p&gt;
-&lt;h4 id=&#34;2-who-is-mike-matthews-and-why-should-i-care&#34;&gt;2. Who Is Mike Matthews and Why Should I Care?&lt;/h4&gt;
-&lt;h4 id=&#34;3-why-bigger-leaner-stronger-is-different&#34;&gt;3. Why Bigger Leaner Stronger Is Different&lt;/h4&gt;
-&lt;h2 id=&#34;part-2-key-things-they-arent-telling-you&#34;&gt;Part 2: Key Things “They” Aren’t Telling You&lt;/h2&gt;
-&lt;h4 id=&#34;4-the-hidden-barrier&#34;&gt;4. The Hidden Barrier&lt;/h4&gt;
-&lt;h4 id=&#34;5-what-most-men-will-never-know-about-getting-fit--part-1&#34;&gt;5. What Most Men Will Never Know about Getting Fit – Part 1&lt;/h4&gt;
-&lt;h4 id=&#34;6-what-most-men-will-never-know-about-getting-fit--part-2&#34;&gt;6. What Most Men Will Never Know about Getting Fit – Part 2&lt;/h4&gt;
-&lt;h4 id=&#34;7-the-10-absolute-worst-fat-loss-myths-and-mistakes&#34;&gt;7. The 10 Absolute Worst Fat Loss Myths and Mistakes&lt;/h4&gt;
-&lt;h4 id=&#34;8-the-10-absolute-worst-muscle-building-myths-and-mistakes&#34;&gt;8. The 10 Absolute Worst Muscle-Building Myths and Mistakes&lt;/h4&gt;
-&lt;h4 id=&#34;9-the-3-little-big-things-about-rapid-fat-loss&#34;&gt;9. The 3 Little Big Things about Rapid Fat Loss&lt;/h4&gt;
-&lt;h4 id=&#34;10-the-3-little-big-things-about-building-lean-muscle&#34;&gt;10. The 3 Little Big Things about Building Lean Muscle&lt;/h4&gt;
-&lt;h2 id=&#34;part-3-how-to-win-the-inner-game-of-getting-fit&#34;&gt;Part 3: How to Win the “Inner Game” of Getting Fit&lt;/h2&gt;
-&lt;h4 id=&#34;11-the-great-inner-game-secret&#34;&gt;11. The Great “Inner Game” Secret&lt;/h4&gt;
-&lt;h4 id=&#34;12-the-anatomy-of-willpower&#34;&gt;12. The Anatomy of Willpower&lt;/h4&gt;
-&lt;h4 id=&#34;13-13-easy-ways-to-boost-your-willpower-and-self-control&#34;&gt;13. 13 Easy Ways to Boost Your Willpower and Self-Control&lt;/h4&gt;
-&lt;h4 id=&#34;14-use-it-or-lose-it-how-to-train-your-willpower&#34;&gt;14. Use It or Lose It: How to Train Your Willpower&lt;/h4&gt;
-&lt;h4 id=&#34;15-finding-your-biggest-fitness-whys&#34;&gt;15. Finding Your Biggest Fitness Whys&lt;/h4&gt;
-&lt;h2 id=&#34;part-4-the-last-diet-advice-youll-ever-need&#34;&gt;Part 4: The Last Diet Advice You’ll Ever Need&lt;/h2&gt;
-&lt;h4 id=&#34;16-welcome-to-the-wonderful-world-of-flexible-dieting&#34;&gt;16. Welcome to the Wonderful World of Flexible Dieting&lt;/h4&gt;
-&lt;h4 id=&#34;17-the-easiest-way-to-calculate-your-calories-and-macros&#34;&gt;17. The Easiest Way to Calculate Your Calories and Macros&lt;/h4&gt;
-&lt;h4 id=&#34;18-the-truth-about-preworkout-and-postworkout-nutrition&#34;&gt;18. The Truth about Preworkout and Postworkout Nutrition&lt;/h4&gt;
-&lt;h4 id=&#34;19-how-to-make-meal-plans-that-really-work&#34;&gt;19. How to Make Meal Plans That Really Work&lt;/h4&gt;
-&lt;h4 id=&#34;20-how-to-cheat-on-your-diet-without-ruining-it&#34;&gt;20. How to “Cheat” on Your Diet Without Ruining It&lt;/h4&gt;
-&lt;h2 id=&#34;part-5-the-last-exercise-advice-youll-ever-need&#34;&gt;Part 5: The Last Exercise Advice You’ll Ever Need&lt;/h2&gt;
-&lt;h4 id=&#34;21-the-ultimate-workout-plan-for-men--strength-training&#34;&gt;21. The Ultimate Workout Plan for Men – Strength Training&lt;/h4&gt;
-&lt;h4 id=&#34;22-the-ultimate-workout-plan-for-men--cardio&#34;&gt;22. The Ultimate Workout Plan for Men – Cardio&lt;/h4&gt;
-&lt;h4 id=&#34;23-the-best-exercises-for-building-your-best-body-ever&#34;&gt;23. The Best Exercises for Building Your Best Body Ever&lt;/h4&gt;
-&lt;h4 id=&#34;24-the-definitive-guide-to-the-big-three&#34;&gt;24. The Definitive Guide to the “Big Three”&lt;/h4&gt;
-&lt;h2 id=&#34;part-6-dont-buy-another-supplement-until-you-read-this&#34;&gt;Part 6: Don’t Buy Another Supplement Until You Read This&lt;/h2&gt;
-&lt;h4 id=&#34;25-the-great-supplement-hoax&#34;&gt;25. The Great Supplement Hoax&lt;/h4&gt;
-&lt;h4 id=&#34;26-the-smart-supplement-buyers-guide&#34;&gt;26. The Smart Supplement Buyer’s Guide&lt;/h4&gt;
-&lt;h2 id=&#34;part-7-the-bigger-leaner-stronger-program&#34;&gt;Part 7: The Bigger Leaner Stronger Program&lt;/h2&gt;
-&lt;h4 id=&#34;27-you-paint-by-the-numbers-your-body-does-the-rest&#34;&gt;27. You Paint by the Numbers, Your Body Does the Rest&lt;/h4&gt;
-&lt;h4 id=&#34;28-the-bigger-leaner-stronger-diet-plan&#34;&gt;28. The Bigger Leaner Stronger Diet Plan&lt;/h4&gt;
-&lt;h4 id=&#34;29-the-bigger-leaner-stronger-training-plan&#34;&gt;29. The Bigger Leaner Stronger Training Plan&lt;/h4&gt;
-&lt;h4 id=&#34;30-the-bigger-leaner-stronger-supplementation-plan&#34;&gt;30. The Bigger Leaner Stronger Supplementation Plan&lt;/h4&gt;
-&lt;h4 id=&#34;31-the-right-and-wrong-ways-to-track-your-progress&#34;&gt;31. The Right and Wrong Ways to Track Your Progress&lt;/h4&gt;
-&lt;h4 id=&#34;32-how-to-break-through-weight-loss-plateaus&#34;&gt;32. How to Break Through Weight Loss Plateaus&lt;/h4&gt;
-&lt;h4 id=&#34;33-how-to-break-through-weight-gain-plateaus&#34;&gt;33. How to Break Through Weight Gain Plateaus&lt;/h4&gt;
-&lt;h2 id=&#34;part-8-the-beginning&#34;&gt;Part 8: The Beginning&lt;/h2&gt;
-&lt;h4 id=&#34;34-the-bigger-leaner-stronger-quickstart-guide&#34;&gt;34. The Bigger Leaner Stronger Quickstart Guide&lt;/h4&gt;
-&lt;h4 id=&#34;35-from-here-your-body-will-change&#34;&gt;35. From Here, Your Body Will Change&lt;/h4&gt;
-&lt;h4 id=&#34;36-frequently-asked-questions&#34;&gt;36. Frequently Asked Questions&lt;/h4&gt;
-&lt;h4 id=&#34;37-would-you-do-me-a-favor&#34;&gt;37. Would You Do Me a Favor?&lt;/h4&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Bert</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/bert/</link>
-      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/bert/</guid>
-      
-        <description>&lt;h1 id=&#34;bert-可解释性-从头说起&#34;&gt;BERT 可解释性-从&amp;quot;头&amp;quot;说起&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;一、背景介绍&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大帮助。query-title 分档任务要求针对 query 和 title 按文本相关性进行 5 个档位的分类(1~5 档)，各档位从需求满足及语义匹配这两方面对 query-doc 的相关度进行衡量，档位越大表示相关性越高，如 1 档表示文本和语义完全不相关，而 5 档表示文本和语义高度相关，完全符合 query 的需求。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/80/v2-58cac5479dcc451b4d30133b67fb8c5d_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;我们尝试将 Bert 模型应用在 query-title 分档任务上，将 query 和 title 作为句对输入到 bert 中，取最后一层 cls 向量用做 5 分类(如上图)，最后得到的结果比 LSTM-Attention 交互式匹配模型要好。虽然知道了 bert&lt;strong&gt;能&lt;/strong&gt;解决这个问题，我们更好奇的是&amp;quot;&lt;strong&gt;为什么&lt;/strong&gt;&amp;quot;：为什么 bert 的表现能这么好？这里面有没有可解释的部分呢？&lt;/p&gt;
-&lt;p&gt;因为 Multi-head-attention 是 bert 的主要组成部分，所以我们从&amp;quot;头&amp;quot;入手，希望弄清楚各个 head 对 bert 模型有什么作用。为了研究某个 head 对模型的影响，我们需要比较有这个 head 和没有这个 head 模型的前后表现。这里定义一下 HEAD-MASK 操作，其实就是针对某个 head，直接将这个 head 的 attention 值置成 0，这样对于任何输入这个 head 都只能输出 0 向量。&lt;/p&gt;
-&lt;p&gt;通过 HEAD-MASK 操作对各个 head 进行对比实验，发现了下面几个有趣的点&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;attention-head 很冗余/鲁棒，去掉 20%的 head 模型不受影响&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;各层 transformer 之间不是串行关系，去掉一整层 attention-head 对下层影响不大&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;各个 head 有固定的功能&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;某些 head 负责分词&lt;/li&gt;
-&lt;li&gt;某些 head 提取语序关系&lt;/li&gt;
-&lt;li&gt;某些 head 负责提取 query-title 之间 term 匹配关系&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;下面我们开始实验正文，看看这些结论是怎么得到的&lt;/p&gt;
-&lt;h3 id=&#34;二bert-模型-attention-head-实验&#34;&gt;&lt;strong&gt;二、Bert 模型 Attention-Head 实验&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;attention-head 是 bert 的基本组成模块，本次实验想要研究各个 head 都对模型作出了什么贡献。通过 Mask 掉某个 head，对比模型前后表现的差异来研究这个 head 对模型有什么样的作用(对训练好的 bert 做 head-mask，不重新训练，对比测试集的表现)。&lt;/p&gt;
-&lt;p&gt;bert-base 模型共 12 层每层有 12 个 head，下面实验各个 head 提取的特征是否有明显的模式(Bert 模型为在 query-title 数据上 finetune 好的中文&lt;strong&gt;字&lt;/strong&gt;模型)&lt;/p&gt;
-&lt;h3 id=&#34;21-attention-head-比较冗余&#34;&gt;&lt;strong&gt;2.1 Attention-Head 比较冗余&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;标准大小的 bert 一共有 12*12 共 144 个 head.我们尝试对训练好的 bert 模型，随机 mask 掉一定比例的 head,再在测试数据集上测试分档的准确率(&lt;strong&gt;五分类&lt;/strong&gt;)。&lt;/p&gt;
-&lt;p&gt;下图的柱状图的数值表示相比于 bseline(也就是不做任何 head-mask)模型 acc 的相对提升,如+1%表示比 baseline 模型的 acc 相对提高了 1%，从下面的图可以看到，随机 mask 掉低于 20%的 head，在测试数据集上模型的 acc 不会降低，甚至当 mask 掉 10%的 head 的时候模型表现比不做 head mask 的时候还提升了 1%。当 mask 掉超过一定数量的 head 后，模型表现持续下降，mask 掉越多表现越差。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic3.zhimg.com/80/v2-5725214f86d8232f6060e7177d0e92ca_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;同时为了弄清楚底层和高层的 transformer 哪个对于 query-title 分类更加的重要，分别对底层(layer0 ~ layer5 )和高层(layer6~layer11)的 head 做 mask, 去掉的 head 比例控制在 0~50%(占总 head 数量)之间，50%表示去掉了底层或者是高层 100%的 head 下面的图很清晰的说明了底层和高层的 attention-head 关系，橙色部分表示只 mask 掉高层(6 - 11 层)的 head,蓝色部分表示只 mask 掉底层(0 - 5 层)的 head。&lt;/p&gt;
-&lt;p&gt;显然高层的 attention-head 非常的依赖底层的 head，底层的 attention-head 负责提取输入文本的各种特征，而高层的 attention 负责将这些特征结合起来。具体表现在当 mask 掉底层(0~5 层)的 80%的 head(图中横坐标为 40%)和 mask 掉底层的 100%的 head(图中横坐标为 50%)时，模型在测试数据集上表现下降剧烈(图中蓝色部分)，说明了去掉大部分的底层 head 后只依赖高层的 head 是不行的，高层的 head 并没有提取输入的特征。相反去掉大部分高层的 head 后模型下降的并没有那么剧烈(图中橙色部分)，说明了底层的 head 提取到了很多对于本任务有用的输入特征，这部分特征通过残差连接可以直接传导到最后一层用做分类。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/80/v2-39143ffec66598679568a993dac38b69_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;这个结论后面也可以用于指导模型蒸馏，实验结果表明底层的 transformer 比高层的 transformer 更加的重要，显然我们在蒸馏模型时需要保留更多的底层的 head&lt;/p&gt;
-&lt;p&gt;那么对于模型来说是否有某些层的 head 特别能影响 query-title 分类呢？假设将 bert 中所有的 attention-head 看做一个 12*12 的方阵，下面是按行 mask 掉一整行 head 后模型在测试数据上的表现，柱状图上的数值表示相比 baseline 模型的相对提升。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic4.zhimg.com/80/v2-e19db86266c333175066bf06d28c21bb_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;可以看到 mask 掉第 5 层～第 9 层的 head 都模型都有比较大的正面提升，特别是当去掉整个第 8 层的 attention-head 的时候测试数据准确率相对提升了 2.3%，从上图可以得到两个结论：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Bert 模型非常的健壮或者是冗余度很高&lt;/li&gt;
-&lt;li&gt;Bert 模型各层之间不是串行依赖的关系，信息并不是通过一层一层 transformer 层来传递的&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;bert 模型非常的健壮或者是冗余度很高，直接去掉一整层的 attention-head 并不会对模型的最终表现有太大的影响。 直接去掉整层的 attention-head 模型表现并没有大幅度的下降，说明各层提取的特征信息并不是一层一层的串行传递到分类器的，而是通过残差连接直接传导到对应的层。&lt;/p&gt;
-&lt;h3 id=&#34;22-某些-head-负责判断词的边界使得字模型带有分词信息&#34;&gt;&lt;strong&gt;2.2 某些 head 负责判断词的边界(使得字模型带有分词信息)&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;在我们的 query-title 分档场景中，发现词粒度的 bert 和字粒度的 bert 最终的表现是差不多的，而对于 rnn 模型来说字粒度的 rnn 很难达到词粒度 rnn 的效果，我们希望研究一下为什么词粒度和字粒度的 bert 表现差不多。&lt;/p&gt;
-&lt;p&gt;使用的 bert 可视化工具**&lt;a href=&#34;https://link.zhihu.com/?target=https%3A//github.com/jessevig/bertviz&#34;&gt;bert_viz&lt;/a&gt;**&lt;img src=&#34;https://www.zhihu.com/equation?tex=%5E%7B%5B2%5D%7D&#34; alt=&#34;[公式]&#34;&gt;观察各层 attention-head 的 attention 权重分布，可以发现某些 head 带有很明显的分词信息。推测这部分 attention-head 是专门用于提取分词信息的 head。当当前的字可能是词的结尾时，att 权重会偏向 sep,当这个字为词的结尾可能性越大(常见的词结尾)，sep 的权重会越高。当当前字不是词结尾时，att 会指向下一个字。**这种模式非常明显，直接拿这个 attention-head 的结果用于分词准确率为 70%。**&lt;/p&gt;
-&lt;p&gt;下面 gif 为我们模型中第 1 层第 3 个 head 的 attention 分布权重图，可以发现 attention 权重很明显带有词的边界信息，当当前的字是结尾时 attention 权重最大的 token 为&amp;quot;SEP&amp;quot;，若当前字不是结尾时 attention 权重最大的为下一个字。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/v2-47dbfcf64677c3dfd7152735e64a58e9_b.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;这种用于提取分词信息的 head 有很多，且不同的 head 有不同的分词粒度，如果将多个粒度的分词综合考虑(有一个 head 分词正确就行)，则直接用 attention-head 切词的准确率在 96%，这也是为什么词粒度 bert 和字粒度 bert 表现差不多的原因。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/80/v2-bde0a5f3b6c50b5716e074306bca1cbd_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;猜测字粒度 bert 带词边界信息是通过 bert 的预训练任务 MLM 带来的，语言模型的训练使得 bert 对各个字之间的组合非常的敏感，从而能够区分词的边界信息。&lt;/p&gt;
-&lt;h3 id=&#34;23-某些-head-负责编码输入的顺序&#34;&gt;&lt;strong&gt;2.3 某些 head 负责编码输入的顺序&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;我们知道 bert 的输入为 token_emb+pos_emb+seg_type_emb 这三个部分相加而成，而文本输入的顺序完全是用 pos_emb 来隐式的表达。bert 中某些 head 实际上负责提取输入中的位置信息。这种 attention-head 有明显的上下对齐的模式，如下图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic1.zhimg.com/80/v2-11ce4ed825f4130f0d16f3e6562c8430_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;原输入: query=&amp;ldquo;京东小哥&amp;rdquo;, title=&amp;ldquo;京东小哥最近在干嘛&amp;rdquo;,bert 模型判定为 4 档&lt;/p&gt;
-&lt;p&gt;将 title 顺序打乱: query=&amp;ldquo;京东小哥&amp;rdquo;, title=&amp;ldquo;近东嘛最都在干哥小京&amp;rdquo;,bert 模型判定为&lt;strong&gt;2 档&lt;/strong&gt; 将 title 顺序打乱: query=&amp;ldquo;京东小哥&amp;rdquo;, title=&amp;ldquo;近东嘛最都在干哥小京&amp;rdquo;,mask 掉 7 个怀疑用于提取语序的 head,bert 模型判定为&lt;strong&gt;3 档&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;下面的图分别对比了不做 mask，随机 mask 掉 7 个 head(重复 100 次取平均值)，mask 掉 7 个特定的 head(怀疑带有语序信息的 head) 从下面的图看到，mask 掉 7 个特定的 head 后整体分档提升为 3 档，而随机 mask 掉 7 个 head 结果仍然为 2 档，且档位概率分布和不 mask 的情况差别不大。&lt;/p&gt;
-&lt;p&gt;这个 case 说明了我们 mask 掉的 7 个特定的 head 应该是负责提取输入的顺序信息，也就是语序信息。将这部分 head mask 掉后，bert 表现比较难察觉到 title 中的乱序，从而提升了分档。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic1.zhimg.com/80/v2-baf0efbdabfcf5459e942e5a5d609f8c_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;24-某些-head-负责-query-和-title-中相同部分的-term-匹配&#34;&gt;&lt;strong&gt;2.4 某些 head 负责 query 和 title 中相同部分的 term 匹配&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;query 和 title 中是否有相同的 term 是我们的分类任务中非常关键的特征，假如 query 中大部分 term 都能在 title 中找到，则 query 和 title 相关性一般比较高。如 query=&amp;ldquo;京东小哥&amp;quot;就能完全在 title=&amp;ldquo;京东小哥最近在干嘛&amp;quot;中找到，两者的文本相关性也很高。我们发现部分 attention-head 负责提取这种 term 匹配特征，这种 head 的 attention 权重分布一般如下图，可以看到上句和下句中相同 term 的权重很高(颜色越深表示权重越大)。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic4.zhimg.com/80/v2-c2fa3ba68b6cc0c7ccdbfe1d4c182dbb_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;其中在第 2~第 4 层有 5 个 head 匹配的模式特别明显。我们发现虽然 bert 模型中 attention-head 很冗余，去掉一些 head 对模型不会有太大的影响，但是有少部分 head 对模型非常重要，下面展示这 5 个 head 对模型的影响，表格中的数值表示与 baseline 模型的 acc 相对提升值。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic1.zhimg.com/80/v2-e3302aae2032e8ff09b807f1f8e2a97c_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;利用测试数据作为标准，分别测试随机 mask 掉 5 个 head 和 mask 掉 5 个指定的 head(这些 head 在 attention 可视化上都有明显的 query-title 匹配的模式)。从结果可以看到去掉这些负责 query-title 匹配的 head 后模型表现剧烈下降，只去掉这 5 个 head 就能让模型表现下降 50%。甚至 mask 掉 0~5 层其他 head，只保留这 5 个 head 时模型仍维持 baseline 模型 82%的表现，说明了 query-title 的 term 匹配在我们的任务中是非常重要的。&lt;/p&gt;
-&lt;p&gt;这也许是为什么双塔 bert 在我们的场景下表现会那么差的原因(Bert+LSTM 实验中两个模型结合最后的表现差于只使用 Bert, Bert 的输入为双塔输入)，因为 query 和 title 分别输入，使得这些 head 没有办法提取 term 的匹配特征(相当于 mask 掉了这些 head)，而这些匹配特征对于我们的分类任务是至关重要的&lt;/p&gt;
-&lt;h3 id=&#34;241-finetune-对于负责-term-匹配-attention-head-的影响&#34;&gt;&lt;strong&gt;2.4.1 finetune 对于负责 term 匹配 attention-head 的影响&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;在 query-title 分档任务中 query 和 title 中是否有相同的 term 是很重要的特征，那么在 finetune 过程中负责 query-title 中相同 term 匹配的 head 是否有比较明显的增强呢？&lt;/p&gt;
-&lt;p&gt;下面以 case 为例说明： query=&amp;ldquo;我在伊朗长大&amp;rdquo; title=&amp;ldquo;假期电影《我在伊朗长大》&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;下图展示了 query-title 数据&lt;em&gt;&lt;strong&gt;finetune 前&lt;/strong&gt;&lt;/em&gt;&lt;strong&gt;某个&lt;/strong&gt;负责 term 匹配的 head 的 attention 分配图&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic4.zhimg.com/80/v2-1fe9e219c26f2708b7f9e7cb1b251d2b_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;在&lt;strong&gt;没有 finetune 前&lt;/strong&gt;，可以看到某些 head 也会对上下句中重复的 term 分配比较大的 attention 值，这个特质可能是来自预训练任务 NSP(上下句预测)。因为假如上句和下句有出现相同的 term，则它们是上下句的概率比较大，所以 bert 有一些 head 专门负责提取这种匹配的信息。&lt;/p&gt;
-&lt;p&gt;除了上下句相同的 term 有比较大的注意力，每个 term 对自身也有比较大的注意力权重（体现在图中对角线上的值都比较大) 为了更直观的看&lt;strong&gt;训练前后&lt;/strong&gt;哪部分的 attention 值有比较大的改变，分别展示训练后 attention&lt;strong&gt;增强&lt;/strong&gt;(微调前-微调后&amp;gt;0)和训练后 attention&lt;strong&gt;减弱&lt;/strong&gt;(微调前-微调后&amp;lt;0)的 attention 分配图。可以观察到比较明显的几个点：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;query 和 title 中 term 匹配的 attention 值变大了 从下图可以看到, query 和 title 中具有相同 term 时 attention 相比于训练前是有比较大的增强。说明在下游任务(query-title 分档)训练中增强了这个 head 的相同 term 匹配信息的抽取能力。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic4.zhimg.com/80/v2-edb5789f6481831d6f60495980be5d97_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;term 和自身的 attention 变小了 模型将重点放在找 query 和 title 中是否有相同的 term，弱化了 term 对自身的注意力权重&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic3.zhimg.com/80/v2-3bd82ee8721a541b2b992490bc0d8b86_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;分隔符 sep 的 attention 值变小了。 有**&lt;a href=&#34;https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/1906.04341.pdf&#34;&gt;论文&lt;/a&gt;**指出当某个 token 的 attention 指向 sep 时表示一种不分配的状态(即此时没有找到合适的 attention 分配方式)，在经过 finetune 后 term 指向 sep 的权重变小了，表示经过 query-title 数据训练后这个 head 的 attention 分配更加的明确了。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;242-是否有某个-head-特别能影响模型&#34;&gt;&lt;strong&gt;2.4.2 是否有某个 head 特别能影响模型&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;从上面的实验可以看到，bert 模型有比较多冗余的 head。去掉一部分这些 head 并不太影响模型，但是有少部分 head 特别能影响模型如上面提到的负责提取上下句中 term 匹配信息的 head，只去掉 5 个这种 head 就能让模型的表现下降 50%。那么是否有某个 head 特别能影响结果呢？&lt;/p&gt;
-&lt;p&gt;下面实验每次只 mask 掉一个 head，看模型在测试数据中表现是否上升/下降。下图中将 bert 的 144 个 head 看作 12X12 的矩阵，矩阵内每个元素表示去掉这个 head 后模型在测试数据上的表现。其中 0 表示去掉后对模型的影响不太大。元素内的值表示相对于 baseline 的表现提升，如+1%表示相比 baseline 的 acc 提高了 1%。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/80/v2-df23645337d194720fdc725f3ef16661_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;可以看到对于 bert 的大部分 head，单独去掉这个 head 对模型并不会造成太大的影响，而有少部分 head 确实特别能影响模型，比如负责上下句(query-title)中相同 term 匹配的 head。即使去掉一个这种 head 也会使得模型的表现下降。同时注意到高层(第 10 层)有一个 head 去掉后模型表现变化也很大，实验发现这个 head 功能是负责抽取底层 head 输出的特征，也就是 3-4 层中 head 抽取到输入的 query-title 有哪些相同 term 特征后，这部分信息会传递到第 10 层进一步进行提取，最后影响分类。&lt;/p&gt;
-&lt;h3 id=&#34;243-高层-head-是如何提取底层-head-特征-一个典型-case&#34;&gt;&lt;strong&gt;2.4.3 高层 head 是如何提取底层 head 特征-一个典型 case&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;上图中，在第 10 层有一个 head 去掉后特别能影响模型，观察其 attention 的分布，cls 的 attention 都集中在 query 和 title 中相同的 term 上，似乎是在对底层 term 匹配 head 抽取到的特征进一步的提取，将这种匹配特征保存到 cls 中(cls 最后一层会用于分类)。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic3.zhimg.com/80/v2-eabcfa5e4f4cce8da54f5ac32a49ba9e_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;在没有做任何 head-mask 时, 可以看到 cls 的 attention 主要分配给和 query 和 title 中的共同 term &amp;ldquo;紫熨斗&amp;rdquo;，而 mask 掉 5 个 2~4 层的 head(具有 term 匹配功能)时, 第 10 层的 cls 注意力分配明显被改变，分散到更多的 term 中。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/80/v2-f02a2af3967dda0e4770082473040881_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;这个 case 展示了高层 attention-head 是如何依赖底层的 head 的特征，进一步提取底层的特征并最后作为重要特征用于 query-title 分类。&lt;/p&gt;
-&lt;h3 id=&#34;结语&#34;&gt;&lt;strong&gt;结语&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;本文主要探讨了在 query-title 分类场景下,bert 模型的可解释性。主要从 attention-head 角度入手，发现 attention 一方面非常的冗余，去掉一部分 head 其实不会对模型造成多大的影响。另外一方面有一些 head 却非常的能影响模型，即使去掉一个都能让模型表现变差不少。同时发现不同的 head 实际上有特定的功能，比如底层的 head 负责对输入进行特征提取，如分词、提取输入的语序关系、提取 query 和 title(也就是上下句)中相同的 term 信息等。这部分底层的 head 提取到的特征会通过残差连接送到高层的 head 中，高层 head 会对这部分特征信息进行进一步融合，最终作为分类特征输入到分类器中。&lt;/p&gt;
-&lt;p&gt;本文重点讨论了哪些 head 是对模型有正面作用，也就是去掉这些 head 后模型表现变差了。但是如果知道了哪些 head 为什么对模型有负面作用，也就是为什么去掉某些 head 模型效果会更好，实际上对于我们有更多的指导作用。这部分信息能够帮助我们在模型加速，提升模型表现上少走弯路。&lt;/p&gt;
-&lt;h3 id=&#34;参考文献&#34;&gt;&lt;strong&gt;参考文献&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;[1] Clark K, Khandelwal U, Levy O, et al. What Does BERT Look At? An Analysis of BERT&amp;rsquo;s Attention[J]. arXiv preprint arXiv:1906.04341, 2019.&lt;/p&gt;
-&lt;p&gt;[2] Vig J. A multiscale visualization of attention in the transformer model[J]. arXiv preprint arXiv:1906.05714, 2019.&lt;/p&gt;
-&lt;p&gt;作者：vincehou，腾讯 TEG 应用研究员&lt;/p&gt;
-&lt;p&gt;更多干货尽在&lt;a href=&#34;https://www.zhihu.com/org/teng-xun-ji-zhu-gong-cheng&#34;&gt;腾讯技术&lt;/a&gt;，官方QQ交流群已建立，交流讨论可加：957411539。&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Tensorflow</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/tensorflow/</link>
-      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/tensorflow/</guid>
-      
-        <description>&lt;h1 id=&#34;tensorflow&#34;&gt;TensorFlow&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;http://ww1.sinaimg.cn/large/0083FLjsgy1gg7bk10ef7j30qo0f03zd.jpg&#34; alt=&#34;https://blog.tensorflow.org/2019/09/tensorflow-20-is-now-available.html&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;install-tensorflow-2&#34;&gt;Install TensorFlow 2&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Version&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Python version&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Compiler&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Build tools&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;tensorflow-2.2.0&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;3.5-3.8&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;GCC 7.3.1&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Bazel 2.0.0&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;tensorflow-2.1.0&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;2.7, 3.5-3.7&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;GCC 7.3.1&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Bazel 0.27.1&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;tensorflow-2.0.0&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;2.7, 3.3-3.7&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;GCC 7.3.1&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Bazel 0.26.1&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;pre&gt;&lt;code&gt;sudo pacman -U cuda-10.1.243-2-x86_64.pkg.tar.xz
-sudo pacman -U cudnn-7.6.5.32-2-x86_64.pkg.tar.xz
-pip install tensorflow-gpu
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;data-input-pipelines&#34;&gt;Data input pipelines&lt;/h2&gt;
-&lt;h2 id=&#34;keras&#34;&gt;Keras&lt;/h2&gt;
-&lt;h3 id=&#34;sequential-api&#34;&gt;Sequential API&lt;/h3&gt;
-&lt;h4 id=&#34;when-to-use-a-sequential-model&#34;&gt;When to use a Sequential model&lt;/h4&gt;
-&lt;p&gt;A Sequential model is appropriate for &lt;strong&gt;a plain stack of layers&lt;/strong&gt; where each layer has &lt;strong&gt;exactly one input tensor and one output tensor&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;A Sequential model is &lt;strong&gt;not appropriate&lt;/strong&gt; when:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Your model has multiple inputs or multiple outputs&lt;/li&gt;
-&lt;li&gt;Any of your layers has multiple inputs or multiple outputs&lt;/li&gt;
-&lt;li&gt;You need to do layer sharing&lt;/li&gt;
-&lt;li&gt;You want non-linear topology (e.g. a residual connection, a multi-branch model)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The Sequential constructor accepts a &lt;code&gt;name&lt;/code&gt; argument, just like any layer or model in Keras. This is useful to annotate TensorBoard graphs with semantically meaningful names.&lt;/p&gt;
-&lt;h4 id=&#34;specifying-the-input-shape-in-advance&#34;&gt;Specifying the input shape in advance&lt;/h4&gt;
-&lt;p&gt;it can be very useful when building a Sequential model incrementally to be able to display the summary of the model so far, including the current output shape. In this case, you should start your model by passing an &lt;code&gt;Input&lt;/code&gt; object to your model, so that it knows its input shape from the start.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;model = keras.Sequential()
-model.add(keras.Input(shape=(4,)))
-model.add(layers.Dense(2, activation=&amp;quot;relu&amp;quot;))
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A simple alternative is to just pass an &lt;code&gt;input_shape&lt;/code&gt; argument to your first layer.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;model = keras.Sequential()
-model.add(layers.Dense(2, activation=&amp;quot;relu&amp;quot;, input_shape=(4,)))
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In general, it&amp;rsquo;s a recommended &lt;strong&gt;best practice&lt;/strong&gt; to always specify the input shape of a Sequential model in advance if you know what it is.&lt;/p&gt;
-&lt;h4 id=&#34;a-common-debugging-workflow-add--summary&#34;&gt;A common debugging workflow: &lt;code&gt;add()&lt;/code&gt; + &lt;code&gt;summary()&lt;/code&gt;&lt;/h4&gt;
-&lt;p&gt;When building a new Sequential architecture, it&amp;rsquo;s useful to incrementally stack layers with &lt;code&gt;add()&lt;/code&gt; and frequently print model summaries.&lt;/p&gt;
-&lt;h4 id=&#34;feature-extraction-with-a-sequential-model&#34;&gt;Feature extraction with a Sequential model&lt;/h4&gt;
-&lt;p&gt;quickly creating a model that extracts the outputs of all intermediate layers in a Sequential model:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;initial_model &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; keras&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Sequential(
-    [
-        keras&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Input(shape&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;)),
-        layers&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Conv2D(&lt;span style=&#34;color:#ae81ff&#34;&gt;32&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;, strides&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;, activation&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;relu&amp;#34;&lt;/span&gt;),
-        layers&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Conv2D(&lt;span style=&#34;color:#ae81ff&#34;&gt;32&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, activation&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;relu&amp;#34;&lt;/span&gt;),
-        &lt;span style=&#34;color:#75715e&#34;&gt;# layers.Conv2D(32, 3, activation=&amp;#34;relu&amp;#34;, name=&amp;#34;my_intermediate_layer&amp;#34;),&lt;/span&gt;
-        layers&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Conv2D(&lt;span style=&#34;color:#ae81ff&#34;&gt;32&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, activation&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;relu&amp;#34;&lt;/span&gt;),
-    ]
-)
-feature_extractor &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; keras&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Model(
-    inputs&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;initial_model&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;inputs,
-    outputs&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[layer&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;output &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; layer &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; initial_model&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layers],
-    &lt;span style=&#34;color:#75715e&#34;&gt;# only extract features from one layer:&lt;/span&gt;
-    &lt;span style=&#34;color:#75715e&#34;&gt;# outputs=initial_model.get_layer(name=&amp;#34;my_intermediate_layer&amp;#34;).output,&lt;/span&gt;
-)
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Call feature extractor on test input.&lt;/span&gt;
-x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tf&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ones((&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;))
-features &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; feature_extractor(x)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;transfer-learning-with-a-sequential-model&#34;&gt;Transfer learning with a Sequential model&lt;/h4&gt;
-&lt;h3 id=&#34;keras-functional-api&#34;&gt;Keras functional API&lt;/h3&gt;
-&lt;h3 id=&#34;train_and_evaluate&#34;&gt;train_and_evaluate&lt;/h3&gt;
-&lt;h3 id=&#34;write-custom-layers-and-models&#34;&gt;Write custom layers and models&lt;/h3&gt;
-&lt;h3 id=&#34;save-and-serialize-models&#34;&gt;Save and serialize models&lt;/h3&gt;
-&lt;h3 id=&#34;customizing-what-happens-in-fit&#34;&gt;Customizing what happens in fit&lt;/h3&gt;
-&lt;h3 id=&#34;writing-a-training-loop-from-scratch&#34;&gt;Writing a training loop from scratch&lt;/h3&gt;
-&lt;h3 id=&#34;keras-recurrent-neural-networks&#34;&gt;Keras Recurrent Neural Networks&lt;/h3&gt;
-&lt;h3 id=&#34;masking-and-padding&#34;&gt;Masking and padding&lt;/h3&gt;
-&lt;h3 id=&#34;write-custom-callbacks&#34;&gt;Write custom callbacks&lt;/h3&gt;
-&lt;h3 id=&#34;transfer-learning&#34;&gt;Transfer learning&lt;/h3&gt;
-&lt;h2 id=&#34;estimators&#34;&gt;Estimators&lt;/h2&gt;
-&lt;h2 id=&#34;save-a-model&#34;&gt;Save a model&lt;/h2&gt;
-&lt;h1 id=&#34;reference&#34;&gt;Reference&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;[&lt;strong&gt;TensorFlow 2.0 is now available!&lt;/strong&gt;]([https://blog.tensorflow.org/2019/09/tensorflow-20-is-now-available.html#:~:text=Today%2C%20we&amp;rsquo;re%20delighted%20to,TensorFlow%202.0%20is%20now%20available!&amp;amp;text=TensorFlow%202.0%20provides%20a%20comprehensive,build%20scalable%20ML%2Dpowered%20applications.](&lt;a href=&#34;https://blog.tensorflow.org/2019/09/tensorflow-20-is-now-available.html#:~:text=Today%2C&#34;&gt;https://blog.tensorflow.org/2019/09/tensorflow-20-is-now-available.html#:~:text=Today%2C&lt;/a&gt; we&amp;rsquo;re delighted to,TensorFlow 2.0 is now available!&amp;amp;text=TensorFlow 2.0 provides a comprehensive,build scalable ML-powered applications.))&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://afteracademy.com/blog/getting-started-with-tensorflow-2-tutorial-step-by-step-guide&#34;&gt;&lt;strong&gt;Getting started with Tensorflow 2.0 Tutorial&lt;/strong&gt; &lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
 </description>
       
     </item>

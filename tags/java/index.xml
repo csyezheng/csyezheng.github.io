@@ -9,19 +9,19 @@
     <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Java 3rd Library</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-3rd-party-library/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-3rd-party-library/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-3rd-party-library/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-3rd-party-library/</guid>
       <description>import org.alibaba.fastjson.JSONArray; import org.alibaba.fastjson.JSONObject; import com.amazonaws.Request; import com.amazonaws.utils.StringUtils; import com.atomikos.datasource.xa.StringUtils; import com.fasterxml.jackson.core.JsonParseException; import com.fasterxml.jackson.annotation.JsonFormat; import com.fasterxml.jackson.core.io.JsonStringEncoder; import com.fasterxml.jackson.core.type.TypeReference; import com.fasterxml.jackson.databind.JavaType; import com.fasterxml.jackson.databind.DeserializationFeature; import com.fasterxml.jackson.databind.JsonMappingException; import com.fasterxml.jackson.databind.ObjectMapper; import com.google.common.cache.CacheBuilder; import com.google.common.cache.CacheLoader; import com.google.common.cache.LoadingCache; import com.google.gson.Gson; import com.ibm.db2.jcc.am.re; import com.jayway.restassured.RestAssured; import com.jayway.restassured.path.json.JsonPath; import com.jayway.restassured.config.RestAssuredconfig; import com.jayway.restassured.response.Response; import com.jayway.restassured.response.ValidatableResponse; import com.jayway.restassured.specification.RequestSpecification; import freemarker.template.Template; import freemarker.template.TemplateException; import groovy.json.internal.JsonFastParser; import groovy.json.internal.ValueMap; import org.apache.ws.security.WSSecurityException; import org.apache.ws.security.util.Base64; net.sf.json JSONArray JSONNull JSONObject org.activiti.engine https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1 commons beanutils BeanUtils; collection</description>
     </item>
     
     <item>
       <title>The Java Standard Library</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-standard-library/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-standard-library/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-standard-library/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-standard-library/</guid>
       <description>Collections Interfaces Note that all the core collection interfaces are generic. For example, this is the declaration of the Collection interface.
 public interface Collection&amp;lt;E&amp;gt;... The Collection Interface List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;(c); The Collection interface contains methods that perform basic operations, such as
  int size() boolean isEmpty() boolean contains(Object element) boolean add(E element) boolean remove(Object element) Iterator&amp;lt;E&amp;gt; iterator()  It also contains methods that operate on entire collections, such as</description>
@@ -29,20 +29,20 @@ public interface Collection&amp;lt;E&amp;gt;... The Collection Interface List&am
     
     <item>
       <title>maven</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/maven/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/java/maven/</link>
       <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/maven/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/java/maven/</guid>
       <description>Introduction to the Build Lifecycle Build Lifecycle Basics Maven is based around the central concept of a build lifecycle. What this means is that the process for building and distributing a particular artifact (project) is clearly defined.
 There are three built-in build lifecycles: default, clean and site. The default lifecycle handles your project deployment, the clean lifecycle handles project cleaning, while the site lifecycle handles the creation of your project&amp;rsquo;s site documentation.</description>
     </item>
     
     <item>
       <title>The Java Tutorials</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-tutorials/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-tutorials/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/the-java-tutorials/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-tutorials/</guid>
       <description>Getting Started The Java programming language is a high-level language that can be characterized by all of the following buzzwords:
  Simple Object oriented Distributed Multithreaded Dynamic Architecture neutral Portable High performance Robust Secure  An overview of the software development process:
 all source code is first written in plain text files ending with the .java extension. Those source files are then compiled into .class files by the javac compiler. A .</description>
@@ -50,10 +50,10 @@ all source code is first written in plain text files ending with the .java exten
     
     <item>
       <title>learn Java in Y minutes</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/learn-java-in-y-minutes/</link>
+      <link>http://csyezheng.github.io/post/engineering-fundamentals/java/learn-java-in-y-minutes/</link>
       <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/programming-languages/java/learn-java-in-y-minutes/</guid>
+      <guid>http://csyezheng.github.io/post/engineering-fundamentals/java/learn-java-in-y-minutes/</guid>
       <description>// Single-line comments start with // /* Multi-line comments look like this. */ /** * JavaDoc comments look like this. Used to describe the Class or various * attributes of a Class. * Main attributes: * * @author Name (and contact information such as email) of author(s). * @version Current version of the program. * @since When this part of the program was first added. * @param For describing the different parameters for a method.</description>
     </item>
     

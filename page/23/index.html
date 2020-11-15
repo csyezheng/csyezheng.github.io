@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.76.5" />
+<meta name="generator" content="Hugo 0.78.1" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-10-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,7 +296,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/programming-languages/scala/a-tour-of-scala/">The tour of Scala</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/package_download/">package_download</a>
     </h1>
     
     <div class="post-meta">
@@ -304,8 +304,7 @@
         2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/scala/"> Scala </a>
+          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -317,10 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Introduction Scala is object-oriented: every value is an object.  classes traits mixin-based composition as a clean replacement for multiple inheritance.  Scala is functional: every function is a value.  higher-order functions nested functions currying (multiple parameter lists) case classes pattern matching model algebraic types used in many functional programming languages. Singleton objects provide a convenient way to group functions that aren’t members of a class.  Scala is statically typed the type system supports:
+      gopm get -g -v golang.org/x/sys 
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/programming-languages/scala/a-tour-of-scala/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/package_download/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,7 +330,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/programming-languages/typescript/typescript/">TypeScript</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/photoprism/">photoprism</a>
     </h1>
     
     <div class="post-meta">
@@ -339,8 +338,7 @@
         2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/typescript/"> TypeScript </a>
+          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -352,10 +350,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件
+      Step 1: Clone this project:
+git clone https://github.com/photoprism/photoprism.git Step 2: Start Docker containers:
+cd photoprism sudo docker-compose up Step 3: Open a new terminal to the photoprism container:
+sudo docker-compose exec photoprism bash 
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/programming-languages/typescript/typescript/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/photoprism/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -366,16 +367,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/programming-languages/java/learn-java-in-y-minutes/">learn Java in Y minutes</a>
+      <a class="post-link" href="/post/engineering-fundamentals/python/datetime/">Python datetime</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-02-01" class="post-time">
-        2019-02-01
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/programming-languages/"> programming-languages </a>
-          <a href="http://csyezheng.github.io/categories/java/"> Java </a>
+          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -387,10 +387,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      // Single-line comments start with // /* Multi-line comments look like this. */ /** * JavaDoc comments look like this. Used to describe the Class or various * attributes of a Class. * Main attributes: * * @author Name (and contact information such as email) of author(s). * @version Current version of the program. * @since When this part of the program was first added. * @param For describing the different parameters for a method.
+      datetime 8.1. datetime
+The datetime module, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation.
+There are two kinds of date and time objects: “naive” and “aware”.
+An aware object has sufficient knowledge of applicable algorithmic and political time adjustments, such as time zone and daylight saving time information, to locate itself relative to other aware objects. An aware object is used to represent a specific moment in time.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/programming-languages/java/learn-java-in-y-minutes/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/python/datetime/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1233,6 +1236,90 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/24/">»</a></li>
@@ -1240,7 +1327,7 @@
 
       
       
-      <li><a href="/page/33/">»»</a></li>
+      <li><a href="/page/37/">»»</a></li>
       
 
       </ul>

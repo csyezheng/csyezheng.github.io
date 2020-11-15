@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 15 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Elasticsearch Tutorial</title>
-      <link>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/elasticsearch/</link>
+      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/elasticsearch/</link>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/computer-and-network-security/web-application/back-end/elasticsearch/</guid>
+      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/elasticsearch/</guid>
       <description>Getting Started Installing and Running Elasticsearch Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &amp;quot;localhost&amp;quot; elasticsearch.hosts: [&amp;quot;http://localhost:9200&amp;quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
 Installing Sense Sense is a Kibana app that provides an interactive console for submitting requests to Elasticsearch directly from your browser.</description>
     </item>

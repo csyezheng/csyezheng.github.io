@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pinpoint on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/pinpoint/</link>
+    <description>Recent content in pinpoint on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 30 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/pinpoint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Application performance management</title>
+      <link>http://csyezheng.github.io/post/specialization/devops/pinpoint/</link>
+      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/devops/pinpoint/</guid>
+      <description>分布式系统快速接入pinpoint1.8.3指南 本文链接：https://blog.csdn.net/boling_cavalry/arti</description>
+    </item>
+    
+  </channel>
+</rss>

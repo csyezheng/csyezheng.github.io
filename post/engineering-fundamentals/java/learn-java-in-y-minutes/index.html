@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>learn Java in Y minutes - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="// Single-line comments start with // /* Multi-line comments look like this. */ /** * JavaDoc comments look like this. Used to describe the Class or various * attributes of a Class. * Main attributes: * * @author Name (and contact information such as email) of author(s). * @version Current version of the program. * @since When this part of the program was first added. * @param For describing the different parameters for a method." />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.78.1" />
+
+
+<link rel="canonical" href="http://csyezheng.github.io/post/engineering-fundamentals/java/learn-java-in-y-minutes/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="learn Java in Y minutes" />
+<meta property="og:description" content="// Single-line comments start with // /* Multi-line comments look like this. */ /** * JavaDoc comments look like this. Used to describe the Class or various * attributes of a Class. * Main attributes: * * @author Name (and contact information such as email) of author(s). * @version Current version of the program. * @since When this part of the program was first added. * @param For describing the different parameters for a method." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://csyezheng.github.io/post/engineering-fundamentals/java/learn-java-in-y-minutes/" />
+<meta property="article:published_time" content="2019-02-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-02-01T00:00:00+00:00" />
+<meta itemprop="name" content="learn Java in Y minutes">
+<meta itemprop="description" content="// Single-line comments start with // /* Multi-line comments look like this. */ /** * JavaDoc comments look like this. Used to describe the Class or various * attributes of a Class. * Main attributes: * * @author Name (and contact information such as email) of author(s). * @version Current version of the program. * @since When this part of the program was first added. * @param For describing the different parameters for a method.">
+<meta itemprop="datePublished" content="2019-02-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-02-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="4556">
+
+
+
+<meta itemprop="keywords" content="Java," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="learn Java in Y minutes"/>
+<meta name="twitter:description" content="// Single-line comments start with // /* Multi-line comments look like this. */ /** * JavaDoc comments look like this. Used to describe the Class or various * attributes of a Class. * Main attributes: * * @author Name (and contact information such as email) of author(s). * @version Current version of the program. * @since When this part of the program was first added. * @param For describing the different parameters for a method."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">learn Java in Y minutes</h1>
+      
+      <div class="post-meta">
+        <time datetime="2019-02-01" class="post-time">
+          2019-02-01
+        </time>
+        <div class="post-category">
+            <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <pre><code>// Single-line comments start with //
+
+/*
+Multi-line comments look like this.
+*/
+
+/**
+ * JavaDoc comments look like this. Used to describe the Class or various
+ * attributes of a Class.
+ * Main attributes:
+ *
+ * @author         Name (and contact information such as email) of author(s).
+ * @version     Current version of the program.
+ * @since        When this part of the program was first added.
+ * @param         For describing the different parameters for a method.
+ * @return        For describing what the method returns.
+ * @deprecated  For showing the code is outdated or shouldn't be used.
+ * @see         Links to another part of documentation.
+*/
+
+// Import ArrayList class inside of the java.util package
+import java.util.ArrayList;
+// Import all classes inside of java.security package
+import java.security.*;
+
+public class LearnJava {
+
+    // In order to run a java program, it must have a main method as an entry
+    // point.
+    public static void main(String[] args) {
+
+    ///////////////////////////////////////
+    // Input/Output
+    ///////////////////////////////////////
+
+        /*
+        * Output
+        */
+
+        // Use System.out.println() to print lines.
+        System.out.println(&quot;Hello World!&quot;);
+        System.out.println(
+            &quot;Integer: &quot; + 10 +
+            &quot; Double: &quot; + 3.14 +
+            &quot; Boolean: &quot; + true);
+
+        // To print without a newline, use System.out.print().
+        System.out.print(&quot;Hello &quot;);
+        System.out.print(&quot;World&quot;);
+
+        // Use System.out.printf() for easy formatted printing.
+        System.out.printf(&quot;pi = %.5f&quot;, Math.PI); // =&gt; pi = 3.14159
+
+        /*
+         * Input
+         */
+
+        // use Scanner to read input
+        // must import java.util.Scanner;
+        Scanner scanner = new Scanner(System.in);
+
+        // read string input
+        String name = scanner.next();
+
+        // read byte input
+        byte numByte = scanner.nextByte();
+
+        // read int input
+        int numInt = scanner.nextInt();
+
+        // read long input
+        float numFloat = scanner.nextFloat();
+
+        // read double input
+        double numDouble = scanner.nextDouble();
+
+        // read boolean input
+        boolean bool = scanner.nextBoolean();
+
+        ///////////////////////////////////////
+        // Variables
+        ///////////////////////////////////////
+
+        /*
+        *  Variable Declaration
+        */
+        // Declare a variable using &lt;type&gt; &lt;name&gt;
+        int fooInt;
+        // Declare multiple variables of the same
+        // type &lt;type&gt; &lt;name1&gt;, &lt;name2&gt;, &lt;name3&gt;
+        int fooInt1, fooInt2, fooInt3;
+
+        /*
+        *  Variable Initialization
+        */
+
+        // Initialize a variable using &lt;type&gt; &lt;name&gt; = &lt;val&gt;
+        int barInt = 1;
+        // Initialize multiple variables of same type with same
+        // value &lt;type&gt; &lt;name1&gt;, &lt;name2&gt;, &lt;name3&gt;
+        // &lt;name1&gt; = &lt;name2&gt; = &lt;name3&gt; = &lt;val&gt;
+        int barInt1, barInt2, barInt3;
+        barInt1 = barInt2 = barInt3 = 1;
+
+        /*
+        *  Variable types
+        */
+        // Byte - 8-bit signed two's complement integer
+        // (-128 &lt;= byte &lt;= 127)
+        byte fooByte = 100;
+
+        // If you would like to interpret a byte as an unsigned integer
+        // then this simple operation can help
+        int unsignedIntLessThan256 = 0xff &amp; fooByte;
+        // this contrasts a cast which can be negative.
+        int signedInt = (int) fooByte;
+
+        // Short - 16-bit signed two's complement integer
+        // (-32,768 &lt;= short &lt;= 32,767)
+        short fooShort = 10000;
+
+        // Integer - 32-bit signed two's complement integer
+        // (-2,147,483,648 &lt;= int &lt;= 2,147,483,647)
+        int bazInt = 1;
+
+        // Long - 64-bit signed two's complement integer
+        // (-9,223,372,036,854,775,808 &lt;= long &lt;= 9,223,372,036,854,775,807)
+        long fooLong = 100000L;
+        // L is used to denote that this variable value is of type Long;
+        // anything without is treated as integer by default.
+
+        // Note: byte, short, int and long are signed. They can have positive and negative values.
+        // There are no unsigned variants.
+        // char, however, is 16-bit unsigned.
+
+        // Float - Single-precision 32-bit IEEE 754 Floating Point
+        // 2^-149 &lt;= float &lt;= (2-2^-23) * 2^127
+        float fooFloat = 234.5f;
+        // f or F is used to denote that this variable value is of type float;
+        // otherwise it is treated as double.
+
+        // Double - Double-precision 64-bit IEEE 754 Floating Point
+        // 2^-1074 &lt;= x &lt;= (2-2^-52) * 2^1023
+        double fooDouble = 123.4;
+
+        // Boolean - true &amp; false
+        boolean fooBoolean = true;
+        boolean barBoolean = false;
+
+        // Char - A single 16-bit Unicode character
+        char fooChar = 'A';
+
+        // final variables can't be reassigned,
+        final int HOURS_I_WORK_PER_WEEK = 9001;
+        // but they can be initialized later.
+        final double E;
+        E = 2.71828;
+
+        // BigInteger - Immutable arbitrary-precision integers
+        //
+        // BigInteger is a data type that allows programmers to manipulate
+        // integers longer than 64-bits. Integers are stored as an array of
+        // of bytes and are manipulated using functions built into BigInteger
+        //
+        // BigInteger can be initialized using an array of bytes or a string.
+        BigInteger fooBigInteger = new BigInteger(fooByteArray);
+
+        // BigDecimal - Immutable, arbitrary-precision signed decimal number
+        //
+        // A BigDecimal takes two parts: an arbitrary precision integer
+        // unscaled value and a 32-bit integer scale
+        //
+        // BigDecimal allows the programmer complete control over decimal
+        // rounding. It is recommended to use BigDecimal with currency values
+        // and where exact decimal precision is required.
+        //
+        // BigDecimal can be initialized with an int, long, double or String
+        // or by initializing the unscaled value (BigInteger) and scale (int).
+        BigDecimal fooBigDecimal = new BigDecimal(fooBigInteger, fooInt);
+
+        // Be wary of the constructor that takes a float or double as
+        // the inaccuracy of the float/double will be copied in BigDecimal.
+        // Prefer the String constructor when you need an exact value.
+        BigDecimal tenCents = new BigDecimal(&quot;0.1&quot;);
+
+        // Strings
+        String fooString = &quot;My String Is Here!&quot;;
+
+        // \n is an escaped character that starts a new line
+        String barString = &quot;Printing on a new line?\nNo Problem!&quot;;
+        // \t is an escaped character that adds a tab character
+        String bazString = &quot;Do you want to add a tab?\tNo Problem!&quot;;
+        System.out.println(fooString);
+        System.out.println(barString);
+        System.out.println(bazString);
+
+        // String Building
+        // #1 - with plus operator
+        // That's the basic way to do it (optimized under the hood)
+        String plusConcatenated = &quot;Strings can &quot; + &quot;be concatenated &quot; + &quot;via + operator.&quot;;
+        System.out.println(plusConcatenated);
+        // Output: Strings can be concatenated via + operator.
+
+        // #2 - with StringBuilder
+        // This way doesn't create any intermediate strings. It just stores the string pieces, and ties them together
+        // when toString() is called.
+        // Hint: This class is not thread safe. A thread-safe alternative (with some impact on performance) is StringBuffer.
+        StringBuilder builderConcatenated = new StringBuilder();
+        builderConcatenated.append(&quot;You &quot;);
+        builderConcatenated.append(&quot;can use &quot;);
+        builderConcatenated.append(&quot;the StringBuilder class.&quot;);
+        System.out.println(builderConcatenated.toString()); // only now is the string built
+        // Output: You can use the StringBuilder class.
+
+        // StringBuilder is efficient when the fully constructed String is not required until the end of some processing.
+        StringBuilder stringBuilder = new StringBuilder();
+        String inefficientString = &quot;&quot;;
+        for (int i = 0 ; i &lt; 10; i++) {
+            stringBuilder.append(i).append(&quot; &quot;);
+            inefficientString += i + &quot; &quot;;
+        }
+        System.out.println(inefficientString);
+        System.out.println(stringBuilder.toString());
+        // inefficientString requires a lot more work to produce, as it generates a String on every loop iteration.
+        // Simple concatenation with + is compiled to a StringBuilder and toString()
+        // Avoid string concatenation in loops.
+
+        // #3 - with String formatter
+        // Another alternative way to create strings. Fast and readable.
+        String.format(&quot;%s may prefer %s.&quot;, &quot;Or you&quot;, &quot;String.format()&quot;);
+        // Output: Or you may prefer String.format().
+
+        // Arrays
+        // The array size must be decided upon instantiation
+        // The following formats work for declaring an array
+        // &lt;datatype&gt;[] &lt;var name&gt; = new &lt;datatype&gt;[&lt;array size&gt;];
+        // &lt;datatype&gt; &lt;var name&gt;[] = new &lt;datatype&gt;[&lt;array size&gt;];
+        int[] intArray = new int[10];
+        String[] stringArray = new String[1];
+        boolean boolArray[] = new boolean[100];
+
+        // Another way to declare &amp; initialize an array
+        int[] y = {9000, 1000, 1337};
+        String names[] = {&quot;Bob&quot;, &quot;John&quot;, &quot;Fred&quot;, &quot;Juan Pedro&quot;};
+        boolean bools[] = {true, false, false};
+
+        // Indexing an array - Accessing an element
+        System.out.println(&quot;intArray @ 0: &quot; + intArray[0]);
+
+        // Arrays are zero-indexed and mutable.
+        intArray[1] = 1;
+        System.out.println(&quot;intArray @ 1: &quot; + intArray[1]); // =&gt; 1
+
+        // Other data types worth checking out
+        // ArrayLists - Like arrays except more functionality is offered, and
+        //              the size is mutable.
+        // LinkedLists - Implementation of doubly-linked list. All of the
+        //               operations perform as could be expected for a
+        //               doubly-linked list.
+        // Maps - A mapping of key Objects to value Objects. Map is
+        //        an interface and therefore cannot be instantiated.
+        //        The type of keys and values contained in a Map must
+        //        be specified upon instantiation of the implementing
+        //        class. Each key may map to only one corresponding value,
+        //        and each key may appear only once (no duplicates).
+        // HashMaps - This class uses a hashtable to implement the Map
+        //            interface. This allows the execution time of basic
+        //            operations, such as get and insert element, to remain
+        //            constant-amortized even for large sets.
+        // TreeMap - A Map that is sorted by its keys. Each modification
+        //           maintains the sorting defined by either a Comparator
+        //           supplied at instantiation, or comparisons of each Object
+        //           if they implement the Comparable interface.
+        //           Failure of keys to implement Comparable combined with failure to
+        //           supply a Comparator will throw ClassCastExceptions.
+        //           Insertion and removal operations take O(log(n)) time
+        //           so avoid using this data structure unless you are taking
+        //           advantage of the sorting.
+
+        ///////////////////////////////////////
+        // Operators
+        ///////////////////////////////////////
+        System.out.println(&quot;\n-&gt;Operators&quot;);
+
+        int i1 = 1, i2 = 2; // Shorthand for multiple declarations
+
+        // Arithmetic is straightforward
+        System.out.println(&quot;1+2 = &quot; + (i1 + i2)); // =&gt; 3
+        System.out.println(&quot;2-1 = &quot; + (i2 - i1)); // =&gt; 1
+        System.out.println(&quot;2*1 = &quot; + (i2 * i1)); // =&gt; 2
+        System.out.println(&quot;1/2 = &quot; + (i1 / i2)); // =&gt; 0 (int/int returns int)
+        System.out.println(&quot;1/2.0 = &quot; + (i1 / (double)i2)); // =&gt; 0.5
+
+        // Modulo
+        System.out.println(&quot;11%3 = &quot;+(11 % 3)); // =&gt; 2
+
+        // Comparison operators
+        System.out.println(&quot;3 == 2? &quot; + (3 == 2)); // =&gt; false
+        System.out.println(&quot;3 != 2? &quot; + (3 != 2)); // =&gt; true
+        System.out.println(&quot;3 &gt; 2? &quot; + (3 &gt; 2)); // =&gt; true
+        System.out.println(&quot;3 &lt; 2? &quot; + (3 &lt; 2)); // =&gt; false
+        System.out.println(&quot;2 &lt;= 2? &quot; + (2 &lt;= 2)); // =&gt; true
+        System.out.println(&quot;2 &gt;= 2? &quot; + (2 &gt;= 2)); // =&gt; true
+
+        // Boolean operators
+        System.out.println(&quot;3 &gt; 2 &amp;&amp; 2 &gt; 3? &quot; + ((3 &gt; 2) &amp;&amp; (2 &gt; 3))); // =&gt; false
+        System.out.println(&quot;3 &gt; 2 || 2 &gt; 3? &quot; + ((3 &gt; 2) || (2 &gt; 3))); // =&gt; true
+        System.out.println(&quot;!(3 == 2)? &quot; + (!(3 == 2))); // =&gt; true
+
+        // Bitwise operators!
+        /*
+        ~      Unary bitwise complement
+        &lt;&lt;     Signed left shift
+        &gt;&gt;     Signed/Arithmetic right shift
+        &gt;&gt;&gt;    Unsigned/Logical right shift
+        &amp;      Bitwise AND
+        ^      Bitwise exclusive OR
+        |      Bitwise inclusive OR
+        */
+
+        // Increment operators
+        int i = 0;
+        System.out.println(&quot;\n-&gt;Inc/Dec-rementation&quot;);
+        // The ++ and -- operators increment and decrement by 1 respectively.
+        // If they are placed before the variable, they increment then return;
+        // after the variable they return then increment.
+        System.out.println(i++); // i = 1, prints 0 (post-increment)
+        System.out.println(++i); // i = 2, prints 2 (pre-increment)
+        System.out.println(i--); // i = 1, prints 2 (post-decrement)
+        System.out.println(--i); // i = 0, prints 0 (pre-decrement)
+
+        ///////////////////////////////////////
+        // Control Structures
+        ///////////////////////////////////////
+        System.out.println(&quot;\n-&gt;Control Structures&quot;);
+
+        // If statements are c-like
+        int j = 10;
+        if (j == 10) {
+            System.out.println(&quot;I get printed&quot;);
+        } else if (j &gt; 10) {
+            System.out.println(&quot;I don't&quot;);
+        } else {
+            System.out.println(&quot;I also don't&quot;);
+        }
+
+        // While loop
+        int fooWhile = 0;
+        while(fooWhile &lt; 100) {
+            System.out.println(fooWhile);
+            // Increment the counter
+            // Iterated 100 times, fooWhile 0,1,2...99
+            fooWhile++;
+        }
+        System.out.println(&quot;fooWhile Value: &quot; + fooWhile);
+
+        // Do While Loop
+        int fooDoWhile = 0;
+        do {
+            System.out.println(fooDoWhile);
+            // Increment the counter
+            // Iterated 100 times, fooDoWhile 0-&gt;99
+            fooDoWhile++;
+        } while(fooDoWhile &lt; 100);
+        System.out.println(&quot;fooDoWhile Value: &quot; + fooDoWhile);
+
+        // For Loop
+        // for loop structure =&gt; for(&lt;start_statement&gt;; &lt;conditional&gt;; &lt;step&gt;)
+        for (int fooFor = 0; fooFor &lt; 10; fooFor++) {
+            System.out.println(fooFor);
+            // Iterated 10 times, fooFor 0-&gt;9
+        }
+        System.out.println(&quot;fooFor Value: &quot; + fooFor);
+
+        // Nested For Loop Exit with Label
+        outer:
+        for (int i = 0; i &lt; 10; i++) {
+          for (int j = 0; j &lt; 10; j++) {
+            if (i == 5 &amp;&amp; j ==5) {
+              break outer;
+              // breaks out of outer loop instead of only the inner one
+            }
+          }
+        }
+
+        // For Each Loop
+        // The for loop is also able to iterate over arrays as well as objects
+        // that implement the Iterable interface.
+        int[] fooList = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        // for each loop structure =&gt; for (&lt;object&gt; : &lt;iterable&gt;)
+        // reads as: for each element in the iterable
+        // note: the object type must match the element type of the iterable.
+        for (int bar : fooList) {
+            System.out.println(bar);
+            //Iterates 9 times and prints 1-9 on new lines
+        }
+
+        // Switch Case
+        // A switch works with the byte, short, char, and int data types.
+        // It also works with enumerated types (discussed in Enum Types), the
+        // String class, and a few special classes that wrap primitive types:
+        // Character, Byte, Short, and Integer.
+        // Starting in Java 7 and above, we can also use the String type.
+        // Note: Do remember that, not adding &quot;break&quot; at end any particular case ends up in
+        // executing the very next case(given it satisfies the condition provided) as well.
+        int month = 3;
+        String monthString;
+        switch (month) {
+            case 1: monthString = &quot;January&quot;;
+                    break;
+            case 2: monthString = &quot;February&quot;;
+                    break;
+            case 3: monthString = &quot;March&quot;;
+                    break;
+            default: monthString = &quot;Some other month&quot;;
+                     break;
+        }
+        System.out.println(&quot;Switch Case Result: &quot; + monthString);
+
+
+        // Try-with-resources (Java 7+)
+        // Try-catch-finally statements work as expected in Java but in Java 7+
+        // the try-with-resources statement is also available. Try-with-resources
+        // simplifies try-catch-finally statements by closing resources
+        // automatically.
+
+        // In order to use a try-with-resources, include an instance of a class
+        // in the try statement. The class must implement java.lang.AutoCloseable.
+        try (BufferedReader br = new BufferedReader(new FileReader(&quot;foo.txt&quot;))) {
+            // You can attempt to do something that could throw an exception.
+            System.out.println(br.readLine());
+            // In Java 7, the resource will always be closed, even if it throws
+            // an Exception.
+        } catch (Exception ex) {
+            //The resource will be closed before the catch statement executes.
+            System.out.println(&quot;readLine() failed.&quot;);
+        }
+        // No need for a finally statement in this case, the BufferedReader is
+        // already closed. This can be used to avoid certain edge cases where
+        // a finally statement might not be called.
+        // To learn more:
+        // https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
+
+
+        // Conditional Shorthand
+        // You can use the '?' operator for quick assignments or logic forks.
+        // Reads as &quot;If (statement) is true, use &lt;first value&gt;, otherwise, use
+        // &lt;second value&gt;&quot;
+        int foo = 5;
+        String bar = (foo &lt; 10) ? &quot;A&quot; : &quot;B&quot;;
+        System.out.println(&quot;bar : &quot; + bar); // Prints &quot;bar : A&quot;, because the
+        // statement is true.
+        // Or simply
+        System.out.println(&quot;bar : &quot; + (foo &lt; 10 ? &quot;A&quot; : &quot;B&quot;));
+
+
+        ////////////////////////////////////////
+        // Converting Data Types
+        ////////////////////////////////////////
+
+        // Converting data
+
+        // Convert String To Integer
+        Integer.parseInt(&quot;123&quot;);//returns an integer version of &quot;123&quot;
+
+        // Convert Integer To String
+        Integer.toString(123);//returns a string version of 123
+
+        // For other conversions check out the following classes:
+        // Double
+        // Long
+        // String
+
+        ///////////////////////////////////////
+        // Classes And Functions
+        ///////////////////////////////////////
+
+        System.out.println(&quot;\n-&gt;Classes &amp; Functions&quot;);
+
+        // (definition of the Bicycle class follows)
+
+        // Use new to instantiate a class
+        Bicycle trek = new Bicycle();
+
+        // Call object methods
+        trek.speedUp(3); // You should always use setter and getter methods
+        trek.setCadence(100);
+
+        // toString returns this Object's string representation.
+        System.out.println(&quot;trek info: &quot; + trek.toString());
+
+        // Double Brace Initialization
+        // The Java Language has no syntax for how to create static Collections
+        // in an easy way. Usually you end up in the following way:
+        private static final Set&lt;String&gt; COUNTRIES = new HashSet&lt;String&gt;();
+        static {
+           COUNTRIES.add(&quot;DENMARK&quot;);
+           COUNTRIES.add(&quot;SWEDEN&quot;);
+           COUNTRIES.add(&quot;FINLAND&quot;);
+        }
+
+        // But there's a nifty way to achieve the same thing in an
+        // easier way, by using something that is called Double Brace
+        // Initialization.
+        private static final Set&lt;String&gt; COUNTRIES = new HashSet&lt;String&gt;() {{
+            add(&quot;DENMARK&quot;);
+            add(&quot;SWEDEN&quot;);
+            add(&quot;FINLAND&quot;);
+        }}
+
+        // The first brace is creating a new AnonymousInnerClass and the
+        // second one declares an instance initializer block. This block
+        // is called when the anonymous inner class is created.
+        // This does not only work for Collections, it works for all
+        // non-final classes.
+
+    } // End main method
+} // End LearnJava class
+
+// You can include other, non-public outer-level classes in a .java file,
+// but it is not good practice. Instead split classes into separate files.
+
+// Class Declaration Syntax:
+// &lt;public/private/protected&gt; class &lt;class name&gt; {
+//    // data fields, constructors, functions all inside.
+//    // functions are called as methods in Java.
+// }
+
+class Bicycle {
+
+    // Bicycle's Fields/Variables
+    public int cadence; // Public: Can be accessed from anywhere
+    private int speed;  // Private: Only accessible from within the class
+    protected int gear; // Protected: Accessible from the class and subclasses
+    String name; // default: Only accessible from within this package
+    static String className; // Static class variable
+
+    // Static block
+    // Java has no implementation of static constructors, but
+    // has a static block that can be used to initialize class variables
+    // (static variables).
+    // This block will be called when the class is loaded.
+    static {
+        className = &quot;Bicycle&quot;;
+    }
+
+    // Constructors are a way of creating classes
+    // This is a constructor
+    public Bicycle() {
+        // You can also call another constructor:
+        // this(1, 50, 5, &quot;Bontrager&quot;);
+        gear = 1;
+        cadence = 50;
+        speed = 5;
+        name = &quot;Bontrager&quot;;
+    }
+    // This is a constructor that takes arguments
+    public Bicycle(int startCadence, int startSpeed, int startGear,
+        String name) {
+        this.gear = startGear;
+        this.cadence = startCadence;
+        this.speed = startSpeed;
+        this.name = name;
+    }
+
+    // Method Syntax:
+    // &lt;public/private/protected&gt; &lt;return type&gt; &lt;function name&gt;(&lt;args&gt;)
+
+    // Java classes often implement getters and setters for their fields
+
+    // Method declaration syntax:
+    // &lt;access modifier&gt; &lt;return type&gt; &lt;method name&gt;(&lt;args&gt;)
+    public int getCadence() {
+        return cadence;
+    }
+
+    // void methods require no return statement
+    public void setCadence(int newValue) {
+        cadence = newValue;
+    }
+    public void setGear(int newValue) {
+        gear = newValue;
+    }
+    public void speedUp(int increment) {
+        speed += increment;
+    }
+    public void slowDown(int decrement) {
+        speed -= decrement;
+    }
+    public void setName(String newName) {
+        name = newName;
+    }
+    public String getName() {
+        return name;
+    }
+
+    //Method to display the attribute values of this Object.
+    @Override // Inherited from the Object class.
+    public String toString() {
+        return &quot;gear: &quot; + gear + &quot; cadence: &quot; + cadence + &quot; speed: &quot; + speed +
+            &quot; name: &quot; + name;
+    }
+} // end class Bicycle
+
+// PennyFarthing is a subclass of Bicycle
+class PennyFarthing extends Bicycle {
+    // (Penny Farthings are those bicycles with the big front wheel.
+    // They have no gears.)
+
+    public PennyFarthing(int startCadence, int startSpeed) {
+        // Call the parent constructor with super
+        super(startCadence, startSpeed, 0, &quot;PennyFarthing&quot;);
+    }
+
+    // You should mark a method you're overriding with an @annotation.
+    // To learn more about what annotations are and their purpose check this
+    // out: http://docs.oracle.com/javase/tutorial/java/annotations/
+    @Override
+    public void setGear(int gear) {
+        this.gear = 0;
+    }
+}
+
+// Object casting
+// Since the PennyFarthing class is extending the Bicycle class, we can say
+// a PennyFarthing is a Bicycle and write :
+// Bicycle bicycle = new PennyFarthing();
+// This is called object casting where an object is taken for another one. There
+// are lots of details and deals with some more intermediate concepts here:
+// https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html
+
+// Interfaces
+// Interface declaration syntax
+// &lt;access-level&gt; interface &lt;interface-name&gt; extends &lt;super-interfaces&gt; {
+//     // Constants
+//     // Method declarations
+// }
+
+// Example - Food:
+public interface Edible {
+    public void eat(); // Any class that implements this interface, must
+                       // implement this method.
+}
+
+public interface Digestible {
+    public void digest();
+    // Since Java 8, interfaces can have default method.
+    public default void defaultMethod() {
+        System.out.println(&quot;Hi from default method ...&quot;);
+    }
+}
+
+// We can now create a class that implements both of these interfaces.
+public class Fruit implements Edible, Digestible {
+    @Override
+    public void eat() {
+        // ...
+    }
+
+    @Override
+    public void digest() {
+        // ...
+    }
+}
+
+// In Java, you can extend only one class, but you can implement many
+// interfaces. For example:
+public class ExampleClass extends ExampleClassParent implements InterfaceOne,
+    InterfaceTwo {
+    @Override
+    public void InterfaceOneMethod() {
+    }
+
+    @Override
+    public void InterfaceTwoMethod() {
+    }
+
+}
+
+// Abstract Classes
+
+// Abstract Class declaration syntax
+// &lt;access-level&gt; abstract class &lt;abstract-class-name&gt; extends
+// &lt;super-abstract-classes&gt; {
+//     // Constants and variables
+//     // Method declarations
+// }
+
+// Abstract Classes cannot be instantiated.
+// Abstract classes may define abstract methods.
+// Abstract methods have no body and are marked abstract
+// Non-abstract child classes must @Override all abstract methods
+// from their super-classes.
+// Abstract classes can be useful when combining repetitive logic
+// with customised behavior, but as Abstract classes require
+// inheritance, they violate &quot;Composition over inheritance&quot;
+// so consider other approaches using composition.
+// https://en.wikipedia.org/wiki/Composition_over_inheritance
+
+public abstract class Animal
+{
+    private int age;
+
+    public abstract void makeSound();
+
+    // Method can have a body
+    public void eat()
+    {
+        System.out.println(&quot;I am an animal and I am Eating.&quot;);
+        // Note: We can access private variable here.
+        age = 30;
+    }
+
+    public void printAge()
+    {
+        System.out.println(age);
+    }
+
+    // Abstract classes can have main method.
+    public static void main(String[] args)
+    {
+        System.out.println(&quot;I am abstract&quot;);
+    }
+}
+
+class Dog extends Animal
+{
+    // Note still have to override the abstract methods in the
+    // abstract class.
+    @Override
+    public void makeSound()
+    {
+        System.out.println(&quot;Bark&quot;);
+        // age = 30;    ==&gt; ERROR!    age is private to Animal
+    }
+
+    // NOTE: You will get an error if you used the
+    // @Override annotation here, since java doesn't allow
+    // overriding of static methods.
+    // What is happening here is called METHOD HIDING.
+    // Check out this SO post: http://stackoverflow.com/questions/16313649/
+    public static void main(String[] args)
+    {
+        Dog pluto = new Dog();
+        pluto.makeSound();
+        pluto.eat();
+        pluto.printAge();
+    }
+}
+
+// Final Classes
+
+// Final Class declaration syntax
+// &lt;access-level&gt; final &lt;final-class-name&gt; {
+//     // Constants and variables
+//     // Method declarations
+// }
+
+// Final classes are classes that cannot be inherited from and are therefore a
+// final child. In a way, final classes are the opposite of abstract classes
+// because abstract classes must be extended, but final classes cannot be
+// extended.
+public final class SaberToothedCat extends Animal
+{
+    // Note still have to override the abstract methods in the
+    // abstract class.
+    @Override
+    public void makeSound()
+    {
+        System.out.println(&quot;Roar&quot;);
+    }
+}
+
+// Final Methods
+public abstract class Mammal()
+{
+    // Final Method Syntax:
+    // &lt;access modifier&gt; final &lt;return type&gt; &lt;function name&gt;(&lt;args&gt;)
+
+    // Final methods, like, final classes cannot be overridden by a child
+    // class, and are therefore the final implementation of the method.
+    public final boolean isWarmBlooded()
+    {
+        return true;
+    }
+}
+
+// Enum Type
+//
+// An enum type is a special data type that enables for a variable to be a set
+// of predefined constants. The variable must be equal to one of the values
+// that have been predefined for it. Because they are constants, the names of
+// an enum type's fields are in uppercase letters. In the Java programming
+// language, you define an enum type by using the enum keyword. For example,
+// you would specify a days-of-the-week enum type as:
+public enum Day {
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+    THURSDAY, FRIDAY, SATURDAY
+}
+
+// We can use our enum Day like that:
+public class EnumTest {
+    // Variable Enum
+    Day day;
+
+    public EnumTest(Day day) {
+        this.day = day;
+    }
+
+    public void tellItLikeItIs() {
+        switch (day) {
+            case MONDAY:
+                System.out.println(&quot;Mondays are bad.&quot;);
+                break;
+            case FRIDAY:
+                System.out.println(&quot;Fridays are better.&quot;);
+                break;
+            case SATURDAY:
+            case SUNDAY:
+                System.out.println(&quot;Weekends are best.&quot;);
+                break;
+            default:
+                System.out.println(&quot;Midweek days are so-so.&quot;);
+                break;
+        }
+    }
+
+    public static void main(String[] args) {
+        EnumTest firstDay = new EnumTest(Day.MONDAY);
+        firstDay.tellItLikeItIs(); // =&gt; Mondays are bad.
+        EnumTest thirdDay = new EnumTest(Day.WEDNESDAY);
+        thirdDay.tellItLikeItIs(); // =&gt; Midweek days are so-so.
+    }
+}
+
+// Enum types are much more powerful than we show above.
+// The enum body can include methods and other fields.
+// You can see more at https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
+
+// Getting Started with Lambda Expressions
+//
+// New to Java version 8 are lambda expressions. Lambdas are more commonly found
+// in functional programming languages, which means they are methods which can
+// be created without belonging to a class, passed around as if it were itself
+// an object, and executed on demand.
+//
+// Final note, lambdas must implement a functional interface. A functional
+// interface is one which has only a single abstract method declared. It can
+// have any number of default methods. Lambda expressions can be used as an
+// instance of that functional interface. Any interface meeting the requirements
+// is treated as a functional interface. You can read more about interfaces
+// above.
+//
+import java.util.Map;
+import java.util.HashMap;
+import java.util.function.*;
+import java.security.SecureRandom;
+
+public class Lambdas {
+    public static void main(String[] args) {
+        // Lambda declaration syntax:
+    // &lt;zero or more parameters&gt; -&gt; &lt;expression body or statement block&gt;
+
+        // We will use this hashmap in our examples below.
+        Map&lt;String, String&gt; planets = new HashMap&lt;&gt;();
+            planets.put(&quot;Mercury&quot;, &quot;87.969&quot;);
+            planets.put(&quot;Venus&quot;, &quot;224.7&quot;);
+            planets.put(&quot;Earth&quot;, &quot;365.2564&quot;);
+            planets.put(&quot;Mars&quot;, &quot;687&quot;);
+            planets.put(&quot;Jupiter&quot;, &quot;4,332.59&quot;);
+            planets.put(&quot;Saturn&quot;, &quot;10,759&quot;);
+            planets.put(&quot;Uranus&quot;, &quot;30,688.5&quot;);
+            planets.put(&quot;Neptune&quot;, &quot;60,182&quot;);
+
+        // Lambda with zero parameters using the Supplier functional interface
+        // from java.util.function.Supplier. The actual lambda expression is
+        // what comes after numPlanets =.
+        Supplier&lt;String&gt; numPlanets = () -&gt; Integer.toString(planets.size());
+        System.out.format(&quot;Number of Planets: %s\n\n&quot;, numPlanets.get());
+
+        // Lambda with one parameter and using the Consumer functional interface
+        // from java.util.function.Consumer. This is because planets is a Map,
+        // which implements both Collection and Iterable. The forEach used here,
+        // found in Iterable, applies the lambda expression to each member of
+        // the Collection. The default implementation of forEach behaves as if:
+        /*
+            for (T t : this)
+                action.accept(t);
+        */
+
+        // The actual lambda expression is the parameter passed to forEach.
+        planets.keySet().forEach((p) -&gt; System.out.format(&quot;%s\n&quot;, p));
+
+        // If you are only passing a single argument, then the above can also be
+        // written as (note absent parentheses around p):
+        planets.keySet().forEach(p -&gt; System.out.format(&quot;%s\n&quot;, p));
+
+        // Tracing the above, we see that planets is a HashMap, keySet() returns
+        // a Set of its keys, forEach applies each element as the lambda
+        // expression of: (parameter p) -&gt; System.out.format(&quot;%s\n&quot;, p). Each
+        // time, the element is said to be &quot;consumed&quot; and the statement(s)
+        // referred to in the lambda body is applied. Remember the lambda body
+        // is what comes after the -&gt;.
+
+        // The above without use of lambdas would look more traditionally like:
+        for (String planet : planets.keySet()) {
+            System.out.format(&quot;%s\n&quot;, planet);
+        }
+
+        // This example differs from the above in that a different forEach
+        // implementation is used: the forEach found in the HashMap class
+        // implementing the Map interface. This forEach accepts a BiConsumer,
+        // which generically speaking is a fancy way of saying it handles
+        // the Set of each Key -&gt; Value pairs. This default implementation
+        // behaves as if:
+        /*
+            for (Map.Entry&lt;K, V&gt; entry : map.entrySet())
+                action.accept(entry.getKey(), entry.getValue());
+        */
+
+        // The actual lambda expression is the parameter passed to forEach.
+        String orbits = &quot;%s orbits the Sun in %s Earth days.\n&quot;;
+        planets.forEach((K, V) -&gt; System.out.format(orbits, K, V));
+
+        // The above without use of lambdas would look more traditionally like:
+        for (String planet : planets.keySet()) {
+            System.out.format(orbits, planet, planets.get(planet));
+        }
+
+        // Or, if following more closely the specification provided by the
+        // default implementation:
+        for (Map.Entry&lt;String, String&gt; planet : planets.entrySet()) {
+            System.out.format(orbits, planet.getKey(), planet.getValue());
+        }
+
+        // These examples cover only the very basic use of lambdas. It might not
+        // seem like much or even very useful, but remember that a lambda can be
+        // created as an object that can later be passed as parameters to other
+        // methods.
+    }
+}
+</code></pre><pre><code>String floatStr = &quot;9.3&quot;;
+float a = Float.parseFloat(floatStr);
+
+String intStr = &quot;9&quot;;
+int b = Integer.parseInt(intStr);
+</code></pre>
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2019-02-01
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://csyezheng.github.io/tags/java/">Java</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/engineering-fundamentals/typescript/typescript/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">TypeScript</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/specialization/web-application/back-end/edx_oauth/">
+            <span class="next-text nav-default">edx oauth</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
