@@ -6,7 +6,25 @@
     <description>Recent content in tensorflow on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Named Entity Recognition using Spacy and Tensorflow</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</guid>
+      <description>Reference  Named Entity Recognition using Spacy and Tensorflow  </description>
+    </item>
+    
+    <item>
+      <title>Building a Recommendation System in TensorFlow</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</guid>
+      <description>Background theory for recommendations the background theory for matrix factorization-based collaborative filtering as applied to recommendation systems. Collaborative filtering for recommendation systems Collaborative filtering relies only on observed user behavior to make recommendations—no profile data or content access is necessary. The basic assumption is that similar user behavior reflects similar fundamental preferences, allowing</description>
+    </item>
+    
     <item>
       <title>Tensorflow</title>
       <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/tensorflow/</link>

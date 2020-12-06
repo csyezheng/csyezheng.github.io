@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.78.1" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,12 +296,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/scrapy-with-django/">Scraping with Scrapy and Django Integration</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/search-architecture/">Search Architecture</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-02-12" class="post-time">
-        2020-02-12
+      <time datetime="2020-06-22" class="post-time">
+        2020-06-22
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
@@ -316,10 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Installing Dependencies (Optional) $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple $ python -m pip install --user virtualenv $ python -m pip install --user virtualenvwrapper $ vim ~/.bashrc export WORKON_HOME=$HOME/.virtualenvs export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv source $HOME/.local/bin/virtualenvwrapper.sh $ source ~/.bashrc $ mkvirtualenv stock-screener pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat Creating a Django Project $ django-admin startproject stock_screener $ cd stock_screener $ mkdir stock_screener/apps/basic_info $ django-admin startapp basic_info stock_screener/apps/basic_info $ mkdir stock_screener/apps/northbound $ django-admin startapp northbound stock_screener/apps/northbound $ mkdir stock_screener/apps/financial_metrics $ django-admin startapp financial_metrics stock_screener/apps/financial_metrics $ mkdir stock_screener/apps/quotes $ django-admin startapp quotes stock_screener/apps/quotes $ mkdir stock_screener/apps/jobs $ django-admin startapp jobs stock_screener/apps/jobs Cannot add backslash suffix when run startapp command.
+      搜索服务使用说明 "\nst=\u003estart: 开始\ne=\u003eend: 结束\n\nop1=\u003eoperation: 服务订阅\ncond1=\u003ec
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/scrapy-with-django/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/search-architecture/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,15 +330,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/information-management-and-analytics/web-scraping/proxy/">proxy for crawler</a>
+      <a class="post-link" href="/post/other/health/bigger-leaner-stronger/">Bigger Leaner Stronger</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-01-15" class="post-time">
-        2020-01-15
+      <time datetime="2020-06-20" class="post-time">
+        2020-06-20
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/information-management-and-analytics/"> information-management-and-analytics </a>
+          <a href="http://csyezheng.github.io/categories/other/"> other </a>
           
         </div>
       
@@ -350,10 +350,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      from proxybroker import Broker, Checker async def check(proxy): broker = Broker() ip = await broker._resolver.get_real_ext_ip() checker = Checker(judges=None, real_ext_ip=ip) results = [] for proto in ['HTTPS', 'HTTP']: result = await checker._check(proxy, proto) results.append(result) return True if any(results) else False 
+      Workouts Meal Plans Part 1: What’s in This for You? 1. The Promise You absolutely, positively can have the lean, muscular, and powerful body that you dream about.
+2. Who Is Mike Matthews and Why Should I Care? 3. Why Bigger Leaner Stronger Is Different Part 2: Key Things “They” Aren’t Telling You 4. The Hidden Barrier 5. What Most Men Will Never Know about Getting Fit – Part 1 6.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/information-management-and-analytics/web-scraping/proxy/" class="read-more-link">Read more</a>
+      <a href="/post/other/health/bigger-leaner-stronger/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -364,15 +365,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/cpp/cpp-library-management/">C&#43;&#43; Library Management</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/deep-learning/bert/">Bert</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-09-16" class="post-time">
-        2019-09-16
+      <time datetime="2020-06-05" class="post-time">
+        2020-06-05
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://csyezheng.github.io/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -384,11 +385,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      In general, you are going to have to end up with
- Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&rsquo;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).
+      BERT 可解释性-从&quot;头&quot;说起 一、背景介绍 搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/cpp/cpp-library-management/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/deep-learning/bert/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1315,6 +1315,153 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/13/">»</a></li>
@@ -1322,7 +1469,7 @@
 
       
       
-      <li><a href="/page/37/">»»</a></li>
+      <li><a href="/page/44/">»»</a></li>
       
 
       </ul>

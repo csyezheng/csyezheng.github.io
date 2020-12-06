@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.78.1" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,15 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/any-path/bash/">Bash Reference Manual</a>
+      <a class="post-link" href="/post/other/thinking/thinking/">Programming Thinking</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2016-09-26" class="post-time">
-        2016-09-26
+      <time datetime="2018-08-15" class="post-time">
+        2018-08-15
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/any-path/"> any-path </a>
+          <a href="http://csyezheng.github.io/categories/other/"> other </a>
           
         </div>
       
@@ -316,11 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Bash Reference Manual Basic Shell Features Shell Syntax Shell Operation Quoting Escape Character A non-quoted backslash \ is the Bash escape character. It preserves the literal value of the next character that follows, with the exception of \newline.
-Single Quotes Enclosing characters in single quotes (') preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash.
+      基类的派生类的派生类需要做某些改动时，追溯到基类的一个虚函数做改动才能实现时，可以在此派生类中重写同名函数进行覆盖而不是继承这个虚函数，先拷
     </div>
     <div class="read-more">
-      <a href="/post/any-path/bash/" class="read-more-link">Read more</a>
+      <a href="/post/other/thinking/thinking/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,47 +330,12 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/any-path/unix-short-remedial/">UNIX / Linux Short Remedial</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/kafka/">Kafka</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2016-09-26" class="post-time">
-        2016-09-26
-      </time>
-      <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/any-path/"> any-path </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Shell and Basic Commands A shell is a program1 that inputs Unix commands from the keyboard and relays them to the Unix system for execution. Shells typically include various shortcuts for users to use in stating their commands, and also a programming feature, in which users can make programs out of sets of their commands.
-There are many different shells available for Unix systems. Here we focus on two of the most popular ones, tcsh and bash.
-    </div>
-    <div class="read-more">
-      <a href="/post/any-path/unix-short-remedial/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/web-application/front-end/jquery/">jQuery Tutorial</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2016-02-17" class="post-time">
-        2016-02-17
+      <time datetime="2018-07-23" class="post-time">
+        2018-07-23
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
@@ -386,10 +350,44 @@ There are many different shells available for Unix systems. Here we focus on two
   <div class="post-content">
     
     <div class="post-summary">
-      jQuery Get Started Downloading jQuery &lt;head&gt; &lt;script src=&quot;jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt; &lt;/head&gt; jQuery CDN &lt;head&gt; &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt; &lt;/head&gt; &lt;head&gt; &lt;script src=&quot;https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt; &lt;/head&gt; jQuery Syntax Basic syntax is: $(selector).action() // Examples: $(this).hide() // hides the current element. $(&quot;p&quot;).hide() // hides all &lt;p&gt; elements. $(&quot;.test&quot;).hide() // hides all elements with class=&quot;test&quot;. $(&quot;#test&quot;).hide() // hides the element with id=&quot;test&quot;. $(document).ready(function(){ // all jQuery methods inside a document ready event to prevent // any jQuery code from
+      Quickstart &gt; tar -xzf kafka_2.11-1.1.0.tgz &gt; cd kafka_2.11-1.1.0 Start the server bin/zookeeper-server-start.sh config/zookeeper.properties bin/kafka-server-start.sh config/server.properties Create a topic bin/kaftopics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic my-topic bin/kafka-topics.sh --list --zookeeper localhost:2181 Send some messages bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning Python client for the Apache Kafka #!/usr/bin/env python3 import logging from kafka import KafkaProducer from kafka.errors import KafkaError import msgpack log = logging.getLogger(__name__) def send(): producer = KafkaProducer(bootstrap_servers=['localhost:9092'], value_serializer=msgpack.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/front-end/jquery/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/kafka/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/specialization/artificial-intelligence/deep-learning/keras/">keras</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2018-03-26" class="post-time">
+        2018-03-26
+      </time>
+      <div class="post-category">
+          <a href="http://csyezheng.github.io/categories/artificial-intelligence/"> artificial-intelligence </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Keras import tensorflow as tf from tensorflow import keras 
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/artificial-intelligence/deep-learning/keras/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -445,9 +443,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -468,9 +464,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -491,9 +485,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -514,9 +506,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -537,9 +527,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -560,9 +548,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -583,9 +569,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -606,9 +590,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -629,9 +611,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -652,9 +632,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -675,9 +653,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -698,9 +674,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -721,9 +695,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -744,9 +716,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -767,9 +737,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -790,9 +758,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -813,9 +779,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -836,9 +800,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -859,9 +821,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -882,9 +842,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -905,9 +863,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -928,9 +884,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -951,9 +905,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -974,9 +926,7 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
 
-          
           
 
         
@@ -997,135 +947,93 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
             
               
             
 
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/25/">
-              25
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/26/">
-              26
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/27/">
-              27
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/28/">
-              28
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
           
 
         
@@ -1152,11 +1060,9 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1183,11 +1089,9 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1214,11 +1118,9 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1245,11 +1147,9 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1276,11 +1176,9 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1307,11 +1205,9 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1338,11 +1234,9 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1369,11 +1263,9 @@ There are many different shells available for Unix systems. Here we focus on two
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1390,6 +1282,185 @@ There are many different shells available for Unix systems. Here we focus on two
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/38/">
+              38
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/39/">
+              39
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/40/">
+              40
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/41/">
+              41
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/36/">»</a></li>
@@ -1397,7 +1468,7 @@ There are many different shells available for Unix systems. Here we focus on two
 
       
       
-      <li><a href="/page/37/">»»</a></li>
+      <li><a href="/page/44/">»»</a></li>
       
 
       </ul>

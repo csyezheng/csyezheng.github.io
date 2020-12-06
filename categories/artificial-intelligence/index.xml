@@ -6,7 +6,74 @@
     <description>Recent content in artificial-intelligence on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/categories/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/categories/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>evaluate the quality of the training phrases in intents</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</guid>
+      <description>This tutorial shows you how to analyze and evaluate the quality of the training phrases supplied to your Dialogflow agent&amp;rsquo;s intents. The purpose of this analysis is to avoid confusing the agent with phrases irrelevant to the intents supplied to, or more relevant to, other intents.
+The approach you take is to generate semantic embeddings of the training phrases by using the TensorFlow Hub (tf.Hub) Universal Sentence Encoder module. You then compute cohesion and separation measurements based on the similarity between embeddings within the same intents and different intents.</description>
+    </item>
+    
+    <item>
+      <title>Joint intent and slot classification</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</guid>
+      <description>Reference  Joint_Intent_and_Slot_Classification.ipynb  </description>
+    </item>
+    
+    <item>
+      <title>Named Entity Recognition using Spacy and Tensorflow</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</guid>
+      <description>Reference  Named Entity Recognition using Spacy and Tensorflow  </description>
+    </item>
+    
+    <item>
+      <title>Building a Recommendation System in TensorFlow</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</guid>
+      <description>Background theory for recommendations the background theory for matrix factorization-based collaborative filtering as applied to recommendation systems. Collaborative filtering for recommendation systems Collaborative filtering relies only on observed user behavior to make recommendations—no profile data or content access is necessary. The basic assumption is that similar user behavior reflects similar fundamental preferences, allowing</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning Models for Predictions in Cloud Dataflow Pipelines</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</guid>
+      <description>This solution describes and compares the different design approaches for calling a machine learning model during a Dataflow pipeline, and examines the tradeoffs involved in choosing one approach or another. We present the results of a series of experiments that we ran to explore different approaches and illustrate these tradeoffs, both in batch and stream processing pipelines. This solution is designed for people who integrate trained models into data processing pipelines, rather than for data scientists who want to build machine learning models.</description>
+    </item>
+    
+    <item>
+      <title>recommendations</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/product-overview/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/product-overview/</guid>
+      <description>Implementing Recommendations Steps   Set up a project
+  Import your product catalog You can add items to your Recommendations AI product catalog individually by using the import Files or API.
+  Information of the products sold to customers. This includes the product title, description, in stock availability, pricing, and so on.
+Record user events User events track user actions such as clicking on a product, adding an item to a shopping cart, or purchasing an item, and so on.</description>
+    </item>
+    
+    <item>
+      <title>Deploying machine learning models in production</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/deploy/</link>
+      <pubDate>Sun, 29 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/deploy/</guid>
+      <description>Reference 训练好的深度学习模型是怎么部署的？ PyTorch模型的加速及部署 ahkarami/Deep-Learning-in-Production Accelerating Inference In TF-TRT User Guide tensorflow/tensorrt Tensorrt API Reference Containers: nvidia:tensorflow Model inference using TensorFlow and TensorRT Speed up TensorFlow Inference on GPUs with TensorRT TF20-TF-TRT-inference-from-Keras-saved-model.ipynb</description>
+    </item>
+    
     <item>
       <title>Question answering</title>
       <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</link>
@@ -145,15 +212,6 @@ https://vict0rs.ch/2018/06/17/multilabel-text-classification-tensorflow/
 https://github.com/tensorflow/skflow/issues/113
 https://towardsdatascience.com/journey-to-the-center-of-multi-label-classification-384c40229bff
 https://www.reddit.com/r/MLQuestions/comments/5n82zb/loss_function_for_sparse_multilabel_classification/</description>
-    </item>
-    
-    <item>
-      <title>keras</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/keras/</link>
-      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/keras/</guid>
-      <description>Keras import tensorflow as tf from tensorflow import keras </description>
     </item>
     
   </channel>

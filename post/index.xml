@@ -6,7 +6,139 @@
     <description>Recent content in Posts on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>evaluate the quality of the training phrases in intents</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</guid>
+      <description>This tutorial shows you how to analyze and evaluate the quality of the training phrases supplied to your Dialogflow agent&amp;rsquo;s intents. The purpose of this analysis is to avoid confusing the agent with phrases irrelevant to the intents supplied to, or more relevant to, other intents.
+The approach you take is to generate semantic embeddings of the training phrases by using the TensorFlow Hub (tf.Hub) Universal Sentence Encoder module. You then compute cohesion and separation measurements based on the similarity between embeddings within the same intents and different intents.</description>
+    </item>
+    
+    <item>
+      <title>Joint intent and slot classification</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</guid>
+      <description>Reference  Joint_Intent_and_Slot_Classification.ipynb  </description>
+    </item>
+    
+    <item>
+      <title>Named Entity Recognition using Spacy and Tensorflow</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</guid>
+      <description>Reference  Named Entity Recognition using Spacy and Tensorflow  </description>
+    </item>
+    
+    <item>
+      <title>Building a Recommendation System in TensorFlow</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</guid>
+      <description>Background theory for recommendations the background theory for matrix factorization-based collaborative filtering as applied to recommendation systems. Collaborative filtering for recommendation systems Collaborative filtering relies only on observed user behavior to make recommendations—no profile data or content access is necessary. The basic assumption is that similar user behavior reflects similar fundamental preferences, allowing</description>
+    </item>
+    
+    <item>
+      <title>data lakes</title>
+      <link>http://csyezheng.github.io/post/specialization/big-data/data-lakes/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/big-data/data-lakes/</guid>
+      <description>Reference  Delta Lake What is a Lakehouse?  </description>
+    </item>
+    
+    <item>
+      <title>edX Analytics Pipeline</title>
+      <link>http://csyezheng.github.io/post/specialization/big-data/edx-analytics-pipeline/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/big-data/edx-analytics-pipeline/</guid>
+      <description>Reference  edX Insights edX Analytics Pipeline edx-analytics-pipeline luigi  </description>
+    </item>
+    
+    <item>
+      <title>Machine Learning Models for Predictions in Cloud Dataflow Pipelines</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</guid>
+      <description>This solution describes and compares the different design approaches for calling a machine learning model during a Dataflow pipeline, and examines the tradeoffs involved in choosing one approach or another. We present the results of a series of experiments that we ran to explore different approaches and illustrate these tradeoffs, both in batch and stream processing pipelines. This solution is designed for people who integrate trained models into data processing pipelines, rather than for data scientists who want to build machine learning models.</description>
+    </item>
+    
+    <item>
+      <title>recommendations</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/product-overview/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/product-overview/</guid>
+      <description>Implementing Recommendations Steps   Set up a project
+  Import your product catalog You can add items to your Recommendations AI product catalog individually by using the import Files or API.
+  Information of the products sold to customers. This includes the product title, description, in stock availability, pricing, and so on.
+Record user events User events track user actions such as clicking on a product, adding an item to a shopping cart, or purchasing an item, and so on.</description>
+    </item>
+    
+    <item>
+      <title>Deploying machine learning models in production</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/deploy/</link>
+      <pubDate>Sun, 29 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/deploy/</guid>
+      <description>Reference 训练好的深度学习模型是怎么部署的？ PyTorch模型的加速及部署 ahkarami/Deep-Learning-in-Production Accelerating Inference In TF-TRT User Guide tensorflow/tensorrt Tensorrt API Reference Containers: nvidia:tensorflow Model inference using TensorFlow and TensorRT Speed up TensorFlow Inference on GPUs with TensorRT TF20-TF-TRT-inference-from-Keras-saved-model.ipynb</description>
+    </item>
+    
+    <item>
+      <title>Developing Lightweight Microservices Using Kubernetes</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-kubernetes/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-kubernetes/</guid>
+      <description>Introduction to Kubernetes Deploying Our Microservices in Kubernetes Implementing Kubernetes Features as an Alternative Using a Service Mesh to Improve Observability and Management Centralized Logging with the EFK Stack Monitoring Microservices </description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Microservice Development Using Spring Boot</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-boot/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-boot/</guid>
+      <description>Introduction to Microservices Benefits Each component in the platform can be delivered and upgraded separately. Each component in the platform can also be scaled out to multiple servers independently Challenges Many small components that use synchronous communication can cause a chain of failure problem, especially under high load. Keeping the configuration consistent and up to date in all the instances Monitoring the state of the platform in terms of latency</description>
+    </item>
+    
+    <item>
+      <title>Leveraging Spring Cloud to Manage Microservices</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-cloud/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-cloud/</guid>
+      <description>Introduction to Spring Cloud    Design pattern Current component Replaced by Software component     Service discovery Netflix Eureka &amp;amp; Netflix Ribbon Netflix Eureka and Spring Cloud load balancer   Edge server Netflix Zuul Spring Cloud Gateway and Spring Security OAuth   Centralized configuration  Spring Cloud Configuration Server   Circuit breaker Netflix Hystrix Resilience4j   Distributed tracing  Spring Cloud Sleuth and Zipkin    Adding Service Discovery Using Netflix Eureka and Ribbon Using Spring Cloud Gateway to Hide Microservices Behind an Edge Server Securing Access to APIs Centralized Configuration Improving Resilience Using Resilience4j Understanding Distributed Tracing </description>
+    </item>
+    
+    <item>
+      <title>Link custom domain to Github pages</title>
+      <link>http://csyezheng.github.io/post/any-path/blog/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/any-path/blog/</guid>
+      <description>Register Domain Name Namesilo
+Use a Custom Domain If you’d like to use a custom domain for your GitHub Pages site, create a file static/CNAME. Your custom domain name should be the only contents inside CNAME. Since it’s inside static, the published site will contain the CNAME file at the root of the published site, which is a requirements of GitHub Pages.
+DNS service provider Create Cloudflare account Enter your domain name yezheng.</description>
+    </item>
+    
+    <item>
+      <title>read open source</title>
+      <link>http://csyezheng.github.io/post/master-path/read-open-source/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/master-path/read-open-source/</guid>
+      <description>Awesome project lists using Gin web framework: gorush: A push notification server written in Go. fnproject: The container native, cloud agnostic serverless platform. photoprism: Personal photo management powered by Go and Google TensorFlow. krakend: Ultra performant API Gateway with middlewares. picfit: An image resizing server written in Go. gotify: A simple server for sending and receiving messages in real-time per web socket. cds: Enterprise-Grade Continuous Delivery &amp;amp; DevOps Automation Open</description>
+    </item>
+    
     <item>
       <title>flink</title>
       <link>http://csyezheng.github.io/post/specialization/big-data/flink/</link>
@@ -62,141 +194,6 @@ public interface Collection&amp;lt;E&amp;gt;... The Collection Interface List&am
       
       <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/mybatis-spring-boot/</guid>
       <description>Creating a project spring init -d=web --build=maven mysite Declare Dependencies cd mysite vim pom.xml &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.liquibase&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;liquibase-core&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.10.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis.spring.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis-spring-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.1.3&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;8.0.20&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; MyBatis-Spring-Boot-Starter will: Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers,</description>
-    </item>
-    
-    <item>
-      <title>Spring</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/spring/</link>
-      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/spring/</guid>
-      <description>Installation Install JDK Download jdk-8u261-linux-x64.tar.gz from Oracle
-sudo pacman -S jdk8-openjdk vim ~/.bashrc export JAVA_HOME=/usr/lib/jvm/java-8-openjdk source ~/.bashrc Install maven sudo pacman -S maven cp /opt/maven/conf/settings.xml ~/.m2/ vim ~/.m2/settings.xml &amp;lt;mirror&amp;gt; &amp;lt;id&amp;gt;alimaven&amp;lt;/id&amp;gt; &amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt; &amp;lt;name&amp;gt;aliyun maven&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public&amp;lt;/url&amp;gt; &amp;lt;/mirror&amp;gt; Installing the Spring Boot CLI Download the Spring Boot CLI
-wget https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-cli/2.3.3.BUILD-SNAPSHOT/spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip Extract to a directory that supports file execution.
-sudo unzip spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip -d /opt/ vim ~/.bashrc Add the following line to the file
-export PATH=/opt/spring-2.</description>
-    </item>
-    
-    <item>
-      <title>Spring Boot CXF JAX-RS Starter</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/spring-boot-cxf-jax-rs-starter/</link>
-      <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/spring-boot-cxf-jax-rs-starter/</guid>
-      <description>Features Registers CXF Servlet with a &amp;ldquo;/services/*&amp;rdquo; URL pattern for serving CXF JAX-RS endpoints.
-Optionally auto-discovers JAX-RS root resources and providers and creates a JAX-RS endpoint.
-Note the use of CXF JAX-RS Clients in SpringBoot Application is covered in this section.
-Databases sudo docker container start mysql-container-id sudo docker exec -it mysql-container-name mysql -u root -p mysql&amp;gt; create database demo; mysql&amp;gt; USE demo; mysql&amp;gt; SET FOREIGN_KEY_CHECKS=0; mysql&amp;gt; DROP TABLE IF EXISTS `student`; mysql&amp;gt; CREATE TABLE `student` ( -&amp;gt; `id` int(10) NOT NULL, -&amp;gt; `name` varchar(100) DEFAULT NULL, -&amp;gt; `sex` char(6) DEFAULT NULL, -&amp;gt; `address` varchar(255) DEFAULT NULL, -&amp;gt; `age` int(10) DEFAULT NULL, -&amp;gt; PRIMARY KEY (`id`) -&amp;gt; ) ENGINE=InnoDB DEFAULT CHARSET=utf8; mysql&amp;gt; INSERT INTO `student` VALUES (&#39;1&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;22&#39;); Creating a project spring init -d=web,mybatis,mysql --build=maven mysite dependency  &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
-    </item>
-    
-    <item>
-      <title>欣宸Blog</title>
-      <link>http://csyezheng.github.io/post/specialization/devops/xc/</link>
-      <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/specialization/devops/xc/</guid>
-      <description>https://cloud.tencent.com/developer/column/1662</description>
-    </item>
-    
-    <item>
-      <title>circumvent Internet censorship</title>
-      <link>http://csyezheng.github.io/post/any-path/circumvent-internet-censorship/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/any-path/circumvent-internet-censorship/</guid>
-      <description>Shadowsocks ShadowsocksR subscription address https://raw.githubusercontent.com/ssrsub/ssr/master/ssrsub https://yzzz.ml/freessr/ https://raw.githubusercontent.com/AmazingDM/sub/master/ssrshare.com https://haobang.yangwang.workers.dev/ http://www.yangwang.tk/ https://shadow-socks-share.herokuapp.com/subscribe https://www.liesauer.net/yogurt/subscribe?ACCESS_TOKEN=DAYxR3mMaZAsaqUb https://qiaomenzhuanfx.netlify.com/ https://muma16fx.netlify.com/ https://raw.githubusercontent.com/voken100g/AutoSSR/master/online https://raw.githubusercontent.com/voken100g/AutoSSR/master/recent https://youlianboshi.netlify.com/ http://ss.pythonic.life/full/subscribe https://www.nutgeek.cn/newsubscribe/ https://prom-php.herokuapp.com/cloudfra_ssr.txt http://share-shadowsocks.herokuapp.com/full/subscribe http://share-shadowsocksr.herokuapp.com/subscribe?valid=1 https://raw.githubusercontent.com/AmazingDM/sub/master/ssrshare.com https://github.com/liesauer/Free-SS-SSR https://yzzz.ml/freessr https://www.liesauer.net/yogurt/subscribe?ACCESS_TOKEN=DAYxR3mMaZAsaqUb Free account https://www.youneed.win/free-ssr http://nulastudio.org/Freedom/ https://lncn.org/ https://jichangdaquan.com/node/429.html https://www.freess.best/ https://fanqiang.network/ https://jichangdaquan.com/node/429.html V2ray subscription address https://raw.githubusercontent.com/AmazingDM/sub/master/v2ray_ssrshare.com https://jiang.netlify.com/ https://youlianboshi.netlify.com/ https://raw.githubusercontent.com/eycorsican/rule-sets/master/kitsunebi_sub https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray https://bhqt.ltd/?p=236 Free account https://free-ss.site/ https://www.freess.best/v2ray.html https://www.freevpnnet.com/ https://jichangdaquan.com/node/429.html https://view.freev2ray.org/ https://v2ray.cat/ https://v2ray.party/ https://my.freev2ray.org/ https://v2fire.tk/ https://get.freev2ray.com/ https://freev2.org https://jichangdaquan.com/node/429.html Reference https://gith</description>
-    </item>
-    
-    <item>
-      <title>Grafana</title>
-      <link>http://csyezheng.github.io/post/specialization/devops/grafana/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/specialization/devops/grafana/</guid>
-      <description>Reference
- https://grafana.com/grafana/dashboards/893  </description>
-    </item>
-    
-    <item>
-      <title>Prometheus</title>
-      <link>http://csyezheng.github.io/post/specialization/devops/prometheus/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/specialization/devops/prometheus/</guid>
-      <description>Prometheus 入门与实践 吴 莉, 殷 一鸣, 和 蔡 林 2018 年 5 月 30 日发布 随着容器技术的迅速发展，Kubernetes 已然成为大家追捧的容器集群管理系统。Promet</description>
-    </item>
-    
-    <item>
-      <title>Question answering</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</guid>
-      <description>Reference
- https://github.com/deepmipt/DeepPavlov https://github.com/deepset-ai/FARM https://github.com/huggingface/transformers https://github.com/deepset-ai/haystack https://github.com/deepset-ai/COVID-QA https://demo.allennlp.org/reading-comprehension https://github.com/baidu/AnyQ https://github.com/allenai/bi-att-flow https://github.com/google-research/language/tree/master/language/question_answering BERT Question Answering Inference with Mixed Precision in TensorFlow https://www.kaggle.com/c/tensorflow2-question-answering/ https://github.com/chrischute/squad https://github.com/ColasGael/QA-squad https://github.com/IBM/MAX-Question-Answering http://web.stanford.edu/class/cs224n/project/default-final-project-handout.pdf https://github.com/baidu/DuReader  </description>
-    </item>
-    
-    <item>
-      <title>tencent nlp interview</title>
-      <link>http://csyezheng.github.io/post/master-path/carees/tencent-nlp-interview/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/master-path/carees/tencent-nlp-interview/</guid>
-      <description>一面（技术面） 面试形式：电话面试。 简要的自我介绍。 研究生阶段最有挑战的项目是什么？ 对于这个项目，传统的方法是怎么样的？ 列举下这个任务在传统用</description>
-    </item>
-    
-    <item>
-      <title>Top 20 Python Libraries for Data Science</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</guid>
-      <description>Core Libraries &amp;amp; Statistics  NumPy SciPy Pandas StatsModels  Visualization Matplotlib Seaborn Plotly Bokeh Pydot  Machine Learning Scikit-learn XGBoost Eli5  Deep Learning TensorFlow PyTorch Keras  Distributed Deep Learning Dist-keras / elephas / spark-deep-learning  Natural Language Processing NLTK SpaCy Gensim  Data Scraping Scrapy  </description>
-    </item>
-    
-    <item>
-      <title>Top Websites for Machine Learning</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-websites/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-websites/</guid>
-      <description>AI Hub</description>
-    </item>
-    
-    <item>
-      <title>Skincare</title>
-      <link>http://csyezheng.github.io/post/other/health/skincare/</link>
-      <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/other/health/skincare/</guid>
-      <description>Skincare Cleanse (清洁) oil cleanser mild cleanser 油性皮肤用用 38～40 度的热水比较好。比皮表温度稍高但又不觉得烫，容易把溢出的油脂洗掉。 使用尽量柔软的毛巾，毛巾每周清洗</description>
-    </item>
-    
-    <item>
-      <title>Bigger Leaner Stronger 5-DAY WORKOUT ROUTINE</title>
-      <link>http://csyezheng.github.io/post/other/health/bls-5-day-workout-routine/</link>
-      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/other/health/bls-5-day-workout-routine/</guid>
-      <description>PHASE 1 WORKOUT 1 | PUSH Barbell Bench Press (杠铃卧推) Warm-up and 3 hard sets Incline Barbell Bench Press(斜杠铃卧推) 3 hard sets Dumbbell Bench Press(哑铃卧推) 3 hard sets Triceps Pushdown(肱三头肌下拉</description>
-    </item>
-    
-    <item>
-      <title>workout</title>
-      <link>http://csyezheng.github.io/post/other/health/workout/</link>
-      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/other/health/workout/</guid>
-      <description>Barbell Bench Press (杠铃卧推) Incline Barbell Bench Press(斜杠铃卧推) Dumbbell Bench Press(哑铃卧推) Triceps Pushdown(肱三头肌下拉) Barbell Deadlift (杠铃硬拉) One-Arm Dumbbell Row (单臂哑铃</description>
-    </item>
-    
-    <item>
-      <title>Search Architecture</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/search-architecture/</link>
-      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/search-architecture/</guid>
-      <description>搜索服务使用说明 &#34;\nst=\u003estart: 开始\ne=\u003eend: 结束\n\nop1=\u003eoperation: 服务订阅\ncond1=\u003ec</description>
     </item>
     
   </channel>

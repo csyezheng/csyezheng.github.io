@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>interview on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/interview/</link>
+    <description>Recent content in interview on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 16 Nov 2016 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>interview question</title>
+      <link>http://csyezheng.github.io/post/interview/algorithms/1/</link>
+      <pubDate>Wed, 16 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/interview/algorithms/1/</guid>
+      <description>笔试：一道英文算法题，考单链表，30分钟 两个单链表逆序存了两个非负整数，将这两个数求和，和逆序存入另一个链表 addTwoNumbers(node *p1, node *p2) 两个有序链表的合并 多线程</description>
+    </item>
+    
+  </channel>
+</rss>

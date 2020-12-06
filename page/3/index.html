@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.78.1" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,15 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/spring/">Spring</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/">Machine Learning Models for Predictions in Cloud Dataflow Pipelines</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-08-09" class="post-time">
-        2020-08-09
+      <time datetime="2020-12-05" class="post-time">
+        2020-12-05
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
+          <a href="http://csyezheng.github.io/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -316,14 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Installation Install JDK Download jdk-8u261-linux-x64.tar.gz from Oracle
-sudo pacman -S jdk8-openjdk vim ~/.bashrc export JAVA_HOME=/usr/lib/jvm/java-8-openjdk source ~/.bashrc Install maven sudo pacman -S maven cp /opt/maven/conf/settings.xml ~/.m2/ vim ~/.m2/settings.xml &lt;mirror&gt; &lt;id&gt;alimaven&lt;/id&gt; &lt;mirrorOf&gt;central&lt;/mirrorOf&gt; &lt;name&gt;aliyun maven&lt;/name&gt; &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt; &lt;/mirror&gt; Installing the Spring Boot CLI Download the Spring Boot CLI
-wget https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-cli/2.3.3.BUILD-SNAPSHOT/spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip Extract to a directory that supports file execution.
-sudo unzip spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip -d /opt/ vim ~/.bashrc Add the following line to the file
-export PATH=/opt/spring-2.
+      This solution describes and compares the different design approaches for calling a machine learning model during a Dataflow pipeline, and examines the tradeoffs involved in choosing one approach or another. We present the results of a series of experiments that we ran to explore different approaches and illustrate these tradeoffs, both in batch and stream processing pipelines. This solution is designed for people who integrate trained models into data processing pipelines, rather than for data scientists who want to build machine learning models.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/spring/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -334,15 +330,15 @@ export PATH=/opt/spring-2.
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/spring-boot-cxf-jax-rs-starter/">Spring Boot CXF JAX-RS Starter</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/recommendation-system/product-overview/">recommendations</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-08-03" class="post-time">
-        2020-08-03
+      <time datetime="2020-12-05" class="post-time">
+        2020-12-05
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
+          <a href="http://csyezheng.github.io/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -354,13 +350,13 @@ export PATH=/opt/spring-2.
   <div class="post-content">
     
     <div class="post-summary">
-      Features Registers CXF Servlet with a &ldquo;/services/*&rdquo; URL pattern for serving CXF JAX-RS endpoints.
-Optionally auto-discovers JAX-RS root resources and providers and creates a JAX-RS endpoint.
-Note the use of CXF JAX-RS Clients in SpringBoot Application is covered in this section.
-Databases sudo docker container start mysql-container-id sudo docker exec -it mysql-container-name mysql -u root -p mysql&gt; create database demo; mysql&gt; USE demo; mysql&gt; SET FOREIGN_KEY_CHECKS=0; mysql&gt; DROP TABLE IF EXISTS `student`; mysql&gt; CREATE TABLE `student` ( -&gt; `id` int(10) NOT NULL, -&gt; `name` varchar(100) DEFAULT NULL, -&gt; `sex` char(6) DEFAULT NULL, -&gt; `address` varchar(255) DEFAULT NULL, -&gt; `age` int(10) DEFAULT NULL, -&gt; PRIMARY KEY (`id`) -&gt; ) ENGINE=InnoDB DEFAULT CHARSET=utf8; mysql&gt; INSERT INTO `student` VALUES ('1', '', '', '', '22'); Creating a project spring init -d=web,mybatis,mysql --build=maven mysite dependency  &lt;dependency&gt; &lt;groupId&gt;org.
+      Implementing Recommendations Steps   Set up a project
+  Import your product catalog You can add items to your Recommendations AI product catalog individually by using the import Files or API.
+  Information of the products sold to customers. This includes the product title, description, in stock availability, pricing, and so on.
+Record user events User events track user actions such as clicking on a product, adding an item to a shopping cart, or purchasing an item, and so on.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/spring-boot-cxf-jax-rs-starter/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/recommendation-system/product-overview/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -371,15 +367,15 @@ Databases sudo docker container start mysql-container-id sudo docker exec -it my
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/devops/xc/">欣宸Blog</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/deep-learning/deploy/">Deploying machine learning models in production</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-25" class="post-time">
-        2020-07-25
+      <time datetime="2020-11-29" class="post-time">
+        2020-11-29
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/devops/"> devops </a>
+          <a href="http://csyezheng.github.io/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -391,10 +387,10 @@ Databases sudo docker container start mysql-container-id sudo docker exec -it my
   <div class="post-content">
     
     <div class="post-summary">
-      https://cloud.tencent.com/developer/column/1662
+      Reference 训练好的深度学习模型是怎么部署的？ PyTorch模型的加速及部署 ahkarami/Deep-Learning-in-Production Accelerating Inference In TF-TRT User Guide tensorflow/tensorrt Tensorrt API Reference Containers: nvidia:tensorflow Model inference using TensorFlow and TensorRT Speed up TensorFlow Inference on GPUs with TensorRT TF20-TF-TRT-inference-from-Keras-saved-model.ipynb
     </div>
     <div class="read-more">
-      <a href="/post/specialization/devops/xc/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/deep-learning/deploy/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1432,6 +1428,174 @@ Databases sudo docker container start mysql-container-id sudo docker exec -it my
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/4/">»</a></li>
@@ -1439,7 +1603,7 @@ Databases sudo docker container start mysql-container-id sudo docker exec -it my
 
       
       
-      <li><a href="/page/37/">»»</a></li>
+      <li><a href="/page/44/">»»</a></li>
       
 
       </ul>

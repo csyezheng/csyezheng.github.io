@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.78.1" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,15 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/big-data/elk-stack/">elk stack</a>
+      <a class="post-link" href="/post/specialization/information-management-and-analytics/web-scraping/proxy/">proxy for crawler</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-05-15" class="post-time">
-        2019-05-15
+      <time datetime="2020-01-15" class="post-time">
+        2020-01-15
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/big-data/"> big-data </a>
+          <a href="http://csyezheng.github.io/categories/information-management-and-analytics/"> information-management-and-analytics </a>
           
         </div>
       
@@ -316,12 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
-Install Beats Install Filebeat Install Metricbeat sudo pacman -S metricbeat sudo vim /etc/metricbeat/metricbeat.yml setup.dashboards.enabled: true From the Metricbeat install directory, enable the system module
-cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricbeat.
+      from proxybroker import Broker, Checker async def check(proxy): broker = Broker() ip = await broker._resolver.get_real_ext_ip() checker = Checker(judges=None, real_ext_ip=ip) results = [] for proto in ['HTTPS', 'HTTP']: result = await checker._check(proxy, proto) results.append(result) return True if any(results) else False 
     </div>
     <div class="read-more">
-      <a href="/post/specialization/big-data/elk-stack/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/information-management-and-analytics/web-scraping/proxy/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -332,15 +330,15 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/devops/docker/">Docker</a>
+      <a class="post-link" href="/post/engineering-fundamentals/cpp/cpp-library-management/">C&#43;&#43; Library Management</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-04-25" class="post-time">
-        2019-04-25
+      <time datetime="2019-09-16" class="post-time">
+        2019-09-16
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/devops/"> devops </a>
+          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -352,10 +350,11 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
   <div class="post-content">
     
     <div class="post-summary">
-      Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker add your user to the docker group.
+      In general, you are going to have to end up with
+ Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&rsquo;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).
     </div>
     <div class="read-more">
-      <a href="/post/specialization/devops/docker/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/cpp/cpp-library-management/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -366,15 +365,15 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/microservices/">microservices</a>
+      <a class="post-link" href="/post/engineering-fundamentals/cpp/curl/">libcurl</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-04-20" class="post-time">
-        2019-04-20
+      <time datetime="2019-09-16" class="post-time">
+        2019-09-16
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
+          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -386,10 +385,11 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
   <div class="post-content">
     
     <div class="post-summary">
-      第1章 微服务 1.1 什么是微服务 微服务就是一些协同工作的小而自治的服务 1.1.1 很小，专注于做好一件事 在一个单块系统内，通常会创建一些抽象层或者模块来保证
+      #include &lt;curl/curl.h&gt; When using an external library you must link with it:
+$ g++ main.cpp -lcurl 
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/microservices/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/cpp/curl/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1316,6 +1316,153 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/18/">»</a></li>
@@ -1323,7 +1470,7 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
 
       
       
-      <li><a href="/page/37/">»»</a></li>
+      <li><a href="/page/44/">»»</a></li>
       
 
       </ul>

@@ -6,13 +6,49 @@
     <description>Recent content in Categories on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>artificial-intelligence</title>
+      <link>http://csyezheng.github.io/categories/artificial-intelligence/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/artificial-intelligence/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>big-data</title>
       <link>http://csyezheng.github.io/categories/big-data/</link>
-      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://csyezheng.github.io/categories/big-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web-application</title>
+      <link>http://csyezheng.github.io/categories/web-application/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/web-application/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>any-path</title>
+      <link>http://csyezheng.github.io/categories/any-path/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/any-path/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>master-path</title>
+      <link>http://csyezheng.github.io/categories/master-path/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/master-path/</guid>
       <description></description>
     </item>
     
@@ -35,47 +71,11 @@
     </item>
     
     <item>
-      <title>web-application</title>
-      <link>http://csyezheng.github.io/categories/web-application/</link>
-      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/categories/web-application/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>devops</title>
       <link>http://csyezheng.github.io/categories/devops/</link>
       <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>http://csyezheng.github.io/categories/devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>any-path</title>
-      <link>http://csyezheng.github.io/categories/any-path/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/categories/any-path/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>artificial-intelligence</title>
-      <link>http://csyezheng.github.io/categories/artificial-intelligence/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/categories/artificial-intelligence/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>master-path</title>
-      <link>http://csyezheng.github.io/categories/master-path/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/categories/master-path/</guid>
       <description></description>
     </item>
     
@@ -94,6 +94,24 @@
       <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>http://csyezheng.github.io/categories/information-management-and-analytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computer-science-core</title>
+      <link>http://csyezheng.github.io/categories/computer-science-core/</link>
+      <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/computer-science-core/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>interview</title>
+      <link>http://csyezheng.github.io/categories/interview/</link>
+      <pubDate>Wed, 16 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/categories/interview/</guid>
       <description></description>
     </item>
     

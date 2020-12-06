@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.78.1" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,15 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/go-get-golang-x-solution/">go-get-golang-x-solution</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/oauth2/">Django oauth2 provider</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-26" class="post-time">
+        2019-05-26
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -316,10 +316,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      问题描述 当我们使用 go get、go install、go mod 等命令时，会自动下载相应的包或依赖包。但由于众所周知的原因，类似于 golang.org/x/... 的包会出现下载失败
+      Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... 'provider', 'provider.oauth2', ) # urls.py url(r'^oauth2/', include('provider.oauth2.urls', namespace = 'oauth2')), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ?   Create a client entry in your database
+To find out which type of client you need to create, read Section 2.1.
+To create a new entry simply use the Django admin panel.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/go-get-golang-x-solution/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/oauth2/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,15 +332,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/go/">Golang</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/elasticsearch/">Elasticsearch Tutorial</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-15" class="post-time">
+        2019-05-15
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -350,25 +352,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      a-tour-of-go
-standard-library
-Debugging-with-Delve
-generate-model-structs-from-database
-glide
-gopm
-material
-package_download
-quick-start
-web-dev-with-gin-needed
-gin
-go-get-golang-x-solution.md
-good-at.md
-gorm.md
-modules.md
-photoprism.md
+      Getting Started Installing and Running Elasticsearch Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
+Installing Sense Sense is a Kibana app that provides an interactive console for submitting requests to Elasticsearch directly from your browser.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/go/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/elasticsearch/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -379,15 +367,15 @@ photoprism.md
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/good-at/">Golang Pros and Cons</a>
+      <a class="post-link" href="/post/specialization/big-data/elk-stack/">elk stack</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-15" class="post-time">
+        2019-05-15
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://csyezheng.github.io/categories/big-data/"> big-data </a>
           
         </div>
       
@@ -399,10 +387,12 @@ photoprism.md
   <div class="post-content">
     
     <div class="post-summary">
-      Golang Pros  Modular design means the compiled binary is as small as possible and requires no dependencies. Like Java, it’s platform independent. You can compile it for any platform your servers and applications run on. Take that, Apple. Easy for your developers to learn because it’s based on C. You don’t need to go to a code bootcamp to become proficient. Has static type checking, meaning your code gets its bugs cleaned up at compile time, not in production.
+      Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
+Install Beats Install Filebeat Install Metricbeat sudo pacman -S metricbeat sudo vim /etc/metricbeat/metricbeat.yml setup.dashboards.enabled: true From the Metricbeat install directory, enable the system module
+cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricbeat.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/good-at/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/big-data/elk-stack/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1329,6 +1319,153 @@ photoprism.md
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/22/">»</a></li>
@@ -1336,7 +1473,7 @@ photoprism.md
 
       
       
-      <li><a href="/page/37/">»»</a></li>
+      <li><a href="/page/44/">»»</a></li>
       
 
       </ul>

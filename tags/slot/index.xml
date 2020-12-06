@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>slot on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/slot/</link>
+    <description>Recent content in slot on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/slot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Joint intent and slot classification</title>
+      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</guid>
+      <description>Reference  Joint_Intent_and_Slot_Classification.ipynb  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Getting Started with Microservice Development Using Spring Boot - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="Introduction to Microservices Benefits Each component in the platform can be delivered and upgraded separately. Each component in the platform can also be scaled out to multiple servers independently Challenges Many small components that use synchronous communication can cause a chain of failure problem, especially under high load. Keeping the configuration consistent and up to date in all the instances Monitoring the state of the platform in terms of latency" />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.79.0" />
+
+
+<link rel="canonical" href="http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-boot/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="Getting Started with Microservice Development Using Spring Boot" />
+<meta property="og:description" content="Introduction to Microservices Benefits Each component in the platform can be delivered and upgraded separately. Each component in the platform can also be scaled out to multiple servers independently Challenges Many small components that use synchronous communication can cause a chain of failure problem, especially under high load. Keeping the configuration consistent and up to date in all the instances Monitoring the state of the platform in terms of latency" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-boot/" />
+<meta property="article:published_time" content="2020-11-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-11-18T00:00:00+00:00" />
+<meta itemprop="name" content="Getting Started with Microservice Development Using Spring Boot">
+<meta itemprop="description" content="Introduction to Microservices Benefits Each component in the platform can be delivered and upgraded separately. Each component in the platform can also be scaled out to multiple servers independently Challenges Many small components that use synchronous communication can cause a chain of failure problem, especially under high load. Keeping the configuration consistent and up to date in all the instances Monitoring the state of the platform in terms of latency">
+<meta itemprop="datePublished" content="2020-11-18T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-11-18T00:00:00+00:00" />
+<meta itemprop="wordCount" content="4358">
+
+
+
+<meta itemprop="keywords" content="Spring,microservices," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Getting Started with Microservice Development Using Spring Boot"/>
+<meta name="twitter:description" content="Introduction to Microservices Benefits Each component in the platform can be delivered and upgraded separately. Each component in the platform can also be scaled out to multiple servers independently Challenges Many small components that use synchronous communication can cause a chain of failure problem, especially under high load. Keeping the configuration consistent and up to date in all the instances Monitoring the state of the platform in terms of latency"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Getting Started with Microservice Development Using Spring Boot</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-11-18" class="post-time">
+          2020-11-18
+        </time>
+        <div class="post-category">
+            <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction-to-microservices">Introduction to Microservices</a>
+      <ul>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#challenges">Challenges</a></li>
+        <li><a href="#microservice-must-fulfill-certain-criteria">microservice must fulfill certain criteria</a></li>
+        <li><a href="#how-big-should-a-microservice-be">How big should a microservice be?</a></li>
+        <li><a href="#design-patterns-for-microservices">Design patterns for microservices</a></li>
+        <li><a href="#software-enablers">Software enablers</a></li>
+        <li><a href="#other-important-considerations">Other important considerations</a></li>
+      </ul>
+    </li>
+    <li><a href="#introduction-to-spring-boot">Introduction to Spring Boot</a>
+      <ul>
+        <li><a href="#learning-about-spring-boot">Learning about Spring Boot</a></li>
+        <li><a href="#reactive-non-blocking-synchronous-rest-services-with-spring-webflux">Reactive non-blocking synchronous REST services with Spring WebFlux.</a></li>
+        <li><a href="#swagger-and-openapi-based-documentation-with-springfox">Swagger and OpenAPI-based documentation with SpringFox</a></li>
+        <li><a href="#persistent-data-with-spring-data">Persistent data with Spring Data</a></li>
+        <li><a href="#message-based-asynchronous-services-with-spring-cloud-stream">Message-based asynchronous services with Spring Cloud Stream</a></li>
+        <li><a href="#learning-about-docker">Learning about Docker</a></li>
+      </ul>
+    </li>
+    <li><a href="#creating-a-set-of-cooperating-microservices">Creating a Set of Cooperating Microservices</a>
+      <ul>
+        <li><a href="#introducing-the-microservice-landscape">Introducing the microservice landscape</a></li>
+        <li><a href="#generating-skeleton-microservices">Generating skeleton microservices</a></li>
+        <li><a href="#adding-restful-apis">Adding RESTful APIs</a></li>
+        <li><a href="#adding-a-composite-microservice">Adding a composite microservice</a></li>
+        <li><a href="#adding-error-handling">Adding error handling</a></li>
+        <li><a href="#testing-the-apis-manually">Testing the APIs manually</a></li>
+        <li><a href="#adding-automated-tests-of-microservices-in-isolation">Adding automated tests of microservices in isolation</a></li>
+        <li><a href="#adding-semi-automated-tests-to-a-microservice-landscape">Adding semi-automated tests to a microservice landscape</a></li>
+      </ul>
+    </li>
+    <li><a href="#deploying-our-microservices-using-docker">Deploying Our Microservices Using Docker</a></li>
+    <li><a href="#adding-api-description-using-openapiswagger">Adding API Description Using OpenAPI/Swagger</a></li>
+    <li><a href="#adding-persistence">Adding Persistence</a></li>
+    <li><a href="#developing-reactive-microservices">Developing Reactive Microservices</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h2 id="introduction-to-microservices">Introduction to Microservices</h2>
+<h3 id="benefits">Benefits</h3>
+<ul>
+<li>
+<p>Each component in the platform can be <strong>delivered and upgraded separately</strong>.</p>
+</li>
+<li>
+<p>Each component in the platform can also be <strong>scaled</strong> out to multiple servers <strong>independently</strong></p>
+</li>
+</ul>
+<h3 id="challenges">Challenges</h3>
+<ul>
+<li>Many small components that use synchronous communication can cause <em>a</em> <em>chain of failure</em> problem, especially under high load.</li>
+<li>Keeping the configuration consistent and up to date in all the instances</li>
+<li>Monitoring the state of the platform in terms of latency issues and hardware usage was more complicated</li>
+<li>Collecting log files and correlating related log events from the components was also difficult.</li>
+</ul>
+<h3 id="microservice-must-fulfill-certain-criteria">microservice must fulfill certain criteria</h3>
+<ul>
+<li>It must conform to a shared-nothing architecture; that is, microservices <strong>don&rsquo;t share data in databases</strong> with each other!</li>
+<li>It must <strong>only communicate through well-defined interfaces</strong>, for example, using synchronous services or preferably by sending messages to each other using APIs and message formats that are stable, well-documented, and evolve by following a defined versioning strategy.</li>
+<li>It must be deployed as separate runtime processes. Each instance of a microservice runs in a <strong>separate runtime process</strong>, for example, a Docker container.</li>
+<li>Microservice instances are <strong>stateless</strong> so that incoming requests to a microservice can be handled by any of its instances.</li>
+</ul>
+<h3 id="how-big-should-a-microservice-be">How big should a microservice be?</h3>
+<ul>
+<li>Small enough to fit in the head of a developer</li>
+<li>Big enough to not jeopardize performance (that is, latency) and/or data consistency (SQL foreign keys between data that&rsquo;s stored in different microservices are no longer something you can take for granted)</li>
+</ul>
+<h3 id="design-patterns-for-microservices">Design patterns for microservices</h3>
+<h4 id="service-discovery">Service discovery</h4>
+<ul>
+<li>
+<p>The problem</p>
+<p>Microservices instances are typically assigned dynamically allocated IP addresses, how can clients find microservices and their instances?</p>
+</li>
+<li>
+<p>A solution</p>
+<p>a <strong>service discovery</strong> service keeps track of currently available microservices and the IP addresses of its instances.</p>
+</li>
+<li>
+<p>Requirements for the solution</p>
+<p>Automatically register/unregister microservices</p>
+<p>The request will be routed to one of the microservices available instances.</p>
+<p>Requests to a microservice must be load-balanced over the available instances.</p>
+<p>We must be able to detect instances that are not currently healthy; that is, requests will not be routed to them.</p>
+<p>This design pattern can be implemented using two different strategies: <strong>Client-side routing</strong> or <strong>Server-side routing</strong></p>
+</li>
+</ul>
+<h4 id="edge-server">Edge server</h4>
+<ul>
+<li>
+<p>The problem</p>
+<p>It is in many cases desirable to expose some of the microservices to the outside and hide the remaining microservices from external access. The exposed microservices must be protected against requests from malicious clients.</p>
+</li>
+<li>
+<p>A solution</p>
+<p>all incoming requests will go through an <strong>Edge Server</strong>, Implementation notes: An edge server typically behaves like a reverse proxy and can be integrated with a discovery service to provide dynamic load balancing capabilities.</p>
+</li>
+<li>
+<p>Requirements for the solution</p>
+<p>Hide internal services that should not be exposed outside their context; that is, only route requests to microservices that are configured to allow external requests.</p>
+<p>Expose external services and protect them from malicious requests; that is, use standard protocols and best practices such as OAuth, OIDC, JWT tokens, and API keys to ensure that the clients are trustworthy.</p>
+</li>
+</ul>
+<h4 id="reactive-microservices">Reactive microservices</h4>
+<ul>
+<li>
+<p>The problem</p>
+<p>we are used to implementing  <strong>synchronous</strong> communication using <strong>blocking I/O</strong>, for example, a RESTful JSON API over HTTP. a server might run out of available threads in the operating system, causing problems ranging from longer response times to crashing servers.</p>
+<p><strong>overusing</strong> blocking I/O can make a system of microservices prone to errors which is also known as a <strong>chain of failures</strong>.</p>
+</li>
+<li>
+<p>A solution</p>
+<p>Use non-blocking I/O to ensure that no threads are allocated while waiting for processing to occur in another service, that is, a database or another microservice.</p>
+</li>
+<li>
+<p>Requirements for the solution</p>
+<p>Whenever feasible, use an <strong>asynchronous programming</strong> model; that is, send messages without waiting for the receiver to process them.</p>
+<p>If a synchronous programming model is preferred, ensure that reactive frameworks are used that can execute <strong>synchronous requests using non-blocking I/O</strong>, that is, without allocating a thread while waiting for a response. This will make the microservices easier to scale in order to handle an increased workload.</p>
+<p>Microservices must also be designed to be resilient, that is, <strong>capable of producing a response, even if a service that it depends on fails</strong>. Once the failing service is operational again, its clients must be able to resume using it, which is known as self-healing.</p>
+</li>
+</ul>
+<h4 id="central-configuration">Central configuration</h4>
+<ul>
+<li>
+<p>The problem</p>
+<p>How do I get a complete picture of the configuration that is in place for all the running microservice instances?</p>
+<p>How do I update the configuration and make sure that all the affected microservice instances are updated correctly?</p>
+</li>
+<li>
+<p>A solution</p>
+<p>a configuration server to store the configuration of all the microservices.</p>
+</li>
+<li>
+<p>Requirements for the solution</p>
+<p>Make it possible to store configuration information for a group of microservices in one place, with different settings for different environments (for example, dev, test, qa, and prod).</p>
+</li>
+</ul>
+<h4 id="centralized-log-analysis">Centralized log analysis</h4>
+<ul>
+<li>
+<p>The problem</p>
+<p>How do I find out if any of the microservice instances get into trouble and start writing error messages to their log files?</p>
+<p>If end users start to report problems, how can I find related log messages; that is, how can I identify which microservice instance is the root cause of the problem?</p>
+</li>
+<li>
+<p>A solution</p>
+<p>Add a new component that can manage <strong>centralized logging</strong> and is capable of the following:</p>
+<ul>
+<li>Detecting new microservice instances and collecting log events from them</li>
+<li>Interpreting and storing log events in a structured and searchable way in a central database</li>
+<li>Providing APIs and graphical tools for querying and analyzing log events</li>
+</ul>
+</li>
+<li>
+<p>Requirements for the solution</p>
+</li>
+</ul>
+<h4 id="distributed-tracing">Distributed tracing</h4>
+<ul>
+<li>
+<p>The problem</p>
+<p>If end users start to file support cases regarding a specific failure, how can we identify the microservice that caused the problem, that is, the root cause?</p>
+<p>If one support case mentions problems related to a specific entity, for example, a specific order number, how can we find log messages related to processing this specific order</p>
+</li>
+<li>
+<p>A solution</p>
+<p>To track the processing between cooperating microservices, we need to ensure that all related requests and messages are marked with a common correlation ID and that the correlation ID is part of all log events. Based on a correlation ID, we can use the centralized logging service to find all related log events.</p>
+</li>
+<li>
+<p>Requirements for the solution</p>
+<p>Assign unique correlation IDs to all incoming or new requests and events in a well-known place, such as a header with a recognized name.</p>
+<p>When a microservice makes an outgoing request or sends a message, it must add the correlation ID to the request and message.</p>
+<p>All log events must include the correlation ID in a predefined format so that the centralized logging service can extract the correlation ID from the log event and make it searchable.</p>
+</li>
+</ul>
+<h4 id="circuit-breaker">Circuit Breaker</h4>
+<ul>
+<li>
+<p>The problem</p>
+<p>A system landscape of microservices that uses <strong>synchronous</strong> intercommunication can be exposed to a <em><strong>chain of failure</strong></em>. If one microservice stops responding, its clients might get into problems as well and stop responding to requests from their clients. The problem can propagate recursively throughout a system landscape.</p>
+</li>
+<li>
+<p>A solution</p>
+<p>Add a Circuit Breaker that prevents new outgoing requests from a caller if it detects a problem with the service it calls.</p>
+</li>
+<li>
+<p>Requirements for the solution</p>
+<ul>
+<li>Open the circuit and fail fast (without waiting for a timeout) if problems with the service are detected.</li>
+<li><strong>Probe</strong> (探针) for failure correction (also known as a <strong>half-open circuit</strong>); that is, allow a single request to go through on a regular basis to <strong>see if</strong> the service operates normally again.</li>
+<li>Close the circuit if the probe detects that the service operates normally again. This capability is very important since it makes the system landscape resilient to these kinds of problems; that is, it <strong>self-heals</strong>.</li>
+</ul>
+<p>all <strong>synchronous</strong> communication within the system landscape of microservices <strong>goes through Circuit Breakers</strong>. All the Circuit Breakers are closed; that is, they allow traffic, except for one Circuit Breaker detected problems in the service the requests go to.</p>
+</li>
+</ul>
+<h4 id="control-loop">Control loop</h4>
+<ul>
+<li>
+<p>The problem</p>
+<p>In a system landscape with a large number of microservice instances spread out over a number of servers, it is very difficult to manually detect and correct problems such as crashed or hung microservice instances.</p>
+</li>
+<li>
+<p>A solution</p>
+<p>Add a new component, a <strong>control loop</strong>, to the system landscape; this constantly observes the actual state of the system landscape; compares it with the desired state, as specified by the operators; and, if required, takes action.</p>
+<p><img src="https://static.packt-cdn.com/products/9781789613476/graphics/4716aa50-5154-4e6a-b6d2-32ae7728d640.png" alt=""></p>
+</li>
+<li>
+<p>Requirements for the solution</p>
+<p>Implementation notes: In the world of containers, a <em>container orchestrator</em> such as <strong>Kubernetes</strong> is typically used to implement this pattern.</p>
+</li>
+</ul>
+<h4 id="centralized-monitoring-and-alarms">Centralized monitoring and alarms</h4>
+<ul>
+<li>
+<p>The problem</p>
+<p>If observed response times and/or the usage of hardware resources become unacceptably high, it can be very hard to discover the root cause of the problem.</p>
+</li>
+<li>
+<p>A solution</p>
+<p>Add a new component, a <strong>monitor service</strong>, which is capable of collecting metrics about hardware resource usage for each microservice instance level.</p>
+</li>
+<li>
+<p>Requirements for the solution</p>
+<ul>
+<li>It must be able to collect metrics from all the servers that are used by the system landscape, which includes auto-scaling servers.</li>
+<li>It must be able to detect new microservice instances as they are launched on the available servers and start to collect metrics from them.</li>
+<li>It must be able to provide APIs and graphical tools for querying and analyzing the collected metrics.</li>
+</ul>
+<p>Use <strong>Grafana</strong> visualizes metrics from <strong>Prometheus</strong></p>
+</li>
+</ul>
+<h3 id="software-enablers">Software enablers</h3>
+<table>
+<thead>
+<tr>
+<th>Design Pattern</th>
+<th><strong>Spring Boot</strong></th>
+<th><strong>Spring Cloud</strong></th>
+<th><strong>Kubernetes</strong></th>
+<th><strong>Istio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Service discovery</strong></td>
+<td></td>
+<td>Netflix Eureka and Netflix Ribbon</td>
+<td>Kubernetes kube-proxy and service resources</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Edge server</strong></td>
+<td></td>
+<td>Spring Cloud and Spring Security OAuth</td>
+<td>Kubernetes Ingress controller</td>
+<td>Istio ingress gateway</td>
+</tr>
+<tr>
+<td><strong>Reactive microservices</strong></td>
+<td>Spring Reactor and Spring WebFlux</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Central configuration</strong></td>
+<td></td>
+<td>Spring Config Server</td>
+<td>Kubernetes ConfigMaps and Secrets</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Centralized log analysis</strong></td>
+<td></td>
+<td></td>
+<td>Elasticsearch, Fluentd, and Kibana  <strong>Note</strong>: Actually not part of Kubernetes  but can easily be deployed and configured together with Kubernetes</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Distributed tracing</strong></td>
+<td></td>
+<td>Spring Cloud Sleuth and Zipkin</td>
+<td></td>
+<td>Jaeger</td>
+</tr>
+<tr>
+<td><strong>Circuit Breaker</strong></td>
+<td></td>
+<td>Resilience4j</td>
+<td></td>
+<td>Outlier detection</td>
+</tr>
+<tr>
+<td><strong>Control loop</strong></td>
+<td></td>
+<td></td>
+<td>Kubernetes controller manager</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Centralized monitoring and alarms</strong></td>
+<td></td>
+<td></td>
+<td>Grafana and Prometheus<!-- raw HTML omitted --> <strong>Note:</strong> Actually not part of Kubernetes</td>
+<td>Kiali, Grafana, and Prometheus</td>
+</tr>
+</tbody>
+</table>
+<p>Please note that Spring Cloud, Kubernetes, and Istio can be used to implement some design patterns, such as service discovery, edge server, and central configuration. We will discuss the pros and cons of using these alternatives later in this book.</p>
+<h3 id="other-important-considerations">Other important considerations</h3>
+<ul>
+<li>
+<p><strong>Importance of Dev/Ops</strong>: microservice architecture enables shorter delivery times and allows the <em>continuous delivery</em> of new versions.  the teams also need to <strong>automate the delivery chain</strong>, that is, the steps for building, testing, packaging, and deploying the microservices to the various deployment environments. This is known as setting up a <em>delivery pipeline</em></p>
+</li>
+<li>
+<p><strong>Decomposing a monolithic application into microservices</strong>: One of the most difficult and expensive decisions is how to decompose a monolithic application into a set of cooperating microservices. If this is done in the wrong way, you will end up with problems such as the following:</p>
+<ul>
+<li>Slow delivery</li>
+<li>Slow performance</li>
+<li>Inconsistent data</li>
+</ul>
+<p>A good approach to finding proper boundaries for microservices is to apply <strong>Domain-Driven Design</strong> and its <strong>Bounded Context</strong> concept. According to Eric Evans, a <em>Bounded Context</em> is &ldquo;<em>A description of a boundary (typically a subsystem, or the work of a particular team) within which a particular model is defined and applicable.&quot;</em> This means that the microservice defined by a Bounded Context will have a well-defined model of its own data.</p>
+</li>
+<li>
+<p><strong>Importance of API design</strong>:</p>
+<ul>
+<li>the description in terms of the naming and data types used.</li>
+<li>It is of great importance that APIs are allowed to evolve in a controlled manner. This typically requires applying a proper versioning schema for the APIs, allowing clients of the API to migrate to new major versions at their own pace.</li>
+</ul>
+</li>
+<li>
+<p><strong>Migration paths from on-premise to the cloud</strong>: An appealing migration approach can be to <strong>first move</strong> the workload into Kubernetes on-premise (as microservices or not) <strong>and then redeploy</strong> it on a <em>Kubernetes as a Service</em> offering provided by a preferred cloud provider.</p>
+</li>
+<li>
+<p><strong>Good design principles for microservices, the 12-factor app</strong>: The 12-factor app (<a href="https://12factor.net/">https://12factor.net</a>) is a set of design principles for building software that can be deployed in the cloud.</p>
+</li>
+</ul>
+<h2 id="introduction-to-spring-boot">Introduction to Spring Boot</h2>
+<p>We will develop microservices that contain business logic based on plain Spring Beans and REST APIs using Spring WebFlux, the Swagger/OpenAPI-based documentation of the REST APIs, and SpringFox and data persistence, while using Spring Data to store data in both SQL and NoSQL databases</p>
+<ul>
+<li>
+<p>plain Spring Beans, Spring WebFlux,  Swagger, SpringFox, Spring Data</p>
+</li>
+<li>
+<p>create reactive microservices in this chapter, including both non-blocking synchronous REST APIs and message-based asynchronous services</p>
+</li>
+<li>
+<p>use <strong>Spring WebFlux</strong> to develop non-blocking synchronous REST APIs and <strong>Spring Cloud Stream</strong> to develop message-based asynchronous services.</p>
+</li>
+</ul>
+<h3 id="learning-about-spring-boot">Learning about Spring Boot</h3>
+<p>Spring Boot does that by applying a number of <strong>conventions</strong> by default, minimizing the need for configuration. Whenever required, each convention can be overridden by writing some configuration, case by case.  Configuration, when required, is in my opinion written best using Java and <strong>annotations</strong>.</p>
+<p>A fat <strong>JAR</strong> file contains not only the classes and resource files of the application itself, but also all the .jar files the application depends on. This means that the fat JAR file is the only JAR file required to run the application.</p>
+<p>Starting a fat JAR requires no separately installed Java EE web server, such as Apache Tomcat. Instead, it can be started with a simple command such as java -jar app.jar, making it a perfect choice for running in a Docker container!</p>
+<h4 id="component-scanning">Component scanning</h4>
+<ul>
+<li>
+<p>Let&rsquo;s assume we have the following Spring <strong>component in the package of the application class</strong> (or in one of its sub-packages):</p>
+<pre><code>@Component
+public class MyComponentImpl implements MyComponent { ...
+</code></pre><p>Another component in the application can get the component automatically injected, also known as <strong>auto-wiring</strong>, using the <strong><code>@Autowired</code></strong> annotation:</p>
+<pre><code>public class AnotherComponent {
+  
+  private final MyComponent myComponent;
+  
+  @Autowired
+  public AnotherComponent(MyComponent myComponent) {
+    this.myComponent = myComponent;
+  }
+</code></pre><p>I prefer using constructor injection (over field and setter injection) to keep the state in my components immutable. The immutable state is important if you want to be able to run the component in a multithreaded runtime environment.</p>
+</li>
+<li>
+<p>If we want to use components that are <strong>declared in a package outside the applications package</strong>, for example, a utility component shared by multiple Spring Boot applications, we can complement the @SpringBootApplication annotation in the application class with a <strong><code>@ComponentScan</code></strong> annotation:</p>
+<pre><code>package se.magnus.myapp;
+  
+@SpringBootApplication
+@ComponentScan({&quot;se.magnus.myapp&quot;,&quot;se.magnus.utils&quot;})
+public class MyApplication {
+</code></pre><p>We can now auto-wire components from the se.magnus.util package in the application code, for example, a utility component, as follows:</p>
+<pre><code>package se.magnus.utils;
+  
+@Component
+public class MyUtility { ...
+</code></pre><p>This utility component can be auto-wired in an application component like so:</p>
+<pre><code>package se.magnus.myapp.services;
+  
+public class AnotherComponent {
+  
+ private final MyUtility myUtility;
+  
+ @Autowired
+ public AnotherComponent(MyUtility myUtility) {
+   this.myUtility = myUtility;
+ }
+</code></pre></li>
+</ul>
+<h4 id="java-based-configuration">Java-based configuration</h4>
+<p>If we want to override Spring Boot&rsquo;s default configuration or if we want to add our own configuration, we can simply annotate a class with <strong><code>@Configuration</code></strong>. for example:</p>
+<pre><code>@Configuration
+public class SubscriberApplication {
+
+  @Bean
+  public Filter logFilter() {
+    CommonsRequestLoggingFilter filter = new 
+        CommonsRequestLoggingFilter();
+    filter.setIncludeQueryString(true);
+    filter.setIncludePayload(true);
+    filter.setMaxPayloadLength(5120);
+    return filter;
+  }
+</code></pre><h3 id="reactive-non-blocking-synchronous-rest-services-with-spring-webflux">Reactive non-blocking synchronous REST services with Spring WebFlux.</h3>
+<p>Spring Framework uses <strong>Project Reactor</strong> as the base implementation of its reactive support, and also comes with a new web framework, Spring WebFlux, which supports the development of reactive, that is, non-blocking, HTTP clients and services.</p>
+<p>Spring WebFlux supports running on a servlet container, but also supports reactive non-servlet-based embedded web servers such as <strong>Netty</strong>.</p>
+<p>The Spring WebFlux starter dependency will be added to the build.gradle file. It looks like this:</p>
+<pre><code>implementation('org.springframework.boot:spring-boot-starter-webflux')
+</code></pre><p>When the microservice is started up, Spring Boot will detect Spring WebFlux on the classpath and configure it,  then start up an embedded web server, Netty is used by default,</p>
+<p>If we want to switch from Netty to Tomcat as our embedded web server, we can override the default configuration by excluding Netty from the starter dependency and add the starter dependency for Tomcat:</p>
+<pre><code>implementation('org.springframework.boot:spring-boot-starter-webflux') 
+{
+ exclude group: 'org.springframework.boot', module: 'spring-boot-
+ starter-reactor-netty'
+}
+implementation('org.springframework.boot:spring-boot-starter-tomcat')
+</code></pre><p>Spring Boot application property files can either be a .properties file or a YAML file. By default, they are named application.properties and application.yml, respectively. Avoid port collisions with other microservices running on the same server, add the following line to the application.yml file:</p>
+<pre><code>server.port: 7001
+</code></pre><p>Sample RestController</p>
+<pre><code>@RestController
+public class MyRestService {
+
+  @GetMapping(value = &quot;/my-resource&quot;, produces = &quot;application/json&quot;)
+  List&lt;Resource&gt; listResources() {
+    ...
+  }
+</code></pre><h3 id="swagger-and-openapi-based-documentation-with-springfox">Swagger and OpenAPI-based documentation with SpringFox</h3>
+<p>SpringFox is an open-source project, separate from the Spring Framework, that can create Swagger-based API documentation at runtime. It does so by examining the application at startup, for example, inspecting WebFlux and Swagger-based annotations.</p>
+<h3 id="persistent-data-with-spring-data">Persistent data with Spring Data</h3>
+<p><strong>Spring Data</strong> comes with a common programming model for persisting data in various types of database engine, ranging from traditional relational databases (SQL databases) to various types of NoSQL database engine, such as document databases (for example, MongoDB), key-value databases (for example, Redis), and graph databases (for example, Neo4J).</p>
+<p>The Spring Data project is divided into several subprojects and in this book we will use <strong>Spring Data</strong> subprojects for MongoDB and <strong>JPA</strong> that have been mapped to a MySQL database.</p>
+<p>The two core concepts of the programming model in Spring Data are <strong>entities</strong> and <strong>repositories</strong>. Entities and repositories generalize how data is stored and accessed from the various types of database.</p>
+<h4 id="entity">Entity</h4>
+<p>Entity classes are, in general, annotated with a mix of generic Spring Data annotations and annotations that are specific to each database technology.</p>
+<p>For example, an entity that will be stored in a relational database can be annotated with JPA annotations such as the following:</p>
+<pre><code>import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.persistence.Table;
+
+@Entity
+@IdClass(ReviewEntityPK.class)
+@Table(name = &quot;review&quot;)
+public class ReviewEntity {
+ @Id private int productId;
+ @Id private int reviewId;
+ private String author;
+ private String subject;
+ private String content;
+</code></pre><p>If an entity is to be stored in a MongoDB database, annotations from the Spring Data MongoDB subproject can be used together with generic Spring Data annotations. For example, consider the following code:</p>
+<pre><code>import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Version;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
+public class RecommendationEntity {
+
+    @Id
+    private String id;
+
+    @Version
+    private int version;
+
+    private int productId;
+    private int recommendationId;
+    private String author;
+    private int rate;
+    private String content;
+</code></pre><h4 id="repositories">Repositories</h4>
+<p>Repositories are used to store and access data from different types of database. In its most basic form, a repository can be declared as a Java interface.</p>
+<p>Spring Data also comes with some base Java interfaces, for example, CrudRepository, to make the definition of a repository even simpler.</p>
+<p>To specify a repository for handling the JPA entity, ReviewEntity, we only need to declare the following:</p>
+<pre><code>import org.springframework.data.repository.CrudRepository;
+
+public interface ReviewRepository extends CrudRepository&lt;ReviewEntity, ReviewEntityPK&gt; {
+    Collection&lt;ReviewEntity&gt; findByProductId(int productId);
+}
+</code></pre><p>In this example we use a class, ReviewEntityPK, to describe a composite primary key. It looks as follows:</p>
+<pre><code>public class ReviewEntityPK implements Serializable {
+    public int productId;
+    public int reviewId;
+}
+</code></pre><p>We have also added an extra method, findByProductId, which allows us to look up Review entities based on productId</p>
+<p>If we want to use the repository, we can simply inject it and then start to use it, for example:</p>
+<pre><code>private final ReviewRepository repository;
+
+@Autowired
+public ReviewService(ReviewRepository repository) {
+ this.repository = repository;
+}
+
+public void someMethod() {
+  repository.save(entity);
+  repository.delete(entity);
+  repository.findByProductId(productId);
+</code></pre><p>Spring Data also provides a reactive base interface, ReactiveCrudRepository, which enables <strong>reactive repositories</strong>. The methods in this interface do not return objects or collections of objects; instead, they return <strong>Mono</strong> and <strong>Flux</strong> objects.</p>
+<p>The reactive-based interface can only be used by Spring Data subprojects that support reactive database drivers; that is, they are based on non-blocking I/O. The Spring Data MongoDB subproject supports reactive repositories, while Spring Data JPA does not.</p>
+<pre><code>import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import reactor.core.publisher.Flux;
+
+public interface RecommendationRepository extends ReactiveCrudRepository&lt;RecommendationEntity, String&gt; {
+    Flux&lt;RecommendationEntity&gt; findByProductId(int productId);
+}
+</code></pre><h3 id="message-based-asynchronous-services-with-spring-cloud-stream">Message-based asynchronous services with Spring Cloud Stream</h3>
+<p>Spring Cloud Stream provides a streaming abstraction over messaging, based on the publish-and-subscribe integration pattern. Spring Cloud Stream currently comes with support for Apache Kafka and RabbitMQ out of the box. A number of separate projects exist that provide integration with other popular messaging systems. See <a href="https://github.com/spring-cloud?q=binder">https://github.com/spring-cloud?q=binder</a> for more details.</p>
+<p>The core concepts in Spring Cloud Stream are as follows:</p>
+<ul>
+<li><strong>Message:</strong> A data structure that&rsquo;s used to describe data sent to and received from a messaging system.</li>
+<li><strong>Publisher:</strong> Sends messages to the messaging system.</li>
+<li><strong>Subscriber</strong>: Receives messages from the messaging system.</li>
+<li><strong>Channel:</strong> Used to communicate with the messaging system. Publishers use output channels and subscribers use input channels.</li>
+<li><strong>Binder:</strong> A binder provides the actual integration with a specific messaging system, similar to what a JDBC driver does for a specific type of database.</li>
+</ul>
+<h6 id="examples">examples</h6>
+<p>Let&rsquo;s assume that we have a simple message class such as the following (constructors, getters, and setters have been left out for improved readability):</p>
+<pre><code>public class MyMessage {
+  private String attribute1 = null;
+  private String attribute2 = null;
+</code></pre><p>Spring Cloud Stream comes with default input and output <strong>channels</strong>, <strong>Sink</strong> and <strong>Source</strong>, so we don&rsquo;t need to create our own to get started. To publish a message, we can use the following source code:</p>
+<pre><code>import org.springframework.cloud.stream.messaging.Source;
+
+@EnableBinding(Source.class)
+public class MyPublisher {
+
+ @Autowired private Source mysource;
+
+ public String processMessage(MyMessage message) {
+   mysource.output().send(MessageBuilder.withPayload(message).build());
+</code></pre><p>To receive messages, we can use the following code:</p>
+<pre><code>import org.springframework.cloud.stream.messaging.Sink;
+
+@EnableBinding(Sink.class)
+public class MySubscriber {
+
+ @StreamListener(target = Sink.INPUT)
+ public void receive(MyMessage message) {
+ LOG.info(&quot;Received: {}&quot;,message);
+</code></pre><p>To bind to RabbitMQ, we will use a dedicated starter dependency in the build file, build.gradle:</p>
+<pre><code>implementation('org.springframework.cloud:spring-cloud-starter-stream-rabbit')
+</code></pre><p>For the subscriber to receive messages from the publisher, we need to configure <strong>the input and output channel</strong> to use the same destination. If we use YAML to describe our configuration, it might look like the following for the publisher:</p>
+<pre><code>spring.cloud.stream:
+  default.contentType: application/json
+  bindings.output.destination: mydestination
+</code></pre><p>The configuration for the subscriber is as follows:</p>
+<pre><code>spring.cloud.stream:
+  default.contentType: application/json
+  bindings.input.destination: mydestination
+</code></pre><h3 id="learning-about-docker">Learning about Docker</h3>
+<p>For example, we can write scripts in order to automate end-to-end tests of our microservice landscape. A test script can start up the microservice landscape, run tests using the exposed services, and tear down the landscape. This type of automated test script is very useful.</p>
+<p>A build server can run these types of test in its continuous integration and deployment process whenever a developer pushes code to the source repository.</p>
+<p>The following Dockerfile is all that is required to run the microservice as a Docker container</p>
+<pre><code>FROM openjdk:12.0.2
+
+MAINTAINER Magnus Larsson &lt;magnus.larsson.ml@gmail.com&gt;
+
+EXPOSE 8080
+ADD ./build/libs/*.jar app.jar
+ENTRYPOINT [&quot;java&quot;,&quot;-jar&quot;,&quot;/app.jar&quot;]
+</code></pre><p>If we want to start and stop many containers with one command, Docker Compose is the perfect tool. Docker Compose uses a YAML file to describe the containers to be managed.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">product</span>:
+ <span style="color:#f92672">build</span>: <span style="color:#ae81ff">microservices/product-service</span>
+
+<span style="color:#f92672">recommendation</span>:
+ <span style="color:#f92672">build</span>: <span style="color:#ae81ff">microservices/recommendation-service</span>
+
+<span style="color:#f92672">review</span>:
+  <span style="color:#f92672">build</span>: <span style="color:#ae81ff">microservices/review-service</span>
+
+<span style="color:#f92672">composite</span>:
+  <span style="color:#f92672">build</span>: <span style="color:#ae81ff">microservices/product-composite-service</span>
+  <span style="color:#f92672">ports</span>:
+    - <span style="color:#e6db74">&#34;8080:8080&#34;</span>
+</code></pre></div><h2 id="creating-a-set-of-cooperating-microservices">Creating a Set of Cooperating Microservices</h2>
+<p><a href="https://github.com/PacktPublishing/Hands-On-Microservices-with-Spring-Boot-and-Spring-Cloud/tree/master/Chapter03">https://github.com/PacktPublishing/Hands-On-Microservices-with-Spring-Boot-and-Spring-Cloud/tree/master/Chapter03</a></p>
+<h3 id="introducing-the-microservice-landscape">Introducing the microservice landscape</h3>
+<p>the microservice-based system demo landscape</p>
+<p><img src="https://static.packt-cdn.com/products/9781789613476/graphics/cf74f5f6-c0f7-471c-8eae-a2566ecee996.png" alt=""></p>
+<p>It consists of three core microservices, the <strong>Product</strong>, <strong>Review</strong>, and <strong>Recommendation</strong> services, all of which deal with one type of resource, and a composite microservice called the <strong>Product Composite</strong> service, which aggregates information from the three core services.</p>
+<p>At this stage, we don&rsquo;t have any service discovery mechanism in place, we will use hardcoded port numbers for each microservice.</p>
+<ul>
+<li>Product composite service: 7000</li>
+<li>Product service: 7001</li>
+<li>Review service: 7002</li>
+<li>Recommendation service: 7003</li>
+</ul>
+<p>Information handled by microservices:</p>
+<ul>
+<li>
+<p>Product service</p>
+<p>The product service manages product information and describes each product with the following attributes:</p>
+<ul>
+<li>Product ID</li>
+<li>Name</li>
+<li>Weight</li>
+</ul>
+</li>
+<li>
+<p>Review service</p>
+<p>The review service manages product reviews and stores the following information about each review:</p>
+<ul>
+<li>Product ID</li>
+<li>Review ID</li>
+<li>Author</li>
+<li>Subject</li>
+<li>Content</li>
+</ul>
+</li>
+<li>
+<p>Recommendation service</p>
+<p>The recommendation service manages product recommendations and stores the following information about each recommendation:</p>
+<ul>
+<li>Product ID</li>
+<li>Recommendation ID</li>
+<li>Author</li>
+<li>Rate</li>
+<li>Content</li>
+</ul>
+</li>
+<li>
+<p>Product composite service</p>
+<p>The product composite service aggregates information from the three core services and presents information about a product as follows:</p>
+<ul>
+<li>Product information, as described in the product service</li>
+<li>A list of product reviews for the specified product, as described in the review service</li>
+<li>A list of product recommendations for the specified product, as described in the recommendation service</li>
+</ul>
+</li>
+<li>
+<p>Infrastructure-related information</p>
+<p>Once we start to run our microservices as containers that are managed by the infrastructure (first Docker and later on Kubernetes), it will be of interest to track which container actually responded to our requests. To simplify this tracking, we have also added a serviceAddress attribute to all our responses, formatted as hostname/ip-address:port.</p>
+</li>
+</ul>
+<h3 id="generating-skeleton-microservices">Generating skeleton microservices</h3>
+<h4 id="using-spring-initializr-to-generate-skeleton-code">Using Spring Initializr to generate skeleton code</h4>
+<p>To create skeleton code for our microservices, we need to run the following command for product-service:</p>
+<pre><code>spring init \
+--boot-version=2.1.0.RC1 \
+--build=gradle \
+--java-version=1.8 \
+--packaging=jar \
+--name=product-service \
+--package-name=se.magnus.microservices.core.product \
+--groupId=se.magnus.microservices.core.product \
+--dependencies=actuator,webflux \
+--version=1.0.0-SNAPSHOT \
+product-service
+</code></pre><p>Spring Boot Actuator enables a number of valuable endpoints for management and monitoring. We will see them in action later on. Spring WebFlux will be used here to create our RESTful APIs.</p>
+<p>We can build each microservice separately with the following command:</p>
+<pre><code>cd microservices/product-composite-service; ./gradlew build; cd -; \
+cd microservices/product-service;           ./gradlew build; cd -; \
+cd microservices/recommendation-service;    ./gradlew build; cd -; \
+cd microservices/review-service;            ./gradlew build; cd -; 
+</code></pre><h4 id="setting-up-multi-project-builds-in-gradle">Setting up multi-project builds in Gradle</h4>
+<ol>
+<li>
+<p>create the settings.gradle file</p>
+<pre><code>cat &lt;&lt;EOF &gt; settings.gradle
+include ':microservices:product-service'
+include ':microservices:review-service'
+include ':microservices:recommendation-service'
+include ':microservices:product-composite-service'
+EOF
+</code></pre></li>
+<li>
+<p>copy the Gradle executable files that were generated from one of the projects so that we can reuse them for the multi-project builds:</p>
+<pre><code>cp -r microservices/product-service/gradle .
+cp microservices/product-service/gradlew .
+cp microservices/product-service/gradlew.bat .
+cp microservices/product-service/.gitignore .
+</code></pre></li>
+<li>
+<p>no longer need the generated Gradle executable files in each project</p>
+<pre><code>find microservices -depth -name &quot;gradle&quot; -exec rm -rfv &quot;{}&quot; \; 
+find microservices -depth -name &quot;gradlew*&quot; -exec rm -fv &quot;{}&quot; \; 
+</code></pre></li>
+<li>
+<p>build all the microservices with one command</p>
+<pre><code>./gradlew build
+</code></pre></li>
+</ol>
+<h3 id="adding-restful-apis">Adding RESTful APIs</h3>
+<h4 id="adding-an-api-and-a-util-project">Adding an API and a util project</h4>
+<p>add two projects (api and util) that will contain code that is shared by the microservice projects</p>
+<p>It is debatable whether it is good practice to store API definitions for a group of microservices in a common API module. To me, it is a good choice for microservices that are part of the same delivery organization, that is, whose releases are governed by one and the same organization (compare to a <em>Bounded Context</em> in <em>Domain-Driven Design</em>, where our microservices are placed in one and the same bounded context).</p>
+<h6 id="the-api-project">The api project</h6>
+<h6 id="the-util-project">The util project</h6>
+<h4 id="implementing-the-restful-apis">Implementing the RESTful APIs</h4>
+<h3 id="adding-a-composite-microservice">Adding a composite microservice</h3>
+<h3 id="adding-error-handling">Adding error handling</h3>
+<h3 id="testing-the-apis-manually">Testing the APIs manually</h3>
+<h3 id="adding-automated-tests-of-microservices-in-isolation">Adding automated tests of microservices in isolation</h3>
+<h3 id="adding-semi-automated-tests-to-a-microservice-landscape">Adding semi-automated tests to a microservice landscape</h3>
+<h2 id="deploying-our-microservices-using-docker">Deploying Our Microservices Using Docker</h2>
+<h2 id="adding-api-description-using-openapiswagger">Adding API Description Using OpenAPI/Swagger</h2>
+<h2 id="adding-persistence">Adding Persistence</h2>
+<h2 id="developing-reactive-microservices">Developing Reactive Microservices</h2>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2020-11-18
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://csyezheng.github.io/tags/spring/">Spring</a>
+          <a href="http://csyezheng.github.io/tags/microservices/">microservices</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/specialization/web-application/spring/microservice-with-kubernetes/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">Developing Lightweight Microservices Using Kubernetes</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/specialization/web-application/spring/microservice-with-spring-cloud/">
+            <span class="next-text nav-default">Leveraging Spring Cloud to Manage Microservices</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

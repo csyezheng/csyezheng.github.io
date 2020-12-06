@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Machine Learning Models for Predictions in Cloud Dataflow Pipelines - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="This solution describes and compares the different design approaches for calling a machine learning model during a Dataflow pipeline, and examines the tradeoffs involved in choosing one approach or another. We present the results of a series of experiments that we ran to explore different approaches and illustrate these tradeoffs, both in batch and stream processing pipelines. This solution is designed for people who integrate trained models into data processing pipelines, rather than for data scientists who want to build machine learning models." />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.79.0" />
+
+
+<link rel="canonical" href="http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="Machine Learning Models for Predictions in Cloud Dataflow Pipelines" />
+<meta property="og:description" content="This solution describes and compares the different design approaches for calling a machine learning model during a Dataflow pipeline, and examines the tradeoffs involved in choosing one approach or another. We present the results of a series of experiments that we ran to explore different approaches and illustrate these tradeoffs, both in batch and stream processing pipelines. This solution is designed for people who integrate trained models into data processing pipelines, rather than for data scientists who want to build machine learning models." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/" />
+<meta property="article:published_time" content="2020-12-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-05T00:00:00+00:00" />
+<meta itemprop="name" content="Machine Learning Models for Predictions in Cloud Dataflow Pipelines">
+<meta itemprop="description" content="This solution describes and compares the different design approaches for calling a machine learning model during a Dataflow pipeline, and examines the tradeoffs involved in choosing one approach or another. We present the results of a series of experiments that we ran to explore different approaches and illustrate these tradeoffs, both in batch and stream processing pipelines. This solution is designed for people who integrate trained models into data processing pipelines, rather than for data scientists who want to build machine learning models.">
+<meta itemprop="datePublished" content="2020-12-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-12-05T00:00:00+00:00" />
+<meta itemprop="wordCount" content="4473">
+
+
+
+<meta itemprop="keywords" content="machine-learning,deep-learning,design," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Machine Learning Models for Predictions in Cloud Dataflow Pipelines"/>
+<meta name="twitter:description" content="This solution describes and compares the different design approaches for calling a machine learning model during a Dataflow pipeline, and examines the tradeoffs involved in choosing one approach or another. We present the results of a series of experiments that we ran to explore different approaches and illustrate these tradeoffs, both in batch and stream processing pipelines. This solution is designed for people who integrate trained models into data processing pipelines, rather than for data scientists who want to build machine learning models."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Machine Learning Models for Predictions in Cloud Dataflow Pipelines</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-12-05" class="post-time">
+          2020-12-05
+        </time>
+        <div class="post-category">
+            <a href="http://csyezheng.github.io/categories/artificial-intelligence/"> artificial-intelligence </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#platform">Platform</a>
+      <ul>
+        <li><a href="#core-components">Core components</a></li>
+        <li><a href="#processing-batch-and-streaming-data">Processing batch and streaming data</a></li>
+        <li><a href="#invoking-a-tensorflow-model">Invoking a TensorFlow model</a></li>
+      </ul>
+    </li>
+    <li><a href="#batch-experiments">Batch experiments</a>
+      <ul>
+        <li><a href="#approach-1-dataflow-with-direct-model-prediction">Approach 1: Dataflow with direct-model prediction</a></li>
+        <li><a href="#approach-2-dataflow-with-ai-platform-batch-prediction">Approach 2: Dataflow with AI Platform batch prediction</a></li>
+        <li><a href="#experiment-configurations">Experiment configurations</a></li>
+        <li><a href="#results">Results</a></li>
+      </ul>
+    </li>
+    <li><a href="#stream-experiments">Stream experiments</a>
+      <ul>
+        <li><a href="#approach-1-dataflow-with-ai-platform-online-prediction">Approach 1: Dataflow with AI Platform online prediction</a></li>
+        <li><a href="#approach-2-dataflow-with-direct-model-prediction">Approach 2: Dataflow with direct-model prediction</a></li>
+        <li><a href="#experiment-configurations-1">Experiment configurations</a></li>
+        <li><a href="#results-1">Results</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusions">Conclusions</a>
+      <ul>
+        <li><a href="#batch-processing">Batch processing</a></li>
+        <li><a href="#stream-processing">Stream processing</a></li>
+      </ul>
+    </li>
+    <li><a href="#whats-next">What&rsquo;s next</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>This solution describes and compares the different design approaches for calling a machine learning model during a Dataflow pipeline, and examines the tradeoffs involved in choosing one approach or another. We present the results of a series of experiments that we ran to explore different approaches and illustrate these tradeoffs, both in batch and stream processing pipelines. This solution is designed for people who integrate trained models into data processing pipelines, rather than for data scientists who want to build machine learning models.</p>
+<h2 id="introduction">Introduction</h2>
+<p>As the person responsible for integrating this ML model into the Dataflow pipeline, you might wonder what the various approaches are, and which one suits best system requirements. Several considerations need your attention, such as:</p>
+<ul>
+<li>Throughput</li>
+<li>Latency</li>
+<li>Cost</li>
+<li>Implementation</li>
+<li>Maintenance</li>
+</ul>
+<p>It&rsquo;s not always easy to balance these considerations, but this solution can help you navigate the decision-making process based on your priorities. The solution compares three approaches for making predictions with a TensorFlow-trained machine learning (ML) model in batch and stream data pipelines:</p>
+<ul>
+<li>Using a deployed model as a REST/HTTP API for streaming pipelines.</li>
+<li>Using AI Platform (AI Platform) batch prediction jobs for batch pipelines.</li>
+<li>Using Dataflow direct-model prediction for both batch and streaming pipelines.</li>
+</ul>
+<p>All the experiments use an existing trained model, called the Natality dataset, which predicts baby weights based on various inputs. Because the goal of this solution is not to build a model, it doesn&rsquo;t discuss how the model was built or trained. See the <a href="https://cloud.google.com/solutions/comparing-ml-model-predictions-using-cloud-dataflow-pipelines#heading=h.eskc9ld7ie95">Next Steps</a> section for more details about the Natality dataset.</p>
+<h2 id="platform">Platform</h2>
+<p>There are various ways to run a data pipeline and call a trained ML model. But the functional requirements are always the same:</p>
+<ol>
+<li><em>Ingesting</em> data from a bounded (batch) or unbounded (streaming) source. Examples of sources from which to ingest data include sensor data, website interactions, and financial transactions.</li>
+<li><em>Transforming and enriching</em> the input data by calling ML models for predictions. An example is parsing a JSON file to extract relevant fields to predict a maintenance date, make a product recommendation, or detect fraud.</li>
+<li><em>Storing</em> the transformed data and predictions for analytics or for backup, or to pass to a queuing system to trigger a new event or additional pipelines. Examples include detecting potential fraud in real time or storing maintenance schedule information in a store that&rsquo;s accessible from a dashboard.</li>
+</ol>
+<p>When you transform and enrich data with predictions in a batch ETL process, you aim for maximizing throughputs in order to reduce the overall amount of time needed for the whole data batch. On the other hand, when you process streaming data for online prediction, you aim for minimizing latency in order to receive each prediction in (near) real time. Thus, calling the model might become a bottleneck.</p>
+<h3 id="core-components">Core components</h3>
+<p>The batch and streaming experiments in this solution use three main technologies:</p>
+<ul>
+<li><a href="https://beam.apache.org/">Apache Beam</a> running on Dataflow to process the data.</li>
+<li><a href="https://www.tensorflow.org/">TensorFlow</a> to implement and train the ML model.</li>
+<li>For some experiments, <a href="https://cloud.google.com/ml-engine">AI Platform</a> as a hosting platform for the trained ML models to perform batch and online predictions.</li>
+</ul>
+<p>We chose <strong>Apache Beam running on Dataflow</strong> to run data pipelines in this solution because:</p>
+<ul>
+<li>Apache Beam is an open-source unified programming model that runs both streaming and batch data processing jobs.</li>
+<li>Dataflow is a Google Cloud product that can run Apache Beam jobs without a server.</li>
+</ul>
+<p><strong>TensorFlow</strong> is an open-source mathematical library by Google that is used as a machine learning framework. TensorFlow enables building, training, and serving models on a single machine or in distributed environments. Models are portable to various devices and can also leverage available <a href="https://en.wikipedia.org/wiki/Central_processing_unit">CPU</a>, <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit">GPU</a>, or <a href="https://en.wikipedia.org/wiki/Tensor_processing_unit">TPU</a> resources for training and serving.</p>
+<p><strong>AI Platform</strong> is a serverless platform that can train, tune (using the hyper-parameters tuning functionality), and serve TensorFlow models at scale with minimum management required by DevOps. AI Platform supports deploying trained models as REST APIs for online predictions, as well as submitting batch prediction jobs. AI Platform is one of several options that can serve your model as a microservice.</p>
+<p>The approaches detailed in this solution use Dataflow for the data processing pipeline and AI Platform to host the models as HTTP endpoints. However, these approaches could be replaced with other technologies. The performance comparisons between HTTP and a direct TensorFlow model would not drastically change.</p>
+<h3 id="processing-batch-and-streaming-data">Processing batch and streaming data</h3>
+<p>The experiments in this solution include both batch and streaming use cases. Each experiment leverages different Google Cloud products for input and output because unbounded and bounded sources have different operational requirements.</p>
+<h4 id="batch-processing-a-bounded-dataset">Batch-processing a bounded dataset</h4>
+<p>Figure 1 shows that in typical batch processing pipelines, raw input data is stored in object storage, such as <a href="https://cloud.google.com/storage">Cloud Storage</a>. Structured data storage formats include comma-separated values (CSV), optimized row columnar (ORC), Parquet, or Avro. These formats are often used when data comes from databases or logs.</p>
+<p><img src="https://cloud.google.com/solutions/images/comparing-ml-model-predictions-using-cloud-dataflow-fig-1-batch-processing.svg" alt="Architecture of typical batch processing pipelines"><strong>Figure 1.</strong> Batch-processing architecture</p>
+<p>Some analytical platforms such as <a href="https://cloud.google.com/bigquery">BigQuery</a> provide storage in addition to query capabilities. BigQuery uses <a href="https://cloud.google.com/blog/big-data/2016/04/inside-capacitor-bigquerys-next-generation-columnar-storage-format">Capacitor</a> for storage. Apache Beam on Dataflow can read from and write to both BigQuery and Cloud Storage, in addition to other storage options in batch processing pipelines.</p>
+<h4 id="stream-processing-an-unbounded-datastream">Stream-processing an unbounded datastream</h4>
+<p>For streaming, the inputs to a data processing pipeline are usually a messaging system, as shown in Figure 2. Technologies such as <a href="https://cloud.google.com/pubsub">Pub/Sub</a> or Kafka are typically used to ingest individual data points in JSON, CSV, or protobuf format.</p>
+<p><img src="https://cloud.google.com/solutions/images/comparing-ml-model-predictions-using-cloud-dataflow-fig-2-stream-processing.svg" alt="Architecture of typical stream processing pipelines"><strong>Figure 2.</strong> Stream-processing architecture</p>
+<p>Data points can be processed individually, or as groups in micro-batches by using <a href="https://beam.apache.org/documentation/programming-guide/#windowing">windowing</a> functions to perform temporal event processing. The processed data might go to several destinations, including:</p>
+<ol>
+<li>BigQuery for ad hoc analytics, through the streaming APIs.</li>
+<li>Cloud Bigtable for serving real-time information.</li>
+<li>Pub/Sub topic for triggering subsequent processes/pipelines.</li>
+</ol>
+<p>You can find a complete list of source connectors (input) and sink connectors (output) for both bounded and unbounded data source sinks on the <a href="https://beam.apache.org/documentation/io/built-in/">Apache Beam I/O page</a>.</p>
+<h3 id="invoking-a-tensorflow-model">Invoking a TensorFlow model</h3>
+<p>A TensorFlow-trained model can be invoked in three ways:</p>
+<ol>
+<li>Through an HTTP endpoint for <strong>online</strong> prediction.</li>
+<li>Directly, by using the saved model file for <strong>batch</strong> and <strong>online</strong> predictions.</li>
+<li>Through an AI Platform batch prediction job for <strong>batch</strong> prediction.</li>
+</ol>
+<h4 id="http-endpoints-for-online-prediction">HTTP endpoints for online prediction</h4>
+<p>TensorFlow models are deployed as HTTP endpoints to be invoked and give predictions in real time, either through a stream data processing pipeline or through client apps.</p>
+<p>You can deploy a TensorFlow model as an HTTP endpoint for online predictions by using <a href="https://github.com/tensorflow/serving">TensorFlow Serving</a> or any other hosting service, such as <a href="https://www.seldon.io/">Seldon</a>. As shown in Figure 3, you can choose one of the following options:</p>
+<ol>
+<li>Deploy the model yourself on one or more Compute Engine instances.</li>
+<li>Use a <a href="https://github.com/tensorflow/serving/tree/master/tensorflow_serving/tools/docker">Docker image</a> on <a href="https://cloud.google.com/compute/docs/containers/deploying-containers">Compute Engine</a> or <a href="https://cloud.google.com/kubernetes-engine">Google Kubernetes Engine</a>.</li>
+<li>Leverage <a href="https://github.com/kubeflow/kubeflow">Kubeflow</a> to facilitate deployment on <a href="https://kubernetes.io/">Kubernetes</a> or Google Kubernetes Engine.</li>
+<li>Use App Engine with Endpoints to host the model in a web app.</li>
+<li>Use <a href="https://cloud.google.com/ml-engine">AI Platform</a>, the fully managed ML training and serving service on Google Cloud.</li>
+</ol>
+<p><img src="https://cloud.google.com/solutions/images/comparing-ml-model-predictions-using-cloud-dataflow-fig-3-different-models-for-http-endpoints.svg" alt="Options in Dataflow for serving a model as an HTTP endpoint"><strong>Figure 3.</strong> Different options in Dataflow for serving a model as an HTTP endpoint</p>
+<p>AI Platform is a fully managed service, so it is easier to implement than the other options. Therefore, in our experiments we use it as the option for serving the model as an HTTP endpoint. We can then focus on the performance of a direct-model versus an HTTP endpoint in AI Platform, rather than comparing the different HTTP model-serving options.</p>
+<h4 id="serving-online-predictions-with-ai-platform-prediction">Serving online predictions with AI Platform Prediction</h4>
+<p>Two tasks are required in order to serve online predictions:</p>
+<ol>
+<li>Deploying a model.</li>
+<li>Interacting with the deployed model for inference (that is, making predictions).</li>
+</ol>
+<p><a href="https://cloud.google.com/ml-engine/docs/tensorflow/deploying-models">Deploying a model</a> as an HTTP endpoint using AI Platform Prediction requires the following steps:</p>
+<ol>
+<li>Make sure that the trained model files are available on Cloud Storage.</li>
+<li>Create a model by using the <code>gcloud ml-engine models create</code> command.</li>
+<li>Deploy a model version by using the <code>gcloud ml-engine versions create</code> command, with the model files on Cloud Storage.</li>
+</ol>
+<p>You can deploy a model by using commands like the following:</p>
+<p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/scripts/deploy-cmle.sh">blogs/tf_dataflow_serving/scripts/deploy-cmle.sh</a></p>
+<p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/scripts/deploy-cmle.sh">View on GitHub</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">PROJECT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[PROJECT_ID]&#34;</span> <span style="color:#75715e"># change to your project name</span>
+REGION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[REGION]&#34;</span>
+BUCKET<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[BUCKET]&#34;</span> <span style="color:#75715e"># change to your bucket name</span>
+MODEL_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;babyweight_estimator&#34;</span> <span style="color:#75715e"># change to your estimator name</span>
+MODEL_VERSION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;v1&#34;</span> <span style="color:#75715e"># change to your model version</span>
+MODEL_BINARIES<span style="color:#f92672">=</span>gs://<span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span>/models/<span style="color:#e6db74">${</span>MODEL_NAME<span style="color:#e6db74">}</span>
+
+<span style="color:#75715e"># upload the local SavedModel to GCS</span>
+gsutil -m cp -r model/trained/v1/* gs://<span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span>/models/<span style="color:#e6db74">${</span>MODEL_NAME<span style="color:#e6db74">}</span>
+
+<span style="color:#75715e"># set the current project</span>
+gcloud config set project <span style="color:#e6db74">${</span>PROJECT<span style="color:#e6db74">}</span>
+
+<span style="color:#75715e"># list model files on GCS</span>
+gsutil ls <span style="color:#e6db74">${</span>MODEL_BINARIES<span style="color:#e6db74">}</span>
+
+<span style="color:#75715e"># deploy model to GCP</span>
+gcloud ml-engine models create <span style="color:#e6db74">${</span>MODEL_NAME<span style="color:#e6db74">}</span> --regions<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>REGION<span style="color:#e6db74">}</span>
+
+<span style="color:#75715e"># deploy model version</span>
+gcloud ml-engine versions create <span style="color:#e6db74">${</span>MODEL_VERSION<span style="color:#e6db74">}</span> --model<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>MODEL_NAME<span style="color:#e6db74">}</span> --origin<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>MODEL_BINARIES<span style="color:#e6db74">}</span> --runtime-version<span style="color:#f92672">=</span>1.4
+</code></pre></div><p>The code creates an AI Platform Prediction model called babyweight_estimator in the Google Cloud project, with model version v1.</p>
+<p>After the model is deployed, you can invoke it. The following Python code shows a way to invoke a model version in AI Platform Prediction as a REST API:</p>
+<p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/model/inference.py">blogs/tf_dataflow_serving/model/inference.py</a></p>
+<p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/model/inference.py">View on GitHub</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">cmle_api <span style="color:#f92672">=</span> None
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">init_api</span>():
+
+    <span style="color:#66d9ef">global</span> cmle_api
+
+    <span style="color:#66d9ef">if</span> cmle_api <span style="color:#f92672">is</span> None:
+        cmle_api <span style="color:#f92672">=</span> discovery<span style="color:#f92672">.</span>build(<span style="color:#e6db74">&#39;ml&#39;</span>, <span style="color:#e6db74">&#39;v1&#39;</span>,
+                              discoveryServiceUrl<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://storage.googleapis.com/cloud-ml/discovery/ml_v1_discovery.json&#39;</span>,
+                              cache_discovery<span style="color:#f92672">=</span>True)
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">estimate_cmle</span>(instances):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    Calls the babyweight estimator API on CMLE to get predictions
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">    Args:
+</span><span style="color:#e6db74">       instances: list of json objects
+</span><span style="color:#e6db74">    Returns:
+</span><span style="color:#e6db74">        int - estimated baby weight
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    init_api()
+
+    request_data <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;instances&#39;</span>: instances}
+
+    model_url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;projects/{}/models/{}/versions/{}&#39;</span><span style="color:#f92672">.</span>format(PROJECT, CMLE_MODEL_NAME, CMLE_MODEL_VERSION)
+    response <span style="color:#f92672">=</span> cmle_api<span style="color:#f92672">.</span>projects()<span style="color:#f92672">.</span>predict(body<span style="color:#f92672">=</span>request_data, name<span style="color:#f92672">=</span>model_url)<span style="color:#f92672">.</span>execute()
+    values <span style="color:#f92672">=</span> [item[<span style="color:#e6db74">&#34;predictions&#34;</span>][<span style="color:#ae81ff">0</span>] <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> response[<span style="color:#e6db74">&#39;predictions&#39;</span>]]
+    <span style="color:#66d9ef">return</span> values
+</code></pre></div><p>If you have a large dataset available in something like BigQuery or Cloud Storage and you want to maximize the throughput of the overall process, serving your ML model as an HTTP endpoint is not recommended for batch prediction. Doing this generates one HTTP request for each data point, which results in a huge volume of HTTP requests. The following section presents better options for batch prediction.</p>
+<h4 id="direct-model-for-batch-and-online-predictions">Direct-model for batch and online predictions</h4>
+<p>The direct-model prediction technique leverages a local TensorFlow <code>SavedModel</code> on the Dataflow instances. The saved model is a copy of the output files created after you have finished building and training the TensorFlow model. The TensorFlow <code>SavedModel</code> can be:</p>
+<ul>
+<li>Part of the pipeline source code that is submitted as a Dataflow job.</li>
+<li>Downloaded from Cloud Storage, as shown in Figure 4.</li>
+</ul>
+<p><img src="https://cloud.google.com/solutions/images/comparing-ml-model-predictions-using-cloud-dataflow-fig-4-direct-model-prediction.png" alt="Direct-model prediction in Dataflow"><strong>Figure 4.</strong> Direct-model prediction in Dataflow</p>
+<p>In this solution, we use a <code>SavedModel</code> that is part of the <a href="https://github.com/GoogleCloudPlatform/training-data-analyst/tree/master/blogs/tf_dataflow_serving/model">source code</a> on GitHub. To load a model on the instances, you do the following:</p>
+<ol>
+<li>
+<p>When you create the Dataflow job, specify the pipeline dependencies to be loaded, including the model file. The following Python code shows the <code>setup.py</code> file that includes the model files to be submitted with the Dataflow job.</p>
+<p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/setup.py">blogs/tf_dataflow_serving/setup.py</a></p>
+<p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/setup.py">View on GitHub</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> setuptools
+   
+requirements <span style="color:#f92672">=</span> []
+   
+setuptools<span style="color:#f92672">.</span>setup(
+    name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;TF-DATAFLOW-DEMO&#39;</span>,
+    version<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;v1&#39;</span>,
+    install_requires<span style="color:#f92672">=</span>requirements,
+    packages<span style="color:#f92672">=</span>setuptools<span style="color:#f92672">.</span>find_packages(),
+    package_data<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;model&#39;</span>: [<span style="color:#e6db74">&#39;trained/*&#39;</span>,
+                            <span style="color:#e6db74">&#39;trained/v1/*&#39;</span>,
+                            <span style="color:#e6db74">&#39;trained/v1/variables/*&#39;</span>]
+                  },
+)
+</code></pre></div></li>
+<li>
+<p>Call the local model files during the pipeline. This produces the prediction for the given instances. The following Python code shows how to do this.</p>
+<p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/model/inference.py">blogs/tf_dataflow_serving/model/inference.py</a></p>
+<p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/model/inference.py">View on GitHub</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">predictor_fn <span style="color:#f92672">=</span> None
+   
+   
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">init_predictor</span>():
+    <span style="color:#e6db74">&#34;&#34;&#34; Loads the TensorFlow saved model to the predictor object
+</span><span style="color:#e6db74">   
+</span><span style="color:#e6db74">    Returns:
+</span><span style="color:#e6db74">        predictor_fn
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+   
+    <span style="color:#66d9ef">global</span> predictor_fn
+   
+    <span style="color:#66d9ef">if</span> predictor_fn <span style="color:#f92672">is</span> None:
+   
+        logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;Initialising predictor...&#34;</span>)
+        dir_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>dirname(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>realpath(__file__))
+        export_dir <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(dir_path, SAVED_MODEL_DIR)
+   
+        <span style="color:#66d9ef">if</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>exists(export_dir):
+            predictor_fn <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>contrib<span style="color:#f92672">.</span>predictor<span style="color:#f92672">.</span>from_saved_model(
+                export_dir<span style="color:#f92672">=</span>export_dir,
+                signature_def_key<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;predict&#34;</span>
+            )
+        <span style="color:#66d9ef">else</span>:
+            logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#34;Model not found! - Invalid model path: {}&#34;</span><span style="color:#f92672">.</span>format(export_dir))
+   
+   
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">estimate_local</span>(instances):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    Calls the local babyweight estimator to get predictions
+</span><span style="color:#e6db74">   
+</span><span style="color:#e6db74">    Args:
+</span><span style="color:#e6db74">       instances: list of json objects
+</span><span style="color:#e6db74">    Returns:
+</span><span style="color:#e6db74">        int - estimated baby weight
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+   
+    init_predictor()
+   
+    inputs <span style="color:#f92672">=</span> dict((k, [v]) <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> instances[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>items())
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,len(instances)):
+        instance <span style="color:#f92672">=</span> instances[i]
+   
+        <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> instance<span style="color:#f92672">.</span>items():
+            inputs[k] <span style="color:#f92672">+=</span> [v]
+   
+    values <span style="color:#f92672">=</span> predictor_fn(inputs)[<span style="color:#e6db74">&#39;predictions&#39;</span>]
+    <span style="color:#66d9ef">return</span> [value<span style="color:#f92672">.</span>item() <span style="color:#66d9ef">for</span> value <span style="color:#f92672">in</span> values<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)]
+</code></pre></div></li>
+</ol>
+<p>See the <a href="https://beam.apache.org/documentation/sdks/python-pipeline-dependencies/#multiple-file-dependencies">Apache Beam Multiple File Dependencies</a> page for more details.</p>
+<h4 id="ai-platform-batch-prediction-job">AI Platform batch prediction job</h4>
+<p>Besides deploying the model as an HTTP endpoint, AI Platform lets you run a <a href="https://cloud.google.com/ml-engine/docs/tensorflow/batch-predict">batch prediction job</a> by using a deployed model version or a TensorFlow <code>SavedModel</code> in Cloud Storage.</p>
+<p>An AI Platform batch prediction job takes the Cloud Storage location of the input data files as a parameter. It uses the model to get predictions for that data, and then stores the prediction results in another Cloud Storage output location that is also given as a parameter. The following example shows <code>gcloud</code> commands that submit an AI Platform batch prediction job.</p>
+<p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/scripts/predict-batch-cmle.sh">blogs/tf_dataflow_serving/scripts/predict-batch-cmle.sh</a></p>
+<p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/scripts/predict-batch-cmle.sh">View on GitHub</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">BUCKET<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&lt;BUCKET&gt;&#39;</span>
+DATA_FORMAT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;TEXT&#34;</span>
+INPUT_PATHS<span style="color:#f92672">=</span>gs://<span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span>/data/babyweight/experiments/outputs/data-prep-*
+OUTPUT_PATH<span style="color:#f92672">=</span>gs://<span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span>/data/babyweight/experiments/outputs/cmle-estimates
+MODEL_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;babyweight_estimator&#39;</span>
+VERSION_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;v1&#39;</span>
+REGION<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&lt;REGION&gt;&#39;</span>
+now<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>date +<span style="color:#e6db74">&#34;%Y%m%d_%H%M%S&#34;</span><span style="color:#66d9ef">)</span>
+JOB_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;batch_predict_</span>$MODEL_NAME$now<span style="color:#e6db74">&#34;</span>
+MAX_WORKER_COUNT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20&#34;</span>
+
+gcloud ml-engine jobs submit prediction $JOB_NAME <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --model<span style="color:#f92672">=</span>$MODEL_NAME <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --input-paths<span style="color:#f92672">=</span>$INPUT_PATHS <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --output-path<span style="color:#f92672">=</span>$OUTPUT_PATH <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --region<span style="color:#f92672">=</span>$REGION <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --data-format<span style="color:#f92672">=</span>$DATA_FORMAT <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --max-worker-count<span style="color:#f92672">=</span>$MAX_WORKER_COUNT
+</code></pre></div><h4 id="point-by-point-versus-micro-batching-for-online-prediction">Point-by-point versus micro-batching for online prediction</h4>
+<p>In real-time prediction pipelines, whether you are serving the model as an HTTP endpoint or using the model directly from the workers, you have two options to get predictions for incoming data points:</p>
+<ul>
+<li><strong>Individual point</strong>. The obvious option is to send each data point to the model individually and get a prediction.</li>
+<li><strong>Micro-batches</strong>. A more optimized option is to use a windowing function to create micro-batches, grouping data points within a specific time period, such as every 5 seconds. The micro-batch is then sent to the model to get predictions for all the instances at at time.</li>
+</ul>
+<p>The following Python code shows how to create time-based micro-batches using a windowing function in an Apache Beam pipeline.</p>
+<p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/pipelines/stream_process.py">blogs/tf_dataflow_serving/pipelines/stream_process.py</a></p>
+<p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/pipelines/stream_process.py">View on GitHub</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run_pipeline_with_micro_batches</span>(inference_type, project,
+                                    pubsub_topic, pubsub_subscription,
+                                    bq_dataset, bq_table,
+                                    window_size, runner, args<span style="color:#f92672">=</span>None):
+
+    prepare_steaming_source(project, pubsub_topic, pubsub_subscription)
+    prepare_steaming_sink(project, bq_dataset, bq_table)
+    pubsub_subscription_url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;projects/{}/subscriptions/{}&#34;</span><span style="color:#f92672">.</span>format(project, pubsub_subscription)
+    options <span style="color:#f92672">=</span> beam<span style="color:#f92672">.</span>pipeline<span style="color:#f92672">.</span>PipelineOptions(flags<span style="color:#f92672">=</span>[], <span style="color:#f92672">**</span>args)
+
+    pipeline <span style="color:#f92672">=</span> beam<span style="color:#f92672">.</span>Pipeline(runner, options<span style="color:#f92672">=</span>options)
+    (
+            pipeline
+            <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;Read from PubSub&#39;</span> <span style="color:#f92672">&gt;&gt;</span> beam<span style="color:#f92672">.</span>io<span style="color:#f92672">.</span>ReadStringsFromPubSub(subscription<span style="color:#f92672">=</span>pubsub_subscription_url, id_label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;source_id&#34;</span>)
+            <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;Micro-batch - Window Size: {} Seconds&#39;</span><span style="color:#f92672">.</span>format(window_size) <span style="color:#f92672">&gt;&gt;</span> beam<span style="color:#f92672">.</span>WindowInto(FixedWindows(size<span style="color:#f92672">=</span>window_size))
+            <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;Estimate Targets - {}&#39;</span><span style="color:#f92672">.</span>format(inference_type) <span style="color:#f92672">&gt;&gt;</span> beam<span style="color:#f92672">.</span>FlatMap(<span style="color:#66d9ef">lambda</span> messages: estimate(messages, inference_type))
+            <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;Write to BigQuery&#39;</span> <span style="color:#f92672">&gt;&gt;</span> beam<span style="color:#f92672">.</span>io<span style="color:#f92672">.</span>WriteToBigQuery(project<span style="color:#f92672">=</span>project,
+                                                             dataset<span style="color:#f92672">=</span>bq_dataset,
+                                                             table<span style="color:#f92672">=</span>bq_table
+                                                             )
+    )
+
+    pipeline<span style="color:#f92672">.</span>run()
+</code></pre></div><p>The micro-batching approach uses models deployed as HTTP endpoints, which dramatically reduces the number of HTTP requests and reduces latency. Even when the micro-batching technique used with the direct model, sending the model a tensor with N instances for prediction is more efficient than sending a tensor with a length of 1 because of the vectorized operations.</p>
+<h2 id="batch-experiments">Batch experiments</h2>
+<p>In the batch experiments, we want to estimate baby weights in the Natality dataset in BigQuery by using a TensorFlow regression model. We then want to save the prediction results in Cloud Storage as CSV files by using a Dataflow batch pipeline. The following section describes different experiments we tried to accomplish this task.</p>
+<h3 id="approach-1-dataflow-with-direct-model-prediction">Approach 1: Dataflow with direct-model prediction</h3>
+<p>In this approach, Dataflow workers host the TensorFlow <code>SavedModel</code>, which is called directly for prediction during the batch processing pipeline for each record. Figure 5 shows the high-level architecture of this approach.</p>
+<p><img src="https://cloud.google.com/solutions/images/comparing-ml-model-predictions-using-cloud-dataflow-fig-5-batch-approach-1-dataflow-with-direct-model.png" alt="Batch Approach 1: Dataflow with direct model prediction"><strong>Figure 5.</strong> Batch Approach 1: Dataflow with direct model prediction</p>
+<p>The Dataflow pipeline performs the following steps:</p>
+<ol>
+<li>Read data from BigQuery.</li>
+<li>Prepare BigQuery record for prediction.</li>
+<li>Call the local TensorFlow <code>SavedModel</code> to get a prediction for each record.</li>
+<li>Convert the result (input record and estimated baby weight) to a CSV file.</li>
+<li>Write the CSV file to Cloud Storage.</li>
+</ol>
+<p>In this approach, there are no calls to remote services, such as a deployed model on AI Platform as an HTTP endpoint. The prediction is done locally within each Dataflow worker by using the TensorFlow <code>SavedModel</code>.</p>
+<h3 id="approach-2-dataflow-with-ai-platform-batch-prediction">Approach 2: Dataflow with AI Platform batch prediction</h3>
+<p>In this approach, the TensorFlow <code>SavedModel</code> is stored in Cloud Storage and used by AI Platform for prediction. However, instead of making an API call to the deployed model for each record as with the previous approach, the data is prepared for prediction and submitted as a batch.</p>
+<p>This approach has two phases:</p>
+<ol>
+<li>Dataflow prepares the data from BigQuery for prediction, and then stores the data in Cloud Storage.</li>
+<li>The AI Platform batch prediction job is submitted with the prepared data, and the prediction results are stored in Cloud Storage.</li>
+</ol>
+<p>Figure 6 shows the overall architecture of this two-phased approach.</p>
+<p><img src="https://cloud.google.com/solutions/images/comparing-ml-model-predictions-using-cloud-dataflow-fig-6-batch-approach-2-dataflow-with-cloud-ml.png" alt="Batch Approach 2: Dataflow with AI Platform batch prediction"><strong>Figure 6.</strong> Batch Approach 2: Dataflow with AI Platform batch prediction</p>
+<p>The workflow steps, including the Dataflow pipeline, are as follows:</p>
+<ol>
+<li>Read data from BigQuery.</li>
+<li>Prepare BigQuery record for prediction.</li>
+<li>Write JSON data to Cloud Storage. The <code>serving_fn</code> function in the model expects JSON instances as input.</li>
+<li>Submit an AI Platform batch prediction job with the prepared data in Cloud Storage. This job writes the prediction results to Cloud Storage as well.</li>
+</ol>
+<p>The Dataflow job prepares the data for prediction rather than submitting the AI Platform prediction job. In other words, the data preparation task and the batch prediction task are not tightly coupled. Cloud Functions, Airflow, or any scheduler can orchestrate the workflow by executing the Dataflow job and then submitting the AI Platform job for batch prediction.</p>
+<p>AI Platform batch prediction is recommended for both performance and ease of use if your data meets the following criteria:</p>
+<ul>
+<li>Your data is available in Cloud Storage, in the format expected for prediction, from a previous data ingestion process.</li>
+<li>You don&rsquo;t have control of the first phase of the workflow, such as the Dataflow pipeline that prepares the data in Cloud Storage for prediction.</li>
+</ul>
+<h3 id="experiment-configurations">Experiment configurations</h3>
+<p>We used the following configurations in three experiments:</p>
+<ul>
+<li>Data sizes: <code>10K</code>, <code>100K</code>, <code>1M</code>, and <code>10M</code> rows</li>
+<li>Cloud Storage class: <code>Regional Storage</code></li>
+<li>Cloud Storage location: <code>europe-west1-b</code></li>
+<li>Dataflow region: <code>europe-west1-b</code></li>
+<li>Dataflow worker machine type: <code>n1-standard-1</code></li>
+<li>Dataflow Autoscaling for batch data up to 1 million records</li>
+<li>Dataflow <code>num_worker</code>: <code>20</code> for batch data up to 10 million records</li>
+<li>AI Platform batch prediction <code>max-worker-count</code> setting: <code>20</code></li>
+</ul>
+<p>The Cloud Storage location and the Dataflow region should be the same. This solution uses the <code>europe-west1-b</code> region as an arbitrary value.</p>
+<h3 id="results">Results</h3>
+<p>The following table summarizes the results (timings) of performing the batch predictions and direct-model predictions with different sizes of datasets.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Batch data size</th>
+<th style="text-align:left">Metric</th>
+<th style="text-align:left">Dataflow then AI Platform batch prediction</th>
+<th style="text-align:left">Dataflow with direct-model prediction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>10K rows</strong></td>
+<td style="text-align:left">Running time</td>
+<td style="text-align:left">15 min 30 sec  (Dataflow: 7 min 47 sec + AI Platform: 7 min 43 sec)</td>
+<td style="text-align:left">8 min 24 sec</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Total vCPU time</td>
+<td style="text-align:left">0.301 hr  (Dataflow: 0.151 hr + AI Platform: 0.15 hr)</td>
+<td style="text-align:left">0.173 hr</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>100K rows</strong></td>
+<td style="text-align:left">Running time</td>
+<td style="text-align:left">16 min 37 sec  (Dataflow: 8 min 39 sec + AI Platform: 7 min 58 sec)</td>
+<td style="text-align:left">10 min 31 sec</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Total vCPU time</td>
+<td style="text-align:left">0.334 hr  (Dataflow: 0.184 hr + AI Platform: 0.15 hr)</td>
+<td style="text-align:left">0.243 hr</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>1M rows</strong></td>
+<td style="text-align:left">Running time</td>
+<td style="text-align:left">21 min 11 sec (Dataflow: 11 min 07 sec + AI Platform: 10 min 04 sec)</td>
+<td style="text-align:left">17 min 12 sec</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Total vCPU time</td>
+<td style="text-align:left">0.446 hr  (Dataflow: 0.256 hr + AI Platform: 0.19 hr)</td>
+<td style="text-align:left">1.115 hr</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>10M rows</strong></td>
+<td style="text-align:left">Running time</td>
+<td style="text-align:left">33 min 08 sec (Dataflow: 12 min 15 sec + AI Platform: 20 min 53 sec)</td>
+<td style="text-align:left">25 min 02 sec</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Total vCPU time</td>
+<td style="text-align:left">5.251 hr  (Dataflow: 3.581 hr + AI Platform: 1.67 hr)</td>
+<td style="text-align:left">7.878 hr</td>
+</tr>
+</tbody>
+</table>
+<p>Figure 7 shows a graph of these results.</p>
+<p><img src="https://cloud.google.com/solutions/images/comparing-ml-model-predictions-using-cloud-dataflow-fig-7-barchart-batch-results.svg" alt="Graph showing timings for 3 approaches for 4 different dataset sizes"><strong>Figure 7.</strong> Graph showing timings for 3 approaches for 4 different dataset sizes</p>
+<p>As the results show, the AI Platform batch prediction job on its own takes less time to produce predictions for the input data, given that the data is already in Cloud Storage in the format used for prediction. However, when the batch prediction job is combined with a preprocessing step (extracting and preparing the data from BigQuery to Cloud Storage for prediction) and with a post-processing step (storing the data back to BigQuery), the direct-model approach produces better end-to-end execution time. In addition, the performance of the direct-model prediction approach can be further optimized using micro-batching (which we discuss later for the streaming experiments).</p>
+<h2 id="stream-experiments">Stream experiments</h2>
+<p>In the streaming experiments, the Dataflow pipeline reads data points from a Pub/Sub topic and writes the data to BigQuery by using the streaming APIs. The Dataflow streaming pipeline processes the data and gets predictions using the TensorFlow baby-weight estimation model.</p>
+<p>The topic receives data from a stream simulator that generates data points, which are the instances to estimate the baby weight for, at a predefined rate of events per second. This simulates a real-world example of an unbounded data source. The following Python code simulates the data stream sent to a Pub/Sub topic.</p>
+<p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/simulate_stream.py">blogs/tf_dataflow_serving/simulate_stream.py</a></p>
+<p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/simulate_stream.py">View on GitHub</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">client <span style="color:#f92672">=</span> pubsub<span style="color:#f92672">.</span>Client(project<span style="color:#f92672">=</span>PARAMS<span style="color:#f92672">.</span>project_id)
+topic <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>topic(PARAMS<span style="color:#f92672">.</span>pubsub_topic)
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> topic<span style="color:#f92672">.</span>exists():
+    <span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#39;Topic does not exist. Please run a stream pipeline first to create the topic.&#39;</span>
+    <span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#39;Simulation aborted.&#39;</span>
+
+    <span style="color:#66d9ef">return</span>
+
+<span style="color:#66d9ef">for</span> index <span style="color:#f92672">in</span> range(PARAMS<span style="color:#f92672">.</span>stream_sample_size):
+
+    message <span style="color:#f92672">=</span> send_message(topic, index)
+
+    <span style="color:#75715e"># for debugging</span>
+    <span style="color:#66d9ef">if</span> PARAMS<span style="color:#f92672">.</span>show_message:
+        <span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;Message {} was sent: {}&#34;</span><span style="color:#f92672">.</span>format(index<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, message)
+        <span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;&#34;</span>
+
+    time<span style="color:#f92672">.</span>sleep(sleep_time_per_msg)
+</code></pre></div><h3 id="approach-1-dataflow-with-ai-platform-online-prediction">Approach 1: Dataflow with AI Platform online prediction</h3>
+<p>In this approach, the TensorFlow model is deployed and hosted in AI Platform as a REST API. The Dataflow streaming pipeline calls the API for each message consumed from Pub/Sub get predictions. The high-level architecture of this approach is shown in Figure 8.</p>
+<p><img src="https://cloud.google.com/solutions/images/comparing-ml-model-predictions-using-cloud-dataflow-fig-8-stream-approach-1-dataflow-with-cloud-ml-online.png" alt="Stream Approach 1: Dataflow with AI Platform online prediction"><strong>Figure 8.</strong> Stream Approach 1: Dataflow with AI Platform online prediction. The HTTP request might include a single data point or a group of data points in a micro-batch.</p>
+<p>In this approach, the Dataflow pipeline performs the following steps:</p>
+<ol>
+<li>Read messages from a Pub/Sub topic.</li>
+<li>Send an HTTP request to the AI Platform model&rsquo;s API to get predictions for each message.</li>
+<li>Write results to BigQuery by using streaming APIs.</li>
+</ol>
+<p>Micro-batching is a better approach. That is, instead of sending an HTTP request to the model&rsquo;s REST API for each message that is read from Pub/Sub, Dataflow groups messages received during a 1-second window. It then sends this group of messages as a micro-batch in a single HTTP request to the model&rsquo;s API. In this approach, the Dataflow pipeline performs the following steps:</p>
+<ol>
+<li>Read messages from Pub/Sub topic.</li>
+<li>Apply a 1-second windowing operation to create a micro-batch of messages.</li>
+<li>Send an HTTP request with the micro-batch to the AI Platform model&rsquo;s API to get predictions for the messages.</li>
+<li>Write results to BigQuery by using streaming APIs.</li>
+</ol>
+<p>The rationale behind this approach is that it:</p>
+<ol>
+<li>Reduces the number of calls to the remote service, such as the AI Platform model.</li>
+<li>Reduces the average latency of serving each message.</li>
+<li>Reduces the overall processing time of the pipeline.</li>
+</ol>
+<p>In this experiment, the time window was set to 1 second. However, the micro-batch size, which is the number of messages sent as a batch to AI Platform mode, varies. The micro-batch size depends on the message generation frequency—the number of messages per second.</p>
+<p>The following section describes experiments with three different frequencies: 50, 100, and 500 messages per second. That is, the micro-batch size is 50, 100, and 500.</p>
+<h3 id="approach-2-dataflow-with-direct-model-prediction">Approach 2: Dataflow with direct-model prediction</h3>
+<p>This approach is similar to the approach that was used in the batch experiments. The TensorFlow <code>SavedModel</code> is hosted on Dataflow workers and is called for prediction during the stream processing pipeline for each record. Figure 9 shows the high-level architecture of this approach.</p>
+<p><img src="https://cloud.google.com/solutions/images/comparing-ml-model-predictions-using-cloud-dataflow-fig-9-stream-approach-2-dataflow-with-direct-model.png" alt="Stream approach 2: Dataflow with direct-model prediction"><strong>Figure 9.</strong> Stream approach 2: Dataflow with direct-model prediction</p>
+<p>In this approach, the Dataflow pipeline performs the following steps:</p>
+<ol>
+<li>Read messages from Pub/Sub topic.</li>
+<li>Call the local TensorFlow <code>SavedModel</code> to get predictions for each record.</li>
+<li>Write results to BigQuery by using streaming APIs.</li>
+</ol>
+<p>The micro-batching technique can also be used in the stream pipeline with the direct-model prediction approach. Instead of sending a tensor of one data instance to the model, we can send a tensor of N data instances, where N is equal to the messages received within the Dataflow window to the model. This technique uses the vectorized operations of the TensorFlow model and gets several predictions in parallel.</p>
+<h3 id="experiment-configurations-1">Experiment configurations</h3>
+<p>We used the following configurations for these experiments:</p>
+<ul>
+<li>Stream data size: <code>10K records (messages)</code></li>
+<li>Simulated messages per second (MPS): <code>50</code>, <code>100</code>, and <code>500</code></li>
+<li>Window size (in micro-batch experiments): <code>1 second</code></li>
+<li>Dataflow region: <code>europe-west1-b</code></li>
+<li>Dataflow worker machine type: <code>n1-standard-1</code></li>
+<li>Dataflow <code>num_worker</code>: <code>5</code> (no auto-scaling)</li>
+<li>AI Platform model API nodes: <code>3 (manualScale)</code></li>
+</ul>
+<h3 id="results-1">Results</h3>
+<p>The following table summarizes the results of performing the streaming experiments with different volumes of data (messages per second). <em>Messages frequency</em> refers to the number of messages sent per second, and <em>simulation time</em> refers to the time to send all the messages.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Stream messages frequency</th>
+<th style="text-align:left">Metric</th>
+<th style="text-align:left">Dataflow with AI Platform online prediction</th>
+<th style="text-align:left"></th>
+<th style="text-align:left">Dataflow with direct-model prediction</th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><strong>Single message</strong></td>
+<td style="text-align:left"><strong>Micro-batching</strong></td>
+<td style="text-align:left"><strong>Single message</strong></td>
+<td style="text-align:left"><strong>Micro-batching</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>50 msg per sec</strong>  (Simulation time: 3 min 20 sec)</td>
+<td style="text-align:left">Total time</td>
+<td style="text-align:left">9 min 34 sec</td>
+<td style="text-align:left">7 min 44 sec</td>
+<td style="text-align:left">3 min 43 sec</td>
+<td style="text-align:left">3 min 22 sec</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>100 msg per sec</strong>  (Simulation time**:** 1 min 40 sec)</td>
+<td style="text-align:left">Total time</td>
+<td style="text-align:left">6 min 03 sec</td>
+<td style="text-align:left">4 min 34 sec</td>
+<td style="text-align:left">1 min 51 sec</td>
+<td style="text-align:left">1 min 41 sec</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>500 msg per sec</strong>  (Simulation time**:** 20 sec)</td>
+<td style="text-align:left">Total time</td>
+<td style="text-align:left"><a href="https://cloud.google.com/ml-engine/docs/tensorflow/quotas">NA - Default AI Platform Online Prediction Quota</a></td>
+<td style="text-align:left">2 min 47 sec</td>
+<td style="text-align:left">1 min 23 sec</td>
+<td style="text-align:left">48 sec</td>
+</tr>
+</tbody>
+</table>
+<p>Figure 10 shows a graph of these results.</p>
+<p><img src="https://cloud.google.com/solutions/images/comparing-ml-model-predictions-using-cloud-dataflow-fig-10-barchart-streaming-results.svg" alt="Graph showing timings for different approaches and frequencies"><strong>Figure 10.</strong> Graph showing timings for different approaches and frequencies</p>
+<p>As shown in the results, the micro-batching technique improves the execution performance in both AI Platform online prediction and in direct-model prediction. In addition, using direct-model with streaming pipeline shows 2 times to 4 times the performance improvement compared to calling an external REST/HTTP API for online prediction.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>According to the described approaches and experiment results, we recommend the following approaches.</p>
+<h3 id="batch-processing">Batch processing</h3>
+<ul>
+<li>If you are building your batch data processing pipeline, and you want prediction as part of the pipeline, use the direct-model approach for the best performance.</li>
+<li>Improve the performance of the direct-model approach by creating micro-batches of the data points before calling the local model for prediction to make use of the parallelization of the vectorized operations.</li>
+<li>If your data is populated to Cloud Storage in the format expected for prediction, use AI Platform batch prediction for the best performance.</li>
+<li>Use AI Platform if you want to use the power of GPUs for batch prediction.</li>
+<li>Do not use AI Platform online prediction for batch prediction.</li>
+</ul>
+<h3 id="stream-processing">Stream processing</h3>
+<ul>
+<li>Use direct-model in the streaming pipeline for best performance and reduced average latency. Predictions are performed locally, with no HTTP calls to remote services.</li>
+<li>Decouple your model from your data processing pipelines for better maintainability of models used in online predictions. The best approach is to serve your model as an independent microservice by using AI Platform or any other web hosting service.</li>
+<li>Deploy your model as an independent web service to allow multiple data processing pipelines and online apps to consume the model service as an endpoint. In addition, changes to the model are transparent to the apps and pipelines that consume it.</li>
+<li>Deploy multiple instances of the service with load balancing to improve the scalability and the availability of the model web service. With AI Platform, you only need to specify the number of nodes (<code>manualScaling</code>) or <code>minNodes</code> (<code>autoScaling</code>) in the yaml configuration file when you deploy a model version.</li>
+<li>If you deploy your model in a separate microservice, there are extra costs, depending on the underlying serving infrastructure. See the pricing <a href="https://cloud.google.com/ml-engine/docs/tensorflow/pricing-faq">FAQ</a> for AI Platform online prediction.</li>
+<li>Use micro-batching in your streaming data processing pipeline for better performance with both the direct-model and HTTP-model service. Micro-batching reduces the number of HTTP requests to the model service, and uses the vectorized operations of the TensorFlow model to get predictions.</li>
+</ul>
+<h2 id="whats-next">What&rsquo;s next</h2>
+<ul>
+<li>Learn how to build and train the baby-weight model in the <a href="https://cloud.google.com/solutions/machine-learning/ml-on-structured-data-analysis-prep-1#explore_the_public_natality_dataset">Machine Learning with Structured Data</a> solution.</li>
+<li>Have a look at the <a href="https://github.com/GoogleCloudPlatform/training-data-analyst/tree/master/blogs/tf_dataflow_serving">companion repository</a> on GitHub.</li>
+<li>Try out other Google Cloud features for yourself. Have a look at our <a href="https://cloud.google.com/docs/tutorials">tutorials</a>.</li>
+</ul>
+<h2 id="reference">Reference</h2>
+<ol>
+<li><a href="https://cloud.google.com/solutions/comparing-ml-model-predictions-using-cloud-dataflow-pipelines">Comparing Machine Learning Models for Predictions in Cloud Dataflow Pipelines</a></li>
+</ol>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2020-12-05
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://csyezheng.github.io/tags/machine-learning/">machine-learning</a>
+          <a href="http://csyezheng.github.io/tags/deep-learning/">deep-learning</a>
+          <a href="http://csyezheng.github.io/tags/design/">design</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/specialization/big-data/edx-analytics-pipeline/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">edX Analytics Pipeline</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/specialization/artificial-intelligence/recommendation-system/product-overview/">
+            <span class="next-text nav-default">recommendations</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

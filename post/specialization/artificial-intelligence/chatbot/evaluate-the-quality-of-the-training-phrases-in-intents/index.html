@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>evaluate the quality of the training phrases in intents - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="This tutorial shows you how to analyze and evaluate the quality of the training phrases supplied to your Dialogflow agent&amp;rsquo;s intents. The purpose of this analysis is to avoid confusing the agent with phrases irrelevant to the intents supplied to, or more relevant to, other intents.
+The approach you take is to generate semantic embeddings of the training phrases by using the TensorFlow Hub (tf.Hub) Universal Sentence Encoder module. You then compute cohesion and separation measurements based on the similarity between embeddings within the same intents and different intents." />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.79.0" />
+
+
+<link rel="canonical" href="http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="evaluate the quality of the training phrases in intents" />
+<meta property="og:description" content="This tutorial shows you how to analyze and evaluate the quality of the training phrases supplied to your Dialogflow agent&rsquo;s intents. The purpose of this analysis is to avoid confusing the agent with phrases irrelevant to the intents supplied to, or more relevant to, other intents.
+The approach you take is to generate semantic embeddings of the training phrases by using the TensorFlow Hub (tf.Hub) Universal Sentence Encoder module. You then compute cohesion and separation measurements based on the similarity between embeddings within the same intents and different intents." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/" />
+<meta property="article:published_time" content="2020-12-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-06T00:00:00+00:00" />
+<meta itemprop="name" content="evaluate the quality of the training phrases in intents">
+<meta itemprop="description" content="This tutorial shows you how to analyze and evaluate the quality of the training phrases supplied to your Dialogflow agent&rsquo;s intents. The purpose of this analysis is to avoid confusing the agent with phrases irrelevant to the intents supplied to, or more relevant to, other intents.
+The approach you take is to generate semantic embeddings of the training phrases by using the TensorFlow Hub (tf.Hub) Universal Sentence Encoder module. You then compute cohesion and separation measurements based on the similarity between embeddings within the same intents and different intents.">
+<meta itemprop="datePublished" content="2020-12-06T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-12-06T00:00:00+00:00" />
+<meta itemprop="wordCount" content="2990">
+
+
+
+<meta itemprop="keywords" content="chatbot,deep learning,Natural Language Processing," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="evaluate the quality of the training phrases in intents"/>
+<meta name="twitter:description" content="This tutorial shows you how to analyze and evaluate the quality of the training phrases supplied to your Dialogflow agent&rsquo;s intents. The purpose of this analysis is to avoid confusing the agent with phrases irrelevant to the intents supplied to, or more relevant to, other intents.
+The approach you take is to generate semantic embeddings of the training phrases by using the TensorFlow Hub (tf.Hub) Universal Sentence Encoder module. You then compute cohesion and separation measurements based on the similarity between embeddings within the same intents and different intents."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">evaluate the quality of the training phrases in intents</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-12-06" class="post-time">
+          2020-12-06
+        </time>
+        <div class="post-category">
+            <a href="http://csyezheng.github.io/categories/artificial-intelligence/"> artificial-intelligence </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#objectives">Objectives</a></li>
+    <li><a href="#costs">Costs</a></li>
+    <li><a href="#before-you-begin">Before you begin</a></li>
+    <li><a href="#completing-the-tutorial-in-the-colab-notebook">Completing the tutorial in the Colab notebook</a>
+      <ul>
+        <li><a href="#getting-started-with-the-colab-notebook">Getting started with the Colab notebook</a></li>
+        <li><a href="#setting-up-a-dialogflow-agent">Setting up a Dialogflow agent</a></li>
+      </ul>
+    </li>
+    <li><a href="#walking-through-the-code-in-the-colab-notebook">Walking through the code in the Colab notebook</a>
+      <ul>
+        <li><a href="#fetching-your-intents">Fetching your intents</a></li>
+        <li><a href="#generating-embeddings-for-the-training-phrases">Generating embeddings for the training phrases</a></li>
+        <li><a href="#visualizing-embeddings-in-two-dimensional-space">Visualizing embeddings in two-dimensional space</a></li>
+        <li><a href="#computing-pairwise-similarity-between-phrases">Computing pairwise similarity between phrases</a></li>
+        <li><a href="#measuring-cohesion-and-separation-of-intents">Measuring cohesion and separation of intents</a></li>
+      </ul>
+    </li>
+    <li><a href="#further-improvements">Further improvements</a></li>
+    <li><a href="#cleaning-up">Cleaning up</a></li>
+    <li><a href="#whats-next">What&rsquo;s next</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>This tutorial shows you how to analyze and evaluate the quality of the training phrases supplied to your <a href="https://dialogflow.com/">Dialogflow</a> agent&rsquo;s intents. The purpose of this analysis is to avoid confusing the agent with phrases irrelevant to the intents supplied to, or more relevant to, other intents.</p>
+<p>The approach you take is to generate semantic embeddings of the training phrases by using the <a href="https://www.tensorflow.org/hub/">TensorFlow Hub</a> (<code>tf.Hub</code>) Universal Sentence Encoder module. You then compute cohesion and separation measurements based on the similarity between embeddings within the same intents and different intents. The tutorial also identifies &ldquo;confusing&rdquo; training phrases, where they are nearer—in the embedding space—to intents that are different from the ones supplied for.</p>
+<p>You can find the code for this tutorial in this <a href="https://colab.research.google.com/drive/1QQblWJX5aZ6TajVXNAogFpVJlzYDbMtX">Colab notebook</a>. The article assumes that you have a basic background knowledge of Dialogflow. To learn more about Dialogflow, see this <a href="https://cloud.google.com/solutions/building-and-deploying-chatbot-dialogflow">multi-part tutorial</a> on how to build, secure, and scale a chatbot by using Dialogflow Enterprise Edition on Google Cloud.</p>
+<h2 id="introduction">Introduction</h2>
+<p><a href="https://dialogflow.com/">Dialogflow</a> lets you build conversational interfaces on top of your products and services by providing a powerful natural-language understanding (NLU) engine to process and understand natural language input. Use cases for Dialogflow include:</p>
+<ul>
+<li>Building booking and reservation bots for airlines, cinemas, and so on.</li>
+<li>Simplifying a system for ordering fast food for delivery.</li>
+<li>Enabling efficient customer service through semi-automated call centers.</li>
+</ul>
+<p>Although you can implement complex conversational flows to handle a user utterance, Dialogflow fundamentally performs the following steps:</p>
+<ol>
+<li>The user asks questions like, &ldquo;What is the total of my bill for the last month?&rdquo;</li>
+<li>The <em>agent</em> parses the input and matches it to an <em>intent</em> such as <code>bill_value_inquiry</code>.</li>
+<li>The agent also extracts <em>entities</em> information, like &ldquo;last month&rdquo;.</li>
+<li>Given the intent of the extracted entities, the agent then invokes a <em>fulfillment</em> to respond to the user&rsquo;s request.</li>
+</ol>
+<p>The following table describes the key concepts in the Dialogflow platform.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Term</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://dialogflow.com/docs/agents">agent</a></td>
+<td style="text-align:left">Agents are best described as NLU modules that can be integrated into your system. An agent converts text or spoken user requests into actionable data, when a user&rsquo;s input matches an intent in your agent.</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://dialogflow.com/docs/intents">intent</a></td>
+<td style="text-align:left">In a conversation, intents map user input to responses. In each intent, you define examples (training phrases) of user utterances that can trigger the intent, what to extract from each utterance, and how to respond.</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://dialogflow.com/docs/entities">entities</a></td>
+<td style="text-align:left">Where intents allow your agent to understand the motivation behind a particular user input, entities are used to pick out specific pieces of information that your users mention. For example, street addresses, product names, or amounts with units can be used to fulfill the user&rsquo;s request.</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://dialogflow.com/docs/fulfillment">fulfillment</a></td>
+<td style="text-align:left">Fulfillment allows you to use the entity information extracted by the agent to generate dynamic responses or trigger actions on your backend on an intent-by-intent basis.</td>
+</tr>
+</tbody>
+</table>
+<p>For more details on Dialogflow concepts, see the <a href="https://dialogflow.com/docs/">Dialogflow documentation</a>.</p>
+<p>Intents are essential to a Dialogflow system, because they link the user request to the right business logic to fulfill it. For example, a Dialogflow system for a telecom services provider might have intents like <code>bill_value_inquiry</code>, <code>pay_bill</code>, <code>upgrade_contract</code>, <code>cancel_contract</code>, and <code>add_service</code>. However, in order to match the user utterance (text or speech) to the right intent, intents need to be trained with a set of relevant training phrases. For example, for a weather inquiry intent, training phrases might be:</p>
+<ul>
+<li>&ldquo;What is the weather like right now?&rdquo;</li>
+<li>&ldquo;What is the temperature in Cairo tomorrow?&rdquo;</li>
+<li>&ldquo;Do I need to take an umbrella with me to Zurich next week?&rdquo;</li>
+</ul>
+<p>When you create several intents in your system, some phrases you supply to an intent might be confusing or misleading—for example, a phrase that&rsquo;s more relevant to another intent might be used to train the wrong intent. For example, suppose you have a Dialogflow agent that serves as the source of truth for a sales organization. You might have two intents for fetching contacts: one for the internal account teams and one for the customer. You might call these <code>get_internal_contacts</code> and <code>get_external_contacts</code>. A typical training phrase for each intent would be:</p>
+<ul>
+<li><code>get_internal_contacts</code>: &ldquo;Who is the point of contact for Customer X?&rdquo;</li>
+<li><code>get_external_contacts</code>: &ldquo;How do I get in contact with Customer X?&rdquo;</li>
+</ul>
+<p>Suppose that your users supplied the following request as they were looking for the external contacts: &ldquo;Contacts for Customer X&rdquo;. This request can confuse the Dialogflow agent because the phrase can match both intents. If the wrong intent matches, users will have a poor experience because they must change the formulation of the request, which is annoying and time consuming.</p>
+<p>Therefore, you want to make sure that phrases within the same intent are more similar, while phrases between different intents are less similar. The rest of the tutorial explains how to evaluate the quality of the training phrase supplied for each intent, and how to identify potentially confusing training phrases.</p>
+<h2 id="approach">Approach</h2>
+<p>The approach used in this tutorial is to compute the similarity between two phrases and, by extension, to compute the similarity matrix for all the training phrases. Once you have that matrix, you can compute the following:</p>
+<ul>
+<li><strong>Cohesion</strong>: The average similarity value between each pair of phrases in the same intent. That value is computed for each intent. The higher the intent cohesion value, the better the intent training phrases.</li>
+<li><strong>Separation</strong>: Given two intents, the average distance between each pair of training phrases in the two intents.</li>
+<li><strong>Confusing phrases</strong>: Training phrases that are highly similar to training phrases in other intents.</li>
+</ul>
+<p>To compute a similarity value between two phrases, you must convert each phrase to a real-value feature vector, which represents the semantics of the phrase (<a href="https://developers.google.com/machine-learning/glossary/#embeddings">embeddings</a>). To help with this task, the tutorial uses <a href="https://www.tensorflow.org/hub/">TensorFlow Hub</a> (<code>tf.Hub</code>), a library used for the publication, discovery, and consumption of reusable <a href="https://tfhub.dev/">modules</a> of machine learning models. These modules can be pre-trained models or embeddings that are extracted from text, images, and so on. You can browse the <a href="https://tfhub.dev/s?module-type=text-embedding">available text embeddings</a>. The tutorial uses the <a href="https://tfhub.dev/google/universal-sentence-encoder/2">Universal Sentence Encoder</a> (v2) module, which is used to encode text into 512 dimensional vectors that can be used for text classification, semantic similarity, clustering, and other natural-language tasks.</p>
+<p>In this tutorial, you use <a href="https://wikipedia.org/wiki/Cosine_similarity">cosine similarity</a> as a proximity metric between two embedding vectors. Given two real-value vectors (in our example, two embedding vectors extracted from two training phrases), cosine similarity calculates the cosine of the angle between them, using the following formula:</p>
+<p>$$ \cos(A,B) = \frac{\sum_{i=1}^{n}A_iB_i}{\sqrt{\sum_{i=1}^{n}{A_i^2}}\sqrt{\sum_{i=1}^{n}{B_i^2}}} $$</p>
+<p>cos⁡(A,B)=∑i=1nAiBi∑i=1nAi2∑i=1nBi2</p>
+<p>In this formula, <em>n</em> is the number of elements in the vector. The smaller the angle between the vectors, the bigger the cosine value of this angle, indicating higher similarity. The cosine similarity value between any two vectors is always between 0 and 1.</p>
+<p>Figure 1 shows an overview of the approach:</p>
+<p><img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-eval-intents.svg" alt="Overview of evaluating intents cohesion and separation"></p>
+<p><strong>Figure 1</strong>: Overview of evaluating intents cohesion and separation</p>
+<p>The figure illustrates the following sequence:</p>
+<ol>
+<li>Import the intents and their training phrases.</li>
+<li>Generate embeddings for the training phrases using the <code>tf.Hub</code> Universal Sentence Encoder pre-trained module.</li>
+<li>Create a visualization of the generated embeddings in a two-dimensional space.</li>
+<li>Compute the embeddings cosine similarity matrix containing the pairwise similarity values between all the training phrases in different intents.</li>
+<li>Calculate the cohesion and separation metrics.</li>
+<li>Identify the confusing phrases.</li>
+</ol>
+<h2 id="objectives">Objectives</h2>
+<ul>
+<li>(Optional) Create a Dialogflow agent.</li>
+<li>Import intents with training phrases.</li>
+<li>Run the Colab notebook for intent quality assessment.</li>
+</ul>
+<h2 id="costs">Costs</h2>
+<p>This tutorial uses the following billable components of Google Cloud:</p>
+<ul>
+<li><strong>Dialogflow</strong>: Standard Edition is free, while Enterprise Edition offers paid enterprise support. You can choose which edition to use when you create your Dialogflow agent. Your account can include agents from both editions. For more details, refer to the <a href="https://dialogflow.com/pricing">Dialogflow Pricing page</a>.</li>
+</ul>
+<h2 id="before-you-begin">Before you begin</h2>
+<ol>
+<li>
+<p>In the Google Cloud Console, on the project selector page, select or create a Google Cloud project.</p>
+<p><strong>Note</strong>: If you don&rsquo;t plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.</p>
+<p><a href="https://console.cloud.google.com/projectselector2/home/dashboard">Go to the project selector page</a></p>
+</li>
+<li>
+<p>Make sure that billing is enabled for your Cloud project. <a href="https://cloud.google.com/billing/docs/how-to/modify-project">Learn how to confirm that billing is enabled for your project</a>.</p>
+</li>
+<li>
+<p>Enable the Dialogflow API.</p>
+<p><a href="https://console.cloud.google.com/flows/enableapi?apiid=dialogflow.googleapis.com">Enable the API</a></p>
+</li>
+<li>
+<p>Create a service account to call the Dialogflow API.</p>
+<p>Create service account</p>
+</li>
+<li>
+<p>In the <strong>Service account details</strong> dialog, enter the account name and description as shown in the following screenshot, and then click <strong>Create</strong>:</p>
+</li>
+<li>
+<p>Set the role to <strong>Dialogflow API Client</strong> and click <strong>Continue</strong>.</p>
+</li>
+</ol>
+<h2 id="completing-the-tutorial-in-the-colab-notebook">Completing the tutorial in the Colab notebook</h2>
+<p>The following sections walk through the steps discussed in the <a href="https://cloud.google.com/solutions/assessing-the-quality-of-training-phrases-in-dialogflow-intents#approach">approach</a> section to calculate the cohesion and separation metrics and to identify confusing phrases.</p>
+<h3 id="getting-started-with-the-colab-notebook">Getting started with the Colab notebook</h3>
+<ol>
+<li>
+<p>Go to the Colab notebook: <a href="https://colab.research.google.com/drive/1QQblWJX5aZ6TajVXNAogFpVJlzYDbMtX">https://colab.research.google.com/drive/&hellip;</a>.</p>
+</li>
+<li>
+<p>Make a local copy to your Google Drive.</p>
+<p><img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-copy.png" alt="Copying the notebook to your Google Drive"></p>
+</li>
+<li>
+<p>In Cloud Shell, install the Python libraries needed for the rest of the tutorial, before importing the required libraries and modules.</p>
+<pre><code>!pip install --quiet --upgrade tensorflow dialogflow scipy tensorflow-hub seaborn
+</code></pre></li>
+<li>
+<p>Set your Google Cloud <code>PROJECT_ID</code> and the <code>SERVICE_ACCOUNT_EMAIL</code> that you created in the <a href="https://cloud.google.com/solutions/assessing-the-quality-of-training-phrases-in-dialogflow-intents#before-you-begin">Before you begin</a> section.</p>
+<p><img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-id-email.png" alt="Set your Google Cloud PROJECT_ID and SERVICE_ACCOUNT_EMAIL"></p>
+</li>
+<li>
+<p>Authenticate your session to create a key for your service account:</p>
+<pre><code>auth.authenticate_user()
+!gcloud config set project {PROJECT_ID}
+!gcloud iam service-accounts keys create sa-key.json \
+    --iam-account={SERVICE_ACCOUNT_EMAIL} --project={PROJECT_ID}
+</code></pre><p>After you run these commands, a link is displayed.</p>
+</li>
+<li>
+<p>Follow the link to authenticate your user account.</p>
+</li>
+<li>
+<p>Copy the authentication code from the web page, and paste it in the <strong>Enter verification code</strong> field in the notebook:</p>
+<p><img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-verification.png" alt="Enter verification code field in the notebook"></p>
+</li>
+</ol>
+<h3 id="setting-up-a-dialogflow-agent">Setting up a Dialogflow agent</h3>
+<p>If you already have a Dialogflow agent that you want to use in this tutorial, you can skip this step. However, if you don&rsquo;t have an agent, or you want to set up a new one, you can download a zip file with the content of an exported Dialogflow agent, called <code>intents-healthcheck</code>. You import this agent into your Dialogflow account as follows:</p>
+<ol>
+<li>
+<p>Download the zip file of the imported agent:</p>
+<pre><code>gsutil cp gs://dialogflow-intent-health-check/intent-quality-demo.zip .
+</code></pre></li>
+<li>
+<p>Go to <a href="https://dialogflow.com/">https://dialogflow.com/</a>.</p>
+</li>
+<li>
+<p>Click the <a href="https://console.dialogflow.com/api-client/#/login">Go to Console</a> button on the top right.</p>
+</li>
+<li>
+<p>In the left menu, click <strong>Create new agent</strong>.</p>
+<p><img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-console.png" alt="Create new agent"></p>
+</li>
+<li>
+<p>Enter the <strong>agent name</strong>: <code>intents-healthcheck</code>.</p>
+</li>
+<li>
+<p>Select your Google Cloud project from the <strong>Google Project</strong> list.</p>
+<ul>
+<li>A Google Cloud project can have only one Dialogflow agent. So if you don&rsquo;t find your Google Cloud project in the list, an agent is already associated with your project.</li>
+<li>If you select <strong>Create a new project</strong>, Dialogflow creates a Google Cloud project with the same name as your agent.</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Create</strong>.</p>
+<p><img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-agent-info.png" alt="Entering information about the agent"></p>
+</li>
+<li>
+<p>In the left-hand menu, select the new agent and then click the <strong>Settings</strong> <em>settings</em> icon. Then in the menu in the middle of the page, select <strong>Export and Import</strong>.</p>
+<p><img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-import-export.png" alt="Export and Import dialog"></p>
+</li>
+<li>
+<p>Click <strong>Restore from zip</strong>:</p>
+<ol>
+<li>Select the <code>agent-backup.zip</code> file you downloaded in step 1.</li>
+<li>Type <code>RESTORE</code> in the text box at the bottom of the form to confirm.</li>
+<li>Click <strong>Restore</strong>.</li>
+</ol>
+<p><img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-zip-restore.png" alt="Restore the agent from a zip file"></p>
+<p>After restoring the agent, Dialogflow creates five intents.</p>
+</li>
+<li>
+<p>Verify the imported intents by selecting <strong>Intents</strong> from the menu on the left. You find the following intents:</p>
+<p><img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-imported-intents.png" alt="Verifying the imported intents"></p>
+</li>
+</ol>
+<p>You use this restored agent for the rest of the tutorial.</p>
+<h2 id="walking-through-the-code-in-the-colab-notebook">Walking through the code in the Colab notebook</h2>
+<p>The sections that follow describe what the code in the notebook does when you run it.</p>
+<h3 id="fetching-your-intents">Fetching your intents</h3>
+<p>The following code fetches intents and their training phrases from the Dialogflow agent using the <code>fetch_intents_training_phrases</code> method. This method returns a dictionary, where the keys are the intents named in your Dialogflow agent, and each value is a list of the training phrases in each entity. In the code, <code>project</code> references the project to which your agent belongs, and <code>service_account_file</code> references the file that you created earlier.</p>
+<pre><code>def get_intents(service_account_file, project):
+
+    dialogflow_entity_client =  dialogflow.EntityTypesClient.from_service_account_file(service_account_file)
+    parent = dialogflow_entity_client.project_agent_path(project)
+    entities = list(dialogflow_entity_client.list_entity_types(parent))
+
+    dialogflow_intents_client = dialogflow.IntentsClient.from_service_account_file(service_account_file)
+    parent = dialogflow_intents_client.project_agent_path(project)
+    intents = list(dialogflow_intents_client.list_intents(
+        parent=parent,
+        intent_view=dialogflow.enums.IntentView.INTENT_VIEW_FULL))
+
+    entities_name_to_value = {}
+    for intent in intents:
+        entities_used = {entity.display_name
+            for entity in intent.parameters}
+
+        for entity in entities:
+            if entity.display_name in entities_used \
+                    and entity.display_name not in entities_name_to_value:
+                entities_name_to_value[entity.display_name] = np.random.choice(
+                    np.random.choice(entity.entities).synonyms, replace=False)
+
+    intent_to_training_phrases = defaultdict(list)
+    for intent in intents:
+        for training_phrase in intent.training_phrases:
+            parts = [entities_name_to_value[part.alias] if part.entity_type else part.text
+                for part in training_phrase.parts]
+            intent_to_training_phrases[intent.display_name].append(&quot;&quot;.join(parts))
+        # Remove intents with no training phrases
+        if not intent_to_training_phrases[intent.display_name]:
+            del intent_to_training_phrases[intent.display_name]
+    return intent_to_training_phrases
+ 
+</code></pre><p>The following code verifies the retrieved intents:</p>
+<pre><code>intent_training_phrases = fetch_intents_training_phrases(&quot;sa-key.json&quot;, project_id)
+for intent in intent_training_phrases:
+    print(&quot;{}:{}&quot;.format(intent, len(intent_training_phrases[intent])))
+</code></pre><p>The <code>fetch_intents_training_phrases</code> method returns the following listing. This code snippet shows the intents in the demo <code>intents-healthcheck</code> agent, followed by the count of the training phrases available in each intent.</p>
+<pre><code>start_conversation:4
+close_conversation:5
+get_internal_contacts:17
+request_help:7
+get_external_contacts:6
+</code></pre><h3 id="generating-embeddings-for-the-training-phrases">Generating embeddings for the training phrases</h3>
+<p>The following code downloads the <code>tf.Hub</code> Universal Sentence Encoder pre-trained module:</p>
+<pre><code>embed_module = hub.Module(&quot;https://tfhub.dev/google/universal-sentence-encoder/2&quot;)
+</code></pre><p>After the first use, the module is cached locally.</p>
+<p>The following code implements a method that accepts a list of sentences and returns a list of embeddings based on the <code>tf.Hub</code> module:</p>
+<pre><code>def make_embeddings_fn():
+    placeholder = tf.placeholder(dtype=tf.string)
+    embed = embed_module(placeholder)
+    session = tf.Session()
+    session.run([tf.global_variables_initializer(), tf.tables_initializer()])
+    def _embeddings_fn(sentences):
+        computed_embeddings = session.run(
+            embed, feed_dict={placeholder: sentences})
+        return computed_embeddings
+    return _embeddings_fn
+
+generate_embeddings = make_embeddings_fn()
+</code></pre><p>This method ensures that the <code>tf.Session</code> is created and that the embedding module is loaded only once, not every time the method is called.</p>
+<p>The following code generates embeddings for the training phrases in the intents:</p>
+<pre><code>{
+    intent: {
+        training_phrase': [embedding_array]
+    }
+}
+
+training_phrases_with_embeddings = defaultdict(list)
+for intent_name, training_phrases_list in intent_training_phrases.items():
+    computed_embeddings = generate_embeddings(training_phrases_list)
+    training_phrases_with_embeddings[intent_name] = dict(zip(training_phrases_list, computed_embeddings))
+</code></pre><p>This code snippet creates the <code>training_phrases_with_embeddings</code> nested dictionary.</p>
+<p>The following code verifies the generated embeddings:</p>
+<pre><code>training_phrases_with_embeddings = defaultdict(list)
+for intent_name, training_phrases_list in intent_training_phrases.items():
+    computed_embeddings = generate_embeddings(training_phrases_list)
+    training_phrases_with_embeddings[intent_name] = dict(zip(training_phrases_list, computed_embeddings))
+ 
+</code></pre><p>The following code snippet shows each training phrase in the <code>start_conversation</code> intent, along with the first five elements of the embedding vector of each phrase. The Universal Sentence Encoder generates a 512-dimension embedding vector for each training phrase.</p>
+<pre><code>Ciao!:[-0.03649221  0.02498418 -0.03456857  0.02827227  0.00471277]
+Howdy!:[-0.02732556 -0.00821852 -0.00794602  0.06356855 -0.03726532]
+Hello!:[-0.0255452   0.00690543 -0.00611844  0.05633081 -0.0142823 ]
+Hi!:[-0.03227544 -0.00985429 -0.01329378  0.06012927 -0.03646606]
+</code></pre><h3 id="visualizing-embeddings-in-two-dimensional-space">Visualizing embeddings in two-dimensional space</h3>
+<p>The following code reduces the dimensionality of the embeddings from 512 to 2 by using <a href="https://en.wikipedia.org/wiki/Principal_component_analysis">Principal Component Analysis</a> to compute the principal components:</p>
+<pre><code>from sklearn.decomposition import PCA
+embedding_vectors = None
+
+for intent in training_phrases_with_embeddings:
+    embeddings = list(training_phrases_with_embeddings[intent].values())
+    if embedding_vectors is None:
+        embedding_vectors = embeddings
+    else:
+        embedding_vectors = np.concatenate((only_embeddings, embeddings))
+
+pca = PCA(n_components=3)
+pca.fit(embedding_vectors)
+</code></pre><p>This code snippet uses the <code>PCA</code> class in <code>sklearn</code> to generate a 2D representation of the training phrases embeddings.</p>
+<p>The following code generates a visualization of the phrase embeddings with the reduced dimensionality:</p>
+<pre><code>import matplotlib.pyplot as plt
+
+fig = plt.figure(figsize=(15,10))
+ax = fig.add_subplot(111)
+
+legend = []
+
+for color, intent in enumerate(training_phrases_with_embeddings):
+    phrases = list(training_phrases_with_embeddings[intent].keys())
+    embeddings = list(training_phrases_with_embeddings[intent].values())
+    points = pca.transform(embeddings)
+    xs = points[:,0]
+    ys = points[:,1]
+    ax.scatter(xs, ys, marker='o', s=100, c=&quot;C&quot;+str(color))
+    for i, phrase in enumerate(phrases):
+        ax.annotate(phrase, (xs[i], ys[i]))
+    legend.append(intent)
+
+ax.legend(legend)
+plt.show()
+</code></pre><p>The following figure shows the resulting visualization: <img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-visualize-embeddings.png" alt="Visualizing the phrase embeddings with the reduced dimensionality"></p>
+<h3 id="computing-pairwise-similarity-between-phrases">Computing pairwise similarity between phrases</h3>
+<p>The following code computes the pairwise cosine similarity for the training phrases embeddings, using <code>sklearn.metrics.pairwise.cosine_similarity</code>. The code creates a Dataframe, <code>similarity_df</code>, with the pairwise similarity values.</p>
+<pre><code>from sklearn.metrics.pairwise import cosine_similarity
+
+flatten = []
+for intent in training_phrases_with_embeddings:
+        for phrase in training_phrases_with_embeddings[intent]:
+            flatten.append((intent, phrase, training_phrases_with_embeddings[intent][phrase]))
+
+data = []
+for i in range(len(flatten)):
+    for j in range(i+1, len(flatten)):
+        intent_1 = flatten[i][0]
+        phrase_1 = flatten[i][1]
+        embedd_1 = flatten[i][2]
+        intent_2 = flatten[j][0]
+        phrase_2 = flatten[j][1]
+        embedd_2 = flatten[j][2]
+        similarity = cosine_similarity([embedd_1], [embedd_2])[0][0]
+        record = [intent_1, phrase_1, intent_2, phrase_2, similarity]
+        data.append(record)
+
+similarity_df = pd.DataFrame(data,
+    columns=[&quot;Intent A&quot;, &quot;Phrase A&quot;, &quot;Intent B&quot;, &quot;Phrase B&quot;, &quot;Similarity&quot;])
+</code></pre><p>The following code displays sample similarity records:</p>
+<pre><code>different_intent = similarity_df['Intent A'] != similarity_df['Intent B']
+display(similarity_df[different_intent].sort_values('Similarity',
+ascending=False).head(5))
+</code></pre><p>The following code snippet shows the most similar training phrases that don&rsquo;t belong to the same intent:</p>
+<p><img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-similar-phrases.png" alt="The most similar training phrases that don&rsquo;t belong to the same intent"></p>
+<p>Phrases in different intents that have high similarity value can be confusing to the Dialogflow agent, and could lead to directing the user input to the wrong intent.</p>
+<h3 id="measuring-cohesion-and-separation-of-intents">Measuring cohesion and separation of intents</h3>
+<p>The following code computes a cohesion value for each intent, as described in the <a href="https://cloud.google.com/solutions/assessing-the-quality-of-training-phrases-in-dialogflow-intents#approach">Approach section</a>.</p>
+<pre><code>same_intent = similarity_df['Intent A'] == similarity_df['Intent B']
+cohesion_df = pd.DataFrame(similarity_df[different_intent].groupby('Intent A', as_index=False)['Similarity'].mean())
+cohesion_df.columns = ['Intent', 'Cohesion']
+display(cohesion_df)
+</code></pre><p>The result is a cohesion value for each intent:</p>
+<p><img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-cohesion-values.png" alt="Computing a cohesion value for each intent"></p>
+<p>The following code computes the pairwise separation between intents, as described in the <a href="https://cloud.google.com/solutions/assessing-the-quality-of-training-phrases-in-dialogflow-intents#approach">Approach section</a>.</p>
+<pre><code>different_intent = similarity_df['Intent A'] != similarity_df['Intent B']
+separation_df = pd.DataFrame(similarity_df[different_intent].groupby(['Intent A', 'Intent B'], as_index=False)['Similarity'].mean())
+separation_df['Separation'] = 1 - separation_df['Similarity']
+del separation_df['Similarity']
+display(separation_df.sort_values('Separation'))
+</code></pre><p>The result is the pairwise separation between intents:</p>
+<p><img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-pairwise-separation.png" alt="Computing the pairwise separation between intents"></p>
+<h2 id="further-improvements">Further improvements</h2>
+<p>To improve the quality of the training phrases for your intents, consider the following approaches:</p>
+<ul>
+<li>Find the phrases in different intents with high similarity, and change or remove them.</li>
+<li>Find the phrases with the most similar phrases that belong to different intents.</li>
+<li>Add more training phrases in intents with low cohesion, and investigate training phrases in intents with low separation.</li>
+</ul>
+<h2 id="cleaning-up">Cleaning up</h2>
+<ol>
+<li>
+<p><strong>Caution</strong>: Deleting a project has the following effects:<strong>Everything in the project is deleted.</strong> If you used an existing project for this tutorial, when you delete it, you also delete any other work you&rsquo;ve done in the project.<strong>Custom project IDs are lost.</strong> When you created this project, you might have created a custom project ID that you want to use in the future. To preserve the URLs that use the project ID, such as an <code>appspot.com</code> URL, delete selected resources inside the project instead of deleting the whole project.</p>
+</li>
+<li>
+<p>In the Cloud Console, go to the</p>
+<p>Manage resources</p>
+<p>page.</p>
+<p><a href="https://console.cloud.google.com/iam-admin/projects">Go to Manage resources</a></p>
+</li>
+<li>
+<p>In the project list, select the project that you want to delete, and then click <strong>Delete</strong>.</p>
+</li>
+<li>
+<p>In the dialog, type the project ID, and then click <strong>Shut down</strong> to delete the project.</p>
+</li>
+</ol>
+<h2 id="whats-next">What&rsquo;s next</h2>
+<ul>
+<li>Read the <a href="https://cloud.google.com/solutions/machine-learning/overview-extracting-and-serving-feature-embeddings-for-machine-learning">Overview of extracting and serving feature embeddings for machine learning</a>.</li>
+<li>For more details about embeddings and <code>tf.Hub</code>, see <a href="https://cloud.google.com/solutions/machine-learning/overview-extracting-and-serving-feature-embeddings-for-machine-learning">Overview of extracting and serving feature embeddings for machine learning</a>.</li>
+<li>Learn about the <a href="https://cloud.google.com/solutions/architecture-of-a-serverless-ml-model">Architecture of a serverless machine learning model</a>.</li>
+<li>Learn about <a href="https://cloud.google.com/solutions/comparing-ml-model-predictions-using-cloud-dataflow-pipelines">Comparing machine learning models for predictions in Cloud Dataflow pipelines</a>.</li>
+<li>Take the 5-course Coursera specialization on Machine Learning with <a href="https://www.coursera.org/specializations/machine-learning-tensorflow-gcp">TensorFlow on Google Cloud</a>.</li>
+<li>Learn about best practices for ML engineering in <a href="https://developers.google.com/machine-learning/guides/rules-of-ml/">Rules of ML</a>.</li>
+<li>Try out other Google Cloud features for yourself. Have a look at our <a href="https://cloud.google.com/docs/tutorials">tutorials</a>.</li>
+</ul>
+<h2 id="reference">Reference</h2>
+<ol>
+<li><a href="https://cloud.google.com/solutions/assessing-the-quality-of-training-phrases-in-dialogflow-intents">Assessing the quality of training phrases in Dialogflow intents</a></li>
+</ol>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2020-12-06
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://csyezheng.github.io/tags/chatbot/">chatbot</a>
+          <a href="http://csyezheng.github.io/tags/deep-learning/">deep learning</a>
+          <a href="http://csyezheng.github.io/tags/natural-language-processing/">Natural Language Processing</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/">
+            <span class="next-text nav-default">Joint intent and slot classification</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

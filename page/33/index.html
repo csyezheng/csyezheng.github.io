@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.78.1" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,12 +296,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/front-end/bootstrap/">Bootstrap</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/">Concurrent-Programming-for-Scalable-Web-Architectures</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-07-01" class="post-time">
-        2017-07-01
+      <time datetime="2018-08-26" class="post-time">
+        2018-08-26
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
@@ -316,10 +316,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Bootstrap Components Modal Add dialogs to your site for lightboxes, user notifications, or completely custom content.
+      Introduction Scope of this Thesis We will have a detailed look on concurrency in three distinct areas of web architectures&ndash;connection handling, application logic and backend persistence. For each stage, we will discuss its main challenges and issues and explain existing approaches to tackle concurrency.
+Web Applications distinguish two separate types of web applications &ndash; web sites and web services.
+Web Sites some popular types for web sites that are interesting in terms of scalability and concurrency
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/front-end/bootstrap/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,12 +332,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/front-end/angular/">Angular</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/distributed-systems/">distributed systems</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-06-21" class="post-time">
-        2017-06-21
+      <time datetime="2018-08-26" class="post-time">
+        2018-08-26
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
@@ -350,10 +352,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      QuickStart Step 1. Set up the Development Environment $ yaourt -S nodejs npm $ npm install -g @angular/cli Step 2. Create a new project $ ng new my-app Step 3: Serve the application $ cd my-app $ ng serve --open Step 4: Edit your first Angular component # ./src/app/app.component.ts export class AppComponent { title = 'My First Angular App!'; } # ./src/app/app.component.css h1 { color: #369; font-family: Arial, Helvetica, sans-serif; font-size: 250%; } Project file review my-app e2e # end-to-end tests src app.
+      
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/front-end/angular/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/distributed-systems/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -364,12 +366,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/django/">Getting start with Django</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/high-concurrency/">high concurrency</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-05-22" class="post-time">
-        2017-05-22
+      <time datetime="2018-08-26" class="post-time">
+        2018-08-26
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
@@ -384,12 +386,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      First steps  Requests and responses Models and the admin site Views and templates Forms and generic views Testing Static files Customizing the admin site  Advanced Tutorials: How to write reusable apps | Writing your first patch for Django
-The model layer Models Generally, each model maps to a single database table.
-from django.db import models class Person(models.Model): name = models.CharField(max_length=30)  The name of the table, myapp_person, is automatically derived from the name of the app and the model class.
+      高并发 高并发其实挺容易的，当你明白了一万并发的原理，然后扩展到百万、千万、亿万级很easy 要点有如下几项： 1、垂直分层：DNS层、跨机房部署
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/django/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/high-concurrency/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -445,9 +445,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -468,9 +466,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -491,9 +487,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -514,9 +508,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -537,9 +529,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -560,9 +550,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -583,9 +571,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -606,9 +592,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -629,9 +613,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -652,9 +634,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -675,9 +655,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -698,9 +676,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -721,9 +697,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -744,9 +718,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -767,9 +739,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -790,9 +760,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -813,9 +781,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -836,9 +802,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -859,9 +823,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -882,9 +844,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -905,9 +865,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -928,9 +886,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -951,9 +907,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -974,9 +928,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -997,73 +949,51 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
             
               
             
 
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/25/">
-              25
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/26/">
-              26
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
           
 
         
@@ -1090,11 +1020,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1121,11 +1049,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1152,11 +1078,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1183,11 +1107,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1214,11 +1136,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1245,11 +1165,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1276,11 +1194,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1307,11 +1223,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1338,11 +1252,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1369,11 +1281,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1390,6 +1300,169 @@ from django.db import models class Person(models.Model): name = models.CharField
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/38/">
+              38
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/39/">
+              39
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/34/">»</a></li>
@@ -1397,7 +1470,7 @@ from django.db import models class Person(models.Model): name = models.CharField
 
       
       
-      <li><a href="/page/37/">»»</a></li>
+      <li><a href="/page/44/">»»</a></li>
       
 
       </ul>

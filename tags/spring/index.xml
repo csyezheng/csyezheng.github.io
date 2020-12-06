@@ -6,7 +6,25 @@
     <description>Recent content in Spring on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Started with Microservice Development Using Spring Boot</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-boot/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-boot/</guid>
+      <description>Introduction to Microservices Benefits Each component in the platform can be delivered and upgraded separately. Each component in the platform can also be scaled out to multiple servers independently Challenges Many small components that use synchronous communication can cause a chain of failure problem, especially under high load. Keeping the configuration consistent and up to date in all the instances Monitoring the state of the platform in terms of latency</description>
+    </item>
+    
+    <item>
+      <title>Leveraging Spring Cloud to Manage Microservices</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-cloud/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-cloud/</guid>
+      <description>Introduction to Spring Cloud    Design pattern Current component Replaced by Software component     Service discovery Netflix Eureka &amp;amp; Netflix Ribbon Netflix Eureka and Spring Cloud load balancer   Edge server Netflix Zuul Spring Cloud Gateway and Spring Security OAuth   Centralized configuration  Spring Cloud Configuration Server   Circuit breaker Netflix Hystrix Resilience4j   Distributed tracing  Spring Cloud Sleuth and Zipkin    Adding Service Discovery Using Netflix Eureka and Ribbon Using Spring Cloud Gateway to Hide Microservices Behind an Edge Server Securing Access to APIs Centralized Configuration Improving Resilience Using Resilience4j Understanding Distributed Tracing </description>
+    </item>
+    
     <item>
       <title>Mybatis Spring Boot</title>
       <link>http://csyezheng.github.io/post/specialization/web-application/back-end/mybatis-spring-boot/</link>

@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.78.1" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,7 +296,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/package_download/">package_download</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/spring-boot/">Building Java Projects with Maven</a>
     </h1>
     
     <div class="post-meta">
@@ -304,7 +304,7 @@
         2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -316,10 +316,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      gopm get -g -v golang.org/x/sys 
+      Install Maven Maven is downloadable as a zip file at https://maven.apache.org/download.cgi.
+Once you have downloaded the zip file, unzip it to your computer. Then add the bin folder to your path.
+$ mvn -v Define a simple Maven build Maven projects are defined with an XML file named pom.xml. Create a file named pom.xml at the root of the project (i.e. put it next to the src folder) and give it the following contents:
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/package_download/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/spring-boot/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,7 +332,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/photoprism/">photoprism</a>
+      <a class="post-link" href="/post/engineering-fundamentals/javascript/debug/">Debugging JavaScript in Chrome DevTools</a>
     </h1>
     
     <div class="post-meta">
@@ -350,13 +352,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Step 1: Clone this project:
-git clone https://github.com/photoprism/photoprism.git Step 2: Start Docker containers:
-cd photoprism sudo docker-compose up Step 3: Open a new terminal to the photoprism container:
-sudo docker-compose exec photoprism bash 
+      Get Started Step 2: Get familiar with the Sources panel UI The Sources panel is where you debug JavaScript.
+Open DevTools by pressing Command+Option+I (Mac) or Control+Shift+I (Windows, Linux). This shortcut opens the Consolepanel.
+Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: Set a line-of-code breakpoint Step 6: Check variable values 
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/photoprism/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/javascript/debug/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -367,7 +368,7 @@ sudo docker-compose exec photoprism bash
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/python/datetime/">Python datetime</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/debugging-with-delve/">Delve Documentation</a>
     </h1>
     
     <div class="post-meta">
@@ -387,13 +388,10 @@ sudo docker-compose exec photoprism bash
   <div class="post-content">
     
     <div class="post-summary">
-      datetime 8.1. datetime
-The datetime module, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation.
-There are two kinds of date and time objects: “naive” and “aware”.
-An aware object has sufficient knowledge of applicable algorithmic and political time adjustments, such as time zone and daylight saving time information, to locate itself relative to other aware objects. An aware object is used to represent a specific moment in time.
+      Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &quot;fmt&quot; &quot;log&quot; &quot;net/http&quot; &quot;os&quot; ) const port = &quot;8000&quot; func main() { http.HandleFunc(&quot;/hi&quot;, hi) fmt.Println(&quot;runing on port: &quot; + port) log.Fatal(http.ListenAndServe(&quot;:&quot; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &quot;HostName: %s&quot;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/python/datetime/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/debugging-with-delve/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1320,6 +1318,153 @@ An aware object has sufficient knowledge of applicable algorithmic and political
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/24/">»</a></li>
@@ -1327,7 +1472,7 @@ An aware object has sufficient knowledge of applicable algorithmic and political
 
       
       
-      <li><a href="/page/37/">»»</a></li>
+      <li><a href="/page/44/">»»</a></li>
       
 
       </ul>

@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.78.1" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,12 +296,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/debugging-with-delve/">Delve Documentation</a>
+      <a class="post-link" href="/post/engineering-fundamentals/cpp/tools/">C&#43;&#43; tools</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-09-09" class="post-time">
+        2019-09-09
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
@@ -316,10 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &quot;fmt&quot; &quot;log&quot; &quot;net/http&quot; &quot;os&quot; ) const port = &quot;8000&quot; func main() { http.HandleFunc(&quot;/hi&quot;, hi) fmt.Println(&quot;runing on port: &quot; + port) log.Fatal(http.ListenAndServe(&quot;:&quot; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &quot;HostName: %s&quot;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.
+      Tools clang-format 格式化c++代码，同类工具还有astyle。保持代码风格统一是个好习惯。 qt creator vs以外我觉得最好用的c++ ide，代码补全质量高（基于li
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/debugging-with-delve/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/cpp/tools/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,15 +330,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/generate-model-structs-from-database/">generate-model-structs-from-database</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/machine-learning/kaggle/">kaggle</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-08-25" class="post-time">
+        2019-08-25
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://csyezheng.github.io/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -350,14 +350,18 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Generate gorm model structs from database
-  https://github.com/smallnest/gen
-  https://github.com/wantedly/pq2gorm
-  https://github.com/go-xorm/cmd
-  
+      https://www.kaggle.com/stackoverflow/statsquestions
+https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
+https://developer.ibm.com/exchanges/models/all/max-toxic-comment-classifier/
+https://www.quora.com/Is-binary-relevance-same-as-one-vs-all
+https://stackoverflow.com/questions/44674847/what-are-the-differences-between-all-these-cross-entropy-losses-in-keras-and-ten
+https://vict0rs.ch/2018/06/17/multilabel-text-classification-tensorflow/
+https://github.com/tensorflow/skflow/issues/113
+https://towardsdatascience.com/journey-to-the-center-of-multi-label-classification-384c40229bff
+https://www.reddit.com/r/MLQuestions/comments/5n82zb/loss_function_for_sparse_multilabel_classification/
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/generate-model-structs-from-database/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/machine-learning/kaggle/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -368,12 +372,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/scala/getting-started/">Getting Started with Scala</a>
+      <a class="post-link" href="/post/engineering-fundamentals/java/maven/">maven</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-07-15" class="post-time">
+        2019-07-15
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
@@ -388,12 +392,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Create A Scala Project With sbt In The Command Line Installation   Java 8 JDK javac -version 
-  install sbt
-  Create a project $ mkdir practice &amp;&amp; cd practice $ sbt new scala/hello-world.g8 # pull template from GitHub - hello-world - project (sbt uses this to install manage plugins and dependencies) - build.properties - src - main - scala (All of your scala code goes here) -Main.
+      Introduction to the Build Lifecycle Build Lifecycle Basics Maven is based around the central concept of a build lifecycle. What this means is that the process for building and distributing a particular artifact (project) is clearly defined.
+There are three built-in build lifecycles: default, clean and site. The default lifecycle handles your project deployment, the clean lifecycle handles project cleaning, while the site lifecycle handles the creation of your project&rsquo;s site documentation.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/scala/getting-started/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/java/maven/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1320,6 +1323,153 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/20/">»</a></li>
@@ -1327,7 +1477,7 @@
 
       
       
-      <li><a href="/page/37/">»»</a></li>
+      <li><a href="/page/44/">»»</a></li>
       
 
       </ul>

@@ -6,7 +6,34 @@
     <description>Recent content in web-application on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/categories/web-application/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/categories/web-application/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Developing Lightweight Microservices Using Kubernetes</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-kubernetes/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-kubernetes/</guid>
+      <description>Introduction to Kubernetes Deploying Our Microservices in Kubernetes Implementing Kubernetes Features as an Alternative Using a Service Mesh to Improve Observability and Management Centralized Logging with the EFK Stack Monitoring Microservices </description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Microservice Development Using Spring Boot</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-boot/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-boot/</guid>
+      <description>Introduction to Microservices Benefits Each component in the platform can be delivered and upgraded separately. Each component in the platform can also be scaled out to multiple servers independently Challenges Many small components that use synchronous communication can cause a chain of failure problem, especially under high load. Keeping the configuration consistent and up to date in all the instances Monitoring the state of the platform in terms of latency</description>
+    </item>
+    
+    <item>
+      <title>Leveraging Spring Cloud to Manage Microservices</title>
+      <link>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-cloud/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-cloud/</guid>
+      <description>Introduction to Spring Cloud    Design pattern Current component Replaced by Software component     Service discovery Netflix Eureka &amp;amp; Netflix Ribbon Netflix Eureka and Spring Cloud load balancer   Edge server Netflix Zuul Spring Cloud Gateway and Spring Security OAuth   Centralized configuration  Spring Cloud Configuration Server   Circuit breaker Netflix Hystrix Resilience4j   Distributed tracing  Spring Cloud Sleuth and Zipkin    Adding Service Discovery Using Netflix Eureka and Ribbon Using Spring Cloud Gateway to Hide Microservices Behind an Edge Server Securing Access to APIs Centralized Configuration Improving Resilience Using Resilience4j Understanding Distributed Tracing </description>
+    </item>
+    
     <item>
       <title>Mybatis Spring Boot</title>
       <link>http://csyezheng.github.io/post/specialization/web-application/back-end/mybatis-spring-boot/</link>
@@ -189,34 +216,6 @@ Web Sites some popular types for web sites that are interesting in terms of scal
       
       <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/high-concurrency/</guid>
       <description>高并发 高并发其实挺容易的，当你明白了一万并发的原理，然后扩展到百万、千万、亿万级很easy 要点有如下几项： 1、垂直分层：DNS层、跨机房部署</description>
-    </item>
-    
-    <item>
-      <title>MySQL</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/mysql/</link>
-      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/mysql/</guid>
-      <description>MySQL Shell Guide Connecting to and Disconnecting from the Server shell&amp;gt; mysql -h host -u user -p mysql&amp;gt; QUIT User Account Management Adding User Accounts shell&amp;gt; mysql --user=root --password mysql shell&amp;gt; mysql --u root -p mysql mysql&amp;gt; CREATE USER &#39;custom&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;localhost&#39; -&amp;gt; WITH GRANT OPTION; mysql&amp;gt; CREATE USER &#39;custom&#39;@&#39;%&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;%&#39; -&amp;gt; WITH GRANT OPTION; mysql&amp;gt; CREATE USER &#39;admin&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT RELOAD,PROCESS ON *.</description>
-    </item>
-    
-    <item>
-      <title>OpenID Connect</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/oidc/</link>
-      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/oidc/</guid>
-      <description>OpenID Connect References http://www.cnblogs.com/zhaojianwei/p/4667864.html
-https://github.com/edx/edx-oauth2-provider</description>
-    </item>
-    
-    <item>
-      <title>Kafka</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/kafka/</link>
-      <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/kafka/</guid>
-      <description>Quickstart &amp;gt; tar -xzf kafka_2.11-1.1.0.tgz &amp;gt; cd kafka_2.11-1.1.0 Start the server bin/zookeeper-server-start.sh config/zookeeper.properties bin/kafka-server-start.sh config/server.properties Create a topic bin/kaftopics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic my-topic bin/kafka-topics.sh --list --zookeeper localhost:2181 Send some messages bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning Python client for the Apache Kafka #!/usr/bin/env python3 import logging from kafka import KafkaProducer from kafka.errors import KafkaError import msgpack log = logging.getLogger(__name__) def send(): producer = KafkaProducer(bootstrap_servers=[&#39;localhost:9092&#39;], value_serializer=msgpack.</description>
     </item>
     
   </channel>

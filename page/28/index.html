@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.78.1" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,15 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/jwt/">JSON Web Tokens</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/photoprism/">photoprism</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-10-09" class="post-time">
-        2018-10-09
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
+          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -316,11 +316,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      What is JSON Web Token? JSON Web Token (JWT) is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
-When should you use JSON Web Tokens? Here are some scenarios where JSON Web Tokens are useful:
+      Step 1: Clone this project:
+git clone https://github.com/photoprism/photoprism.git Step 2: Start Docker containers:
+cd photoprism sudo docker-compose up Step 3: Open a new terminal to the photoprism container:
+sudo docker-compose exec photoprism bash 
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/jwt/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/photoprism/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,15 +333,15 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/">Concurrent-Programming-for-Scalable-Web-Architectures</a>
+      <a class="post-link" href="/post/engineering-fundamentals/python/datetime/">Python datetime</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-08-26" class="post-time">
-        2018-08-26
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
+          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -351,12 +353,13 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
   <div class="post-content">
     
     <div class="post-summary">
-      Introduction Scope of this Thesis We will have a detailed look on concurrency in three distinct areas of web architectures&ndash;connection handling, application logic and backend persistence. For each stage, we will discuss its main challenges and issues and explain existing approaches to tackle concurrency.
-Web Applications distinguish two separate types of web applications &ndash; web sites and web services.
-Web Sites some popular types for web sites that are interesting in terms of scalability and concurrency
+      datetime 8.1. datetime
+The datetime module, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation.
+There are two kinds of date and time objects: “naive” and “aware”.
+An aware object has sufficient knowledge of applicable algorithmic and political time adjustments, such as time zone and daylight saving time information, to locate itself relative to other aware objects. An aware object is used to represent a specific moment in time.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/python/datetime/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -367,15 +370,15 @@ Web Sites some popular types for web sites that are interesting in terms of scal
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/distributed-systems/">distributed systems</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/quick-start/">quick-start</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-08-26" class="post-time">
-        2018-08-26
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
+          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -387,10 +390,11 @@ Web Sites some popular types for web sites that are interesting in terms of scal
   <div class="post-content">
     
     <div class="post-summary">
-      
+        Create your project folder and cd inside
+mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot;   go mod edit -require=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b go mod edit -replace=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b=github.com/google/go-genproto@v0.0.0-20180831171423-11092d34479b go mod edit -require=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -replace=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223=github.com/golang/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -require=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299 go mod edit -replace=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299=github.com/golang/crypto@v0.0.0-20180614174826-fd5f17ee7299 gen --connstr &quot;zhengye:csye3631@tcp(127.0.0.1:3307)/discovery&quot; --database discovery --json --gorm --guregu --rest 
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/distributed-systems/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/quick-start/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1317,6 +1321,153 @@ Web Sites some popular types for web sites that are interesting in terms of scal
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/29/">»</a></li>
@@ -1324,7 +1475,7 @@ Web Sites some popular types for web sites that are interesting in terms of scal
 
       
       
-      <li><a href="/page/37/">»»</a></li>
+      <li><a href="/page/44/">»»</a></li>
       
 
       </ul>

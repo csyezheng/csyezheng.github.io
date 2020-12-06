@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.78.1" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,15 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/other/health/workout/">workout</a>
+      <a class="post-link" href="/post/engineering-fundamentals/java/the-java-standard-library/">The Java Standard Library</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-06-23" class="post-time">
-        2020-06-23
+      <time datetime="2020-08-23" class="post-time">
+        2020-08-23
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/other/"> other </a>
+          <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -316,10 +316,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Barbell Bench Press (杠铃卧推) Incline Barbell Bench Press(斜杠铃卧推) Dumbbell Bench Press(哑铃卧推) Triceps Pushdown(肱三头肌下拉) Barbell Deadlift (杠铃硬拉) One-Arm Dumbbell Row (单臂哑铃
+      Collections Interfaces Note that all the core collection interfaces are generic. For example, this is the declaration of the Collection interface.
+public interface Collection&lt;E&gt;... The Collection Interface List&lt;String&gt; list = new ArrayList&lt;String&gt;(c); The Collection interface contains methods that perform basic operations, such as
+ int size() boolean isEmpty() boolean contains(Object element) boolean add(E element) boolean remove(Object element) Iterator&lt;E&gt; iterator()  It also contains methods that operate on entire collections, such as
     </div>
     <div class="read-more">
-      <a href="/post/other/health/workout/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/java/the-java-standard-library/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,12 +332,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/search-architecture/">Search Architecture</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/mybatis-spring-boot/">Mybatis Spring Boot</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-06-22" class="post-time">
-        2020-06-22
+      <time datetime="2020-08-09" class="post-time">
+        2020-08-09
       </time>
       <div class="post-category">
           <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
@@ -350,10 +352,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      搜索服务使用说明 "\nst=\u003estart: 开始\ne=\u003eend: 结束\n\nop1=\u003eoperation: 服务订阅\ncond1=\u003ec
+      Creating a project spring init -d=web --build=maven mysite Declare Dependencies cd mysite vim pom.xml &lt;dependency&gt; &lt;groupId&gt;org.liquibase&lt;/groupId&gt; &lt;artifactId&gt;liquibase-core&lt;/artifactId&gt; &lt;version&gt;3.10.2&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt; &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt; &lt;version&gt;2.1.3&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;mysql&lt;/groupId&gt; &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt; &lt;version&gt;8.0.20&lt;/version&gt; &lt;/dependency&gt; MyBatis-Spring-Boot-Starter will: Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers,
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/search-architecture/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/mybatis-spring-boot/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -364,15 +366,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/other/health/bigger-leaner-stronger/">Bigger Leaner Stronger</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/spring/">Spring</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-06-20" class="post-time">
-        2020-06-20
+      <time datetime="2020-08-09" class="post-time">
+        2020-08-09
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/other/"> other </a>
+          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -384,11 +386,14 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Workouts Meal Plans Part 1: What’s in This for You? 1. The Promise You absolutely, positively can have the lean, muscular, and powerful body that you dream about.
-2. Who Is Mike Matthews and Why Should I Care? 3. Why Bigger Leaner Stronger Is Different Part 2: Key Things “They” Aren’t Telling You 4. The Hidden Barrier 5. What Most Men Will Never Know about Getting Fit – Part 1 6.
+      Installation Install JDK Download jdk-8u261-linux-x64.tar.gz from Oracle
+sudo pacman -S jdk8-openjdk vim ~/.bashrc export JAVA_HOME=/usr/lib/jvm/java-8-openjdk source ~/.bashrc Install maven sudo pacman -S maven cp /opt/maven/conf/settings.xml ~/.m2/ vim ~/.m2/settings.xml &lt;mirror&gt; &lt;id&gt;alimaven&lt;/id&gt; &lt;mirrorOf&gt;central&lt;/mirrorOf&gt; &lt;name&gt;aliyun maven&lt;/name&gt; &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt; &lt;/mirror&gt; Installing the Spring Boot CLI Download the Spring Boot CLI
+wget https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-cli/2.3.3.BUILD-SNAPSHOT/spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip Extract to a directory that supports file execution.
+sudo unzip spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip -d /opt/ vim ~/.bashrc Add the following line to the file
+export PATH=/opt/spring-2.
     </div>
     <div class="read-more">
-      <a href="/post/other/health/bigger-leaner-stronger/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/spring/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1426,6 +1431,174 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/8/">»</a></li>
@@ -1433,7 +1606,7 @@
 
       
       
-      <li><a href="/page/37/">»»</a></li>
+      <li><a href="/page/44/">»»</a></li>
       
 
       </ul>

@@ -6,14 +6,14 @@
     <description>Recent content in interview on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/categories/interview/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Nov 2016 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/categories/interview/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>tencent nlp interview</title>
-      <link>http://csyezheng.github.io/post/other/interview/tencent-nlp-interview/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <title>interview question</title>
+      <link>http://csyezheng.github.io/post/interview/algorithms/1/</link>
+      <pubDate>Wed, 16 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/other/interview/tencent-nlp-interview/</guid>
-      <description>一面（技术面） 面试形式：电话面试。 简要的自我介绍。 研究生阶段最有挑战的项目是什么？ 对于这个项目，传统的方法是怎么样的？ 列举下这个任务在传统用</description>
+      <guid>http://csyezheng.github.io/post/interview/algorithms/1/</guid>
+      <description>笔试：一道英文算法题，考单链表，30分钟 两个单链表逆序存了两个非负整数，将这两个数求和，和逆序存入另一个链表 addTwoNumbers(node *p1, node *p2) 两个有序链表的合并 多线程</description>
     </item>
     
   </channel>

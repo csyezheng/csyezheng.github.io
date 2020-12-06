@@ -62,5 +62,14 @@
       <description>基类的派生类的派生类需要做某些改动时，追溯到基类的一个虚函数做改动才能实现时，可以在此派生类中重写同名函数进行覆盖而不是继承这个虚函数，先拷</description>
     </item>
     
+    <item>
+      <title>reminders</title>
+      <link>http://csyezheng.github.io/post/other/reminders/</link>
+      <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/other/reminders/</guid>
+      <description>practice, practice and practice today and tomorrow Daily Schedule Get up review ever learned practice coding Go to bed Daily Task SICP STL Leetcode January February March April May June memo pek2 book list Effective C++ C++ primer 算法导论 SICP CSAPP TCP/IP卷一 体系结构量化方法 Leetcode刷题</description>
+    </item>
+    
   </channel>
 </rss>

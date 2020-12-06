@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github pages on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/github-pages/</link>
+    <description>Recent content in github pages on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Link custom domain to Github pages</title>
+      <link>http://csyezheng.github.io/post/any-path/blog/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/any-path/blog/</guid>
+      <description>Register Domain Name Namesilo
+Use a Custom Domain If you’d like to use a custom domain for your GitHub Pages site, create a file static/CNAME. Your custom domain name should be the only contents inside CNAME. Since it’s inside static, the published site will contain the CNAME file at the root of the published site, which is a requirements of GitHub Pages.
+DNS service provider Create Cloudflare account Enter your domain name yezheng.</description>
+    </item>
+    
+  </channel>
+</rss>

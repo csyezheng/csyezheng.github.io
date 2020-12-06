@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Thinking on Ye Zheng&#39;s Blog</title>
+    <title>thinking on Ye Zheng&#39;s Blog</title>
     <link>http://csyezheng.github.io/tags/thinking/</link>
-    <description>Recent content in Thinking on Ye Zheng&#39;s Blog</description>
+    <description>Recent content in thinking on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/thinking/index.xml" rel="self" type="application/rss+xml" />
@@ -14,6 +14,15 @@
       
       <guid>http://csyezheng.github.io/post/other/thinking/thinking/</guid>
       <description>基类的派生类的派生类需要做某些改动时，追溯到基类的一个虚函数做改动才能实现时，可以在此派生类中重写同名函数进行覆盖而不是继承这个虚函数，先拷</description>
+    </item>
+    
+    <item>
+      <title>thinking</title>
+      <link>http://csyezheng.github.io/post/master-path/notes/</link>
+      <pubDate>Wed, 08 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/master-path/notes/</guid>
+      <description>所以的确，如果自认为码农，那SICP不妨抛弃。然而但凡对编程这件事本身有点点更高的追求，那么过程式编程（数据为中心），函数式编程（代码为中心</description>
     </item>
     
   </channel>

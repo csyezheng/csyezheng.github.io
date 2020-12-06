@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.78.1" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,15 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/master-path/learning-path/">learning path for computer science</a>
+      <a class="post-link" href="/post/specialization/devops/nginx/">Nginx</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2015-01-01" class="post-time">
-        2015-01-01
+      <time datetime="2017-10-21" class="post-time">
+        2017-10-21
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/master-path/"> master-path </a>
+          <a href="http://csyezheng.github.io/categories/devops/"> devops </a>
           
         </div>
       
@@ -316,10 +316,83 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Mathematics Math19 Calculus Math20 Calculus Math21 Calculus Linear Algebra, Multivariable Calculus, and Modern Applications Description 线性代数部分包括正交性，线性独立性，矩阵代数和特征值，其应用包括最小二乘法，线性回归和马尔可夫链（与总体动力学
+      General configuration Managing server entries It is possible to put different server blocks in different files. This allows you to easily enable or disable certain sites.
+# mkdir /etc/nginx/sites-available # mkdir /etc/nginx/sites-enabled Create a file inside the sites-available directory that contains one or more server blocks:
+/etc/nginx/sites-available/example server { .. } Append the following line at the end of the http block in /etc/nginx/nginx.conf:
+include sites-enabled/*; To enable a server block, simple create a symlink:
     </div>
     <div class="read-more">
-      <a href="/post/master-path/learning-path/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/devops/nginx/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/specialization/web-application/back-end/postgresql/">PostgreSQL</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2017-09-30" class="post-time">
+        2017-09-30
+      </time>
+      <div class="post-category">
+          <a href="http://csyezheng.github.io/categories/web-application/"> web-application </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Installing PostgreSQL $ sudo pacman -S postgresql $ sudo -u postgres -i [postgres]$ initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data' [postgres]$ exit $ pg_ctl -D /var/lib/postgres/data -l logfile start $ systemctl start postgresql.service $ systemctl enable postgresql.service Create your first database/user Access the database shell $ [postgres]$ psql -d myDatabaseName \help \c &lt;database&gt; \du # list all users and their permission levels \dt # show summary information about all tables \q \?
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/web-application/back-end/postgresql/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/any-path/post-installation-for-archlinux/">Post-installation for archlinux</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2017-09-26" class="post-time">
+        2017-09-26
+      </time>
+      <div class="post-category">
+          <a href="http://csyezheng.github.io/categories/any-path/"> any-path </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Reboot into the new system Set the keyboard layout and Console fonts If you have the 4K display, console fonts will be extremely small.
+$ setfont sun12x22 Connect to the internet nmcli device wifi list nmcli device wifi connect TP-LINK_GZS password a3628436 ping baidu.com Unofficial user repositories sudo vim /etc/pacman.conf [archlinuxcn] Server = https://repo.archlinuxcn.org/$arch Adding unofficial keys
+sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman -S adobe-source-han-sans-cn-fonts sudo pacman -S adobe-source-han-sans-tw-fonts sudo pacman -S noto-fonts-emoji otf-latinmodern-math ttf-inconsolata Graphical user interface Display server sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight xorg-xrdb is using to loading a user-level configuration dotfile, typically located at ~/.
+    </div>
+    <div class="read-more">
+      <a href="/post/any-path/post-installation-for-archlinux/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -375,9 +448,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -398,9 +469,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -421,9 +490,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -444,9 +511,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -467,9 +532,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -490,9 +553,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -513,9 +574,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -536,9 +595,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -559,9 +616,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -582,9 +637,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -605,9 +658,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -628,9 +679,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -651,9 +700,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -674,9 +721,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -697,9 +742,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -720,9 +763,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -743,9 +784,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -766,9 +805,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -789,9 +826,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -812,9 +847,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -835,9 +868,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -858,9 +889,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -881,9 +910,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -904,9 +931,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -927,197 +952,135 @@
           
 
             
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
             
               
             
 
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/25/">
-              25
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/26/">
-              26
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/27/">
-              27
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/28/">
-              28
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/29/">
-              29
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/30/">
-              30
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
           
 
         
@@ -1144,11 +1107,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1175,11 +1136,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1206,11 +1165,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1237,11 +1194,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1268,11 +1223,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1299,11 +1252,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1320,10 +1271,209 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/38/">
+              38
+            </a>
+          </li>
+        
+
       
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/39/">
+              39
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/40/">
+              40
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/41/">
+              41
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/42/">
+              42
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/43/">
+              43
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
       
 
       
+      
+      <li><a href="/page/38/">»</a></li>
+      
+
+      
+      
+      <li><a href="/page/44/">»»</a></li>
       
 
       </ul>

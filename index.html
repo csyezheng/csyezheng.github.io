@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.78.1" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 
 <link rel="canonical" href="http://csyezheng.github.io/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://csyezheng.github.io/" />
-<meta property="og:updated_time" content="2020-11-12T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,15 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/big-data/flink/">flink</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/">evaluate the quality of the training phrases in intents</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-11-12" class="post-time">
-        2020-11-12
+      <time datetime="2020-12-06" class="post-time">
+        2020-12-06
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/big-data/"> big-data </a>
+          <a href="http://csyezheng.github.io/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -316,10 +316,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Apache Flink Web Dashboard
+      This tutorial shows you how to analyze and evaluate the quality of the training phrases supplied to your Dialogflow agent&rsquo;s intents. The purpose of this analysis is to avoid confusing the agent with phrases irrelevant to the intents supplied to, or more relevant to, other intents.
+The approach you take is to generate semantic embeddings of the training phrases by using the TensorFlow Hub (tf.Hub) Universal Sentence Encoder module. You then compute cohesion and separation measurements based on the similarity between embeddings within the same intents and different intents.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/big-data/flink/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,15 +331,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/cloud-computing/15-319/">Cloud Computing</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/">Joint intent and slot classification</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-10-27" class="post-time">
-        2020-10-27
+      <time datetime="2020-12-06" class="post-time">
+        2020-12-06
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/cloud-computing/"> cloud-computing </a>
+          <a href="http://csyezheng.github.io/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -350,10 +351,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Introduction and Course Logistics Data Analytics Big Data Analytics Elasticity and Auto Scaling Containers and Kubernetes Serverless Computing and Functions-as-a-Service Flat Files and Databases &amp; Team Project Social Network, Heterogenous Storage and DBaaS &amp; Team Project Replication and Consistency and Team Project Phase 1 Team Project Phase 1 Iterative Batch Processing in Spark and Team Project Phase 2 Team Project Phase 2 and Live Test Machine Learning on the Cloud and Team Project Phase 3 Team Project Phase 3 and Live Test Stream Processing with Kafka &amp; Samza Reference  https://www.
+      Reference  Joint_Intent_and_Slot_Classification.ipynb  
     </div>
     <div class="read-more">
-      <a href="/post/specialization/cloud-computing/15-319/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -364,15 +365,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/cloud-computing/infrastructure/introduction-to-cloud-infrastructure-technologies/">Introduction to Cloud Infrastructure Technologies</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/">Named Entity Recognition using Spacy and Tensorflow</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-10-12" class="post-time">
-        2020-10-12
+      <time datetime="2020-12-06" class="post-time">
+        2020-12-06
       </time>
       <div class="post-category">
-          <a href="http://csyezheng.github.io/categories/cloud-computing/"> cloud-computing </a>
+          <a href="http://csyezheng.github.io/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -384,11 +385,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Chapter 1. Virtualization Introduction and Learning Objectives Introduction to Cloud Computing and Technologies Historically, the word cloud was used as a metaphor for Internet. Later on, it was used to depict the Internet in computer network diagrams. To find out more about the origin of the cloud, you can take a look at the details provided on Wikipedia.
-Cloud computing can be referred as the allocation of resources on the cloud.
+      Reference  Named Entity Recognition using Spacy and Tensorflow  
     </div>
     <div class="read-more">
-      <a href="/post/specialization/cloud-computing/infrastructure/introduction-to-cloud-infrastructure-technologies/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1422,6 +1422,174 @@ Cloud computing can be referred as the allocation of resources on the cloud.
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/2/">»</a></li>
@@ -1429,7 +1597,7 @@ Cloud computing can be referred as the allocation of resources on the cloud.
 
       
       
-      <li><a href="/page/37/">»»</a></li>
+      <li><a href="/page/44/">»»</a></li>
       
 
       </ul>

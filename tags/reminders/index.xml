@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>reminders on Ye Zheng&#39;s Blog</title>
+    <link>http://csyezheng.github.io/tags/reminders/</link>
+    <description>Recent content in reminders on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 15 Mar 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/reminders/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>reminders</title>
+      <link>http://csyezheng.github.io/post/other/reminders/</link>
+      <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/post/other/reminders/</guid>
+      <description>practice, practice and practice today and tomorrow Daily Schedule Get up review ever learned practice coding Go to bed Daily Task SICP STL Leetcode January February March April May June memo pek2 book list Effective C++ C++ primer 算法导论 SICP CSAPP TCP/IP卷一 体系结构量化方法 Leetcode刷题</description>
+    </item>
+    
+  </channel>
+</rss>

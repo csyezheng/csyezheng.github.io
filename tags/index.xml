@@ -6,184 +6,184 @@
     <description>Recent content in Tags on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>flink</title>
-      <link>http://csyezheng.github.io/tags/flink/</link>
-      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      <title>chatbot</title>
+      <link>http://csyezheng.github.io/tags/chatbot/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/tags/flink/</guid>
+      <guid>http://csyezheng.github.io/tags/chatbot/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>cloud-computing</title>
-      <link>http://csyezheng.github.io/tags/cloud-computing/</link>
-      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
+      <title>deep learning</title>
+      <link>http://csyezheng.github.io/tags/deep-learning/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/tags/cloud-computing/</guid>
+      <guid>http://csyezheng.github.io/tags/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Ceph</title>
-      <link>http://csyezheng.github.io/tags/ceph/</link>
-      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      <title>intent</title>
+      <link>http://csyezheng.github.io/tags/intent/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/tags/ceph/</guid>
+      <guid>http://csyezheng.github.io/tags/intent/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>KVM</title>
-      <link>http://csyezheng.github.io/tags/kvm/</link>
-      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      <title>named-entity-recognition</title>
+      <link>http://csyezheng.github.io/tags/named-entity-recognition/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/tags/kvm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Openstack</title>
-      <link>http://csyezheng.github.io/tags/openstack/</link>
-      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/openstack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>http://csyezheng.github.io/tags/java/</link>
-      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mybatis</title>
-      <link>http://csyezheng.github.io/tags/mybatis/</link>
-      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/mybatis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Spring</title>
-      <link>http://csyezheng.github.io/tags/spring/</link>
-      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/spring/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Spring-boot</title>
-      <link>http://csyezheng.github.io/tags/spring-boot/</link>
-      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/spring-boot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DevOps</title>
-      <link>http://csyezheng.github.io/tags/devops/</link>
-      <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>chatbots</title>
-      <link>http://csyezheng.github.io/tags/chatbots/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/chatbots/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dialogue-systems</title>
-      <link>http://csyezheng.github.io/tags/dialogue-systems/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/dialogue-systems/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>gfw</title>
-      <link>http://csyezheng.github.io/tags/gfw/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/gfw/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>grafana</title>
-      <link>http://csyezheng.github.io/tags/grafana/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/grafana/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>machine learning</title>
-      <link>http://csyezheng.github.io/tags/machine-learning/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>monitoring</title>
-      <link>http://csyezheng.github.io/tags/monitoring/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://csyezheng.github.io/tags/monitoring/</guid>
+      <guid>http://csyezheng.github.io/tags/named-entity-recognition/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Natural Language Processing</title>
       <link>http://csyezheng.github.io/tags/natural-language-processing/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://csyezheng.github.io/tags/natural-language-processing/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Prometheus</title>
-      <link>http://csyezheng.github.io/tags/prometheus/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <title>slot</title>
+      <link>http://csyezheng.github.io/tags/slot/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/tags/prometheus/</guid>
+      <guid>http://csyezheng.github.io/tags/slot/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Python</title>
-      <link>http://csyezheng.github.io/tags/python/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <title>spacy</title>
+      <link>http://csyezheng.github.io/tags/spacy/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/tags/python/</guid>
+      <guid>http://csyezheng.github.io/tags/spacy/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Question answering</title>
-      <link>http://csyezheng.github.io/tags/question-answering/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <title>tensorflow</title>
+      <link>http://csyezheng.github.io/tags/tensorflow/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/tags/question-answering/</guid>
+      <guid>http://csyezheng.github.io/tags/tensorflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data-lakes</title>
+      <link>http://csyezheng.github.io/tags/data-lakes/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/data-lakes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data-warehouse</title>
+      <link>http://csyezheng.github.io/tags/data-warehouse/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/data-warehouse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design</title>
+      <link>http://csyezheng.github.io/tags/design/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hadoop</title>
+      <link>http://csyezheng.github.io/tags/hadoop/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/hadoop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hive</title>
+      <link>http://csyezheng.github.io/tags/hive/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/hive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>luigi</title>
+      <link>http://csyezheng.github.io/tags/luigi/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/luigi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine learning</title>
+      <link>http://csyezheng.github.io/tags/machine-learning/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>recommendation</title>
+      <link>http://csyezheng.github.io/tags/recommendation/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/recommendation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>recommendation-system</title>
+      <link>http://csyezheng.github.io/tags/recommendation-system/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/recommendation-system/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sqoop</title>
+      <link>http://csyezheng.github.io/tags/sqoop/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/sqoop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>http://csyezheng.github.io/tags/kubernetes/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>microservices</title>
+      <link>http://csyezheng.github.io/tags/microservices/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://csyezheng.github.io/tags/microservices/</guid>
       <description></description>
     </item>
     
