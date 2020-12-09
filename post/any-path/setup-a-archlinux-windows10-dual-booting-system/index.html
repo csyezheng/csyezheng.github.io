@@ -510,13 +510,13 @@ Do you want to proceed? (Y/N): y
 </code></pre><pre><code># mkdir -p /mnt/efi 
 # mount /dev/nvme1n1p1 /mnt/efi
 </code></pre><pre><code># mkdir -p /mnt/data
-# mount /dev/sda /mnt/data
+# mount /dev/sda1 /mnt/data
 </code></pre><h3 id="select-the-mirrors">Select the mirrors</h3>
 <pre><code># vim /etc/pacman.d/mirrorlist
 </code></pre><p>The higher a mirror is placed in the list, the more priority it is given when downloading a package. You may want to edit the file accordingly, and move the geographically closest mirrors to the top of the list, although other criteria should be taken into account.</p>
 <p>This file will later be copied to the new system by <em>pacstrap</em>, so it is worth getting right.</p>
 <h3 id="install-essential-packages">Install essential packages</h3>
-<pre><code># pacstrap /mnt base base-devel linux-lts linux-lts-headers linux-firmware vim dhcpcd networkmanager
+<pre><code># pacstrap /mnt base base-devel linux-lts linux-lts-headers linux-firmware gvim dhcpcd networkmanager
 </code></pre><h3 id="configure-the-linux-system">Configure the Linux system</h3>
 <h4 id="fstab">Fstab</h4>
 <p>Generate an fstab file:</p>

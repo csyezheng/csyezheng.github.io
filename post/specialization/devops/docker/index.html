@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&amp;ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&amp;ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker add your user to the docker group." />
+  <meta name="description" content="Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&amp;ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&amp;ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker sudo pacman -S docker systemctl start docker." />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -60,23 +60,23 @@
 
 
 <meta property="og:title" content="Docker" />
-<meta property="og:description" content="Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker add your user to the docker group." />
+<meta property="og:description" content="Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker sudo pacman -S docker systemctl start docker." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://csyezheng.github.io/post/specialization/devops/docker/" />
 <meta property="article:published_time" content="2019-04-25T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-04-25T00:00:00+00:00" />
 <meta itemprop="name" content="Docker">
-<meta itemprop="description" content="Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker add your user to the docker group.">
+<meta itemprop="description" content="Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker sudo pacman -S docker systemctl start docker.">
 <meta itemprop="datePublished" content="2019-04-25T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2019-04-25T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1793">
+<meta itemprop="wordCount" content="1803">
 
 
 
 <meta itemprop="keywords" content="Docker,DevOps," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Docker"/>
-<meta name="twitter:description" content="Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker add your user to the docker group."/>
+<meta name="twitter:description" content="Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker sudo pacman -S docker systemctl start docker."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -379,7 +379,10 @@
 <li>A <strong>container</strong> is a runtime instance of an image&ndash;what the image becomes in memory when executed. A <strong>container</strong> runs <em>natively</em> on Linux and shares the kernel of the host machine with other containers.</li>
 </ul>
 <h3 id="install-docker">Install Docker</h3>
-<p>add your user to the <code>docker</code> group.</p>
+<pre><code>sudo pacman -S docker
+systemctl start docker.service
+systemctl enable docker.service
+</code></pre><p>add your user to the <code>docker</code> group.</p>
 <h3 id="docker-command">Docker command</h3>
 <pre><code>## List Docker CLI commands
 $ docker                    

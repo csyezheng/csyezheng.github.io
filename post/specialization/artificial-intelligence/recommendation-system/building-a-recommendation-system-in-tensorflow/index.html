@@ -69,7 +69,7 @@
 <meta itemprop="description" content="Background theory for recommendations the background theory for matrix factorization-based collaborative filtering as applied to recommendation systems. Collaborative filtering for recommendation systems Collaborative filtering relies only on observed user behavior to make recommendations—no profile data or content access is necessary. The basic assumption is that similar user behavior reflects similar fundamental preferences, allowing">
 <meta itemprop="datePublished" content="2020-12-05T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2020-12-05T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1510">
+<meta itemprop="wordCount" content="1539">
 
 
 
@@ -443,6 +443,7 @@ $$</p>
 <h2 id="create-the-model">Create the Model</h2>
 <p>Install miniconda</p>
 <pre><code>$ yay -S miniconda3
+$ echo &quot;export PATH=/opt/miniconda3/bin/:$PATH&quot; &gt;&gt; ~/.bashrc
 $ echo &quot;[ -f /opt/miniconda3/etc/profile.d/conda.sh ] &amp;&amp; source /opt/miniconda3/etc/profile.d/conda.sh&quot; &gt;&gt; ~/.bashrc
 $ source ~/.bashrc
 </code></pre><p>Clone the sample code repository:</p>
@@ -452,6 +453,9 @@ cd tensorflow-recommendation-wals
 <pre><code>$ conda create -y -n tfrec                     # -y:  Do not ask for confirmation, -n: Name of environment.
 $ conda install -y -n tfrec --file conda.txt   # --file FILE: Read package versions from the given file
 $ source activate tfrec
+</code></pre><pre><code>$ conda deactivate
+$ conda remove -n tfrec --all
+$ conda create -y -n tfrec python=3.7          # with a specific version of Python
 $ pip install -r requirements.txt
 $ pip install tensorflow==1.15
 </code></pre><h3 id="build-a-tfsparsetensor-representation-of-the-rating-matrix">Build a tf.SparseTensor representation of the Rating Matrix.</h3>

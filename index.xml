@@ -585,6 +585,7 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;create-the-model&#34;&gt;Create the Model&lt;/h2&gt;
 &lt;p&gt;Install miniconda&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ yay -S miniconda3
+$ echo &amp;quot;export PATH=/opt/miniconda3/bin/:$PATH&amp;quot; &amp;gt;&amp;gt; ~/.bashrc
 $ echo &amp;quot;[ -f /opt/miniconda3/etc/profile.d/conda.sh ] &amp;amp;&amp;amp; source /opt/miniconda3/etc/profile.d/conda.sh&amp;quot; &amp;gt;&amp;gt; ~/.bashrc
 $ source ~/.bashrc
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Clone the sample code repository:&lt;/p&gt;
@@ -594,6 +595,9 @@ cd tensorflow-recommendation-wals
 &lt;pre&gt;&lt;code&gt;$ conda create -y -n tfrec                     # -y:  Do not ask for confirmation, -n: Name of environment.
 $ conda install -y -n tfrec --file conda.txt   # --file FILE: Read package versions from the given file
 $ source activate tfrec
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ conda deactivate
+$ conda remove -n tfrec --all
+$ conda create -y -n tfrec python=3.7          # with a specific version of Python
 $ pip install -r requirements.txt
 $ pip install tensorflow==1.15
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;build-a-tfsparsetensor-representation-of-the-rating-matrix&#34;&gt;Build a tf.SparseTensor representation of the Rating Matrix.&lt;/h3&gt;

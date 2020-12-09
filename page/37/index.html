@@ -388,8 +388,8 @@ include sites-enabled/*; To enable a server block, simple create a symlink:
     
     <div class="post-summary">
       Reboot into the new system Set the keyboard layout and Console fonts If you have the 4K display, console fonts will be extremely small.
-$ setfont sun12x22 Connect to the internet nmcli device wifi list nmcli device wifi connect TP-LINK_GZS password a3628436 ping baidu.com Unofficial user repositories sudo vim /etc/pacman.conf [archlinuxcn] Server = https://repo.archlinuxcn.org/$arch Adding unofficial keys
-sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman -S adobe-source-han-sans-cn-fonts sudo pacman -S adobe-source-han-sans-tw-fonts sudo pacman -S noto-fonts-emoji otf-latinmodern-math ttf-inconsolata Graphical user interface Display server sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight xorg-xrdb is using to loading a user-level configuration dotfile, typically located at ~/.
+$ setfont sun12x22 Connect to the internet nmcli device wifi list nmcli device wifi connect TP-LINK_GZS password a3628436 ping baidu.com Unofficial user repositories sudo vim /etc/pacman.conf [archlinuxcn] Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch Adding unofficial keys
+sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman -S ttc-iosevka-slab noto-fonts noto-fonts-cjk noto-fonts-emoji tf-latinmodern-math ttf-inconsolata Graphical user interface Display server sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight xorg-xrdb is using to loading a user-level configuration dotfile, typically located at ~/.
     </div>
     <div class="read-more">
       <a href="/post/any-path/post-installation-for-archlinux/" class="read-more-link">Read more</a>
