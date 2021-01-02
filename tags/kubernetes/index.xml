@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubernetes on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/kubernetes/</link>
+    <link>http://www.yezheng.pro/tags/kubernetes/</link>
     <description>Recent content in Kubernetes on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Developing Lightweight Microservices Using Kubernetes</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-kubernetes/</link>
+      <link>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-kubernetes/</link>
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-kubernetes/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-kubernetes/</guid>
       <description>Introduction to Kubernetes Deploying Our Microservices in Kubernetes Implementing Kubernetes Features as an Alternative Using a Service Mesh to Improve Observability and Management Centralized Logging with the EFK Stack Monitoring Microservices </description>
     </item>
     
     <item>
       <title>Kubernetes Basics</title>
-      <link>http://csyezheng.github.io/post/specialization/devops/kubernetes/</link>
+      <link>http://www.yezheng.pro/post/specialization/devops/kubernetes/</link>
       <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/devops/kubernetes/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/devops/kubernetes/</guid>
       <description>Using Minikube to Create a Cluster Kubernetes Clusters Kubernetes coordinates a highly available cluster of computers that are connected to work as a single unit.
 applications need to be packaged in a way that decouples them from individual hosts: they need to be containerized.
 Kubernetes automates the distribution and scheduling of application containers across a cluster in a more efficient way.

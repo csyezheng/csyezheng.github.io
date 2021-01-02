@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OpenID Connect on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/openid-connect/</link>
+    <link>http://www.yezheng.pro/tags/openid-connect/</link>
     <description>Recent content in OpenID Connect on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 26 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/openid-connect/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/openid-connect/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OpenID Connect</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/oidc/</link>
+      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/oidc/</link>
       <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/oidc/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/oidc/</guid>
       <description>OpenID Connect References http://www.cnblogs.com/zhaojianwei/p/4667864.html
 https://github.com/edx/edx-oauth2-provider</description>
     </item>

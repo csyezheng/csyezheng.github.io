@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>high concurrency on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/high-concurrency/</link>
+    <link>http://www.yezheng.pro/tags/high-concurrency/</link>
     <description>Recent content in high concurrency on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 26 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/high-concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/high-concurrency/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>high concurrency</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/high-concurrency/</link>
+      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/high-concurrency/</link>
       <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/high-concurrency/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/high-concurrency/</guid>
       <description>高并发 高并发其实挺容易的，当你明白了一万并发的原理，然后扩展到百万、千万、亿万级很easy 要点有如下几项： 1、垂直分层：DNS层、跨机房部署</description>
     </item>
     

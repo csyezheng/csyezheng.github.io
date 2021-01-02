@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>machine learning on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/machine-learning/</link>
+    <link>http://www.yezheng.pro/tags/machine-learning/</link>
     <description>Recent content in machine learning on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 05 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Machine Learning Models for Predictions in Cloud Dataflow Pipelines</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</link>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</guid>
       <description>This solution describes and compares the different design approaches for calling a machine learning model during a Dataflow pipeline, and examines the tradeoffs involved in choosing one approach or another. We present the results of a series of experiments that we ran to explore different approaches and illustrate these tradeoffs, both in batch and stream processing pipelines. This solution is designed for people who integrate trained models into data processing pipelines, rather than for data scientists who want to build machine learning models.</description>
     </item>
     
     <item>
       <title>Deploying machine learning models in production</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/deploy/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/deploy/</link>
       <pubDate>Sun, 29 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/deploy/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/deploy/</guid>
       <description>Reference 训练好的深度学习模型是怎么部署的？ PyTorch模型的加速及部署 ahkarami/Deep-Learning-in-Production Accelerating Inference In TF-TRT User Guide tensorflow/tensorrt Tensorrt API Reference Containers: nvidia:tensorflow Model inference using TensorFlow and TensorRT Speed up TensorFlow Inference on GPUs with TensorRT TF20-TF-TRT-inference-from-Keras-saved-model.ipynb</description>
     </item>
     
     <item>
       <title>Top 20 Python Libraries for Data Science</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</guid>
       <description>Core Libraries &amp;amp; Statistics  NumPy SciPy Pandas StatsModels  Visualization Matplotlib Seaborn Plotly Bokeh Pydot  Machine Learning Scikit-learn XGBoost Eli5  Deep Learning TensorFlow PyTorch Keras  Distributed Deep Learning Dist-keras / elephas / spark-deep-learning  Natural Language Processing NLTK SpaCy Gensim  Data Scraping Scrapy  </description>
     </item>
     
     <item>
       <title>Top Websites for Machine Learning</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-websites/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/top-websites/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-websites/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/top-websites/</guid>
       <description>AI Hub</description>
     </item>
     
     <item>
       <title>Bert</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/bert/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/bert/</link>
       <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/bert/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/bert/</guid>
       <description>BERT 可解释性-从&amp;quot;头&amp;quot;说起 一、背景介绍 搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大</description>
     </item>
     
     <item>
       <title>Multi-label classification</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/multi-label-classification/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/multi-label-classification/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/multi-label-classification/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/multi-label-classification/</guid>
       <description>In the multi-label problem there is no constraint on how many of the classes the instance can be assigned to. Formally, multi-label classification is the problem of finding a model that maps inputs x to binary vectors y (assigning a value of 0 or 1 for each element (label) in y).
 Problem transformation methods   Transformation into binary classification problems
   binary relevance
@@ -66,19 +66,19 @@ amounts to independently training one binary classifier for each label.</descrip
     
     <item>
       <title>Machine Learning Crash Course Courses</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/crash-course/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/crash-course/</link>
       <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/crash-course/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/crash-course/</guid>
       <description>Machine Learning Crash Course Courses ML Concepts Introduction to ML First, it gives you a tool to reduce the time you spend programming. Second, it will allow you to customize your products, making them better for specific groups of people. Third, machine learning lets you solve problems that you, as a programmer, have no idea how to do by hand. machine learning changes the way you think about a problem.</description>
     </item>
     
     <item>
       <title>scikit-learn</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/scikit-learn/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/scikit-learn/</link>
       <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/scikit-learn/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/scikit-learn/</guid>
       <description>scikit-learn   sklearn
   preprocessing
   MultiLabelBinarizer
@@ -92,28 +92,28 @@ Estimate class weights for unbalanced datasets.
     
     <item>
       <title>Solution for imbalanced data</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/solution/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/solution/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/solution/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/solution/</guid>
       <description>FAQ imbalanced data  https://www.tensorflow.org/tutorials/structured_data/imbalanced_data https://stackoverflow.com/questions/43481490/keras-class-weights-class-weight-for-one-hot-encoding https://github.com/jbjorne/TEES/blob/master/Detectors/KerasDetectorBase.py https://towardsdatascience.com/practical-tips-for-class-imbalance-in-binary-classification-6ee29bcdb8a7 https://stackoverflow.com/questions/48485870/multi-label-classification-with-class-weights-in-keras  Class weight degrades Multi Label Classification Performance  https://datascience.stackexchange.com/questions/28040/class-weight-degrades-multi-label-classification-performance  What is the difference between multilabel and multiclass classification?  https://www.quora.com/What-is-the-difference-between-multilabel-and-multiclass-classification https://stats.stackexchange.com/questions/260505/should-i-use-a-categorical-cross-entropy-or-binary-cross-entropy-loss-for-binary  </description>
     </item>
     
     <item>
       <title>Few shot learning</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/</guid>
       <description>Reference  https://github.com/AnthonyMRios/multi-label-zero-shot Few-Shot and Zero-Shot Multi-Label Learning for Structured Label Spaces Deep Neural Networks for Multi-Label Text Classification https://github.com/YujiaBao/Distributional-Signatures Induction Networks for Few-Shot Text Classification https://github.com/laohur/LearnToCompareText  </description>
     </item>
     
     <item>
       <title>Learning Path for Machine Learning</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/learn-ml/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/learn-ml/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/learn-ml/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/learn-ml/</guid>
       <description>Learning Path for Machine Learning Basics of machine learning with TensorFlow Step 1: Understand what ML is all about The book ‘Deep Learning in Python’ by Francois Chollet, creator of Keras, is a great place to get started. Read chapters 1-4 to understand the fundamentals of ML from a programmer’s perspective.
 Google Developers Machine Learning Crash Course
 Machine Learning Glossary
@@ -122,10 +122,10 @@ Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which 
     
     <item>
       <title>kaggle</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/kaggle/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/kaggle/</link>
       <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/kaggle/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/kaggle/</guid>
       <description>https://www.kaggle.com/stackoverflow/statsquestions
 https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
 https://developer.ibm.com/exchanges/models/all/max-toxic-comment-classifier/

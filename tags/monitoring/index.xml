@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>monitoring on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/monitoring/</link>
+    <link>http://www.yezheng.pro/tags/monitoring/</link>
     <description>Recent content in monitoring on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Grafana</title>
-      <link>http://csyezheng.github.io/post/specialization/devops/grafana/</link>
+      <link>http://www.yezheng.pro/post/specialization/devops/grafana/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/devops/grafana/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/devops/grafana/</guid>
       <description>Reference
  https://grafana.com/grafana/dashboards/893  </description>
     </item>
     
     <item>
       <title>Prometheus</title>
-      <link>http://csyezheng.github.io/post/specialization/devops/prometheus/</link>
+      <link>http://www.yezheng.pro/post/specialization/devops/prometheus/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/devops/prometheus/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/devops/prometheus/</guid>
       <description>Prometheus 入门与实践 吴 莉, 殷 一鸣, 和 蔡 林 2018 年 5 月 30 日发布 随着容器技术的迅速发展，Kubernetes 已然成为大家追捧的容器集群管理系统。Promet</description>
     </item>
     

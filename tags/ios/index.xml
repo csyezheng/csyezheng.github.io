@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ios on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/ios/</link>
+    <link>http://www.yezheng.pro/tags/ios/</link>
     <description>Recent content in ios on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ios-tweak</title>
-      <link>http://csyezheng.github.io/post/other/ios-tweak/</link>
+      <link>http://www.yezheng.pro/post/other/ios-tweak/</link>
       <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/other/ios-tweak/</guid>
+      <guid>http://www.yezheng.pro/post/other/ios-tweak/</guid>
       <description>NetworkDisabler GPS Master (GPS定位大师) Liberty Lite appinst Ex3nder Installer Filza File Manager LocalIAPStore13 HYI Repo Icons AppSync Unified Cydia Installer</description>
     </item>
     

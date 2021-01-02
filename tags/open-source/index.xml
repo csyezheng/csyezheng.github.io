@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>open-source on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/open-source/</link>
+    <link>http://www.yezheng.pro/tags/open-source/</link>
     <description>Recent content in open-source on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>read open source</title>
-      <link>http://csyezheng.github.io/post/master-path/read-open-source/</link>
+      <link>http://www.yezheng.pro/post/master-path/read-open-source/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/master-path/read-open-source/</guid>
+      <guid>http://www.yezheng.pro/post/master-path/read-open-source/</guid>
       <description>Awesome project lists using Gin web framework: gorush: A push notification server written in Go. fnproject: The container native, cloud agnostic serverless platform. photoprism: Personal photo management powered by Go and Google TensorFlow. krakend: Ultra performant API Gateway with middlewares. picfit: An image resizing server written in Go. gotify: A simple server for sending and receiving messages in real-time per web socket. cds: Enterprise-Grade Continuous Delivery &amp;amp; DevOps Automation Open</description>
     </item>
     

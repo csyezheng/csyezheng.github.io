@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>jQuery on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/jquery/</link>
+    <link>http://www.yezheng.pro/tags/jquery/</link>
     <description>Recent content in jQuery on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Feb 2016 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Feb 2016 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>jQuery Tutorial</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/front-end/jquery/</link>
+      <link>http://www.yezheng.pro/post/specialization/web-application/front-end/jquery/</link>
       <pubDate>Wed, 17 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/web-application/front-end/jquery/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/web-application/front-end/jquery/</guid>
       <description>jQuery Get Started Downloading jQuery &amp;lt;head&amp;gt; &amp;lt;script src=&amp;quot;jquery-3.3.1.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; jQuery CDN &amp;lt;head&amp;gt; &amp;lt;script src=&amp;quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;head&amp;gt; &amp;lt;script src=&amp;quot;https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; jQuery Syntax Basic syntax is: $(selector).action() // Examples: $(this).hide() // hides the current element. $(&amp;quot;p&amp;quot;).hide() // hides all &amp;lt;p&amp;gt; elements. $(&amp;quot;.test&amp;quot;).hide() // hides all elements with class=&amp;quot;test&amp;quot;. $(&amp;quot;#test&amp;quot;).hide() // hides the element with id=&amp;quot;test&amp;quot;. $(document).ready(function(){ // all jQuery methods inside a document ready event to prevent // any jQuery code from</description>
     </item>
     

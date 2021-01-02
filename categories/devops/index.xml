@@ -2,63 +2,63 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>devops on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/categories/devops/</link>
+    <link>http://www.yezheng.pro/categories/devops/</link>
     <description>Recent content in devops on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 25 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>欣宸Blog</title>
-      <link>http://csyezheng.github.io/post/specialization/devops/xc/</link>
+      <link>http://www.yezheng.pro/post/specialization/devops/xc/</link>
       <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/devops/xc/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/devops/xc/</guid>
       <description>https://cloud.tencent.com/developer/column/1662</description>
     </item>
     
     <item>
       <title>Grafana</title>
-      <link>http://csyezheng.github.io/post/specialization/devops/grafana/</link>
+      <link>http://www.yezheng.pro/post/specialization/devops/grafana/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/devops/grafana/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/devops/grafana/</guid>
       <description>Reference
  https://grafana.com/grafana/dashboards/893  </description>
     </item>
     
     <item>
       <title>Prometheus</title>
-      <link>http://csyezheng.github.io/post/specialization/devops/prometheus/</link>
+      <link>http://www.yezheng.pro/post/specialization/devops/prometheus/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/devops/prometheus/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/devops/prometheus/</guid>
       <description>Prometheus 入门与实践 吴 莉, 殷 一鸣, 和 蔡 林 2018 年 5 月 30 日发布 随着容器技术的迅速发展，Kubernetes 已然成为大家追捧的容器集群管理系统。Promet</description>
     </item>
     
     <item>
       <title>Application performance management</title>
-      <link>http://csyezheng.github.io/post/specialization/devops/pinpoint/</link>
+      <link>http://www.yezheng.pro/post/specialization/devops/pinpoint/</link>
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/devops/pinpoint/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/devops/pinpoint/</guid>
       <description>分布式系统快速接入pinpoint1.8.3指南 本文链接：https://blog.csdn.net/boling_cavalry/arti</description>
     </item>
     
     <item>
       <title>DevOps</title>
-      <link>http://csyezheng.github.io/post/specialization/devops/devops/</link>
+      <link>http://www.yezheng.pro/post/specialization/devops/devops/</link>
       <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/devops/devops/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/devops/devops/</guid>
       <description>What is DevOps? DevOps (a clipped compound of &amp;ldquo;development&amp;rdquo; and &amp;ldquo;operations&amp;quot;) is a software engineering culture and practice that aims at unifying software development (Dev) and software operation (Ops). The main characteristic of the DevOps movement is to strongly advocate automation and monitoring at all steps of software construction, from integration, testing, releasing to deployment and infrastructure management. DevOps aims at shorter development cycles, increased deployment frequency, and more dependable</description>
     </item>
     
     <item>
       <title>DevOps</title>
-      <link>http://csyezheng.github.io/post/specialization/devops/docker-mysql/</link>
+      <link>http://www.yezheng.pro/post/specialization/devops/docker-mysql/</link>
       <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/devops/docker-mysql/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/devops/docker-mysql/</guid>
       <description>pull this image
 $ sudo docker pull mysql Start a mysql server instance
 $ sudo docker run --name some-mysql -p 3310:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7 logged in to the conainer
@@ -70,10 +70,10 @@ mysql -h 172.</description>
     
     <item>
       <title>Kubernetes Basics</title>
-      <link>http://csyezheng.github.io/post/specialization/devops/kubernetes/</link>
+      <link>http://www.yezheng.pro/post/specialization/devops/kubernetes/</link>
       <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/devops/kubernetes/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/devops/kubernetes/</guid>
       <description>Using Minikube to Create a Cluster Kubernetes Clusters Kubernetes coordinates a highly available cluster of computers that are connected to work as a single unit.
 applications need to be packaged in a way that decouples them from individual hosts: they need to be containerized.
 Kubernetes automates the distribution and scheduling of application containers across a cluster in a more efficient way.
@@ -82,19 +82,19 @@ A Kubernetes cluster consists of two types of resources:</description>
     
     <item>
       <title>Docker</title>
-      <link>http://csyezheng.github.io/post/specialization/devops/docker/</link>
+      <link>http://www.yezheng.pro/post/specialization/devops/docker/</link>
       <pubDate>Thu, 25 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/devops/docker/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/devops/docker/</guid>
       <description>Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&amp;ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&amp;ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker sudo pacman -S docker systemctl start docker.</description>
     </item>
     
     <item>
       <title>Nginx</title>
-      <link>http://csyezheng.github.io/post/specialization/devops/nginx/</link>
+      <link>http://www.yezheng.pro/post/specialization/devops/nginx/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/devops/nginx/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/devops/nginx/</guid>
       <description>General configuration Managing server entries It is possible to put different server blocks in different files. This allows you to easily enable or disable certain sites.
 # mkdir /etc/nginx/sites-available # mkdir /etc/nginx/sites-enabled Create a file inside the sites-available directory that contains one or more server blocks:
 /etc/nginx/sites-available/example server { .. } Append the following line at the end of the http block in /etc/nginx/nginx.conf:

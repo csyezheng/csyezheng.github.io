@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JSON Web Tokens on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/json-web-tokens/</link>
+    <link>http://www.yezheng.pro/tags/json-web-tokens/</link>
     <description>Recent content in JSON Web Tokens on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 09 Oct 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/json-web-tokens/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Oct 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/json-web-tokens/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JSON Web Tokens</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/jwt/</link>
+      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/jwt/</link>
       <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/jwt/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/jwt/</guid>
       <description>What is JSON Web Token? JSON Web Token (JWT) is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
 When should you use JSON Web Tokens? Here are some scenarios where JSON Web Tokens are useful:</description>
     </item>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>kaggle on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/kaggle/</link>
+    <link>http://www.yezheng.pro/tags/kaggle/</link>
     <description>Recent content in kaggle on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 25 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/kaggle/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/kaggle/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>kaggle</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/kaggle/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/kaggle/</link>
       <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/kaggle/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/kaggle/</guid>
       <description>https://www.kaggle.com/stackoverflow/statsquestions
 https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
 https://developer.ibm.com/exchanges/models/all/max-toxic-comment-classifier/

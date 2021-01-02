@@ -32,10 +32,10 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.79.1" />
 
 
-<link rel="canonical" href="http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/" />
+<link rel="canonical" href="http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/" />
 
 
 
@@ -62,14 +62,14 @@
 <meta property="og:title" content="Building a Recommendation System in TensorFlow" />
 <meta property="og:description" content="Background theory for recommendations the background theory for matrix factorization-based collaborative filtering as applied to recommendation systems. Collaborative filtering for recommendation systems Collaborative filtering relies only on observed user behavior to make recommendations—no profile data or content access is necessary. The basic assumption is that similar user behavior reflects similar fundamental preferences, allowing" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/" />
+<meta property="og:url" content="http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/" />
 <meta property="article:published_time" content="2020-12-05T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-12-05T00:00:00+00:00" />
 <meta itemprop="name" content="Building a Recommendation System in TensorFlow">
 <meta itemprop="description" content="Background theory for recommendations the background theory for matrix factorization-based collaborative filtering as applied to recommendation systems. Collaborative filtering for recommendation systems Collaborative filtering relies only on observed user behavior to make recommendations—no profile data or content access is necessary. The basic assumption is that similar user behavior reflects similar fundamental preferences, allowing">
 <meta itemprop="datePublished" content="2020-12-05T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2020-12-05T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1539">
+<meta itemprop="wordCount" content="1829">
 
 
 
@@ -108,35 +108,35 @@
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
           
         
       </li><li class="mobile-menu-item">
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
           
         
       </li><li class="mobile-menu-item">
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
           
         
       </li><li class="mobile-menu-item">
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
           
         
       </li><li class="mobile-menu-item">
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
           
         
       </li>
@@ -228,7 +228,7 @@
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
           
 
         
@@ -239,7 +239,7 @@
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
           
 
         
@@ -250,7 +250,7 @@
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
           
 
         
@@ -261,7 +261,7 @@
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
           
 
         
@@ -272,7 +272,7 @@
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
           
 
         
@@ -303,7 +303,7 @@
           2020-12-05
         </time>
         <div class="post-category">
-            <a href="http://csyezheng.github.io/categories/artificial-intelligence/"> artificial-intelligence </a>
+            <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
             
           </div>
         
@@ -333,10 +333,13 @@
     </li>
     <li><a href="#create-the-model">Create the Model</a>
       <ul>
-        <li><a href="#build-a-tfsparsetensor-representation-of-the-rating-matrix">Build a tf.SparseTensor representation of the Rating Matrix.</a></li>
+        <li><a href="#create-docker-image-environment">Create Docker image environment</a></li>
+        <li><a href="#download-the-movielens-dataset">Download the <code>MovieLens</code> dataset</a></li>
+        <li><a href="#run-jupyter-notebook">Run Jupyter notebook</a></li>
+        <li><a href="#train-and-tune-the-model">Train and tune the model</a></li>
       </ul>
     </li>
-    <li><a href="#train-and-tune-the-model">Train and tune the model</a></li>
+    <li><a href="#api-and-predict">API and Predict</a></li>
     <li><a href="#deploy-the-recommendation-system">Deploy the Recommendation System</a></li>
     <li><a href="#reference">Reference</a></li>
   </ul>
@@ -441,14 +444,53 @@ $$</p>
 </li>
 </ul>
 <h2 id="create-the-model">Create the Model</h2>
-<p>Install miniconda</p>
+<h3 id="create-docker-image-environment">Create Docker image environment</h3>
+<pre><code>docker pull tensorflow/tensorflow:1.15.4-py3-jupyter
+</code></pre><pre><code>git clone https://github.com/GoogleCloudPlatform/tensorflow-recommendation-wals
+cd tensorflow-recommendation-wals
+</code></pre><pre><code>vim Dockerfile
+</code></pre><pre><code># Use an official tensorflow runtime as a parent image
+FROM tensorflow/tensorflow:1.15.4-py3-jupyter
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the requirement list into the container at /app
+ADD requirements.txt /app
+
+# Change mirrors and install vim
+RUN sed -i &quot;s@http://archive.ubuntu.com@http://mirrors.tuna.tsinghua.edu.cn@g&quot; /etc/apt/sources.list &amp;&amp; sed -i &quot;s@http://security.ubuntu.com@http://mirrors.tuna.tsinghua.edu.cn@g&quot; /etc/apt/sources.list &amp;&amp; rm -Rf /var/lib/apt/lists/* &amp;&amp; apt-get update &amp;&amp; apt-get install -y vim
+
+# Upgrading pip
+RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
+
+# set package index url
+RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+# Install any needed packages specified in requirements.txt
+RUN pip install -r requirements.txt
+
+# Make port 8888 available to the world outside this container
+EXPOSE 8888
+</code></pre><pre><code>docker build -t tfrec:latest --no-cache --network=host .
+docker image ls
+</code></pre><h3 id="download-the-movielens-dataset">Download the <code>MovieLens</code> dataset</h3>
+<pre><code>curl -O 'http://files.grouplens.org/datasets/movielens/ml-100k.zip'
+umzip ml-100k.zip
+mkdir /data/datasets/ml-100k
+cp ml-100k/u.data /data/datasets/ml-100k/
+rm -r ml-100k ml-100k.zip
+</code></pre><h3 id="run-jupyter-notebook">Run Jupyter notebook</h3>
+<pre><code>docker run -it --rm -v $PWD:/app -v /data/datasets/ml-100k:/datasets -w /app -p 8888:8888 tfrec:latest bash
+</code></pre><pre><code>jupyter notebook --ip 0.0.0.0 --no-browser --allow-root ./notebooks/Part1.ipynb
+</code></pre><h3 id="train-and-tune-the-model">Train and tune the model</h3>
+<pre><code>cd wals_ml_engine
+</code></pre><pre><code>docker run -it --rm -v $PWD:/app -v /data/datasets/ml-100k:/datasets -w /app tfrec:latest python -m trainer.task --job-dir=/app --train-file=/datasets/u.data --data-type=ratings --delimiter='\t'
+</code></pre><p>Install miniconda</p>
 <pre><code>$ yay -S miniconda3
 $ echo &quot;export PATH=/opt/miniconda3/bin/:$PATH&quot; &gt;&gt; ~/.bashrc
 $ echo &quot;[ -f /opt/miniconda3/etc/profile.d/conda.sh ] &amp;&amp; source /opt/miniconda3/etc/profile.d/conda.sh&quot; &gt;&gt; ~/.bashrc
 $ source ~/.bashrc
-</code></pre><p>Clone the sample code repository:</p>
-<pre><code>git clone https://github.com/GoogleCloudPlatform/tensorflow-recommendation-wals
-cd tensorflow-recommendation-wals
 </code></pre><p>Install the Python packages and TensorFlow.</p>
 <pre><code>$ conda create -y -n tfrec                     # -y:  Do not ask for confirmation, -n: Name of environment.
 $ conda install -y -n tfrec --file conda.txt   # --file FILE: Read package versions from the given file
@@ -458,12 +500,10 @@ $ conda remove -n tfrec --all
 $ conda create -y -n tfrec python=3.7          # with a specific version of Python
 $ pip install -r requirements.txt
 $ pip install tensorflow==1.15
-</code></pre><h3 id="build-a-tfsparsetensor-representation-of-the-rating-matrix">Build a tf.SparseTensor representation of the Rating Matrix.</h3>
-<pre><code>input_tensor = tf.SparseTensor(indices=zip(data.row, data.col),
-                                   values=(data.data).astype(np.float32),
-                                   dense_shape=data.shape)
-</code></pre><h2 id="train-and-tune-the-model">Train and tune the model</h2>
-<h2 id="deploy-the-recommendation-system">Deploy the Recommendation System</h2>
+</code></pre><h2 id="api-and-predict">API and Predict</h2>
+<p>ensure that the application bind to <code>0.0.0.0</code> and not <code>127.0.0.1</code></p>
+<pre><code>docker run -it --rm -v $PWD:/app -v /data/datasets/ml-100k:/datasets -w /app tfrec:latest python -m trainer.task --job-dir=/app --train-file=/datasets/u.data --data-type=ratings --delimiter='\t'
+</code></pre><h2 id="deploy-the-recommendation-system">Deploy the Recommendation System</h2>
 <h2 id="reference">Reference</h2>
 <ol>
 <li>
@@ -488,6 +528,17 @@ $ pip install tensorflow==1.15
 <p><a href="https://stackoverflow.com/questions/57902387/matrix-factorization-in-tensorflow-2-0-using-wals-method">Matrix Factorization in tensorflow 2.0 using WALS Method</a></p>
 </li>
 </ol>
+<p>reviewing <a href="https://github.com/tensorflow/models/tree/08bb9eb5ad79e6bceffc71aeea6af809cc78694b/official/recommendation">https://github.com/tensorflow/models/tree/08bb9eb5ad79e6bceffc71aeea6af809cc78694b/official/recommendation</a> for how to get started</p>
+<p>I was able to dig around and find a very similar approach in the tutorials
+<a href="https://developers.google.com/machine-learning/recommendation/dnn/softmax">https://developers.google.com/machine-learning/recommendation/dnn/softmax</a></p>
+<p>(props to whoever put those tutorials together was helpful getting another look at the approach and tradeoffs)</p>
+<p>note for anyone else looking for example apps I bumped into a couple by Nvidia
+<a href="https://github.com/NVIDIA/DeepLearningExamples/tree/master/PyTorch/Recommendation/NCF">https://github.com/NVIDIA/DeepLearningExamples/tree/master/PyTorch/Recommendation/NCF</a>
+<a href="https://github.com/NVIDIA/DeepLearningExamples/tree/master/TensorFlow/Recommendation/NCF">https://github.com/NVIDIA/DeepLearningExamples/tree/master/TensorFlow/Recommendation/NCF</a></p>
+<p>cool overview for intel&rsquo;s analytics zoo (office depot) across models MF, ncf, wide &amp; deep, and session recommender
+<a href="https://software.intel.com/en-us/articles/real-time-product-recommendations-for-office-depot-using-apache-spark-and-analytics-zoo-on">https://software.intel.com/en-us/articles/real-time-product-recommendations-for-office-depot-using-apache-spark-and-analytics-zoo-on</a></p>
+<p>it looks like Google&rsquo;s official example leverages apache spark&rsquo;s als model
+<a href="https://cloud.google.com/solutions/recommendations-using-machine-learning-on-compute-engine">https://cloud.google.com/solutions/recommendations-using-machine-learning-on-compute-engine</a></p>
 
     </div>
 
@@ -518,9 +569,9 @@ $ pip install tensorflow==1.15
 
     <footer class="post-footer">
       <div class="post-tags">
-          <a href="http://csyezheng.github.io/tags/recommendation/">recommendation</a>
-          <a href="http://csyezheng.github.io/tags/recommendation-system/">recommendation-system</a>
-          <a href="http://csyezheng.github.io/tags/tensorflow/">tensorflow</a>
+          <a href="http://www.yezheng.pro/tags/recommendation/">recommendation</a>
+          <a href="http://www.yezheng.pro/tags/recommendation-system/">recommendation-system</a>
+          <a href="http://www.yezheng.pro/tags/tensorflow/">tensorflow</a>
           
         </div>
 
@@ -631,7 +682,7 @@ $ pip install tensorflow==1.15
     </a>
 
 
-<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+<a href="http://www.yezheng.pro/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
     class="iconfont" title="rss" target="_blank">
     <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -656,7 +707,7 @@ $ pip install tensorflow==1.15
     &copy;
     
       2017 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

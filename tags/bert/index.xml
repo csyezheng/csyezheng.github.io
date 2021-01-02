@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>bert on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/bert/</link>
+    <link>http://www.yezheng.pro/tags/bert/</link>
     <description>Recent content in bert on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/bert/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/bert/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bert</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/bert/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/bert/</link>
       <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/bert/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/bert/</guid>
       <description>BERT 可解释性-从&amp;quot;头&amp;quot;说起 一、背景介绍 搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大</description>
     </item>
     

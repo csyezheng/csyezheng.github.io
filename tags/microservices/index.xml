@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>microservices on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/microservices/</link>
+    <link>http://www.yezheng.pro/tags/microservices/</link>
     <description>Recent content in microservices on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Developing Lightweight Microservices Using Kubernetes</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-kubernetes/</link>
+      <link>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-kubernetes/</link>
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-kubernetes/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-kubernetes/</guid>
       <description>Introduction to Kubernetes Deploying Our Microservices in Kubernetes Implementing Kubernetes Features as an Alternative Using a Service Mesh to Improve Observability and Management Centralized Logging with the EFK Stack Monitoring Microservices </description>
     </item>
     
     <item>
       <title>Getting Started with Microservice Development Using Spring Boot</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-boot/</link>
+      <link>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-spring-boot/</link>
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-boot/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-spring-boot/</guid>
       <description>Introduction to Microservices Benefits Each component in the platform can be delivered and upgraded separately. Each component in the platform can also be scaled out to multiple servers independently Challenges Many small components that use synchronous communication can cause a chain of failure problem, especially under high load. Keeping the configuration consistent and up to date in all the instances Monitoring the state of the platform in terms of latency</description>
     </item>
     
     <item>
       <title>Leveraging Spring Cloud to Manage Microservices</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-cloud/</link>
+      <link>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-spring-cloud/</link>
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-cloud/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-spring-cloud/</guid>
       <description>Introduction to Spring Cloud    Design pattern Current component Replaced by Software component     Service discovery Netflix Eureka &amp;amp; Netflix Ribbon Netflix Eureka and Spring Cloud load balancer   Edge server Netflix Zuul Spring Cloud Gateway and Spring Security OAuth   Centralized configuration  Spring Cloud Configuration Server   Circuit breaker Netflix Hystrix Resilience4j   Distributed tracing  Spring Cloud Sleuth and Zipkin    Adding Service Discovery Using Netflix Eureka and Ribbon Using Spring Cloud Gateway to Hide Microservices Behind an Edge Server Securing Access to APIs Centralized Configuration Improving Resilience Using Resilience4j Understanding Distributed Tracing </description>
     </item>
     
     <item>
       <title>microservices</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/microservices/</link>
+      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/microservices/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/microservices/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/microservices/</guid>
       <description>第1章 微服务 1.1 什么是微服务 微服务就是一些协同工作的小而自治的服务 1.1.1 很小，专注于做好一件事 在一个单块系统内，通常会创建一些抽象层或者模块来保证</description>
     </item>
     

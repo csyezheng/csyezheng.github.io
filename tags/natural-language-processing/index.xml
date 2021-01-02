@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Natural Language Processing on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/natural-language-processing/</link>
+    <link>http://www.yezheng.pro/tags/natural-language-processing/</link>
     <description>Recent content in Natural Language Processing on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/natural-language-processing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/natural-language-processing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>evaluate the quality of the training phrases in intents</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</guid>
       <description>This tutorial shows you how to analyze and evaluate the quality of the training phrases supplied to your Dialogflow agent&amp;rsquo;s intents. The purpose of this analysis is to avoid confusing the agent with phrases irrelevant to the intents supplied to, or more relevant to, other intents.
 The approach you take is to generate semantic embeddings of the training phrases by using the TensorFlow Hub (tf.Hub) Universal Sentence Encoder module. You then compute cohesion and separation measurements based on the similarity between embeddings within the same intents and different intents.</description>
     </item>
     
     <item>
       <title>Question answering</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</guid>
       <description>Reference
  https://github.com/deepmipt/DeepPavlov https://github.com/deepset-ai/FARM https://github.com/huggingface/transformers https://github.com/deepset-ai/haystack https://github.com/deepset-ai/COVID-QA https://demo.allennlp.org/reading-comprehension https://github.com/baidu/AnyQ https://github.com/allenai/bi-att-flow https://github.com/google-research/language/tree/master/language/question_answering BERT Question Answering Inference with Mixed Precision in TensorFlow https://www.kaggle.com/c/tensorflow2-question-answering/ https://github.com/chrischute/squad https://github.com/ColasGael/QA-squad https://github.com/IBM/MAX-Question-Answering http://web.stanford.edu/class/cs224n/project/default-final-project-handout.pdf https://github.com/baidu/DuReader  </description>
     </item>
     
     <item>
       <title>tencent nlp interview</title>
-      <link>http://csyezheng.github.io/post/master-path/carees/tencent-nlp-interview/</link>
+      <link>http://www.yezheng.pro/post/master-path/carees/tencent-nlp-interview/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/master-path/carees/tencent-nlp-interview/</guid>
+      <guid>http://www.yezheng.pro/post/master-path/carees/tencent-nlp-interview/</guid>
       <description>一面（技术面） 面试形式：电话面试。 简要的自我介绍。 研究生阶段最有挑战的项目是什么？ 对于这个项目，传统的方法是怎么样的？ 列举下这个任务在传统用</description>
     </item>
     
     <item>
       <title>Bert</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/bert/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/bert/</link>
       <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/bert/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/bert/</guid>
       <description>BERT 可解释性-从&amp;quot;头&amp;quot;说起 一、背景介绍 搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大</description>
     </item>
     

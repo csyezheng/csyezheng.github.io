@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tools on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/tools/</link>
+    <link>http://www.yezheng.pro/tags/tools/</link>
     <description>Recent content in tools on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wireshark</title>
-      <link>http://csyezheng.github.io/post/any-path/wireshark/</link>
+      <link>http://www.yezheng.pro/post/any-path/wireshark/</link>
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/any-path/wireshark/</guid>
+      <guid>http://www.yezheng.pro/post/any-path/wireshark/</guid>
       <description>$ tshark -r all.pcapng.gz -i http==1 -O http -T fields -e http.request.method -e http.request.uri -e http.request.line -e http.response.line &amp;gt; dump.txt </description>
     </item>
     
     <item>
       <title>Git cheat sheet </title>
-      <link>http://csyezheng.github.io/post/any-path/git/</link>
+      <link>http://www.yezheng.pro/post/any-path/git/</link>
       <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/any-path/git/</guid>
+      <guid>http://www.yezheng.pro/post/any-path/git/</guid>
       <description>Create Clone an existing repository
 $ git clone ssh://user@domain.tld/repo.git Clone an existing repository and all its sub-modules recursively
 $ git clone --recurse-submodules ssh://user@domain.tld/repo.git Create a new local repository
@@ -33,10 +33,10 @@ $ git config [--global] color.</description>
     
     <item>
       <title>vim tutorial</title>
-      <link>http://csyezheng.github.io/post/any-path/vim/</link>
+      <link>http://www.yezheng.pro/post/any-path/vim/</link>
       <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/any-path/vim/</guid>
+      <guid>http://www.yezheng.pro/post/any-path/vim/</guid>
       <description>vimtutor To move the cursor, press the h, j, k, l keys as indicated.
 :q! exits the editor, DISCARDING any changes you have made.
 Press x to delete the character under the cursor.

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bootstrap on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/bootstrap/</link>
+    <link>http://www.yezheng.pro/tags/bootstrap/</link>
     <description>Recent content in Bootstrap on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 01 Jul 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/bootstrap/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Jul 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/bootstrap/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bootstrap</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/front-end/bootstrap/</link>
+      <link>http://www.yezheng.pro/post/specialization/web-application/front-end/bootstrap/</link>
       <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/web-application/front-end/bootstrap/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/web-application/front-end/bootstrap/</guid>
       <description>Bootstrap Components Modal Add dialogs to your site for lightboxes, user notifications, or completely custom content.</description>
     </item>
     

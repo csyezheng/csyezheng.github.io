@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>algorithms on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/algorithms/</link>
+    <link>http://www.yezheng.pro/tags/algorithms/</link>
     <description>Recent content in algorithms on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Leetcode</title>
-      <link>http://csyezheng.github.io/post/computer-science-core/algorithms/leetcode/</link>
+      <link>http://www.yezheng.pro/post/computer-science-core/algorithms/leetcode/</link>
       <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/computer-science-core/algorithms/leetcode/</guid>
+      <guid>http://www.yezheng.pro/post/computer-science-core/algorithms/leetcode/</guid>
       <description>LeetCode最常考察 1 Two Sum 2 Add Two Numbers 3 Longest Substring Without Repeating Characters 8 String to Integer (atoi) 15 3Sum 19 Remove Nth Node From End of List 21 Merge Two Sorted Lists 23 Merge k Sorted Lists 25 Reverse Nodes in k-Group 33 Search in Rotated Sorted Array 34 Search for a Range 42 Trapping Rain Water</description>
     </item>
     
     <item>
       <title>Data structures and algorithms use</title>
-      <link>http://csyezheng.github.io/post/computer-science-core/algorithms/data-structures-and-algorithms-use/</link>
+      <link>http://www.yezheng.pro/post/computer-science-core/algorithms/data-structures-and-algorithms-use/</link>
       <pubDate>Mon, 25 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/computer-science-core/algorithms/data-structures-and-algorithms-use/</guid>
+      <guid>http://www.yezheng.pro/post/computer-science-core/algorithms/data-structures-and-algorithms-use/</guid>
       <description>AVL树 最早的平衡二叉树之一。应用相对其他数据结构比较少。windows对进程地址空间的管理用到了AVL树。 红黑树 平衡二叉树，广泛用在C++</description>
     </item>
     

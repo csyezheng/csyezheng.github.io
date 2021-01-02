@@ -37,10 +37,10 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.79.1" />
 
 
-<link rel="canonical" href="http://csyezheng.github.io/post/any-path/setup-a-archlinux-windows10-dual-booting-system/" />
+<link rel="canonical" href="http://www.yezheng.pro/post/any-path/setup-a-archlinux-windows10-dual-booting-system/" />
 
 
 
@@ -72,7 +72,7 @@
     Disable Windows Fast Startup if start from windows
   Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://csyezheng.github.io/post/any-path/setup-a-archlinux-windows10-dual-booting-system/" />
+<meta property="og:url" content="http://www.yezheng.pro/post/any-path/setup-a-archlinux-windows10-dual-booting-system/" />
 <meta property="article:published_time" content="2017-09-25T00:00:00+00:00" />
 <meta property="article:modified_time" content="2017-09-25T00:00:00+00:00" />
 <meta itemprop="name" content="Setup a Archlinux / Windows10 dual booting system">
@@ -84,7 +84,7 @@
   Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)">
 <meta itemprop="datePublished" content="2017-09-25T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2017-09-25T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1413">
+<meta itemprop="wordCount" content="1415">
 
 
 
@@ -128,35 +128,35 @@
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
           
         
       </li><li class="mobile-menu-item">
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
           
         
       </li><li class="mobile-menu-item">
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
           
         
       </li><li class="mobile-menu-item">
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
           
         
       </li><li class="mobile-menu-item">
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
           
         
       </li>
@@ -248,7 +248,7 @@
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
           
 
         
@@ -259,7 +259,7 @@
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
           
 
         
@@ -270,7 +270,7 @@
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
           
 
         
@@ -281,7 +281,7 @@
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
           
 
         
@@ -292,7 +292,7 @@
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
           
 
         
@@ -323,7 +323,7 @@
           2017-09-25
         </time>
         <div class="post-category">
-            <a href="http://csyezheng.github.io/categories/any-path/"> any-path </a>
+            <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
             
           </div>
         
@@ -516,7 +516,7 @@ Do you want to proceed? (Y/N): y
 </code></pre><p>The higher a mirror is placed in the list, the more priority it is given when downloading a package. You may want to edit the file accordingly, and move the geographically closest mirrors to the top of the list, although other criteria should be taken into account.</p>
 <p>This file will later be copied to the new system by <em>pacstrap</em>, so it is worth getting right.</p>
 <h3 id="install-essential-packages">Install essential packages</h3>
-<pre><code># pacstrap /mnt base base-devel linux-lts linux-lts-headers linux-firmware gvim dhcpcd networkmanager
+<pre><code># pacstrap /mnt base base-devel linux-lts linux-lts-headers linux-firmware gvim dhcpcd networkmanager man-db man-pages
 </code></pre><h3 id="configure-the-linux-system">Configure the Linux system</h3>
 <h4 id="fstab">Fstab</h4>
 <p>Generate an fstab file:</p>
@@ -621,9 +621,9 @@ Do you want to proceed? (Y/N): y
 
     <footer class="post-footer">
       <div class="post-tags">
-          <a href="http://csyezheng.github.io/tags/archlinux/">archlinux</a>
-          <a href="http://csyezheng.github.io/tags/linux/">linux</a>
-          <a href="http://csyezheng.github.io/tags/installation/">installation</a>
+          <a href="http://www.yezheng.pro/tags/archlinux/">archlinux</a>
+          <a href="http://www.yezheng.pro/tags/linux/">linux</a>
+          <a href="http://www.yezheng.pro/tags/installation/">installation</a>
           
         </div>
 
@@ -734,7 +734,7 @@ Do you want to proceed? (Y/N): y
     </a>
 
 
-<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+<a href="http://www.yezheng.pro/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
     class="iconfont" title="rss" target="_blank">
     <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -759,7 +759,7 @@ Do you want to proceed? (Y/N): y
     &copy;
     
       2017 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/</link>
+    <link>http://www.yezheng.pro/</link>
     <description>Recent content on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://csyezheng.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://www.yezheng.pro/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>http://csyezheng.github.io/about/</link>
+      <link>http://www.yezheng.pro/about/</link>
       <pubDate>Mon, 25 Sep 2017 21:38:52 +0800</pubDate>
       
-      <guid>http://csyezheng.github.io/about/</guid>
+      <guid>http://www.yezheng.pro/about/</guid>
       
         <description>&lt;p&gt;I&amp;rsquo;m graduated from the Hebei GEO University with a degree in marketing, because I thought computers were cool from an early age, so I chose programmers as my future employment direction in my third year of college. In the third year of college, I learned some front-end knowledge, and in the fourth year of college I learned some C ++ related knowledge. After graduating, I naturally found a job related to programming.&lt;/p&gt;
 &lt;p&gt;In the first company, I was mainly engaged in web crawling. I was responsible for scraping various financial data including stock exchanges, performing data cleaning, and completing an announcement classification system during the period. I worked as a data development engineer in the second company, and solved development problems such as real-time data forwarding, reception, and storage. I worked as a back-end development engineer at a third company and built the entire edx-based online learning system.&lt;/p&gt;
@@ -26,10 +26,10 @@
     
     <item>
       <title>evaluate the quality of the training phrases in intents</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</guid>
       
         <description>&lt;p&gt;This tutorial shows you how to analyze and evaluate the quality of the training phrases supplied to your &lt;a href=&#34;https://dialogflow.com/&#34;&gt;Dialogflow&lt;/a&gt; agent&amp;rsquo;s intents. The purpose of this analysis is to avoid confusing the agent with phrases irrelevant to the intents supplied to, or more relevant to, other intents.&lt;/p&gt;
 &lt;p&gt;The approach you take is to generate semantic embeddings of the training phrases by using the &lt;a href=&#34;https://www.tensorflow.org/hub/&#34;&gt;TensorFlow Hub&lt;/a&gt; (&lt;code&gt;tf.Hub&lt;/code&gt;) Universal Sentence Encoder module. You then compute cohesion and separation measurements based on the similarity between embeddings within the same intents and different intents. The tutorial also identifies &amp;ldquo;confusing&amp;rdquo; training phrases, where they are nearer—in the embedding space—to intents that are different from the ones supplied for.&lt;/p&gt;
@@ -453,10 +453,10 @@ display(separation_df.sort_values(&#39;Separation&#39;))
     
     <item>
       <title>Joint intent and slot classification</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</guid>
       
         <description>&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ol&gt;
@@ -468,10 +468,10 @@ display(separation_df.sort_values(&#39;Separation&#39;))
     
     <item>
       <title>Named Entity Recognition using Spacy and Tensorflow</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</guid>
       
         <description>&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ol&gt;
@@ -483,10 +483,10 @@ display(separation_df.sort_values(&#39;Separation&#39;))
     
     <item>
       <title>Building a Recommendation System in TensorFlow</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</link>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</guid>
       
         <description>&lt;h2 id=&#34;background-theory-for-recommendations&#34;&gt;Background theory for recommendations&lt;/h2&gt;
 &lt;p&gt;the background theory for matrix factorization-based collaborative filtering as applied to recommendation systems.&lt;/p&gt;
@@ -583,14 +583,53 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;create-the-model&#34;&gt;Create the Model&lt;/h2&gt;
-&lt;p&gt;Install miniconda&lt;/p&gt;
+&lt;h3 id=&#34;create-docker-image-environment&#34;&gt;Create Docker image environment&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;docker pull tensorflow/tensorflow:1.15.4-py3-jupyter
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;git clone https://github.com/GoogleCloudPlatform/tensorflow-recommendation-wals
+cd tensorflow-recommendation-wals
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim Dockerfile
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# Use an official tensorflow runtime as a parent image
+FROM tensorflow/tensorflow:1.15.4-py3-jupyter
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the requirement list into the container at /app
+ADD requirements.txt /app
+
+# Change mirrors and install vim
+RUN sed -i &amp;quot;s@http://archive.ubuntu.com@http://mirrors.tuna.tsinghua.edu.cn@g&amp;quot; /etc/apt/sources.list &amp;amp;&amp;amp; sed -i &amp;quot;s@http://security.ubuntu.com@http://mirrors.tuna.tsinghua.edu.cn@g&amp;quot; /etc/apt/sources.list &amp;amp;&amp;amp; rm -Rf /var/lib/apt/lists/* &amp;amp;&amp;amp; apt-get update &amp;amp;&amp;amp; apt-get install -y vim
+
+# Upgrading pip
+RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
+
+# set package index url
+RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+# Install any needed packages specified in requirements.txt
+RUN pip install -r requirements.txt
+
+# Make port 8888 available to the world outside this container
+EXPOSE 8888
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;docker build -t tfrec:latest --no-cache --network=host .
+docker image ls
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;download-the-movielens-dataset&#34;&gt;Download the &lt;code&gt;MovieLens&lt;/code&gt; dataset&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;curl -O &#39;http://files.grouplens.org/datasets/movielens/ml-100k.zip&#39;
+umzip ml-100k.zip
+mkdir /data/datasets/ml-100k
+cp ml-100k/u.data /data/datasets/ml-100k/
+rm -r ml-100k ml-100k.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;run-jupyter-notebook&#34;&gt;Run Jupyter notebook&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;docker run -it --rm -v $PWD:/app -v /data/datasets/ml-100k:/datasets -w /app -p 8888:8888 tfrec:latest bash
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;jupyter notebook --ip 0.0.0.0 --no-browser --allow-root ./notebooks/Part1.ipynb
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;train-and-tune-the-model&#34;&gt;Train and tune the model&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;cd wals_ml_engine
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;docker run -it --rm -v $PWD:/app -v /data/datasets/ml-100k:/datasets -w /app tfrec:latest python -m trainer.task --job-dir=/app --train-file=/datasets/u.data --data-type=ratings --delimiter=&#39;\t&#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Install miniconda&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ yay -S miniconda3
 $ echo &amp;quot;export PATH=/opt/miniconda3/bin/:$PATH&amp;quot; &amp;gt;&amp;gt; ~/.bashrc
 $ echo &amp;quot;[ -f /opt/miniconda3/etc/profile.d/conda.sh ] &amp;amp;&amp;amp; source /opt/miniconda3/etc/profile.d/conda.sh&amp;quot; &amp;gt;&amp;gt; ~/.bashrc
 $ source ~/.bashrc
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Clone the sample code repository:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/GoogleCloudPlatform/tensorflow-recommendation-wals
-cd tensorflow-recommendation-wals
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Install the Python packages and TensorFlow.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ conda create -y -n tfrec                     # -y:  Do not ask for confirmation, -n: Name of environment.
 $ conda install -y -n tfrec --file conda.txt   # --file FILE: Read package versions from the given file
@@ -600,12 +639,10 @@ $ conda remove -n tfrec --all
 $ conda create -y -n tfrec python=3.7          # with a specific version of Python
 $ pip install -r requirements.txt
 $ pip install tensorflow==1.15
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;build-a-tfsparsetensor-representation-of-the-rating-matrix&#34;&gt;Build a tf.SparseTensor representation of the Rating Matrix.&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;input_tensor = tf.SparseTensor(indices=zip(data.row, data.col),
-                                   values=(data.data).astype(np.float32),
-                                   dense_shape=data.shape)
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;train-and-tune-the-model&#34;&gt;Train and tune the model&lt;/h2&gt;
-&lt;h2 id=&#34;deploy-the-recommendation-system&#34;&gt;Deploy the Recommendation System&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;api-and-predict&#34;&gt;API and Predict&lt;/h2&gt;
+&lt;p&gt;ensure that the application bind to &lt;code&gt;0.0.0.0&lt;/code&gt; and not &lt;code&gt;127.0.0.1&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker run -it --rm -v $PWD:/app -v /data/datasets/ml-100k:/datasets -w /app tfrec:latest python -m trainer.task --job-dir=/app --train-file=/datasets/u.data --data-type=ratings --delimiter=&#39;\t&#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;deploy-the-recommendation-system&#34;&gt;Deploy the Recommendation System&lt;/h2&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -630,16 +667,27 @@ $ pip install tensorflow==1.15
 &lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/57902387/matrix-factorization-in-tensorflow-2-0-using-wals-method&#34;&gt;Matrix Factorization in tensorflow 2.0 using WALS Method&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;reviewing &lt;a href=&#34;https://github.com/tensorflow/models/tree/08bb9eb5ad79e6bceffc71aeea6af809cc78694b/official/recommendation&#34;&gt;https://github.com/tensorflow/models/tree/08bb9eb5ad79e6bceffc71aeea6af809cc78694b/official/recommendation&lt;/a&gt; for how to get started&lt;/p&gt;
+&lt;p&gt;I was able to dig around and find a very similar approach in the tutorials
+&lt;a href=&#34;https://developers.google.com/machine-learning/recommendation/dnn/softmax&#34;&gt;https://developers.google.com/machine-learning/recommendation/dnn/softmax&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;(props to whoever put those tutorials together was helpful getting another look at the approach and tradeoffs)&lt;/p&gt;
+&lt;p&gt;note for anyone else looking for example apps I bumped into a couple by Nvidia
+&lt;a href=&#34;https://github.com/NVIDIA/DeepLearningExamples/tree/master/PyTorch/Recommendation/NCF&#34;&gt;https://github.com/NVIDIA/DeepLearningExamples/tree/master/PyTorch/Recommendation/NCF&lt;/a&gt;
+&lt;a href=&#34;https://github.com/NVIDIA/DeepLearningExamples/tree/master/TensorFlow/Recommendation/NCF&#34;&gt;https://github.com/NVIDIA/DeepLearningExamples/tree/master/TensorFlow/Recommendation/NCF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;cool overview for intel&amp;rsquo;s analytics zoo (office depot) across models MF, ncf, wide &amp;amp; deep, and session recommender
+&lt;a href=&#34;https://software.intel.com/en-us/articles/real-time-product-recommendations-for-office-depot-using-apache-spark-and-analytics-zoo-on&#34;&gt;https://software.intel.com/en-us/articles/real-time-product-recommendations-for-office-depot-using-apache-spark-and-analytics-zoo-on&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;it looks like Google&amp;rsquo;s official example leverages apache spark&amp;rsquo;s als model
+&lt;a href=&#34;https://cloud.google.com/solutions/recommendations-using-machine-learning-on-compute-engine&#34;&gt;https://cloud.google.com/solutions/recommendations-using-machine-learning-on-compute-engine&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>
     
     <item>
       <title>data lakes</title>
-      <link>http://csyezheng.github.io/post/specialization/big-data/data-lakes/</link>
+      <link>http://www.yezheng.pro/post/specialization/big-data/data-lakes/</link>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/big-data/data-lakes/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/big-data/data-lakes/</guid>
       
         <description>&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ol&gt;
@@ -652,10 +700,10 @@ $ pip install tensorflow==1.15
     
     <item>
       <title>edX Analytics Pipeline</title>
-      <link>http://csyezheng.github.io/post/specialization/big-data/edx-analytics-pipeline/</link>
+      <link>http://www.yezheng.pro/post/specialization/big-data/edx-analytics-pipeline/</link>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/big-data/edx-analytics-pipeline/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/big-data/edx-analytics-pipeline/</guid>
       
         <description>&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ol&gt;
@@ -670,10 +718,10 @@ $ pip install tensorflow==1.15
     
     <item>
       <title>Machine Learning Models for Predictions in Cloud Dataflow Pipelines</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</link>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</guid>
       
         <description>&lt;p&gt;This solution describes and compares the different design approaches for calling a machine learning model during a Dataflow pipeline, and examines the tradeoffs involved in choosing one approach or another. We present the results of a series of experiments that we ran to explore different approaches and illustrate these tradeoffs, both in batch and stream processing pipelines. This solution is designed for people who integrate trained models into data processing pipelines, rather than for data scientists who want to build machine learning models.&lt;/p&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
@@ -1227,10 +1275,10 @@ topic &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; client&lt;span st
     
     <item>
       <title>recommendations</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/product-overview/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/product-overview/</link>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/product-overview/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/product-overview/</guid>
       
         <description>&lt;h2 id=&#34;implementing-recommendations&#34;&gt;Implementing Recommendations&lt;/h2&gt;
 &lt;h3 id=&#34;steps&#34;&gt;Steps&lt;/h3&gt;
@@ -1368,10 +1416,10 @@ You can associate recommendations and user events and Recommendations AI provide
     
     <item>
       <title>Deploying machine learning models in production</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/deploy/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/deploy/</link>
       <pubDate>Sun, 29 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/deploy/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/deploy/</guid>
       
         <description>&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ol&gt;
@@ -1392,10 +1440,10 @@ You can associate recommendations and user events and Recommendations AI provide
     
     <item>
       <title>Developing Lightweight Microservices Using Kubernetes</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-kubernetes/</link>
+      <link>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-kubernetes/</link>
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-kubernetes/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-kubernetes/</guid>
       
         <description>&lt;h2 id=&#34;introduction-to-kubernetes&#34;&gt;Introduction to Kubernetes&lt;/h2&gt;
 &lt;h2 id=&#34;deploying-our-microservices-in-kubernetes&#34;&gt;Deploying Our Microservices in Kubernetes&lt;/h2&gt;
@@ -1409,10 +1457,10 @@ You can associate recommendations and user events and Recommendations AI provide
     
     <item>
       <title>Getting Started with Microservice Development Using Spring Boot</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-boot/</link>
+      <link>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-spring-boot/</link>
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-boot/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-spring-boot/</guid>
       
         <description>&lt;h2 id=&#34;introduction-to-microservices&#34;&gt;Introduction to Microservices&lt;/h2&gt;
 &lt;h3 id=&#34;benefits&#34;&gt;Benefits&lt;/h3&gt;
@@ -2085,10 +2133,10 @@ find microservices -depth -name &amp;quot;gradlew*&amp;quot; -exec rm -fv &amp;q
     
     <item>
       <title>Leveraging Spring Cloud to Manage Microservices</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-cloud/</link>
+      <link>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-spring-cloud/</link>
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/web-application/spring/microservice-with-spring-cloud/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-spring-cloud/</guid>
       
         <description>&lt;h2 id=&#34;introduction-to-spring-cloud&#34;&gt;Introduction to Spring Cloud&lt;/h2&gt;
 &lt;table&gt;
@@ -2139,10 +2187,10 @@ find microservices -depth -name &amp;quot;gradlew*&amp;quot; -exec rm -fv &amp;q
     
     <item>
       <title>Link custom domain to Github pages</title>
-      <link>http://csyezheng.github.io/post/any-path/blog/</link>
+      <link>http://www.yezheng.pro/post/any-path/blog/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/any-path/blog/</guid>
+      <guid>http://www.yezheng.pro/post/any-path/blog/</guid>
       
         <description>&lt;h3 id=&#34;register-domain-name&#34;&gt;Register Domain Name&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.namesilo.com/&#34;&gt;Namesilo&lt;/a&gt;&lt;/p&gt;
@@ -2208,10 +2256,10 @@ find microservices -depth -name &amp;quot;gradlew*&amp;quot; -exec rm -fv &amp;q
     
     <item>
       <title>read open source</title>
-      <link>http://csyezheng.github.io/post/master-path/read-open-source/</link>
+      <link>http://www.yezheng.pro/post/master-path/read-open-source/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/master-path/read-open-source/</guid>
+      <guid>http://www.yezheng.pro/post/master-path/read-open-source/</guid>
       
         <description>&lt;h5 id=&#34;awesome-project-lists-using-ginhttpsgithubcomgin-gonicgin-web-framework&#34;&gt;Awesome project lists using &lt;a href=&#34;https://github.com/gin-gonic/gin&#34;&gt;Gin&lt;/a&gt; web framework:&lt;/h5&gt;
 &lt;ul&gt;
@@ -2236,10 +2284,10 @@ find microservices -depth -name &amp;quot;gradlew*&amp;quot; -exec rm -fv &amp;q
     
     <item>
       <title>flink</title>
-      <link>http://csyezheng.github.io/post/specialization/big-data/flink/</link>
+      <link>http://www.yezheng.pro/post/specialization/big-data/flink/</link>
       <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/big-data/flink/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/big-data/flink/</guid>
       
         <description>&lt;p&gt;&lt;a href=&#34;https://github.com/apache/flink/tree/master/flink-runtime-web&#34;&gt;Apache Flink Web Dashboard&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -2248,10 +2296,10 @@ find microservices -depth -name &amp;quot;gradlew*&amp;quot; -exec rm -fv &amp;q
     
     <item>
       <title>Cloud Computing</title>
-      <link>http://csyezheng.github.io/post/specialization/cloud-computing/15-319/</link>
+      <link>http://www.yezheng.pro/post/specialization/cloud-computing/15-319/</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/cloud-computing/15-319/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/cloud-computing/15-319/</guid>
       
         <description>&lt;h2 id=&#34;introduction-and-course-logistics&#34;&gt;Introduction and Course Logistics&lt;/h2&gt;
 &lt;h2 id=&#34;data-analytics&#34;&gt;Data Analytics&lt;/h2&gt;
@@ -2279,10 +2327,10 @@ find microservices -depth -name &amp;quot;gradlew*&amp;quot; -exec rm -fv &amp;q
     
     <item>
       <title>Introduction to Cloud Infrastructure Technologies</title>
-      <link>http://csyezheng.github.io/post/specialization/cloud-computing/infrastructure/introduction-to-cloud-infrastructure-technologies/</link>
+      <link>http://www.yezheng.pro/post/specialization/cloud-computing/infrastructure/introduction-to-cloud-infrastructure-technologies/</link>
       <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/cloud-computing/infrastructure/introduction-to-cloud-infrastructure-technologies/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/cloud-computing/infrastructure/introduction-to-cloud-infrastructure-technologies/</guid>
       
         <description>&lt;h2 id=&#34;chapter-1-virtualization&#34;&gt;Chapter 1. Virtualization&lt;/h2&gt;
 &lt;h3 id=&#34;introduction-and-learning-objectives&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
@@ -2934,10 +2982,10 @@ It is part of the Telemetry project and provides data collection services for bi
     
     <item>
       <title>The Java 3rd Library</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-3rd-party-library/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-3rd-party-library/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-3rd-party-library/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-3rd-party-library/</guid>
       
         <description>&lt;p&gt;import org.alibaba.fastjson.JSONArray;
 import org.alibaba.fastjson.JSONObject;
@@ -3111,10 +3159,10 @@ swagger-ui&lt;/p&gt;
     
     <item>
       <title>The Java Standard Library</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-standard-library/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-standard-library/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/java/the-java-standard-library/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-standard-library/</guid>
       
         <description>&lt;h2 id=&#34;collections&#34;&gt;Collections&lt;/h2&gt;
 &lt;h3 id=&#34;interfaces&#34;&gt;Interfaces&lt;/h3&gt;

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/go/</link>
+    <link>http://www.yezheng.pro/tags/go/</link>
     <description>Recent content in Go on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Tour of Go</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/go/a-tour-of-go/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/go/a-tour-of-go/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/go/a-tour-of-go/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/a-tour-of-go/</guid>
       <description>Basics Packages, variables, and functions. Packages Programs start running in package main.
 By convention, the package name is the same as the last element of the import path. For instance, the &amp;quot;math/rand&amp;quot; package comprises files that begin with the statement package rand.
 Imports It is good style to use the factored import statement.
@@ -21,19 +21,19 @@ import ( &amp;quot;fmt&amp;quot; &amp;quot;math/rand&amp;quot; ) Exported names 
     
     <item>
       <title>Delve Documentation</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/go/debugging-with-delve/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/go/debugging-with-delve/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/go/debugging-with-delve/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/debugging-with-delve/</guid>
       <description>Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;amp;&amp;amp; cd &amp;quot;$_&amp;quot; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &amp;quot;fmt&amp;quot; &amp;quot;log&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;os&amp;quot; ) const port = &amp;quot;8000&amp;quot; func main() { http.HandleFunc(&amp;quot;/hi&amp;quot;, hi) fmt.Println(&amp;quot;runing on port: &amp;quot; + port) log.Fatal(http.ListenAndServe(&amp;quot;:&amp;quot; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &amp;quot;HostName: %s&amp;quot;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.</description>
     </item>
     
     <item>
       <title>generate-model-structs-from-database</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/go/generate-model-structs-from-database/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/go/generate-model-structs-from-database/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/go/generate-model-structs-from-database/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/generate-model-structs-from-database/</guid>
       <description>Generate gorm model structs from database
   https://github.com/smallnest/gen
   https://github.com/wantedly/pq2gorm
@@ -43,47 +43,47 @@ import ( &amp;quot;fmt&amp;quot; &amp;quot;math/rand&amp;quot; ) Exported names 
     
     <item>
       <title>Gin</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/go/gin/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/go/gin/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/go/gin/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/gin/</guid>
       <description>sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
 $ go get github.com/gin-contrib/sessions import &amp;quot;github.com/gin-contrib/sessions&amp;quot; cookie-based Example import ( &amp;quot;github.com/gin-contrib/sessions&amp;quot; &amp;quot;github.com/gin-contrib/sessions/cookie&amp;quot; &amp;quot;github.com/gin-gonic/gin&amp;quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&amp;quot;secret&amp;quot;)) r.Use(sessions.Sessions(&amp;quot;mysession&amp;quot;, store)) r.GET(&amp;quot;/incr&amp;quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&amp;quot;count&amp;quot;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&amp;quot;count&amp;quot;, count) session.</description>
     </item>
     
     <item>
       <title>glide</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/go/glide/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/go/glide/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/go/glide/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/glide/</guid>
       <description>使用 glide install 或 glide up 时报 Cannot detect VCS image.png 解决 这个是国内访问golang.org被墙导致的 解决方法如下： glide mirror set https://golang.org/x/crypto https://github.com/golang/crypto 理论上这样后再执行 glide install 或 glide up 就可以了 如果按</description>
     </item>
     
     <item>
       <title>go modules</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/go/modules/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/go/modules/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/go/modules/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/modules/</guid>
       <description>https://github.com/golang/go/wiki/Modules#quick-start</description>
     </item>
     
     <item>
       <title>go-get-golang-x-solution</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/go/go-get-golang-x-solution/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/go/go-get-golang-x-solution/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/go/go-get-golang-x-solution/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/go-get-golang-x-solution/</guid>
       <description>问题描述 当我们使用 go get、go install、go mod 等命令时，会自动下载相应的包或依赖包。但由于众所周知的原因，类似于 golang.org/x/... 的包会出现下载失败</description>
     </item>
     
     <item>
       <title>Golang</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/go/go/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/go/go/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/go/go/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/go/</guid>
       <description>a-tour-of-go
 standard-library
 Debugging-with-Delve
@@ -104,46 +104,46 @@ photoprism.md</description>
     
     <item>
       <title>Golang Pros and Cons</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/go/good-at/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/go/good-at/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/go/good-at/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/good-at/</guid>
       <description>Golang Pros  Modular design means the compiled binary is as small as possible and requires no dependencies. Like Java, it’s platform independent. You can compile it for any platform your servers and applications run on. Take that, Apple. Easy for your developers to learn because it’s based on C. You don’t need to go to a code bootcamp to become proficient. Has static type checking, meaning your code gets its bugs cleaned up at compile time, not in production.</description>
     </item>
     
     <item>
       <title>gopm</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/go/gopm/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/go/gopm/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/go/gopm/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/gopm/</guid>
       <description>go get -u github.com/gpmgo/gopm </description>
     </item>
     
     <item>
       <title>gorm</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/go/gorm/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/go/gorm/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/go/gorm/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/gorm/</guid>
       <description>struct name and table name type User struct {} // default table name is `users` // Set User&#39;s table name to be `profiles` func (User) TableName() string { return &amp;quot;profiles&amp;quot; } gorm不定条件查询和分页操作 making dynamic query and pagination using gorm course := models.Course{} // The global db variable must be assigned to the local db variable. //</description>
     </item>
     
     <item>
       <title>package_download</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/go/package_download/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/go/package_download/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/go/package_download/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/package_download/</guid>
       <description>gopm get -g -v golang.org/x/sys </description>
     </item>
     
     <item>
       <title>photoprism</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/go/photoprism/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/go/photoprism/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/go/photoprism/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/photoprism/</guid>
       <description>Step 1: Clone this project:
 git clone https://github.com/photoprism/photoprism.git Step 2: Start Docker containers:
 cd photoprism sudo docker-compose up Step 3: Open a new terminal to the photoprism container:
@@ -152,20 +152,20 @@ sudo docker-compose exec photoprism bash </description>
     
     <item>
       <title>quick-start</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/go/quick-start/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/go/quick-start/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/go/quick-start/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/quick-start/</guid>
       <description>  Create your project folder and cd inside
 mkdir -p $GOPATH/src/github.com/myusername/project &amp;amp;&amp;amp; cd &amp;quot;$_&amp;quot;   go mod edit -require=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b go mod edit -replace=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b=github.com/google/go-genproto@v0.0.0-20180831171423-11092d34479b go mod edit -require=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -replace=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223=github.com/golang/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -require=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299 go mod edit -replace=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299=github.com/golang/crypto@v0.0.0-20180614174826-fd5f17ee7299 gen --connstr &amp;quot;zhengye:csye3631@tcp(127.0.0.1:3307)/discovery&amp;quot; --database discovery --json --gorm --guregu --rest </description>
     </item>
     
     <item>
       <title>standard-library</title>
-      <link>http://csyezheng.github.io/post/engineering-fundamentals/go/standard-library/</link>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/go/standard-library/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/engineering-fundamentals/go/standard-library/</guid>
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/standard-library/</guid>
       <description>io io.Writer import	stdlog &amp;quot;log&amp;quot; var loggers []*Logger var logLevel = Debug type Logger struct { level int logger *stdlog.Logger } func NewLogger(out io.Writer) *Logger { ret := &amp;amp;Logger{level: logLevel, logger: stdlog.New(out, &amp;quot;&amp;quot;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)} loggers = append(loggers, ret) return ret } io.MultiWriter func init() { rand.Seed(time.Now().UTC().UnixNano()) log.SetLevel(&amp;quot;warn&amp;quot;) logger = log.NewLogger(os.Stdout) model.LoadConf() util.LoadMarkdown() i18n.Load() theme.Load() replaceServerConf() if &amp;quot;dev&amp;quot; == model.Conf.RuntimeMode { gin.SetMode(gin.DebugMode) } else { gin.SetMode(gin.ReleaseMode) } gin.DefaultWriter = io.MultiWriter(os.Stdout) } io.</description>
     </item>
     

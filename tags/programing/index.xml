@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>programing on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/programing/</link>
+    <link>http://www.yezheng.pro/tags/programing/</link>
     <description>Recent content in programing on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Jan 2015 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/programing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jan 2015 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/programing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>learning path for computer science</title>
-      <link>http://csyezheng.github.io/post/master-path/learning-path/</link>
+      <link>http://www.yezheng.pro/post/master-path/learning-path/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/master-path/learning-path/</guid>
+      <guid>http://www.yezheng.pro/post/master-path/learning-path/</guid>
       <description>Mathematics Math19 Calculus Math20 Calculus Math21 Calculus Linear Algebra, Multivariable Calculus, and Modern Applications Description 线性代数部分包括正交性，线性独立性，矩阵代数和特征值，其应用包括最小二乘法，线性回归和马尔可夫链（与总体动力学</description>
     </item>
     

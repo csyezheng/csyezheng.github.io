@@ -2,63 +2,63 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>artificial-intelligence on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/categories/artificial-intelligence/</link>
+    <link>http://www.yezheng.pro/categories/artificial-intelligence/</link>
     <description>Recent content in artificial-intelligence on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/categories/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>evaluate the quality of the training phrases in intents</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</guid>
       <description>This tutorial shows you how to analyze and evaluate the quality of the training phrases supplied to your Dialogflow agent&amp;rsquo;s intents. The purpose of this analysis is to avoid confusing the agent with phrases irrelevant to the intents supplied to, or more relevant to, other intents.
 The approach you take is to generate semantic embeddings of the training phrases by using the TensorFlow Hub (tf.Hub) Universal Sentence Encoder module. You then compute cohesion and separation measurements based on the similarity between embeddings within the same intents and different intents.</description>
     </item>
     
     <item>
       <title>Joint intent and slot classification</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</guid>
       <description>Reference  Joint_Intent_and_Slot_Classification.ipynb  </description>
     </item>
     
     <item>
       <title>Named Entity Recognition using Spacy and Tensorflow</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</guid>
       <description>Reference  Named Entity Recognition using Spacy and Tensorflow  </description>
     </item>
     
     <item>
       <title>Building a Recommendation System in TensorFlow</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</link>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</guid>
       <description>Background theory for recommendations the background theory for matrix factorization-based collaborative filtering as applied to recommendation systems. Collaborative filtering for recommendation systems Collaborative filtering relies only on observed user behavior to make recommendations—no profile data or content access is necessary. The basic assumption is that similar user behavior reflects similar fundamental preferences, allowing</description>
     </item>
     
     <item>
       <title>Machine Learning Models for Predictions in Cloud Dataflow Pipelines</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</link>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</guid>
       <description>This solution describes and compares the different design approaches for calling a machine learning model during a Dataflow pipeline, and examines the tradeoffs involved in choosing one approach or another. We present the results of a series of experiments that we ran to explore different approaches and illustrate these tradeoffs, both in batch and stream processing pipelines. This solution is designed for people who integrate trained models into data processing pipelines, rather than for data scientists who want to build machine learning models.</description>
     </item>
     
     <item>
       <title>recommendations</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/product-overview/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/product-overview/</link>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/recommendation-system/product-overview/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/product-overview/</guid>
       <description>Implementing Recommendations Steps   Set up a project
   Import your product catalog You can add items to your Recommendations AI product catalog individually by using the import Files or API.
   Information of the products sold to customers. This includes the product title, description, in stock availability, pricing, and so on.
@@ -67,65 +67,65 @@ Record user events User events track user actions such as clicking on a product,
     
     <item>
       <title>Deploying machine learning models in production</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/deploy/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/deploy/</link>
       <pubDate>Sun, 29 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/deploy/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/deploy/</guid>
       <description>Reference 训练好的深度学习模型是怎么部署的？ PyTorch模型的加速及部署 ahkarami/Deep-Learning-in-Production Accelerating Inference In TF-TRT User Guide tensorflow/tensorrt Tensorrt API Reference Containers: nvidia:tensorflow Model inference using TensorFlow and TensorRT Speed up TensorFlow Inference on GPUs with TensorRT TF20-TF-TRT-inference-from-Keras-saved-model.ipynb</description>
     </item>
     
     <item>
       <title>Question answering</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</guid>
       <description>Reference
  https://github.com/deepmipt/DeepPavlov https://github.com/deepset-ai/FARM https://github.com/huggingface/transformers https://github.com/deepset-ai/haystack https://github.com/deepset-ai/COVID-QA https://demo.allennlp.org/reading-comprehension https://github.com/baidu/AnyQ https://github.com/allenai/bi-att-flow https://github.com/google-research/language/tree/master/language/question_answering BERT Question Answering Inference with Mixed Precision in TensorFlow https://www.kaggle.com/c/tensorflow2-question-answering/ https://github.com/chrischute/squad https://github.com/ColasGael/QA-squad https://github.com/IBM/MAX-Question-Answering http://web.stanford.edu/class/cs224n/project/default-final-project-handout.pdf https://github.com/baidu/DuReader  </description>
     </item>
     
     <item>
       <title>Top 20 Python Libraries for Data Science</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</guid>
       <description>Core Libraries &amp;amp; Statistics  NumPy SciPy Pandas StatsModels  Visualization Matplotlib Seaborn Plotly Bokeh Pydot  Machine Learning Scikit-learn XGBoost Eli5  Deep Learning TensorFlow PyTorch Keras  Distributed Deep Learning Dist-keras / elephas / spark-deep-learning  Natural Language Processing NLTK SpaCy Gensim  Data Scraping Scrapy  </description>
     </item>
     
     <item>
       <title>Top Websites for Machine Learning</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-websites/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/top-websites/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/top-websites/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/top-websites/</guid>
       <description>AI Hub</description>
     </item>
     
     <item>
       <title>Bert</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/bert/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/bert/</link>
       <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/bert/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/bert/</guid>
       <description>BERT 可解释性-从&amp;quot;头&amp;quot;说起 一、背景介绍 搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大</description>
     </item>
     
     <item>
       <title>Tensorflow</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/tensorflow/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/tensorflow/</link>
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/tensorflow/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/tensorflow/</guid>
       <description>TensorFlow Install TensorFlow 2    Version Python version Compiler Build tools     tensorflow-2.2.0 3.5-3.8 GCC 7.3.1 Bazel 2.0.0   tensorflow-2.1.0 2.7, 3.5-3.7 GCC 7.3.1 Bazel 0.27.1   tensorflow-2.0.0 2.7, 3.3-3.7 GCC 7.3.1 Bazel 0.26.1    sudo pacman -U cuda-10.1.243-2-x86_64.pkg.tar.xz sudo pacman -U cudnn-7.6.5.32-2-x86_64.pkg.tar.xz pip install tensorflow-gpu Data input pipelines Keras Sequential API When to use a Sequential model A Sequential model is appropriate for a plain stack of layers where each layer has exactly one input tensor and one output tensor.</description>
     </item>
     
     <item>
       <title>Multi-label classification</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/multi-label-classification/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/multi-label-classification/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/multi-label-classification/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/multi-label-classification/</guid>
       <description>In the multi-label problem there is no constraint on how many of the classes the instance can be assigned to. Formally, multi-label classification is the problem of finding a model that maps inputs x to binary vectors y (assigning a value of 0 or 1 for each element (label) in y).
 Problem transformation methods   Transformation into binary classification problems
   binary relevance
@@ -134,28 +134,28 @@ amounts to independently training one binary classifier for each label.</descrip
     
     <item>
       <title>Machine Learning Crash Course Courses</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/crash-course/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/crash-course/</link>
       <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/crash-course/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/crash-course/</guid>
       <description>Machine Learning Crash Course Courses ML Concepts Introduction to ML First, it gives you a tool to reduce the time you spend programming. Second, it will allow you to customize your products, making them better for specific groups of people. Third, machine learning lets you solve problems that you, as a programmer, have no idea how to do by hand. machine learning changes the way you think about a problem.</description>
     </item>
     
     <item>
       <title>notes of deep learning with python</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/notes-deep-learning-with-python/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/notes-deep-learning-with-python/</link>
       <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/deep-learning/notes-deep-learning-with-python/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/notes-deep-learning-with-python/</guid>
       <description>Deep Learning with Python PART 1 - FUNDAMENTALS OF DEEP LEARNING 1.What is deep learning? Artificial intelligence, machine learning, and deep learning Before deep learning: a brief history of machine learning Why deep learning? Why now? 2.Before we begin: the mathematical building blocks of neural networks A first look at a neural network Data representations for neural networks tensor: it’s a container for numbers. You may be already familiar with matrices, which are 2D tensors: tensors are a generalization of matrices to an arbitrary number of dimensions (note that in the context of tensors, a dimension is often called an axis).</description>
     </item>
     
     <item>
       <title>scikit-learn</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/scikit-learn/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/scikit-learn/</link>
       <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/scikit-learn/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/scikit-learn/</guid>
       <description>scikit-learn   sklearn
   preprocessing
   MultiLabelBinarizer
@@ -169,28 +169,28 @@ Estimate class weights for unbalanced datasets.
     
     <item>
       <title>Solution for imbalanced data</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/solution/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/solution/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/solution/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/solution/</guid>
       <description>FAQ imbalanced data  https://www.tensorflow.org/tutorials/structured_data/imbalanced_data https://stackoverflow.com/questions/43481490/keras-class-weights-class-weight-for-one-hot-encoding https://github.com/jbjorne/TEES/blob/master/Detectors/KerasDetectorBase.py https://towardsdatascience.com/practical-tips-for-class-imbalance-in-binary-classification-6ee29bcdb8a7 https://stackoverflow.com/questions/48485870/multi-label-classification-with-class-weights-in-keras  Class weight degrades Multi Label Classification Performance  https://datascience.stackexchange.com/questions/28040/class-weight-degrades-multi-label-classification-performance  What is the difference between multilabel and multiclass classification?  https://www.quora.com/What-is-the-difference-between-multilabel-and-multiclass-classification https://stats.stackexchange.com/questions/260505/should-i-use-a-categorical-cross-entropy-or-binary-cross-entropy-loss-for-binary  </description>
     </item>
     
     <item>
       <title>Few shot learning</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/</guid>
       <description>Reference  https://github.com/AnthonyMRios/multi-label-zero-shot Few-Shot and Zero-Shot Multi-Label Learning for Structured Label Spaces Deep Neural Networks for Multi-Label Text Classification https://github.com/YujiaBao/Distributional-Signatures Induction Networks for Few-Shot Text Classification https://github.com/laohur/LearnToCompareText  </description>
     </item>
     
     <item>
       <title>Learning Path for Machine Learning</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/learn-ml/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/learn-ml/</link>
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/learn-ml/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/learn-ml/</guid>
       <description>Learning Path for Machine Learning Basics of machine learning with TensorFlow Step 1: Understand what ML is all about The book ‘Deep Learning in Python’ by Francois Chollet, creator of Keras, is a great place to get started. Read chapters 1-4 to understand the fundamentals of ML from a programmer’s perspective.
 Google Developers Machine Learning Crash Course
 Machine Learning Glossary
@@ -199,10 +199,10 @@ Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which 
     
     <item>
       <title>kaggle</title>
-      <link>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/kaggle/</link>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/kaggle/</link>
       <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/artificial-intelligence/machine-learning/kaggle/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/kaggle/</guid>
       <description>https://www.kaggle.com/stackoverflow/statsquestions
 https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
 https://developer.ibm.com/exchanges/models/all/max-toxic-comment-classifier/

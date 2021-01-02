@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>any-path on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/categories/any-path/</link>
+    <link>http://www.yezheng.pro/categories/any-path/</link>
     <description>Recent content in any-path on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/categories/any-path/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/any-path/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Link custom domain to Github pages</title>
-      <link>http://csyezheng.github.io/post/any-path/blog/</link>
+      <link>http://www.yezheng.pro/post/any-path/blog/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/any-path/blog/</guid>
+      <guid>http://www.yezheng.pro/post/any-path/blog/</guid>
       <description>Register Domain Name Namesilo
 Use a Custom Domain If you’d like to use a custom domain for your GitHub Pages site, create a file static/CNAME. Your custom domain name should be the only contents inside CNAME. Since it’s inside static, the published site will contain the CNAME file at the root of the published site, which is a requirements of GitHub Pages.
 DNS service provider Create Cloudflare account Enter your domain name yezheng.</description>
@@ -20,28 +20,28 @@ DNS service provider Create Cloudflare account Enter your domain name yezheng.</
     
     <item>
       <title>circumvent Internet censorship</title>
-      <link>http://csyezheng.github.io/post/any-path/circumvent-internet-censorship/</link>
+      <link>http://www.yezheng.pro/post/any-path/circumvent-internet-censorship/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/any-path/circumvent-internet-censorship/</guid>
+      <guid>http://www.yezheng.pro/post/any-path/circumvent-internet-censorship/</guid>
       <description>Shadowsocks ShadowsocksR subscription address https://raw.githubusercontent.com/ssrsub/ssr/master/ssrsub https://yzzz.ml/freessr/ https://raw.githubusercontent.com/AmazingDM/sub/master/ssrshare.com https://haobang.yangwang.workers.dev/ http://www.yangwang.tk/ https://shadow-socks-share.herokuapp.com/subscribe https://www.liesauer.net/yogurt/subscribe?ACCESS_TOKEN=DAYxR3mMaZAsaqUb https://qiaomenzhuanfx.netlify.com/ https://muma16fx.netlify.com/ https://raw.githubusercontent.com/voken100g/AutoSSR/master/online https://raw.githubusercontent.com/voken100g/AutoSSR/master/recent https://youlianboshi.netlify.com/ http://ss.pythonic.life/full/subscribe https://www.nutgeek.cn/newsubscribe/ https://prom-php.herokuapp.com/cloudfra_ssr.txt http://share-shadowsocks.herokuapp.com/full/subscribe http://share-shadowsocksr.herokuapp.com/subscribe?valid=1 https://raw.githubusercontent.com/AmazingDM/sub/master/ssrshare.com https://github.com/liesauer/Free-SS-SSR https://yzzz.ml/freessr https://www.liesauer.net/yogurt/subscribe?ACCESS_TOKEN=DAYxR3mMaZAsaqUb Free account https://www.youneed.win/free-ssr http://nulastudio.org/Freedom/ https://lncn.org/ https://jichangdaquan.com/node/429.html https://www.freess.best/ https://fanqiang.network/ https://jichangdaquan.com/node/429.html V2ray subscription address https://raw.githubusercontent.com/AmazingDM/sub/master/v2ray_ssrshare.com https://jiang.netlify.com/ https://youlianboshi.netlify.com/ https://raw.githubusercontent.com/eycorsican/rule-sets/master/kitsunebi_sub https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray https://bhqt.ltd/?p=236 Free account https://free-ss.site/ https://www.freess.best/v2ray.html https://www.freevpnnet.com/ https://jichangdaquan.com/node/429.html https://view.freev2ray.org/ https://v2ray.cat/ https://v2ray.party/ https://my.freev2ray.org/ https://v2fire.tk/ https://get.freev2ray.com/ https://freev2.org https://jichangdaquan.com/node/429.html Reference https://gith</description>
     </item>
     
     <item>
       <title>Wireshark</title>
-      <link>http://csyezheng.github.io/post/any-path/wireshark/</link>
+      <link>http://www.yezheng.pro/post/any-path/wireshark/</link>
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/any-path/wireshark/</guid>
+      <guid>http://www.yezheng.pro/post/any-path/wireshark/</guid>
       <description>$ tshark -r all.pcapng.gz -i http==1 -O http -T fields -e http.request.method -e http.request.uri -e http.request.line -e http.response.line &amp;gt; dump.txt </description>
     </item>
     
     <item>
       <title>Post-installation for archlinux</title>
-      <link>http://csyezheng.github.io/post/any-path/post-installation-for-archlinux/</link>
+      <link>http://www.yezheng.pro/post/any-path/post-installation-for-archlinux/</link>
       <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/any-path/post-installation-for-archlinux/</guid>
+      <guid>http://www.yezheng.pro/post/any-path/post-installation-for-archlinux/</guid>
       <description>Reboot into the new system Set the keyboard layout and Console fonts If you have the 4K display, console fonts will be extremely small.
 $ setfont sun12x22 Connect to the internet nmcli device wifi list nmcli device wifi connect TP-LINK_GZS password a3628436 ping baidu.com Unofficial user repositories sudo vim /etc/pacman.conf [archlinuxcn] Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch Adding unofficial keys
 sudo pacman -Syy &amp;amp;&amp;amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman -S ttc-iosevka-slab noto-fonts noto-fonts-cjk noto-fonts-emoji tf-latinmodern-math ttf-inconsolata Graphical user interface Display server sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight xorg-xrdb is using to loading a user-level configuration dotfile, typically located at ~/.</description>
@@ -49,10 +49,10 @@ sudo pacman -Syy &amp;amp;&amp;amp; sudo pacman -S archlinuxcn-keyring Fonts sud
     
     <item>
       <title>Setup a Archlinux / Windows10 dual booting system</title>
-      <link>http://csyezheng.github.io/post/any-path/setup-a-archlinux-windows10-dual-booting-system/</link>
+      <link>http://www.yezheng.pro/post/any-path/setup-a-archlinux-windows10-dual-booting-system/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/any-path/setup-a-archlinux-windows10-dual-booting-system/</guid>
+      <guid>http://www.yezheng.pro/post/any-path/setup-a-archlinux-windows10-dual-booting-system/</guid>
       <description>Before   Check the hardware, three disks on my Lenovo ThinkPad P50
   Samsung SSD 970 EVO Plus 250GB for installing windows
   Samsung SSD 960 EVO 250GB for installling archlinux
@@ -63,10 +63,10 @@ sudo pacman -Syy &amp;amp;&amp;amp; sudo pacman -S archlinuxcn-keyring Fonts sud
     
     <item>
       <title>Git cheat sheet </title>
-      <link>http://csyezheng.github.io/post/any-path/git/</link>
+      <link>http://www.yezheng.pro/post/any-path/git/</link>
       <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/any-path/git/</guid>
+      <guid>http://www.yezheng.pro/post/any-path/git/</guid>
       <description>Create Clone an existing repository
 $ git clone ssh://user@domain.tld/repo.git Clone an existing repository and all its sub-modules recursively
 $ git clone --recurse-submodules ssh://user@domain.tld/repo.git Create a new local repository
@@ -78,10 +78,10 @@ $ git config [--global] color.</description>
     
     <item>
       <title>vim tutorial</title>
-      <link>http://csyezheng.github.io/post/any-path/vim/</link>
+      <link>http://www.yezheng.pro/post/any-path/vim/</link>
       <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/any-path/vim/</guid>
+      <guid>http://www.yezheng.pro/post/any-path/vim/</guid>
       <description>vimtutor To move the cursor, press the h, j, k, l keys as indicated.
 :q! exits the editor, DISCARDING any changes you have made.
 Press x to delete the character under the cursor.
@@ -94,20 +94,20 @@ Type o to open a line below the cursor and place you in Insert mode.</descriptio
     
     <item>
       <title>Bash Reference Manual</title>
-      <link>http://csyezheng.github.io/post/any-path/bash/</link>
+      <link>http://www.yezheng.pro/post/any-path/bash/</link>
       <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/any-path/bash/</guid>
+      <guid>http://www.yezheng.pro/post/any-path/bash/</guid>
       <description>Bash Reference Manual Basic Shell Features Shell Syntax Shell Operation Quoting Escape Character A non-quoted backslash \ is the Bash escape character. It preserves the literal value of the next character that follows, with the exception of \newline.
 Single Quotes Enclosing characters in single quotes (&#39;) preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash.</description>
     </item>
     
     <item>
       <title>UNIX / Linux Short Remedial</title>
-      <link>http://csyezheng.github.io/post/any-path/unix-short-remedial/</link>
+      <link>http://www.yezheng.pro/post/any-path/unix-short-remedial/</link>
       <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/any-path/unix-short-remedial/</guid>
+      <guid>http://www.yezheng.pro/post/any-path/unix-short-remedial/</guid>
       <description>Shell and Basic Commands A shell is a program1 that inputs Unix commands from the keyboard and relays them to the Unix system for execution. Shells typically include various shortcuts for users to use in stating their commands, and also a programming feature, in which users can make programs out of sets of their commands.
 There are many different shells available for Unix systems. Here we focus on two of the most popular ones, tcsh and bash.</description>
     </item>

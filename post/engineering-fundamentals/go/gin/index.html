@@ -33,10 +33,10 @@ $ go get github.com/gin-contrib/sessions import &amp;quot;github.com/gin-contrib
 
 
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.79.1" />
 
 
-<link rel="canonical" href="http://csyezheng.github.io/post/engineering-fundamentals/go/gin/" />
+<link rel="canonical" href="http://www.yezheng.pro/post/engineering-fundamentals/go/gin/" />
 
 
 
@@ -64,7 +64,7 @@ $ go get github.com/gin-contrib/sessions import &amp;quot;github.com/gin-contrib
 <meta property="og:description" content="sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
 $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/sessions&quot; cookie-based Example import ( &quot;github.com/gin-contrib/sessions&quot; &quot;github.com/gin-contrib/sessions/cookie&quot; &quot;github.com/gin-gonic/gin&quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&quot;secret&quot;)) r.Use(sessions.Sessions(&quot;mysession&quot;, store)) r.GET(&quot;/incr&quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&quot;count&quot;) if v == nil { count = 0 } else { count = v.(int) count&#43;&#43; } session.Set(&quot;count&quot;, count) session." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://csyezheng.github.io/post/engineering-fundamentals/go/gin/" />
+<meta property="og:url" content="http://www.yezheng.pro/post/engineering-fundamentals/go/gin/" />
 <meta property="article:published_time" content="2019-03-01T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-03-01T00:00:00+00:00" />
 <meta itemprop="name" content="Gin">
@@ -112,35 +112,35 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
           
         
       </li><li class="mobile-menu-item">
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
           
         
       </li><li class="mobile-menu-item">
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
           
         
       </li><li class="mobile-menu-item">
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
           
         
       </li><li class="mobile-menu-item">
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
           
         
       </li>
@@ -232,7 +232,7 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/">Home</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
           
 
         
@@ -243,7 +243,7 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/post/">Archives</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
           
 
         
@@ -254,7 +254,7 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/tags/">Tags</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
           
 
         
@@ -265,7 +265,7 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/categories/">Categories</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
           
 
         
@@ -276,7 +276,7 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
         
           
           
-            <a class="menu-item-link" href="http://csyezheng.github.io/about/">About</a>
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
           
 
         
@@ -307,7 +307,7 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
           2019-03-01
         </time>
         <div class="post-category">
-            <a href="http://csyezheng.github.io/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+            <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
             
           </div>
         
@@ -472,8 +472,8 @@ func main() {
 
     <footer class="post-footer">
       <div class="post-tags">
-          <a href="http://csyezheng.github.io/tags/go/">Go</a>
-          <a href="http://csyezheng.github.io/tags/gin/">Gin</a>
+          <a href="http://www.yezheng.pro/tags/go/">Go</a>
+          <a href="http://www.yezheng.pro/tags/gin/">Gin</a>
           
         </div>
 
@@ -584,7 +584,7 @@ func main() {
     </a>
 
 
-<a href="http://csyezheng.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+<a href="http://www.yezheng.pro/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
     class="iconfont" title="rss" target="_blank">
     <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -609,7 +609,7 @@ func main() {
     &copy;
     
       2017 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

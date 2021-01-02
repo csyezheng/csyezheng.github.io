@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PostgreSQL on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/postgresql/</link>
+    <link>http://www.yezheng.pro/tags/postgresql/</link>
     <description>Recent content in PostgreSQL on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 Sep 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Sep 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PostgreSQL</title>
-      <link>http://csyezheng.github.io/post/specialization/web-application/back-end/postgresql/</link>
+      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/postgresql/</link>
       <pubDate>Sat, 30 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/web-application/back-end/postgresql/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/postgresql/</guid>
       <description>Installing PostgreSQL $ sudo pacman -S postgresql $ sudo -u postgres -i [postgres]$ initdb --locale $LANG -E UTF8 -D &#39;/var/lib/postgres/data&#39; [postgres]$ exit $ pg_ctl -D /var/lib/postgres/data -l logfile start $ systemctl start postgresql.service $ systemctl enable postgresql.service Create your first database/user Access the database shell $ [postgres]$ psql -d myDatabaseName \help \c &amp;lt;database&amp;gt; \du # list all users and their permission levels \dt # show summary information about all tables \q \?</description>
     </item>
     

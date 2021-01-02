@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>APM on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/apm/</link>
+    <link>http://www.yezheng.pro/tags/apm/</link>
     <description>Recent content in APM on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/apm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/apm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Application performance management</title>
-      <link>http://csyezheng.github.io/post/specialization/devops/pinpoint/</link>
+      <link>http://www.yezheng.pro/post/specialization/devops/pinpoint/</link>
       <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/specialization/devops/pinpoint/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/devops/pinpoint/</guid>
       <description>分布式系统快速接入pinpoint1.8.3指南 本文链接：https://blog.csdn.net/boling_cavalry/arti</description>
     </item>
     

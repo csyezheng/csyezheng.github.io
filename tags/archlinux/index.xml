@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>archlinux on Ye Zheng&#39;s Blog</title>
-    <link>http://csyezheng.github.io/tags/archlinux/</link>
+    <link>http://www.yezheng.pro/tags/archlinux/</link>
     <description>Recent content in archlinux on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 26 Sep 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://csyezheng.github.io/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Sep 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Post-installation for archlinux</title>
-      <link>http://csyezheng.github.io/post/any-path/post-installation-for-archlinux/</link>
+      <link>http://www.yezheng.pro/post/any-path/post-installation-for-archlinux/</link>
       <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/any-path/post-installation-for-archlinux/</guid>
+      <guid>http://www.yezheng.pro/post/any-path/post-installation-for-archlinux/</guid>
       <description>Reboot into the new system Set the keyboard layout and Console fonts If you have the 4K display, console fonts will be extremely small.
 $ setfont sun12x22 Connect to the internet nmcli device wifi list nmcli device wifi connect TP-LINK_GZS password a3628436 ping baidu.com Unofficial user repositories sudo vim /etc/pacman.conf [archlinuxcn] Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch Adding unofficial keys
 sudo pacman -Syy &amp;amp;&amp;amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman -S ttc-iosevka-slab noto-fonts noto-fonts-cjk noto-fonts-emoji tf-latinmodern-math ttf-inconsolata Graphical user interface Display server sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight xorg-xrdb is using to loading a user-level configuration dotfile, typically located at ~/.</description>
@@ -20,10 +20,10 @@ sudo pacman -Syy &amp;amp;&amp;amp; sudo pacman -S archlinuxcn-keyring Fonts sud
     
     <item>
       <title>Setup a Archlinux / Windows10 dual booting system</title>
-      <link>http://csyezheng.github.io/post/any-path/setup-a-archlinux-windows10-dual-booting-system/</link>
+      <link>http://www.yezheng.pro/post/any-path/setup-a-archlinux-windows10-dual-booting-system/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://csyezheng.github.io/post/any-path/setup-a-archlinux-windows10-dual-booting-system/</guid>
+      <guid>http://www.yezheng.pro/post/any-path/setup-a-archlinux-windows10-dual-booting-system/</guid>
       <description>Before   Check the hardware, three disks on my Lenovo ThinkPad P50
   Samsung SSD 970 EVO Plus 250GB for installing windows
   Samsung SSD 960 EVO 250GB for installling archlinux
