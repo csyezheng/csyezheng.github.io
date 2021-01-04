@@ -16,5 +16,15 @@
       <description>LeetCode最常考察 1 Two Sum 2 Add Two Numbers 3 Longest Substring Without Repeating Characters 8 String to Integer (atoi) 15 3Sum 19 Remove Nth Node From End of List 21 Merge Two Sorted Lists 23 Merge k Sorted Lists 25 Reverse Nodes in k-Group 33 Search in Rotated Sorted Array 34 Search for a Range 42 Trapping Rain Water</description>
     </item>
     
+    <item>
+      <title>Divide and Conquer, Sorting and Searching, and Randomized Algorithms</title>
+      <link>http://www.yezheng.pro/post/computer-science-core/algorithms/algorithms-divide-conquer-sorting-searching-randomized/</link>
+      <pubDate>Mon, 21 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/computer-science-core/algorithms/algorithms-divide-conquer-sorting-searching-randomized/</guid>
+      <description>Insertion Sort Insertion Sort: Pseudocode INSERTION-SORT(A) for j = 2 to A.length key = A[j] // Insert A[j] into the sorted sequence A[1..j-1]. i = j - 1 while i &amp;gt; 0 and A[j] &amp;gt; key A[i+1] = A[i] i = i - 1 A[i + 1] = key Insertion Sort: Complexity analysis insertion sort has a best-case running time of $$\theta{(n)}$$ (pronounced “theta of n”).
+insertion sort has an average and worst-case running time of $$\theta{(n^2)}$$ (pronounced “theta of n-squared”).</description>
+    </item>
+    
   </channel>
 </rss>

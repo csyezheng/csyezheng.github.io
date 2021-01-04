@@ -25,5 +25,15 @@
       <description>AVL树 最早的平衡二叉树之一。应用相对其他数据结构比较少。windows对进程地址空间的管理用到了AVL树。 红黑树 平衡二叉树，广泛用在C++</description>
     </item>
     
+    <item>
+      <title>Divide and Conquer, Sorting and Searching, and Randomized Algorithms</title>
+      <link>http://www.yezheng.pro/post/computer-science-core/algorithms/algorithms-divide-conquer-sorting-searching-randomized/</link>
+      <pubDate>Mon, 21 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/computer-science-core/algorithms/algorithms-divide-conquer-sorting-searching-randomized/</guid>
+      <description>Insertion Sort Insertion Sort: Pseudocode INSERTION-SORT(A) for j = 2 to A.length key = A[j] // Insert A[j] into the sorted sequence A[1..j-1]. i = j - 1 while i &amp;gt; 0 and A[j] &amp;gt; key A[i+1] = A[i] i = i - 1 A[i + 1] = key Insertion Sort: Complexity analysis insertion sort has a best-case running time of $$\theta{(n)}$$ (pronounced “theta of n”).
+insertion sort has an average and worst-case running time of $$\theta{(n^2)}$$ (pronounced “theta of n-squared”).</description>
+    </item>
+    
   </channel>
 </rss>

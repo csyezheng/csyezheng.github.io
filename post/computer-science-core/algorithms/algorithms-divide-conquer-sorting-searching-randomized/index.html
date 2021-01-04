@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>thinking - Ye Zheng&#39;s Blog</title>
+  <title>Divide and Conquer, Sorting and Searching, and Randomized Algorithms - Ye Zheng&#39;s Blog</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="所以的确，如果自认为码农，那SICP不妨抛弃。然而但凡对编程这件事本身有点点更高的追求，那么过程式编程（数据为中心），函数式编程（代码为中心" />
+  <meta name="description" content="Insertion Sort Insertion Sort: Pseudocode INSERTION-SORT(A) for j = 2 to A.length key = A[j] // Insert A[j] into the sorted sequence A[1..j-1]. i = j - 1 while i &amp;gt; 0 and A[j] &amp;gt; key A[i&#43;1] = A[i] i = i - 1 A[i &#43; 1] = key Insertion Sort: Complexity analysis insertion sort has a best-case running time of $$\theta{(n)}$$ (pronounced “theta of n”).
+insertion sort has an average and worst-case running time of $$\theta{(n^2)}$$ (pronounced “theta of n-squared”)." />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -35,7 +36,7 @@
 <meta name="generator" content="Hugo 0.79.1" />
 
 
-<link rel="canonical" href="http://www.yezheng.pro/post/master-path/notes/" />
+<link rel="canonical" href="http://www.yezheng.pro/post/computer-science-core/algorithms/algorithms-divide-conquer-sorting-searching-randomized/" />
 
 
 
@@ -59,24 +60,27 @@
 
 
 
-<meta property="og:title" content="thinking" />
-<meta property="og:description" content="所以的确，如果自认为码农，那SICP不妨抛弃。然而但凡对编程这件事本身有点点更高的追求，那么过程式编程（数据为中心），函数式编程（代码为中心" />
+<meta property="og:title" content="Divide and Conquer, Sorting and Searching, and Randomized Algorithms" />
+<meta property="og:description" content="Insertion Sort Insertion Sort: Pseudocode INSERTION-SORT(A) for j = 2 to A.length key = A[j] // Insert A[j] into the sorted sequence A[1..j-1]. i = j - 1 while i &gt; 0 and A[j] &gt; key A[i&#43;1] = A[i] i = i - 1 A[i &#43; 1] = key Insertion Sort: Complexity analysis insertion sort has a best-case running time of $$\theta{(n)}$$ (pronounced “theta of n”).
+insertion sort has an average and worst-case running time of $$\theta{(n^2)}$$ (pronounced “theta of n-squared”)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.yezheng.pro/post/master-path/notes/" />
-<meta property="article:published_time" content="2016-06-08T00:00:00+00:00" />
-<meta property="article:modified_time" content="2016-06-08T00:00:00+00:00" />
-<meta itemprop="name" content="thinking">
-<meta itemprop="description" content="所以的确，如果自认为码农，那SICP不妨抛弃。然而但凡对编程这件事本身有点点更高的追求，那么过程式编程（数据为中心），函数式编程（代码为中心">
-<meta itemprop="datePublished" content="2016-06-08T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2016-06-08T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1575">
+<meta property="og:url" content="http://www.yezheng.pro/post/computer-science-core/algorithms/algorithms-divide-conquer-sorting-searching-randomized/" />
+<meta property="article:published_time" content="2016-03-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-03-21T00:00:00+00:00" />
+<meta itemprop="name" content="Divide and Conquer, Sorting and Searching, and Randomized Algorithms">
+<meta itemprop="description" content="Insertion Sort Insertion Sort: Pseudocode INSERTION-SORT(A) for j = 2 to A.length key = A[j] // Insert A[j] into the sorted sequence A[1..j-1]. i = j - 1 while i &gt; 0 and A[j] &gt; key A[i&#43;1] = A[i] i = i - 1 A[i &#43; 1] = key Insertion Sort: Complexity analysis insertion sort has a best-case running time of $$\theta{(n)}$$ (pronounced “theta of n”).
+insertion sort has an average and worst-case running time of $$\theta{(n^2)}$$ (pronounced “theta of n-squared”).">
+<meta itemprop="datePublished" content="2016-03-21T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2016-03-21T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1107">
 
 
 
-<meta itemprop="keywords" content="thinking," />
+<meta itemprop="keywords" content="algorithms,Leetcode," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="thinking"/>
-<meta name="twitter:description" content="所以的确，如果自认为码农，那SICP不妨抛弃。然而但凡对编程这件事本身有点点更高的追求，那么过程式编程（数据为中心），函数式编程（代码为中心"/>
+<meta name="twitter:title" content="Divide and Conquer, Sorting and Searching, and Randomized Algorithms"/>
+<meta name="twitter:description" content="Insertion Sort Insertion Sort: Pseudocode INSERTION-SORT(A) for j = 2 to A.length key = A[j] // Insert A[j] into the sorted sequence A[1..j-1]. i = j - 1 while i &gt; 0 and A[j] &gt; key A[i&#43;1] = A[i] i = i - 1 A[i &#43; 1] = key Insertion Sort: Complexity analysis insertion sort has a best-case running time of $$\theta{(n)}$$ (pronounced “theta of n”).
+insertion sort has an average and worst-case running time of $$\theta{(n^2)}$$ (pronounced “theta of n-squared”)."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -296,14 +300,14 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">thinking</h1>
+      <h1 class="post-title">Divide and Conquer, Sorting and Searching, and Randomized Algorithms</h1>
       
       <div class="post-meta">
-        <time datetime="2016-06-08" class="post-time">
-          2016-06-08
+        <time datetime="2016-03-21" class="post-time">
+          2016-03-21
         </time>
         <div class="post-category">
-            <a href="http://www.yezheng.pro/categories/master-path/"> master-path </a>
+            <a href="http://www.yezheng.pro/categories/computer-science-core/"> computer-science-core </a>
             
           </div>
         
@@ -321,83 +325,235 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#insertion-sort">Insertion Sort</a></li>
+        <li><a href="#merge-sort">Merge Sort</a></li>
+        <li><a href="#bubble-sort">Bubble Sort</a></li>
+        <li><a href="#quicksort">Quicksort</a></li>
+        <li><a href="#a-randomized-version-of-quicksort">A randomized version of quicksort</a></li>
+        <li><a href="#counting-sort">Counting Sort</a></li>
+        <li><a href="#radix-sort">Radix Sort</a></li>
+        <li><a href="#bucket-sort">Bucket Sort</a></li>
+      </ul>
+    </li>
+    <li><a href="#summarizes-the-sorting-algorithms">Summarizes the sorting algorithms</a></li>
+  </ul>
+</nav>
   </div>
 </div>
 
     
     <div class="post-content">
-      <p>所以的确，如果自认为码农，那SICP不妨抛弃。然而但凡对编程这件事本身有点点更高的追求，那么过程式编程（数据为中心），函数式编程（代码为中心）和面向对象编程这三种主要的范式都应该了解。而SICP仍然是函数式编程极好的入门教材。我想大部分从过程式编程入门的人，SICP读到true/false不是原子，而是用函数定义出来的时候，应该会有所启发，这书也没白读吧。</p>
-<p>暗时间</p>
-<p>算法导论
-数据结构与算法分析 Mark Allen Weiss
-深入理解计算机系统
-计算机的构造与解释
-Effective C++
-深度探索C++对象模型 TP312/2252
-C++语言的设计和演化
-程序设计语言 实践之路
-现代操作系统 TP316/281
-计算机体系结构 TP303/198
-TCP/IP详解卷1 TP915/46
-unix环境高级编程 TP316/285 TP316/S844
-Linux多线程服务端编程 TP316/1336
-编译器设计 TP314/76 TP314/9
-高级编译器设计与实现 TP314/47
-程序设计语言理论基础 TP311.1/273
-unix编程环境
-unix编程艺术
-剑指offer
-程序员面试金典
-形式语言与自动机
-virtual mechines</p>
-<p>学习视觉，机器学习，AI，数据库，算法，搜索
-机器学习？计算视觉？语音识别？网络安全？嵌入式和硬件？</p>
-<p>要学汇编，要学编译器操作系统。
-这些当然要学。但函数式编程怎么不学呢？GPU并行计算怎么不学呢？分布式机器学习怎么不学呢。</p>
-<p>C++的重要性在于理解RAII机制可以极大培养对编译器和系统的认识，学了C++再去用java c#则可以用的很好。
-回复王成的评论: 熟练一词在不同的场合有不同的意义，比如我现在从来都说我是熟练使用C++，但是我的熟练比本科生的熟练C++程度更深些。而以C++为例，对于一个本科生来说，我认为他至少应该是熟悉C++的语法，如变量，指针，引用，条件语句；同时也应该是会使用常见标准库的用法，如vector，map，string，algorithm等；同时他是应该明白C++面向对象思想的重要性的，知道为什么我们需要不同的访问权限，知道多态，继承等的好处；同时也应该知道一些简单的模板，如模板函数，模板类，特化，偏特化等。同时他应该会使用C++解决一些常见的问题，如临场出的一些数据结构与算法基础题，或者让他写一个自己的vector，一个自己的string等等（我愿意相信一些硕士生也许都不能完成一个自己的vector和string），那么我认为对于一个本科生来说，应该还不错了。</p>
-<p>XML Parser</p>
-<p>Type system 和 runtime system
-《Programming Language Pragmatic》
-《Language Implementation Patterns》
-coursera 上Stanford 的Compiler 课程
-《Essentials of Programming languages 》</p>
-<p>Engineering a Compiler
-《Types and Programming Languages》
-《Practical Type Inference for Arbitrary-Rank Types》
-《Advanced Topics in Types and Programming Languages》chapter 2
-《A Tutorial Implementation of a Dependently Typed Lambda Calculus》
-《Refinement Types for ML》
-《Principles of Program Analysis》
-《Data Flow Analysis: Theory and Practice》
-《Advanced Topics in Types and Programming Languages》chapter 10 Programming_Languages:_Application_and_Interpretation</p>
-<p>lambda演算时看得是《Programming Language and Lambda Calculi》</p>
-<p>理所应当的事不敢说不敢做就是自己有问题了
-做事果决，待人三思
-Geting out of my comfort zone is the first step on the path of truth.
-我背后空无一人，我不能倒下
-你没法唤醒一个装睡的人。我们只能给愿意前行的人指出一条明确的道路。
-目标要高远，外语是第一优先，计算机第二优化。</p>
-<p>卡内基梅隆CMU
-斯坦福Stanford
-加州伯克利UCB
-麻省理工MIT
-康奈尔大学Cornell
-伊利诺伊香槟分校Illinois
-华盛顿大学
-普林斯顿大学
-德克萨斯奥斯丁分校Austin
-佐治亚理工大学
-加州理工</p>
-<p>核心就三门课：
-• 数据结构：看《算法导论》。
-• 操作系统，看 Tanenbaum 的书，这是最最核心的课程。
-• 计算机体系结构，看 David Patterson 和 John Hennessy 合写的书。
-• 第二档次 计算机网络，分布式及并行数据处理。
-• 彼此独立，可以一起学。</p>
-<p>Confidence, never deny yourself of it, for it costs you nothing and leads to great things.</p>
-<p>If you put out your hands, you are a laborer; if you put out your hands and mind, you are a craftsperson; if you put out your hands, mind, heart and soul, you are an artist.</p>
+      <h3 id="insertion-sort">Insertion Sort</h3>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif" alt="https://en.wikipedia.org/wiki/Insertion_sort"></p>
+<h4 id="insertion-sort-pseudocode">Insertion Sort: Pseudocode</h4>
+<pre><code>INSERTION-SORT(A)
+
+for j = 2 to A.length
+	key = A[j]
+	// Insert A[j] into the sorted sequence A[1..j-1].
+	i = j - 1
+	while i &gt; 0 and A[j] &gt; key
+		A[i+1] = A[i]
+		i = i - 1
+	A[i + 1] = key
+</code></pre><h4 id="insertion-sort-complexity-analysis">Insertion Sort: Complexity analysis</h4>
+<p>insertion sort has a best-case running time of $$\theta{(n)}$$  (pronounced “theta of n”).</p>
+<p>insertion sort has an average and worst-case running time of $$\theta{(n^2)}$$  (pronounced “theta of n-squared”).</p>
+<h4 id="insertion-sort-advantages">Insertion Sort: Advantages</h4>
+<p>Efficient for (quite) small data sets</p>
+<p><strong>Stable</strong>; i.e., does not change the relative order of elements with equal keys</p>
+<p><strong>In-place</strong>; i.e., only requires a constant amount O(1) of additional memory space</p>
+<h3 id="merge-sort">Merge Sort</h3>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif" alt="https://en.wikipedia.org/wiki/Merge_sort"></p>
+<h4 id="merge-sort-pseudocode">Merge Sort: Pseudocode</h4>
+<pre><code>MERGE(A; p, q, r)
+
+n1 = q - p + 1
+n2 = r - q
+let L[1 ... n1 + 1] and R[1 ... n2 + 1] be new arrays
+for i = 1 to n1
+	L[i] = A[p + i - 1]
+for j = 1 to n2
+	R[j] = A[q+j]
+L[n1 + 1] = INF
+R[n2 + 1] = INF
+i = 1
+j = 1
+for k = p to r
+	if L[i] &lt;= R[j]
+		A[k] = L[i]
+		i = i + 1
+	else
+		A[k] = R[j]
+		j = j + 1
+</code></pre><pre><code>MERGE-SORT(A, p, r)
+
+if p &lt; r
+	q = (p +r) / 2
+	MERGE-SORT(A, p, q)
+	MERGE-SORT(A, q+1, r)
+	MERGE(A, p, q, r)
+</code></pre><h4 id="merge-sort-complexity-analysis">Merge Sort: Complexity analysis</h4>
+<p>merge sort has an average and worst-case running time of $\theta(n \lg n)$</p>
+<p>merge sort&rsquo;s worst-case space complexity $\theta(n)$</p>
+<h4 id="merge-sort-advantages">Merge Sort: Advantages</h4>
+<p>Merge sort is more efficient than quicksort for some types of lists if the data to be sorted can only be efficiently accessed sequentially.</p>
+<p>Unlike some (efficient) implementations of quicksort, merge sort is a <strong>stable</strong> sort.</p>
+<p>Merge sort is often the best choice for sorting a <strong>linked list</strong>: in this situation it is relatively easy to implement a merge sort in such a way that it requires only $\theta(1)$ extra space, and the slow random-access performance of a linked list makes some other algorithms (such as quicksort) perform poorly, and others (such as heapsort) completely impossible.</p>
+<h3 id="bubble-sort">Bubble Sort</h3>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" alt="https://en.wikipedia.org/wiki/Bubble_sort"></p>
+<h4 id="bubble-sort-pseudocode">Bubble Sort: Pseudocode</h4>
+<pre><code>BUBBLESORT(A)
+for i = 1 to A.length - 1
+	for j D A:length downto i C 1
+		if A[j]  &lt; A[j - 1]
+			exchange A[j] with A[j - 1]
+</code></pre><h4 id="bubble-sort-complexity-analysis">Bubble Sort: Complexity analysis</h4>
+<p>Bubble sort has a worst-case and average complexity of $O(n^2)$</p>
+<h3 id="quicksort">Quicksort</h3>
+<h4 id="quicksort-pseudocode">Quicksort: Pseudocode</h4>
+<pre><code>QUICKSORT(A, p, r)
+if p &lt; r
+	q = PARTITION(A, p, r)
+	QUICKSORT(A, p, q - 1)
+	QUICKSORT(A, q + 1, r)
+</code></pre><pre><code>PARTITION(A, p, r)
+x = A[r]
+i = p - 1
+for j = p to r - 1
+	if A[j] &lt;= x
+		i = i + 1
+		exchange A[i] with A[j]
+exchange A[i + 1] with A[r]
+return i + 1
+</code></pre><h4 id="quicksort-complexity-analysis">Quicksort: Complexity analysis</h4>
+<p>The quicksort algorithm has a worst-case running time of $\theta(n^2)$.</p>
+<p>Despite this slow worst-case running time, quicksort is often the best
+practical choice for sorting because it is remarkably efficient on the average: its
+expected running time is $\theta(n \lg n)$.</p>
+<p>The running time of quicksort <strong>depends on whether the partitioning is balanced or unbalanced</strong>, which in turn depends on which elements are used for partitioning. If the partitioning is balanced, the algorithm runs asymptotically as fast as merge sort. If the partitioning is unbalanced, however, it can run asymptotically as slowly as insertion sort.</p>
+<p><strong>The average-case running time of quicksort is much closer to the best case than to the worst case.</strong></p>
+<p>In fact, any split of constant proportionality yields a recursion tree of depth $\theta(n \lg n)$, where the cost at each level is $O(n)$. The running time is therefore $\theta(n \lg n)$ whenever the split has constant proportionality.</p>
+<h4 id="quicksort-scenses">Quicksort: Scenses</h4>
+<p>It has the advantage of sorting in place.</p>
+<p>Moreover, the $\theta(n^2)$ running time occurs when the input array is already completely sorted—a common situation in which insertion sort runs in $O(n)$ time.</p>
+<h3 id="a-randomized-version-of-quicksort">A randomized version of quicksort</h3>
+<h4 id="randomized-quicksort-pseudocode">Randomized quicksort: Pseudocode</h4>
+<pre><code>RANDOMIZED-PARTITION(A, p, r)
+i = RANDOM(p, r)
+exchange A[r] with A[i]
+return PARTITION(A, p, r)
+</code></pre><pre><code>RANDOMIZED-QUICKSORT(A, p, r)
+if p &lt; r
+	q = RANDOMIZED-PARTITION(A, p, r)
+	RANDOMIZED-QUICKSORT(A, p, q - 1)
+	RANDOMIZED-QUICKSORT(A, q + 1, r)
+</code></pre><h4 id="randomized-quicksort-complexity-analysis">Randomized quicksort: Complexity analysis</h4>
+<p>the (worst-case) running time of quicksort is $\theta(n^2)$.</p>
+<p>the expected running time of RANDOMIZED -QUICKSORT is $O(n \lg n)$.</p>
+<h3 id="counting-sort">Counting Sort</h3>
+<p><img src="https://d18l82el6cdm1i.cloudfront.net/uploads/hrUDdYC7OH-countingsort.gif" alt="https://brilliant.org/wiki/counting-sort/"></p>
+<h4 id="counting-sort-pseudocode">Counting Sort: Pseudocode</h4>
+<pre><code>COUNTING-SORT(A, B, k)
+
+let C[0 ... k] be a new array
+for i = 0 to k
+	C[i] = 0
+for j = 1 to A.length
+	C[A[j]] = C[A[j]] + 1
+// C[i] now contains the number of elements equal to i.
+for i = 1 to k
+	C[i] = C[i] + C[i - 1]
+// C[i] now contains the number of elements less than or equal to i.
+for j = A.length downto 1
+	B[C[A[j]]] = A[j]
+	C[A[j]] = C[A[j]] - 1
+</code></pre><h4 id="counting-sort-complexity-analysis">Counting Sort: Complexity analysis</h4>
+<p>Counting sort has time complexity of $O(k + n)$</p>
+<p>Because it uses arrays of length $k + 1$ and $n$, the total space usage of the algorithm is also $O(n + k)$.</p>
+<h4 id="counting-sort-scenes">Counting Sort: Scenes</h4>
+<p>it is an integer sorting algorithm</p>
+<p>it is a stable sort.</p>
+<h3 id="radix-sort">Radix Sort</h3>
+<h4 id="radix-sort-pseudocode">Radix Sort: Pseudocode</h4>
+<pre><code>RADIX-SORT(A, d)
+
+for i = 1 to d
+	use a stable sort to sort array A on digit i
+</code></pre><h4 id="radix-sort-complexity-analysis">Radix Sort: Complexity analysis</h4>
+<p>Radix sort operates in $O(nw)$ time, where $n$ is the number of keys, and $w$ is the key length.</p>
+<h4 id="radix-sort-scenes">Radix Sort: Scenes</h4>
+<p>Moreover, the version of radix sort that uses counting sort as the
+intermediate stable sort does not sort in place, which many of the ‚.n lg n/-time
+comparison sorts do. Thus, when primary memory storage is at a premium, we
+might prefer an <strong>in-place</strong> algorithm such as quicksort.</p>
+<h3 id="bucket-sort">Bucket Sort</h3>
+<h4 id="bucket-sort-pseudocode">Bucket Sort: Pseudocode</h4>
+<pre><code>BUCKET-SORT(A)
+
+let B[0 ... n - 1] be a new array
+n = A.length
+for i = 0 to n - 1
+	make B[i] an empty list
+for i = 1 to n
+	insert A[i] into list B[n A[i]]
+for i = 0 to n - 1
+	sort list B[i] with insertion sort
+concatenate the lists B[0], B[1], ..., B[n - 1] together in order
+</code></pre><h4 id="bucket-sort-complexity-analysis">Bucket Sort: Complexity analysis</h4>
+<p>Bucket sort has an average complexity of $\theta(n)$</p>
+<p>Bucket sort has a worst-cast complexity of $\theta(n^2)$</p>
+<h2 id="summarizes-the-sorting-algorithms">Summarizes the sorting algorithms</h2>
+<table>
+<thead>
+<tr>
+<th>Algorithms</th>
+<th>Worst-cast running time</th>
+<th>Average-case / expected running time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Insertion sort</td>
+<td>$\theta(n^2)$</td>
+<td>$\theta(n^2)$</td>
+</tr>
+<tr>
+<td>Merge sort</td>
+<td>$\theta(n \lg n)$</td>
+<td>$\theta(n \lg n)$</td>
+</tr>
+<tr>
+<td>Heapsort</td>
+<td>$\theta(n \lg n)$</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>Quicksort</td>
+<td>$\theta(n^2)$</td>
+<td>$\theta(n \lg n)$ (expected)</td>
+</tr>
+<tr>
+<td>Counting sort</td>
+<td>$\theta(n+k)$</td>
+<td>$\theta(n+k)$</td>
+</tr>
+<tr>
+<td>Radix sort</td>
+<td>$\theta(d(n+k))$</td>
+<td>$\theta(d(n+k))$</td>
+</tr>
+<tr>
+<td>Bucket sort</td>
+<td>$\theta(n^2)$</td>
+<td>$\theta(n)$</td>
+</tr>
+</tbody>
+</table>
 
     </div>
 
@@ -411,7 +567,7 @@ Geting out of my comfort zone is the first step on the path of truth.
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-      2016-06-08
+      2016-03-21
       
     </span>
   </p>
@@ -428,14 +584,15 @@ Geting out of my comfort zone is the first step on the path of truth.
 
     <footer class="post-footer">
       <div class="post-tags">
-          <a href="http://www.yezheng.pro/tags/thinking/">thinking</a>
+          <a href="http://www.yezheng.pro/tags/algorithms/">algorithms</a>
+          <a href="http://www.yezheng.pro/tags/leetcode/">Leetcode</a>
           
         </div>
 
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/any-path/unix-short-remedial/">
+          <a class="prev" href="/post/master-path/notes/">
             
             <i class="iconfont">
               <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -445,12 +602,12 @@ Geting out of my comfort zone is the first step on the path of truth.
 </svg>
 
             </i>
-            <span class="prev-text nav-default">UNIX / Linux Short Remedial</span>
+            <span class="prev-text nav-default">thinking</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
-          <a class="next" href="/post/computer-science-core/algorithms/algorithms-divide-conquer-sorting-searching-randomized/">
-            <span class="next-text nav-default">Divide and Conquer, Sorting and Searching, and Randomized Algorithms</span>
+          <a class="next" href="/post/specialization/web-application/front-end/jquery/">
+            <span class="next-text nav-default">jQuery Tutorial</span>
             <span class="prev-text nav-mobile">Next</span>
             
             <i class="iconfont">
