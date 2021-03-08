@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-03-07T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,12 +296,82 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/spring-boot/">Building Java Projects with Maven</a>
+      <a class="post-link" href="/post/specialization/big-data/elk-stack/">elk stack</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-15" class="post-time">
+        2019-05-15
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/big-data/"> big-data </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
+Install Beats Install Filebeat Install Metricbeat sudo pacman -S metricbeat sudo vim /etc/metricbeat/metricbeat.yml setup.dashboards.enabled: true From the Metricbeat install directory, enable the system module
+cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricbeat.
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/big-data/elk-stack/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/specialization/devops/docker/">Docker</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-04-25" class="post-time">
+        2019-04-25
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker sudo pacman -S docker systemctl start docker.
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/devops/docker/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/specialization/web-application/back-end/microservices/">microservices</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-04-20" class="post-time">
+        2019-04-20
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
@@ -316,82 +386,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Install Maven Maven is downloadable as a zip file at https://maven.apache.org/download.cgi.
-Once you have downloaded the zip file, unzip it to your computer. Then add the bin folder to your path.
-$ mvn -v Define a simple Maven build Maven projects are defined with an XML file named pom.xml. Create a file named pom.xml at the root of the project (i.e. put it next to the src folder) and give it the following contents:
+      第1章 微服务 1.1 什么是微服务 微服务就是一些协同工作的小而自治的服务 1.1.1 很小，专注于做好一件事 在一个单块系统内，通常会创建一些抽象层或者模块来保证
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/spring-boot/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/engineering-fundamentals/javascript/debug/">Debugging JavaScript in Chrome DevTools</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Get Started Step 2: Get familiar with the Sources panel UI The Sources panel is where you debug JavaScript.
-Open DevTools by pressing Command+Option+I (Mac) or Control+Shift+I (Windows, Linux). This shortcut opens the Consolepanel.
-Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: Set a line-of-code breakpoint Step 6: Check variable values 
-    </div>
-    <div class="read-more">
-      <a href="/post/engineering-fundamentals/javascript/debug/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/engineering-fundamentals/go/debugging-with-delve/">Delve Documentation</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &quot;fmt&quot; &quot;log&quot; &quot;net/http&quot; &quot;os&quot; ) const port = &quot;8000&quot; func main() { http.HandleFunc(&quot;/hi&quot;, hi) fmt.Println(&quot;runing on port: &quot; + port) log.Fatal(http.ListenAndServe(&quot;:&quot; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &quot;HostName: %s&quot;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.
-    </div>
-    <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/debugging-with-delve/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/microservices/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1507,6 +1505,27 @@ Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: S
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/24/">»</a></li>
@@ -1514,7 +1533,7 @@ Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: S
 
       
       
-      <li><a href="/page/46/">»»</a></li>
+      <li><a href="/page/47/">»»</a></li>
       
 
       </ul>

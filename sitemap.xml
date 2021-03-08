@@ -9,14 +9,91 @@
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/categories/artificial-intelligence/</loc>
-    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
+    <loc>http://www.yezheng.pro/categories/</loc>
+    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/categories/</loc>
+    <loc>http://www.yezheng.pro/tags/computer-networking/</loc>
+    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/categories/computer-networking/</loc>
+    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/</loc>
+    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/tcp/</loc>
+    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/computer-networking/computer-networks-3/</loc>
+    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/</loc>
+    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/computer-networking/computer-networks-2/</loc>
+    <lastmod>2021-03-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/http/</loc>
+    <lastmod>2021-03-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/computer-networking/computer-networks-1/</loc>
+    <lastmod>2021-03-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/computer-networking/how-the-internet-works/</loc>
+    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/computer-networking/</loc>
+    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/categories/artificial-intelligence/</loc>
     <lastmod>2020-12-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -100,21 +177,7 @@
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/tags/</loc>
-    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://www.yezheng.pro/tags/tensorflow/</loc>
-    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/</loc>
     <lastmod>2020-12-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

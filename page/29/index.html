@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-03-07T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,7 +296,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/scala/scalabyexample/">Scala By Example</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/package_download/">package_download</a>
     </h1>
     
     <div class="post-meta">
@@ -316,11 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Introduction Scala smoothly integrates object-oriented and functional programming.
- Abstract types and mixin composition unify concepts from object and module systems. Pattern matching over class hierarchies uniﬁes functional and object-oriented data access. It greatly simpliﬁes the processing of XML trees. A ﬂexible syntax and type system enables the construction of advanced libraries and new domain speciﬁc languages.  Starting with simple expressions and functions, and working up through objects and classes, lists and streams, mutable state, pattern matching to more complete examples that show interesting programming techniques.
+      gopm get -g -v golang.org/x/sys 
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/scala/scalabyexample/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/package_download/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,7 +330,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/standard-library/">standard-library</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/photoprism/">photoprism</a>
     </h1>
     
     <div class="post-meta">
@@ -351,10 +350,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      io io.Writer import	stdlog &quot;log&quot; var loggers []*Logger var logLevel = Debug type Logger struct { level int logger *stdlog.Logger } func NewLogger(out io.Writer) *Logger { ret := &amp;Logger{level: logLevel, logger: stdlog.New(out, &quot;&quot;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)} loggers = append(loggers, ret) return ret } io.MultiWriter func init() { rand.Seed(time.Now().UTC().UnixNano()) log.SetLevel(&quot;warn&quot;) logger = log.NewLogger(os.Stdout) model.LoadConf() util.LoadMarkdown() i18n.Load() theme.Load() replaceServerConf() if &quot;dev&quot; == model.Conf.RuntimeMode { gin.SetMode(gin.DebugMode) } else { gin.SetMode(gin.ReleaseMode) } gin.DefaultWriter = io.MultiWriter(os.Stdout) } io.
+      Step 1: Clone this project:
+git clone https://github.com/photoprism/photoprism.git Step 2: Start Docker containers:
+cd photoprism sudo docker-compose up Step 3: Open a new terminal to the photoprism container:
+sudo docker-compose exec photoprism bash 
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/standard-library/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/photoprism/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -365,7 +367,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/java/the-java-tutorials/">The Java Tutorials</a>
+      <a class="post-link" href="/post/engineering-fundamentals/python/datetime/">Python datetime</a>
     </h1>
     
     <div class="post-meta">
@@ -385,12 +387,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Getting Started The Java programming language is a high-level language that can be characterized by all of the following buzzwords:
- Simple Object oriented Distributed Multithreaded Dynamic Architecture neutral Portable High performance Robust Secure  An overview of the software development process:
-all source code is first written in plain text files ending with the .java extension. Those source files are then compiled into .class files by the javac compiler. A .
+      datetime 8.1. datetime
+The datetime module, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation.
+There are two kinds of date and time objects: “naive” and “aware”.
+An aware object has sufficient knowledge of applicable algorithmic and political time adjustments, such as time zone and daylight saving time information, to locate itself relative to other aware objects. An aware object is used to represent a specific moment in time.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/java/the-java-tutorials/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/python/datetime/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1506,6 +1509,27 @@ all source code is first written in plain text files ending with the .java exten
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/30/">»</a></li>
@@ -1513,7 +1537,7 @@ all source code is first written in plain text files ending with the .java exten
 
       
       
-      <li><a href="/page/46/">»»</a></li>
+      <li><a href="/page/47/">»»</a></li>
       
 
       </ul>

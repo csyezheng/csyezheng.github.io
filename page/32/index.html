@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-03-07T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,15 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/wagtail/">Wagtail</a>
+      <a class="post-link" href="/post/engineering-fundamentals/scala/a-tour-of-scala/">The tour of Scala</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-11-02" class="post-time">
-        2018-11-02
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -316,12 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Getting started setting up a brand new Wagtail project $ pip install wagtail $ wagtail start mysite $ cd mysite $ pip install -r requirements.txt $ ./manage.py migrate $ ./manage.py createsuperuser $ ./manage.py runserver http://localhost:8000
-http://localhost:8000/admin/
-Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page.
+      Introduction Scala is object-oriented: every value is an object.  classes traits mixin-based composition as a clean replacement for multiple inheritance.  Scala is functional: every function is a value.  higher-order functions nested functions currying (multiple parameter lists) case classes pattern matching model algebraic types used in many functional programming languages. Singleton objects provide a convenient way to group functions that aren’t members of a class.  Scala is statically typed the type system supports:
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/wagtail/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/scala/a-tour-of-scala/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -332,15 +330,15 @@ Extend the HomePage model # home/models.py from django.db import models from wag
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/grpc/">gRPC by Go</a>
+      <a class="post-link" href="/post/engineering-fundamentals/typescript/typescript/">TypeScript</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-10-13" class="post-time">
-        2018-10-13
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -352,11 +350,10 @@ Extend the HomePage model # home/models.py from django.db import models from wag
   <div class="post-content">
     
     <div class="post-summary">
-      $ go version $ go get -u google.golang.org/grpc Install Protocol Buffers v3
- download pre-compiled binaries for your platform(protoc-&lt;version&gt;-&lt;platform&gt;.zip) from here: https://github.com/google/protobuf/releases Unzip this file. Update the environment variable PATH to include the path to the protoc binary file.  $ go get -u github.com/golang/protobuf/protoc-gen-go $ export PATH=$PATH:$GOPATH/bin Build the example $ cd $GOPATH/src/google.golang.org/grpc/examples/helloworld 
+      TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/grpc/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/typescript/typescript/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -367,15 +364,15 @@ Extend the HomePage model # home/models.py from django.db import models from wag
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/jwt/">JSON Web Tokens</a>
+      <a class="post-link" href="/post/engineering-fundamentals/java/learn-java-in-y-minutes/">learn Java in Y minutes</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-10-09" class="post-time">
-        2018-10-09
+      <time datetime="2019-02-01" class="post-time">
+        2019-02-01
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -387,11 +384,10 @@ Extend the HomePage model # home/models.py from django.db import models from wag
   <div class="post-content">
     
     <div class="post-summary">
-      What is JSON Web Token? JSON Web Token (JWT) is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
-When should you use JSON Web Tokens? Here are some scenarios where JSON Web Tokens are useful:
+      // Single-line comments start with // /* Multi-line comments look like this. */ /** * JavaDoc comments look like this. Used to describe the Class or various * attributes of a Class. * Main attributes: * * @author Name (and contact information such as email) of author(s). * @version Current version of the program. * @since When this part of the program was first added. * @param For describing the different parameters for a method.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/jwt/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/java/learn-java-in-y-minutes/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1507,6 +1503,27 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/33/">»</a></li>
@@ -1514,7 +1531,7 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
 
       
       
-      <li><a href="/page/46/">»»</a></li>
+      <li><a href="/page/47/">»»</a></li>
       
 
       </ul>

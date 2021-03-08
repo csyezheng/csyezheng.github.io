@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Computer Networks and the Internet - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="What Is the Internet? A Nuts-and-Bolts Description 设备：称为主机（host）或端系统（end system） 端系统通过**通信链路（communication link）和分组交换" />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.79.1" />
+
+
+<link rel="canonical" href="http://www.yezheng.pro/post/specialization/computer-networking/computer-networks-1/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="Computer Networks and the Internet" />
+<meta property="og:description" content="What Is the Internet? A Nuts-and-Bolts Description 设备：称为主机（host）或端系统（end system） 端系统通过**通信链路（communication link）和分组交换" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.yezheng.pro/post/specialization/computer-networking/computer-networks-1/" />
+<meta property="article:published_time" content="2021-03-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-05T00:00:00+00:00" />
+<meta itemprop="name" content="Computer Networks and the Internet">
+<meta itemprop="description" content="What Is the Internet? A Nuts-and-Bolts Description 设备：称为主机（host）或端系统（end system） 端系统通过**通信链路（communication link）和分组交换">
+<meta itemprop="datePublished" content="2021-03-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-05T00:00:00+00:00" />
+<meta itemprop="wordCount" content="5896">
+
+
+
+<meta itemprop="keywords" content="computer-networking," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Computer Networks and the Internet"/>
+<meta name="twitter:description" content="What Is the Internet? A Nuts-and-Bolts Description 设备：称为主机（host）或端系统（end system） 端系统通过**通信链路（communication link）和分组交换"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Computer Networks and the Internet</h1>
+      
+      <div class="post-meta">
+        <time datetime="2021-03-05" class="post-time">
+          2021-03-05
+        </time>
+        <div class="post-category">
+            <a href="http://www.yezheng.pro/categories/computer-networking/"> computer-networking </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-the-internet">What Is the Internet?</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#the-network-edge">The Network Edge</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#the-network-core">The Network Core</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#delay-loss-and-throughput-in-packet-switched-networks">Delay, Loss, and Throughput in Packet-Switched Networks</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#protocol-layers-and-their-service-models">Protocol Layers and Their Service Models</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h2 id="what-is-the-internet">What Is the Internet?</h2>
+<h4 id="a-nuts-and-bolts-description">A Nuts-and-Bolts Description</h4>
+<p>设备：称为<strong>主机（host）<strong>或</strong>端系统（end system）</strong></p>
+<p>端系统通过**通信链路（communication link）<strong>和</strong>分组交换机（packet switch）**连接到一起。</p>
+<p>通信链路的物理媒体包含：电缆、铜线、光纤和无线电频谱。</p>
+<p>端系统向另一台端系统发送数据时，发送端系统将数据分段，并为每段加上首部字节，形成的信息包称为<strong>分组（packet）</strong>，分组到目的端系统被装配成初始数据。</p>
+<p>分组交换机：</p>
+<ul>
+<li>**路由器（router）**通常用于网络核心中</li>
+<li>**链路层交换机（link-layer swtich）**通常用于接入网中。</li>
+</ul>
+<p>端系统通过**因特网服务提供商（Internet Service Provider, ISP）**接入因特网。每个ISP自身就是一个由多台分组交换机和多段通信链路组成的网络。因特网就是将端系统互联，因此为端系统提供的ISP也必须互联起来。无论是较高层还是较低层ISP网络,它们每个都是独立管理的,运行着IP协议,遵从一定的命名和地址规则。</p>
+<p>端系统、分组交换机和其他因特网部件都要运行一系列<strong>协议(protocol)</strong>,这些协议控制因特网中信息的接收和发送。**TCP(Transmission Control Protocol, 传输控制协议)<strong>和</strong>IP(Intemnet Protocol,网际协议)**是因特网中两个最为重要的协议。IP协议定义了在路由器和端系统之间发送和接收的分组格式。<strong>因特网的主要协议统称为TCP/IP。</strong></p>
+<h4 id="a-services-description">A Services Description</h4>
+<p>涉及多个相互交换数据的端系统的应用程序, 被称为<strong>分布式应用程序(distributed application)</strong>。</p>
+<p>与因特网相连的端系统提供了一个<strong>套接字接口（socket interface）</strong>,该接口规定了运行在一个端系统上的程序请求因特网基础设施向运行在另一个端系统上的特定目的地程序交付数据的方式。</p>
+<h4 id="what-is-a-protocol">What Is a Protocol?</h4>
+<p>**协议（protocol）**定义了在两个或多个通信实体之间交换的报文的格式和顺序,以及报文发送和/或接收一条报文或其他事件所采取的动作。</p>
+<p><strong>掌握计算机网络领域知识的过程就是理解网络协议的构成、原理和工作方式的过程。</strong></p>
+<h2 id="the-network-edge">The Network Edge</h2>
+<p><strong>主机 = 端系统</strong>。主机有时又被进一步划分为两类：<strong>客户（client）<strong>和</strong>服务器(server)</strong>。今天, 大部分提供搜索结果、电子邮件、Web页面和视频的服务器都属于<strong>大型数据中心(data center)</strong>。</p>
+<h4 id="access-networks">Access Networks</h4>
+<p>接入网是指将端系统物理连接到其**边缘路由器（edge rounter）**的物理链路。边缘路由器是端系统到任何其他远程端系统的路径上的第一台路由器。</p>
+<ul>
+<li>家庭接人:数字用户线（Digital Subscriber Line, DSL）、电缆（Cable）、光纤入户（FTTH）、拨号（很慢）和卫星</li>
+<li>企业(和家庭)接人:以太网和WiFi，以太网是用局域网（LAN）技术，WIFI是无线LAN。现在家庭通常电缆或DSL可以与无线局域网结合使用</li>
+<li>广域无线接人:3G和LTE，通过蜂窝网提供商运营的基站发送接收分组。</li>
+</ul>
+<h4 id="physical-media">Physical Media</h4>
+<ul>
+<li>双绕铜线</li>
+<li>同轴电缆</li>
+<li>光纤</li>
+<li>陆地无线电信道</li>
+<li>卫星无线电信道</li>
+</ul>
+<h2 id="the-network-core">The Network Core</h2>
+<h4 id="packet-switching">Packet Switching</h4>
+<ul>
+<li>在各种网络应用中,端系统彼此交换<strong>报文(message)</strong>。</li>
+<li>报文能够包含协议设计者需要的任何东西。<strong>报文可以执行一种控制功能,也可以包含数据</strong>, 例如电子邮件数据、JPEC图像或MP3音频文件。</li>
+<li>为了从源端系统向目的端系统发送一个报文, 源将长报文划分为较小的数据块,称之为<strong>分组(packet)</strong>。</li>
+<li>在源和目的地之间,每个分组都通过通信链路和**分组交换机(packet switch)**传送。(交换机主要有两类:<strong>路由器(router)<strong>和</strong>链路层交换机(link-layer switch)</strong>)</li>
+</ul>
+<h6 id="存储转发传输">存储转发传输</h6>
+<ul>
+<li>多数分组交换机在链路的输人端使用**存储转发传输(store-and-forward transmission)**机制。存储转发传输是指在交换机能够开始向输出链路传输该分组的第一个比特之前,必须接收到整个分组。</li>
+<li>通过由N条速率均为R的链路组成的路径，有N-1台路由器，从源到目的地发送一个分组，端到端时延是$$N\frac{L}{R}$$</li>
+</ul>
+<h6 id="排队时延和分组丢失">排队时延和分组丢失</h6>
+<ul>
+<li>每台分组交换机有多条链路与之相连。对于每条相连的链路,该分组交换机具有一个<strong>输出缓存(output buffer,也称为输出队列(output queue))</strong>,它用于存储路由器准备发往那条链路的分组。该输出缓存在分组交换中起着重要的作用。</li>
+<li>除了存储转发时延以外,分组还要承受输出缓存的<strong>排队时延(queuing delay)</strong>。这些时延是变化的,变化的程度取决于网络的拥塞程度。因为缓存空间的大小是有限的,一个到达的分组可能发现该缓存已被其他等待传输的分组完全充满了。在此情况下,将出现<strong>分组丢失(丢包)(packet loss)</strong>,到达的分组或已经排队的分组之一将被丢弃。</li>
+</ul>
+<h6 id="转发表和路由选择协议">转发表和路由选择协议</h6>
+<ul>
+<li>在因特网中，每个端系统具有一个称为<strong>IP地址</strong>的地址。</li>
+<li>每台路由器具有一个<strong>转发表(forwarding table)</strong>,用于将目的地址（或目的地址的一部分）映射成为输出链路。</li>
+<li>因特网具有一些特殊的<strong>路由选择协议（routing protocol）</strong> ，用于自动地设置这些转发表。</li>
+<li>使用Traceroute程序可以看到分组在因特网中所走的端到端路由。</li>
+</ul>
+<h4 id="circuit-switching">Circuit Switching</h4>
+<p>通过网络链路和交换机移动数据有两种基本方法:<strong>电路交换(circuit switching)<strong>和</strong>分组交换(packet switching)</strong>。</p>
+<h4 id="a-network-of-networks">A Network of Networks</h4>
+<ul>
+<li>因为接入ISP向全球传输ISP付费,故接人ISP被认为是<strong>客户(customer)</strong>,而全球传输ISP被认为是<strong>提供商(provider)</strong>,</li>
+<li>在任何给定的区域,可能有一个<strong>区域ISP(regional ISP)</strong>，区域中的接人ISP与之连接。每个区域ISP则与<strong>第一层ISP(tier-1 ISP)连接</strong>。第一层ISP类似于我们假想的全球传输ISP,尽管它不是在世界上每个城市中都存在,但它确实存在。</li>
+<li>任何ISP〔(除了第一层ISP)可以选择<strong>多宿(multi-home)</strong>,即可以与两个或更多提供商ISP连接。例如,一个接人ISP可能与两个区域ISP多宿,既可以与两个区域ISP多宿,也可以与多个第一层ISP多宿。当一个ISP提供商出现故障，能够继续发送和接收分组。</li>
+<li>位于相同等级结构层次的邻近一对ISP能够<strong>对等(peer)</strong>, 也就是说,能够直接将它们的网络连到一起,使它们之间的所有流量经直接连接而不是通过上游的中间ISP传输。当两个ISP对等时,通常不进行结算,即任一个ISP不向其对等付费。因特网交换点（Internet Exchange Point, IXP）多个ISP能够在这里共同对等。</li>
+<li>顶部有<strong>内容提供商网络（content provider network）</strong>，数据中心绕过较高层ISP，直接与较低层ISP连接。</li>
+<li>今天的因特网是一个<strong>网络的网络</strong>，其结构复杂，由十多个第一层ISP和数十万个较低层ISP组成。较低层的ISP与较高层的ISP相连,较高层ISP彼此互联。用户和内容提供商是较低层ISP的客户,较低层ISP是较高层ISP的客户。</li>
+</ul>
+<p><img src="https://pic1.zhimg.com/80/v2-aeb1ce8889ea9b88cb57afbe5c49cc6c_1440w.jpg" alt=""></p>
+<h2 id="delay-loss-and-throughput-in-packet-switched-networks">Delay, Loss, and Throughput in Packet-Switched Networks</h2>
+<h4 id="overview-of-delay-in-packet-switched-networks">Overview of Delay in Packet-Switched Networks</h4>
+<p>当分组从一个节点(主机或路由器)沿着这条路径到后继节点(主机或路由器),该分组在沿途的冬个节点经受了几种不同类型的时延。这些时延最为重要的是<strong>节点处理时延(nodalprocessing delay)</strong>、<strong>排队时延(queuing delay)</strong>、<strong>传输时延(transmission delay)<strong>和</strong>传播时延(propagation delay)</strong>,这些时延总体累加起来是<strong>节点总时延(totalnodal delay)</strong>。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-5d5e8ce120b48b8ea632f8e6564480f0_1440w.jpg" alt="img"></p>
+<ul>
+<li>
+<ul>
+<li><strong>处理时延</strong></li>
+<li>检查分组首部和决定将该分组导向何处所需要的时间是<strong>处理时延</strong>的一部分。</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><strong>排队时延</strong></li>
+<li>在队列中,当分组在链路上等待传输时,它经受<strong>排队时延</strong>。</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><strong>传输时延</strong></li>
+<li>用L比特表示该分组的长度,用Rbps(即b/s)表示从路由器A到路由器B的链路传输速率。链路,速率史=10Mbps;对于100Mbps的以太网链路,速率R=100Mbps。<strong>传输时延是L/R</strong>。这是将所有分组的比特推向链路(即传输,或者说发射)所需要的时间。</li>
+</ul>
+</li>
+<li>
+<ul>
+<li><strong>传播时延</strong></li>
+<li>一旦一个比特被推向链路,该比特需要向路由器B传播。从该链路的起点到路由器B传播所需要的时间是<strong>传播时延</strong>。该比特以该链路的传播速率传播。该传播速率取决于该链路的物理媒体(即光纤、双绞铜线等),其速率范围是2x10~3x10m/s,这等于或略小于光速。该传播时延等于两台路由器之间的距离除以传播速率。</li>
+</ul>
+</li>
+<li>
+<p>传输时延是路由器将分组推出所需要的时间，是分组长度和链路传输速率的函数，而与两台路由器之间的距离无关。</p>
+</li>
+<li>
+<p>传播时延是一个比特从一台路由器向另一台路由器传播所需要的时间，是两台路由器之间距离的函数，而与分组长度或链路传播速率无关。</p>
+</li>
+</ul>
+<h4 id="queuing-delay-and-packet-loss">Queuing Delay and Packet Loss</h4>
+<ul>
+<li>节点时延的最为复杂和有趣的成分是排队时延。</li>
+<li>与其他三项时延（即、 和 ）不同的是，排队时延对不同的分组可能是不同的</li>
+<li>令 $a$ 表示分组到达队列的平均速率（单位：分组/秒，即 $pkt/s$）；$R$是传输速率，即从队列中推出比特的速率（单位 $bps$：，即$b/s$）；假定所以分组都是由$L$比特组成的**，**则比特到达队列的平均速率是$La/R &gt; 1$。假定该队列非常大，因此它基本能容纳无限数量的比特。比率$La/R$被称为**流量强度（traffic intensity）**。</li>
+<li>如果，则比特到达队列的平均速率超过从该队列传输出去的速率，该队列趋向于无限增加，并且排队时延将趋向无穷大！因此，流量工程的一条金科玉律是：<strong>设计系统时流量强度不能大于1</strong>。</li>
+<li>在上述讨论中,我们已经假设队列能够容纳无穷多的分组。在现实中,一条链路前的队列只有有限的容量,尽管排队容量极大地依赖于路由器设计和成本。因为该排队容量是有限的,随着流量强度接近1,排队时延并不真正趋向无穷大。相反,到达的分组将发现一个满的队列。由于没有地方存储这个分组,路由器将<strong>丢弃(drop)<strong>该分组,即该分组将会</strong>丢失(lost)</strong>。</li>
+<li><strong>分组丢失的比例随着流量强度增加而增加</strong></li>
+</ul>
+<h4 id="end-to-end-delay">End-to-End Delay</h4>
+<p>假定在源主机和目的主机之间有台路由器。我们还要假设该网络此时是无拥塞的(因此排队时延是微不足道的),在每台路由器和源主机上的处理时延是$d_{proc}$。,每台路由器和源主机的输出速率是$R$ bps,每条链路的传播时延是$d_{prop}$。节点时延累加起来, 得到端到端时延:$d_{end-end}=N(d_{proc}+d_{trans}+d_{prop})$  式中，其中$L$是分组长度，$d_{trans} = L/R$</p>
+<h4 id="throughput-in-computer-networks-计算机网络中的吞吐量">Throughput in Computer Networks (计算机网络中的吞吐量)</h4>
+<ul>
+<li>考虑从主机A到主机B跨越计算机网络传送一个大文件，在任何时间瞬间的<strong>瞬时吞吐量（instantaneous throughput）<strong>是主机B接收到该文件的</strong>速率</strong>（以计）。</li>
+<li>如果该文件由比特组成，主机B接收到所有F比特用去秒，则文件传送的**平均吞吐量（average throughout）**是</li>
+</ul>
+<h2 id="protocol-layers-and-their-service-models">Protocol Layers and Their Service Models</h2>
+<h4 id="layered-architecture">Layered Architecture</h4>
+<h6 id="协议分层">协议分层</h6>
+<ul>
+<li>
+<p><strong>协议分层的优缺点</strong>：</p>
+</li>
+<li>
+<ul>
+<li><strong>优点</strong>：协议分层具有概念化和结构化的优点。分层提供了一种结构化方式来讨论系统组件。模块化使更新系统组件更为容易。</li>
+<li><strong>缺点</strong>：分层的一个潜在缺点是一层可能冗余较低层的功能。第二个潜在的缺点 是某层的功能可能需要仅在其他某层才出现的信息（如时间戳值），这违反了层次分离的目标。</li>
+</ul>
+</li>
+<li>
+<p>各层的所有协议被称为协议栈(protocol stack)。</p>
+<p>五层因特网协议栈:<strong>物理层、链路层、网络层、运输层和应用层</strong>。</p>
+<p>七层ISO OSI参考模型：<strong>物理层、链路层、网络层、运输层、会话层、表示层和应用层</strong>。</p>
+</li>
+</ul>
+<p>因特网协议栈自顶向下：</p>
+<ul>
+<li>
+<p>应用层</p>
+<p>因特网的应用层包括许多协议，例如HTTP（Web文档请求和传送）、SMTP（电子邮件报文的传输）、FTP（两个端系统之间的文件传送）、DNS（域名系统）等。</p>
+<p>应用层协议分布在多个端的系统上，一个端系统中的应用程序使用协议与另一个端系统中的应用程序交换信息的分组。应用层的信息分组称为<strong>报文(message)</strong></p>
+</li>
+<li>
+<p>运输层</p>
+<p>因特网的运输层在应用程序端点之间<strong>传送应用层报文</strong>。因特网中有两个运输协议，即TCP和UDP，两个都可以运输应用层报文。</p>
+<p>TCP是面向连接的，这种服务包括了应用层报文向目的地的<strong>确保传递</strong>和<strong>流量控制</strong>，TCP也将长报文<strong>划分为短报文</strong>，并提供<strong>拥塞控制</strong>机制，因此当网络拥塞时，源地址会抑制其传输速率。</p>
+<p>UDP协议提供无连接服务，这是一种不提供不必要服务的服务，<strong>没有可靠性，没有流量控制，也没有拥塞控制</strong>。</p>
+<p>运输层分组称为<strong>报文段(segment)</strong></p>
+</li>
+<li>
+<p>网络层
+网络层的分组称为 <strong>数据报(datagram)</strong></p>
+<p>因特网的网络层把数据包从一台主机移动到另一台主机。在一台源主机中的因特网运输层协议（TCP或UDP）向网络层<strong>递交运输层报文段和目的地址</strong>。</p>
+<p>网络层中包括<strong>IP协议</strong>，该协议定义了数据包中的各个字段以及端系统和路由器如何作用于这些字段。</p>
+</li>
+<li>
+<p>链路层
+因特网的网络层通过源和目的地之间的一系列路由器路由数据报。网络层依靠链路层的服务来将分组从结点(主机或路由器)移动到路径上的下一个结点。在每一个结点，网络层将数据报下，链路层沿着路径将数据报传递给下一个结点，在下一个结点，链路层将数据报上传给网络层。</p>
+<p>某些协议基于链路层提供可靠传递，从传输结点跨越一条链路到接收结点，这种可靠传输不同于TCP的可靠传输。(从一个端系统到另一个端系统)</p>
+<p>链路层分组称为 <strong>帧(frame)</strong></p>
+</li>
+<li>
+<p>物理层
+链路层的任务是把整个帧从一个网络元素移动到邻近的网络元素，物理层的任务则是把<strong>该帧中的一个个比特从一个结点移动到下一个结点</strong>，这些仍是和链路相关的，但是是与链路的实际传输媒体相关的。</p>
+</li>
+</ul>
+<p>OSI模型：</p>
+<ul>
+<li>
+<p>表示层</p>
+<p>表示层的作用是使通信的应用程序能够解释交换数据的含义。这些服务包括数据压缩、数据加密以及数据描述。</p>
+</li>
+<li>
+<p>会话层</p>
+<p>会话层提供了数据交换定界和同步功能，包括了建立检查点和恢复方案的方法。</p>
+</li>
+</ul>
+<p>因特网缺少了OSI模型中的两层，这两层留给应用程序开发者处理。</p>
+<h4 id="encapsulation">Encapsulation</h4>
+<p><img src="https://pic3.zhimg.com/80/v2-9a7b7f552162bcb27dd2c4986c03568a_1440w.jpg" alt=""></p>
+<p>数据从发送端系统的协议栈向下，向上和向下经过中间的链路层交换机和路由器协议栈，进而向上到达接收端系统的协议栈。</p>
+<p>路由器和链路层交换机并不实现协议栈中的所有层次。链路层交换机实现了链路层和物理层，路由器实现了链路层、物理层和网络层。</p>
+<p><strong>封装（encapsulation）</strong>:</p>
+<ul>
+<li>运输层收到<strong>应用层报文(application-layer message)<strong>并附上运输层首部信息，构成了</strong>运输层报文端（transport-layer segment）</strong></li>
+<li>网络层增加了如源和目的端系统地址和网络层首部信息，产生<strong>网络层数据报（network-layer datagram）</strong></li>
+<li>链路层增加链路层首部信息并创建<strong>链路层帧（link-layer frame）</strong></li>
+</ul>
+<p>在每一层，一个分组都具有两种类型的字段：<strong>首部字段和有效载荷字段（payload field）</strong>，有效符合通常来自上一层的分组。</p>
+<h1 id="reference">Reference</h1>
+<ol>
+<li><a href="https://www.pearson.com/us/higher-education/product/Kurose-Computer-Networking-A-Top-Down-Approach-6th-Edition/9780132856201.html?tab=contents">Computer Networking: A Top-Down Approach, 6th Edition</a></li>
+</ol>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2021-03-05
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://www.yezheng.pro/tags/computer-networking/">computer-networking</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/specialization/computer-networking/computer-networks-2/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">Application Layer</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/specialization/computer-networking/how-the-internet-works/">
+            <span class="next-text nav-default">How the Internet Works</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://www.yezheng.pro/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2021
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

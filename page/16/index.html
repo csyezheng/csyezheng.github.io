@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-03-07T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,12 +296,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/artificial-intelligence/machine-learning/learn-ml/">Learning Path for Machine Learning</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/deep-learning/notes-deep-learning-with-python/">notes of deep learning with python</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-04-27" class="post-time">
-        2020-04-27
+      <time datetime="2020-05-05" class="post-time">
+        2020-05-05
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
@@ -316,13 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Learning Path for Machine Learning Basics of machine learning with TensorFlow Step 1: Understand what ML is all about The book ‘Deep Learning in Python’ by Francois Chollet, creator of Keras, is a great place to get started. Read chapters 1-4 to understand the fundamentals of ML from a programmer’s perspective.
-Google Developers Machine Learning Crash Course
-Machine Learning Glossary
-Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which takes you beyond the basics into introductory Computer Vision, NLP, and Sequence modelling.
+      Deep Learning with Python PART 1 - FUNDAMENTALS OF DEEP LEARNING 1.What is deep learning? Artificial intelligence, machine learning, and deep learning Before deep learning: a brief history of machine learning Why deep learning? Why now? 2.Before we begin: the mathematical building blocks of neural networks A first look at a neural network Data representations for neural networks tensor: it’s a container for numbers. You may be already familiar with matrices, which are 2D tensors: tensors are a generalization of matrices to an arbitrary number of dimensions (note that in the context of tensors, a dimension is often called an axis).
     </div>
     <div class="read-more">
-      <a href="/post/specialization/artificial-intelligence/machine-learning/learn-ml/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/deep-learning/notes-deep-learning-with-python/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -333,15 +330,15 @@ Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which 
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/any-path/wireshark/">Wireshark</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/machine-learning/scikit-learn/">scikit-learn</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-03-07" class="post-time">
-        2020-03-07
+      <time datetime="2020-05-05" class="post-time">
+        2020-05-05
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
+          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -353,10 +350,18 @@ Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which 
   <div class="post-content">
     
     <div class="post-summary">
-      $ tshark -r all.pcapng.gz -i http==1 -O http -T fields -e http.request.method -e http.request.uri -e http.request.line -e http.response.line &gt; dump.txt 
+      scikit-learn   sklearn
+  preprocessing
+  MultiLabelBinarizer
+Transforms between iterable of iterables and a multilabel format (binary matrix)
+    utils
+  class_weight
+  compute_class_weight
+Estimate class weights for unbalanced datasets.
+        
     </div>
     <div class="read-more">
-      <a href="/post/any-path/wireshark/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/machine-learning/scikit-learn/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -367,15 +372,15 @@ Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which 
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/scrapy-with-django/">Scraping with Scrapy and Django Integration</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/machine-learning/solution/">Solution for imbalanced data</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-02-12" class="post-time">
-        2020-02-12
+      <time datetime="2020-05-01" class="post-time">
+        2020-05-01
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -387,10 +392,10 @@ Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which 
   <div class="post-content">
     
     <div class="post-summary">
-      Installing Dependencies (Optional) $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple $ python -m pip install --user virtualenv $ python -m pip install --user virtualenvwrapper $ vim ~/.bashrc export WORKON_HOME=$HOME/.virtualenvs export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv source $HOME/.local/bin/virtualenvwrapper.sh $ source ~/.bashrc $ mkvirtualenv stock-screener pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat Creating a Django Project $ django-admin startproject stock_screener $ cd stock_screener $ mkdir stock_screener/apps/basic_info $ django-admin startapp basic_info stock_screener/apps/basic_info $ mkdir stock_screener/apps/northbound $ django-admin startapp northbound stock_screener/apps/northbound $ mkdir stock_screener/apps/financial_metrics $ django-admin startapp financial_metrics stock_screener/apps/financial_metrics $ mkdir stock_screener/apps/quotes $ django-admin startapp quotes stock_screener/apps/quotes $ mkdir stock_screener/apps/jobs $ django-admin startapp jobs stock_screener/apps/jobs Cannot add backslash suffix when run startapp command.
+      FAQ imbalanced data  https://www.tensorflow.org/tutorials/structured_data/imbalanced_data https://stackoverflow.com/questions/43481490/keras-class-weights-class-weight-for-one-hot-encoding https://github.com/jbjorne/TEES/blob/master/Detectors/KerasDetectorBase.py https://towardsdatascience.com/practical-tips-for-class-imbalance-in-binary-classification-6ee29bcdb8a7 https://stackoverflow.com/questions/48485870/multi-label-classification-with-class-weights-in-keras  Class weight degrades Multi Label Classification Performance  https://datascience.stackexchange.com/questions/28040/class-weight-degrades-multi-label-classification-performance  What is the difference between multilabel and multiclass classification?  https://www.quora.com/What-is-the-difference-between-multilabel-and-multiclass-classification https://stats.stackexchange.com/questions/260505/should-i-use-a-categorical-cross-entropy-or-binary-cross-entropy-loss-for-binary  
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/scrapy-with-django/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/machine-learning/solution/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1506,6 +1511,27 @@ Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which 
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/17/">»</a></li>
@@ -1513,7 +1539,7 @@ Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which 
 
       
       
-      <li><a href="/page/46/">»»</a></li>
+      <li><a href="/page/47/">»»</a></li>
       
 
       </ul>

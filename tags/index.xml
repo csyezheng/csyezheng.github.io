@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>computer-networking</title>
+      <link>http://www.yezheng.pro/tags/computer-networking/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/tags/computer-networking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tcp</title>
+      <link>http://www.yezheng.pro/tags/tcp/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/tags/tcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>http</title>
+      <link>http://www.yezheng.pro/tags/http/</link>
+      <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/tags/http/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>chatbot</title>
       <link>http://www.yezheng.pro/tags/chatbot/</link>
@@ -157,33 +184,6 @@
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/tags/recommendation-system/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sqoop</title>
-      <link>http://www.yezheng.pro/tags/sqoop/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/tags/sqoop/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>http://www.yezheng.pro/tags/kubernetes/</link>
-      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/tags/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>microservices</title>
-      <link>http://www.yezheng.pro/tags/microservices/</link>
-      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/tags/microservices/</guid>
       <description></description>
     </item>
     

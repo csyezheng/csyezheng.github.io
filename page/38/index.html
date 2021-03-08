@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-03-07T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,15 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/any-path/setup-a-archlinux-windows10-dual-booting-system/">Setup a Archlinux / Windows10 dual booting system</a>
+      <a class="post-link" href="/post/computer-science-core/algorithms/data-structures-and-algorithms-use/">Data structures and algorithms use</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-09-25" class="post-time">
-        2017-09-25
+      <time datetime="2017-12-25" class="post-time">
+        2017-12-25
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
+          <a href="http://www.yezheng.pro/categories/computer-science-core/"> computer-science-core </a>
           
         </div>
       
@@ -316,15 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Before   Check the hardware, three disks on my Lenovo ThinkPad P50
-  Samsung SSD 970 EVO Plus 250GB for installing windows
-  Samsung SSD 960 EVO 250GB for installling archlinux
-  WDC WD5000LPLX-0 HHD 500GB for data storage
-    Disable Windows Fast Startup if start from windows
-  Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)
+      AVL树 最早的平衡二叉树之一。应用相对其他数据结构比较少。windows对进程地址空间的管理用到了AVL树。 红黑树 平衡二叉树，广泛用在C++
     </div>
     <div class="read-more">
-      <a href="/post/any-path/setup-a-archlinux-windows10-dual-booting-system/" class="read-more-link">Read more</a>
+      <a href="/post/computer-science-core/algorithms/data-structures-and-algorithms-use/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -335,12 +330,49 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/front-end/bootstrap/">Bootstrap</a>
+      <a class="post-link" href="/post/specialization/devops/nginx/">Nginx</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-07-01" class="post-time">
-        2017-07-01
+      <time datetime="2017-10-21" class="post-time">
+        2017-10-21
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      General configuration Managing server entries It is possible to put different server blocks in different files. This allows you to easily enable or disable certain sites.
+# mkdir /etc/nginx/sites-available # mkdir /etc/nginx/sites-enabled Create a file inside the sites-available directory that contains one or more server blocks:
+/etc/nginx/sites-available/example server { .. } Append the following line at the end of the http block in /etc/nginx/nginx.conf:
+include sites-enabled/*; To enable a server block, simple create a symlink:
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/devops/nginx/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/specialization/web-application/back-end/postgresql/">PostgreSQL</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2017-09-30" class="post-time">
+        2017-09-30
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
@@ -355,44 +387,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Bootstrap Components Modal Add dialogs to your site for lightboxes, user notifications, or completely custom content.
+      Installing PostgreSQL $ sudo pacman -S postgresql $ sudo -u postgres -i [postgres]$ initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data' [postgres]$ exit $ pg_ctl -D /var/lib/postgres/data -l logfile start $ systemctl start postgresql.service $ systemctl enable postgresql.service Create your first database/user Access the database shell $ [postgres]$ psql -d myDatabaseName \help \c &lt;database&gt; \du # list all users and their permission levels \dt # show summary information about all tables \q \?
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/front-end/bootstrap/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/web-application/front-end/angular/">Angular</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2017-06-21" class="post-time">
-        2017-06-21
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      QuickStart Step 1. Set up the Development Environment $ yaourt -S nodejs npm $ npm install -g @angular/cli Step 2. Create a new project $ ng new my-app Step 3: Serve the application $ cd my-app $ ng serve --open Step 4: Edit your first Angular component # ./src/app/app.component.ts export class AppComponent { title = 'My First Angular App!'; } # ./src/app/app.component.css h1 { color: #369; font-family: Arial, Helvetica, sans-serif; font-size: 250%; } Project file review my-app e2e # end-to-end tests src app.
-    </div>
-    <div class="read-more">
-      <a href="/post/specialization/web-application/front-end/angular/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/postgresql/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1508,6 +1506,27 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/39/">»</a></li>
@@ -1515,7 +1534,7 @@
 
       
       
-      <li><a href="/page/46/">»»</a></li>
+      <li><a href="/page/47/">»»</a></li>
       
 
       </ul>

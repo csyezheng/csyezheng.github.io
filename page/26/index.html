@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-03-07T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,7 +296,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/go/">Golang</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/gin/">Gin</a>
     </h1>
     
     <div class="post-meta">
@@ -316,25 +316,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      a-tour-of-go
-standard-library
-Debugging-with-Delve
-generate-model-structs-from-database
-glide
-gopm
-material
-package_download
-quick-start
-web-dev-with-gin-needed
-gin
-go-get-golang-x-solution.md
-good-at.md
-gorm.md
-modules.md
-photoprism.md
+      sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
+$ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/sessions&quot; cookie-based Example import ( &quot;github.com/gin-contrib/sessions&quot; &quot;github.com/gin-contrib/sessions/cookie&quot; &quot;github.com/gin-gonic/gin&quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&quot;secret&quot;)) r.Use(sessions.Sessions(&quot;mysession&quot;, store)) r.GET(&quot;/incr&quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&quot;count&quot;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&quot;count&quot;, count) session.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/go/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/gin/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -345,7 +331,7 @@ photoprism.md
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/good-at/">Golang Pros and Cons</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/glide/">glide</a>
     </h1>
     
     <div class="post-meta">
@@ -365,10 +351,10 @@ photoprism.md
   <div class="post-content">
     
     <div class="post-summary">
-      Golang Pros  Modular design means the compiled binary is as small as possible and requires no dependencies. Like Java, it’s platform independent. You can compile it for any platform your servers and applications run on. Take that, Apple. Easy for your developers to learn because it’s based on C. You don’t need to go to a code bootcamp to become proficient. Has static type checking, meaning your code gets its bugs cleaned up at compile time, not in production.
+      使用 glide install 或 glide up 时报 Cannot detect VCS image.png 解决 这个是国内访问golang.org被墙导致的 解决方法如下： glide mirror set https://golang.org/x/crypto https://github.com/golang/crypto 理论上这样后再执行 glide install 或 glide up 就可以了 如果按
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/good-at/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/glide/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -379,7 +365,7 @@ photoprism.md
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/gopm/">gopm</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/modules/">go modules</a>
     </h1>
     
     <div class="post-meta">
@@ -399,10 +385,10 @@ photoprism.md
   <div class="post-content">
     
     <div class="post-summary">
-      go get -u github.com/gpmgo/gopm 
+      https://github.com/golang/go/wiki/Modules#quick-start
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/gopm/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/modules/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1518,6 +1504,27 @@ photoprism.md
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/27/">»</a></li>
@@ -1525,7 +1532,7 @@ photoprism.md
 
       
       
-      <li><a href="/page/46/">»»</a></li>
+      <li><a href="/page/47/">»»</a></li>
       
 
       </ul>

@@ -6,7 +6,7 @@
     <description>Recent content on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://www.yezheng.pro/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,6 +20,825 @@
       
         <description>&lt;p&gt;I&amp;rsquo;m graduated from the Hebei GEO University with a degree in marketing, because I thought computers were cool from an early age, so I chose programmers as my future employment direction in my third year of college. In the third year of college, I learned some front-end knowledge, and in the fourth year of college I learned some C ++ related knowledge. After graduating, I naturally found a job related to programming.&lt;/p&gt;
 &lt;p&gt;In the first company, I was mainly engaged in web crawling. I was responsible for scraping various financial data including stock exchanges, performing data cleaning, and completing an announcement classification system during the period. I worked as a data development engineer in the second company, and solved development problems such as real-time data forwarding, reception, and storage. I worked as a back-end development engineer at a third company and built the entire edx-based online learning system.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Transport Layer</title>
+      <link>http://www.yezheng.pro/post/specialization/computer-networking/computer-networks-3/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/computer-networking/computer-networks-3/</guid>
+      
+        <description>&lt;h2 id=&#34;introduction-and-transport-layer-services&#34;&gt;Introduction and Transport-Layer Services&lt;/h2&gt;
+&lt;p&gt;运输层位于应用层和网络层之间，该层为运行在不同主机上的应用进程提供直接的通信服务，它将网络层的在两个端系统之间的交付服务扩展到运行在两个不同端系统上的应用进程之间的交付服务。这句话的理解是，运输层协议为运行在不同主机上的应用进程之间提供了&lt;strong&gt;逻辑通信&lt;/strong&gt;(logic communication)功能，应用程序使用运输层提供的逻辑通信功能彼此发送报文，而无需考虑承载这些报文的物理基础设施的细节。&lt;/p&gt;
+&lt;p&gt;运输层协议是在端系统中而不是在路由器中实现的。在发送端，运输层将从发送应用进程接收到的报文转换成运输层分组，该分组称为&lt;strong&gt;报文段&lt;/strong&gt;(segment)。实现方式可能是&lt;strong&gt;将应用报文划分为较小的块，并为每块加上一个运输层首部以生成运输层报文段&lt;/strong&gt;，然后在发送端系统中，运输层将这些报文段传递给网络层。注意：网络路由器仅作用于该数据报的网路层字段；即它们不检查封装在该数据报的运输层报文段的字段。在接收端，网络层从数据报中提取出运输层报文段，并将该报文段上交给运输层，经运输层处理后上交给应用进程使用。&lt;/p&gt;
+&lt;h4 id=&#34;relationship-between-transport-and-network-layers&#34;&gt;Relationship Between Transport and Network Layers&lt;/h4&gt;
+&lt;p&gt;运输层位于网络层之上。&lt;strong&gt;网络层&lt;/strong&gt;提供了&lt;strong&gt;主机&lt;/strong&gt;之间的逻辑通信，而&lt;strong&gt;运输层&lt;/strong&gt;为运行在不同&lt;strong&gt;主机的进程&lt;/strong&gt;之间提供了逻辑通信。&lt;strong&gt;运输层协议只工作在端系统中&lt;/strong&gt;，在端系统中，运输层协议将来自应用进程的报文移动到网络边缘(即网络层)，但对这些报文在网络核心如何移动并不做任何规定。中间路由器既不处理也不识别运输层加在应用层报文的任何信息。&lt;/p&gt;
+&lt;p&gt;运输层协议常常受制于底层网络协议的服务模型。但即使底层网络协议是不可靠的，会使分组丢失、篡改和冗余，运输层协议也能为应用程序提供可靠的数据传输服务。&lt;/p&gt;
+&lt;h4 id=&#34;overview-of-the-transport-layer-in-the-internet&#34;&gt;Overview of the Transport Layer in the Internet&lt;/h4&gt;
+&lt;p&gt;因特网为应用层提供了两种截然不同的可用运输层协议，一个是UDP(用户数据报协议)，它为调用它的应用程序提供一种不可靠的、无连接的服务；另一个是TCP(传输控制协议)，它为调用它的应用程序提供一种可靠的、面向连接的服务。&lt;/p&gt;
+&lt;p&gt;在讲UDP和TCP之前，需要简单了解网络层。网络层协议非常重要的是IP，即网际协议。IP为主机之间提供逻辑通信，IP的服务模型是&lt;strong&gt;尽力而为交付服务&lt;/strong&gt;(best-effort delivery service)，即它不确保报文段的交付，不保证报文段的按序交付，不保证报文段中数据的完整性，因此IP被称为&lt;strong&gt;不可靠服务&lt;/strong&gt;(unreliable service)。&lt;/p&gt;
+&lt;p&gt;再来看UDP和TCP，两种协议的基本责任是&lt;strong&gt;将两个端系统间IP的交付服务扩展为运行在端系统上的两个进程间的交付服务&lt;/strong&gt;。将主机间交付扩展到进程间交付被称为运输层的&lt;strong&gt;多路复用&lt;/strong&gt;(transport-layer multiplexing)与&lt;strong&gt;多路分解&lt;/strong&gt;(demultiplexing)。UDP和TCP还可以通过在其报文段首部中包括&lt;strong&gt;差错检查字段&lt;/strong&gt;而提供完整性检查。进程到进程的数据交付和差错检查是两种最低限度的运输层服务，也是UDP能提供的仅有的两种服务。&lt;/p&gt;
+&lt;p&gt;另一方面，TCP为应用程序提供几种附加服务。一是&lt;strong&gt;可靠数据传输&lt;/strong&gt;(reliable data transfer)，通过使用流量控制、序号、确认和定时器，TCP确保正确地、按序地将数据交付；另一个是&lt;strong&gt;拥塞控制&lt;/strong&gt;(congestion control)，它防止任何一条TCP连接用过多流量来淹没通信主机之间的链路和交换设备。&lt;/p&gt;
+&lt;h2 id=&#34;multiplexing-and-demultiplexing&#34;&gt;Multiplexing and Demultiplexing&lt;/h2&gt;
+&lt;p&gt;一个主机有一个或多个进程，而一个进程有一个或多个套接字，将运输层报文段中的数据交付到正确的套接字的工作称为&lt;strong&gt;多路分解&lt;/strong&gt;(demultiplexing)；在源主机从不同套接字中收集数据块，并为每个数据块封装上首部信息从而生成报文段，然后将报文段传递到网络层，所有这些工作称为&lt;strong&gt;多路复用&lt;/strong&gt;(multiplexing)。&lt;/p&gt;
+&lt;p&gt;要实现多路复用，运输层需要：套接字有唯一的标识符；每个报文段有特殊字段来指示该报文段所要交付到的套接字。如图2.1，这些特殊字段是&lt;strong&gt;源端口号字段&lt;/strong&gt;(source port number filed)和&lt;strong&gt;目的端口号字段&lt;/strong&gt;(destination port number filed)。端口号是一个16比特的数，大小在0~65535之间。0~1023范围的端口号被称为周知端口号(well-known port number)，是受限制的，保留给如HTTP等周知的应用层协议使用。当我们开发一个新的应用程序时，必须为其分配一个端口号。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://img2020.cnblogs.com/blog/1550970/202011/1550970-20201126153426043-1801664430.png&#34;&gt;&lt;img src=&#34;https://img2020.cnblogs.com/blog/1550970/202011/1550970-20201126153428108-345024607.png&#34; alt=&#34;clip_image002&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;​          图2.1 运输层报文段中的源与目的端口号字段&lt;/p&gt;
+&lt;p&gt;因此多路分解就是，在报文段到达主机时，运输层检查报文段中的目的端口号，将其定位到相应的套接字。UDP基本上就是这样做的，但TCP的却更为复杂。&lt;/p&gt;
+&lt;h6 id=&#34;无连接的多路复用和多路分解&#34;&gt;无连接的多路复用和多路分解&lt;/h6&gt;
+&lt;p&gt;无连接的多路复用和多路分解，即UDP多路复用和多路分解。复用与分解的关键在于为套接字关联一个特定的端口号。在使用UDP通信时，创建一个UDP套接字，运输层可以自动为该套接字分配一个端口号，也可以手动为该套接字绑定一个特定的端口号。在形成运输层的报文段时，其中包括&lt;strong&gt;应用程序数据、源端口号(作为“返回地址”)、目的端口号和两个其他值&lt;/strong&gt;。这样就能够精确描述UDP的复用与分解。&lt;/p&gt;
+&lt;p&gt;需要注意的是，&lt;strong&gt;一个UDP套接字是由一个二元组全面标识的&lt;/strong&gt;，该二元组包含了一个目的IP地址和一个目的端口号。因此，如果两个UDP报文段有不同的源IP地址和源端口号，但是具有相同的目的IP地址和目的端口号，那么这两个报文段将&lt;strong&gt;通过&lt;/strong&gt;相同的&lt;strong&gt;目的套接字****被定向到&lt;/strong&gt;相同的目的&lt;strong&gt;进程&lt;/strong&gt;，**即目的主机只使用目的端口号和IP地址定位相应的套接字。这一点与TCP是不同的。&lt;/p&gt;
+&lt;h6 id=&#34;面向连接的多路复用与多路分解&#34;&gt;面向连接的多路复用与多路分解&lt;/h6&gt;
+&lt;p&gt;TCP套接字与UDP套接字不同的是，因为TCP是面向连接的，**TCP套接字是由一个四元组(源IP地址，源端口号，目的IP地址，目的端口号)来标识的。**因此，当一个TCP报文段从网络到达主机时，该主机使用全部4个值来将报文段定向到相应的套接字。比如，两个具有不同源IP地址或端口号的TCP报文段将被定向到两个不同的套接字，除非TCP报文段携带的是初始创建连接的请求(因为TCP服务器有一个“欢迎套接字”，TCP连接建立时都需要先向该套接字发送请求)。&lt;/p&gt;
+&lt;p&gt;服务器主机可以支持很多并行的TCP套接字，每个套接字与一个进程相联系，并由其四元组来标识每个套接字。当一个TCP报文段到达主机时，所有4个字段被用来将报文段定向分解到相应的套接字。&lt;/p&gt;
+&lt;p&gt;端口扫描器nmap能够扫描能够接收TCP连接或能响应的UDP端口。&lt;/p&gt;
+&lt;p&gt;如图2.2，主机A和主机C以及服务器B都有自己的唯一IP地址A、B、C，其中主机C向服务器B发送两个会话，主机A向服务器B发送一个会话。主机C为两个会话分配了两个不同的源端口号(26145和7532)，因为主机A选择源端口号时与主机C互不相干，因此它也可以将源端口号26145分配给其会话连接。尽管如此，服务器B仍能正确地分解这两个具有相同源端口号的连接，因为两个连接的源IP地址不同。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://img2020.cnblogs.com/blog/1550970/202011/1550970-20201126153438895-2037525561.png&#34;&gt;&lt;img src=&#34;https://img2020.cnblogs.com/blog/1550970/202011/1550970-20201126153440762-1703603010.png&#34; alt=&#34;clip_image003&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;​                     图2.3 两个客户使用相同目的端口号和源端口号与同一服务器应用通信&lt;/p&gt;
+&lt;h6 id=&#34;web服务器与tcp&#34;&gt;Web服务器与TCP&lt;/h6&gt;
+&lt;p&gt;需要注意的是，**连接套接字并非与进程之间并不是一一对应关系。**早期每个Web服务器可以为每条连接生成一个新进程，这样每个进程都有自己的连接套接字，但现在的高性能Web服务器通常只使用一个进程，当客户请求连接时，这个进程会为每个新的客户创建一个具有新连接套接字的新线程，因此很多具有不同标识的的连接套接字连接到的是相同的进程。&lt;/p&gt;
+&lt;h4 id=&#34;connectionless-transport-udp&#34;&gt;Connectionless Transport: UDP&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;运输层的最低限度是必须提供一种复用/分解服务，以便在网络层和正确的应用级进程之间传递数据。&lt;strong&gt;UDP就是一种非常简单的协议，在[RFC 768]的定义中，UDP除了&lt;/strong&gt;复用/分解以及少量差错检测&lt;/strong&gt;之外，几乎没有对IP增加别的东西。UDP从应用进程得到数据，附加上用于复用/分解的源和目的端口号字段，以及两个其他的小字段，然后形成报文段交给网络层。UDP做了非常少的工作，差不多应用进程是直接与IP交互。&lt;/p&gt;
+&lt;p&gt;使用UDP时，在发送报文前，发送方和接收方的运输层实体之间&lt;strong&gt;没有握手&lt;/strong&gt;，正因如此，UDP被称为是&lt;strong&gt;无连接&lt;/strong&gt;的。&lt;/p&gt;
+&lt;p&gt;DNS是一个通常使用UDP的应用层协议的例子。&lt;/p&gt;
+&lt;p&gt;许多应用更适合使用UDP，主要原因有：&lt;/p&gt;
+&lt;p&gt;（1）&lt;strong&gt;关于发送什么数据以及何时发送的应用层控制更为精细。&lt;strong&gt;采用UDP时，只要应用进程将数据传递给UDP，UDP就会将该数据打包进UDP报文段并传递给网络层。而TCP提供可靠传输服务，还有拥塞控制机制和超时重传机制，TCP不管可靠交付需要多长时间，一定要保证目的主机接收并确认。而&lt;/strong&gt;实时应用&lt;/strong&gt;通常要求最小的发送速率，不希望过分地延迟报文段的传送，且能容忍一些数据的丢失，TCP服务模型并不是特别适合这些应用的需要。这些应用可以使用UDP，并作为应用的一部分来&lt;strong&gt;实现所需、超出UDP的不提供不必要的报文段交付服务之外的额外功能。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;（2）**无须建立连接。**UDP不需要任何准备即可进行数据传输，因此UDP不会引入建立连接的时延(这可能是DNS运行在UDP上的主要原因)。&lt;/p&gt;
+&lt;p&gt;（3）**无连接状态。**TCP需要在端系统中维护连接状态，该状态包括缓存、拥塞控制参数以及序号确认序号。**而UDP不需要维护连接状态，**也不跟踪这些参数。因此，某些专门用于某种特定应用的服务器当应用程序运行在UDP之上而不是运行在TCP上时，&lt;strong&gt;一般都能支持更多活跃客户。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;（4）**分组首部开销小。**每个TCP报文段都有20个字节的首部开销，而UDP仅有8字节的开销。&lt;/p&gt;
+&lt;p&gt;UDP不提供可靠数据传输服务，但是使用UDP的应用是可能实现可靠数据传输的。这&lt;strong&gt;可以通过在应用进程自身中建立可靠性机制来完成&lt;/strong&gt;，（例如，可通过增加确认和重传机制来实现）如谷歌浏览器中的QUIC协议就是在UDP之上的应用层协议实现了可靠性。这样做可以使应用进程进行可靠通信，而无需受制于TCP的拥塞控制机制带来的传输速率限制。&lt;/p&gt;
+&lt;h4 id=&#34;udp-segment-structure&#34;&gt;UDP Segment Structure&lt;/h4&gt;
+&lt;p&gt;UDP首部只有4个字段，每个字段由两个字节组成。源端口号和目的端口号在复用/分解时被使用；长度字段指示了在UDP报文段中的字节数(首部+数据)，因为数据字段的长度在一个UDP段中不同于在其他层封装后的段中，所以需要一个明确长度；接收方使用校验和来检查在该报文段是否出现差错。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://img2020.cnblogs.com/blog/1550970/202011/1550970-20201126153826665-627460470.png&#34;&gt;&lt;img src=&#34;https://img2020.cnblogs.com/blog/1550970/202011/1550970-20201126153849397-1476776484.png&#34; alt=&#34;image&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;​           图2.1 UDP报文段结构&lt;/p&gt;
+&lt;h4 id=&#34;udp-checksum&#34;&gt;UDP Checksum&lt;/h4&gt;
+&lt;p&gt;UDP提供了差错检测功能，具体为发送方的UDP对报文段中的所有16比特字段的和进行反码运算，求和时遇到的任何溢出都被回卷。得到的结果被放在UDP报文段中的检验和字段。&lt;/p&gt;
+&lt;p&gt;用一个例子说明计算过程，有三个16比特：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://img2020.cnblogs.com/blog/1550970/202011/1550970-20201126153900674-1463253988.png&#34;&gt;&lt;img src=&#34;https://img2020.cnblogs.com/blog/1550970/202011/1550970-20201126153904492-1464881034.png&#34; alt=&#34;clip_image002&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最后一次加法有溢出，它要被回卷，其结果进行反码运算后得到(1011010100111101)校验和。在接收方，包括校验和的全部的4个16比特加在一起，若没有出现差错，最后结果将是(1111111111111111)。&lt;/p&gt;
+&lt;p&gt;UDP提供端到端的差错检测，但不能对差错进行恢复，某些实现是将受损报文段丢弃，其他实现是将受损报文段交给应用程序并给出警告。&lt;/p&gt;
+&lt;h2 id=&#34;principles-of-reliable-data-transfer&#34;&gt;Principles of Reliable Data Transfer&lt;/h2&gt;
+&lt;h4 id=&#34;building-a-reliable-data-transfer-protocol&#34;&gt;Building a Reliable Data Transfer Protocol&lt;/h4&gt;
+&lt;h4 id=&#34;pipelined-reliable-data-transfer-protocols&#34;&gt;Pipelined Reliable Data Transfer Protocols&lt;/h4&gt;
+&lt;h4 id=&#34;go-back-n-gbn&#34;&gt;Go-Back-N (GBN)&lt;/h4&gt;
+&lt;h4 id=&#34;selective-repeat-sr&#34;&gt;Selective Repeat (SR)&lt;/h4&gt;
+&lt;h2 id=&#34;connection-oriented-transport-tcp&#34;&gt;Connection-Oriented Transport: TCP&lt;/h2&gt;
+&lt;h4 id=&#34;the-tcp-connection&#34;&gt;The TCP Connection&lt;/h4&gt;
+&lt;h4 id=&#34;tcp-segment-structure&#34;&gt;TCP Segment Structure&lt;/h4&gt;
+&lt;h4 id=&#34;round-trip-time-estimation-and-timeout&#34;&gt;Round-Trip Time Estimation and Timeout&lt;/h4&gt;
+&lt;h4 id=&#34;reliable-data-transfer&#34;&gt;Reliable Data Transfer&lt;/h4&gt;
+&lt;h4 id=&#34;flow-control&#34;&gt;Flow Control&lt;/h4&gt;
+&lt;h4 id=&#34;tcp-connection-management&#34;&gt;TCP Connection Management&lt;/h4&gt;
+&lt;h2 id=&#34;principles-of-congestion-control&#34;&gt;Principles of Congestion Control&lt;/h2&gt;
+&lt;h4 id=&#34;the-causes-and-the-costs-of-congestion&#34;&gt;The Causes and the Costs of Congestion&lt;/h4&gt;
+&lt;h4 id=&#34;approaches-to-congestion-control&#34;&gt;Approaches to Congestion Control&lt;/h4&gt;
+&lt;h4 id=&#34;network-assisted-congestion-control-example-atm-abr-congestion-control&#34;&gt;Network-Assisted Congestion-Control Example: ATM ABR Congestion Control&lt;/h4&gt;
+&lt;h2 id=&#34;tcp-congestion-control&#34;&gt;TCP Congestion Control&lt;/h2&gt;
+&lt;h4 id=&#34;fairness&#34;&gt;Fairness&lt;/h4&gt;
+&lt;h2 id=&#34;programming-assignments&#34;&gt;Programming Assignments&lt;/h2&gt;
+&lt;h2 id=&#34;wireshark-lab-exploring-tcp&#34;&gt;Wireshark Lab: Exploring TCP&lt;/h2&gt;
+&lt;h2 id=&#34;wireshark-lab-exploring-udp&#34;&gt;Wireshark Lab: Exploring UDP&lt;/h2&gt;
+&lt;h1 id=&#34;reference&#34;&gt;Reference&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pearson.com/us/higher-education/product/Kurose-Computer-Networking-A-Top-Down-Approach-6th-Edition/9780132856201.html?tab=contents&#34;&gt;Computer Networking: A Top-Down Approach, 6th Edition&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Application Layer</title>
+      <link>http://www.yezheng.pro/post/specialization/computer-networking/computer-networks-2/</link>
+      <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/computer-networking/computer-networks-2/</guid>
+      
+        <description>&lt;h2 id=&#34;principles-of-network-applications&#34;&gt;Principles of Network Applications&lt;/h2&gt;
+&lt;p&gt;研究网络应用程序的核心是写出能够运行在不同的端系统和通过网络彼此通信的程序。不需要写在网络核心设备如路由器或链路层交换机上运行的软件。&lt;/p&gt;
+&lt;h4 id=&#34;network-application-architectures&#34;&gt;Network Application Architectures&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;在**客户-服务器体系结构 (client-server architecture)**中，有一个总是打开的主机称为服务器，它服务于来自许多其他称为客户的主机的请求。著名的应用程序包括Web、FTP、Telnet和电子邮件。&lt;/li&gt;
+&lt;li&gt;在一个&lt;strong&gt;P2P体系结构(P2P architecture)&lt;strong&gt;中,对位于数据中心的专用服务器有最小的(或者没有)依赖。相反，应用程序在间断连接的主机对之间使用直接通信，这些主机对被称为&lt;/strong&gt;对等方&lt;/strong&gt;。这些应用包括文件共享（例如BitTorrent）、对等放协助下载加速器（如迅雷）、因特网电话（例如Skype）和IPTV（如迅雷看看）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;processes-communicating&#34;&gt;Processes Communicating&lt;/h4&gt;
+&lt;p&gt;在操作系统术语中，进行通信的实际上是&lt;strong&gt;进程（process）&lt;/strong&gt;。一个进程可以被认为是运行在端系统中的一个程序。当程序运行在相同的端系统上时，它们使用进程间通信机制相互通信。在不同端系统上的进程，通过跨越计算机网络交换报文（message）而相互通信。&lt;/p&gt;
+&lt;h6 id=&#34;客户与服务器进程&#34;&gt;客户与服务器进程&lt;/h6&gt;
+&lt;p&gt;在一对进程之间的通信会话场景中，发起通信(即在该会话开始时发起与其他进程的联系)的进程被标识为客户（client），在会话开始时等待联系的进程是服务器（server）。&lt;/p&gt;
+&lt;h6 id=&#34;进程与计算机网络之间的接口&#34;&gt;进程与计算机网络之间的接口&lt;/h6&gt;
+&lt;p&gt;进程通过一个称为**套接字(socket)**的软件接口向网络发送报文和从网络接收报文。应用程序可以控制套接字在应用层端的一切，但是对该套接字的运输层几片没有控制权。除选择运输层协议与设定几个运输层参数，如最大缓存和最大报文段长度等。&lt;/p&gt;
+&lt;h6 id=&#34;进程寻址&#34;&gt;进程寻址&lt;/h6&gt;
+&lt;p&gt;为了标识接受进程的地址，需要定义两种信息，主机的地址和定义在目的主机中的接收进程的标识符。主机友IP地址（IP address）标识。目的地端口号标识进程。&lt;/p&gt;
+&lt;p&gt;Web服务器用端口号80来标识，邮件服务器进程(使用SMTP协议)用端口号25来标识。&lt;/p&gt;
+&lt;h4 id=&#34;transport-services-available-to-applications&#34;&gt;Transport Services Available to Applications&lt;/h4&gt;
+&lt;p&gt;一个运输层协议能够为调用它的应用程序提供什么样的服务呢？从四个方面对应用程序服务要求进行分类：可靠数据传输、吞吐量、定时、安全性.&lt;/p&gt;
+&lt;h4 id=&#34;transport-services-provided-by-the-internet&#34;&gt;Transport Services Provided by the Internet&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;TCP服务&lt;/p&gt;
+&lt;p&gt;TCP服务模型包括&lt;strong&gt;面向连接服务&lt;/strong&gt;和&lt;strong&gt;可靠数据传输&lt;/strong&gt;服务，TCP还提供&lt;strong&gt;拥塞控制&lt;/strong&gt;机制&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;面向连接：客户机/服务器进程间需建立连接。握手过程提示客户和服务器，使它们为大量分组的到来做好准备。在握手阶段后，一个TCP连接（TCP connection）就在两个进程的套接字之间建立了。这条连接是全双工的，即连接双方的进程可以在此连接上同时进行报文收发。&lt;/li&gt;
+&lt;li&gt;可靠的传输：通信进程能够依靠TCP，无差错、按适当顺序交付所有发送的数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;UDP服务&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;　　UDP是一种不提供不需要服务的轻量级运输协议，无连接：它不需在两主机间建立连接，提供&lt;strong&gt;不可靠的数据传输&lt;/strong&gt;，UDP协议并不保证该报文将到达接收进程。不仅如此，到达接收进程的报文也可能是乱序到达的。没有包括拥塞控制机制。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;因特网运输协议所不提供的服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;无论TCP还是UDP都没有提供任何加密机制，TCP的加强版本称为&lt;strong&gt;安全套接字层（Secure Sockets Layer, SSL）&lt;/strong&gt;，包括加密、数据完整性和端点鉴别。SSL不是与TCP和UDP在相同层次上的第三种运输协议，**是在应用层上实现的强化。**如果一个应用要使用SSL的服务，需要在该应用程序的客户端和服务端包括SSL代码（利用现有的、高度优化的库和类）。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic2.zhimg.com/80/v2-a62b18a6ceee21254425f68cba7496f5_1440w.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;application-layer-protocols&#34;&gt;Application-Layer Protocols&lt;/h4&gt;
+&lt;p&gt;应用层协议(application-layer protocol)定义了运行在不同 端系统上的应用程序进程如何相互传递报文&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;公开协议：由RFC定义，Web的应用层协议是HTTP,它定义了在浏览器和Web服务器之间传输的报文格式和序列。用于电子邮件的主要应用层协议就是SMTP&lt;/li&gt;
+&lt;li&gt;私有协议：多数P2P文件共享应用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;the-web-and-http&#34;&gt;The Web and HTTP&lt;/h2&gt;
+&lt;h4 id=&#34;overview-of-http&#34;&gt;Overview of HTTP&lt;/h4&gt;
+&lt;p&gt;Web的应用层协议是&lt;strong&gt;超文本传输协议(HyperText Transfer Protocol, HTTP)&lt;/strong&gt;,它是Web 的核心，在[RFC 1945]和[RFC 2616]中进行了定义。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;web页面=多个对象组成（对象只是一个文件，如一个html文件，一个图形，一个java小程序或一个视频）。每个对象通过一个对应的URL寻址。&lt;/li&gt;
+&lt;li&gt;HTTP使用TCP作为它的支撑运输协议。&lt;/li&gt;
+&lt;li&gt;HTTP客户首先发起一个与服务器的TCP连接。一旦连接建立，该浏览器和服务器进程就可以通过套接字接口访问TCP 。&lt;/li&gt;
+&lt;li&gt;一旦客户向它的套接字接口发送了一个请求报文，该报文就脱离了客户控制并进入TCP的控制。 因为TCP协议，一个客户进程发出的每个HTTP请求报文最终能完整地到达服务器&lt;/li&gt;
+&lt;li&gt;HTTP服务器并不保存关于客户的任何信息，所以我们说HTTP是一个无状态协议(stateless protocol)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;non-persistent-and-persistent-connections&#34;&gt;Non-Persistent and Persistent Connections&lt;/h4&gt;
+&lt;p&gt;每个请求/响应对是经一个单独的TCP连接发送，还是所有的请求及其响应经相同的TCP连接发送呢?采用前一种方法，该应用程序被称为使用非持续连接(non-persistent connection); 采用后一种方法，该应用程序被称为使用持续连接(persistent connection) 。&lt;/p&gt;
+&lt;p&gt;使用持续连接或非持续连接是由应用层决定的（HTTP默认使用的是持续连接）&lt;/p&gt;
+&lt;h6 id=&#34;采用非持续连接的http&#34;&gt;采用非持续连接的HTTP&lt;/h6&gt;
+&lt;p&gt;每个TCP连接只传输一个请求报文和一个响应报文。每次服务器发送响应报文后，会通知该TCP断开该TCP连接。HTTP客户接收响应报文，TCP连接关闭。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic3.zhimg.com/80/v2-7172e4c449549b0887fe70294748815e_1440w.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;客户向服务器发送一个TCP报文段，服务器用TCP报文段做出响应，客户向服务器返回确认。三次握手中前两个部分所耗费时间占一个RTT。完成了三次握手的前两部分后，客户结合三次握手的第三部分(确认)向该TCP连接发送一个请求报文。一旦请求报文到达服务器，服务器就在服务器就在该TCP连接上发送 HTML文件。TCP三次握手以及时间分析，总计两个往返时间RTT（Round-Trip Time, RTT）+服务器传输Html文件的时间。因此非持续连接是非常低效率的。&lt;/p&gt;
+&lt;p&gt;非持续连接的两个缺点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;要为每个请求的对象建立一个连接，对于每个连接，客户和服务器中都要分配TCP缓冲区和保持TCP变量，给服务器带来严重负担；&lt;/li&gt;
+&lt;li&gt;每个对象都要遭受两倍RTT的交付时延，一个RTT用来创建TCP，另一个RTT用来请求和接受一个对象。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&#34;采用持续连接的http&#34;&gt;采用持续连接的HTTP&lt;/h6&gt;
+&lt;p&gt;服务器在发送响应之后保持该TCP连接打开。因此，位于同一台服务器的多个Web页面都可以在单个TCP上进行传输。请求可以一个接一个地发而不必等待未决请求的回答（流水线）。如果一条连接经过一定时间间隔（一个可配置的超时间隔）仍未被使用，HTTP服务器就关闭该连接。&lt;/p&gt;
+&lt;p&gt;HTTTP的默认模式是使用带流水线的持续连接。&lt;/p&gt;
+&lt;h4 id=&#34;http-message-format&#34;&gt;HTTP Message Format&lt;/h4&gt;
+&lt;h6 id=&#34;http请求报文&#34;&gt;HTTP请求报文&lt;/h6&gt;
+&lt;p&gt;一个典型的http请求报文：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GET /somedir/page.html HTTP/1.1
+Host: www.hans941.tk
+Connection: close
+User-agent: Chrome/57.0
+Accept-language: ch
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Host首部行是Web代理高速缓存所要求的。Connection:close高速浏览器不希望使用持续连接，服务器发送完请求对象后就关闭连接。&lt;/p&gt;
+&lt;p&gt;User-agent服务器可以为不同类型的用户发送相同对象的不同的版本。&lt;/p&gt;
+&lt;p&gt;下图是请求报文的通用格式&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/226988/201905/226988-20190525102530882-1860346972.jpg&#34; alt=&#34;&#34;&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;首部行后面的 实体体(Entity body),在使用 POST 方法时存储用户提交的表单。&lt;/p&gt;
+&lt;h6 id=&#34;http响应报文&#34;&gt;HTTP响应报文&lt;/h6&gt;
+&lt;p&gt;http响应报文由三部分组成：一个初始状态行（status line），之后有6个首部行（header line），然后是实体体（entity body）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;HTTP/1.1 200 OK
+Connection: close
+Date: Tue, 09 Aug 2011 15:44:04 GMT
+Server: Apache/2.2.3 (CentOS)
+Last-Modified: Tue, 09 Aug 2011 15:11:03 GMT
+Content-Length: 6821
+Content-Type: text/html
+
+(data data data data data ......)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;服务器永Connection: close首部行高速客户，发送完报文后就关闭该TCP连接。Date首部行指的是服务器从文件系统中检索到对象，插入响应报文的时间，而不是对象创建或最后修改的时间。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Last-Modified首部行指示了对象创建或者最后修改的日期和时间，对既可能在本地客户也可能在网络缓存服务器上的对象缓存来说非常重要。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一个HTTP响应报文的通用格式&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/226988/201905/226988-20190525103019639-986868984.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;常见状态码：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;200 OK&lt;/li&gt;
+&lt;li&gt;301 Moved Permanently&lt;/li&gt;
+&lt;li&gt;400 Bad Request&lt;/li&gt;
+&lt;li&gt;404 Not Found&lt;/li&gt;
+&lt;li&gt;505 HTTP Version Not Supported&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;user-server-interaction-cookies&#34;&gt;User-Server Interaction: Cookies&lt;/h4&gt;
+&lt;p&gt;HTTP服务器是无状态化的，这简化了服务器的设计，这让工程师可以去开发能同时处理大量数据的高性能服务器。但是有时Web站点希望能去识别用户，为此HTTP使用了cookie来进行用户跟踪。&lt;/p&gt;
+&lt;p&gt;　　cookie技术有4个组件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 HTTP 响应报文中的一个 cookie 首部行；&lt;/li&gt;
+&lt;li&gt;在 HTTP 请求报文中的一个 cookie 首部行；&lt;/li&gt;
+&lt;li&gt;在用户端系统中保留有一个 cookie 文件，并由用户的浏览器进行管理；&lt;/li&gt;
+&lt;li&gt;位于 Web 站点的一个后端数据库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;　　&lt;img src=&#34;https://img2018.cnblogs.com/blog/226988/201905/226988-20190525103608022-1309036437.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;cookie可以用于标识一个用户，cookie可以在无状态的HTTP之上建立一个用户会话层。&lt;/p&gt;
+&lt;p&gt;站点不必知道用户身份，可以记录按什么顺序，在什么时间，访问了哪些页面。能够根据过去访问的网页对用户推荐产品。&lt;/p&gt;
+&lt;h4 id=&#34;web-caching&#34;&gt;Web Caching&lt;/h4&gt;
+&lt;p&gt;Web缓存器(Web cache)也叫代理服务器(proxy server)，它是能够代表初始Web服务器来满足HTTP请求的网络实体.Web缓存器有自己的磁盘存储空间，并在存储空间中保存最近请求过的对象的副本。&lt;/p&gt;
+&lt;p&gt;客户对过Web缓存器请求对象:&lt;/p&gt;
+&lt;p&gt;　　&lt;img src=&#34;https://img2018.cnblogs.com/blog/226988/201905/226988-20190525104346988-822885012.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;浏览器建立一个到Web缓存器的TCP连接，并向Web缓存器中的对象发送一个HTTP请求。&lt;/li&gt;
+&lt;li&gt;Web缓存器进行检查，看看本地是否缓存了该对象副本。如果有，Web缓存器就向客户浏览器用HTTP响应报文返回该对象。&lt;/li&gt;
+&lt;li&gt;如果web缓存器没有该对象，就打开一个与该对象的初始服务器的TCP连接，Web缓存器向初始服务器的TCP连接上发送一个HTTP请求。&lt;/li&gt;
+&lt;li&gt;Web缓存器收到该对象，本地存储空间存储副本，并向客户浏览器利用现有TCP连接发送HTTP响应包含该副本&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Web缓存器既是服务器又是客户。当它接收浏览器的请求并发回响应 时，它是一个服务器。当它向初始服务器发出请求并接收响应时，它是一个客户。&lt;/p&gt;
+&lt;p&gt;Web缓存器通常由ISP购买并安装。Web缓存器可以减少成本，降低响应时间。&lt;/p&gt;
+&lt;p&gt;通过使用内容分发网络（Content Distribution Network, CDN），Web缓存服务器正在因特网中发挥着越来越重要的作用。&lt;/p&gt;
+&lt;h4 id=&#34;the-conditional-get&#34;&gt;The Conditional GET&lt;/h4&gt;
+&lt;p&gt;那么Web缓存器什么时候才会去刷新缓存下来的页面，以保存提供给客户是最新的对象呢？&lt;/p&gt;
+&lt;p&gt;HTTP协议有一处机制&amp;mdash;&amp;ndash;条件GET(conditional GET)方法。&lt;/p&gt;
+&lt;p&gt;若同时满足以下两点的则称为 条件 GET 方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;请求报文使用 GET 方法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;请求报文中包含一个 &lt;strong&gt;If-Modified-Since&lt;/strong&gt;: 首部行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;原始服务器向Web缓存器中返回HTTP响应时包含&lt;strong&gt;Last-Modified&lt;/strong&gt;首部行，缓存器在存储该对象的同事也存储了最后修改日期。&lt;/p&gt;
+&lt;p&gt;Web缓存器向原始Web服务器发送请求：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GET / HTTP/1.1
+Host: www.sina.com.cn:80
+If-Modified-Since:Thu, 4 Feb 2010 20:39:13 GMT
+Connection: Close
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Web服务器向缓存器发送一个响应报文&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;HTTP/1.0 304 Not Modified
+Date: Thu, 04 Feb 2010 12:38:41 GMT
+
+(empty entity body)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&amp;ldquo;Not Modified&amp;rdquo;，没有在响应报文中包含所请求的对象，高速缓存器可以使用该对象，向请求浏览器转发代理缓存器缓存的对象副本。&lt;/p&gt;
+&lt;h2 id=&#34;dnsthe-internets-directory-service&#34;&gt;DNS–The Internet’s Directory Service&lt;/h2&gt;
+&lt;h4 id=&#34;services-provided-by-dns&#34;&gt;Services Provided by DNS&lt;/h4&gt;
+&lt;h4 id=&#34;overview-of-how-dns-works&#34;&gt;Overview of How DNS Works&lt;/h4&gt;
+&lt;h4 id=&#34;dns-records-and-messages&#34;&gt;DNS Records and Messages&lt;/h4&gt;
+&lt;h2 id=&#34;peer-to-peer-applications&#34;&gt;Peer-to-Peer Applications&lt;/h2&gt;
+&lt;h4 id=&#34;p2p-file-distribution&#34;&gt;P2P File Distribution&lt;/h4&gt;
+&lt;h4 id=&#34;distributed-hash-tables-dhts&#34;&gt;Distributed Hash Tables (DHTs)&lt;/h4&gt;
+&lt;h4 id=&#34;case-study-p2p-internet-telephony-with-skype&#34;&gt;Case Study: P2P Internet Telephony with Skype&lt;/h4&gt;
+&lt;h2 id=&#34;socket-programming-creating-network-applications&#34;&gt;Socket Programming: Creating Network Applications&lt;/h2&gt;
+&lt;p&gt;网络应用程序有两类。&lt;strong&gt;一类是实现在协议标准&lt;/strong&gt;（如一个RFC或某种其他标准文档）&lt;strong&gt;中所定义的操作；这样的应用程序又称为“开放”的&lt;/strong&gt;，因为定义其操作的这些规则人所共知。对于这样的实现，客户程序和服务器程序必须遵守由该RFC所规定的规则。如果一个开发者编写客户程序的代码，另一个开发者编写服务器程序的代码，并且两者都完全遵从该RFC的各种规则，那么这两个程序将能够交互操作。&lt;/p&gt;
+&lt;p&gt;另一类网络应用程序是&lt;strong&gt;专用的网络应用程序&lt;/strong&gt;。在这种情况下，由客户和服务器程序应用的应用层协议没有公开发布在某RFC中或其他地方。某单独的开发者（或开发团队）创建了客户和服务器程序，并且该开发者用他的代码完全控制程序的功能。但是因为这些代码并没有实现一个开放的协议，其他独立的开发者将不能开发出和该应用程序交互的代码。&lt;/p&gt;
+&lt;p&gt;在研发阶段，开发者必须最先做的一个决定是，应用程序是运行在TCP上还是运行在UDP上。前面讲过TCP是面向连接的，并且为两个端系统之间的数据流动提供可靠的字节流通道。UDP是无连接的，从一个端系统向另一个端系统发送独立的数据分组，不对交付提供任何保证。前面也讲过当客户或服务器程序&lt;strong&gt;实现了一个由某RFC定义的协议，它应当使用与该协议关联的周知端口号&lt;/strong&gt;；与之相反，&lt;strong&gt;当研发一个专用应用程序，研发者必须注意避免使用这样的周知端口号&lt;/strong&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;socket-programming-with-udp&#34;&gt;Socket Programming with UDP&lt;/h4&gt;
+&lt;p&gt;应用程序开发者在套接字的应用层一侧可以控制所有东西；然而，它几乎无法控制运输层一侧。&lt;/p&gt;
+&lt;p&gt;在发送进程能够将数据分组推出套接字之门之前，当使用UDP时，必须先将目的地址附在该分组之上。在该分组传过发送方的套接字之后，因特网将使用该目的地址通过因特网为该分组选路到接收进程的套接字。当分组到达接收套接字时，接收进程将通过该套接字取回分组，进而检查分组的内容并采取适当的动作。&lt;/p&gt;
+&lt;p&gt;当生成一个套接字时，就为它分配一个称为端口号（port number）的标识符。因此，如你所期待的，分组的目的地址也包括该套接字的端口号。&lt;/p&gt;
+&lt;p&gt;归纳起来，&lt;strong&gt;发送进程为分组附上的目的地址是由目的主机的IP地址和目的地套接字的端口号组成的&lt;/strong&gt;。此外，如我们很快将看到的那样，发送方的源地址也是由源主机的IP地址和源套接字的端口号组成，该源地址也要附在分组之上。然而，将源地址附在分组之上通常并不是由UDP应用程序代码所为，而是由底层操作系统自动完成的。&lt;/p&gt;
+&lt;p&gt;下显示了客户和服务器的主要与套接字相关的活动，两者通过UDP运输服务进行通信。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://yqfile.alicdn.com/f3a0f4417d3d8aa377ee4f987f52623a4031c0fc.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;客户程序被称为UDPClient.py，服务器程序被称为UDPServer.py。为了强调关键问题，我们有意提供最少的代码。“好代码”无疑将具有一些更为辅助性的代码行，特别是用于处理出现差错的情况。&lt;/p&gt;
+&lt;h6 id=&#34;udpclientpy&#34;&gt;UDPClient.py&lt;/h6&gt;
+&lt;p&gt;下面是该应用程序客户端的代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from socket import *
+
+# 服务器的P地址（如“128.138.32.126”）或者服务器的主机名（如“cis.poly.edu”）的字符串, 如果我们使用主机名，则将自动执行DNS lookup从而得到IP地址
+serverName = ‘hostname’                                           
+serverPort = 12000 
+
+# 创建了客户的套接字，第一个参数指示了地址簇；特别是，AF_INET指示了底层网络使用了IPv4。
+# 第二个参数指示了该套接字是SOCK_DGRAM类型的，这意味着它是一个UDP套接字
+# 没有指定客户套接字的端口号,操作系统会设置
+clientSocket = socket(AF_INET, SOCK_DGRAM) 
+
+message = raw_input(’Input lowercase sentence:’) 
+
+# 为报文附上目的地址，并且向进程的套接字clientSocket发送结果分组
+# 源地址也附到分组上，尽管这是自动完成的，而不是显式地由代码完成的。
+clientSocket.sendto(message.encode(),(serverName, serverPort)) 
+
+# 方法recvfrom也取缓存长度2048作为输入
+modifiedMessage, serverAddress = clientSocket.recvfrom(2048) 
+
+print modifiedMessage.decode() 
+
+# 关闭套接字
+clientSocket.close()
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;udpserverpy&#34;&gt;UDPServer.py&lt;/h6&gt;
+&lt;p&gt;现在来看看这个应用程序的服务器端：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from socket import * 
+
+serverPort = 12000 
+
+# 创建套接字类型SOCK_DGRAM（一种UDP套接字）
+serverSocket = socket(AF_INET, SOCK_DGRAM) 
+
+# 将端口号12000与个服务器的套接字绑定（即分配）在一起,代码显式地为该套接字分配一个端口号
+serverSocket.bind((&#39;&#39;, serverPort)) 
+
+print (“The server is ready to receive”) 
+
+while True: 
+    # 当某分组到达该服务器的套接字时，该分组的数据被放置到变量message中，其源地址被放置到变量clientAddress中。
+	message, clientAddress = serverSocket.recvfrom(2048) 
+	modifiedMessage = message.decode().upper() 
+	# UDPServer将利用该源地址信息返回
+	# 将该客户的地址（IP地址和端口号）附到大写报文上，并将所得的分组发送到服务器的套接字中。
+	# 服务器地址也附在分组上，尽管这是自动而不是显式地由代码完成的。
+	serverSocket.sendto(modifiedMessage.encode(), clientAddress)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;为了测试这对程序，在服务器主机上执行编译的服务器程序UDPServer.py。这在服务器上创建了一个进程，等待着某个客户与之联系。然后，保证在UDPClient.py中包括适当的服务器主机名或IP地址，在客户主机上执行编译的客户器程序UDPClient.py。这在客户上创建了一个进程。最后，在客户上使用应用程序，键入一个句子并以回车结束。&lt;/p&gt;
+&lt;h4 id=&#34;socket-programming-with-tcp&#34;&gt;Socket Programming with TCP&lt;/h4&gt;
+&lt;p&gt;与UDP不同，TCP是一个面向连接的协议。这意味着在客户和服务器能够开始互相发送数据之前，它们先要握手和创建一个TCP连接。TCP连接的一端与客户套接字相联系，另一端与服务器套接字相联系。当创建该TCP连接时，我们将其与客户套接字地址（IP地址和端口号）和服务器套接字地址（IP地址和端口号）关联起来。使用创建的TCP连接，当一侧要向另一侧发送数据时，它只需经过其套接字将数据丢给TCP连接。这与UDP不同，UDP服务器在将分组丢进套接字之前必须为其附上一个目的地地址。
+现在我们仔细观察一下TCP中客户程序和服务器程序的交互。客户具有向服务器发起接触的任务。服务器为了能够对客户的初始接触做出反应，服务器必须已经准备好。这意味着两件事。第一，与在UDP中的情况一样，TCP服务器在客户试图发起接触前必须作为进程运行起来。第二，服务器程序必须具有一扇特殊的门，更精确地说是一个特殊的套接字，该门欢迎来自运行在任意主机上的客户进程的某些初始接触。使用房子/门来比喻进程/套接字，有时我们将客户的初始接触称为“敲欢迎之门”。
+随着服务器进程的运行，客户进程能够向服务器发起一个TCP连接。这是由客户程序通过创建一个TCP套接字完成的。当该客户生成其TCP套接字时，它指定了服务器中的欢迎套接字的地址，即服务器主机的IP地址及其套接字的端口号。生成其套接字后，该客户发起了一个三次握手并创建与服务器的一个TCP连接。发生在运输层的三次握手，对于客户和服务器程序是完全透明的。
+在三次握手期间，客户进程敲服务器进程的欢迎之门。当该服务器“听”到敲门时，它将生成一扇新门（更精确地讲是一个新套接字），它专门用于特定的客户。在我们下面的例子中，欢迎之门是一个我们称为serverSocket的TCP套接字对象；它专门对客户进行连接的新生成的套接字，称为连接套接字（connection Socket）。初次遇到TCP套接字的学生有时会混淆欢迎套接字（这是所有要与服务器通信的客户的起始接触点）和每个新生成的服务器侧的连接套接字（这是随后为与每个客户通信而生成的套接字）。
+从应用程序的观点来看，客户套接字和服务器连接套接字直接通过一根管道连接。如图2-29所示，客户进程可以向它的套接字发送任意字节，并且TCP保证服务器进程能够按发送的顺序接收（通过连接套接字）每个字节。TCP因此在客户和服务器进程之间提供了可靠服务。此外，就像人们可以从同一扇门进和出一样，客户进程不仅能向它的套接字发送字节，也能从中接收字节；类似地，服务器进程不仅从它的连接套接字接收字节，也能向其发送字节。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://yqfile.alicdn.com/449d86f1fb6c99e9dda16b5e075cf1e77ec2289a.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;下图显示了客户和服务器的主要与套接字相关的活动，两者通过TCP运输服务进行通信。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://yqfile.alicdn.com/4054507a62b63bc6c0ce7c4ac9496aa6979190b6.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;
+&lt;h6 id=&#34;tcpclientpy&#34;&gt;TCPClient.py&lt;/h6&gt;
+&lt;p&gt;这里给出了应用程序客户端的代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from socket import * 
+
+serverName = ’servername’ 
+serverPort = 12000 
+
+# 第一个参数仍指示底层网络使用的是IPv4。第二个参数指示该套接字是SOCK_STREAM类型。这表明它是一个TCP套接字（而不是一个UDP套接字）
+# 创建该客户套接字时仍未指定其端口号；操作系统会自动附上端口号
+clientSocket = socket(AF_INET, SOCK_STREAM) 
+
+# 前面讲过在客户能够使用一个TCP套接字向服务器发送数据之前（反之亦然），必须在客户与服务器之间创建一个TCP连接。
+# 这行发起了客户和服务器之间的这条TCP连接。这行代码执行完后，执行三次握手，并在客户和服务器之间创建起一条TCP连接。
+clientSocket.connect((serverName,serverPort)) 
+
+sentence = raw_input(‘Input lowercase sentence:’) 
+
+# 该程序并未显式地创建一个分组并为该分组附上目的地址，而使用UDP套接字却要那样做。客户程序只是将字符串sentence中的字节放入该TCP连接中去。
+clientSocket.send(sentence.encode()) 
+
+# 等待接收来自服务器的字节，字符继续积累在modifiedSentence中，直到收到回车符才会结束该行。
+modifiedSentence = clientSocket.recv(1024) 
+
+print(‘From Server:’, modifiedSentence.decode()) 
+
+# 关闭客户的套接字，因此关闭了客户和服务器之间的TCP连接。它引起客户中的TCP向服务器中的TCP发送一条TCP报文
+clientSocket.close()
+&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;tcpserverpy&#34;&gt;TCPServer.py&lt;/h6&gt;
+&lt;p&gt;现在我们看一下服务器程序&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from socket import * 
+
+serverPort = 12000 
+
+# 服务器创建一个TCP套接字
+serverSocket = socket(AF_INET,SOCK_STREAM) 
+
+# 将服务器的端口号serverPort与该套接字关联起来
+serverSocket.bind((‘’,serverPort)) 
+
+# 但对TCP而言，serverSocket将是我们的欢迎套接字
+# 该行让服务器聆听来自客户的TCP连接请求。其中参数定义了请求连接的最大数（至少为1）
+serverSocket.listen(1) 
+
+print ‘The server is ready to receive’ 
+
+while True: 
+    # 当客户敲该门时，程序为serverSocket调用accept()，这在服务器中创建了一个称为connectionSocket的新套接字，由这个特定的客户专用。
+    # 客户和服务器则完成了握手，在客户的clientSocket和服务器的serverSocket之间创建了一个TCP连接。
+    connectionSocket, addr = serverSocket.accept() 
+    
+    # 借助于创建的TCP连接，客户与服务器现在能够通过该连接相互发送字节。
+    sentence = connectionSocket.recv(1024).decode() 
+    
+    capitalizedSentence = sentence.upper() 
+    
+    # 使用TCP，从一侧发送的所有字节不仅确保到达另一侧，而且确保按序到达。
+    connectionSocket.send(capitalizedSentence)
+    
+    # 关闭了该连接套接字,但由于serverSocket保持打开，所以另一个客户此时能够敲门并向该服务器发送一个句子要求修改。
+    connectionSocket.close()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在两台单独的主机上运行这两个程序，也可以修改它们以达到稍微不同的目的。你应当将前面两个UDP程序与这两个TCP程序进行比较，观察它们的不同之处。&lt;/p&gt;
+&lt;h2 id=&#34;socket-programming-assignments&#34;&gt;Socket Programming Assignments&lt;/h2&gt;
+&lt;p&gt;The companion Web site includes six socket programming assignments. The first four assignments are summarized below. The fifth assignment makes use of the ICMP protocol and is summarized at the end of Chapter 4. The sixth assignment employs multimedia protocols and is summarized at the end of Chapter 7. It is highly recommended that students complete several, if not all, of these assignments.  Students can find full details of these assignments, as well as important snippets of the Python code, at the Web site &lt;a href=&#34;http://www.awl.com/kurose-ross&#34;&gt;http://www.awl.com/kurose-ross&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;assignment-1-web-server&#34;&gt;Assignment 1: Web Server&lt;/h4&gt;
+&lt;p&gt;In this assignment, you will develop a simple Web server in Python that is capable of processing only one request. Specifically, your Web server will (i) create a con- nection socket when contacted by a client (browser); (ii) receive the HTTP request from this connection; (iii) parse the request to determine the specific file being requested; (iv) get the requested file from the server’s file system; (v) create an HTTP response message consisting of the requested file preceded by header lines; and (vi) send the response over the TCP connection to the requesting browser. If a browser requests a file that is not present in your server, your server should return a “404 Not Found” error message.&lt;/p&gt;
+&lt;p&gt;In the companion Web site, we provide the skeleton code for your server. Your job is to complete the code, run your server, and then test your server by sending requests from browsers running on different hosts. If you run your server on a host that already has a Web server running on it, then you should use a different port than port 80 for your Web server.&lt;/p&gt;
+&lt;h4 id=&#34;assignment-2-udp-pinger&#34;&gt;Assignment 2: UDP Pinger&lt;/h4&gt;
+&lt;p&gt;In this programming assignment, you will write a client ping program in Python.  Your client will send a simple ping message to a server, receive a corresponding pong message back from the server, and determine the delay between when the client sent the ping message and received the pong message. This delay is called the Round Trip Time (RTT). The functionality provided by the client and server is similar to the functionality provided by standard ping program available in modern operating systems. However, standard ping programs use the Internet Control Mes- sage Protocol (ICMP) (which we will study in Chapter 4). Here we will create a nonstandard (but simple!) UDP-based ping program.  Your ping program is to send 10 ping messages to the target server over UDP.  For each message, your client is to determine and print the RTT when the correspon- ding pong message is returned. Because UDP is an unreliable protocol, a packet sent by the client or server may be lost. For this reason, the client cannot wait indefinitely for a reply to a ping message. You should have the client wait up to one second for a reply from the server; if no reply is received, the client should assume that the packet was lost and print a message accordingly.&lt;/p&gt;
+&lt;p&gt;In this assignment, you will be given the complete code for the server (avail- able in the companion Web site). Your job is to write the client code, which will be very similar to the server code. It is recommended that you first study carefully the server code. You can then write your client code, liberally cutting and pasting lines from the server code.&lt;/p&gt;
+&lt;h4 id=&#34;assignment-3-mail-client&#34;&gt;Assignment 3: Mail Client&lt;/h4&gt;
+&lt;p&gt;The goal of this programming assignment is to create a simple mail client that sends email to any recipient. Your client will need to establish a TCP connection with a mail server (e.g., a Google mail server), dialogue with the mail server using the SMTP protocol, send an email message to a recipient (e.g., your friend) via the mail server, and finally close the TCP connection with the mail server.&lt;/p&gt;
+&lt;p&gt;For this assignment, the companion Web site provides the skeleton code for your client. Your job is to complete the code and test your client by sending email to different user accounts. You may also try sending through different servers (for example, through a Google mail server and through your university mail server).&lt;/p&gt;
+&lt;h4 id=&#34;assignment-4-multi-threaded-web-proxy&#34;&gt;Assignment 4: Multi-Threaded Web Proxy&lt;/h4&gt;
+&lt;p&gt;In this assignment, you will develop a Web proxy. When your proxy receives an HTTP request for an object from a browser, it generates a new HTTP request for the same object and sends it to the origin server. When the proxy receives the corresponding HTTP response with the object from the origin server, it creates a new HTTP response, including the object, and sends it to the client. This proxy will be multi-threaded, so that it will be able to handle multiple requests at the same time.&lt;/p&gt;
+&lt;p&gt;For this assignment, the companion Web site provides the skeleton code for the proxy server. Your job is to complete the code, and then test it by having different browsers request Web objects via your proxy.&lt;/p&gt;
+&lt;h2 id=&#34;wireshark-lab-http&#34;&gt;Wireshark Lab: HTTP&lt;/h2&gt;
+&lt;p&gt;In this lab, we’ll explore several aspects of the HTTP protocol: &lt;strong&gt;the basic GET/response interaction&lt;/strong&gt;, &lt;strong&gt;HTTP message formats&lt;/strong&gt;, &lt;strong&gt;retrieving large HTML files&lt;/strong&gt;, &lt;strong&gt;retrieving HTML files with embedded objects&lt;/strong&gt;, and &lt;strong&gt;HTTP authentication and security&lt;/strong&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;the-basic-http-getresponse-interaction&#34;&gt;The Basic HTTP GET/response interaction&lt;/h4&gt;
+&lt;p&gt;Let’s begin our exploration of HTTP by downloading a very simple HTML file - one that is very short, and contains no embedded objects. Do the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Start up your web browser.&lt;/li&gt;
+&lt;li&gt;Start up the Wireshark packet sniffer, as described in the Introductory lab (but don’t yet begin packet capture). Enter “http” (just the letters, not the quotation marks) in the display-filter-specification window, so that only captured HTTP messages will be displayed later in the packet-listing window. (We’re only interested in the HTTP protocol here, and don’t want to see the clutter of all captured packets).&lt;/li&gt;
+&lt;li&gt;Wait a bit more than one minute (we’ll see why shortly), and then begin Wireshark packet capture.&lt;/li&gt;
+&lt;li&gt;Enter the following to your browser &lt;a href=&#34;http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file1.html&#34;&gt;http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file1.html&lt;/a&gt; Your browser should display the very simple, one-line HTML file.&lt;/li&gt;
+&lt;li&gt;Stop Wireshark packet capture.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Your Wireshark window should look similar to the window shown in Figure 1. If you are unable to run Wireshark on a live network connection, you can download a packet trace that was created when the steps above were followed.&lt;/p&gt;
+&lt;p&gt;Figure 1: Wireshark Display after &lt;a href=&#34;http://gaia.cs.umass.edu/wireshark-labs/&#34;&gt;http://gaia.cs.umass.edu/wireshark-labs/&lt;/a&gt; HTTPwireshark-file1.html has been retrieved by your browser&lt;/p&gt;
+&lt;p&gt;The example in Figure 1 shows in the packet-listing window that two HTTP messages were captured: the GET message (from your browser to the gaia.cs.umass.edu web server) and the response message from the server to your browser. The packet-contents window shows details of the selected message (in this case the HTTP OK message, which is highlighted in the packet-listing window). Recall that since the HTTP message was carried inside a TCP segment, which was carried inside an IP datagram, which was carried within an Ethernet frame, Wireshark displays the Frame, Ethernet, IP, and TCP packet information as well. We want to minimize the amount of non-HTTP data displayed (we’re interested in HTTP here, and will be investigating these other protocols is later labs), so make sure the boxes at the far left of the Frame, Ethernet, IP and TCP information have a plus sign or a right-pointing triangle (which means there is hidden, undisplayed information), and the HTTP line has a minus sign or a down-pointing triangle (which means that all information about the HTTP message is displayed).&lt;/p&gt;
+&lt;p&gt;Download the zip file &lt;a href=&#34;http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip&#34;&gt;http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip&lt;/a&gt; and extract the file http-ethereal-trace-1. The traces in this zip file were collected by Wireshark running on one of the author’s computers, while performing the steps indicated in the Wireshark lab. Once you have downloaded the trace, you can load it into Wireshark and view the trace using the File pull down menu, choosing Open, and then selecting the http-ethereal-trace-1 trace file. The resulting display should look similar to Figure 1. (The Wireshark user interface displays just a bit differently on different operating systems, and in different versions of Wireshark).&lt;/p&gt;
+&lt;p&gt;(Note: You should ignore any HTTP GET and response for favicon.ico. If you see a reference to this file, it is your browser automatically asking the server if it (the server) has a small icon file that should be displayed next to the displayed URL in your browser. We’ll ignore references to this pesky file in this lab.).&lt;/p&gt;
+&lt;p&gt;By looking at the information in the HTTP GET and response messages, answer the following questions. When answering the following questions, you should print out the GET and response messages (see the introductory Wireshark lab for an explanation of how to do this) and indicate where in the message you’ve found the information that answers the following questions. When you hand in your assignment, annotate the output so that it’s clear where in the output you’re getting the information for your answer (e.g., for our classes, we ask that students markup paper copies with a pen, or annotate electronic copies with text in a colored font).&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Is your browser running HTTP version 1.0 or 1.1? What version of HTTP is the server running?&lt;/li&gt;
+&lt;li&gt;What languages (if any) does your browser indicate that it can accept to the server?&lt;/li&gt;
+&lt;li&gt;What is the IP address of your computer? Of the gaia.cs.umass.edu server?&lt;/li&gt;
+&lt;li&gt;What is the status code returned from the server to your browser?&lt;/li&gt;
+&lt;li&gt;When was the HTML file that you are retrieving last modified at the server?R&lt;/li&gt;
+&lt;li&gt;How many bytes of content are being returned to your browser?&lt;/li&gt;
+&lt;li&gt;By inspecting the raw data in the packet content window, do you see any headers within the data that are not displayed in the packet-listing window? If so, name one.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In your answer to question 5 above, you might have been surprised to find that the document you just retrieved was last modified within a minute before you downloaded the document. That’s because (for this particular file), the gaia.cs.umass.edu server is setting the file’s last-modified time to be the current time, and is doing so once per minute. Thus, if you wait a minute between accesses, the file will appear to have been recently modified, and hence your browser will download a “new” copy of the document.&lt;/p&gt;
+&lt;h4 id=&#34;the-http-conditional-getresponse-interaction&#34;&gt;The HTTP CONDITIONAL GET/response interaction&lt;/h4&gt;
+&lt;p&gt;Recall from Section 2.2.5 of the text, that most web browsers perform object caching and thus perform a conditional GET when retrieving an HTTP object. Before performing the steps below, make sure your browser’s cache is empty. (To do this under Firefox, select Tools-&amp;gt;Clear Recent History and check the Cache box, or for Internet Explorer, select Tools-&amp;gt;Internet Options-&amp;gt;Delete File; these actions will remove cached files from your browser’s cache.) Now do the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start up your web browser, and make sure your browser’s cache is cleared, as discussed above.&lt;/li&gt;
+&lt;li&gt;Start up the Wireshark packet sniffer&lt;/li&gt;
+&lt;li&gt;Enter the following URL into your browser &lt;a href=&#34;http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file2.html&#34;&gt;http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file2.html&lt;/a&gt; Your browser should display a very simple five-line HTML file.&lt;/li&gt;
+&lt;li&gt;Quickly enter the same URL into your browser again (or simply select the refresh button on your browser)&lt;/li&gt;
+&lt;li&gt;Stop Wireshark packet capture, and enter “http” in the display-filter-specification window, so that only captured HTTP messages will be displayed later in the packet-listing window.&lt;/li&gt;
+&lt;li&gt;(Note: If you are unable to run Wireshark on a live network connection, you can use the http-ethereal-trace-2 packet trace to answer the questions below; see footnote 1. This trace file was gathered while performing the steps above on one of the author’s computers.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Answer the following questions:&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;Inspect the contents of the first HTTP GET request from your browser to the server. Do you see an “IF-MODIFIED-SINCE” line in the HTTP GET?&lt;/li&gt;
+&lt;li&gt;Inspect the contents of the server response. Did the server explicitly return the contents of the file? How can you tell?&lt;/li&gt;
+&lt;li&gt;Now inspect the contents of the second HTTP GET request from your browser to the server. Do you see an “IF-MODIFIED-SINCE:” line in the HTTP GET? If so, what information follows the “IF-MODIFIED-SINCE:” header?&lt;/li&gt;
+&lt;li&gt;What is the HTTP status code and phrase returned from the server in response to this second HTTP GET? Did the server explicitly return the contents of the file? Explain.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;retrieving-long-documents&#34;&gt;Retrieving Long Documents&lt;/h4&gt;
+&lt;p&gt;In our examples thus far, the documents retrieved have been simple and short HTML files. Let’s next see what happens when we download a long HTML file. Do the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start up your web browser, and make sure your browser’s cache is cleared, as discussed above.&lt;/li&gt;
+&lt;li&gt;Start up the Wireshark packet sniffer&lt;/li&gt;
+&lt;li&gt;Enter the following URL into your browser &lt;a href=&#34;http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file3.html&#34;&gt;http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file3.html&lt;/a&gt; Your browser should display the rather lengthy US Bill of Rights.&lt;/li&gt;
+&lt;li&gt;Stop Wireshark packet capture, and enter “http” in the display-filter-specification window, so that only captured HTTP messages will be displayed.&lt;/li&gt;
+&lt;li&gt;(Note: If you are unable to run Wireshark on a live network connection, you can use the http-ethereal-trace-3 packet trace to answer the questions below; see footnote 1. This trace file was gathered while performing the steps above on one of the author’s computers.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the packet-listing window, you should see your HTTP GET message, followed by a multiple-packet TCP response to your HTTP GET request. This multiple-packet response deserves a bit of explanation. Recall from Section 2.2 (see Figure 2.9 in the text) that the HTTP response message consists of a status line, followed by header lines, followed by a blank line, followed by the entity body. In the case of our HTTP GET, the  entity body in the response is the entire requested HTML file. In our case here, the HTML file is rather long, and at 4500 bytes is too large to fit in one TCP packet. The single HTTP response message is thus broken into several pieces by TCP, with each piece being contained within a separate TCP segment (see Figure 1.24 in the text). In recent versions of Wireshark, Wireshark indicates each TCP segment as a separate packet, and the fact that the single HTTP response was fragmented across multiple TCP packets is indicated by the “TCP segment of a reassembled PDU” in the Info column of the Wireshark display. Earlier versions of Wireshark used the “Continuation” phrase to indicated that the entire content of an HTTP message was broken across multiple TCP segments.. We stress here that there is no “Continuation” message in HTTP!&lt;/p&gt;
+&lt;p&gt;Answer the following questions:&lt;/p&gt;
+&lt;ol start=&#34;12&#34;&gt;
+&lt;li&gt;How many HTTP GET request messages did your browser send? Which packet number in the trace contains the GET message for the Bill or Rights?&lt;/li&gt;
+&lt;li&gt;Which packet number in the trace contains the status code and phrase associated with the response to the HTTP GET request?&lt;/li&gt;
+&lt;li&gt;What is the status code and phrase in the response?&lt;/li&gt;
+&lt;li&gt;How many data-containing TCP segments were needed to carry the single HTTP response and the text of the Bill of Rights?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;html-documents-with-embedded-objects&#34;&gt;HTML Documents with Embedded Objects&lt;/h4&gt;
+&lt;p&gt;Now that we’ve seen how Wireshark displays the captured packet traffic for large HTML files, we can look at what happens when your browser downloads a file with embedded objects, i.e., a file that includes other objects (in the example below, image files) that are stored on another server(s).&lt;/p&gt;
+&lt;p&gt;Do the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start up your web browser, and make sure your browser’s cache is cleared, as discussed above.&lt;/li&gt;
+&lt;li&gt;Start up the Wireshark packet sniffer&lt;/li&gt;
+&lt;li&gt;Enter the following URL into your browser &lt;a href=&#34;http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html&#34;&gt;http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html&lt;/a&gt; Your browser should display a short HTML file with two images. These two images are referenced in the base HTML file. That is, the images themselves are not contained in the HTML; instead the URLs for the images are contained in the downloaded HTML file. As discussed in the textbook, your browser will have to retrieve these logos from the indicated web sites. Our publisher’s logo is retrieved from the gaia.cs.umass.edu web site. The image of the cover for our 5th edition (one of our favorite covers) is stored at the caite.cs.umass.edu server. (These are two different web servers inside cs.umass.edu).&lt;/li&gt;
+&lt;li&gt;Stop Wireshark packet capture, and enter “http” in the display-filter-specification window, so that only captured HTTP messages will be displayed.&lt;/li&gt;
+&lt;li&gt;(Note: If you are unable to run Wireshark on a live network connection, you can use the http-ethereal-trace-4 packet trace to answer the questions below; see footnote 1. This trace file was gathered while performing the steps above on one of the author’s computers.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Answer the following questions:&lt;/p&gt;
+&lt;ol start=&#34;16&#34;&gt;
+&lt;li&gt;How many HTTP GET request messages did your browser send? To which Internet addresses were these GET requests sent?&lt;/li&gt;
+&lt;li&gt;Can you tell whether your browser downloaded the two images serially, or whether they were downloaded from the two web sites in parallel? Explain.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;http-authentication&#34;&gt;HTTP Authentication&lt;/h4&gt;
+&lt;p&gt;Finally, let’s try visiting a web site that is password-protected and examine the sequence of HTTP message exchanged for such a site. The URL &lt;a href=&#34;http://gaia.cs.umass.edu/wireshark-labs/protected_pages/HTTP-wireshark-file5.html&#34;&gt;http://gaia.cs.umass.edu/wireshark-labs/protected_pages/HTTP-wireshark-file5.html&lt;/a&gt; is password protected. The username is “wireshark-students” (without the quotes), and the password is “network” (again, without the quotes). So let’s access this “secure” password-protected site. Do the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Make sure your browser’s cache is cleared, as discussed above, and close down your browser. Then, start up your browser&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Start up the Wireshark packet sniffer&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enter the following URL into your browser &lt;a href=&#34;http://gaia.cs.umass.edu/wireshark-labs/protected_pages/HTTP-wiresharkfile5.html&#34;&gt;http://gaia.cs.umass.edu/wireshark-labs/protected_pages/HTTP-wiresharkfile5.html&lt;/a&gt; Type the requested user name and password into the pop up box.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Stop Wireshark packet capture, and enter “http” in the display-filter-specification window, so that only captured HTTP messages will be displayed later in the packet-listing window.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(Note: If you are unable to run Wireshark on a live network connection, you can use the http-ethereal-trace-5 packet trace to answer the questions below; see footnote 2. This trace file was gathered while performing the steps above on one of the author’s computers.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now let’s examine the Wireshark output. You might want to first read up on HTTP authentication by reviewing the easy-to-read material on “HTTP Access Authentication Framework” at &lt;a href=&#34;http://frontier.userland.com/stories/storyReader$2159&#34;&gt;http://frontier.userland.com/stories/storyReader$2159&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Answer the following questions:&lt;/p&gt;
+&lt;ol start=&#34;18&#34;&gt;
+&lt;li&gt;What is the server’s response (status code and phrase) in response to the initial HTTP GET message from your browser?&lt;/li&gt;
+&lt;li&gt;When your browser’s sends the HTTP GET message for the second time, what new field is included in the HTTP GET message?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The username (wireshark-students) and password (network) that you entered are encoded in the string of characters (d2lyZXNoYXJrLXN0dWRlbnRzOm5ldHdvcms=) following  the “Authorization: Basic” header in the client’s HTTP GET message. While it may appear that your username and password are encrypted, they are simply encoded in a format known as Base64 format. The username and password are not encrypted! To see this, go to &lt;a href=&#34;http://www.motobit.com/util/base64-decoder-encoder.asp&#34;&gt;http://www.motobit.com/util/base64-decoder-encoder.asp&lt;/a&gt; and enter the base64-encoded string d2lyZXNoYXJrLXN0dWRlbnRz and decode. Voila! You have translated from Base64 encoding to ASCII encoding, and thus should see your username! To view the password, enter the remainder of the string Om5ldHdvcms= and press decode. Since anyone can download a tool like Wireshark and sniff packets (not just their own) passing by their network adaptor, and anyone can translate from Base64 to ASCII (you just did it!), it should be clear to you that simple passwords on WWW sites are not secure unless additional measures are taken.&lt;/p&gt;
+&lt;p&gt;Fear not! As we will see in Chapter 8, there are ways to make WWW access more secure. However, we’ll clearly need something that goes beyond the basic HTTP authentication framework!&lt;/p&gt;
+&lt;h2 id=&#34;wireshark-lab-dns&#34;&gt;Wireshark Lab: DNS&lt;/h2&gt;
+&lt;h1 id=&#34;reference&#34;&gt;Reference&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pearson.com/us/higher-education/product/Kurose-Computer-Networking-A-Top-Down-Approach-6th-Edition/9780132856201.html?tab=contents&#34;&gt;Computer Networking: A Top-Down Approach, 6th Edition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gaia.cs.umass.edu/kurose_ross/wireshark.htm&#34;&gt;&lt;strong&gt;Wireshark Labs&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Computer Networks and the Internet</title>
+      <link>http://www.yezheng.pro/post/specialization/computer-networking/computer-networks-1/</link>
+      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/computer-networking/computer-networks-1/</guid>
+      
+        <description>&lt;h2 id=&#34;what-is-the-internet&#34;&gt;What Is the Internet?&lt;/h2&gt;
+&lt;h4 id=&#34;a-nuts-and-bolts-description&#34;&gt;A Nuts-and-Bolts Description&lt;/h4&gt;
+&lt;p&gt;设备：称为&lt;strong&gt;主机（host）&lt;strong&gt;或&lt;/strong&gt;端系统（end system）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;端系统通过**通信链路（communication link）&lt;strong&gt;和&lt;/strong&gt;分组交换机（packet switch）**连接到一起。&lt;/p&gt;
+&lt;p&gt;通信链路的物理媒体包含：电缆、铜线、光纤和无线电频谱。&lt;/p&gt;
+&lt;p&gt;端系统向另一台端系统发送数据时，发送端系统将数据分段，并为每段加上首部字节，形成的信息包称为&lt;strong&gt;分组（packet）&lt;/strong&gt;，分组到目的端系统被装配成初始数据。&lt;/p&gt;
+&lt;p&gt;分组交换机：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;**路由器（router）**通常用于网络核心中&lt;/li&gt;
+&lt;li&gt;**链路层交换机（link-layer swtich）**通常用于接入网中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;端系统通过**因特网服务提供商（Internet Service Provider, ISP）**接入因特网。每个ISP自身就是一个由多台分组交换机和多段通信链路组成的网络。因特网就是将端系统互联，因此为端系统提供的ISP也必须互联起来。无论是较高层还是较低层ISP网络,它们每个都是独立管理的,运行着IP协议,遵从一定的命名和地址规则。&lt;/p&gt;
+&lt;p&gt;端系统、分组交换机和其他因特网部件都要运行一系列&lt;strong&gt;协议(protocol)&lt;/strong&gt;,这些协议控制因特网中信息的接收和发送。**TCP(Transmission Control Protocol, 传输控制协议)&lt;strong&gt;和&lt;/strong&gt;IP(Intemnet Protocol,网际协议)**是因特网中两个最为重要的协议。IP协议定义了在路由器和端系统之间发送和接收的分组格式。&lt;strong&gt;因特网的主要协议统称为TCP/IP。&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;a-services-description&#34;&gt;A Services Description&lt;/h4&gt;
+&lt;p&gt;涉及多个相互交换数据的端系统的应用程序, 被称为&lt;strong&gt;分布式应用程序(distributed application)&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;与因特网相连的端系统提供了一个&lt;strong&gt;套接字接口（socket interface）&lt;/strong&gt;,该接口规定了运行在一个端系统上的程序请求因特网基础设施向运行在另一个端系统上的特定目的地程序交付数据的方式。&lt;/p&gt;
+&lt;h4 id=&#34;what-is-a-protocol&#34;&gt;What Is a Protocol?&lt;/h4&gt;
+&lt;p&gt;**协议（protocol）**定义了在两个或多个通信实体之间交换的报文的格式和顺序,以及报文发送和/或接收一条报文或其他事件所采取的动作。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;掌握计算机网络领域知识的过程就是理解网络协议的构成、原理和工作方式的过程。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-network-edge&#34;&gt;The Network Edge&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;主机 = 端系统&lt;/strong&gt;。主机有时又被进一步划分为两类：&lt;strong&gt;客户（client）&lt;strong&gt;和&lt;/strong&gt;服务器(server)&lt;/strong&gt;。今天, 大部分提供搜索结果、电子邮件、Web页面和视频的服务器都属于&lt;strong&gt;大型数据中心(data center)&lt;/strong&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;access-networks&#34;&gt;Access Networks&lt;/h4&gt;
+&lt;p&gt;接入网是指将端系统物理连接到其**边缘路由器（edge rounter）**的物理链路。边缘路由器是端系统到任何其他远程端系统的路径上的第一台路由器。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;家庭接人:数字用户线（Digital Subscriber Line, DSL）、电缆（Cable）、光纤入户（FTTH）、拨号（很慢）和卫星&lt;/li&gt;
+&lt;li&gt;企业(和家庭)接人:以太网和WiFi，以太网是用局域网（LAN）技术，WIFI是无线LAN。现在家庭通常电缆或DSL可以与无线局域网结合使用&lt;/li&gt;
+&lt;li&gt;广域无线接人:3G和LTE，通过蜂窝网提供商运营的基站发送接收分组。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;physical-media&#34;&gt;Physical Media&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;双绕铜线&lt;/li&gt;
+&lt;li&gt;同轴电缆&lt;/li&gt;
+&lt;li&gt;光纤&lt;/li&gt;
+&lt;li&gt;陆地无线电信道&lt;/li&gt;
+&lt;li&gt;卫星无线电信道&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;the-network-core&#34;&gt;The Network Core&lt;/h2&gt;
+&lt;h4 id=&#34;packet-switching&#34;&gt;Packet Switching&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;在各种网络应用中,端系统彼此交换&lt;strong&gt;报文(message)&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;报文能够包含协议设计者需要的任何东西。&lt;strong&gt;报文可以执行一种控制功能,也可以包含数据&lt;/strong&gt;, 例如电子邮件数据、JPEC图像或MP3音频文件。&lt;/li&gt;
+&lt;li&gt;为了从源端系统向目的端系统发送一个报文, 源将长报文划分为较小的数据块,称之为&lt;strong&gt;分组(packet)&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;在源和目的地之间,每个分组都通过通信链路和**分组交换机(packet switch)**传送。(交换机主要有两类:&lt;strong&gt;路由器(router)&lt;strong&gt;和&lt;/strong&gt;链路层交换机(link-layer switch)&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&#34;存储转发传输&#34;&gt;存储转发传输&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;多数分组交换机在链路的输人端使用**存储转发传输(store-and-forward transmission)**机制。存储转发传输是指在交换机能够开始向输出链路传输该分组的第一个比特之前,必须接收到整个分组。&lt;/li&gt;
+&lt;li&gt;通过由N条速率均为R的链路组成的路径，有N-1台路由器，从源到目的地发送一个分组，端到端时延是$$N\frac{L}{R}$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&#34;排队时延和分组丢失&#34;&gt;排队时延和分组丢失&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;每台分组交换机有多条链路与之相连。对于每条相连的链路,该分组交换机具有一个&lt;strong&gt;输出缓存(output buffer,也称为输出队列(output queue))&lt;/strong&gt;,它用于存储路由器准备发往那条链路的分组。该输出缓存在分组交换中起着重要的作用。&lt;/li&gt;
+&lt;li&gt;除了存储转发时延以外,分组还要承受输出缓存的&lt;strong&gt;排队时延(queuing delay)&lt;/strong&gt;。这些时延是变化的,变化的程度取决于网络的拥塞程度。因为缓存空间的大小是有限的,一个到达的分组可能发现该缓存已被其他等待传输的分组完全充满了。在此情况下,将出现&lt;strong&gt;分组丢失(丢包)(packet loss)&lt;/strong&gt;,到达的分组或已经排队的分组之一将被丢弃。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h6 id=&#34;转发表和路由选择协议&#34;&gt;转发表和路由选择协议&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;在因特网中，每个端系统具有一个称为&lt;strong&gt;IP地址&lt;/strong&gt;的地址。&lt;/li&gt;
+&lt;li&gt;每台路由器具有一个&lt;strong&gt;转发表(forwarding table)&lt;/strong&gt;,用于将目的地址（或目的地址的一部分）映射成为输出链路。&lt;/li&gt;
+&lt;li&gt;因特网具有一些特殊的&lt;strong&gt;路由选择协议（routing protocol）&lt;/strong&gt; ，用于自动地设置这些转发表。&lt;/li&gt;
+&lt;li&gt;使用Traceroute程序可以看到分组在因特网中所走的端到端路由。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;circuit-switching&#34;&gt;Circuit Switching&lt;/h4&gt;
+&lt;p&gt;通过网络链路和交换机移动数据有两种基本方法:&lt;strong&gt;电路交换(circuit switching)&lt;strong&gt;和&lt;/strong&gt;分组交换(packet switching)&lt;/strong&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;a-network-of-networks&#34;&gt;A Network of Networks&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;因为接入ISP向全球传输ISP付费,故接人ISP被认为是&lt;strong&gt;客户(customer)&lt;/strong&gt;,而全球传输ISP被认为是&lt;strong&gt;提供商(provider)&lt;/strong&gt;,&lt;/li&gt;
+&lt;li&gt;在任何给定的区域,可能有一个&lt;strong&gt;区域ISP(regional ISP)&lt;/strong&gt;，区域中的接人ISP与之连接。每个区域ISP则与&lt;strong&gt;第一层ISP(tier-1 ISP)连接&lt;/strong&gt;。第一层ISP类似于我们假想的全球传输ISP,尽管它不是在世界上每个城市中都存在,但它确实存在。&lt;/li&gt;
+&lt;li&gt;任何ISP〔(除了第一层ISP)可以选择&lt;strong&gt;多宿(multi-home)&lt;/strong&gt;,即可以与两个或更多提供商ISP连接。例如,一个接人ISP可能与两个区域ISP多宿,既可以与两个区域ISP多宿,也可以与多个第一层ISP多宿。当一个ISP提供商出现故障，能够继续发送和接收分组。&lt;/li&gt;
+&lt;li&gt;位于相同等级结构层次的邻近一对ISP能够&lt;strong&gt;对等(peer)&lt;/strong&gt;, 也就是说,能够直接将它们的网络连到一起,使它们之间的所有流量经直接连接而不是通过上游的中间ISP传输。当两个ISP对等时,通常不进行结算,即任一个ISP不向其对等付费。因特网交换点（Internet Exchange Point, IXP）多个ISP能够在这里共同对等。&lt;/li&gt;
+&lt;li&gt;顶部有&lt;strong&gt;内容提供商网络（content provider network）&lt;/strong&gt;，数据中心绕过较高层ISP，直接与较低层ISP连接。&lt;/li&gt;
+&lt;li&gt;今天的因特网是一个&lt;strong&gt;网络的网络&lt;/strong&gt;，其结构复杂，由十多个第一层ISP和数十万个较低层ISP组成。较低层的ISP与较高层的ISP相连,较高层ISP彼此互联。用户和内容提供商是较低层ISP的客户,较低层ISP是较高层ISP的客户。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic1.zhimg.com/80/v2-aeb1ce8889ea9b88cb57afbe5c49cc6c_1440w.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;delay-loss-and-throughput-in-packet-switched-networks&#34;&gt;Delay, Loss, and Throughput in Packet-Switched Networks&lt;/h2&gt;
+&lt;h4 id=&#34;overview-of-delay-in-packet-switched-networks&#34;&gt;Overview of Delay in Packet-Switched Networks&lt;/h4&gt;
+&lt;p&gt;当分组从一个节点(主机或路由器)沿着这条路径到后继节点(主机或路由器),该分组在沿途的冬个节点经受了几种不同类型的时延。这些时延最为重要的是&lt;strong&gt;节点处理时延(nodalprocessing delay)&lt;/strong&gt;、&lt;strong&gt;排队时延(queuing delay)&lt;/strong&gt;、&lt;strong&gt;传输时延(transmission delay)&lt;strong&gt;和&lt;/strong&gt;传播时延(propagation delay)&lt;/strong&gt;,这些时延总体累加起来是&lt;strong&gt;节点总时延(totalnodal delay)&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic1.zhimg.com/80/v2-5d5e8ce120b48b8ea632f8e6564480f0_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;处理时延&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;检查分组首部和决定将该分组导向何处所需要的时间是&lt;strong&gt;处理时延&lt;/strong&gt;的一部分。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;排队时延&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;在队列中,当分组在链路上等待传输时,它经受&lt;strong&gt;排队时延&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;传输时延&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;用L比特表示该分组的长度,用Rbps(即b/s)表示从路由器A到路由器B的链路传输速率。链路,速率史=10Mbps;对于100Mbps的以太网链路,速率R=100Mbps。&lt;strong&gt;传输时延是L/R&lt;/strong&gt;。这是将所有分组的比特推向链路(即传输,或者说发射)所需要的时间。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;传播时延&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;一旦一个比特被推向链路,该比特需要向路由器B传播。从该链路的起点到路由器B传播所需要的时间是&lt;strong&gt;传播时延&lt;/strong&gt;。该比特以该链路的传播速率传播。该传播速率取决于该链路的物理媒体(即光纤、双绞铜线等),其速率范围是2x10~3x10m/s,这等于或略小于光速。该传播时延等于两台路由器之间的距离除以传播速率。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;传输时延是路由器将分组推出所需要的时间，是分组长度和链路传输速率的函数，而与两台路由器之间的距离无关。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;传播时延是一个比特从一台路由器向另一台路由器传播所需要的时间，是两台路由器之间距离的函数，而与分组长度或链路传播速率无关。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;queuing-delay-and-packet-loss&#34;&gt;Queuing Delay and Packet Loss&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;节点时延的最为复杂和有趣的成分是排队时延。&lt;/li&gt;
+&lt;li&gt;与其他三项时延（即、 和 ）不同的是，排队时延对不同的分组可能是不同的&lt;/li&gt;
+&lt;li&gt;令 $a$ 表示分组到达队列的平均速率（单位：分组/秒，即 $pkt/s$）；$R$是传输速率，即从队列中推出比特的速率（单位 $bps$：，即$b/s$）；假定所以分组都是由$L$比特组成的**，**则比特到达队列的平均速率是$La/R &amp;gt; 1$。假定该队列非常大，因此它基本能容纳无限数量的比特。比率$La/R$被称为**流量强度（traffic intensity）**。&lt;/li&gt;
+&lt;li&gt;如果，则比特到达队列的平均速率超过从该队列传输出去的速率，该队列趋向于无限增加，并且排队时延将趋向无穷大！因此，流量工程的一条金科玉律是：&lt;strong&gt;设计系统时流量强度不能大于1&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;在上述讨论中,我们已经假设队列能够容纳无穷多的分组。在现实中,一条链路前的队列只有有限的容量,尽管排队容量极大地依赖于路由器设计和成本。因为该排队容量是有限的,随着流量强度接近1,排队时延并不真正趋向无穷大。相反,到达的分组将发现一个满的队列。由于没有地方存储这个分组,路由器将&lt;strong&gt;丢弃(drop)&lt;strong&gt;该分组,即该分组将会&lt;/strong&gt;丢失(lost)&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分组丢失的比例随着流量强度增加而增加&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;end-to-end-delay&#34;&gt;End-to-End Delay&lt;/h4&gt;
+&lt;p&gt;假定在源主机和目的主机之间有台路由器。我们还要假设该网络此时是无拥塞的(因此排队时延是微不足道的),在每台路由器和源主机上的处理时延是$d_{proc}$。,每台路由器和源主机的输出速率是$R$ bps,每条链路的传播时延是$d_{prop}$。节点时延累加起来, 得到端到端时延:$d_{end-end}=N(d_{proc}+d_{trans}+d_{prop})$  式中，其中$L$是分组长度，$d_{trans} = L/R$&lt;/p&gt;
+&lt;h4 id=&#34;throughput-in-computer-networks-计算机网络中的吞吐量&#34;&gt;Throughput in Computer Networks (计算机网络中的吞吐量)&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;考虑从主机A到主机B跨越计算机网络传送一个大文件，在任何时间瞬间的&lt;strong&gt;瞬时吞吐量（instantaneous throughput）&lt;strong&gt;是主机B接收到该文件的&lt;/strong&gt;速率&lt;/strong&gt;（以计）。&lt;/li&gt;
+&lt;li&gt;如果该文件由比特组成，主机B接收到所有F比特用去秒，则文件传送的**平均吞吐量（average throughout）**是&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;protocol-layers-and-their-service-models&#34;&gt;Protocol Layers and Their Service Models&lt;/h2&gt;
+&lt;h4 id=&#34;layered-architecture&#34;&gt;Layered Architecture&lt;/h4&gt;
+&lt;h6 id=&#34;协议分层&#34;&gt;协议分层&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;协议分层的优缺点&lt;/strong&gt;：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;优点&lt;/strong&gt;：协议分层具有概念化和结构化的优点。分层提供了一种结构化方式来讨论系统组件。模块化使更新系统组件更为容易。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缺点&lt;/strong&gt;：分层的一个潜在缺点是一层可能冗余较低层的功能。第二个潜在的缺点 是某层的功能可能需要仅在其他某层才出现的信息（如时间戳值），这违反了层次分离的目标。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;各层的所有协议被称为协议栈(protocol stack)。&lt;/p&gt;
+&lt;p&gt;五层因特网协议栈:&lt;strong&gt;物理层、链路层、网络层、运输层和应用层&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;七层ISO OSI参考模型：&lt;strong&gt;物理层、链路层、网络层、运输层、会话层、表示层和应用层&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因特网协议栈自顶向下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;应用层&lt;/p&gt;
+&lt;p&gt;因特网的应用层包括许多协议，例如HTTP（Web文档请求和传送）、SMTP（电子邮件报文的传输）、FTP（两个端系统之间的文件传送）、DNS（域名系统）等。&lt;/p&gt;
+&lt;p&gt;应用层协议分布在多个端的系统上，一个端系统中的应用程序使用协议与另一个端系统中的应用程序交换信息的分组。应用层的信息分组称为&lt;strong&gt;报文(message)&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;运输层&lt;/p&gt;
+&lt;p&gt;因特网的运输层在应用程序端点之间&lt;strong&gt;传送应用层报文&lt;/strong&gt;。因特网中有两个运输协议，即TCP和UDP，两个都可以运输应用层报文。&lt;/p&gt;
+&lt;p&gt;TCP是面向连接的，这种服务包括了应用层报文向目的地的&lt;strong&gt;确保传递&lt;/strong&gt;和&lt;strong&gt;流量控制&lt;/strong&gt;，TCP也将长报文&lt;strong&gt;划分为短报文&lt;/strong&gt;，并提供&lt;strong&gt;拥塞控制&lt;/strong&gt;机制，因此当网络拥塞时，源地址会抑制其传输速率。&lt;/p&gt;
+&lt;p&gt;UDP协议提供无连接服务，这是一种不提供不必要服务的服务，&lt;strong&gt;没有可靠性，没有流量控制，也没有拥塞控制&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;运输层分组称为&lt;strong&gt;报文段(segment)&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;网络层
+网络层的分组称为 &lt;strong&gt;数据报(datagram)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;因特网的网络层把数据包从一台主机移动到另一台主机。在一台源主机中的因特网运输层协议（TCP或UDP）向网络层&lt;strong&gt;递交运输层报文段和目的地址&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;网络层中包括&lt;strong&gt;IP协议&lt;/strong&gt;，该协议定义了数据包中的各个字段以及端系统和路由器如何作用于这些字段。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;链路层
+因特网的网络层通过源和目的地之间的一系列路由器路由数据报。网络层依靠链路层的服务来将分组从结点(主机或路由器)移动到路径上的下一个结点。在每一个结点，网络层将数据报下，链路层沿着路径将数据报传递给下一个结点，在下一个结点，链路层将数据报上传给网络层。&lt;/p&gt;
+&lt;p&gt;某些协议基于链路层提供可靠传递，从传输结点跨越一条链路到接收结点，这种可靠传输不同于TCP的可靠传输。(从一个端系统到另一个端系统)&lt;/p&gt;
+&lt;p&gt;链路层分组称为 &lt;strong&gt;帧(frame)&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;物理层
+链路层的任务是把整个帧从一个网络元素移动到邻近的网络元素，物理层的任务则是把&lt;strong&gt;该帧中的一个个比特从一个结点移动到下一个结点&lt;/strong&gt;，这些仍是和链路相关的，但是是与链路的实际传输媒体相关的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;OSI模型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;表示层&lt;/p&gt;
+&lt;p&gt;表示层的作用是使通信的应用程序能够解释交换数据的含义。这些服务包括数据压缩、数据加密以及数据描述。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;会话层&lt;/p&gt;
+&lt;p&gt;会话层提供了数据交换定界和同步功能，包括了建立检查点和恢复方案的方法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因特网缺少了OSI模型中的两层，这两层留给应用程序开发者处理。&lt;/p&gt;
+&lt;h4 id=&#34;encapsulation&#34;&gt;Encapsulation&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic3.zhimg.com/80/v2-9a7b7f552162bcb27dd2c4986c03568a_1440w.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;数据从发送端系统的协议栈向下，向上和向下经过中间的链路层交换机和路由器协议栈，进而向上到达接收端系统的协议栈。&lt;/p&gt;
+&lt;p&gt;路由器和链路层交换机并不实现协议栈中的所有层次。链路层交换机实现了链路层和物理层，路由器实现了链路层、物理层和网络层。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;封装（encapsulation）&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;运输层收到&lt;strong&gt;应用层报文(application-layer message)&lt;strong&gt;并附上运输层首部信息，构成了&lt;/strong&gt;运输层报文端（transport-layer segment）&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;网络层增加了如源和目的端系统地址和网络层首部信息，产生&lt;strong&gt;网络层数据报（network-layer datagram）&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;链路层增加链路层首部信息并创建&lt;strong&gt;链路层帧（link-layer frame）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在每一层，一个分组都具有两种类型的字段：&lt;strong&gt;首部字段和有效载荷字段（payload field）&lt;/strong&gt;，有效符合通常来自上一层的分组。&lt;/p&gt;
+&lt;h1 id=&#34;reference&#34;&gt;Reference&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pearson.com/us/higher-education/product/Kurose-Computer-Networking-A-Top-Down-Approach-6th-Edition/9780132856201.html?tab=contents&#34;&gt;Computer Networking: A Top-Down Approach, 6th Edition&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>How the Internet Works</title>
+      <link>http://www.yezheng.pro/post/specialization/computer-networking/how-the-internet-works/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/computer-networking/how-the-internet-works/</guid>
+      
+        <description>&lt;ul&gt;
+&lt;li&gt;Multiple packets in pipeline at same time&lt;/li&gt;
+&lt;li&gt;Packets may be &lt;strong&gt;damaged&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Packets may arrive &lt;strong&gt;out of order&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Packets may be &lt;strong&gt;duplicated&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;They may not arrive at all!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Summary so far: Applications send and receive data in &lt;strong&gt;packets&lt;/strong&gt; over an Internet that is &lt;strong&gt;unreliable&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;how-packets-find-their-way-across-the-internet&#34;&gt;How packets find their way across the Internet?&lt;/h3&gt;
+&lt;h6 id=&#34;internet-addresses&#34;&gt;Internet addresses&lt;/h6&gt;
+&lt;p&gt;| Data | Internet &amp;ldquo;IP&amp;rdquo; Address |&lt;/p&gt;
+&lt;p&gt;All Internet packets carry a destination IP address. We usually write the IP address like this: 171.64.74.58&lt;/p&gt;
+&lt;h6 id=&#34;routers-forward-packets-one-at-a-time&#34;&gt;Routers forward packets one at a time&lt;/h6&gt;
+&lt;p&gt;Routers look at IP addresses, then send packets to a router closer to the destination.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The IP address tells a router where to send the packet next.&lt;/strong&gt;
+IP addresses have structure:
+A network in The Stanford the computer CS department University yuba.stanford.edu at Stanford University
+171.64.74.58
+An address managed by RIPE. An address  The computer at (European Koç University &lt;a href=&#34;http://www.ku.edu.tr&#34;&gt;www.ku.edu.tr&lt;/a&gt; IP Networks)
+88.255.96.208&lt;/p&gt;
+&lt;h4 id=&#34;can-we-see-the-path-our-packets-take&#34;&gt;Can we see the path our packets take?&lt;/h4&gt;
+&lt;p&gt;On your computer, try: “&lt;strong&gt;ping&lt;/strong&gt; yuba.stanford.edu” and “&lt;strong&gt;traceroute&lt;/strong&gt; yuba.stanford.edu”
+(Windows: “tracert yuba.stanford.edu”)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Round Trip Time (RTT)&lt;/strong&gt; is the length time it takes for a data packet to be sent to a destination plus the time it takes for an acknowledgment of that packet to be received back at the origin.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Packets are forwarded hop-by-hop based on the final destination address.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Internet cannot be trusted!!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The Internet doesn’t promise to deliver packets in order.&lt;/li&gt;
+&lt;li&gt;It doesn’t promise to deliver packets quickly, or on time.&lt;/li&gt;
+&lt;li&gt;It doesn’t even promise to deliver them at all!&lt;/li&gt;
+&lt;li&gt;It just makes a “best-effort” attempt.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sending data reliably over an Internet that is unreliable.&lt;/p&gt;
+&lt;h4 id=&#34;how-network-applications-communicate&#34;&gt;How Network Applications Communicate&lt;/h4&gt;
+&lt;p&gt;The most common method:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Communication is in both directions – “bidirectional”.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Communication is reliable&lt;/p&gt;
+&lt;p&gt;(if there is a working path between the two computers).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It’s like an unformatted pipe:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You push data in at one end, and it pops out correctly at the other end.&lt;/li&gt;
+&lt;li&gt;The applications decide how the data is formatted inside the pipe.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Byte Stream Model&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Setup connection&lt;/li&gt;
+&lt;li&gt;Stream of bytes&lt;/li&gt;
+&lt;li&gt;Close connection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;World Wide Web (HTTP)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Setup connection&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Stream of bytes&lt;/p&gt;
+&lt;p&gt;GET/HTTP/1.1 index.html&lt;/p&gt;
+&lt;p&gt;HTTP/1.1 200 OK &amp;lt;&amp;hellip;contents of index.html&amp;hellip;&amp;gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Close connection&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TCP makes sure all the data is delivered&lt;/p&gt;
+&lt;h4 id=&#34;tcps-job&#34;&gt;TCP’s job&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Makes sure all data is delivered correctly. Delivers data to the application in the right order.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;How?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add sequence numbers to every packet (so the receiver can check if any are missing, and put them in right order)&lt;/li&gt;
+&lt;li&gt;When a packet arrives, send an acknowledgment of receipt or “&lt;strong&gt;ACK&lt;/strong&gt;” back to the sender&lt;/li&gt;
+&lt;li&gt;If no acknowledgment is received, resend the data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;packets-are-encapsulated-by-different-layers-of-processing&#34;&gt;Packets are “encapsulated” by different “layers” of processing&lt;/h4&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Applications send and receive data in packets over an Internet that is unreliable.&lt;/p&gt;
+&lt;p&gt;Packets are forwarded hop-by-hop using the IP destination address.&lt;/p&gt;
+&lt;p&gt;Our applications use TCP to make sure they are delivered and put back in the correct order.&lt;/p&gt;
 </description>
       
     </item>
@@ -2290,1669 +3109,6 @@ find microservices -depth -name &amp;quot;gradlew*&amp;quot; -exec rm -fv &amp;q
       <guid>http://www.yezheng.pro/post/specialization/big-data/flink/</guid>
       
         <description>&lt;p&gt;&lt;a href=&#34;https://github.com/apache/flink/tree/master/flink-runtime-web&#34;&gt;Apache Flink Web Dashboard&lt;/a&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Cloud Computing</title>
-      <link>http://www.yezheng.pro/post/specialization/cloud-computing/15-319/</link>
-      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/cloud-computing/15-319/</guid>
-      
-        <description>&lt;h2 id=&#34;introduction-and-course-logistics&#34;&gt;Introduction and Course Logistics&lt;/h2&gt;
-&lt;h2 id=&#34;data-analytics&#34;&gt;Data Analytics&lt;/h2&gt;
-&lt;h2 id=&#34;big-data-analytics&#34;&gt;Big Data Analytics&lt;/h2&gt;
-&lt;h2 id=&#34;elasticity-and-auto-scaling&#34;&gt;Elasticity and Auto Scaling&lt;/h2&gt;
-&lt;h2 id=&#34;containers-and-kubernetes&#34;&gt;Containers and Kubernetes&lt;/h2&gt;
-&lt;h2 id=&#34;serverless-computing-and-functions-as-a-service&#34;&gt;Serverless Computing and Functions-as-a-Service&lt;/h2&gt;
-&lt;h2 id=&#34;flat-files-and-databases--team-project&#34;&gt;Flat Files and Databases &amp;amp; Team Project&lt;/h2&gt;
-&lt;h2 id=&#34;social-network-heterogenous-storage-and-dbaas--team-project&#34;&gt;Social Network, Heterogenous Storage and DBaaS &amp;amp; Team Project&lt;/h2&gt;
-&lt;h2 id=&#34;replication-and-consistency-and-team-project-phase-1&#34;&gt;Replication and Consistency and Team Project Phase 1&lt;/h2&gt;
-&lt;h2 id=&#34;team-project-phase-1&#34;&gt;Team Project Phase 1&lt;/h2&gt;
-&lt;h2 id=&#34;iterative-batch-processing-in-spark-and-team-project-phase-2&#34;&gt;Iterative Batch Processing in Spark and Team Project Phase 2&lt;/h2&gt;
-&lt;h2 id=&#34;team-project-phase-2-and-live-test&#34;&gt;Team Project Phase 2 and Live Test&lt;/h2&gt;
-&lt;h2 id=&#34;machine-learning-on-the-cloud-and-team-project-phase-3&#34;&gt;Machine Learning on the Cloud and Team Project Phase 3&lt;/h2&gt;
-&lt;h2 id=&#34;team-project-phase-3-and-live-test&#34;&gt;Team Project Phase 3 and Live Test&lt;/h2&gt;
-&lt;h2 id=&#34;stream-processing-with-kafka--samza&#34;&gt;Stream Processing with Kafka &amp;amp; Samza&lt;/h2&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cs.cmu.edu/~msakr/15619-s20/recitations.html&#34;&gt;https://www.cs.cmu.edu/~msakr/15619-s20/recitations.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Introduction to Cloud Infrastructure Technologies</title>
-      <link>http://www.yezheng.pro/post/specialization/cloud-computing/infrastructure/introduction-to-cloud-infrastructure-technologies/</link>
-      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/cloud-computing/infrastructure/introduction-to-cloud-infrastructure-technologies/</guid>
-      
-        <description>&lt;h2 id=&#34;chapter-1-virtualization&#34;&gt;Chapter 1. Virtualization&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h4 id=&#34;introduction-to-cloud-computing-and-technologies&#34;&gt;Introduction to Cloud Computing and Technologies&lt;/h4&gt;
-&lt;p&gt;Historically, the word &lt;strong&gt;cloud&lt;/strong&gt; was used as a metaphor for Internet. Later on, it was used to depict the Internet in computer network diagrams. To find out more about the origin of the cloud, you can take a look at the details provided on &lt;a href=&#34;https://en.wikipedia.org/wiki/Cloud_computing#Origin_of_the_term&#34;&gt;Wikipedia&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Cloud computing&lt;/strong&gt; can be referred as the allocation of resources on the cloud. According to &lt;a href=&#34;http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf&#34;&gt;NIST (National Institute of Standard and Technology)&lt;/a&gt;, the formal definition of cloud computing is the following:&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;&lt;em&gt;Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g. networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;Cloud computing providers offer different kinds of services built on top of basic provisioning and releasing of resources. Most of these services fall into one of the following categories:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;Infrastructure as a Service (IaaS)&lt;/li&gt;
-&lt;li&gt;Platform as a Service (PaaS)&lt;/li&gt;
-&lt;li&gt;Software as a Service (SaaS).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We will cover these categories and others throughout the course. Most providers use some form of web interface, on top of which we can build the desired stack. Cloud providers use a pay-as-you-go model, in which we pay for the resources we have used in a given duration.&lt;/p&gt;
-&lt;h4 id=&#34;key-features-of-cloud-computing&#34;&gt;Key Features of Cloud Computing&lt;/h4&gt;
-&lt;p&gt;Cloud computing provides key features such as:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Speed and Agility&lt;/strong&gt;
-The required resources are just one click away, which saves time and provides agility. We can also easily scale up or down, depending on our need.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cost&lt;/strong&gt;
-It reduces the up-front cost to set up the infrastructure, and allows us to focus on applications and business. Cloud providers have features to estimate the cost, which helps us plan better.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Easy Access to Resources&lt;/strong&gt;
-As users, we can access our infrastructure from any place and device, as long as we can connect to the provider.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Maintenance&lt;/strong&gt;
-All the maintenance work for the resources is done by the provider. As end users, we do not have to worry about this aspect.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-tenancy&lt;/strong&gt;
-Multiple users can use the same pool of resources.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Reliability&lt;/strong&gt;
-Resources can be hosted in different data center locations, to provide increased reliability.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;cloud-deployment-models&#34;&gt;Cloud Deployment Models&lt;/h4&gt;
-&lt;p&gt;Generally, a cloud is deployed in the following models:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Cloud&lt;/strong&gt;
-It is designated and operated solely for one organization. It can be hosted internally or externally and managed by internal teams or a third party. We can build a private cloud using a software stack like &lt;a href=&#34;https://www.openstack.org/&#34;&gt;OpenStack&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Public Cloud&lt;/strong&gt;
-It is open to the public and anybody can use it after swiping the credit card. Amazon Web Services and Google Compute Engine are examples of public clouds.&lt;/li&gt;
-&lt;li&gt;**Hybrid Cloud
-**Public and private clouds are bound together to offer the hybrid cloud. Among other things, a hybrid cloud can be used to:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;ol&gt;
-&lt;li&gt;Store sensitive information on a private cloud, while offering public services based on that information from a public cloud.&lt;/li&gt;
-&lt;li&gt;Meet the temporary resources needed from the public cloud. These temporary resources cannot be met from a private cloud.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://courses.edx.org/assets/courseware/v1/6f3bd09c6693af43ba9fe43d0ab1bb58/asset-v1:LinuxFoundationX+LFS151.x+2T2018+type@asset+block/Cloud_computing_types.svg&#34; alt=&#34;Cloud Computing Types&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Cloud Computing Types&lt;/strong&gt;
-(by Sam Johnston, licensed under &lt;a href=&#34;https://creativecommons.org/licenses/by-sa/3.0/&#34;&gt;CC BY-SA 3.0&lt;/a&gt;, retrieved from &lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/8/87/Cloud_computing_types.svg&#34;&gt;Wikipedia&lt;/a&gt;)&lt;/p&gt;
-&lt;h4 id=&#34;virtualization&#34;&gt;Virtualization&lt;/h4&gt;
-&lt;p&gt;According to &lt;a href=&#34;https://en.wikipedia.org/wiki/Virtualization&#34;&gt;Wikipedia&lt;/a&gt;,&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&amp;ldquo;In computing, virtualization refers to the act of creating a virtual (rather than actual) version of something, including virtual computer hardware platforms, operating systems, storage devices, and computer resources&amp;rdquo;.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Virtualization can be offered on different hardware and software layers, like Central Processing Unit (CPU), disk, memory, filesystems, etc. In this chapter, we will look at some examples of creating virtual machines (VMs) after emulating the different kinds of hardware to install a guest OS on them.&lt;/p&gt;
-&lt;p&gt;Virtual machines are created on top of a &lt;strong&gt;hypervisor&lt;/strong&gt;, which runs on top of the host machine&amp;rsquo;s operating system. With hypervisors, we emulate hardware like CPU, disk, network, memory, etc., and install guest machines on it. We can create multiple guest machines with different operating systems on a hypervisor. For example, we can take a Linux machine running on bare metal and, after setting up the hypervisor, we can create multiple guest machines with Linux and Windows operating systems. Some examples of hypervisors are:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;KVM&lt;/li&gt;
-&lt;li&gt;Xen&lt;/li&gt;
-&lt;li&gt;VMWare&lt;/li&gt;
-&lt;li&gt;VirtualBox&lt;/li&gt;
-&lt;li&gt;Hyper-V.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We can find support for hardware virtualization in all recent CPUs, as it is important to share the host system&amp;rsquo;s processor resources with multiple guest operating systems in a safe and efficient way. Most of the recent CPUs will also support &lt;a href=&#34;https://en.wikipedia.org/wiki/Virtualization#Nested_virtualization&#34;&gt;nested virtualization&lt;/a&gt;, which enables us to have a VM inside a VM.&lt;/p&gt;
-&lt;p&gt;Next, let&amp;rsquo;s take a look at a few examples on how to create VMs on top of different hypervisors.&lt;/p&gt;
-&lt;h4 id=&#34;learning-objectives&#34;&gt;Learning Objectives&lt;/h4&gt;
-&lt;p&gt;By the end of this chapter, you should be able to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;Describe the different types of virtualization.&lt;/li&gt;
-&lt;li&gt;Explain how hypervisors can be used to create virtual machines.&lt;/li&gt;
-&lt;li&gt;Create and configure virtual machines automatically, using KVM, VirtualBox and Vagrant.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;kvm&#34;&gt;KVM&lt;/h3&gt;
-&lt;h4 id=&#34;introduction-to-kvm&#34;&gt;Introduction to KVM&lt;/h4&gt;
-&lt;p&gt;According to &lt;a href=&#34;http://www.linux-kvm.org/&#34;&gt;linux-kvm.org&lt;/a&gt;,&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&amp;quot;&lt;strong&gt;KVM&lt;/strong&gt; for (Kernel-based Virtual Machine) is a full virtualization solution for Linux on x86 hardware&amp;quot;.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;It is part of the mainline Linux kernel. It is ported for S/390, PowerPC, IA-64 and ARM as well.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://courses.edx.org/assets/courseware/v1/5708cd4d223ce4a5313bdeccbc638cc1/asset-v1:LinuxFoundationX+LFS151.x+2T2018+type@asset+block/Kernel-based_Virtual_Machine.svg&#34; alt=&#34;A High-Level Overview of the KVM/QEMU Virtualization Environment&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;A High-Level Overview of the KVM/QEMU Virtualization Environment&lt;/strong&gt;
-(by V4711, licensed under &lt;a href=&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34;&gt;CC BY-SA 4.0&lt;/a&gt;, retrieved from &lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/4/40/Kernel-based_Virtual_Machine.svg&#34;&gt;Wikipedia&lt;/a&gt;)&lt;/p&gt;
-&lt;h4 id=&#34;features&#34;&gt;Features&lt;/h4&gt;
-&lt;p&gt;KVM is an open source software. It supports &lt;a href=&#34;http://www.linux-kvm.org/page/Guest_Support_Status&#34;&gt;various guest OSes&lt;/a&gt;, like Linux, Windows, Solaris, etc.&lt;/p&gt;
-&lt;p&gt;KVM does not perform any emulation itself, but it exposes the &lt;em&gt;&lt;strong&gt;*/dev/kvm*&lt;/strong&gt;&lt;/em&gt; interface, by which an external userspace host can do emulation. &lt;a href=&#34;https://en.wikipedia.org/wiki/QEMU&#34;&gt;QEMU&lt;/a&gt; is one such host.&lt;/p&gt;
-&lt;p&gt;KVM supports &lt;a href=&#34;https://www.linux-kvm.org/page/Nested_Guests&#34;&gt;nested guests&lt;/a&gt;, which allow us to run virtual machines within virtual machines. It also supports &lt;a href=&#34;https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/&#34;&gt;overcommitting&lt;/a&gt;, so that we can allocate more virtualized resources (CPUs or memory) than the available resources on the system. To do overcommitting for a VM, KVM dynamically swaps resources from another guest that is not using them.&lt;/p&gt;
-&lt;h4 id=&#34;demo-creating-a-virtual-machine-instance-on-the-kvm-hypervisor&#34;&gt;Demo: Creating a Virtual Machine Instance on the KVM Hypervisor&lt;/h4&gt;
-&lt;p&gt;Video&lt;/p&gt;
-&lt;h4 id=&#34;benefits-of-using-kvm&#34;&gt;Benefits of Using KVM&lt;/h4&gt;
-&lt;p&gt;Some of the benefits of using KVM are:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;It is an open source solution, and, as such, free to customize.&lt;/li&gt;
-&lt;li&gt;Using KVM is efficient from a financial perspective as well, due to the lower costs associated with it.&lt;/li&gt;
-&lt;li&gt;It is highly scalable.&lt;/li&gt;
-&lt;li&gt;KVM employs advanced security features, utilizing SELinux. It provides MAC (Mandatory Access Control) security between Virtual Machines. KVM has received awards for meeting common government and military security standards and for allowing open virtualization for homeland security projects.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;virtualbox&#34;&gt;VirtualBox&lt;/h3&gt;
-&lt;h4 id=&#34;introduction-to-virtualbox&#34;&gt;Introduction to VirtualBox&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;VirtualBox&lt;/a&gt; is an x86 and AMD64/Intel64 virtualization product from Oracle, which runs on Windows, Linux, Macintosh, and Solaris hosts and supports &lt;a href=&#34;https://www.virtualbox.org/wiki/Guest_OSes&#34;&gt;guest OSes&lt;/a&gt; from Windows, Linux families, and others, like Solaris, FreeBSD, DOS, etc.&lt;/p&gt;
-&lt;p&gt;It is an easy-to-use multi-platform hypervisor. It is not part of the mainline kernel. So, to use it on Linux, we have to compile and insert the respective kernel module.&lt;/p&gt;
-&lt;p&gt;VirtualBox is distributed under the &lt;a href=&#34;https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html&#34;&gt;GNU General Public License (GPL) version 2&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;demo-creating-a-virtual-machine-instance-on-virtualbox&#34;&gt;Demo: Creating a Virtual Machine Instance on VirtualBox&lt;/h4&gt;
-&lt;p&gt;video&lt;/p&gt;
-&lt;h4 id=&#34;benefits-of-using-virtualbox&#34;&gt;Benefits of Using VirtualBox&lt;/h4&gt;
-&lt;p&gt;Some of the benefits of using VirtualBox are:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;It is an open source solution.&lt;/li&gt;
-&lt;li&gt;It is free to use.&lt;/li&gt;
-&lt;li&gt;It runs on Linux, Windows, OS X, and Solaris.&lt;/li&gt;
-&lt;li&gt;It provides two virtualization choices: software-based virtualization and hardware-assisted virtualization.&lt;/li&gt;
-&lt;li&gt;It is an easy-to-use multi-platform hypervisor.&lt;/li&gt;
-&lt;li&gt;It provides the ability to run virtualized applications side-by-side with normal desktop applications.&lt;/li&gt;
-&lt;li&gt;It provides teleportation - live migration.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;vagrant&#34;&gt;Vagrant&lt;/h3&gt;
-&lt;h4 id=&#34;introduction-to-vagrant&#34;&gt;Introduction to Vagrant&lt;/h4&gt;
-&lt;p&gt;Using virtual machines in a development environment has numerous benefits:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;Reproducible environment&lt;/li&gt;
-&lt;li&gt;Management of multiple projects in their restricted environment&lt;/li&gt;
-&lt;li&gt;Sharing the environment with other teammates&lt;/li&gt;
-&lt;li&gt;Keeping the development and deployment environments in sync&lt;/li&gt;
-&lt;li&gt;Running the same VM on different OSes, with a hypervisor like VirtualBox.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Configuring and sharing one VM is easy, but, when we have to deal with multiple VMs for the same project, doing everything manually can be tiresome. &lt;a href=&#34;https://www.vagrantup.com/&#34;&gt;Vagrant&lt;/a&gt; by HashiCorp helps us automate the setup of one or more VMs by providing an end-to-end lifecycle using the &lt;strong&gt;vagrant&lt;/strong&gt; command line. Vagrant is a cross-platform tool. It can be installed on Linux, Mac OSX, and Windows. We have to use different providers, depending on the OS. It has recently added support for Docker, which can help us manage Docker containers.&lt;/p&gt;
-&lt;h4 id=&#34;managing-virtual-machines-with-vagrant&#34;&gt;Managing Virtual Machines with Vagrant&lt;/h4&gt;
-&lt;p&gt;Next, let&amp;rsquo;s see how Vagrant helps us manage virtual machines:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;**Vagrantfile
-**It is a text file with the Ruby syntax, which has all the information about configuring and provisioning a set of machines. It has details like the machine type, image, networking, provider-specific information, provisioner details, etc. We provide a sample Vagrantfile below:&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;*# -*- mode: ruby -*-
-*&lt;/strong&gt;&lt;/em&gt;****# vi: set ft=ruby :&lt;/p&gt;
-&lt;p&gt;****&lt;em&gt;&lt;strong&gt;*Vagrant.configure(2) do |config|
-*&lt;/strong&gt;&lt;/em&gt;  &lt;em&gt;&lt;strong&gt;*# Every Vagrant development environment requires a box. You can search for
-*&lt;/strong&gt;&lt;/em&gt;  &lt;em&gt;&lt;strong&gt;*# boxes at &lt;a href=&#34;https://atlas.hashicorp.com/search&#34;&gt;https://atlas.hashicorp.com/search&lt;/a&gt;.
-*&lt;/strong&gt;&lt;/em&gt;  &lt;em&gt;&lt;strong&gt;*config.vm.box*&lt;/strong&gt;&lt;/em&gt; ****= &amp;ldquo;centos/7&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;****  ****# Create a private network, which allows host-only access to the machine
-****
-**# using a specific IP.**
-**config.vm.network &amp;ldquo;private_network&amp;rdquo;, ip: &amp;ldquo;192.168.33.10&amp;rdquo;**&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;# config.vm.synced_folder &amp;ldquo;../data&amp;rdquo;, &amp;ldquo;/vagrant_data&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;config.vm.provider &amp;ldquo;virtualbox&amp;rdquo; do |vb|&lt;/strong&gt;
-&lt;strong&gt;# Customize the amount of memory on the VM:&lt;/strong&gt;
-&lt;strong&gt;vb.memory = &amp;ldquo;1024&amp;rdquo;&lt;/strong&gt;
-&lt;strong&gt;end&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;config.vm.provision &amp;ldquo;shell&amp;rdquo;, inline: &amp;laquo;-SHELL&lt;/strong&gt;
-&lt;strong&gt;yum install vim -y&lt;/strong&gt;
-&lt;strong&gt;SHELL&lt;/strong&gt;
-&lt;strong&gt;end&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The &lt;em&gt;&lt;strong&gt;*vagrant*&lt;/strong&gt;&lt;/em&gt; command reads the configuration given in the configuration file and does different operations, like &lt;strong&gt;up&lt;/strong&gt;, &lt;strong&gt;ssh&lt;/strong&gt;, &lt;strong&gt;destroy&lt;/strong&gt;, etc. The &lt;em&gt;&lt;strong&gt;*vagrant*&lt;/strong&gt;&lt;/em&gt; command also has sub-commands like &lt;em&gt;&lt;strong&gt;*box*&lt;/strong&gt;&lt;/em&gt; to manage Box images, &lt;strong&gt;rdp&lt;/strong&gt; to connect to VMs using Remote Desktop Protocol (RDP), etc. A detailed list of commands is available at its &lt;a href=&#34;https://www.vagrantup.com/docs/cli/&#34;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;**Boxes
-**We need to provide an image in the Vagrantfile, which we can use to instantiate machines. In the example above, we have used &lt;strong&gt;centos/7&lt;/strong&gt; as the base image. If the image is not available locally, then it can be downloaded from a central repository like &lt;a href=&#34;https://atlas.hashicorp.com/&#34;&gt;Atlas&lt;/a&gt;, which is the image repository provided by HashiCorp. We can version these images and use them depending on our need, by updating the Vagrantfile accordingly.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;**Vagrant Providers
-**&lt;a href=&#34;https://www.vagrantup.com/docs/providers/&#34;&gt;Providers&lt;/a&gt; are the underlying engine/hypervisor used to provision a machine. By default, Vagrant supports VirtualBox, Hyper-V and Docker. We also have custom providers, like KVM, AWS, etc. VirtualBox is the default provider.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;**Synced Folders
-**With the &lt;em&gt;Synced Folder&lt;/em&gt; feature, we can sync a directory on the host system with a VM, which helps the user manage shared files/directories easily. For example, in the above example, if we un-comment the line below from Vagrantfile, then the &lt;strong&gt;../data&lt;/strong&gt; folder from the current working directory of the host system would be shared with the &lt;em&gt;&lt;strong&gt;*/vagrant_data*&lt;/strong&gt;&lt;/em&gt; file on the VM.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;*# config.vm.synced_folder &amp;ldquo;../data&amp;rdquo;, &amp;ldquo;vagrant_data&amp;rdquo;*&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Provisioning&lt;/strong&gt;
-&lt;a href=&#34;https://www.vagrantup.com/docs/provisioning/&#34;&gt;Provisioners&lt;/a&gt; allow us to automatically install software, make configuration changes, etc. after the machine is booted. It is a part of the &lt;em&gt;&lt;strong&gt;*vagrant up*&lt;/strong&gt;&lt;/em&gt; process. There are many types of provisioners available, such as File, Shell, Ansible, Puppet, Chef, Docker, etc. In the example below, we used Shell as the provisioner to install the &lt;em&gt;&lt;strong&gt;*vim*&lt;/strong&gt;&lt;/em&gt; package.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;config.vm.provision &amp;ldquo;shell&amp;rdquo;, inline: &amp;laquo;-SHELL&lt;/strong&gt;
-&lt;strong&gt;yum install vim -y&lt;/strong&gt;
-&lt;strong&gt;SHELL&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Plugins&lt;/strong&gt;
-We can use &lt;a href=&#34;https://www.vagrantup.com/docs/plugins/&#34;&gt;plugins&lt;/a&gt; to extend the functionality of Vagrant.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;demo-automating-the-creation-and-deletion-of-vms-with-vagrant&#34;&gt;Demo: Automating the Creation and Deletion of VMs with Vagrant&lt;/h4&gt;
-&lt;p&gt;video&lt;/p&gt;
-&lt;h4 id=&#34;benefits-of-using-vagrant&#34;&gt;Benefits of Using Vagrant&lt;/h4&gt;
-&lt;p&gt;Some of the benefits of using Vagrant are:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;It automates the setup of one or more VMs, which results in saved time and lower operational costs.&lt;/li&gt;
-&lt;li&gt;It is a cross-platform tool.&lt;/li&gt;
-&lt;li&gt;It provides support for Docker, thus helping us manage Docker containers.&lt;/li&gt;
-&lt;li&gt;It is easy to install.&lt;/li&gt;
-&lt;li&gt;It is very useful in multi-developer teams.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;chapter-2-infrastructure-as-a-service-iaas&#34;&gt;Chapter 2. Infrastructure as a Service (IaaS)&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-1&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h4 id=&#34;introduction&#34;&gt;Introduction&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Infrastructure as a Service&lt;/strong&gt; (&lt;strong&gt;IaaS&lt;/strong&gt;) is a form of cloud computing which provides on-demand physical and virtual computing resources, storage, network, firewall, load balancers, etc. To provide virtual computing resources, IaaS uses some form of hypervisor, like Xen, KVM, VMware ESX/ESXi, Hyper-V, etc.&lt;/p&gt;
-&lt;p&gt;Infrastructure as a Service is the backbone of all cloud services, providing the compute resources. After getting the compute resources, we provide other services on top of that.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Example:&lt;/em&gt;
-Let&amp;rsquo;s say that you want to have a set of ten Linux systems with 4GB RAM each, and two Windows systems with 8GB each to deploy your software. You can go to any of the IaaS providers and request these systems. Generally, a IaaS provider creates the respective VMs in the background, puts them in the same internal network, and shares the credentials with you, thus allowing you to access them. Other than VMs, some IaaS providers offer bare metal machines for provisioning.&lt;/p&gt;
-&lt;p&gt;In this chapter, we will take a closer look at some of the IaaS providers and their features. We will also provide a demo video for each one of them.&lt;/p&gt;
-&lt;h4 id=&#34;learning-objectives-1&#34;&gt;Learning Objectives&lt;/h4&gt;
-&lt;p&gt;By the end of this chapter, you should be able to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;Explain the concept of Infrastructure as a Service (IaaS).&lt;/li&gt;
-&lt;li&gt;Distinguish between different IaaS providers.&lt;/li&gt;
-&lt;li&gt;Provision a virtual machine on top of different IaaS providers.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;amazon-ec2&#34;&gt;Amazon EC2&lt;/h3&gt;
-&lt;h4 id=&#34;introduction-to-amazon-ec2&#34;&gt;Introduction to Amazon EC2&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/&#34;&gt;Amazo&lt;/a&gt;&lt;a href=&#34;https://aws.amazon.com/&#34;&gt;n&lt;/a&gt;&lt;a href=&#34;https://aws.amazon.com/&#34;&gt; &lt;/a&gt;&lt;a href=&#34;https://aws.amazon.com/&#34;&gt;Web&lt;/a&gt;&lt;a href=&#34;https://aws.amazon.com/&#34;&gt; Ser&lt;/a&gt;&lt;a href=&#34;https://aws.amazon.com/&#34;&gt;vices&lt;/a&gt; (&lt;strong&gt;AWS&lt;/strong&gt;) is one of the leaders in providing different cloud services. With &lt;a href=&#34;https://aws.amazon.com/ec2/&#34;&gt;Am&lt;/a&gt;&lt;a href=&#34;https://aws.amazon.com/ec2/&#34;&gt;azon&lt;/a&gt;&lt;a href=&#34;https://aws.amazon.com/ec2/&#34;&gt; Elastic&lt;/a&gt;&lt;a href=&#34;https://aws.amazon.com/ec2/&#34;&gt; &lt;/a&gt;&lt;a href=&#34;https://aws.amazon.com/ec2/&#34;&gt;Compute&lt;/a&gt;, Amazon provides the IaaS infrastructure, on which most of the other services are built. We can manage compute resources from the Amazon EC2 web interface and can scale up or down, depending on the need. AWS also &lt;a href=&#34;https://aws.amazon.com/cli/&#34;&gt;offers a command line&lt;/a&gt; to manage the instances from the command line.&lt;/p&gt;
-&lt;p&gt;Amazon EC2 uses XEN and KVM hypervisors to provision compute resources.&lt;/p&gt;
-&lt;h4 id=&#34;features-and-tools&#34;&gt;Features and Tools&lt;/h4&gt;
-&lt;p&gt;Amazon EC2 offers compute instances for different resources, which we can choose from depending on our need. Some examples of instances offered are the following:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;&lt;strong&gt;*t2.nano*&lt;/strong&gt;&lt;/em&gt;: 512 MiB of memory, 1 vCPU, 3 CPU Credits/hour, EBS-only, 32-bit or 64-bit platform&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;strong&gt;*c4.large*&lt;/strong&gt;&lt;/em&gt;: 3.75 GiB of memory, 2 vCPUs, 64-bit platform&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;strong&gt;*d2.8xlarge*&lt;/strong&gt;&lt;/em&gt;: 244 GiB of memory, 36 vCPUs, 24 x 2000 GB of HDD-based instance storage, 64-bit platform, 10 Gigabit Ethernet.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Amazon EC2 provides some preconfigured images, called Amazon Machine Images (AMIs). These images can be used to quickly start instances. We can also create our own custom AMIs to boot our instances.&lt;/p&gt;
-&lt;p&gt;One important aspect to note is that Amazon supports configuring security and network access to our instances.&lt;/p&gt;
-&lt;p&gt;With Amazon Elastic Block Store (EBS) we can attach/detach persistent storage to our instances.&lt;/p&gt;
-&lt;p&gt;EC2 supports the provisioning of dedicated hosts, which means we can get an entire physical machine for our use.&lt;/p&gt;
-&lt;p&gt;Amazon EC2 has many other features, allowing you to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;Create an Elastic IP for remapping the Static IP address automatically&lt;/li&gt;
-&lt;li&gt;Provision a Virtual Private Cloud for isolation. Amazon Virtual Private Cloud provides secure and robust networking for Amazon EC2 instances&lt;/li&gt;
-&lt;li&gt;Use CloudWatch for monitoring resources and applications&lt;/li&gt;
-&lt;li&gt;Use Auto Scaling to dynamically resize your resources, etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;demo-creating-and-destroying-an-instance-using-amazon-ec2-compute-service&#34;&gt;Demo: Creating and Destroying an Instance using Amazon EC2 Compute Service&lt;/h4&gt;
-&lt;p&gt;video&lt;/p&gt;
-&lt;h4 id=&#34;benefits-of-using-amazon-ec2&#34;&gt;Benefits of Using Amazon EC2&lt;/h4&gt;
-&lt;p&gt;Some of the benefits of using Amazon EC2 are:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;It is an easy-to-use IaaS solution.&lt;/li&gt;
-&lt;li&gt;It is flexible and scalable.&lt;/li&gt;
-&lt;li&gt;It provides a secure and robust functionality for your compute resources.&lt;/li&gt;
-&lt;li&gt;It enables automation.&lt;/li&gt;
-&lt;li&gt;It is cost-effective: you only pay for the time and resources you use.&lt;/li&gt;
-&lt;li&gt;It is designed to work in conjunction with other AWS components.&lt;/li&gt;
-&lt;li&gt;It promises 99.99% uptime.&lt;/li&gt;
-&lt;li&gt;It provides specialized instances for workloads, such as floating point operations, high graphics capability, high input/output (I/O), High Performance Computing (HPC), etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;azure-virtual-machine&#34;&gt;Azure Virtual Machine&lt;/h3&gt;
-&lt;h4 id=&#34;introduction-to-azure-virtual-machine&#34;&gt;Introduction to Azure Virtual Machine&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://azure.microsoft.com/&#34;&gt;Azure&lt;/a&gt; is Microsoft&amp;rsquo;s cloud offering, which has products in different domains, such as compute, web and mobile, data and storage, Internet of Things, and many others. Through &lt;strong&gt;Azure Virtual Machine&lt;/strong&gt;, Microsoft provides compute provisioning and management:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;We can manage Virtual Machines from Azure&amp;rsquo;s web interface.&lt;/li&gt;
-&lt;li&gt;Azure also provides a &lt;a href=&#34;https://github.com/azure/azure-xplat-cli&#34;&gt;command line utility&lt;/a&gt; to manage resources and applications on the Azure cloud.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;features-and-tools-1&#34;&gt;Features and Tools&lt;/h4&gt;
-&lt;p&gt;Azure lets you choose between different tiers, based on the usage and the operating systems or the predefined application virtual machines (SharePoint, Oracle, etc.). To learn more, please take a look at the &lt;a href=&#34;https://azure.microsoft.com/en-in/pricing/details/virtual-machines/linux/&#34;&gt;Linux Virtual Machines Pricing&lt;/a&gt; web page. You can choose to pay as you go or get better pricing by reserving instances for one or three years.&lt;/p&gt;
-&lt;p&gt;Using Resource Manager templates, we can define the template for the virtual machine deployment.&lt;/p&gt;
-&lt;p&gt;Azure offers other features as well, like making seamless hybrid connections, faster I/O in certain types of tiers, backups, etc.&lt;/p&gt;
-&lt;h4 id=&#34;demo-creating-a-virtual-machine-instance-on-microsoft-azure&#34;&gt;Demo: Creating a Virtual Machine Instance on Microsoft Azure&lt;/h4&gt;
-&lt;p&gt;video&lt;/p&gt;
-&lt;h4 id=&#34;benefits-of-using-azure-virtual-machine&#34;&gt;Benefits of Using Azure Virtual Machine&lt;/h4&gt;
-&lt;p&gt;Some of the benefits of using Azure virtual machine are:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;It is an easy-to-use IaaS solution.&lt;/li&gt;
-&lt;li&gt;It is flexible and scalable.&lt;/li&gt;
-&lt;li&gt;It provides a secure and robust functionality for your compute resources.&lt;/li&gt;
-&lt;li&gt;It enables automation.&lt;/li&gt;
-&lt;li&gt;It is cost-effective: you only pay for the time and resources you use.&lt;/li&gt;
-&lt;li&gt;It is designed to work in conjunction with other Azure services.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;digitalocean&#34;&gt;DigitalOcean&lt;/h3&gt;
-&lt;h4 id=&#34;introduction-to-digitalocean&#34;&gt;Introduction to DigitalOcean&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.digitalocean.com/&#34;&gt;DigitalOcean&lt;/a&gt; helps you create a simple cloud quickly, in as little as 55 seconds. All of the VMs are created on top of the KVM hypervisor and have SSD (Solid-State Drive) as the primary disk.&lt;/p&gt;
-&lt;h4 id=&#34;features-and-tools-2&#34;&gt;Features and Tools&lt;/h4&gt;
-&lt;p&gt;Based on your need, DigitalOcean offers &lt;a href=&#34;https://www.digitalocean.com/pricing/&#34;&gt;different plans&lt;/a&gt;. Some examples of plan offerings are listed below:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;2GB Memory, 2 Core Processor, 60 GB SSD Disk, 3 TB transfer&lt;/li&gt;
-&lt;li&gt;48GB Memory, 12 Core Processor, 960 GB SSD Disk, 8 TB transfer.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;DigitalOcean provides other features, like Floating IPs, Shared Private Networking, Load Balancers, Team Accounts, etc.&lt;/p&gt;
-&lt;h4 id=&#34;demo-creating-a-virtual-machine-on-digitalocean&#34;&gt;Demo: Creating a Virtual Machine on DigitalOcean&lt;/h4&gt;
-&lt;p&gt;video&lt;/p&gt;
-&lt;h4 id=&#34;benefits-of-using-digitalocean&#34;&gt;Benefits of Using DigitalOcean&lt;/h4&gt;
-&lt;p&gt;Some of the benefits of using DigitalOcean are:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;It allows you to configure a cloud in as little as 55 seconds.&lt;/li&gt;
-&lt;li&gt;It is flexible and scalable.&lt;/li&gt;
-&lt;li&gt;It provides a high level of security by using KVM virtualized droplets.&lt;/li&gt;
-&lt;li&gt;It enables automation.&lt;/li&gt;
-&lt;li&gt;It is cost-effective: you only pay for the time and resources you use.&lt;/li&gt;
-&lt;li&gt;It is focused on providing a simple, user-friendly experience.&lt;/li&gt;
-&lt;li&gt;It uses high-performance Solid State Disks.&lt;/li&gt;
-&lt;li&gt;It offers a one-click installation of a multitude of application stacks like LAMP, LEMP, MEAN, and Docker.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;google-compute-engine&#34;&gt;Google Compute Engine&lt;/h3&gt;
-&lt;h4 id=&#34;introduction-to-google-compute-engine&#34;&gt;Introduction to Google Compute Engine&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/&#34;&gt;Google Cloud Platform&lt;/a&gt; is Google&amp;rsquo;s Cloud offering, which has many products in different domains, like compute, storage, networking, big data, and others. &lt;a href=&#34;https://cloud.google.com/compute/&#34;&gt;Google Compute Engine&lt;/a&gt; provides the compute service. We can manage the instances through GUI, APIs or &lt;a href=&#34;https://cloud.google.com/sdk/gcloud/&#34;&gt;command line&lt;/a&gt;. Access to the individual VM&amp;rsquo;s console is also available.&lt;/p&gt;
-&lt;h4 id=&#34;features-and-tools-3&#34;&gt;Features and Tools&lt;/h4&gt;
-&lt;p&gt;GCE supports different &lt;a href=&#34;https://cloud.google.com/compute/docs/machine-types&#34;&gt;machine types&lt;/a&gt;, which we can choose from depending on our need. They are categorized in the following types:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;Standard machine types&lt;/li&gt;
-&lt;li&gt;High-CPU machine types&lt;/li&gt;
-&lt;li&gt;High-memory machine types&lt;/li&gt;
-&lt;li&gt;Shared-core machine types&lt;/li&gt;
-&lt;li&gt;We can also configure custom machine types.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;GCE has other features as well, like Persistent Disk, Local SSD, Global Load Balancing, Compliance and Security, Automatic Discount, etc.&lt;/p&gt;
-&lt;h4 id=&#34;demo-creating-and-destroying-an-instance-on-google-compute-engine&#34;&gt;Demo: Creating and Destroying an Instance on Google Compute Engine&lt;/h4&gt;
-&lt;p&gt;video&lt;/p&gt;
-&lt;h4 id=&#34;benefits-of-using-google-compute-engine&#34;&gt;Benefits of Using Google Compute Engine&lt;/h4&gt;
-&lt;p&gt;Some of the benefits of using Google Compute Engine are:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;It is flexible and allows you to scale your applications easily.&lt;/li&gt;
-&lt;li&gt;Fast boot time.&lt;/li&gt;
-&lt;li&gt;It is very secure, encrypting all data stored.&lt;/li&gt;
-&lt;li&gt;It enables automation.&lt;/li&gt;
-&lt;li&gt;It is cost-effective: you only pay for the time and resources you use.&lt;/li&gt;
-&lt;li&gt;It supports custom machine types.&lt;/li&gt;
-&lt;li&gt;It supports Virtual Private Cloud, Load Balancers, etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;openstack&#34;&gt;OpenStack&lt;/h3&gt;
-&lt;h4 id=&#34;introduction-to-openstack&#34;&gt;Introduction to OpenStack&lt;/h4&gt;
-&lt;p&gt;Earlier in this chapter, we have seen examples for consuming the services of different cloud providers to provision our infrastructure. What if we want to become a cloud provider and offer cloud computing services?&lt;/p&gt;
-&lt;p&gt;With &lt;a href=&#34;https://www.openstack.org/&#34;&gt;OpenStack&lt;/a&gt;&lt;strong&gt;,&lt;/strong&gt; we can offer a cloud computing platform for public and private clouds. OpenStack was started as a joint project between &lt;a href=&#34;https://www.rackspace.com/&#34;&gt;Rackspace&lt;/a&gt; and &lt;a href=&#34;http://www.nasa.gov/&#34;&gt;NASA&lt;/a&gt; in 2010. In 2012, a non-profit corporate entity, called the OpenStack Foundation, was formed and it is managing it since then. It is now supported by more than 500 organizations. OpenStack is an open source software platform, which is released under an &lt;a href=&#34;https://www.apache.org/licenses/LICENSE-2.0&#34;&gt;Apache 2.0 License&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Other than providing a IaaS solution, OpenStack has evolved over time to provide other services, like Database, Storage, etc.&lt;/p&gt;
-&lt;h4 id=&#34;componentsfeatures&#34;&gt;Components/Features&lt;/h4&gt;
-&lt;p&gt;Due to the modular nature of OpenStack, anyone can add additional components to get specific features or functionality. Some of the major OpenStack components are:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.openstack.org/developer/keystone/&#34;&gt;Keystone&lt;/a&gt;
-Provides Identity, Token, Catalog, and Policy services to projects.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.openstack.org/developer/nova/&#34;&gt;Nova&lt;/a&gt;
-Provides on-demand compute resources.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.openstack.org/developer/horizon/&#34;&gt;Horizon&lt;/a&gt;
-Provides the Dashboard, which is a web-based user interface to manage the OpenStack service.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.openstack.org/developer/neutron/&#34;&gt;Neutron&lt;/a&gt;
-Implements the network as a service and provides network capabilities to different OpenStack components.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.openstack.org/developer/glance/&#34;&gt;Glance&lt;/a&gt;
-Provides a service where users can upload and discover data assets, like images and metadata.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.openstack.org/developer/swift/&#34;&gt;Swift&lt;/a&gt;
-Provides a highly available, distributed, eventually consistent object/blob store.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.openstack.org/developer/cinder/&#34;&gt;Cinder&lt;/a&gt;
-Provides block storage as a service.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.openstack.org/developer/heat/&#34;&gt;Heat&lt;/a&gt;
-Provides a service to orchestrate composite cloud applications, using a declarative template format through an OpenStack-native REST API.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.openstack.org/developer/ceilometer/&#34;&gt;Ceilometer&lt;/a&gt;
-It is part of the Telemetry project and provides data collection services for billing and other purposes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Each of the OpenStack components is also modular by design. For example, with Nova we can select an underneath hypervisor depending on the requirement, which can be either libvirt (qemu/KVM), Hyper-V, VMware, XenServer, Xen via libvirt.&lt;/p&gt;
-&lt;h4 id=&#34;demo-deploying-an-instance-with-openstack&#34;&gt;Demo: Deploying an Instance with OpenStack&lt;/h4&gt;
-&lt;p&gt;video&lt;/p&gt;
-&lt;h4 id=&#34;benefits-of-using-openstack&#34;&gt;Benefits of Using OpenStack&lt;/h4&gt;
-&lt;p&gt;Some of the benefits of using OpenStack are:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;It is an open source solution.&lt;/li&gt;
-&lt;li&gt;It is a cloud computing platform for public and private clouds.&lt;/li&gt;
-&lt;li&gt;It offers a flexible, customizable, vendor-neutral environment.&lt;/li&gt;
-&lt;li&gt;It provides a high level of security.&lt;/li&gt;
-&lt;li&gt;It facilitates automation throughout the stages of the cloud lifecycle.&lt;/li&gt;
-&lt;li&gt;By reducing system management overhead and avoiding vendor lock-in, it can be cost-effective.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;chapter-3-platform-as-a-service-paas&#34;&gt;Chapter 3. Platform as a Service (PaaS)&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-2&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h4 id=&#34;introduction-1&#34;&gt;Introduction&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Platform as a Service&lt;/strong&gt; (&lt;strong&gt;PaaS&lt;/strong&gt;) is a class of cloud computing services which allows its users to develop, run, and manage applications without worrying about the underlying infrastructure. With PaaS, users can simply focus on building their applications, which is a great help to developers.&lt;/p&gt;
-&lt;p&gt;We can either use PaaS services offered by different cloud computing providers like Amazon, Google, Azure, etc., or deploy it on-premise, using software like OpenShift Origin.&lt;/p&gt;
-&lt;p&gt;PaaS can be deployed on top of IaaS, or, independently on VMs, bare metal, and containers.&lt;/p&gt;
-&lt;p&gt;In this chapter, we will take a closer look at some of the PaaS providers and their features. We will also provide a demo video for each one of them.&lt;/p&gt;
-&lt;h3 id=&#34;cloud-foundry&#34;&gt;Cloud Foundry&lt;/h3&gt;
-&lt;h3 id=&#34;openshift&#34;&gt;Openshift&lt;/h3&gt;
-&lt;h3 id=&#34;the-heroku-platform&#34;&gt;The Heroku Platform&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-4-containers&#34;&gt;Chapter 4. Containers&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-3&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;containers&#34;&gt;Containers&lt;/h3&gt;
-&lt;h3 id=&#34;project-moby&#34;&gt;Project Moby&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-5-containers-micro-oses-for-containers&#34;&gt;Chapter 5. Containers: Micro OSes for Containers&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-4&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;atomic-host-and-red-hat-coreos&#34;&gt;Atomic Host and Red Hat CoreOS&lt;/h3&gt;
-&lt;h3 id=&#34;vmware-photon&#34;&gt;VMWare Photon&lt;/h3&gt;
-&lt;h3 id=&#34;rancheros&#34;&gt;RancherOS&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-6-containers-container-orchestration&#34;&gt;Chapter 6. Containers: Container Orchestration&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-5&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;docker-swarm&#34;&gt;Docker Swarm&lt;/h3&gt;
-&lt;h3 id=&#34;kubernetes&#34;&gt;Kubernetes&lt;/h3&gt;
-&lt;h3 id=&#34;deploying-containers-with-mesos&#34;&gt;Deploying Containers with Mesos&lt;/h3&gt;
-&lt;h3 id=&#34;nomad-by-hashicorp&#34;&gt;Nomad by HashiCorp&lt;/h3&gt;
-&lt;h3 id=&#34;kubernetes-hosted-solutions&#34;&gt;Kubernetes Hosted Solutions&lt;/h3&gt;
-&lt;h3 id=&#34;amazon-ecs&#34;&gt;Amazon ECS&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-7-unikernels&#34;&gt;Chapter 7. Unikernels&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-6&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;unikernels&#34;&gt;Unikernels&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-8-microservices&#34;&gt;Chapter 8. Microservices&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-7&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;microservices&#34;&gt;Microservices&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-9-software-defined-networking-and-networking-for-containers&#34;&gt;Chapter 9. Software-Defined Networking and Networking for Containers&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-8&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;software-defined-networking-sdn&#34;&gt;Software-Defined Networking (SDN)&lt;/h3&gt;
-&lt;h3 id=&#34;networking-for-containers&#34;&gt;Networking for Containers&lt;/h3&gt;
-&lt;h3 id=&#34;docker-single-host-networking&#34;&gt;Docker Single-Host Networking&lt;/h3&gt;
-&lt;h3 id=&#34;docker-multi-host-networking&#34;&gt;Docker Multi-Host Networking&lt;/h3&gt;
-&lt;h3 id=&#34;docker-network-driver-plugins&#34;&gt;Docker Network Driver Plugins&lt;/h3&gt;
-&lt;h3 id=&#34;kubernetes-networking&#34;&gt;Kubernetes Networking&lt;/h3&gt;
-&lt;h3 id=&#34;cloud-foundry-container-to-container-networking&#34;&gt;Cloud Foundry: Container to Container Networking&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-10-software-defined-storage-and-storage-management-for-containers&#34;&gt;Chapter 10. Software-Defined Storage and Storage Management for Containers&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-9&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;ceph&#34;&gt;Ceph&lt;/h3&gt;
-&lt;h3 id=&#34;glusterfs&#34;&gt;GlusterFS&lt;/h3&gt;
-&lt;h3 id=&#34;storage-management-for-containers&#34;&gt;Storage Management for Containers&lt;/h3&gt;
-&lt;h3 id=&#34;volume-plugins-for-docker&#34;&gt;Volume Plugins for Docker&lt;/h3&gt;
-&lt;h3 id=&#34;volume-management-in-kubernetes&#34;&gt;Volume Management in Kubernetes&lt;/h3&gt;
-&lt;h3 id=&#34;container-storage-interface-csi&#34;&gt;Container Storage Interface (CSI)&lt;/h3&gt;
-&lt;h3 id=&#34;cloud-foundry-volume-service&#34;&gt;Cloud Foundry Volume Service&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-11-devops-and-cicd&#34;&gt;Chapter 11. DevOps and CI/CD&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-10&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;cicd-jenkins&#34;&gt;CI/CD: Jenkins&lt;/h3&gt;
-&lt;h3 id=&#34;cicd-travis-ci&#34;&gt;CI/CD: Travis CI&lt;/h3&gt;
-&lt;h3 id=&#34;cicd-shippable&#34;&gt;CI/CD Shippable&lt;/h3&gt;
-&lt;h3 id=&#34;cicd-concourse&#34;&gt;CI/CD: Concourse&lt;/h3&gt;
-&lt;h3 id=&#34;cloud-native-cicd&#34;&gt;Cloud Native CI/CD&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-12-tools-for-cloud-infrastructure-i-configuration-management&#34;&gt;Chapter 12. Tools for Cloud Infrastructure I (Configuration Management)&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-11&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;ansible&#34;&gt;Ansible&lt;/h3&gt;
-&lt;h3 id=&#34;puppet&#34;&gt;Puppet&lt;/h3&gt;
-&lt;h3 id=&#34;chef&#34;&gt;Chef&lt;/h3&gt;
-&lt;h3 id=&#34;salt-open&#34;&gt;Salt Open&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-13-tools-for-cloud-infrastructure-ii-build--release&#34;&gt;Chapter 13. Tools for Cloud Infrastructure II (Build &amp;amp; Release)&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-12&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;terraform&#34;&gt;Terraform&lt;/h3&gt;
-&lt;h3 id=&#34;bosh&#34;&gt;BOSH&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-14-tools-for-cloud-infrastructure-iii-key-value-pair-store&#34;&gt;Chapter 14. Tools for Cloud Infrastructure III (Key-Value Pair Store)&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-13&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;etcd&#34;&gt;etcd&lt;/h3&gt;
-&lt;h3 id=&#34;consul&#34;&gt;Consul&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-15-tools-for-cloud-infrastructure-iv-image-building&#34;&gt;Chapter 15. Tools for Cloud Infrastructure IV (Image Building)&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-14&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;building-docker-images&#34;&gt;Building Docker Images&lt;/h3&gt;
-&lt;h3 id=&#34;packer&#34;&gt;Packer&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-16-tools-for-cloud-infrastructure-v-debugging-logging-and-monitoring-for-containerized-applications&#34;&gt;Chapter 16. Tools for Cloud Infrastructure V (Debugging, Logging, and Monitoring for Containerized Applications)&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-15&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;sysdig&#34;&gt;Sysdig&lt;/h3&gt;
-&lt;h3 id=&#34;cadvisor-and-heapster&#34;&gt;cAdvisor and Heapster&lt;/h3&gt;
-&lt;h3 id=&#34;fluentd&#34;&gt;Fluentd&lt;/h3&gt;
-&lt;h3 id=&#34;datadog&#34;&gt;Datadog&lt;/h3&gt;
-&lt;h3 id=&#34;prometheus&#34;&gt;Prometheus&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-17-service-mash&#34;&gt;Chapter 17. Service Mash&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-16&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;features-and-implementation-of-service-mash&#34;&gt;Features and Implementation of Service Mash&lt;/h3&gt;
-&lt;h3 id=&#34;envoy&#34;&gt;Envoy&lt;/h3&gt;
-&lt;h3 id=&#34;istio&#34;&gt;Istio&lt;/h3&gt;
-&lt;h3 id=&#34;linkerd&#34;&gt;Linkerd&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-18-internet-of-things-iot&#34;&gt;Chapter 18. Internet of Things (IoT)&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-17&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;internet-of-things&#34;&gt;Internet of Things&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-19-serverless-computing&#34;&gt;Chapter 19. Serverless Computing&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-18&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;serverless-computing&#34;&gt;Serverless Computing&lt;/h3&gt;
-&lt;h3 id=&#34;aws-lambda&#34;&gt;AWS Lambda&lt;/h3&gt;
-&lt;h3 id=&#34;google-cloud-functions&#34;&gt;Google Cloud Functions&lt;/h3&gt;
-&lt;h3 id=&#34;azure-functions&#34;&gt;Azure Functions&lt;/h3&gt;
-&lt;h3 id=&#34;serverless-and-containers&#34;&gt;Serverless and Containers&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-20-opentracing&#34;&gt;Chapter 20. OpenTracing&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-19&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;opentracing&#34;&gt;OpenTracing&lt;/h3&gt;
-&lt;h3 id=&#34;jaeger&#34;&gt;Jaeger&lt;/h3&gt;
-&lt;h2 id=&#34;chapter-21-how-to-be-successful-in-the-cloud&#34;&gt;Chapter 21. How to Be Successful in the Cloud&lt;/h2&gt;
-&lt;h3 id=&#34;introduction-and-learning-objectives-20&#34;&gt;Introduction and Learning Objectives&lt;/h3&gt;
-&lt;h3 id=&#34;developing-skills&#34;&gt;Developing Skills&lt;/h3&gt;
-&lt;h3 id=&#34;challenges&#34;&gt;Challenges&lt;/h3&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>The Java 3rd Library</title>
-      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-3rd-party-library/</link>
-      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-3rd-party-library/</guid>
-      
-        <description>&lt;p&gt;import org.alibaba.fastjson.JSONArray;
-import org.alibaba.fastjson.JSONObject;
-import com.amazonaws.Request;
-import com.amazonaws.utils.StringUtils;
-import com.atomikos.datasource.xa.StringUtils;&lt;/p&gt;
-&lt;p&gt;import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.core.io.JsonStringEncoder;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;&lt;/p&gt;
-&lt;p&gt;import com.google.common.cache.CacheBuilder;
-import com.google.common.cache.CacheLoader;
-import com.google.common.cache.LoadingCache;&lt;/p&gt;
-&lt;p&gt;import com.google.gson.Gson;&lt;/p&gt;
-&lt;p&gt;import com.ibm.db2.jcc.am.re;&lt;/p&gt;
-&lt;p&gt;import com.jayway.restassured.RestAssured;
-import com.jayway.restassured.path.json.JsonPath;
-import com.jayway.restassured.config.RestAssuredconfig;
-import com.jayway.restassured.response.Response;
-import com.jayway.restassured.response.ValidatableResponse;
-import com.jayway.restassured.specification.RequestSpecification;&lt;/p&gt;
-&lt;p&gt;import freemarker.template.Template;
-import freemarker.template.TemplateException;&lt;/p&gt;
-&lt;p&gt;import groovy.json.internal.JsonFastParser;
-import groovy.json.internal.ValueMap;&lt;/p&gt;
-&lt;p&gt;import org.apache.ws.security.WSSecurityException;
-import org.apache.ws.security.util.Base64;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;net.sf.json
-&lt;ul&gt;
-&lt;li&gt;JSONArray&lt;/li&gt;
-&lt;li&gt;JSONNull&lt;/li&gt;
-&lt;li&gt;JSONObject&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;org.activiti.engine
-&lt;a href=&#34;https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1&#34;&gt;https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;commons
-&lt;ul&gt;
-&lt;li&gt;beanutils
-&lt;ul&gt;
-&lt;li&gt;BeanUtils;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;collection
-&lt;ul&gt;
-&lt;li&gt;CollectionUtils&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;collections
-&lt;ul&gt;
-&lt;li&gt;CollectionUtils&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;httpclient
-&lt;ul&gt;
-&lt;li&gt;DefaultHttpMethodRetryHandler&lt;/li&gt;
-&lt;li&gt;HttpClient;&lt;/li&gt;
-&lt;li&gt;HttpException&lt;/li&gt;
-&lt;li&gt;HttpMethod;&lt;/li&gt;
-&lt;li&gt;HttpStatus;&lt;/li&gt;
-&lt;li&gt;NameValuePair;&lt;/li&gt;
-&lt;li&gt;UsernamePasswordCredentials&lt;/li&gt;
-&lt;li&gt;URIException;&lt;/li&gt;
-&lt;li&gt;methods
-&lt;ul&gt;
-&lt;li&gt;GetMethod;&lt;/li&gt;
-&lt;li&gt;PostMethod;&lt;/li&gt;
-&lt;li&gt;PutMehod&lt;/li&gt;
-&lt;li&gt;RequestEntity&lt;/li&gt;
-&lt;li&gt;StringRequestEntity;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;.HttpConnectionManagerParams;&lt;/li&gt;
-&lt;li&gt;params.
-&lt;ul&gt;
-&lt;li&gt;HttpMethodParams;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;io
-&lt;ul&gt;
-&lt;li&gt;FileUtils&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Lang
-&lt;ul&gt;
-&lt;li&gt;ClassUtils;&lt;/li&gt;
-&lt;li&gt;StringUtils;&lt;/li&gt;
-&lt;li&gt;EqualsBuilder&lt;/li&gt;
-&lt;li&gt;HashCodeBuilder&lt;/li&gt;
-&lt;li&gt;time
-&lt;ul&gt;
-&lt;li&gt;DateUtils&lt;/li&gt;
-&lt;li&gt;StopWatch&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;lang3
-&lt;ul&gt;
-&lt;li&gt;BooleanUtils&lt;/li&gt;
-&lt;li&gt;StringUtils&lt;/li&gt;
-&lt;li&gt;time
-&lt;ul&gt;
-&lt;li&gt;DateFormatUtils&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;org.apache.http.client.HttpClient使用方法
-一.org.apache.commons&lt;/p&gt;
-&lt;p&gt;import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;&lt;/p&gt;
-&lt;p&gt;import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;&lt;/p&gt;
-&lt;p&gt;import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.TransactionDefinition;
-import org.springframework.transaction.TransactionStatus;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.transaction.support.DefaultTransactionDefinition;&lt;/p&gt;
-&lt;p&gt;import org.springframework.core.io.Resource;
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
-import org.springframework.core.io.support.ResourcePatternResolver;&lt;/p&gt;
-&lt;p&gt;import org.springframework.util.ClassUtils;&lt;/p&gt;
-&lt;p&gt;import org.springframework.util.Assert;
-import org.springframework.util.CollectionUtils;
-import org.springframework.util.ReflectionUtils;
-import org.springframework.util.StringUtils;&lt;/p&gt;
-&lt;p&gt;import org.apache.ibatis.annotations.Param;
-session.Configuration
-Session.SqlsessionFactory&lt;/p&gt;
-&lt;p&gt;org.apache.http
-org.apache.commons.dbcp2
-org.apache.commons.collections&lt;/p&gt;
-&lt;p&gt;fastjson
-mysql-connector-java
-liquibase-core
-liquibase-maven-plugin
-commons.dbcp
-commons.collections
-commons-lang3
-import org.apache.commons.lang.StringUtils;
-jedis&lt;/p&gt;
-&lt;p&gt;junit
-dbunit
-spring-test-dbunit
-spring-test
-spring-boot-starter-test&lt;/p&gt;
-&lt;p&gt;disruptor&lt;/p&gt;
-&lt;p&gt;cxf-spring-boot-starter-jaxrs
-cxf-spring-boot-starter-jaxws
-cxf-rt-rs-service-description-swagger
-swagger-ui&lt;/p&gt;
-&lt;p&gt;aaa&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>The Java Standard Library</title>
-      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-standard-library/</link>
-      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-standard-library/</guid>
-      
-        <description>&lt;h2 id=&#34;collections&#34;&gt;Collections&lt;/h2&gt;
-&lt;h3 id=&#34;interfaces&#34;&gt;Interfaces&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://docs.oracle.com/javase/tutorial/figures/collections/colls-coreInterfaces.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Note that all the core collection interfaces are generic. For example, this is the declaration of the &lt;code&gt;Collection&lt;/code&gt; interface.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public interface Collection&amp;lt;E&amp;gt;...
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;the-collection-interface&#34;&gt;The Collection Interface&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;(c);
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;Collection&lt;/code&gt; interface contains methods that perform basic operations, such as&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;int size()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;boolean isEmpty()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;boolean contains(Object element)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;boolean add(E element)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;boolean remove(Object element)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Iterator&amp;lt;E&amp;gt; iterator()&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;It also contains methods that operate on entire collections, such as&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;boolean containsAll(Collection&amp;lt;?&amp;gt; c)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;boolean addAll(Collection&amp;lt;? extends E&amp;gt; c)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;boolean removeAll(Collection&amp;lt;?&amp;gt; c)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;boolean retainAll(Collection&amp;lt;?&amp;gt; c)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;void clear()&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Additional methods for &lt;strong&gt;array&lt;/strong&gt; operations (such as&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Object[] toArray()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;T&amp;gt; T[] toArray(T[] a)&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;obtaining sequential or parallel streams from the underlying collection.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Stream&amp;lt;E&amp;gt; stream()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Stream&amp;lt;E&amp;gt; parallelStream()&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&#34;traversing-collections&#34;&gt;Traversing Collections&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Aggregate Operations&lt;/p&gt;
-&lt;p&gt;Aggregate operations are often used in conjunction with lambda expressions to make programming more expressive, using less lines of code.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;myShapesCollection.stream()
-.filter(e -&amp;gt; e.getColor() == Color.RED)
-.forEach(e -&amp;gt; System.out.println(e.getName()));
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;myShapesCollection.parallelStream()
-.filter(e -&amp;gt; e.getColor() == Color.RED)
-.forEach(e -&amp;gt; System.out.println(e.getName()));
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;String joined = elements.stream()
-.map(Object::toString)
-.collect(Collectors.joining(&amp;quot;, &amp;quot;));
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;for-each Construct&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;for (Object o : collection)
-    System.out.println(o);
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Iterators&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;static void filter(Collection&amp;lt;?&amp;gt; c) {
-    for (Iterator&amp;lt;?&amp;gt; it = c.iterator(); it.hasNext(); )
-        if (!cond(it.next()))
-            it.remove();
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&#34;collection-interface-bulk-operations&#34;&gt;Collection Interface Bulk Operations&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;containsAll&lt;/code&gt; — returns &lt;code&gt;true&lt;/code&gt; if the target &lt;code&gt;Collection&lt;/code&gt; contains all of the elements in the specified &lt;code&gt;Collection&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;addAll&lt;/code&gt; — adds all of the elements in the specified &lt;code&gt;Collection&lt;/code&gt; to the target &lt;code&gt;Collection&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;removeAll&lt;/code&gt; — removes from the target &lt;code&gt;Collection&lt;/code&gt; all of its elements that are also contained in the specified &lt;code&gt;Collection&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;retainAll&lt;/code&gt; — removes from the target &lt;code&gt;Collection&lt;/code&gt; all its elements that are &lt;em&gt;not&lt;/em&gt; also contained in the specified &lt;code&gt;Collection&lt;/code&gt;. That is, it retains only those elements in the target &lt;code&gt;Collection&lt;/code&gt; that are also contained in the specified &lt;code&gt;Collection&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;clear&lt;/code&gt; — removes all elements from the &lt;code&gt;Collection&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;c.removeAll(Collections.singleton(e));
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;c.removeAll(Collections.singleton(null));       // remove all of the null elements from a Collection
-&lt;/code&gt;&lt;/pre&gt;&lt;h6 id=&#34;collection-interface-array-operations&#34;&gt;Collection Interface Array Operations&lt;/h6&gt;
-&lt;p&gt;The &lt;strong&gt;&lt;code&gt;toArray&lt;/code&gt;&lt;/strong&gt; methods are provided as a bridge between collections and older APIs that expect arrays on input.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Object[] a = c.toArray();
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;var staff = new LinkedList&amp;lt;String&amp;gt;();
-
-String[] values = staff.toArray(new String[0]);
-// or 
-// String[] values = staff.toArray(new String[staff.size()]);
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;the-set-interface&#34;&gt;The Set Interface&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;HashSet&lt;/p&gt;
-&lt;p&gt;which stores its elements in a hash table,  it makes no guarantees concerning the order of iteration.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Collection&amp;lt;Type&amp;gt; noDups = new HashSet&amp;lt;Type&amp;gt;(c);
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;c.stream()
-.collect(Collectors.toSet()); // no duplicates
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;TreeSet&lt;/p&gt;
-&lt;p&gt;which stores its elements in a red-black tree, orders its elements based on their values.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Set&amp;lt;String&amp;gt; set = people.stream()
-.map(Person::getName)
-.collect(Collectors.toCollection(TreeSet::new));
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;LinkedHashSet&lt;/p&gt;
-&lt;p&gt;which is implemented as a hash table with a linked list running through it, orders its elements based on the insertion-order.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;// preserves the order of the original collection while removing duplicate elements:
-Collection&amp;lt;Type&amp;gt; noDups = new LinkedHashSet&amp;lt;Type&amp;gt;(c);
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The following is a &lt;strong&gt;generic method that encapsulates&lt;/strong&gt; the preceding idiom, returning a &lt;code&gt;Set&lt;/code&gt; of the same generic type as the one passed.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public static &amp;lt;E&amp;gt; Set&amp;lt;E&amp;gt; removeDups(Collection&amp;lt;E&amp;gt; c) {
-    return new LinkedHashSet&amp;lt;E&amp;gt;(c);
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&#34;set-interface-basic-operations&#34;&gt;Set Interface Basic Operations&lt;/h6&gt;
-&lt;pre&gt;&lt;code&gt;String[] words = {&amp;quot;i&amp;quot;, &amp;quot;came&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;saw&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;left&amp;quot;};
-Set&amp;lt;String&amp;gt; distinctWords = Arrays.asList(words).stream().collect(Collectors.toSet());
-System.out.println(distinctWords.size()+ &amp;quot; distinct words: &amp;quot; + distinctWords);
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Note that &lt;strong&gt;the code always refers to the &lt;code&gt;Collection&lt;/code&gt; by its interface type (&lt;code&gt;Set&lt;/code&gt;) rather than by its implementation type. This is a &lt;em&gt;strongly&lt;/em&gt; recommended programming practice&lt;/strong&gt; because it gives you the flexibility to change implementations merely by changing the constructor.&lt;/p&gt;
-&lt;h6 id=&#34;set-interface-bulk-operations&#34;&gt;Set Interface Bulk Operations&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;s1.containsAll(s2)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;s1.addAll(s2)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;s1.retainAll(s2)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;s1.removeAll(s2)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;To calculate the union, intersection, or set difference of two sets &lt;em&gt;nondestructively&lt;/em&gt; (without modifying either set), &lt;strong&gt;the caller must copy one set before calling the appropriate bulk operation.&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Set&amp;lt;String&amp;gt; uniques = new HashSet&amp;lt;String&amp;gt;();
-Set&amp;lt;String&amp;gt; dups    = new HashSet&amp;lt;String&amp;gt;();
-String[] words = {&amp;quot;i&amp;quot;, &amp;quot;came&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;saw&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;left&amp;quot;};
-  
-for (String a : words) {
-    if (!uniques.add(a))
-        dups.add(a);
-}                                     // uniques ==&amp;gt; [left, came, saw, i], dups ==&amp;gt; [i]
-  
-boolean isContain = uniques.containsAll(dups);         // ==&amp;gt; true    
-  
-Set&amp;lt;String&amp;gt; union = new HashSet&amp;lt;String&amp;gt;(dups);
-union.addAll(uniques);                // union ==&amp;gt; [left, came, saw, i]
-  
-Set&amp;lt;String&amp;gt; intersection = new HashSet&amp;lt;String&amp;gt;(uniques);
-intersection.retainAll(dups);         // intersection ==&amp;gt; [i]
-  
-Set&amp;lt;String&amp;gt; difference = new HashSet&amp;lt;String&amp;gt;(uniques);
-difference.removeAll(dups);           // difference ==&amp;gt; [left, came, saw]
-  
-System.out.println(&amp;quot;is contain:    &amp;quot; + isContain);    
-System.out.println(&amp;quot;union words: &amp;quot; + union);      
-System.out.println(&amp;quot;intersection words:    &amp;quot; + intersection);  
-System.out.println(&amp;quot;difference words: &amp;quot; + difference); 
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;the-list-interface&#34;&gt;The List Interface&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;Positional access&lt;/code&gt; — manipulates elements based on their numerical position in the list. This includes methods such as &lt;code&gt;get&lt;/code&gt;, &lt;code&gt;set&lt;/code&gt;, &lt;code&gt;add&lt;/code&gt;, &lt;code&gt;addAll&lt;/code&gt;, and &lt;code&gt;remove&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public static &amp;lt;E&amp;gt; void swap(List&amp;lt;E&amp;gt; a, int i, int j) {
-    E tmp = a.get(i);
-    a.set(i, a.get(j));
-    a.set(j, tmp);
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;public static void shuffle(List&amp;lt;?&amp;gt; list, Random rnd) {
-    for (int i = list.size(); i &amp;gt; 1; i--)
-        swap(list, i - 1, rnd.nextInt(i));
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;import java.util.*;
-  
-public class Shuffle {
-    public static void main(String[] args) {
-        List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;();
-        for (String a : args)
-            list.add(a);
-        Collections.shuffle(list, new Random());
-        System.out.println(list);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The Arrays class has a static factory method called &lt;strong&gt;&lt;code&gt;asList&lt;/code&gt;&lt;/strong&gt;, which allows an array to be viewed as a List. This method does not copy the array. Changes in the &lt;code&gt;List&lt;/code&gt; write through to the array and vice versa. &lt;strong&gt;The resulting List is not a general-purpose &lt;code&gt;List&lt;/code&gt; implementation, because it doesn&amp;rsquo;t implement the (optional) &lt;code&gt;add&lt;/code&gt; and &lt;code&gt;remove&lt;/code&gt; operations: Arrays are not resizable.&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import java.util.*;
-  
-public class Shuffle {
-    public static void main(String[] args) {
-        List&amp;lt;String&amp;gt; list = Arrays.asList(args);
-        Collections.shuffle(list);
-        System.out.println(list);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;Search&lt;/code&gt; — searches for a specified object in the list and returns its numerical position. Search methods include &lt;code&gt;indexOf&lt;/code&gt; and &lt;code&gt;lastIndexOf&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;Iteration&lt;/code&gt; — extends &lt;code&gt;Iterator&lt;/code&gt; semantics to take advantage of the list&amp;rsquo;s sequential nature. The &lt;code&gt;listIterator&lt;/code&gt; methods provide this behavior.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;for (ListIterator&amp;lt;Type&amp;gt; it = list.listIterator(list.size()); it.hasNext(); ) {
-    Type t = it.next();
-    ...
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;for (ListIterator&amp;lt;Type&amp;gt; it = list.listIterator(list.size()); it.hasPrevious(); ) {
-    Type t = it.previous();
-    ...
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;String[] words = {&amp;quot;i&amp;quot;, &amp;quot;came&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;saw&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;left&amp;quot;};
-List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;();
-for (String a : words) {
-  list.add(a);
-}
-ListIterator&amp;lt;String&amp;gt; it = list.listIterator()
-it.previousIndex();       // ==&amp;gt; -1
-var ret = it.next();      // ret ==&amp;gt; &amp;quot;i&amp;quot;
-it.previousIndex();       // ==&amp;gt; 0
-var obj = it.previous();  // obj ==&amp;gt; &amp;quot;i&amp;quot;
-it.previousIndex();       // ==&amp;gt; -1
-it.nextIndex();            // ==&amp;gt; 0
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;String[] words = {&amp;quot;i&amp;quot;, &amp;quot;came&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;saw&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;left&amp;quot;};
-List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;();
-for (String a : words) {
-  list.add(a);
-}
-public static &amp;lt;E&amp;gt; void replace(List&amp;lt;E&amp;gt; list, E val, E newVal) {
-    for (ListIterator&amp;lt;E&amp;gt; it = list.listIterator(); it.hasNext(); )
-        if (val == null ? it.next() == null : val.equals(it.next()))
-            it.set(newVal);
-}
-replace(list, &amp;quot;i&amp;quot;, &amp;quot;e&amp;quot;)           // list ==&amp;gt; [e, came, e, saw, e, left]
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;public static &amp;lt;E&amp;gt; 
-    void replace(List&amp;lt;E&amp;gt; list, E val, List&amp;lt;? extends E&amp;gt; newVals) {
-    for (ListIterator&amp;lt;E&amp;gt; it = list.listIterator(); it.hasNext(); ){
-        if (val == null ? it.next() == null : val.equals(it.next())) {
-            it.remove();
-            for (E e : newVals)
-                it.add(e);
-        }
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;Range-view&lt;/code&gt; — The &lt;code&gt;sublist&lt;/code&gt; method performs arbitrary &lt;em&gt;range operations&lt;/em&gt; on the list.&lt;/p&gt;
-&lt;p&gt;removes a range of elements from a &lt;code&gt;List&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;list.subList(fromIndex, toIndex).clear();
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;search for an element in a range&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;int i = list.subList(fromIndex, toIndex).indexOf(o);
-int j = list.subList(fromIndex, toIndex).lastIndexOf(o);
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;List&amp;lt;String&amp;gt; lnkLst = new LinkedList&amp;lt;String&amp;gt;();
-lnkLst.add(&amp;quot;element1&amp;quot;);
-Iterator&amp;lt;String&amp;gt; itr = lnkLst.iterator();
-for (Iterator&amp;lt;String&amp;gt; it = lnkLst.iterator(); it.hasNext(); )
-    String str = (String) itr.next();
-    System.out.print(str + &amp;quot; &amp;quot;);
-System.out.println();
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;var staff = new LinkedList&amp;lt;String&amp;gt;();
-staff.add(&amp;quot;Amy&amp;quot;);
-staff.add(&amp;quot;Bob&amp;quot;);
-staff.add(&amp;quot;Carl&amp;quot;);
-ListIterator&amp;lt;String&amp;gt; iter = staff.listIterator();
-iter.next(); // skip past first element
-iter.add(&amp;quot;Juliet&amp;quot;);      // staff ==&amp;gt; [Amy, Juliet, Bob, Carl]
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;ArrayList&amp;lt;Employee&amp;gt; staff = new ArrayList&amp;lt;Employee&amp;gt;();
-staff.add(new Employee(&amp;quot;Harry Hacker&amp;quot;, . . .));
-staff.ensureCapacity(100);
-ArrayList&amp;lt;Employee&amp;gt; staff = new ArrayList&amp;lt;&amp;gt;(100);
-staff.size()
-
-new ArrayList&amp;lt;&amp;gt;(100) // capacity is 100
-is not the same as allocating a new array as
-Click here to view code image
-new Employee[100] // size is 100
-
-
-trimToSize
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;ArrayList&amp;lt;E&amp;gt;()    // constructs an empty array list.
-ArrayList&amp;lt;E&amp;gt;(int initialCapacity)    // constructs an empty array list with the specified capacity.
-boolean add(E obj)    // appends obj at the end of the array list. Always returns true.
-int size()    // returns the number of elements currently stored in the array list. (Of course, this is never larger than the array list’s capacity.)
-void ensureCapacity(int capacity)    // ensures that the array list has the capacity to store the given number of elements without reallocating its internal storage array.
-void trimToSize()    // reduces the storage capacity of the array list to its current size.
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;ArrayList&amp;lt;String&amp;gt; staff = new ArrayList&amp;lt;String&amp;gt;();
-staff.add(new String(&amp;quot;Harry Hacker&amp;quot;));
-staff.ensureCapacity(100);
-staff.size()                                      // ==&amp;gt; 1
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;the-queue-interface&#34;&gt;The Queue Interface&lt;/h4&gt;
-&lt;h4 id=&#34;the-deque-interface&#34;&gt;The Deque Interface&lt;/h4&gt;
-&lt;h4 id=&#34;the-map-interface&#34;&gt;The Map Interface&lt;/h4&gt;
-&lt;h4 id=&#34;object-ordering&#34;&gt;Object Ordering&lt;/h4&gt;
-&lt;h4 id=&#34;the-sortedset-interface&#34;&gt;The SortedSet Interface&lt;/h4&gt;
-&lt;h4 id=&#34;the-sortedmap-interface&#34;&gt;The SortedMap Interface&lt;/h4&gt;
-&lt;h3 id=&#34;aggregate-operations&#34;&gt;Aggregate Operations&lt;/h3&gt;
-&lt;h3 id=&#34;algorithms&#34;&gt;Algorithms&lt;/h3&gt;
-&lt;h2 id=&#34;lambda-expressions&#34;&gt;Lambda Expressions&lt;/h2&gt;
-&lt;h2 id=&#34;date-time-apis&#34;&gt;Date-Time APIs&lt;/h2&gt;
-&lt;h2 id=&#34;deployment&#34;&gt;Deployment&lt;/h2&gt;
-&lt;p&gt;How to package applications and &lt;strong&gt;applets&lt;/strong&gt; using JAR files, and deploy them using Java Web Start and Java Plug-in.
-Preparation for Java Programming Language Certification — List of available training and tutorial resources.&lt;/p&gt;
-&lt;h2 id=&#34;internationalization&#34;&gt;Internationalization&lt;/h2&gt;
-&lt;h2 id=&#34;reflection&#34;&gt;Reflection&lt;/h2&gt;
-&lt;h2 id=&#34;middleware-server-side-or-web-application&#34;&gt;Middleware, server-side, or web application&lt;/h2&gt;
-&lt;h3 id=&#34;jdbc-database-access&#34;&gt;JDBC Database Access&lt;/h3&gt;
-&lt;h3 id=&#34;concurrency&#34;&gt;Concurrency&lt;/h3&gt;
-&lt;h2 id=&#34;standard-edition&#34;&gt;Standard Edition&lt;/h2&gt;
-&lt;p&gt;java&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;io&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;BufferedReader&lt;/li&gt;
-&lt;li&gt;BufferedWriter&lt;/li&gt;
-&lt;li&gt;ByteArrayInputStream&lt;/li&gt;
-&lt;li&gt;ByteArrayOutputStream&lt;/li&gt;
-&lt;li&gt;File&lt;/li&gt;
-&lt;li&gt;FileFilter&lt;/li&gt;
-&lt;li&gt;FileInputStream&lt;/li&gt;
-&lt;li&gt;FileOutputStream&lt;/li&gt;
-&lt;li&gt;IOException&lt;/li&gt;
-&lt;li&gt;InputStream&lt;/li&gt;
-&lt;li&gt;IntputStreamReader&lt;/li&gt;
-&lt;li&gt;OutputStream&lt;/li&gt;
-&lt;li&gt;OutputStreamWriter&lt;/li&gt;
-&lt;li&gt;PrintWriter&lt;/li&gt;
-&lt;li&gt;Reader&lt;/li&gt;
-&lt;li&gt;Serializable&lt;/li&gt;
-&lt;li&gt;StringReader&lt;/li&gt;
-&lt;li&gt;StringWriter&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;lang&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;reflect
-&lt;ul&gt;
-&lt;li&gt;Field&lt;/li&gt;
-&lt;li&gt;Method&lt;/li&gt;
-&lt;li&gt;InvocationTargetException&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;math&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;BigDecimal&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;net&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;HttpURLConnection&lt;/li&gt;
-&lt;li&gt;URL&lt;/li&gt;
-&lt;li&gt;URLConnection&lt;/li&gt;
-&lt;li&gt;URLDecoder&lt;/li&gt;
-&lt;li&gt;URLEncoder&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;nio&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;charset
-&lt;ul&gt;
-&lt;li&gt;Charset&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;security&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;MessageDigest&lt;/li&gt;
-&lt;li&gt;SecureRandom&lt;/li&gt;
-&lt;li&gt;InvalidAlgorithmParameterException&lt;/li&gt;
-&lt;li&gt;InvalidKeyException&lt;/li&gt;
-&lt;li&gt;KeyManagementException&lt;/li&gt;
-&lt;li&gt;NoSuchAlgorithmException&lt;/li&gt;
-&lt;li&gt;NoSuchProviderException&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;sql&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Date&lt;/li&gt;
-&lt;li&gt;ResultSet&lt;/li&gt;
-&lt;li&gt;ResultSetMetaData&lt;/li&gt;
-&lt;li&gt;SQLException&lt;/li&gt;
-&lt;li&gt;Timestamp&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;text&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DateFormat&lt;/li&gt;
-&lt;li&gt;DecimalFormat&lt;/li&gt;
-&lt;li&gt;MessageFormat&lt;/li&gt;
-&lt;li&gt;Normalizer&lt;/li&gt;
-&lt;li&gt;NumberFormat&lt;/li&gt;
-&lt;li&gt;SimpleDateFormat&lt;/li&gt;
-&lt;li&gt;ParseException&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;util&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;ArrayList&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Arrays&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Base64.Decoder&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Base64.Encoder&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Calendar&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Collection&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Collections&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Comparator&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Date&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Enumeration&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;GregorianCalendar&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;HashMap&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;HashSet&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;HashMap&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Iterator&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;LinkedHashMap&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;LinkedHashSet&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;LinkedList&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;List&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Locale&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;formatter.withLocale(Locale.CHINESE).format(apollo11launch);
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Map.Entry&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Map&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Queue&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Random&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;ResourceBundle&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Set&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Timer&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;TimerTask&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;TimeZone&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;UUID&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;concurrent&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ConcurrentHashMap&lt;/li&gt;
-&lt;li&gt;ConcurrentLinkedQueue&lt;/li&gt;
-&lt;li&gt;Executors&lt;/li&gt;
-&lt;li&gt;ScheduledExecutorService&lt;/li&gt;
-&lt;li&gt;Semaphore&lt;/li&gt;
-&lt;li&gt;TimeUnit&lt;/li&gt;
-&lt;li&gt;ExecutionException&lt;/li&gt;
-&lt;li&gt;TimeoutException&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;util.logging&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Logger&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import java.util.logging.Logger;
-    
-public class Main {
-    
-  private static final Logger logger =
-Logger.getLogger(&amp;quot;com.mycompany.myapp&amp;quot;);
-    
-  public static void main(String[] args) {
-    logger.info(&amp;quot;Logging an INFO-level message&amp;quot;);
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;regex&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Matcher&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Pattern&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import java.io.*;
-import java.net.*;
-import java.nio.charset.*;
-import java.util.regex.*;
-    
-try
-{
-    String urlString = &amp;quot;http://openjdk.java.net/&amp;quot;;
-    
-    // read contents of URL
-    InputStream in = new URL(urlString).openStream();
-    var input = new String(in.readAllBytes(), StandardCharsets.UTF_8);
-    
-    // search for all occurrences of pattern
-    var patternString = &amp;quot;&amp;lt;a\\s+href\\s*=\\s*(\&amp;quot;[^\&amp;quot;]*\&amp;quot;|[^\\s&amp;gt;]*)\\s*&amp;gt;&amp;quot;;
-    Pattern pattern = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
-    pattern.matcher(input)
-    .results()
-    .map(MatchResult::group)
-    .forEach(System.out::println);
-}
-catch (IOException | PatternSyntaxException e)
-{
-    e.printStackTrace();
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;stream&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Collectors
-&lt;ul&gt;
-&lt;li&gt;toSet()&lt;/li&gt;
-&lt;li&gt;toList()&lt;/li&gt;
-&lt;li&gt;toMap()&lt;/li&gt;
-&lt;li&gt;joining()&lt;/li&gt;
-&lt;li&gt;toCollection()&lt;/li&gt;
-&lt;li&gt;summarizingInt()&lt;/li&gt;
-&lt;li&gt;groupingByConcurrent()&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;import java.util.List;
-import java.util.Map;
-import java.util.HashMap;&lt;/p&gt;
-&lt;p&gt;import java.util.Date;
-import java.io.Serializable;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.oracle.com/javafx/2/collections/jfxpub-collections.htm&#34;&gt;https://docs.oracle.com/javafx/2/collections/jfxpub-collections.htm&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;extension&#34;&gt;extension&lt;/h3&gt;
-&lt;p&gt;javax&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;activation
-&lt;ul&gt;
-&lt;li&gt;DataHandler&lt;/li&gt;
-&lt;li&gt;MimetypesFileTypeMap&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;crypto
-&lt;ul&gt;
-&lt;li&gt;BadPaddingException&lt;/li&gt;
-&lt;li&gt;Cipher&lt;/li&gt;
-&lt;li&gt;IllegalBlockSizeException&lt;/li&gt;
-&lt;li&gt;NoSuchPaddingException&lt;/li&gt;
-&lt;li&gt;spec
-&lt;ul&gt;
-&lt;li&gt;IvParameterSpec&lt;/li&gt;
-&lt;li&gt;SecretKeySpec&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;net
-&lt;ul&gt;
-&lt;li&gt;ssl
-&lt;ul&gt;
-&lt;li&gt;HostnameVerifier&lt;/li&gt;
-&lt;li&gt;HttpsURLConnection&lt;/li&gt;
-&lt;li&gt;SSLSession&lt;/li&gt;
-&lt;li&gt;SSLContext&lt;/li&gt;
-&lt;li&gt;TrustManager&lt;/li&gt;
-&lt;li&gt;X509TrustManager&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;script
-&lt;ul&gt;
-&lt;li&gt;ScriptException&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;security
-&lt;ul&gt;
-&lt;li&gt;auth
-&lt;ul&gt;
-&lt;li&gt;login
-&lt;ul&gt;
-&lt;li&gt;LoginException&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;xml
-&lt;ul&gt;
-&lt;li&gt;bind
-&lt;ul&gt;
-&lt;li&gt;Unmarshaller&lt;/li&gt;
-&lt;li&gt;JAXBContext&lt;/li&gt;
-&lt;li&gt;annotation
-&lt;ul&gt;
-&lt;li&gt;XmlAccessType&lt;/li&gt;
-&lt;li&gt;XmlAccessorType&lt;/li&gt;
-&lt;li&gt;XmlElement&lt;/li&gt;
-&lt;li&gt;XmlElementWrapper&lt;/li&gt;
-&lt;li&gt;XmlRootElement&lt;/li&gt;
-&lt;li&gt;XmlType&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;namespace
-&lt;ul&gt;
-&lt;li&gt;QName&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;parsers
-&lt;ul&gt;
-&lt;li&gt;DocumentBuilder&lt;/li&gt;
-&lt;li&gt;DocumentBuilderFactory&lt;/li&gt;
-&lt;li&gt;SAXParser&lt;/li&gt;
-&lt;li&gt;SAXParserFactory&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;soap
-&lt;ul&gt;
-&lt;li&gt;SOAPBody&lt;/li&gt;
-&lt;li&gt;SOAPBodyElement&lt;/li&gt;
-&lt;li&gt;SOAPEnvelope&lt;/li&gt;
-&lt;li&gt;SOAPMessage&lt;/li&gt;
-&lt;li&gt;SOAPPart&lt;/li&gt;
-&lt;li&gt;SOAPException&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;enterprise-edition&#34;&gt;Enterprise Edition&lt;/h2&gt;
-&lt;p&gt;javax&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;inject&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Inject&lt;/p&gt;
-&lt;p&gt;Identifies injectable constructors, methods, and fields.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://dzone.com/articles/cdi-di-p1&#34;&gt;https://dzone.com/articles/cdi-di-p1&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public class Car {
-    // Injectable constructor
-    @Inject public Car(Engine engine) { ... }
-    
-    // Injectable field
-    @Inject private Provider&amp;lt;Seat&amp;gt; seatProvider;
-    
-    // Injectable package-private method
-    @Inject void install(Windshield windshield, Trunk trunk) { ... }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Named&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;jms&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Message&lt;/li&gt;
-&lt;li&gt;MessageListener&lt;/li&gt;
-&lt;li&gt;TextMessage&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;persistence&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Transient&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;servlet&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Filter&lt;/li&gt;
-&lt;li&gt;FilterChain&lt;/li&gt;
-&lt;li&gt;FilterConfig&lt;/li&gt;
-&lt;li&gt;ServletInputStream&lt;/li&gt;
-&lt;li&gt;ServletOutputStream&lt;/li&gt;
-&lt;li&gt;ServletRequest&lt;/li&gt;
-&lt;li&gt;ServletResponse&lt;/li&gt;
-&lt;li&gt;ServletException&lt;/li&gt;
-&lt;li&gt;http
-&lt;ul&gt;
-&lt;li&gt;Cookie&lt;/li&gt;
-&lt;li&gt;HttpServlet&lt;/li&gt;
-&lt;li&gt;HttpServletRequest&lt;/li&gt;
-&lt;li&gt;HttpServletResponse&lt;/li&gt;
-&lt;li&gt;HttpServletRequestWrapper&lt;/li&gt;
-&lt;li&gt;HttpServletResponseWrapper&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;transaction&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Transactional&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;ws&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;rs
-&lt;ul&gt;
-&lt;li&gt;DELETE&lt;/li&gt;
-&lt;li&gt;GET&lt;/li&gt;
-&lt;li&gt;POST&lt;/li&gt;
-&lt;li&gt;PUT&lt;/li&gt;
-&lt;li&gt;Path&lt;/li&gt;
-&lt;li&gt;PathParam&lt;/li&gt;
-&lt;li&gt;Produces&lt;/li&gt;
-&lt;li&gt;QueryParam&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;core
-&lt;ul&gt;
-&lt;li&gt;Context&lt;/li&gt;
-&lt;li&gt;MediaType&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.Produces;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;&lt;/p&gt;
-&lt;p&gt;import javax.servlet.http.HttpServlet;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.oracle.com/cd/E19226-01/820-7627/6nisfjmk8/index.html&#34;&gt;https://docs.oracle.com/cd/E19226-01/820-7627/6nisfjmk8/index.html&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>

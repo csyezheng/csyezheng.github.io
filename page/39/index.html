@@ -62,7 +62,7 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-<meta property="og:updated_time" content="2020-12-06T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-03-07T00:00:00+00:00" />
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes.">
 <meta name="twitter:card" content="summary"/>
@@ -296,12 +296,87 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/django/">Getting start with Django</a>
+      <a class="post-link" href="/post/any-path/post-installation-for-archlinux/">Post-installation for archlinux</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-05-22" class="post-time">
-        2017-05-22
+      <time datetime="2017-09-26" class="post-time">
+        2017-09-26
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Reboot into the new system Set the keyboard layout and Console fonts If you have the 4K display, console fonts will be extremely small.
+$ setfont sun12x22 Connect to the internet nmcli device wifi list nmcli device wifi connect TP-LINK_GZS password a3628436 ping baidu.com Unofficial user repositories sudo vim /etc/pacman.conf [archlinuxcn] Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch Adding unofficial keys
+sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman -S ttc-iosevka-slab noto-fonts noto-fonts-cjk noto-fonts-emoji tf-latinmodern-math ttf-inconsolata Graphical user interface Display server sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight xorg-xrdb is using to loading a user-level configuration dotfile, typically located at ~/.
+    </div>
+    <div class="read-more">
+      <a href="/post/any-path/post-installation-for-archlinux/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/any-path/setup-a-archlinux-windows10-dual-booting-system/">Setup a Archlinux / Windows10 dual booting system</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2017-09-25" class="post-time">
+        2017-09-25
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Before   Check the hardware, three disks on my Lenovo ThinkPad P50
+  Samsung SSD 970 EVO Plus 250GB for installing windows
+  Samsung SSD 960 EVO 250GB for installling archlinux
+  WDC WD5000LPLX-0 HHD 500GB for data storage
+    Disable Windows Fast Startup if start from windows
+  Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)
+    </div>
+    <div class="read-more">
+      <a href="/post/any-path/setup-a-archlinux-windows10-dual-booting-system/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/specialization/web-application/front-end/bootstrap/">Bootstrap</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2017-07-01" class="post-time">
+        2017-07-01
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
@@ -316,80 +391,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      First steps  Requests and responses Models and the admin site Views and templates Forms and generic views Testing Static files Customizing the admin site  Advanced Tutorials: How to write reusable apps | Writing your first patch for Django
-The model layer Models Generally, each model maps to a single database table.
-from django.db import models class Person(models.Model): name = models.CharField(max_length=30)  The name of the table, myapp_person, is automatically derived from the name of the app and the model class.
+      Bootstrap Components Modal Add dialogs to your site for lightboxes, user notifications, or completely custom content.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/django/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/other/reminders/">reminders</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2017-03-15" class="post-time">
-        2017-03-15
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/other/"> other </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      practice, practice and practice today and tomorrow Daily Schedule Get up review ever learned practice coding Go to bed Daily Task SICP STL Leetcode January February March April May June memo pek2 book list Effective C++ C++ primer 算法导论 SICP CSAPP TCP/IP卷一 体系结构量化方法 Leetcode刷题
-    </div>
-    <div class="read-more">
-      <a href="/post/other/reminders/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/master-path/materials/">Materials</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2016-12-08" class="post-time">
-        2016-12-08
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/master-path/"> master-path </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Linux Linux Reference Books  Michael Kerrisk, The Linux Programming Interface, No Starch Press, 2010.  The essential Linux system programming guide by the maintainer of the Linux man pages. Clear, authoritative, and encyclopedic. Includes file I/O, processes, signals, time, threads, shared libraries, IPC, synchronization, and sockets. A great book.    Online GDB Materials  Beej&rsquo;s Quick Guide to GDB (based on the very handy gdb -tui mode) Two-page x86-64 GDB cheat sheet (pdf, txt)  Online C and Linux Materials  CS:APP3e Unix FAQ Prof.
-    </div>
-    <div class="read-more">
-      <a href="/post/master-path/materials/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/front-end/bootstrap/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1505,6 +1510,27 @@ from django.db import models class Person(models.Model): name = models.CharField
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/40/">»</a></li>
@@ -1512,7 +1538,7 @@ from django.db import models class Person(models.Model): name = models.CharField
 
       
       
-      <li><a href="/page/46/">»»</a></li>
+      <li><a href="/page/47/">»»</a></li>
       
 
       </ul>
