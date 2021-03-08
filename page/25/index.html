@@ -296,15 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/debugging-with-delve/">Delve Documentation</a>
+      <a class="post-link" href="/post/specialization/devops/docker/">Docker</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-04-25" class="post-time">
+        2019-04-25
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
           
         </div>
       
@@ -316,10 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &quot;fmt&quot; &quot;log&quot; &quot;net/http&quot; &quot;os&quot; ) const port = &quot;8000&quot; func main() { http.HandleFunc(&quot;/hi&quot;, hi) fmt.Println(&quot;runing on port: &quot; + port) log.Fatal(http.ListenAndServe(&quot;:&quot; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &quot;HostName: %s&quot;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.
+      Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker sudo pacman -S docker systemctl start docker.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/debugging-with-delve/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/devops/docker/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,15 +330,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/generate-model-structs-from-database/">generate-model-structs-from-database</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/microservices/">microservices</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-04-20" class="post-time">
+        2019-04-20
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -350,14 +350,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Generate gorm model structs from database
-  https://github.com/smallnest/gen
-  https://github.com/wantedly/pq2gorm
-  https://github.com/go-xorm/cmd
-  
+      第1章 微服务 1.1 什么是微服务 微服务就是一些协同工作的小而自治的服务 1.1.1 很小，专注于做好一件事 在一个单块系统内，通常会创建一些抽象层或者模块来保证
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/generate-model-structs-from-database/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/microservices/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -368,7 +364,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/scala/getting-started/">Getting Started with Scala</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/a-tour-of-go/">A Tour of Go</a>
     </h1>
     
     <div class="post-meta">
@@ -388,12 +384,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Create A Scala Project With sbt In The Command Line Installation   Java 8 JDK javac -version 
-  install sbt
-  Create a project $ mkdir practice &amp;&amp; cd practice $ sbt new scala/hello-world.g8 # pull template from GitHub - hello-world - project (sbt uses this to install manage plugins and dependencies) - build.properties - src - main - scala (All of your scala code goes here) -Main.
+      Basics Packages, variables, and functions. Packages Programs start running in package main.
+By convention, the package name is the same as the last element of the import path. For instance, the &quot;math/rand&quot; package comprises files that begin with the statement package rand.
+Imports It is good style to use the factored import statement.
+import ( &quot;fmt&quot; &quot;math/rand&quot; ) Exported names In Go, a name is exported if it begins with a capital letter.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/scala/getting-started/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/a-tour-of-go/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1530,6 +1527,69 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/26/">»</a></li>
@@ -1537,7 +1597,7 @@
 
       
       
-      <li><a href="/page/47/">»»</a></li>
+      <li><a href="/page/50/">»»</a></li>
       
 
       </ul>

@@ -296,7 +296,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/java/the-java-tutorials/">The Java Tutorials</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/photoprism/">photoprism</a>
     </h1>
     
     <div class="post-meta">
@@ -316,12 +316,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Getting Started The Java programming language is a high-level language that can be characterized by all of the following buzzwords:
- Simple Object oriented Distributed Multithreaded Dynamic Architecture neutral Portable High performance Robust Secure  An overview of the software development process:
-all source code is first written in plain text files ending with the .java extension. Those source files are then compiled into .class files by the javac compiler. A .
+      Step 1: Clone this project:
+git clone https://github.com/photoprism/photoprism.git Step 2: Start Docker containers:
+cd photoprism sudo docker-compose up Step 3: Open a new terminal to the photoprism container:
+sudo docker-compose exec photoprism bash 
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/java/the-java-tutorials/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/photoprism/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -332,7 +333,7 @@ all source code is first written in plain text files ending with the .java exten
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/python/standard-library-by-example/">The Python Standard Library</a>
+      <a class="post-link" href="/post/engineering-fundamentals/python/datetime/">Python datetime</a>
     </h1>
     
     <div class="post-meta">
@@ -352,10 +353,13 @@ all source code is first written in plain text files ending with the .java exten
   <div class="post-content">
     
     <div class="post-summary">
-      The Python Standard Library 1. Introduction 2. Built-in Functions      Built-in Functions       abs(x) dict(**kwarg) help([object]) min(iterable, *[, key, default]) setattr(object, name, value)   all(iterable) dir([object]) hex(x) next(iterator[, default]) slice([start,] stop[, step])   any(iterable) divmod(a, b) id(object) object() sorted(iterable, key=func, reverse=False)   ascii(object) enumerate(iterable, start=0) input([prompt]) oct(int) @staticmethod   bin(int) eval(expression, globals=None, locals=None) int(x, base=10) open(file, mode=&lsquo;r&rsquo;,&hellip;) str(object='')   bool([x]) exec(object[, globals[, locals]]) isinstance(object, classinfo) ord(char) sum(iterable[, start])   bytearray(s) filter(function, iterable) issubclass(class, classinfo) pow(x, y[, z]) super([type[, object-or-type]])   bytes(source) float([x]) iter(object[, sentinel]) print() tuple([iterable])   callable(object) format(value[, format_spec]) len(s) @property type(object)   chr(int) frozenset([iterable]) list([iterable]) range([start], stop[, step]) vars([object])   @classmethod getattr(object, name[, default]) locals() repr(object) zip(*iterables)   compile() globals() map(function, iterable, &hellip;) reversed(seq) _import_()   complex([real[, imag]]) hasattr(object, name) max(iterable, *[, key, default]) round(number[, ndigits])    delattr(object, name) hash(object) memoryview(bytes_obj) set([iterable])       @classmethod
+      datetime 8.1. datetime
+The datetime module, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation.
+There are two kinds of date and time objects: “naive” and “aware”.
+An aware object has sufficient knowledge of applicable algorithmic and political time adjustments, such as time zone and daylight saving time information, to locate itself relative to other aware objects. An aware object is used to represent a specific moment in time.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/python/standard-library-by-example/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/python/datetime/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -366,7 +370,7 @@ all source code is first written in plain text files ending with the .java exten
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/python/the-python-tutorial/">The Python Tutorial</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/quick-start/">quick-start</a>
     </h1>
     
     <div class="post-meta">
@@ -386,10 +390,11 @@ all source code is first written in plain text files ending with the .java exten
   <div class="post-content">
     
     <div class="post-summary">
-      The Python Tutorial 1. Whetting Your Appetite The Python interpreter is easily extended with new functions and data types implemented in C or C++ (or other languages callable from C). Python allows you to split your program into modules that can be reused in other Python programs. It comes with a large collection of standard modules that you can use as the basis of your programs — or as examples
+        Create your project folder and cd inside
+mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot;   go mod edit -require=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b go mod edit -replace=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b=github.com/google/go-genproto@v0.0.0-20180831171423-11092d34479b go mod edit -require=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -replace=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223=github.com/golang/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -require=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299 go mod edit -replace=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299=github.com/golang/crypto@v0.0.0-20180614174826-fd5f17ee7299 gen --connstr &quot;zhengye:csye3631@tcp(127.0.0.1:3307)/discovery&quot; --database discovery --json --gorm --guregu --rest 
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/python/the-python-tutorial/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/quick-start/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1526,6 +1531,69 @@ all source code is first written in plain text files ending with the .java exten
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/32/">»</a></li>
@@ -1533,7 +1601,7 @@ all source code is first written in plain text files ending with the .java exten
 
       
       
-      <li><a href="/page/47/">»»</a></li>
+      <li><a href="/page/50/">»»</a></li>
       
 
       </ul>

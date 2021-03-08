@@ -296,7 +296,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/quick-start/">quick-start</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/gorm/">gorm</a>
     </h1>
     
     <div class="post-meta">
@@ -316,11 +316,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-        Create your project folder and cd inside
-mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot;   go mod edit -require=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b go mod edit -replace=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b=github.com/google/go-genproto@v0.0.0-20180831171423-11092d34479b go mod edit -require=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -replace=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223=github.com/golang/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -require=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299 go mod edit -replace=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299=github.com/golang/crypto@v0.0.0-20180614174826-fd5f17ee7299 gen --connstr &quot;zhengye:csye3631@tcp(127.0.0.1:3307)/discovery&quot; --database discovery --json --gorm --guregu --rest 
+      struct name and table name type User struct {} // default table name is `users` // Set User's table name to be `profiles` func (User) TableName() string { return &quot;profiles&quot; } gorm不定条件查询和分页操作 making dynamic query and pagination using gorm course := models.Course{} // The global db variable must be assigned to the local db variable. //
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/quick-start/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/gorm/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,7 +330,7 @@ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; 
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/scala/scalabyexample/">Scala By Example</a>
+      <a class="post-link" href="/post/engineering-fundamentals/javascript/javascript/">JavaScript</a>
     </h1>
     
     <div class="post-meta">
@@ -351,11 +350,10 @@ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; 
   <div class="post-content">
     
     <div class="post-summary">
-      Introduction Scala smoothly integrates object-oriented and functional programming.
- Abstract types and mixin composition unify concepts from object and module systems. Pattern matching over class hierarchies uniﬁes functional and object-oriented data access. It greatly simpliﬁes the processing of XML trees. A ﬂexible syntax and type system enables the construction of advanced libraries and new domain speciﬁc languages.  Starting with simple expressions and functions, and working up through objects and classes, lists and streams, mutable state, pattern matching to more complete examples that show interesting programming techniques.
+      概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/scala/scalabyexample/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/javascript/javascript/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -366,7 +364,7 @@ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; 
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/standard-library/">standard-library</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/package_download/">package_download</a>
     </h1>
     
     <div class="post-meta">
@@ -386,10 +384,10 @@ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; 
   <div class="post-content">
     
     <div class="post-summary">
-      io io.Writer import	stdlog &quot;log&quot; var loggers []*Logger var logLevel = Debug type Logger struct { level int logger *stdlog.Logger } func NewLogger(out io.Writer) *Logger { ret := &amp;Logger{level: logLevel, logger: stdlog.New(out, &quot;&quot;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)} loggers = append(loggers, ret) return ret } io.MultiWriter func init() { rand.Seed(time.Now().UTC().UnixNano()) log.SetLevel(&quot;warn&quot;) logger = log.NewLogger(os.Stdout) model.LoadConf() util.LoadMarkdown() i18n.Load() theme.Load() replaceServerConf() if &quot;dev&quot; == model.Conf.RuntimeMode { gin.SetMode(gin.DebugMode) } else { gin.SetMode(gin.ReleaseMode) } gin.DefaultWriter = io.MultiWriter(os.Stdout) } io.
+      gopm get -g -v golang.org/x/sys 
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/standard-library/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/package_download/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1526,6 +1524,69 @@ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; 
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/31/">»</a></li>
@@ -1533,7 +1594,7 @@ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; 
 
       
       
-      <li><a href="/page/47/">»»</a></li>
+      <li><a href="/page/50/">»»</a></li>
       
 
       </ul>

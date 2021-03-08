@@ -296,12 +296,46 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/cpp/cmake/">CMake</a>
+      <a class="post-link" href="/post/specialization/information-management-and-analytics/web-scraping/proxy/">proxy for crawler</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-09-13" class="post-time">
-        2019-09-13
+      <time datetime="2020-01-15" class="post-time">
+        2020-01-15
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/information-management-and-analytics/"> information-management-and-analytics </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      from proxybroker import Broker, Checker async def check(proxy): broker = Broker() ip = await broker._resolver.get_real_ext_ip() checker = Checker(judges=None, real_ext_ip=ip) results = [] for proto in ['HTTPS', 'HTTP']: result = await checker._check(proxy, proto) results.append(result) return True if any(results) else False 
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/information-management-and-analytics/web-scraping/proxy/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/engineering-fundamentals/cpp/cpp-library-management/">C&#43;&#43; Library Management</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-09-16" class="post-time">
+        2019-09-16
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
@@ -316,10 +350,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      如果工程存在多个目录,需要确保每个要管理的目录都存在一个 CMakeLists.txt． Set a name, version, and enable languages for the entire project. project(&lt;PROJECT-NAME&gt; [LANGUAGES] [&lt;language-name&gt;...]) Sets the name of the project and stores the name in the PROJECT_NAME
+      In general, you are going to have to end up with
+ Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&rsquo;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/cpp/cmake/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/cpp/cpp-library-management/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,12 +365,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/cpp/tools/">C&#43;&#43; tools</a>
+      <a class="post-link" href="/post/engineering-fundamentals/cpp/curl/">libcurl</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-09-09" class="post-time">
-        2019-09-09
+      <time datetime="2019-09-16" class="post-time">
+        2019-09-16
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
@@ -350,52 +385,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Tools clang-format 格式化c++代码，同类工具还有astyle。保持代码风格统一是个好习惯。 qt creator vs以外我觉得最好用的c++ ide，代码补全质量高（基于li
+      #include &lt;curl/curl.h&gt; When using an external library you must link with it:
+$ g++ main.cpp -lcurl 
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/cpp/tools/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/artificial-intelligence/machine-learning/kaggle/">kaggle</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-08-25" class="post-time">
-        2019-08-25
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      https://www.kaggle.com/stackoverflow/statsquestions
-https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
-https://developer.ibm.com/exchanges/models/all/max-toxic-comment-classifier/
-https://www.quora.com/Is-binary-relevance-same-as-one-vs-all
-https://stackoverflow.com/questions/44674847/what-are-the-differences-between-all-these-cross-entropy-losses-in-keras-and-ten
-https://vict0rs.ch/2018/06/17/multilabel-text-classification-tensorflow/
-https://github.com/tensorflow/skflow/issues/113
-https://towardsdatascience.com/journey-to-the-center-of-multi-label-classification-384c40229bff
-https://www.reddit.com/r/MLQuestions/comments/5n82zb/loss_function_for_sparse_multilabel_classification/
-    </div>
-    <div class="read-more">
-      <a href="/post/specialization/artificial-intelligence/machine-learning/kaggle/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/cpp/curl/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1532,6 +1526,69 @@ https://www.reddit.com/r/MLQuestions/comments/5n82zb/loss_function_for_sparse_mu
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/21/">»</a></li>
@@ -1539,7 +1596,7 @@ https://www.reddit.com/r/MLQuestions/comments/5n82zb/loss_function_for_sparse_mu
 
       
       
-      <li><a href="/page/47/">»»</a></li>
+      <li><a href="/page/50/">»»</a></li>
       
 
       </ul>

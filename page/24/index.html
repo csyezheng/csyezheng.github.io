@@ -296,49 +296,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/a-tour-of-go/">A Tour of Go</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/oauth2/">Django oauth2 provider</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Basics Packages, variables, and functions. Packages Programs start running in package main.
-By convention, the package name is the same as the last element of the import path. For instance, the &quot;math/rand&quot; package comprises files that begin with the statement package rand.
-Imports It is good style to use the factored import statement.
-import ( &quot;fmt&quot; &quot;math/rand&quot; ) Exported names In Go, a name is exported if it begins with a capital letter.
-    </div>
-    <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/a-tour-of-go/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/web-application/back-end/spring-boot/">Building Java Projects with Maven</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-26" class="post-time">
+        2019-05-26
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
@@ -353,12 +316,12 @@ import ( &quot;fmt&quot; &quot;math/rand&quot; ) Exported names In Go, a name is
   <div class="post-content">
     
     <div class="post-summary">
-      Install Maven Maven is downloadable as a zip file at https://maven.apache.org/download.cgi.
-Once you have downloaded the zip file, unzip it to your computer. Then add the bin folder to your path.
-$ mvn -v Define a simple Maven build Maven projects are defined with an XML file named pom.xml. Create a file named pom.xml at the root of the project (i.e. put it next to the src folder) and give it the following contents:
+      Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... 'provider', 'provider.oauth2', ) # urls.py url(r'^oauth2/', include('provider.oauth2.urls', namespace = 'oauth2')), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ?   Create a client entry in your database
+To find out which type of client you need to create, read Section 2.1.
+To create a new entry simply use the Django admin panel.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/spring-boot/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/oauth2/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -369,15 +332,15 @@ $ mvn -v Define a simple Maven build Maven projects are defined with an XML file
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/javascript/debug/">Debugging JavaScript in Chrome DevTools</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/elasticsearch/">Elasticsearch Tutorial</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-15" class="post-time">
+        2019-05-15
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -389,12 +352,47 @@ $ mvn -v Define a simple Maven build Maven projects are defined with an XML file
   <div class="post-content">
     
     <div class="post-summary">
-      Get Started Step 2: Get familiar with the Sources panel UI The Sources panel is where you debug JavaScript.
-Open DevTools by pressing Command+Option+I (Mac) or Control+Shift+I (Windows, Linux). This shortcut opens the Consolepanel.
-Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: Set a line-of-code breakpoint Step 6: Check variable values 
+      Getting Started Installing and Running Elasticsearch Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
+Installing Sense Sense is a Kibana app that provides an interactive console for submitting requests to Elasticsearch directly from your browser.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/javascript/debug/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/elasticsearch/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/specialization/big-data/elk-stack/">elk stack</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-05-15" class="post-time">
+        2019-05-15
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/big-data/"> big-data </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
+Install Beats Install Filebeat Install Metricbeat sudo pacman -S metricbeat sudo vim /etc/metricbeat/metricbeat.yml setup.dashboards.enabled: true From the Metricbeat install directory, enable the system module
+cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricbeat.
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/big-data/elk-stack/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1531,6 +1529,69 @@ Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: S
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/25/">»</a></li>
@@ -1538,7 +1599,7 @@ Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: S
 
       
       
-      <li><a href="/page/47/">»»</a></li>
+      <li><a href="/page/50/">»»</a></li>
       
 
       </ul>

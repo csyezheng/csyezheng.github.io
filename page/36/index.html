@@ -296,80 +296,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/other/ios-tweak/">ios-tweak</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/">Concurrent-Programming-for-Scalable-Web-Architectures</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-08-15" class="post-time">
-        2018-08-15
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/other/"> other </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      NetworkDisabler GPS Master (GPS定位大师) Liberty Lite appinst Ex3nder Installer Filza File Manager LocalIAPStore13 HYI Repo Icons AppSync Unified Cydia Installer
-    </div>
-    <div class="read-more">
-      <a href="/post/other/ios-tweak/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/other/thinking/thinking/">Programming Thinking</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2018-08-15" class="post-time">
-        2018-08-15
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/other/"> other </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      基类的派生类的派生类需要做某些改动时，追溯到基类的一个虚函数做改动才能实现时，可以在此派生类中重写同名函数进行覆盖而不是继承这个虚函数，先拷
-    </div>
-    <div class="read-more">
-      <a href="/post/other/thinking/thinking/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/web-application/back-end/kafka/">Kafka</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2018-07-23" class="post-time">
-        2018-07-23
+      <time datetime="2018-08-26" class="post-time">
+        2018-08-26
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
@@ -384,10 +316,80 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Quickstart &gt; tar -xzf kafka_2.11-1.1.0.tgz &gt; cd kafka_2.11-1.1.0 Start the server bin/zookeeper-server-start.sh config/zookeeper.properties bin/kafka-server-start.sh config/server.properties Create a topic bin/kaftopics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic my-topic bin/kafka-topics.sh --list --zookeeper localhost:2181 Send some messages bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning Python client for the Apache Kafka #!/usr/bin/env python3 import logging from kafka import KafkaProducer from kafka.errors import KafkaError import msgpack log = logging.getLogger(__name__) def send(): producer = KafkaProducer(bootstrap_servers=['localhost:9092'], value_serializer=msgpack.
+      Introduction Scope of this Thesis We will have a detailed look on concurrency in three distinct areas of web architectures&ndash;connection handling, application logic and backend persistence. For each stage, we will discuss its main challenges and issues and explain existing approaches to tackle concurrency.
+Web Applications distinguish two separate types of web applications &ndash; web sites and web services.
+Web Sites some popular types for web sites that are interesting in terms of scalability and concurrency
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/kafka/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/specialization/web-application/back-end/distributed-systems/">distributed systems</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2018-08-26" class="post-time">
+        2018-08-26
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/web-application/back-end/distributed-systems/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/specialization/web-application/back-end/high-concurrency/">high concurrency</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2018-08-26" class="post-time">
+        2018-08-26
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      高并发 高并发其实挺容易的，当你明白了一万并发的原理，然后扩展到百万、千万、亿万级很easy 要点有如下几项： 1、垂直分层：DNS层、跨机房部署
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/web-application/back-end/high-concurrency/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1524,6 +1526,69 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/37/">»</a></li>
@@ -1531,7 +1596,7 @@
 
       
       
-      <li><a href="/page/47/">»»</a></li>
+      <li><a href="/page/50/">»»</a></li>
       
 
       </ul>

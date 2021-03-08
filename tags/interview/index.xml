@@ -6,7 +6,52 @@
     <description>Recent content in interview on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 16 Nov 2016 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>algorithms interview questions</title>
+      <link>http://www.yezheng.pro/post/interview/algorithms/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/algorithms/</guid>
+      <description>1 红黑树 红黑树与AVL的比较： AVL是严格平衡树，因此在增加或者删除节点的时候，根据不同情况，旋转的次数比红黑树要多； 红黑是用非严格的平衡来</description>
+    </item>
+    
+    <item>
+      <title>computer networks interview questions</title>
+      <link>http://www.yezheng.pro/post/interview/computer-networks/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/computer-networks/</guid>
+      <description>1 三次握手 客户端通过向服务器端发送一个SYN来创建一个主动打开，作为三次握手的一部分。客户端把这段连接的序号设定为随机数 A。 服务器端应当为一</description>
+    </item>
+    
+    <item>
+      <title>databases interview questions</title>
+      <link>http://www.yezheng.pro/post/interview/databases/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/databases/</guid>
+      <description>1 事务 数据库事务(Database Transaction) ，是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。 彻底理解数据库事务: http://www.hollischuang.com/archives/898 2 数</description>
+    </item>
+    
+    <item>
+      <title>operation systems interview questions</title>
+      <link>http://www.yezheng.pro/post/interview/operating-systems/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/operating-systems/</guid>
+      <description>1 select,poll和epoll 其实所有的I/O都是轮询的方法,只不过实现的层面不同罢了. 这个问题可能有点深入了,但相信能回答出这个问题</description>
+    </item>
+    
+    <item>
+      <title>python interview questions</title>
+      <link>http://www.yezheng.pro/post/interview/python/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/python/</guid>
+      <description>1 Python的函数参数传递 看两个例子: a = 1 def fun(a): a = 2 fun(a) print a # 1 a = [] def fun(a): a.append(1) fun(a) print a # [1] 所有的变量都可以理解是内存中一个对象的“引用”，或者</description>
+    </item>
+    
     <item>
       <title>interview question</title>
       <link>http://www.yezheng.pro/post/interview/algorithms/1/</link>

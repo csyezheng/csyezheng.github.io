@@ -84,6 +84,51 @@ Record user events User events track user actions such as clicking on a product,
     </item>
     
     <item>
+      <title>algorithms interview questions</title>
+      <link>http://www.yezheng.pro/post/interview/algorithms/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/algorithms/</guid>
+      <description>1 红黑树 红黑树与AVL的比较： AVL是严格平衡树，因此在增加或者删除节点的时候，根据不同情况，旋转的次数比红黑树要多； 红黑是用非严格的平衡来</description>
+    </item>
+    
+    <item>
+      <title>computer networks interview questions</title>
+      <link>http://www.yezheng.pro/post/interview/computer-networks/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/computer-networks/</guid>
+      <description>1 三次握手 客户端通过向服务器端发送一个SYN来创建一个主动打开，作为三次握手的一部分。客户端把这段连接的序号设定为随机数 A。 服务器端应当为一</description>
+    </item>
+    
+    <item>
+      <title>databases interview questions</title>
+      <link>http://www.yezheng.pro/post/interview/databases/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/databases/</guid>
+      <description>1 事务 数据库事务(Database Transaction) ，是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。 彻底理解数据库事务: http://www.hollischuang.com/archives/898 2 数</description>
+    </item>
+    
+    <item>
+      <title>operation systems interview questions</title>
+      <link>http://www.yezheng.pro/post/interview/operating-systems/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/operating-systems/</guid>
+      <description>1 select,poll和epoll 其实所有的I/O都是轮询的方法,只不过实现的层面不同罢了. 这个问题可能有点深入了,但相信能回答出这个问题</description>
+    </item>
+    
+    <item>
+      <title>python interview questions</title>
+      <link>http://www.yezheng.pro/post/interview/python/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/python/</guid>
+      <description>1 Python的函数参数传递 看两个例子: a = 1 def fun(a): a = 2 fun(a) print a # 1 a = [] def fun(a): a.append(1) fun(a) print a # [1] 所有的变量都可以理解是内存中一个对象的“引用”，或者</description>
+    </item>
+    
+    <item>
       <title>Deploying machine learning models in production</title>
       <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/deploy/</link>
       <pubDate>Sun, 29 Nov 2020 00:00:00 +0000</pubDate>
@@ -146,54 +191,6 @@ DNS service provider Create Cloudflare account Enter your domain name yezheng.</
       
       <guid>http://www.yezheng.pro/post/specialization/big-data/flink/</guid>
       <description>Apache Flink Web Dashboard</description>
-    </item>
-    
-    <item>
-      <title>Cloud Computing</title>
-      <link>http://www.yezheng.pro/post/specialization/cloud-computing/15-319/</link>
-      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/cloud-computing/15-319/</guid>
-      <description>Introduction and Course Logistics Data Analytics Big Data Analytics Elasticity and Auto Scaling Containers and Kubernetes Serverless Computing and Functions-as-a-Service Flat Files and Databases &amp;amp; Team Project Social Network, Heterogenous Storage and DBaaS &amp;amp; Team Project Replication and Consistency and Team Project Phase 1 Team Project Phase 1 Iterative Batch Processing in Spark and Team Project Phase 2 Team Project Phase 2 and Live Test Machine Learning on the Cloud and Team Project Phase 3 Team Project Phase 3 and Live Test Stream Processing with Kafka &amp;amp; Samza Reference  https://www.</description>
-    </item>
-    
-    <item>
-      <title>Introduction to Cloud Infrastructure Technologies</title>
-      <link>http://www.yezheng.pro/post/specialization/cloud-computing/infrastructure/introduction-to-cloud-infrastructure-technologies/</link>
-      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/cloud-computing/infrastructure/introduction-to-cloud-infrastructure-technologies/</guid>
-      <description>Chapter 1. Virtualization Introduction and Learning Objectives Introduction to Cloud Computing and Technologies Historically, the word cloud was used as a metaphor for Internet. Later on, it was used to depict the Internet in computer network diagrams. To find out more about the origin of the cloud, you can take a look at the details provided on Wikipedia.
-Cloud computing can be referred as the allocation of resources on the cloud.</description>
-    </item>
-    
-    <item>
-      <title>The Java 3rd Library</title>
-      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-3rd-party-library/</link>
-      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-3rd-party-library/</guid>
-      <description>import org.alibaba.fastjson.JSONArray; import org.alibaba.fastjson.JSONObject; import com.amazonaws.Request; import com.amazonaws.utils.StringUtils; import com.atomikos.datasource.xa.StringUtils; import com.fasterxml.jackson.core.JsonParseException; import com.fasterxml.jackson.annotation.JsonFormat; import com.fasterxml.jackson.core.io.JsonStringEncoder; import com.fasterxml.jackson.core.type.TypeReference; import com.fasterxml.jackson.databind.JavaType; import com.fasterxml.jackson.databind.DeserializationFeature; import com.fasterxml.jackson.databind.JsonMappingException; import com.fasterxml.jackson.databind.ObjectMapper; import com.google.common.cache.CacheBuilder; import com.google.common.cache.CacheLoader; import com.google.common.cache.LoadingCache; import com.google.gson.Gson; import com.ibm.db2.jcc.am.re; import com.jayway.restassured.RestAssured; import com.jayway.restassured.path.json.JsonPath; import com.jayway.restassured.config.RestAssuredconfig; import com.jayway.restassured.response.Response; import com.jayway.restassured.response.ValidatableResponse; import com.jayway.restassured.specification.RequestSpecification; import freemarker.template.Template; import freemarker.template.TemplateException; import groovy.json.internal.JsonFastParser; import groovy.json.internal.ValueMap; import org.apache.ws.security.WSSecurityException; import org.apache.ws.security.util.Base64; net.sf.json JSONArray JSONNull JSONObject org.activiti.engine https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1 commons beanutils BeanUtils; collection</description>
-    </item>
-    
-    <item>
-      <title>The Java Standard Library</title>
-      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-standard-library/</link>
-      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-standard-library/</guid>
-      <description>Collections Interfaces Note that all the core collection interfaces are generic. For example, this is the declaration of the Collection interface.
-public interface Collection&amp;lt;E&amp;gt;... The Collection Interface List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;(c); The Collection interface contains methods that perform basic operations, such as
- int size() boolean isEmpty() boolean contains(Object element) boolean add(E element) boolean remove(Object element) Iterator&amp;lt;E&amp;gt; iterator()  It also contains methods that operate on entire collections, such as</description>
-    </item>
-    
-    <item>
-      <title>Mybatis Spring Boot</title>
-      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/mybatis-spring-boot/</link>
-      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/mybatis-spring-boot/</guid>
-      <description>Creating a project spring init -d=web --build=maven mysite Declare Dependencies cd mysite vim pom.xml &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.liquibase&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;liquibase-core&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.10.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis.spring.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis-spring-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.1.3&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;8.0.20&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; MyBatis-Spring-Boot-Starter will: Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers,</description>
     </item>
     
   </channel>

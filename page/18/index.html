@@ -296,15 +296,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/scrapy-with-django/">Scraping with Scrapy and Django Integration</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/machine-learning/scikit-learn/">scikit-learn</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-02-12" class="post-time">
-        2020-02-12
+      <time datetime="2020-05-05" class="post-time">
+        2020-05-05
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -316,10 +316,18 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Installing Dependencies (Optional) $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple $ python -m pip install --user virtualenv $ python -m pip install --user virtualenvwrapper $ vim ~/.bashrc export WORKON_HOME=$HOME/.virtualenvs export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv source $HOME/.local/bin/virtualenvwrapper.sh $ source ~/.bashrc $ mkvirtualenv stock-screener pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat Creating a Django Project $ django-admin startproject stock_screener $ cd stock_screener $ mkdir stock_screener/apps/basic_info $ django-admin startapp basic_info stock_screener/apps/basic_info $ mkdir stock_screener/apps/northbound $ django-admin startapp northbound stock_screener/apps/northbound $ mkdir stock_screener/apps/financial_metrics $ django-admin startapp financial_metrics stock_screener/apps/financial_metrics $ mkdir stock_screener/apps/quotes $ django-admin startapp quotes stock_screener/apps/quotes $ mkdir stock_screener/apps/jobs $ django-admin startapp jobs stock_screener/apps/jobs Cannot add backslash suffix when run startapp command.
+      scikit-learn   sklearn
+  preprocessing
+  MultiLabelBinarizer
+Transforms between iterable of iterables and a multilabel format (binary matrix)
+    utils
+  class_weight
+  compute_class_weight
+Estimate class weights for unbalanced datasets.
+        
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/scrapy-with-django/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/machine-learning/scikit-learn/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,15 +338,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/information-management-and-analytics/web-scraping/proxy/">proxy for crawler</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/machine-learning/solution/">Solution for imbalanced data</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-01-15" class="post-time">
-        2020-01-15
+      <time datetime="2020-05-01" class="post-time">
+        2020-05-01
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/information-management-and-analytics/"> information-management-and-analytics </a>
+          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -350,10 +358,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      from proxybroker import Broker, Checker async def check(proxy): broker = Broker() ip = await broker._resolver.get_real_ext_ip() checker = Checker(judges=None, real_ext_ip=ip) results = [] for proto in ['HTTPS', 'HTTP']: result = await checker._check(proxy, proto) results.append(result) return True if any(results) else False 
+      FAQ imbalanced data  https://www.tensorflow.org/tutorials/structured_data/imbalanced_data https://stackoverflow.com/questions/43481490/keras-class-weights-class-weight-for-one-hot-encoding https://github.com/jbjorne/TEES/blob/master/Detectors/KerasDetectorBase.py https://towardsdatascience.com/practical-tips-for-class-imbalance-in-binary-classification-6ee29bcdb8a7 https://stackoverflow.com/questions/48485870/multi-label-classification-with-class-weights-in-keras  Class weight degrades Multi Label Classification Performance  https://datascience.stackexchange.com/questions/28040/class-weight-degrades-multi-label-classification-performance  What is the difference between multilabel and multiclass classification?  https://www.quora.com/What-is-the-difference-between-multilabel-and-multiclass-classification https://stats.stackexchange.com/questions/260505/should-i-use-a-categorical-cross-entropy-or-binary-cross-entropy-loss-for-binary  
     </div>
     <div class="read-more">
-      <a href="/post/specialization/information-management-and-analytics/web-scraping/proxy/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/machine-learning/solution/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -364,15 +372,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/cpp/cpp-library-management/">C&#43;&#43; Library Management</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/">Few shot learning</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-09-16" class="post-time">
-        2019-09-16
+      <time datetime="2020-04-27" class="post-time">
+        2020-04-27
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -384,11 +392,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      In general, you are going to have to end up with
- Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&rsquo;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).
+      Reference  https://github.com/AnthonyMRios/multi-label-zero-shot Few-Shot and Zero-Shot Multi-Label Learning for Structured Label Spaces Deep Neural Networks for Multi-Label Text Classification https://github.com/YujiaBao/Distributional-Signatures Induction Networks for Few-Shot Text Classification https://github.com/laohur/LearnToCompareText  
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/cpp/cpp-library-management/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1525,6 +1532,69 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/19/">»</a></li>
@@ -1532,7 +1602,7 @@
 
       
       
-      <li><a href="/page/47/">»»</a></li>
+      <li><a href="/page/50/">»»</a></li>
       
 
       </ul>
