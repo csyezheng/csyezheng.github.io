@@ -331,6 +331,20 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/post/interview/leetcode-top-liked/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/interview/leetcode-top-interview/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/post/interview/operating-systems/</loc>
     <lastmod>2020-12-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -339,6 +353,13 @@
   
   <url>
     <loc>http://www.yezheng.pro/post/interview/python/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/interview/redis/</loc>
     <lastmod>2020-12-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2037,12 +2058,6 @@
   
   <url>
     <loc>http://www.yezheng.pro/post/interview/mysql/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/interview/redis/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

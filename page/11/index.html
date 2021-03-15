@@ -296,12 +296,48 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/spring-boot-cxf-jax-rs-starter/">Spring Boot CXF JAX-RS Starter</a>
+      <a class="post-link" href="/post/engineering-fundamentals/java/the-java-standard-library/">The Java Standard Library</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-08-03" class="post-time">
-        2020-08-03
+      <time datetime="2020-08-23" class="post-time">
+        2020-08-23
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Collections Interfaces Note that all the core collection interfaces are generic. For example, this is the declaration of the Collection interface.
+public interface Collection&lt;E&gt;... The Collection Interface List&lt;String&gt; list = new ArrayList&lt;String&gt;(c); The Collection interface contains methods that perform basic operations, such as
+ int size() boolean isEmpty() boolean contains(Object element) boolean add(E element) boolean remove(Object element) Iterator&lt;E&gt; iterator()  It also contains methods that operate on entire collections, such as
+    </div>
+    <div class="read-more">
+      <a href="/post/engineering-fundamentals/java/the-java-standard-library/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/specialization/web-application/back-end/mybatis-spring-boot/">Mybatis Spring Boot</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-08-09" class="post-time">
+        2020-08-09
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
@@ -316,13 +352,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Features Registers CXF Servlet with a &ldquo;/services/*&rdquo; URL pattern for serving CXF JAX-RS endpoints.
-Optionally auto-discovers JAX-RS root resources and providers and creates a JAX-RS endpoint.
-Note the use of CXF JAX-RS Clients in SpringBoot Application is covered in this section.
-Databases sudo docker container start mysql-container-id sudo docker exec -it mysql-container-name mysql -u root -p mysql&gt; create database demo; mysql&gt; USE demo; mysql&gt; SET FOREIGN_KEY_CHECKS=0; mysql&gt; DROP TABLE IF EXISTS `student`; mysql&gt; CREATE TABLE `student` ( -&gt; `id` int(10) NOT NULL, -&gt; `name` varchar(100) DEFAULT NULL, -&gt; `sex` char(6) DEFAULT NULL, -&gt; `address` varchar(255) DEFAULT NULL, -&gt; `age` int(10) DEFAULT NULL, -&gt; PRIMARY KEY (`id`) -&gt; ) ENGINE=InnoDB DEFAULT CHARSET=utf8; mysql&gt; INSERT INTO `student` VALUES ('1', '', '', '', '22'); Creating a project spring init -d=web,mybatis,mysql --build=maven mysite dependency  &lt;dependency&gt; &lt;groupId&gt;org.
+      Creating a project spring init -d=web --build=maven mysite Declare Dependencies cd mysite vim pom.xml &lt;dependency&gt; &lt;groupId&gt;org.liquibase&lt;/groupId&gt; &lt;artifactId&gt;liquibase-core&lt;/artifactId&gt; &lt;version&gt;3.10.2&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt; &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt; &lt;version&gt;2.1.3&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;mysql&lt;/groupId&gt; &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt; &lt;version&gt;8.0.20&lt;/version&gt; &lt;/dependency&gt; MyBatis-Spring-Boot-Starter will: Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers,
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/spring-boot-cxf-jax-rs-starter/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/mybatis-spring-boot/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -333,15 +366,15 @@ Databases sudo docker container start mysql-container-id sudo docker exec -it my
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/devops/xc/">欣宸Blog</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/spring/">Spring</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-25" class="post-time">
-        2020-07-25
+      <time datetime="2020-08-09" class="post-time">
+        2020-08-09
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -353,44 +386,14 @@ Databases sudo docker container start mysql-container-id sudo docker exec -it my
   <div class="post-content">
     
     <div class="post-summary">
-      https://cloud.tencent.com/developer/column/1662
+      Installation Install JDK Download jdk-8u261-linux-x64.tar.gz from Oracle
+sudo pacman -S jdk8-openjdk vim ~/.bashrc export JAVA_HOME=/usr/lib/jvm/java-8-openjdk source ~/.bashrc Install maven sudo pacman -S maven cp /opt/maven/conf/settings.xml ~/.m2/ vim ~/.m2/settings.xml &lt;mirror&gt; &lt;id&gt;alimaven&lt;/id&gt; &lt;mirrorOf&gt;central&lt;/mirrorOf&gt; &lt;name&gt;aliyun maven&lt;/name&gt; &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt; &lt;/mirror&gt; Installing the Spring Boot CLI Download the Spring Boot CLI
+wget https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-cli/2.3.3.BUILD-SNAPSHOT/spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip Extract to a directory that supports file execution.
+sudo unzip spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip -d /opt/ vim ~/.bashrc Add the following line to the file
+export PATH=/opt/spring-2.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/devops/xc/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/any-path/circumvent-internet-censorship/">circumvent Internet censorship</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-06-25" class="post-time">
-        2020-06-25
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Shadowsocks ShadowsocksR subscription address https://raw.githubusercontent.com/ssrsub/ssr/master/ssrsub https://yzzz.ml/freessr/ https://raw.githubusercontent.com/AmazingDM/sub/master/ssrshare.com https://haobang.yangwang.workers.dev/ http://www.yangwang.tk/ https://shadow-socks-share.herokuapp.com/subscribe https://www.liesauer.net/yogurt/subscribe?ACCESS_TOKEN=DAYxR3mMaZAsaqUb https://qiaomenzhuanfx.netlify.com/ https://muma16fx.netlify.com/ https://raw.githubusercontent.com/voken100g/AutoSSR/master/online https://raw.githubusercontent.com/voken100g/AutoSSR/master/recent https://youlianboshi.netlify.com/ http://ss.pythonic.life/full/subscribe https://www.nutgeek.cn/newsubscribe/ https://prom-php.herokuapp.com/cloudfra_ssr.txt http://share-shadowsocks.herokuapp.com/full/subscribe http://share-shadowsocksr.herokuapp.com/subscribe?valid=1 https://raw.githubusercontent.com/AmazingDM/sub/master/ssrshare.com https://github.com/liesauer/Free-SS-SSR https://yzzz.ml/freessr https://www.liesauer.net/yogurt/subscribe?ACCESS_TOKEN=DAYxR3mMaZAsaqUb Free account https://www.youneed.win/free-ssr http://nulastudio.org/Freedom/ https://lncn.org/ https://jichangdaquan.com/node/429.html https://www.freess.best/ https://fanqiang.network/ https://jichangdaquan.com/node/429.html V2ray subscription address https://raw.githubusercontent.com/AmazingDM/sub/master/v2ray_ssrshare.com https://jiang.netlify.com/ https://youlianboshi.netlify.com/ https://raw.githubusercontent.com/eycorsican/rule-sets/master/kitsunebi_sub https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray https://bhqt.ltd/?p=236 Free account https://free-ss.site/ https://www.freess.best/v2ray.html https://www.freevpnnet.com/ https://jichangdaquan.com/node/429.html https://view.freev2ray.org/ https://v2ray.cat/ https://v2ray.party/ https://my.freev2ray.org/ https://v2fire.tk/ https://get.freev2ray.com/ https://freev2.org https://jichangdaquan.com/node/429.html Reference https://gith
-    </div>
-    <div class="read-more">
-      <a href="/post/any-path/circumvent-internet-censorship/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/spring/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1590,6 +1593,27 @@ Databases sudo docker container start mysql-container-id sudo docker exec -it my
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/12/">»</a></li>
@@ -1597,7 +1621,7 @@ Databases sudo docker container start mysql-container-id sudo docker exec -it my
 
       
       
-      <li><a href="/page/50/">»»</a></li>
+      <li><a href="/page/51/">»»</a></li>
       
 
       </ul>

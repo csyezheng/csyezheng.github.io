@@ -69,7 +69,7 @@
 <meta itemprop="description" content="Introduction and Transport-Layer Services 运输层位于应用层和网络层之间，该层为运行在不同主机上的应用进程提供直接的通信服务，它将网络层的在两个端系统之间的交付服务扩展到运行在">
 <meta itemprop="datePublished" content="2021-03-07T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-03-07T00:00:00+00:00" />
-<meta itemprop="wordCount" content="4418">
+<meta itemprop="wordCount" content="7525">
 
 
 
@@ -413,9 +413,64 @@
 <p>最后一次加法有溢出，它要被回卷，其结果进行反码运算后得到(1011010100111101)校验和。在接收方，包括校验和的全部的4个16比特加在一起，若没有出现差错，最后结果将是(1111111111111111)。</p>
 <p>UDP提供端到端的差错检测，但不能对差错进行恢复，某些实现是将受损报文段丢弃，其他实现是将受损报文段交给应用程序并给出警告。</p>
 <h2 id="principles-of-reliable-data-transfer">Principles of Reliable Data Transfer</h2>
+<p>为上层实体提供的服务抽象是：数据可以通过一条可靠的信道进行传输。实现这种服务抽象是<strong>可靠数据传输协议</strong> (reliable data transfer protocol) 的责任。</p>
+<p>由于可靠数据传输协议的下层协议也许是不可靠的，因此这是一项困难的任务。TCP是在不可靠的 (IP) 端到端网络层之上实现的可靠数据传输协议。</p>
+<p><img src="http://ww1.sinaimg.cn/large/0083FLjsgy1goicplw4myj30ot0fg405.jpg" alt="9rTshXF.png"></p>
 <h4 id="building-a-reliable-data-transfer-protocol">Building a Reliable Data Transfer Protocol</h4>
+<h6 id="1-经完全可靠信道的可靠数据传输rdt10">1 经完全可靠信道的可靠数据传输：rdt1.0</h6>
+<p>假设底层信道是完全可靠的，此时协议为rdt1.0。<strong>有限状态机(Finite-State-Machine,FSM)</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/0083FLjsgy1goicui54qpj30ed0c5aat.jpg" alt="88p9BlE.png"></p>
+<p>该发送方和接收方的FSM每个都只有一个状态。FSM描述图中的箭头指示了协议从一个状态变迁到另一个状态（<strong>上图每个FSM都只有一个状态</strong>，因此变迁的必定是从一个状态返回到自身。）</p>
+<p>引起变迁的事件显示在表示变迁的横线上方，事件发生时所采取的动作显示在横线下方。如果对一个事件没有动作，或没有事件就在横线上方或者下方用^符号表示。</p>
+<p>1)在发送端：rdt的发送端只通过rdt_send(data)事件接收来自较高层的数据，产生一个包含该数据的分组(经由make_pkt(data)动作)，并将分组发送到信道中。实际上，rdt_send(data)事件是由较高层应用过程调用产生的。</p>
+<p>2）在接收端：rdt通过rdt_rcv(packet)事件从底层信道接收一个分组，从分组中取出数据(经由extract(packet,data)动作)，并将数据上传给较高层(通过deliver_data(data)动作)。实际上，rdt_rev(packet)事件是由较底层协议的过程调用产生的。</p>
+<h6 id="2-经具有比特差错信道的可靠数据传输rdt20">2 经具有比特差错信道的可靠数据传输：rdt2.0</h6>
+<p>底层信道更为实际的模型是分组中的比特可能受损。在分组的传输、传播或缓存的过程中，这种<strong>比特差错</strong>通常会出现在网络的物理部件中。此时仍然假定所有发送的分组（虽然有些比特可能受损）将按其发送的顺序被接收。</p>
+<p>利用<strong>控制报文</strong>使得接收方可以让发送方知道哪些内容被正确接收，哪些内容接收有误并因此需要重复。在计算机网络中，基于这样<strong>重传机制</strong>的可靠数据传输协议称为**自动重传请求(Automatic Repeat reQuest,ARQ)**协议。</p>
+<p>ARQ协议还需要另外三种协议来处理存在比特差错的情况：</p>
+<p>1）<strong>差错检测</strong>：这些技术需要有额外的比特（除了待发送的初始数据比特之外的比特）从发送方发送到接收方；这些比特将被汇集在rdt2.0数据分组的分组检验和字段中。</p>
+<p>2）<strong>接收方反馈</strong>：rdt2.0协议将从接收方向发送方回送ACK(“肯定确认”)或者NAK（“否定确认”）分组。理论上，这些分组只需要一个比特长；用0表示NAK，用1表示ACK。</p>
+<p>3）<strong>重传</strong>：接收方收到有差错的分组时，发送方将重传该分组文。
+<img src="http://ww1.sinaimg.cn/large/0083FLjsgy1goid6c54prj30lk0jimz5.jpg" alt="OoF58nx.png"></p>
+<p>rdt2.0的<strong>发送端FSM有两个状态，接收方FSM有一个状态</strong>。</p>
+<p>首先，发送端协议正等待来自上层传下来的数据。当产生rdt_send (data)事件时，发送方将产生一个包含待发送数据的分组，带有检验和，然后经由 udt_send(sndpkt)操作发送该分组。然后，发送方协议等待来自接收方的ACK或NAK分组。如果收到一个ACK 分组，则发送方知道最近发送的分组已被正确接收，因此协议返回到等待来向上层的数据的状态。如果收到NAK分组，该协议重传最后一个分组并等待接收方的响应。</p>
+<p>但是注意以下事实：</p>
+<p>1）当发送方处于等待ACK或NAK的状态时，它不能从上层获得更多的数据。这就是说rdt_send()事件不可能出现，仅当接收到ACK并离开该状态时才能发生这样的事件。因此，发送方将不会发送一块新数据，除非发送方确信接收方已正确接收当前分组。rdt2.0协议被称为停等(stop-and-wait)协议。</p>
+<p>2）它存在一个致命的缺陷，尤其是没考虑到ACK或NAK分组受损的可能性。</p>
+<p>解决这个新问题的一个简单方法（几乎所有现有的数据传输协议中，包括 TCP，都采用了这种方法）是<strong>在数据分组中添加一新字段，让发送方对其数据分组编号，即将发送数据分组的序号放在该字段</strong>。于是，接收方只需要检查序号即可确定收到的分组是否一次重传。因为目前我们假定信道不丢失分组。ACK 和 NAK 分组本身不需要指明它们要确认的分组序号。 发送方知道所接收到的 ACK 和 NAK 分组（无论是否是含糊不清的）是为响应其最近发送的数据分组而生成的。</p>
+<p><img src="http://ww1.sinaimg.cn/large/0083FLjsgy1goidpu1s1xj30ml0f0q4z.jpg" alt="yMnU15e.png"></p>
+<p><img src="http://ww1.sinaimg.cn/large/0083FLjsgy1goids10z3uj30ph0d2wgw.jpg" alt="2qQNPD0.png"></p>
+<p>下面是rdt2.2的FSM描述：</p>
+<p><img src="http://ww1.sinaimg.cn/large/0083FLjsgy1goidt7w8hjj30mq0ewac3.jpg" alt="uuq9awx.png"></p>
+<p><img src="http://ww1.sinaimg.cn/large/0083FLjsgy1goidtek0mlj30nl0bvac3.jpg" alt="O73tMVL.png"></p>
+<h6 id="3-经具有比特差错的丢包信道的可靠数据传输rdt30">3 经具有比特差错的丢包信道的可靠数据传输：rdt3.0</h6>
+<p>现在假定除了<strong>比特受损</strong>外，底层信道还会<strong>丢包</strong>。协议现在必须处理另外两个关注的问题：<strong>怎样检测丢包以及发生丢包后该做些什么</strong>。在rdt2.2中已经研发的技术：使用<strong>校验和、序号、ACK分组和重传</strong>等。使得可以解决第二个问题，对于第一个问题，还需要增加一种新的协议机制。</p>
+<p>有很多可能的方法用于解决丢包问题（在本章结尾的习题中研究了几种其他方法）。在这里，我们让发送端负责检测和恢复丢包工作。假定发送端传输一个数据分组，该分组或者接收端对该分组的 ACK 发生了丢失。在这两种情况下，发送端都收不到应当到来的接收端的响应。</p>
+<p>因此实践中采取的方法是发送方明智地选择一个时间值，以判定可能发生了丢包(尽管不能确保)如果在这个时间内没有收到ACK，则<strong>重传</strong>该分组。
+注意，如果一个分组经历了一个大的时延，发送方可能会重传该分组，既是数据分组和ACK均没有发生丢失。这就需要考虑冗余数据分组的可能性。rdt2.2协议已经有足够的功能（即<strong>序号</strong>）来处理分组情况，接收方可丢弃重复冗余分组。</p>
+<p>为了实现基于时间的重传机制，需要一个<strong>倒计数定时器</strong>，在一个给定的时间量过期后，可中断发送方。因此，发送方需要能做到: ①每次发送一个分组(包括第一次分组和重传分组)时，便启动一个定时器。②响应定时器中断(采取适当的动作) ③终止定时器</p>
+<p>rdt3.0有时被称为<strong>比特交替协议(alternating-bit protocol)</strong>。</p>
+<p><img src="http://ww1.sinaimg.cn/large/0083FLjsgy1goie9j0yo0j30jt0eraca.jpg" alt="CwR3zp6.png"></p>
+<p><strong>数据传输协议的要点：在检验和、序号、定时器、肯定和否定确认分组这些技术中，每种机制都在协议的运行中起到了必不可少的作用。</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/0083FLjsgy1goieay18f6j30md0non18.jpg" alt="uXjj0Db.png"></p>
 <h4 id="pipelined-reliable-data-transfer-protocols">Pipelined Reliable Data Transfer Protocols</h4>
+<p>rdt3.0 性能问题的核心在于它是一个停等协议。</p>
+<p><img src="http://ww1.sinaimg.cn/large/0083FLjsgy1goieokyod6j30jp0almxp.jpg" alt="stop-and-wait.jpg"></p>
+<p><img src="http://ww1.sinaimg.cn/large/0083FLjsgy1goienr373jj30jp0bb0th.jpg" alt="pipelined.jpg"></p>
+<p>解决这种特殊的性能问题的一个简单方法是：不使用停等方式运行，允许发送方发送多个分组而无需等待确认。这种技术为<strong>流水线</strong> (pipeline)：因为许多从发送方向接收方输送的分组可以被看成是填充到一条流水线中。</p>
+<p>流水线技术对可靠数据传输协议带来如下影响：</p>
+<p>1）必须增加序号范围：因为每个输送中的分组必须有一个唯一的序号，而且也许有多个在输送中未确认的报文。</p>
+<p>2）协议的发送方和接收方两端也许必须缓存多个分组。</p>
+<p>3）所需序号范围和对缓冲的要求取决于数据传输协议如何处理丢失、损坏及延时过大的分组。</p>
+<p><strong>解决流水线的差错恢复</strong>有两种基本的方法：<strong>回退N步(G0-Back-N,GBN)</strong>，和<strong>选择重传(Selective Repeat,SR)</strong>。</p>
 <h4 id="go-back-n-gbn">Go-Back-N (GBN)</h4>
+<p>在回退N步协议中，允许发送方发送多个分组(当有多个分组可用时)而不需等待确认，但它也受限于在流水线中未确认的分组数不能超过某个最大允许数N。建议操作本书配套Web网站上的GBN Java小程序（这是个非常好的Java程序）。</p>
+<p><img src="http://ww1.sinaimg.cn/large/0083FLjsgy1goifh815zoj30vg088jsw.jpg" alt="Network_GBN-sender.png"></p>
+<p>当<code>base</code>对应的分组被确认之后，窗口才会向右移动。<code>N</code>被称为<strong>窗口长度</strong>。限制窗口长度是要进行流量控制与拥塞控制。</p>
+<p>在实现中，一个分组的序号承载在分组首部的一个固定长度的字段中。如果分组序号字段的比特数是$k$，则该序号范围是$[0,2^k-1]$。在一个有限的序号范围内，所有涉及序号的运算必须使用模$2^k$运算。（即序号空间可被看作是一个长度为2k的环，其中序号2k-1紧接着序号0。）TCP有一个32比特的序号字段，其中的TCP序号是按字节流中的字节进行计数的，而不是按分组计数。</p>
+<p>基于ACK、无NAK的GBN协议的发送方和接收放这两端的扩展FSM：</p>
+<p><img src="http://ww1.sinaimg.cn/large/0083FLjsgy1goifwgy8xjj30uk0lm78r.jpg" alt="Network_GBN-sender(1).png"></p>
+<p><img src="http://ww1.sinaimg.cn/large/0083FLjsgy1goifws85l8j30ka0e6jty.jpg" alt="Network_GBN-receiver.png"></p>
 <h4 id="selective-repeat-sr">Selective Repeat (SR)</h4>
 <h2 id="connection-oriented-transport-tcp">Connection-Oriented Transport: TCP</h2>
 <h4 id="the-tcp-connection">The TCP Connection</h4>
