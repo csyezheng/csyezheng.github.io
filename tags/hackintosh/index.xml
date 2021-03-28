@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hackintosh on Ye Zheng&#39;s Blog</title>
+    <link>http://www.yezheng.pro/tags/hackintosh/</link>
+    <description>Recent content in hackintosh on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/hackintosh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hackintosh</title>
+      <link>http://www.yezheng.pro/post/other/hackintosh/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/other/hackintosh/</guid>
+      <description>Step 1: Download – Get a copy of macOS Catalina Download Catalina 10.15 from the Mac App Store
+download it through a third party source such as gibMacOS.
+Step 2: Installer – Create the macOS Catalina flash drive   Formatting the USB Drive  Click Erase Set the following settings:  Name: Hackintosher Format: Mac OS Extended (Journaled) Scheme: GUID Partition Map   Click Erase    Transferring the Catalina Installer  balena-etcher    Step 3: Catalina EFI Partition &amp;amp; Clover Files  Mount EFI Partition Delete the folder called EFI in the partition you mounted (If it exists) Download Hackintosher-Catalina-10.</description>
+    </item>
+    
+  </channel>
+</rss>

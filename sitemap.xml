@@ -9,28 +9,189 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/categories/artificial-intelligence/</loc>
+    <lastmod>2021-03-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/categories/</loc>
-    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/tags/computer-networking/</loc>
-    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
+    <loc>http://www.yezheng.pro/tags/distributed-systems/</loc>
+    <lastmod>2021-03-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/categories/computer-networking/</loc>
-    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
+    <loc>http://www.yezheng.pro/post/specialization/web-application/distribute-systems/distribute-systems/</loc>
+    <lastmod>2021-03-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/</loc>
+    <lastmod>2021-03-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/summarization/</loc>
+    <lastmod>2021-03-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/summarization/</loc>
+    <lastmod>2021-03-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://www.yezheng.pro/tags/</loc>
+    <lastmod>2021-03-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/categories/web-application/</loc>
+    <lastmod>2021-03-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/</loc>
+    <lastmod>2021-03-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/readme/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/python/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/domain-driven-design/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/products/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/categories/products/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/product/product/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5/</loc>
+    <lastmod>2021-03-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-03-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/cs145/</loc>
+    <lastmod>2021-03-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/data-systems/</loc>
+    <lastmod>2021-03-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/docker/</loc>
+    <lastmod>2021-03-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/web-application/back-end/hands-on_docker_for_microservices_with_python/</loc>
+    <lastmod>2021-03-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/kubernetes/</loc>
+    <lastmod>2021-03-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/microservices/</loc>
+    <lastmod>2021-03-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/categories/microservices/</loc>
+    <lastmod>2021-03-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/categories/systems/</loc>
+    <lastmod>2021-03-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/computer-networking/</loc>
     <lastmod>2021-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -44,21 +205,14 @@
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/post/specialization/computer-networking/computer-networks-3/</loc>
+    <loc>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-3/</loc>
     <lastmod>2021-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/</loc>
-    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/specialization/computer-networking/computer-networks-2/</loc>
+    <loc>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-2/</loc>
     <lastmod>2021-03-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -72,29 +226,29 @@
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/post/specialization/computer-networking/computer-networks-1/</loc>
+    <loc>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-1/</loc>
     <lastmod>2021-03-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/post/specialization/computer-networking/how-the-internet-works/</loc>
+    <loc>http://www.yezheng.pro/post/specialization/systems/computer-networking/how-the-internet-works/</loc>
     <lastmod>2021-01-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/post/specialization/computer-networking/</loc>
+    <loc>http://www.yezheng.pro/post/specialization/systems/computer-networking/</loc>
     <lastmod>2021-01-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/categories/artificial-intelligence/</loc>
-    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
+    <loc>http://www.yezheng.pro/post/specialization/web-application/microservices/python/</loc>
+    <lastmod>2020-12-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -150,13 +304,6 @@
   
   <url>
     <loc>http://www.yezheng.pro/tags/natural-language-processing/</loc>
-    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/</loc>
     <lastmod>2020-12-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -289,6 +436,118 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/tags/search-engine/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/architecture/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/article/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/es/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/learn/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/ltr/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/project/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/python/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/types/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E4%BA%A7%E5%93%81/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E5%8F%8C%E6%B4%BB/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E5%BA%94%E7%94%A8/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E6%90%9C%E7%B4%A2%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E7%BB%9F%E4%B8%80%E6%90%9C%E7%B4%A2/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E8%AF%8D%E5%BA%93/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/tags/sqoop/</loc>
     <lastmod>2020-12-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -296,7 +555,28 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/post/interview/puzzles/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/post/interview/algorithms/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/enterprise-architecture/business-analyst/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/business-analyst/</loc>
     <lastmod>2020-12-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -317,6 +597,41 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/post/enterprise-architecture/enterprise-architecture/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/enterprise-architecture/roles/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/enterprise-architecture/lifecycles/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/enterprise-architecture/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/categories/enterprise-architecture/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/tags/interview/</loc>
     <lastmod>2020-12-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -331,14 +646,35 @@
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/post/interview/leetcode-top-liked/</loc>
+    <loc>http://www.yezheng.pro/tags/leetcode/</loc>
     <lastmod>2020-12-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/post/interview/leetcode-top-interview/</loc>
+    <loc>http://www.yezheng.pro/post/interview/algorithms/leetcode-solution-github/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/interview/algorithms/leetcode-top-liked/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/interview/algorithms/leetcode-top-interview/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/lifecycles/</loc>
     <lastmod>2020-12-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -366,8 +702,85 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/post/interview/system-design/books/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/system-design/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/deploy/</loc>
     <lastmod>2020-11-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/security/</loc>
+    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/categories/security/</loc>
+    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/security/book/</loc>
+    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/storage/sds/</loc>
+    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/storage/</loc>
+    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/categories/storage/</loc>
+    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/trustworthiness/</loc>
+    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/security/trustworthiness/</loc>
+    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/security/material/</loc>
+    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -387,13 +800,6 @@
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/tags/kubernetes/</loc>
-    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-spring-cloud/</loc>
     <lastmod>2020-11-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -401,7 +807,21 @@
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/tags/microservices/</loc>
+    <loc>http://www.yezheng.pro/post/specialization/web-application/saas/saas/</loc>
+    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/saas/</loc>
+    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/web-application/saas/flask/</loc>
     <lastmod>2020-11-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -415,14 +835,28 @@
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/tags/spring-boot/</loc>
+    <loc>http://www.yezheng.pro/post/specialization/web-application/spring/config/</loc>
     <lastmod>2020-11-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/categories/web-application/</loc>
+    <loc>http://www.yezheng.pro/post/specialization/web-application/spring/mybatis/</loc>
+    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/web-application/spring/practice/</loc>
+    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/spring-boot/</loc>
     <lastmod>2020-11-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -555,7 +989,98 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/1/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/13/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/2/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/4/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/libraries/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/mybatis-/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/plugins/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-3rd-party-library/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/2/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/javaee-rest/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/javaee/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/javafx/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/javax/</loc>
+    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/standardlibraries/</loc>
     <lastmod>2020-08-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -564,6 +1089,27 @@
   <url>
     <loc>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-standard-library/</loc>
     <lastmod>2020-08-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/hackintosh/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/other/hackintosh/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/categories/other/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -716,6 +1262,20 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/tags/tensor2tensor/</loc>
+    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/tensor2tensor/</loc>
+    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -732,13 +1292,6 @@
   <url>
     <loc>http://www.yezheng.pro/tags/v2ray/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/categories/other/</loc>
-    <lastmod>2020-06-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1108,7 +1661,28 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/post/specialization/devops/books/</loc>
+    <lastmod>2019-05-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/devops/tools/</loc>
+    <lastmod>2019-05-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/post/specialization/devops/kubernetes/</loc>
+    <lastmod>2019-05-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/devops/project-management/</loc>
     <lastmod>2019-05-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1166,13 +1740,6 @@
   <url>
     <loc>http://www.yezheng.pro/tags/logstash/</loc>
     <lastmod>2019-05-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/tags/docker/</loc>
-    <lastmod>2019-04-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1451,6 +2018,20 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/tags/courses/</loc>
+    <lastmod>2018-11-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/master-path/courses/</loc>
+    <lastmod>2018-11-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/tags/cms/</loc>
     <lastmod>2018-11-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1528,13 +2109,6 @@
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/tags/distributed-systems/</loc>
-    <lastmod>2018-08-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://www.yezheng.pro/post/specialization/web-application/back-end/distributed-systems/</loc>
     <lastmod>2018-08-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1591,8 +2165,8 @@
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/tags/system-design/</loc>
-    <lastmod>2018-08-26T00:00:00+00:00</lastmod>
+    <loc>http://www.yezheng.pro/post/other/thinking/programming/</loc>
+    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1683,13 +2257,6 @@
   
   <url>
     <loc>http://www.yezheng.pro/categories/computer-science-core/</loc>
-    <lastmod>2018-01-30T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/tags/leetcode/</loc>
     <lastmod>2018-01-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2045,7 +2612,25 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/post/interview/backend/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/post/interview/cpp/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/interview/django/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/interview/go/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2057,13 +2642,25 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/post/interview/mongodb/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/post/interview/mysql/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/post/interview/system-design/</loc>
+    <loc>http://www.yezheng.pro/post/interview/system-design/system-design/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/interview/unix/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2088,6 +2685,12 @@
   
   <url>
     <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/pytorch-recommendation-ncf/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/devops/checker/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

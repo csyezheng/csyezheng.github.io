@@ -13,7 +13,7 @@
       <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/bert/</guid>
-      <description>BERT 可解释性-从&amp;quot;头&amp;quot;说起 一、背景介绍 搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大</description>
+      <description>For all translation problems, we suggest to try the Transformer model. https://tensorflow.google.cn/official_models/fine_tuning_bert the configuration, vocabulary, and a pre-trained checkpoint. you can find the download url for this in README.md page. BERT 可解释性-从&amp;quot;头&amp;quot;说起 一、背景介绍 搜索场景下用户搜索的 query 和</description>
     </item>
     
   </channel>

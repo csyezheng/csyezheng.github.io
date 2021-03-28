@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Hands-On Docker for Microservices with Python - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="Preface For the technical aspects, we will use well-tailored tools, including the following: Python, to implement RESTful web services Git source control, to track the changes in an implementation, and GitHub, to share those changes Docker containers, to standardize the operation of each of the microservices Kubernetes, to coordinate the execution of multiple services Cloud services, such as Travis CI or AWS, to leverage existing commercial solutions to problems We" />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.81.0" />
+
+
+<link rel="canonical" href="http://www.yezheng.pro/post/specialization/web-application/back-end/hands-on_docker_for_microservices_with_python/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.61b9e7bcbd6f12a4e9f5db11b9643a2092aa9c93ca136cf497edd5e0f3efca61.css" integrity="sha256-YbnnvL1vEqTp9dsRuWQ6IJKqnJPKE2z0l&#43;3V4PPvymE=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="Hands-On Docker for Microservices with Python" />
+<meta property="og:description" content="Preface For the technical aspects, we will use well-tailored tools, including the following: Python, to implement RESTful web services Git source control, to track the changes in an implementation, and GitHub, to share those changes Docker containers, to standardize the operation of each of the microservices Kubernetes, to coordinate the execution of multiple services Cloud services, such as Travis CI or AWS, to leverage existing commercial solutions to problems We" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.yezheng.pro/post/specialization/web-application/back-end/hands-on_docker_for_microservices_with_python/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-03-19T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-03-19T00:00:00&#43;00:00" />
+
+<meta itemprop="name" content="Hands-On Docker for Microservices with Python">
+<meta itemprop="description" content="Preface For the technical aspects, we will use well-tailored tools, including the following: Python, to implement RESTful web services Git source control, to track the changes in an implementation, and GitHub, to share those changes Docker containers, to standardize the operation of each of the microservices Kubernetes, to coordinate the execution of multiple services Cloud services, such as Travis CI or AWS, to leverage existing commercial solutions to problems We"><meta itemprop="datePublished" content="2021-03-19T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-03-19T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="3174">
+<meta itemprop="keywords" content="microservices,docker,kubernetes," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hands-On Docker for Microservices with Python"/>
+<meta name="twitter:description" content="Preface For the technical aspects, we will use well-tailored tools, including the following: Python, to implement RESTful web services Git source control, to track the changes in an implementation, and GitHub, to share those changes Docker containers, to standardize the operation of each of the microservices Kubernetes, to coordinate the execution of multiple services Cloud services, such as Travis CI or AWS, to leverage existing commercial solutions to problems We"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Hands-On Docker for Microservices with Python</h1>
+      
+      <div class="post-meta">
+        <time datetime="2021-03-19" class="post-time">
+          2021-03-19
+        </time>
+        <div class="post-category">
+            <a href="http://www.yezheng.pro/categories/microservices/"> microservices </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#preface">Preface</a></li>
+    <li><a href="#chapter-1-making-the-move--design-plan-and-execute">Chapter 1: Making the Move – Design, Plan, and Execute</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#chapter-2-creating-a-rest-service-with-python">Chapter 2: Creating a REST Service with Python</a></li>
+    <li><a href="#chapter-3-build-run-and-test-your-service-using-docker">Chapter 3: Build, Run, and Test Your Service Using Docker</a></li>
+    <li><a href="#chapter-4-creating-a-pipeline-and-workflow">Chapter 4: Creating a Pipeline and Workflow</a></li>
+    <li><a href="#chapter-5-using-kubernetes-to-coordinate-microservices">Chapter 5: Using Kubernetes to Coordinate Microservices</a></li>
+    <li><a href="#chapter-6-local-development-with-kubernetes">Chapter 6: Local Development with Kubernetes</a></li>
+    <li><a href="#chapter-7-configuring-and-securing-the-production-system">Chapter 7: Configuring and Securing the Production System</a></li>
+    <li><a href="#chapter-8-using-gitops-principles">Chapter 8: Using GitOps Principles</a></li>
+    <li><a href="#chapter-9-managing-workflows">Chapter 9: Managing Workflows</a></li>
+    <li><a href="#chapter-10-monitoring-logs-and-metrics">Chapter 10: Monitoring Logs and Metrics</a></li>
+    <li><a href="#chapter-11-handling-change-dependencies-and-secrets-in-the-system">Chapter 11: Handling Change, Dependencies, and Secrets in the System</a></li>
+    <li><a href="#chapter-12-collaborating-and-communicating-across-teams">Chapter 12: Collaborating and Communicating across Teams</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h2 id="preface">Preface</h2>
+<p>For the technical aspects, we will use well-tailored tools, including the following:</p>
+<ul>
+<li><strong>Python</strong>, to implement RESTful web services</li>
+<li><strong>Git</strong> source control, to track the changes in an implementation, and <strong>GitHub</strong>, to share those changes</li>
+<li><strong>Docker</strong> containers, to standardize the operation of each of the microservices</li>
+<li><strong>Kubernetes</strong>, to coordinate the execution of multiple services</li>
+<li><strong>Cloud services</strong>, such as <strong>Travis CI</strong> or <strong>AWS</strong>, to leverage existing commercial solutions to problems</li>
+</ul>
+<p>We will also cover practices and techniques for working effectively in a microservice oriented environment, the most prominent being the following:</p>
+<ul>
+<li><strong>Continuous integration</strong>, to ensure that services are of a high quality and ready to be deployed</li>
+<li><strong>GitOps</strong>, for <strong>handling changes in infrastructure</strong></li>
+<li><strong>Observability</strong> practices, to properly understand what is happening in a live system</li>
+<li><strong>Practices and techniques</strong> aimed at improving teamwork, both within a single team and across multiple teams</li>
+</ul>
+<h2 id="chapter-1-making-the-move--design-plan-and-execute">Chapter 1: Making the Move – Design, Plan, and Execute</h2>
+<h4 id="the-traditional-monolith-approach-and-its-problems">The traditional monolith approach and its problems</h4>
+<p>Python Django application for our monolith example.</p>
+<p>The monolith example can be found at: <a href="https://github.com/PacktPublishing/Hands-On-Docker-for-Microservices-with-Python/tree/master/Chapter01/Monolith">https://github.com/PacktPublishing/Hands-On-Docker-for-Microservices-with-Python/tree/master/Chapter01/Monolith</a></p>
+<p>In the context of web applications, that means creating deployable code that can be replicated so that <strong>requests can be directed to any of</strong> the deployed copies.</p>
+<ul>
+<li>one or more servers (physical boxes, virtual machines, and cloud instances such as EC2 and more) running a web server application
+(such as NGINX or Apache) to direct requests directed to HTTP port 80 or HTTPS port 443 toward one or more Python workers (normally, through
+the WSGI protocol), run by mod_wsgi—https://github.com/GrahamDumpleton/mod_wsgi (Apache only), uWSGI, GNUnicorn, and so on.</li>
+</ul>
+<p>problems:</p>
+<ul>
+<li>The code will increase in size, the complexity naturally tends to increase, making it more difficult to change the code in certain ways.</li>
+<li>Inefficient utilization of resources</li>
+<li>Issues with development scalability, the development team grows, once several teams are working on the same code base, the probability of clashing will increase.</li>
+<li>Deployment limitations</li>
+<li>Interdependency of technologies</li>
+<li>A bug in a small part of the system can bring down the whole service.</li>
+</ul>
+<h4 id="the-characteristics-of-a-microservices-approach">The characteristics of a microservices approach</h4>
+<p>A system following a microservices architecture is <strong>a collection of loosely coupled specialized services</strong>  (一组松散耦合的专用服务) that work in unison to provide a comprehensive service.</p>
+<ul>
+<li>A collection of <strong>specialized services</strong>, meaning that there are different, well defined modules.</li>
+<li><strong>Loosely coupled</strong>, meaning that each of the microservices can be independently deployed.</li>
+<li>That work in <strong>unison</strong>—each microservice is capable of communicating with others.</li>
+<li>To provide a <strong>comprehensive service</strong>, because our microservice system will need to replicate the same functionalities that were available using a monolith approach. There is an intent behind its design.</li>
+</ul>
+<p><strong>Note that there may be multiple workers per microservice</strong>.</p>
+<p>There are several <strong>advantages</strong> and implications to this architecture:</p>
+<ul>
+<li>If the communication between microservices is done through a standard protocol, each microservice can be programmed in different languages.</li>
+<li>Better resource utilization—if Microservice A requires more memory, we can reduce the number of worker copies.</li>
+<li>Each individual service is smaller and can be dealt with independently. That means fewer lines of code to maintain, faster builds, and a simpler design, with less technical debt to maintain.</li>
+<li>Some services can be hidden from external access. In some scenarios, that can improve security, reducing the attack surface area for sensitive data or services.</li>
+<li>As the systems are independent, a stability problem in one won&rsquo;t completely stop the system.</li>
+<li>Each service can be maintained independently by different developers.</li>
+</ul>
+<h4 id="docker-containers">Docker containers</h4>
+<p>Containers are a packetized bundle of software that encapsulates everything that is required to run, including all dependencies. It only requires a compatible OS kernel to run autonomously.</p>
+<p>Working with Docker containers has two steps. First, we <strong>build the container</strong>, executing layer after layer of changes on the filesystem, such as adding the software and configuration files that will be executed. Then, we <strong>execute it</strong>, launching its main command.</p>
+<p>An important factor for dealing with containers is that <strong>containers should be stateless</strong> (Factor VI—https://12factor.net/processes). Any state needs to be stored in a database and each container stores no persistent data.</p>
+<p>Another advantage of Docker is the availability of a lot of ready-to-use containers.</p>
+<h4 id="container-orchestration-and-kubernetes">Container orchestration and Kubernetes</h4>
+<p>Though Docker presents on how to deal with each of the individual microservices, we will need an <strong>orchestrator</strong> to handle the whole cluster of services.</p>
+<h4 id="parallel-deployment-and-development-speed">Parallel deployment and development speed</h4>
+<p>The single most important element is the capacity to deploy independently. The objective is to increase the number of deployments and the speed of each of them.</p>
+<p>The microservice architecture is strongly related to Continuous Integration and Continuous Deployment principles.</p>
+<p>As deploying a microservice should be transparent for dependent services, special attention should be paid to <strong>backward compatibility</strong>. Some changes will need to be escalated and coordinated with other teams to remove old, incorrect functionality without interrupting the system.</p>
+<h4 id="challenges-and-red-flags">Challenges and red flags</h4>
+<p><strong>Systems get started as monoliths</strong>, as it is simpler and allows for quicker iteration in a small code base.  As more and more developers get involved, t<strong>he advantages of a monolith start to become less evident</strong>, and the need for long- term strategy and structure becomes more important. More structure doesn&rsquo;t necessarily mean moving toward a microservice architecture. A great deal can be achieved with a well- architected monolith.</p>
+<p>Moving to microservices also has its own problems:</p>
+<ul>
+<li>Migrating to microservices requires a lot of effort, actively changing the way an organization operates, and a big investment until it starts to pay off.</li>
+<li>Debugging a request that moves across services is more difficult than a monolithic system. Monitoring the life cycle of a request is important and some subtle bugs can be difficult to replicate and fix in development.</li>
+<li><strong>A bad division line</strong> can make two services tightly coupled, not allowing independent deployment. A red flag in that means almost any change to one service requires a change in the other, even if, normally, it could be done independently.</li>
+<li>Solid communication between teams is required to allow consensus and the reuse of common solutions. <strong>Be careful</strong> when introducing (引入) <strong>shared code</strong> across services. If the code grows, it will make services dependent on each other. This can reduce the independence of the microservices.</li>
+<li>The best approach is to create <strong>self-documenting</strong> services. how to use tools to allow documenting how to use a service with minimal effort.</li>
+<li>Each call to another service, such as internal microservices calling each other, can increase the <strong>delay</strong> of responses, as multiple layers will have to be involved. This can produce <strong>latency</strong> problems, with external responses taking longer. They will also be affected by the performance and capacity of the internal network connecting the microservices.</li>
+</ul>
+<h4 id="analyzing-the-current-system">Analyzing the current system</h4>
+<p>The objective of this phase is to determine whether a change to microservices will actually be beneficial and to get an initial idea of what microservices will be the result of the migration.</p>
+<ul>
+<li><strong>Searching</strong>:  Search is also read-only, so it may be a good idea to detach.</li>
+<li><strong>Authentication</strong>: Splitting it will allow us to keep on track for new security issues and have a team specifically dealing with those issues.</li>
+<li>the new microservice will be the <strong>frontend</strong>, which will be served as static, precompiled code, and calls a backend API to render the pages.</li>
+</ul>
+<p>These are just some ideas, which will need to be discussed and evaluated. What are the specific pain points for your monolithic app? What is the roadmap and the strategic future? What are the most important points and features for the present or the future?</p>
+<p>The system will be divided into the following modules:</p>
+<ul>
+<li><strong>Users backend</strong>: This will have the responsibility for all <strong>authentication</strong> tasks and keep <strong>information about the users</strong>. It will store its data in the database.</li>
+<li><strong>Thoughts backend</strong>: This will create and store thoughts.</li>
+<li><strong>Search backend</strong>: This will allow searching thoughts.</li>
+<li>A proxy that will route any request to the proper backend. This needs to be externally accessible.</li>
+<li><strong>HTML frontend</strong>: This will replicate the current functionality. This will ensure that we work in a backward-compatible way and that the transition can be made smoothly.</li>
+<li>Allowing clients to access the backends will allow the creation of other clients than our HTML frontend. A <strong>dynamic frontend server</strong> will be created, and thereare talks with an external company to create a mobile app.</li>
+<li><strong>Static assets</strong>: A web server capable of handling static files. This will serve the styling for the HTML frontend and the index files and JavaScript files for the dynamic frontend.</li>
+</ul>
+<h4 id="preparing-and-adapting-by-measuring-usage">Preparing and adapting by measuring usage</h4>
+<p>The ability to know how a live system is working is called <strong>observability</strong>. The main tools for it are <strong>metrics</strong> and <strong>logs</strong>. The problem you&rsquo;ll find is that they will normally be configured to reflect external requests and give no information about internal modules.</p>
+<p>Remember that the most important element for the long-term success of the move to microservices is to allow teams to be independent. If you split across modules that constantly <strong>need to be changed in unison, deployments won&rsquo;t be truly independent</strong>, and, after the transition, you&rsquo;ll be forced to work with two tightly coupled services.</p>
+<h6 id="strategic-planning-to-break-the-monolith">Strategic planning to break the monolith</h6>
+<p>Being realistic, the company&rsquo;s business activities will not stop. That&rsquo;s why a plan should be in place to allow a smooth transition between one state and the other.</p>
+<p>This is known as the <strong>strangler pattern</strong> (<a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/strangler">https://docs.microsoft.com/en-us/azure/architecture/patterns/strangler</a>)—replacing parts of a system gradually <strong>until the old system is &ldquo;strangled&rdquo; and can be removed safely</strong>.</p>
+<h6 id="the-replacement-approach">The replacement approach</h6>
+<p>This black-box approach completely replaces existing functionality coding with an alternative from scratch. Once the new code is ready, it gets activated and the functionality in the old system is deprecated.</p>
+<h6 id="the-divide-approach">The divide approach</h6>
+<p>If the system is well structured, maybe some parts of it can be cleanly split into its own system, maintaining the same code.</p>
+<ul>
+<li>Copy the code into its own microservice and deploy it.</li>
+<li>The old calling system is using the old embedded code.</li>
+<li>Migrate a call and check that the system is working fine.</li>
+<li>Iterate until all old calls are migrated to the new system.</li>
+<li>Delete the divided code from the old system.</li>
+</ul>
+<h6 id="change-and-structured-approach">Change and structured approach</h6>
+<p>These three approaches can be combined to generate full migration. In this phase of the project, the objective is to have a clear roadmap.</p>
+<ul>
+<li>
+<p>As a prerequisite, a load balancer will need to be in front of the operation. Changing the configuration of this element, we will be able to route the requests toward the old monolith or any new microservice.</p>
+</li>
+<li>
+<p>A static web server, it will be deployed as an independent microservice.</p>
+</li>
+<li>
+<p>The code for authentication will be replicated in a new service.It will use a RESTful API to log in and generate a session, and to log out.</p>
+<p>Generate a package, shared across the externally faced microservices, which will allow checking to see whether a session has been generated with our own service. This will be achieved by <strong>signing the session cryptographically</strong> and <strong>sharing the secret across services</strong>.</p>
+<p>The Users Backend needs to be able to allow authentication using <strong>OAuth 2.0</strong> schema, which will allow other external services, not based on web browsers, to authenticate and operate, for example, a mobile app.</p>
+</li>
+<li>
+<p>The new API will be added externally to the load balancer and promoted as externally accessible.</p>
+</li>
+</ul>
+<h4 id="executing-the-move">Executing the move</h4>
+<p>we want to keep the services running and not have outages that interrupt our business.</p>
+<p>The single most important idea during this phase is backward compatibility.</p>
+<h4 id="web-services-best-friend--the-load-balancer">Web services' best friend – the load balancer</h4>
+<p>For our purposes, a group of old web services that are behind a load balancer can add one or more replacement services that are backward compatible, without interrupting the operation. The new service replacing the old one will be added in small numbers (maybe one or two workers) to split the traffic in a reasonable configuration, and ensure that everything is working as expected. After the verification, replace it completely by stopping sending new requests to the old services, draining them, and leaving only the new servers.</p>
+<p>Any web server capable of acting in <strong>reverse proxy</strong> mode, such as NGINX, is capable of working as a <strong>load balancer</strong>, but, for this task, probably the most complete option is <strong>HAProxy</strong> (<a href="http://www.haproxy.org/)">http://www.haproxy.org/)</a>.</p>
+<p>Because a load balancer is a single point of failure, you&rsquo;ll need to load balance your load balancer. The easiest way of doing it is creating several identical copies of HAProxy, as you&rsquo;d do with any other web service, and <strong>adding a cloud provider load balancer on top</strong>.</p>
+<h4 id="keeping-the-balance-between-new-and-old">Keeping the balance between new and old</h4>
+<p>The pilot phase – setting up the first couple of microservices
+The consolidation phase – steady migration to microservices
+The final phase – the microservices shop</p>
+<h2 id="chapter-2-creating-a-rest-service-with-python">Chapter 2: Creating a REST Service with Python</h2>
+<p>Technical requirements
+Analyzing the Thoughts Backend microservice
+Understanding the security layer
+Designing the RESTful API
+Specifying the API endpoints</p>
+<p>Defining the database schema
+Working with SQLAlchemy</p>
+<p>Implementing the service
+Introducing Flask-RESTPlus
+Handling resources
+Parsing input parameters
+Serializing results
+Performing the action
+Authenticating the requests</p>
+<p>Testing the code
+Defining the pytest fixtures
+Understanding test_token_validation.py
+test_thoughts.py</p>
+<h2 id="chapter-3-build-run-and-test-your-service-using-docker">Chapter 3: Build, Run, and Test Your Service Using Docker</h2>
+<p>Technical requirements</p>
+<p>Building your service with a Dockerfile
+Executing commands
+Understanding the Docker cache
+Building a web service container
+Configuring uWSGI
+Refreshing Docker commands</p>
+<p>Operating with an immutable container
+Testing the container
+Creating a PostgreSQL database container</p>
+<p>Configuring your service
+Deploying the Docker service locally
+Pushing your Docker image to a remote registry
+Obtaining public images from Docker Hub
+Using tags
+Pushing into a registry</p>
+<h2 id="chapter-4-creating-a-pipeline-and-workflow">Chapter 4: Creating a Pipeline and Workflow</h2>
+<p>Technical requirements
+Understanding continuous integration practices
+Producing automated builds
+Knowing the advantages of using Docker for builds
+Leveraging the pipeline concept
+Branching, merging, and ensuring a clear main build</p>
+<p>Configuring Travis CI
+Adding a repo to Travis CI
+Creating the .travis.yml file
+Working with Travis jobs
+Sending notifications</p>
+<p>Configuring GitHub
+Pushing Docker images from Travis CI
+Setting the secret variables
+Tagging and pushing builds
+Tagging and pushing every commit</p>
+<h2 id="chapter-5-using-kubernetes-to-coordinate-microservices">Chapter 5: Using Kubernetes to Coordinate Microservices</h2>
+<p>Technical requirements
+Defining the Kubernetes orchestrator
+Comparing Kubernetes with Docker Swarm</p>
+<p>Understanding the different Kubernetes elements
+Nodes
+Kubernetes Control Plane
+Kubernetes Objects</p>
+<p>Performing basic operations with kubectl
+Defining an element
+Getting more information
+Removing an element</p>
+<p>Troubleshooting a running cluster</p>
+<h2 id="chapter-6-local-development-with-kubernetes">Chapter 6: Local Development with Kubernetes</h2>
+<p>Technical requirements
+Implementing multiple services
+Describing the Users Backend microservice
+Describing the Frontend microservice
+Connecting the services</p>
+<p>Configuring the services
+Configuring the deployment
+Configuring the service
+Configuring the Ingress</p>
+<p>Deploying the full system locally
+Deploying the Users Backend
+Adding the Frontend</p>
+<h2 id="chapter-7-configuring-and-securing-the-production-system">Chapter 7: Configuring and Securing the Production System</h2>
+<p>Technical requirements
+Using Kubernetes in the wild
+Creating an IAM user</p>
+<p>Setting up the Docker registry
+Creating the cluster
+Creating the Kubernetes cluster
+Configuring the cloud Kubernetes cluster
+Configuring the AWS image registry
+Configuring the usage of an externally accessible load balancer
+Deploying the system</p>
+<p>Using HTTPS and TLS to secure external access
+Being ready for migration to microservices
+Running the example</p>
+<p>Deploying a new Docker image smoothly
+The liveness probe
+The readiness probe
+Rolling updates</p>
+<p>Autoscaling the cluster
+Creating a Kubernetes Horizontal Pod Autoscaler
+Deploying the Kubernetes metrics server
+Configuring the resources in deployments
+Creating an HPA
+Scaling the number of nodes in the cluster
+Deleting nodes
+Designing a winning autoscaling strategy</p>
+<h2 id="chapter-8-using-gitops-principles">Chapter 8: Using GitOps Principles</h2>
+<p>Technical requirements
+Understanding the description of GitOps
+Managing configuration
+Understanding DevOps
+Defining GitOps</p>
+<p>Setting up Flux to control the Kubernetes cluster
+Starting the system
+Configuring Flux</p>
+<p>Configuring GitHub
+Forking the GitHub repo
+Adding a deploy key
+Syncing Flux</p>
+<p>Making a Kubernetes cluster change through GitHub
+Working in production
+Creating structure
+Using GitHub features
+Working with tags</p>
+<h2 id="chapter-9-managing-workflows">Chapter 9: Managing Workflows</h2>
+<p>Understanding the life cycle of a feature
+Features that affect multiple microservices
+Implementing a feature</p>
+<p>Reviewing and approving a new feature
+Reviewing feature code
+Approving releases</p>
+<p>Setting up multiple environments
+Scaling the workflow and making it work
+Reviewing and approving is done by the whole team
+Understanding that not every approval is the same
+Defining a clear path for releases
+Emergency releases
+Releasing frequently and adding feature flags
+Using feature flags
+Dealing with database migrations</p>
+<h2 id="chapter-10-monitoring-logs-and-metrics">Chapter 10: Monitoring Logs and Metrics</h2>
+<p>Technical requirements
+Observability of a live system
+Understanding logs
+Understanding metrics</p>
+<p>Setting up logs
+Setting up an rsyslog container
+Defining the syslog pod
+log-volume
+syslog container
+The front rail container
+Allowing external access
+Sending logs
+Generating application logs
+Dictionary configuration
+Logging a request ID
+Logging each request
+Searching through all the logs
+Detecting problems through logs
+Detecting expected errors
+Capturing unexpected errors
+Logging strategy
+Adding logs while developing</p>
+<p>Setting up metrics
+Defining metrics for the Thoughts Backend
+Adding custom metrics
+Collecting the metrics
+Plotting graphs and dashboards
+Grafana UI
+Querying Prometheus
+Updating dashboards</p>
+<p>Being proactive
+Alerting
+Being prepared</p>
+<h2 id="chapter-11-handling-change-dependencies-and-secrets-in-the-system">Chapter 11: Handling Change, Dependencies, and Secrets in the System</h2>
+<p>Technical requirements
+Understanding shared configurations across microservices
+Adding the ConfigMap file
+Using kubectl commands
+Adding ConfigMap to the deployment
+Thoughts Backend ConfigMap configuration
+Users Backend ConfigMap configuration
+Frontend ConfigMap configuration</p>
+<p>Handling Kubernetes secrets
+Storing secrets in Kubernetes
+Creating the secrets
+Storing the secrets in the cluster
+Secret deployment configuration
+Retrieving the secrets by the applications</p>
+<p>Defining a new feature affecting multiple services
+Deploying one change at a time
+Rolling back the microservices</p>
+<p>Dealing with service dependencies
+Versioning the services
+Semantic versioning
+Adding a version endpoint
+Obtaining the version
+Storing the version in the image
+Implementing the version endpoint
+Checking the version
+Required version
+The main function
+Checking the version</p>
+<h2 id="chapter-12-collaborating-and-communicating-across-teams">Chapter 12: Collaborating and Communicating across Teams</h2>
+<p>Keeping a consistent architectural vision
+Dividing the workload and Conway&rsquo;s Law
+Describing Conway&rsquo;s Law
+Dividing the software into different kinds of software units
+Designing working structures
+Structuring teams around technologies
+Structuring teams around domains
+Structuring teams around customers
+Structuring teams around a mix</p>
+<p>Balancing new features and maintenance
+Regular maintenance
+Understanding technical debt
+Continuously addressing technical debt
+Avoiding technical debt</p>
+<p>Designing a broader release process
+Planning in the weekly release meeting
+Reflecting on release problems
+Running post-mortem meetings</p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2021-03-19
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://www.yezheng.pro/tags/microservices/">microservices</a>
+          <a href="http://www.yezheng.pro/tags/docker/">docker</a>
+          <a href="http://www.yezheng.pro/tags/kubernetes/">kubernetes</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/specialization/systems/data-management-and-data-systems/cs145/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">Data Management and Data Systems</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/specialization/web-application/microservices/python/">
+            <span class="next-text nav-default">microservices with python</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://www.yezheng.pro/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2021
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

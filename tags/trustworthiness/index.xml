@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trustworthiness on Ye Zheng&#39;s Blog</title>
+    <link>http://www.yezheng.pro/tags/trustworthiness/</link>
+    <description>Recent content in Trustworthiness on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 21 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/trustworthiness/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trustworthiness</title>
+      <link>http://www.yezheng.pro/post/specialization/security/trustworthiness/</link>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/security/trustworthiness/</guid>
+      <description> High availability  High availability cluster  redundant, eliminate single points do failure Heartbeat, monitor the healthy and status of each node in the cluster. node configuration:  active / active active / passive N + 1   failover strategies     High reliability  availability  service high availability Database high availability   backup  backup everyday   Data recovery  disaster recovery planning     privacy  data masking   Security Resilience Safety  </description>
+    </item>
+    
+  </channel>
+</rss>

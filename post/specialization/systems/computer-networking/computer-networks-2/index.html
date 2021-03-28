@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Application Layer - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="Principles of Network Applications 研究网络应用程序的核心是写出能够运行在不同的端系统和通过网络彼此通信的程序。不需要写在网络核心设备如路由器或链路层交换机上运行的软件" />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.81.0" />
+
+
+<link rel="canonical" href="http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-2/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.61b9e7bcbd6f12a4e9f5db11b9643a2092aa9c93ca136cf497edd5e0f3efca61.css" integrity="sha256-YbnnvL1vEqTp9dsRuWQ6IJKqnJPKE2z0l&#43;3V4PPvymE=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="Application Layer" />
+<meta property="og:description" content="Principles of Network Applications 研究网络应用程序的核心是写出能够运行在不同的端系统和通过网络彼此通信的程序。不需要写在网络核心设备如路由器或链路层交换机上运行的软件" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-2/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-03-06T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-03-06T00:00:00&#43;00:00" />
+
+<meta itemprop="name" content="Application Layer">
+<meta itemprop="description" content="Principles of Network Applications 研究网络应用程序的核心是写出能够运行在不同的端系统和通过网络彼此通信的程序。不需要写在网络核心设备如路由器或链路层交换机上运行的软件"><meta itemprop="datePublished" content="2021-03-06T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-03-06T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="12002">
+<meta itemprop="keywords" content="computer-networking,http," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Application Layer"/>
+<meta name="twitter:description" content="Principles of Network Applications 研究网络应用程序的核心是写出能够运行在不同的端系统和通过网络彼此通信的程序。不需要写在网络核心设备如路由器或链路层交换机上运行的软件"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Application Layer</h1>
+      
+      <div class="post-meta">
+        <time datetime="2021-03-06" class="post-time">
+          2021-03-06
+        </time>
+        <div class="post-category">
+            <a href="http://www.yezheng.pro/categories/systems/"> systems </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#principles-of-network-applications">Principles of Network Applications</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#the-web-and-http">The Web and HTTP</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#dnsthe-internets-directory-service">DNS–The Internet’s Directory Service</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#peer-to-peer-applications">Peer-to-Peer Applications</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#socket-programming-creating-network-applications">Socket Programming: Creating Network Applications</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#socket-programming-assignments">Socket Programming Assignments</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#wireshark-lab-http">Wireshark Lab: HTTP</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#wireshark-lab-dns">Wireshark Lab: DNS</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h2 id="principles-of-network-applications">Principles of Network Applications</h2>
+<p>研究网络应用程序的核心是写出能够运行在不同的端系统和通过网络彼此通信的程序。不需要写在网络核心设备如路由器或链路层交换机上运行的软件。</p>
+<h4 id="network-application-architectures">Network Application Architectures</h4>
+<ul>
+<li>在**客户-服务器体系结构 (client-server architecture)**中，有一个总是打开的主机称为服务器，它服务于来自许多其他称为客户的主机的请求。著名的应用程序包括Web、FTP、Telnet和电子邮件。</li>
+<li>在一个<strong>P2P体系结构(P2P architecture)<strong>中,对位于数据中心的专用服务器有最小的(或者没有)依赖。相反，应用程序在间断连接的主机对之间使用直接通信，这些主机对被称为</strong>对等方</strong>。这些应用包括文件共享（例如BitTorrent）、对等放协助下载加速器（如迅雷）、因特网电话（例如Skype）和IPTV（如迅雷看看）。</li>
+</ul>
+<h4 id="processes-communicating">Processes Communicating</h4>
+<p>在操作系统术语中，进行通信的实际上是<strong>进程（process）</strong>。一个进程可以被认为是运行在端系统中的一个程序。当程序运行在相同的端系统上时，它们使用进程间通信机制相互通信。在不同端系统上的进程，通过跨越计算机网络交换报文（message）而相互通信。</p>
+<h6 id="客户与服务器进程">客户与服务器进程</h6>
+<p>在一对进程之间的通信会话场景中，发起通信(即在该会话开始时发起与其他进程的联系)的进程被标识为客户（client），在会话开始时等待联系的进程是服务器（server）。</p>
+<h6 id="进程与计算机网络之间的接口">进程与计算机网络之间的接口</h6>
+<p>进程通过一个称为**套接字(socket)**的软件接口向网络发送报文和从网络接收报文。应用程序可以控制套接字在应用层端的一切，但是对该套接字的运输层几片没有控制权。除选择运输层协议与设定几个运输层参数，如最大缓存和最大报文段长度等。</p>
+<h6 id="进程寻址">进程寻址</h6>
+<p>为了标识接受进程的地址，需要定义两种信息，主机的地址和定义在目的主机中的接收进程的标识符。主机友IP地址（IP address）标识。目的地端口号标识进程。</p>
+<p>Web服务器用端口号80来标识，邮件服务器进程(使用SMTP协议)用端口号25来标识。</p>
+<h4 id="transport-services-available-to-applications">Transport Services Available to Applications</h4>
+<p>一个运输层协议能够为调用它的应用程序提供什么样的服务呢？从四个方面对应用程序服务要求进行分类：可靠数据传输、吞吐量、定时、安全性.</p>
+<h4 id="transport-services-provided-by-the-internet">Transport Services Provided by the Internet</h4>
+<ul>
+<li>
+<p>TCP服务</p>
+<p>TCP服务模型包括<strong>面向连接服务</strong>和<strong>可靠数据传输</strong>服务，TCP还提供<strong>拥塞控制</strong>机制</p>
+<ul>
+<li>面向连接：客户机/服务器进程间需建立连接。握手过程提示客户和服务器，使它们为大量分组的到来做好准备。在握手阶段后，一个TCP连接（TCP connection）就在两个进程的套接字之间建立了。这条连接是全双工的，即连接双方的进程可以在此连接上同时进行报文收发。</li>
+<li>可靠的传输：通信进程能够依靠TCP，无差错、按适当顺序交付所有发送的数据。</li>
+</ul>
+</li>
+<li>
+<p>UDP服务</p>
+</li>
+</ul>
+<p>　　UDP是一种不提供不需要服务的轻量级运输协议，无连接：它不需在两主机间建立连接，提供<strong>不可靠的数据传输</strong>，UDP协议并不保证该报文将到达接收进程。不仅如此，到达接收进程的报文也可能是乱序到达的。没有包括拥塞控制机制。</p>
+<ul>
+<li>因特网运输协议所不提供的服务</li>
+</ul>
+<p>无论TCP还是UDP都没有提供任何加密机制，TCP的加强版本称为<strong>安全套接字层（Secure Sockets Layer, SSL）</strong>，包括加密、数据完整性和端点鉴别。SSL不是与TCP和UDP在相同层次上的第三种运输协议，**是在应用层上实现的强化。**如果一个应用要使用SSL的服务，需要在该应用程序的客户端和服务端包括SSL代码（利用现有的、高度优化的库和类）。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-a62b18a6ceee21254425f68cba7496f5_1440w.jpg" alt=""></p>
+<h4 id="application-layer-protocols">Application-Layer Protocols</h4>
+<p>应用层协议(application-layer protocol)定义了运行在不同 端系统上的应用程序进程如何相互传递报文</p>
+<ul>
+<li>公开协议：由RFC定义，Web的应用层协议是HTTP,它定义了在浏览器和Web服务器之间传输的报文格式和序列。用于电子邮件的主要应用层协议就是SMTP</li>
+<li>私有协议：多数P2P文件共享应用</li>
+</ul>
+<h2 id="the-web-and-http">The Web and HTTP</h2>
+<h4 id="overview-of-http">Overview of HTTP</h4>
+<p>Web的应用层协议是<strong>超文本传输协议(HyperText Transfer Protocol, HTTP)</strong>,它是Web 的核心，在[RFC 1945]和[RFC 2616]中进行了定义。</p>
+<ul>
+<li>web页面=多个对象组成（对象只是一个文件，如一个html文件，一个图形，一个java小程序或一个视频）。每个对象通过一个对应的URL寻址。</li>
+<li>HTTP使用TCP作为它的支撑运输协议。</li>
+<li>HTTP客户首先发起一个与服务器的TCP连接。一旦连接建立，该浏览器和服务器进程就可以通过套接字接口访问TCP 。</li>
+<li>一旦客户向它的套接字接口发送了一个请求报文，该报文就脱离了客户控制并进入TCP的控制。 因为TCP协议，一个客户进程发出的每个HTTP请求报文最终能完整地到达服务器</li>
+<li>HTTP服务器并不保存关于客户的任何信息，所以我们说HTTP是一个无状态协议(stateless protocol)</li>
+</ul>
+<h4 id="non-persistent-and-persistent-connections">Non-Persistent and Persistent Connections</h4>
+<p>每个请求/响应对是经一个单独的TCP连接发送，还是所有的请求及其响应经相同的TCP连接发送呢?采用前一种方法，该应用程序被称为使用非持续连接(non-persistent connection); 采用后一种方法，该应用程序被称为使用持续连接(persistent connection) 。</p>
+<p>使用持续连接或非持续连接是由应用层决定的（HTTP默认使用的是持续连接）</p>
+<h6 id="采用非持续连接的http">采用非持续连接的HTTP</h6>
+<p>每个TCP连接只传输一个请求报文和一个响应报文。每次服务器发送响应报文后，会通知该TCP断开该TCP连接。HTTP客户接收响应报文，TCP连接关闭。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-7172e4c449549b0887fe70294748815e_1440w.jpg" alt=""></p>
+<p>客户向服务器发送一个TCP报文段，服务器用TCP报文段做出响应，客户向服务器返回确认。三次握手中前两个部分所耗费时间占一个RTT。完成了三次握手的前两部分后，客户结合三次握手的第三部分(确认)向该TCP连接发送一个请求报文。一旦请求报文到达服务器，服务器就在服务器就在该TCP连接上发送 HTML文件。TCP三次握手以及时间分析，总计两个往返时间RTT（Round-Trip Time, RTT）+服务器传输Html文件的时间。因此非持续连接是非常低效率的。</p>
+<p>非持续连接的两个缺点：</p>
+<ul>
+<li>要为每个请求的对象建立一个连接，对于每个连接，客户和服务器中都要分配TCP缓冲区和保持TCP变量，给服务器带来严重负担；</li>
+<li>每个对象都要遭受两倍RTT的交付时延，一个RTT用来创建TCP，另一个RTT用来请求和接受一个对象。</li>
+</ul>
+<h6 id="采用持续连接的http">采用持续连接的HTTP</h6>
+<p>服务器在发送响应之后保持该TCP连接打开。因此，位于同一台服务器的多个Web页面都可以在单个TCP上进行传输。请求可以一个接一个地发而不必等待未决请求的回答（流水线）。如果一条连接经过一定时间间隔（一个可配置的超时间隔）仍未被使用，HTTP服务器就关闭该连接。</p>
+<p>HTTTP的默认模式是使用带流水线的持续连接。</p>
+<h4 id="http-message-format">HTTP Message Format</h4>
+<h6 id="http请求报文">HTTP请求报文</h6>
+<p>一个典型的http请求报文：</p>
+<pre><code>GET /somedir/page.html HTTP/1.1
+Host: www.hans941.tk
+Connection: close
+User-agent: Chrome/57.0
+Accept-language: ch
+</code></pre><p>Host首部行是Web代理高速缓存所要求的。Connection:close高速浏览器不希望使用持续连接，服务器发送完请求对象后就关闭连接。</p>
+<p>User-agent服务器可以为不同类型的用户发送相同对象的不同的版本。</p>
+<p>下图是请求报文的通用格式</p>
+<p><strong><img src="https://img2018.cnblogs.com/blog/226988/201905/226988-20190525102530882-1860346972.jpg" alt=""></strong></p>
+<p>首部行后面的 实体体(Entity body),在使用 POST 方法时存储用户提交的表单。</p>
+<h6 id="http响应报文">HTTP响应报文</h6>
+<p>http响应报文由三部分组成：一个初始状态行（status line），之后有6个首部行（header line），然后是实体体（entity body）</p>
+<pre><code>HTTP/1.1 200 OK
+Connection: close
+Date: Tue, 09 Aug 2011 15:44:04 GMT
+Server: Apache/2.2.3 (CentOS)
+Last-Modified: Tue, 09 Aug 2011 15:11:03 GMT
+Content-Length: 6821
+Content-Type: text/html
+
+(data data data data data ......)
+</code></pre><p>服务器永Connection: close首部行高速客户，发送完报文后就关闭该TCP连接。Date首部行指的是服务器从文件系统中检索到对象，插入响应报文的时间，而不是对象创建或最后修改的时间。</p>
+<p><strong>Last-Modified首部行指示了对象创建或者最后修改的日期和时间，对既可能在本地客户也可能在网络缓存服务器上的对象缓存来说非常重要。</strong></p>
+<p>一个HTTP响应报文的通用格式</p>
+<p><img src="https://img2018.cnblogs.com/blog/226988/201905/226988-20190525103019639-986868984.jpg" alt="img"></p>
+<p>常见状态码：</p>
+<ul>
+<li>200 OK</li>
+<li>301 Moved Permanently</li>
+<li>400 Bad Request</li>
+<li>404 Not Found</li>
+<li>505 HTTP Version Not Supported</li>
+</ul>
+<h4 id="user-server-interaction-cookies">User-Server Interaction: Cookies</h4>
+<p>HTTP服务器是无状态化的，这简化了服务器的设计，这让工程师可以去开发能同时处理大量数据的高性能服务器。但是有时Web站点希望能去识别用户，为此HTTP使用了cookie来进行用户跟踪。</p>
+<p>　　cookie技术有4个组件：</p>
+<ul>
+<li>在 HTTP 响应报文中的一个 cookie 首部行；</li>
+<li>在 HTTP 请求报文中的一个 cookie 首部行；</li>
+<li>在用户端系统中保留有一个 cookie 文件，并由用户的浏览器进行管理；</li>
+<li>位于 Web 站点的一个后端数据库。</li>
+</ul>
+<p>　　<img src="https://img2018.cnblogs.com/blog/226988/201905/226988-20190525103608022-1309036437.jpg" alt="img"></p>
+<p>cookie可以用于标识一个用户，cookie可以在无状态的HTTP之上建立一个用户会话层。</p>
+<p>站点不必知道用户身份，可以记录按什么顺序，在什么时间，访问了哪些页面。能够根据过去访问的网页对用户推荐产品。</p>
+<h4 id="web-caching">Web Caching</h4>
+<p>Web缓存器(Web cache)也叫代理服务器(proxy server)，它是能够代表初始Web服务器来满足HTTP请求的网络实体.Web缓存器有自己的磁盘存储空间，并在存储空间中保存最近请求过的对象的副本。</p>
+<p>客户对过Web缓存器请求对象:</p>
+<p>　　<img src="https://img2018.cnblogs.com/blog/226988/201905/226988-20190525104346988-822885012.jpg" alt="img"></p>
+<ol>
+<li>浏览器建立一个到Web缓存器的TCP连接，并向Web缓存器中的对象发送一个HTTP请求。</li>
+<li>Web缓存器进行检查，看看本地是否缓存了该对象副本。如果有，Web缓存器就向客户浏览器用HTTP响应报文返回该对象。</li>
+<li>如果web缓存器没有该对象，就打开一个与该对象的初始服务器的TCP连接，Web缓存器向初始服务器的TCP连接上发送一个HTTP请求。</li>
+<li>Web缓存器收到该对象，本地存储空间存储副本，并向客户浏览器利用现有TCP连接发送HTTP响应包含该副本</li>
+</ol>
+<p>Web缓存器既是服务器又是客户。当它接收浏览器的请求并发回响应 时，它是一个服务器。当它向初始服务器发出请求并接收响应时，它是一个客户。</p>
+<p>Web缓存器通常由ISP购买并安装。Web缓存器可以减少成本，降低响应时间。</p>
+<p>通过使用内容分发网络（Content Distribution Network, CDN），Web缓存服务器正在因特网中发挥着越来越重要的作用。</p>
+<h4 id="the-conditional-get">The Conditional GET</h4>
+<p>那么Web缓存器什么时候才会去刷新缓存下来的页面，以保存提供给客户是最新的对象呢？</p>
+<p>HTTP协议有一处机制&mdash;&ndash;条件GET(conditional GET)方法。</p>
+<p>若同时满足以下两点的则称为 条件 GET 方法：</p>
+<ul>
+<li>
+<p>请求报文使用 GET 方法。</p>
+</li>
+<li>
+<p>请求报文中包含一个 <strong>If-Modified-Since</strong>: 首部行。</p>
+</li>
+</ul>
+<p>原始服务器向Web缓存器中返回HTTP响应时包含<strong>Last-Modified</strong>首部行，缓存器在存储该对象的同事也存储了最后修改日期。</p>
+<p>Web缓存器向原始Web服务器发送请求：</p>
+<pre><code>GET / HTTP/1.1
+Host: www.sina.com.cn:80
+If-Modified-Since:Thu, 4 Feb 2010 20:39:13 GMT
+Connection: Close
+</code></pre><p>Web服务器向缓存器发送一个响应报文</p>
+<pre><code>HTTP/1.0 304 Not Modified
+Date: Thu, 04 Feb 2010 12:38:41 GMT
+
+(empty entity body)
+</code></pre><p>&ldquo;Not Modified&rdquo;，没有在响应报文中包含所请求的对象，高速缓存器可以使用该对象，向请求浏览器转发代理缓存器缓存的对象副本。</p>
+<h2 id="dnsthe-internets-directory-service">DNS–The Internet’s Directory Service</h2>
+<h4 id="services-provided-by-dns">Services Provided by DNS</h4>
+<h4 id="overview-of-how-dns-works">Overview of How DNS Works</h4>
+<h4 id="dns-records-and-messages">DNS Records and Messages</h4>
+<h2 id="peer-to-peer-applications">Peer-to-Peer Applications</h2>
+<h4 id="p2p-file-distribution">P2P File Distribution</h4>
+<h4 id="distributed-hash-tables-dhts">Distributed Hash Tables (DHTs)</h4>
+<h4 id="case-study-p2p-internet-telephony-with-skype">Case Study: P2P Internet Telephony with Skype</h4>
+<h2 id="socket-programming-creating-network-applications">Socket Programming: Creating Network Applications</h2>
+<p>网络应用程序有两类。<strong>一类是实现在协议标准</strong>（如一个RFC或某种其他标准文档）<strong>中所定义的操作；这样的应用程序又称为“开放”的</strong>，因为定义其操作的这些规则人所共知。对于这样的实现，客户程序和服务器程序必须遵守由该RFC所规定的规则。如果一个开发者编写客户程序的代码，另一个开发者编写服务器程序的代码，并且两者都完全遵从该RFC的各种规则，那么这两个程序将能够交互操作。</p>
+<p>另一类网络应用程序是<strong>专用的网络应用程序</strong>。在这种情况下，由客户和服务器程序应用的应用层协议没有公开发布在某RFC中或其他地方。某单独的开发者（或开发团队）创建了客户和服务器程序，并且该开发者用他的代码完全控制程序的功能。但是因为这些代码并没有实现一个开放的协议，其他独立的开发者将不能开发出和该应用程序交互的代码。</p>
+<p>在研发阶段，开发者必须最先做的一个决定是，应用程序是运行在TCP上还是运行在UDP上。前面讲过TCP是面向连接的，并且为两个端系统之间的数据流动提供可靠的字节流通道。UDP是无连接的，从一个端系统向另一个端系统发送独立的数据分组，不对交付提供任何保证。前面也讲过当客户或服务器程序<strong>实现了一个由某RFC定义的协议，它应当使用与该协议关联的周知端口号</strong>；与之相反，<strong>当研发一个专用应用程序，研发者必须注意避免使用这样的周知端口号</strong>。</p>
+<h4 id="socket-programming-with-udp">Socket Programming with UDP</h4>
+<p>应用程序开发者在套接字的应用层一侧可以控制所有东西；然而，它几乎无法控制运输层一侧。</p>
+<p>在发送进程能够将数据分组推出套接字之门之前，当使用UDP时，必须先将目的地址附在该分组之上。在该分组传过发送方的套接字之后，因特网将使用该目的地址通过因特网为该分组选路到接收进程的套接字。当分组到达接收套接字时，接收进程将通过该套接字取回分组，进而检查分组的内容并采取适当的动作。</p>
+<p>当生成一个套接字时，就为它分配一个称为端口号（port number）的标识符。因此，如你所期待的，分组的目的地址也包括该套接字的端口号。</p>
+<p>归纳起来，<strong>发送进程为分组附上的目的地址是由目的主机的IP地址和目的地套接字的端口号组成的</strong>。此外，如我们很快将看到的那样，发送方的源地址也是由源主机的IP地址和源套接字的端口号组成，该源地址也要附在分组之上。然而，将源地址附在分组之上通常并不是由UDP应用程序代码所为，而是由底层操作系统自动完成的。</p>
+<p>下显示了客户和服务器的主要与套接字相关的活动，两者通过UDP运输服务进行通信。</p>
+<p><img src="https://yqfile.alicdn.com/f3a0f4417d3d8aa377ee4f987f52623a4031c0fc.png" alt="image"></p>
+<p>客户程序被称为UDPClient.py，服务器程序被称为UDPServer.py。为了强调关键问题，我们有意提供最少的代码。“好代码”无疑将具有一些更为辅助性的代码行，特别是用于处理出现差错的情况。</p>
+<h6 id="udpclientpy">UDPClient.py</h6>
+<p>下面是该应用程序客户端的代码：</p>
+<pre><code>from socket import *
+
+# 服务器的P地址（如“128.138.32.126”）或者服务器的主机名（如“cis.poly.edu”）的字符串, 如果我们使用主机名，则将自动执行DNS lookup从而得到IP地址
+serverName = ‘hostname’                                           
+serverPort = 12000 
+
+# 创建了客户的套接字，第一个参数指示了地址簇；特别是，AF_INET指示了底层网络使用了IPv4。
+# 第二个参数指示了该套接字是SOCK_DGRAM类型的，这意味着它是一个UDP套接字
+# 没有指定客户套接字的端口号,操作系统会设置
+clientSocket = socket(AF_INET, SOCK_DGRAM) 
+
+message = raw_input(’Input lowercase sentence:’) 
+
+# 为报文附上目的地址，并且向进程的套接字clientSocket发送结果分组
+# 源地址也附到分组上，尽管这是自动完成的，而不是显式地由代码完成的。
+clientSocket.sendto(message.encode(),(serverName, serverPort)) 
+
+# 方法recvfrom也取缓存长度2048作为输入
+modifiedMessage, serverAddress = clientSocket.recvfrom(2048) 
+
+print modifiedMessage.decode() 
+
+# 关闭套接字
+clientSocket.close()
+</code></pre><h6 id="udpserverpy">UDPServer.py</h6>
+<p>现在来看看这个应用程序的服务器端：</p>
+<pre><code>from socket import * 
+
+serverPort = 12000 
+
+# 创建套接字类型SOCK_DGRAM（一种UDP套接字）
+serverSocket = socket(AF_INET, SOCK_DGRAM) 
+
+# 将端口号12000与个服务器的套接字绑定（即分配）在一起,代码显式地为该套接字分配一个端口号
+serverSocket.bind(('', serverPort)) 
+
+print (“The server is ready to receive”) 
+
+while True: 
+    # 当某分组到达该服务器的套接字时，该分组的数据被放置到变量message中，其源地址被放置到变量clientAddress中。
+	message, clientAddress = serverSocket.recvfrom(2048) 
+	modifiedMessage = message.decode().upper() 
+	# UDPServer将利用该源地址信息返回
+	# 将该客户的地址（IP地址和端口号）附到大写报文上，并将所得的分组发送到服务器的套接字中。
+	# 服务器地址也附在分组上，尽管这是自动而不是显式地由代码完成的。
+	serverSocket.sendto(modifiedMessage.encode(), clientAddress)
+</code></pre><p>为了测试这对程序，在服务器主机上执行编译的服务器程序UDPServer.py。这在服务器上创建了一个进程，等待着某个客户与之联系。然后，保证在UDPClient.py中包括适当的服务器主机名或IP地址，在客户主机上执行编译的客户器程序UDPClient.py。这在客户上创建了一个进程。最后，在客户上使用应用程序，键入一个句子并以回车结束。</p>
+<h4 id="socket-programming-with-tcp">Socket Programming with TCP</h4>
+<p>与UDP不同，TCP是一个面向连接的协议。这意味着在客户和服务器能够开始互相发送数据之前，它们先要握手和创建一个TCP连接。TCP连接的一端与客户套接字相联系，另一端与服务器套接字相联系。当创建该TCP连接时，我们将其与客户套接字地址（IP地址和端口号）和服务器套接字地址（IP地址和端口号）关联起来。使用创建的TCP连接，当一侧要向另一侧发送数据时，它只需经过其套接字将数据丢给TCP连接。这与UDP不同，UDP服务器在将分组丢进套接字之前必须为其附上一个目的地地址。
+现在我们仔细观察一下TCP中客户程序和服务器程序的交互。客户具有向服务器发起接触的任务。服务器为了能够对客户的初始接触做出反应，服务器必须已经准备好。这意味着两件事。第一，与在UDP中的情况一样，TCP服务器在客户试图发起接触前必须作为进程运行起来。第二，服务器程序必须具有一扇特殊的门，更精确地说是一个特殊的套接字，该门欢迎来自运行在任意主机上的客户进程的某些初始接触。使用房子/门来比喻进程/套接字，有时我们将客户的初始接触称为“敲欢迎之门”。
+随着服务器进程的运行，客户进程能够向服务器发起一个TCP连接。这是由客户程序通过创建一个TCP套接字完成的。当该客户生成其TCP套接字时，它指定了服务器中的欢迎套接字的地址，即服务器主机的IP地址及其套接字的端口号。生成其套接字后，该客户发起了一个三次握手并创建与服务器的一个TCP连接。发生在运输层的三次握手，对于客户和服务器程序是完全透明的。
+在三次握手期间，客户进程敲服务器进程的欢迎之门。当该服务器“听”到敲门时，它将生成一扇新门（更精确地讲是一个新套接字），它专门用于特定的客户。在我们下面的例子中，欢迎之门是一个我们称为serverSocket的TCP套接字对象；它专门对客户进行连接的新生成的套接字，称为连接套接字（connection Socket）。初次遇到TCP套接字的学生有时会混淆欢迎套接字（这是所有要与服务器通信的客户的起始接触点）和每个新生成的服务器侧的连接套接字（这是随后为与每个客户通信而生成的套接字）。
+从应用程序的观点来看，客户套接字和服务器连接套接字直接通过一根管道连接。如图2-29所示，客户进程可以向它的套接字发送任意字节，并且TCP保证服务器进程能够按发送的顺序接收（通过连接套接字）每个字节。TCP因此在客户和服务器进程之间提供了可靠服务。此外，就像人们可以从同一扇门进和出一样，客户进程不仅能向它的套接字发送字节，也能从中接收字节；类似地，服务器进程不仅从它的连接套接字接收字节，也能向其发送字节。</p>
+<p><img src="https://yqfile.alicdn.com/449d86f1fb6c99e9dda16b5e075cf1e77ec2289a.png" alt="image"></p>
+<p>下图显示了客户和服务器的主要与套接字相关的活动，两者通过TCP运输服务进行通信。</p>
+<p><img src="https://yqfile.alicdn.com/4054507a62b63bc6c0ce7c4ac9496aa6979190b6.png" alt="image"></p>
+<h6 id="tcpclientpy">TCPClient.py</h6>
+<p>这里给出了应用程序客户端的代码：</p>
+<pre><code>from socket import * 
+
+serverName = ’servername’ 
+serverPort = 12000 
+
+# 第一个参数仍指示底层网络使用的是IPv4。第二个参数指示该套接字是SOCK_STREAM类型。这表明它是一个TCP套接字（而不是一个UDP套接字）
+# 创建该客户套接字时仍未指定其端口号；操作系统会自动附上端口号
+clientSocket = socket(AF_INET, SOCK_STREAM) 
+
+# 前面讲过在客户能够使用一个TCP套接字向服务器发送数据之前（反之亦然），必须在客户与服务器之间创建一个TCP连接。
+# 这行发起了客户和服务器之间的这条TCP连接。这行代码执行完后，执行三次握手，并在客户和服务器之间创建起一条TCP连接。
+clientSocket.connect((serverName,serverPort)) 
+
+sentence = raw_input(‘Input lowercase sentence:’) 
+
+# 该程序并未显式地创建一个分组并为该分组附上目的地址，而使用UDP套接字却要那样做。客户程序只是将字符串sentence中的字节放入该TCP连接中去。
+clientSocket.send(sentence.encode()) 
+
+# 等待接收来自服务器的字节，字符继续积累在modifiedSentence中，直到收到回车符才会结束该行。
+modifiedSentence = clientSocket.recv(1024) 
+
+print(‘From Server:’, modifiedSentence.decode()) 
+
+# 关闭客户的套接字，因此关闭了客户和服务器之间的TCP连接。它引起客户中的TCP向服务器中的TCP发送一条TCP报文
+clientSocket.close()
+</code></pre><h6 id="tcpserverpy">TCPServer.py</h6>
+<p>现在我们看一下服务器程序</p>
+<pre><code>from socket import * 
+
+serverPort = 12000 
+
+# 服务器创建一个TCP套接字
+serverSocket = socket(AF_INET,SOCK_STREAM) 
+
+# 将服务器的端口号serverPort与该套接字关联起来
+serverSocket.bind((‘’,serverPort)) 
+
+# 但对TCP而言，serverSocket将是我们的欢迎套接字
+# 该行让服务器聆听来自客户的TCP连接请求。其中参数定义了请求连接的最大数（至少为1）
+serverSocket.listen(1) 
+
+print ‘The server is ready to receive’ 
+
+while True: 
+    # 当客户敲该门时，程序为serverSocket调用accept()，这在服务器中创建了一个称为connectionSocket的新套接字，由这个特定的客户专用。
+    # 客户和服务器则完成了握手，在客户的clientSocket和服务器的serverSocket之间创建了一个TCP连接。
+    connectionSocket, addr = serverSocket.accept() 
+    
+    # 借助于创建的TCP连接，客户与服务器现在能够通过该连接相互发送字节。
+    sentence = connectionSocket.recv(1024).decode() 
+    
+    capitalizedSentence = sentence.upper() 
+    
+    # 使用TCP，从一侧发送的所有字节不仅确保到达另一侧，而且确保按序到达。
+    connectionSocket.send(capitalizedSentence)
+    
+    # 关闭了该连接套接字,但由于serverSocket保持打开，所以另一个客户此时能够敲门并向该服务器发送一个句子要求修改。
+    connectionSocket.close()
+</code></pre><p>在两台单独的主机上运行这两个程序，也可以修改它们以达到稍微不同的目的。你应当将前面两个UDP程序与这两个TCP程序进行比较，观察它们的不同之处。</p>
+<h2 id="socket-programming-assignments">Socket Programming Assignments</h2>
+<p>The companion Web site includes six socket programming assignments. The first four assignments are summarized below. The fifth assignment makes use of the ICMP protocol and is summarized at the end of Chapter 4. The sixth assignment employs multimedia protocols and is summarized at the end of Chapter 7. It is highly recommended that students complete several, if not all, of these assignments.  Students can find full details of these assignments, as well as important snippets of the Python code, at the Web site <a href="http://www.awl.com/kurose-ross">http://www.awl.com/kurose-ross</a>.</p>
+<h4 id="assignment-1-web-server">Assignment 1: Web Server</h4>
+<p>In this assignment, you will develop a simple Web server in Python that is capable of processing only one request. Specifically, your Web server will (i) create a con- nection socket when contacted by a client (browser); (ii) receive the HTTP request from this connection; (iii) parse the request to determine the specific file being requested; (iv) get the requested file from the server’s file system; (v) create an HTTP response message consisting of the requested file preceded by header lines; and (vi) send the response over the TCP connection to the requesting browser. If a browser requests a file that is not present in your server, your server should return a “404 Not Found” error message.</p>
+<p>In the companion Web site, we provide the skeleton code for your server. Your job is to complete the code, run your server, and then test your server by sending requests from browsers running on different hosts. If you run your server on a host that already has a Web server running on it, then you should use a different port than port 80 for your Web server.</p>
+<h4 id="assignment-2-udp-pinger">Assignment 2: UDP Pinger</h4>
+<p>In this programming assignment, you will write a client ping program in Python.  Your client will send a simple ping message to a server, receive a corresponding pong message back from the server, and determine the delay between when the client sent the ping message and received the pong message. This delay is called the Round Trip Time (RTT). The functionality provided by the client and server is similar to the functionality provided by standard ping program available in modern operating systems. However, standard ping programs use the Internet Control Mes- sage Protocol (ICMP) (which we will study in Chapter 4). Here we will create a nonstandard (but simple!) UDP-based ping program.  Your ping program is to send 10 ping messages to the target server over UDP.  For each message, your client is to determine and print the RTT when the correspon- ding pong message is returned. Because UDP is an unreliable protocol, a packet sent by the client or server may be lost. For this reason, the client cannot wait indefinitely for a reply to a ping message. You should have the client wait up to one second for a reply from the server; if no reply is received, the client should assume that the packet was lost and print a message accordingly.</p>
+<p>In this assignment, you will be given the complete code for the server (avail- able in the companion Web site). Your job is to write the client code, which will be very similar to the server code. It is recommended that you first study carefully the server code. You can then write your client code, liberally cutting and pasting lines from the server code.</p>
+<h4 id="assignment-3-mail-client">Assignment 3: Mail Client</h4>
+<p>The goal of this programming assignment is to create a simple mail client that sends email to any recipient. Your client will need to establish a TCP connection with a mail server (e.g., a Google mail server), dialogue with the mail server using the SMTP protocol, send an email message to a recipient (e.g., your friend) via the mail server, and finally close the TCP connection with the mail server.</p>
+<p>For this assignment, the companion Web site provides the skeleton code for your client. Your job is to complete the code and test your client by sending email to different user accounts. You may also try sending through different servers (for example, through a Google mail server and through your university mail server).</p>
+<h4 id="assignment-4-multi-threaded-web-proxy">Assignment 4: Multi-Threaded Web Proxy</h4>
+<p>In this assignment, you will develop a Web proxy. When your proxy receives an HTTP request for an object from a browser, it generates a new HTTP request for the same object and sends it to the origin server. When the proxy receives the corresponding HTTP response with the object from the origin server, it creates a new HTTP response, including the object, and sends it to the client. This proxy will be multi-threaded, so that it will be able to handle multiple requests at the same time.</p>
+<p>For this assignment, the companion Web site provides the skeleton code for the proxy server. Your job is to complete the code, and then test it by having different browsers request Web objects via your proxy.</p>
+<h2 id="wireshark-lab-http">Wireshark Lab: HTTP</h2>
+<p>In this lab, we’ll explore several aspects of the HTTP protocol: <strong>the basic GET/response interaction</strong>, <strong>HTTP message formats</strong>, <strong>retrieving large HTML files</strong>, <strong>retrieving HTML files with embedded objects</strong>, and <strong>HTTP authentication and security</strong>.</p>
+<h4 id="the-basic-http-getresponse-interaction">The Basic HTTP GET/response interaction</h4>
+<p>Let’s begin our exploration of HTTP by downloading a very simple HTML file - one that is very short, and contains no embedded objects. Do the following:</p>
+<ol>
+<li>Start up your web browser.</li>
+<li>Start up the Wireshark packet sniffer, as described in the Introductory lab (but don’t yet begin packet capture). Enter “http” (just the letters, not the quotation marks) in the display-filter-specification window, so that only captured HTTP messages will be displayed later in the packet-listing window. (We’re only interested in the HTTP protocol here, and don’t want to see the clutter of all captured packets).</li>
+<li>Wait a bit more than one minute (we’ll see why shortly), and then begin Wireshark packet capture.</li>
+<li>Enter the following to your browser <a href="http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file1.html">http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file1.html</a> Your browser should display the very simple, one-line HTML file.</li>
+<li>Stop Wireshark packet capture.</li>
+</ol>
+<p>Your Wireshark window should look similar to the window shown in Figure 1. If you are unable to run Wireshark on a live network connection, you can download a packet trace that was created when the steps above were followed.</p>
+<p>Figure 1: Wireshark Display after <a href="http://gaia.cs.umass.edu/wireshark-labs/">http://gaia.cs.umass.edu/wireshark-labs/</a> HTTPwireshark-file1.html has been retrieved by your browser</p>
+<p>The example in Figure 1 shows in the packet-listing window that two HTTP messages were captured: the GET message (from your browser to the gaia.cs.umass.edu web server) and the response message from the server to your browser. The packet-contents window shows details of the selected message (in this case the HTTP OK message, which is highlighted in the packet-listing window). Recall that since the HTTP message was carried inside a TCP segment, which was carried inside an IP datagram, which was carried within an Ethernet frame, Wireshark displays the Frame, Ethernet, IP, and TCP packet information as well. We want to minimize the amount of non-HTTP data displayed (we’re interested in HTTP here, and will be investigating these other protocols is later labs), so make sure the boxes at the far left of the Frame, Ethernet, IP and TCP information have a plus sign or a right-pointing triangle (which means there is hidden, undisplayed information), and the HTTP line has a minus sign or a down-pointing triangle (which means that all information about the HTTP message is displayed).</p>
+<p>Download the zip file <a href="http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip">http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip</a> and extract the file http-ethereal-trace-1. The traces in this zip file were collected by Wireshark running on one of the author’s computers, while performing the steps indicated in the Wireshark lab. Once you have downloaded the trace, you can load it into Wireshark and view the trace using the File pull down menu, choosing Open, and then selecting the http-ethereal-trace-1 trace file. The resulting display should look similar to Figure 1. (The Wireshark user interface displays just a bit differently on different operating systems, and in different versions of Wireshark).</p>
+<p>(Note: You should ignore any HTTP GET and response for favicon.ico. If you see a reference to this file, it is your browser automatically asking the server if it (the server) has a small icon file that should be displayed next to the displayed URL in your browser. We’ll ignore references to this pesky file in this lab.).</p>
+<p>By looking at the information in the HTTP GET and response messages, answer the following questions. When answering the following questions, you should print out the GET and response messages (see the introductory Wireshark lab for an explanation of how to do this) and indicate where in the message you’ve found the information that answers the following questions. When you hand in your assignment, annotate the output so that it’s clear where in the output you’re getting the information for your answer (e.g., for our classes, we ask that students markup paper copies with a pen, or annotate electronic copies with text in a colored font).</p>
+<ol>
+<li>Is your browser running HTTP version 1.0 or 1.1? What version of HTTP is the server running?</li>
+<li>What languages (if any) does your browser indicate that it can accept to the server?</li>
+<li>What is the IP address of your computer? Of the gaia.cs.umass.edu server?</li>
+<li>What is the status code returned from the server to your browser?</li>
+<li>When was the HTML file that you are retrieving last modified at the server?R</li>
+<li>How many bytes of content are being returned to your browser?</li>
+<li>By inspecting the raw data in the packet content window, do you see any headers within the data that are not displayed in the packet-listing window? If so, name one.</li>
+</ol>
+<p>In your answer to question 5 above, you might have been surprised to find that the document you just retrieved was last modified within a minute before you downloaded the document. That’s because (for this particular file), the gaia.cs.umass.edu server is setting the file’s last-modified time to be the current time, and is doing so once per minute. Thus, if you wait a minute between accesses, the file will appear to have been recently modified, and hence your browser will download a “new” copy of the document.</p>
+<h4 id="the-http-conditional-getresponse-interaction">The HTTP CONDITIONAL GET/response interaction</h4>
+<p>Recall from Section 2.2.5 of the text, that most web browsers perform object caching and thus perform a conditional GET when retrieving an HTTP object. Before performing the steps below, make sure your browser’s cache is empty. (To do this under Firefox, select Tools-&gt;Clear Recent History and check the Cache box, or for Internet Explorer, select Tools-&gt;Internet Options-&gt;Delete File; these actions will remove cached files from your browser’s cache.) Now do the following:</p>
+<ul>
+<li>Start up your web browser, and make sure your browser’s cache is cleared, as discussed above.</li>
+<li>Start up the Wireshark packet sniffer</li>
+<li>Enter the following URL into your browser <a href="http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file2.html">http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file2.html</a> Your browser should display a very simple five-line HTML file.</li>
+<li>Quickly enter the same URL into your browser again (or simply select the refresh button on your browser)</li>
+<li>Stop Wireshark packet capture, and enter “http” in the display-filter-specification window, so that only captured HTTP messages will be displayed later in the packet-listing window.</li>
+<li>(Note: If you are unable to run Wireshark on a live network connection, you can use the http-ethereal-trace-2 packet trace to answer the questions below; see footnote 1. This trace file was gathered while performing the steps above on one of the author’s computers.)</li>
+</ul>
+<p>Answer the following questions:</p>
+<ol start="8">
+<li>Inspect the contents of the first HTTP GET request from your browser to the server. Do you see an “IF-MODIFIED-SINCE” line in the HTTP GET?</li>
+<li>Inspect the contents of the server response. Did the server explicitly return the contents of the file? How can you tell?</li>
+<li>Now inspect the contents of the second HTTP GET request from your browser to the server. Do you see an “IF-MODIFIED-SINCE:” line in the HTTP GET? If so, what information follows the “IF-MODIFIED-SINCE:” header?</li>
+<li>What is the HTTP status code and phrase returned from the server in response to this second HTTP GET? Did the server explicitly return the contents of the file? Explain.</li>
+</ol>
+<h4 id="retrieving-long-documents">Retrieving Long Documents</h4>
+<p>In our examples thus far, the documents retrieved have been simple and short HTML files. Let’s next see what happens when we download a long HTML file. Do the following:</p>
+<ul>
+<li>Start up your web browser, and make sure your browser’s cache is cleared, as discussed above.</li>
+<li>Start up the Wireshark packet sniffer</li>
+<li>Enter the following URL into your browser <a href="http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file3.html">http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file3.html</a> Your browser should display the rather lengthy US Bill of Rights.</li>
+<li>Stop Wireshark packet capture, and enter “http” in the display-filter-specification window, so that only captured HTTP messages will be displayed.</li>
+<li>(Note: If you are unable to run Wireshark on a live network connection, you can use the http-ethereal-trace-3 packet trace to answer the questions below; see footnote 1. This trace file was gathered while performing the steps above on one of the author’s computers.)</li>
+</ul>
+<p>In the packet-listing window, you should see your HTTP GET message, followed by a multiple-packet TCP response to your HTTP GET request. This multiple-packet response deserves a bit of explanation. Recall from Section 2.2 (see Figure 2.9 in the text) that the HTTP response message consists of a status line, followed by header lines, followed by a blank line, followed by the entity body. In the case of our HTTP GET, the  entity body in the response is the entire requested HTML file. In our case here, the HTML file is rather long, and at 4500 bytes is too large to fit in one TCP packet. The single HTTP response message is thus broken into several pieces by TCP, with each piece being contained within a separate TCP segment (see Figure 1.24 in the text). In recent versions of Wireshark, Wireshark indicates each TCP segment as a separate packet, and the fact that the single HTTP response was fragmented across multiple TCP packets is indicated by the “TCP segment of a reassembled PDU” in the Info column of the Wireshark display. Earlier versions of Wireshark used the “Continuation” phrase to indicated that the entire content of an HTTP message was broken across multiple TCP segments.. We stress here that there is no “Continuation” message in HTTP!</p>
+<p>Answer the following questions:</p>
+<ol start="12">
+<li>How many HTTP GET request messages did your browser send? Which packet number in the trace contains the GET message for the Bill or Rights?</li>
+<li>Which packet number in the trace contains the status code and phrase associated with the response to the HTTP GET request?</li>
+<li>What is the status code and phrase in the response?</li>
+<li>How many data-containing TCP segments were needed to carry the single HTTP response and the text of the Bill of Rights?</li>
+</ol>
+<h4 id="html-documents-with-embedded-objects">HTML Documents with Embedded Objects</h4>
+<p>Now that we’ve seen how Wireshark displays the captured packet traffic for large HTML files, we can look at what happens when your browser downloads a file with embedded objects, i.e., a file that includes other objects (in the example below, image files) that are stored on another server(s).</p>
+<p>Do the following:</p>
+<ul>
+<li>Start up your web browser, and make sure your browser’s cache is cleared, as discussed above.</li>
+<li>Start up the Wireshark packet sniffer</li>
+<li>Enter the following URL into your browser <a href="http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html">http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html</a> Your browser should display a short HTML file with two images. These two images are referenced in the base HTML file. That is, the images themselves are not contained in the HTML; instead the URLs for the images are contained in the downloaded HTML file. As discussed in the textbook, your browser will have to retrieve these logos from the indicated web sites. Our publisher’s logo is retrieved from the gaia.cs.umass.edu web site. The image of the cover for our 5th edition (one of our favorite covers) is stored at the caite.cs.umass.edu server. (These are two different web servers inside cs.umass.edu).</li>
+<li>Stop Wireshark packet capture, and enter “http” in the display-filter-specification window, so that only captured HTTP messages will be displayed.</li>
+<li>(Note: If you are unable to run Wireshark on a live network connection, you can use the http-ethereal-trace-4 packet trace to answer the questions below; see footnote 1. This trace file was gathered while performing the steps above on one of the author’s computers.)</li>
+</ul>
+<p>Answer the following questions:</p>
+<ol start="16">
+<li>How many HTTP GET request messages did your browser send? To which Internet addresses were these GET requests sent?</li>
+<li>Can you tell whether your browser downloaded the two images serially, or whether they were downloaded from the two web sites in parallel? Explain.</li>
+</ol>
+<h4 id="http-authentication">HTTP Authentication</h4>
+<p>Finally, let’s try visiting a web site that is password-protected and examine the sequence of HTTP message exchanged for such a site. The URL <a href="http://gaia.cs.umass.edu/wireshark-labs/protected_pages/HTTP-wireshark-file5.html">http://gaia.cs.umass.edu/wireshark-labs/protected_pages/HTTP-wireshark-file5.html</a> is password protected. The username is “wireshark-students” (without the quotes), and the password is “network” (again, without the quotes). So let’s access this “secure” password-protected site. Do the following:</p>
+<ul>
+<li>
+<p>Make sure your browser’s cache is cleared, as discussed above, and close down your browser. Then, start up your browser</p>
+</li>
+<li>
+<p>Start up the Wireshark packet sniffer</p>
+</li>
+<li>
+<p>Enter the following URL into your browser <a href="http://gaia.cs.umass.edu/wireshark-labs/protected_pages/HTTP-wiresharkfile5.html">http://gaia.cs.umass.edu/wireshark-labs/protected_pages/HTTP-wiresharkfile5.html</a> Type the requested user name and password into the pop up box.</p>
+</li>
+<li>
+<p>Stop Wireshark packet capture, and enter “http” in the display-filter-specification window, so that only captured HTTP messages will be displayed later in the packet-listing window.</p>
+</li>
+<li>
+<p>(Note: If you are unable to run Wireshark on a live network connection, you can use the http-ethereal-trace-5 packet trace to answer the questions below; see footnote 2. This trace file was gathered while performing the steps above on one of the author’s computers.)</p>
+</li>
+</ul>
+<p>Now let’s examine the Wireshark output. You might want to first read up on HTTP authentication by reviewing the easy-to-read material on “HTTP Access Authentication Framework” at <a href="http://frontier.userland.com/stories/storyReader$2159">http://frontier.userland.com/stories/storyReader$2159</a></p>
+<p>Answer the following questions:</p>
+<ol start="18">
+<li>What is the server’s response (status code and phrase) in response to the initial HTTP GET message from your browser?</li>
+<li>When your browser’s sends the HTTP GET message for the second time, what new field is included in the HTTP GET message?</li>
+</ol>
+<p>The username (wireshark-students) and password (network) that you entered are encoded in the string of characters (d2lyZXNoYXJrLXN0dWRlbnRzOm5ldHdvcms=) following  the “Authorization: Basic” header in the client’s HTTP GET message. While it may appear that your username and password are encrypted, they are simply encoded in a format known as Base64 format. The username and password are not encrypted! To see this, go to <a href="http://www.motobit.com/util/base64-decoder-encoder.asp">http://www.motobit.com/util/base64-decoder-encoder.asp</a> and enter the base64-encoded string d2lyZXNoYXJrLXN0dWRlbnRz and decode. Voila! You have translated from Base64 encoding to ASCII encoding, and thus should see your username! To view the password, enter the remainder of the string Om5ldHdvcms= and press decode. Since anyone can download a tool like Wireshark and sniff packets (not just their own) passing by their network adaptor, and anyone can translate from Base64 to ASCII (you just did it!), it should be clear to you that simple passwords on WWW sites are not secure unless additional measures are taken.</p>
+<p>Fear not! As we will see in Chapter 8, there are ways to make WWW access more secure. However, we’ll clearly need something that goes beyond the basic HTTP authentication framework!</p>
+<h2 id="wireshark-lab-dns">Wireshark Lab: DNS</h2>
+<h1 id="reference">Reference</h1>
+<ol>
+<li><a href="https://www.pearson.com/us/higher-education/product/Kurose-Computer-Networking-A-Top-Down-Approach-6th-Edition/9780132856201.html?tab=contents">Computer Networking: A Top-Down Approach, 6th Edition</a></li>
+<li><a href="https://gaia.cs.umass.edu/kurose_ross/wireshark.htm"><strong>Wireshark Labs</strong></a></li>
+</ol>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2021-03-06
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://www.yezheng.pro/tags/computer-networking/">computer-networking</a>
+          <a href="http://www.yezheng.pro/tags/http/">http</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/specialization/systems/computer-networking/computer-networks-3/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">Transport Layer</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/specialization/systems/computer-networking/computer-networks-1/">
+            <span class="next-text nav-default">Computer Networks and the Internet</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://www.yezheng.pro/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2021
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

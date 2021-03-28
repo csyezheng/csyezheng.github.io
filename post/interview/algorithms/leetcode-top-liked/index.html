@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>LeetCode Top 100 Liked Questions - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="# Title Difficulty Train of thought     1 Two Sum Easy return indices of the two numbers in an array such that they add up to target. Can we use additional space somehow? Like maybe a hash map to speed up the search?   2 Add Two Numbers Medium two non-empty linked lists stored in reverse order representing two non-negative integers.   3 Longest Substring Without Repeating Characters Medium The reason is that if $s[j]$ have a duplicate in the range $[i, j)$ with index $j&#39;$, we don&amp;rsquo;t need to increase $i$ little by little." />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.81.0" />
+
+
+<link rel="canonical" href="http://www.yezheng.pro/post/interview/algorithms/leetcode-top-liked/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.61b9e7bcbd6f12a4e9f5db11b9643a2092aa9c93ca136cf497edd5e0f3efca61.css" integrity="sha256-YbnnvL1vEqTp9dsRuWQ6IJKqnJPKE2z0l&#43;3V4PPvymE=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="LeetCode Top 100 Liked Questions" />
+<meta property="og:description" content="# Title Difficulty Train of thought     1 Two Sum Easy return indices of the two numbers in an array such that they add up to target. Can we use additional space somehow? Like maybe a hash map to speed up the search?   2 Add Two Numbers Medium two non-empty linked lists stored in reverse order representing two non-negative integers.   3 Longest Substring Without Repeating Characters Medium The reason is that if $s[j]$ have a duplicate in the range $[i, j)$ with index $j&#39;$, we don&rsquo;t need to increase $i$ little by little." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.yezheng.pro/post/interview/algorithms/leetcode-top-liked/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-12-01T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2020-12-01T00:00:00&#43;00:00" />
+
+<meta itemprop="name" content="LeetCode Top 100 Liked Questions">
+<meta itemprop="description" content="# Title Difficulty Train of thought     1 Two Sum Easy return indices of the two numbers in an array such that they add up to target. Can we use additional space somehow? Like maybe a hash map to speed up the search?   2 Add Two Numbers Medium two non-empty linked lists stored in reverse order representing two non-negative integers.   3 Longest Substring Without Repeating Characters Medium The reason is that if $s[j]$ have a duplicate in the range $[i, j)$ with index $j&#39;$, we don&rsquo;t need to increase $i$ little by little."><meta itemprop="datePublished" content="2020-12-01T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-12-01T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="2303">
+<meta itemprop="keywords" content="leetCode," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LeetCode Top 100 Liked Questions"/>
+<meta name="twitter:description" content="# Title Difficulty Train of thought     1 Two Sum Easy return indices of the two numbers in an array such that they add up to target. Can we use additional space somehow? Like maybe a hash map to speed up the search?   2 Add Two Numbers Medium two non-empty linked lists stored in reverse order representing two non-negative integers.   3 Longest Substring Without Repeating Characters Medium The reason is that if $s[j]$ have a duplicate in the range $[i, j)$ with index $j&#39;$, we don&rsquo;t need to increase $i$ little by little."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">LeetCode Top 100 Liked Questions</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-12-01" class="post-time">
+          2020-12-01
+        </time>
+        <div class="post-category">
+            <a href="http://www.yezheng.pro/categories/interview/"> interview </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1--two-sum">1  Two Sum</a></li>
+        <li><a href="#2--add-two-numbers">2  Add Two Numbers</a></li>
+        <li><a href="#3--longest-substring-without-repeating-characters">3  Longest Substring Without Repeating Characters</a></li>
+        <li><a href="#4--median-of-two-sorted-arrays">4  Median of Two Sorted Arrays</a></li>
+        <li><a href="#5--longest-palindromic-substring">5  Longest Palindromic Substring</a></li>
+        <li><a href="#10--regular-expression-matching">10  Regular Expression Matching</a></li>
+        <li><a href="#11--container-with-most-water">11  Container With Most Water</a></li>
+        <li><a href="#15--3sum">15  3Sum</a></li>
+        <li><a href="#17--letter-combinations-of-a-phone-number">17  Letter Combinations of a Phone Number</a></li>
+        <li><a href="#19--remove-nth-node-from-end-of-list">19  Remove Nth Node From End of List</a></li>
+        <li><a href="#20--valid-parentheses">20  Valid Parentheses</a></li>
+        <li><a href="#21--merge-two-sorted-lists">21  Merge Two Sorted Lists</a></li>
+        <li><a href="#22--generate-parentheses">22  Generate Parentheses</a></li>
+        <li><a href="#23--merge-k-sorted-lists">23  Merge k Sorted Lists</a></li>
+        <li><a href="#32--longest-valid-parentheses">32  Longest Valid Parentheses</a></li>
+        <li><a href="#33--search-in-rotated-sorted-array">33  Search in Rotated Sorted Array</a></li>
+        <li><a href="#34--find-first-and-last-position-of-element-in-sorted-array">34  Find First and Last Position of Element in Sorted Array</a></li>
+        <li><a href="#39--combination-sum">39  Combination Sum</a></li>
+        <li><a href="#41--first-missing-positive">41  First Missing Positive</a></li>
+        <li><a href="#42--trapping-rain-water">42  Trapping Rain Water</a></li>
+        <li><a href="#45--jump-game-ii">45  Jump Game II</a></li>
+        <li><a href="#46--permutations">46  Permutations</a></li>
+        <li><a href="#48--rotate-image">48  Rotate Image</a></li>
+        <li><a href="#49--group-anagrams">49  Group Anagrams</a></li>
+        <li><a href="#53--maximum-subarray">53  Maximum Subarray</a></li>
+        <li><a href="#55--jump-game">55  Jump Game</a></li>
+        <li><a href="#56--merge-intervals">56  Merge Intervals</a></li>
+        <li><a href="#62--unique-paths">62  Unique Paths</a></li>
+        <li><a href="#64--minimum-path-sum">64  Minimum Path Sum</a></li>
+        <li><a href="#70--climbing-stairs">70  Climbing Stairs</a></li>
+        <li><a href="#72--edit-distance">72  Edit Distance</a></li>
+        <li><a href="#75--sort-colors">75  Sort Colors</a></li>
+        <li><a href="#76--minimum-window-substring">76  Minimum Window Substring</a></li>
+        <li><a href="#78--subsets">78  Subsets</a></li>
+        <li><a href="#79--word-search">79  Word Search</a></li>
+        <li><a href="#84--largest-rectangle-in-histogram">84  Largest Rectangle in Histogram</a></li>
+        <li><a href="#85--maximal-rectangle">85  Maximal Rectangle</a></li>
+        <li><a href="#94--binary-tree-inorder-traversal">94  Binary Tree Inorder Traversal</a></li>
+        <li><a href="#96--unique-binary-search-trees">96  Unique Binary Search Trees</a></li>
+        <li><a href="#98--validate-binary-search-tree">98  Validate Binary Search Tree</a></li>
+        <li><a href="#101--symmetric-tree">101  Symmetric Tree</a></li>
+        <li><a href="#102--binary-tree-level-order-traversal">102  Binary Tree Level Order Traversal</a></li>
+        <li><a href="#104--maximum-depth-of-binary-tree">104  Maximum Depth of Binary Tree</a></li>
+        <li><a href="#105--construct-binary-tree-from-preorder-and-inorder-traversal">105  Construct Binary Tree from Preorder and Inorder Traversal</a></li>
+        <li><a href="#114--flatten-binary-tree-to-linked-list">114  Flatten Binary Tree to Linked List</a></li>
+        <li><a href="#121--best-time-to-buy-and-sell-stock">121  Best Time to Buy and Sell Stock</a></li>
+        <li><a href="#124--binary-tree-maximum-path-sum">124  Binary Tree Maximum Path Sum</a></li>
+        <li><a href="#128--longest-consecutive-sequence">128  Longest Consecutive Sequence</a></li>
+        <li><a href="#136--single-number">136  Single Number</a></li>
+        <li><a href="#138--copy-list-with-random-pointer">138  Copy List with Random Pointer</a></li>
+        <li><a href="#139--word-break">139  Word Break</a></li>
+        <li><a href="#141--linked-list-cycle">141  Linked List Cycle</a></li>
+        <li><a href="#142--linked-list-cycle-ii">142  Linked List Cycle II</a></li>
+        <li><a href="#146--lru-cache">146  LRU Cache</a></li>
+        <li><a href="#148--sort-list">148  Sort List</a></li>
+        <li><a href="#152--maximum-product-subarray">152  Maximum Product Subarray</a></li>
+        <li><a href="#155--min-stack">155  Min Stack</a></li>
+        <li><a href="#160--intersection-of-two-linked-lists">160  Intersection of Two Linked Lists</a></li>
+        <li><a href="#169--majority-element">169  Majority Element</a></li>
+        <li><a href="#198--house-robber">198  House Robber</a></li>
+        <li><a href="#199--binary-tree-right-side-view">199  Binary Tree Right Side View</a></li>
+        <li><a href="#200--number-of-islands">200  Number of Islands</a></li>
+        <li><a href="#206--reverse-linked-list">206  Reverse Linked List</a></li>
+        <li><a href="#207--course-schedule">207  Course Schedule</a></li>
+        <li><a href="#208--implement-trie-prefix-tree">208  Implement Trie (Prefix Tree)</a></li>
+        <li><a href="#215--kth-largest-element-in-an-array">215  Kth Largest Element in an Array</a></li>
+        <li><a href="#221--maximal-square">221  Maximal Square</a></li>
+        <li><a href="#226--invert-binary-tree">226  Invert Binary Tree</a></li>
+        <li><a href="#230--kth-smallest-element-in-a-bst">230  Kth Smallest Element in a BST</a></li>
+        <li><a href="#234--palindrome-linked-list">234  Palindrome Linked List</a></li>
+        <li><a href="#236--lowest-common-ancestor-of-a-binary-tree">236  Lowest Common Ancestor of a Binary Tree</a></li>
+        <li><a href="#238--product-of-array-except-self">238  Product of Array Except Self</a></li>
+        <li><a href="#239--sliding-window-maximum">239  Sliding Window Maximum</a></li>
+        <li><a href="#240--search-a-2d-matrix-ii">240  Search a 2D Matrix II</a></li>
+        <li><a href="#253--meeting-rooms-ii">253  Meeting Rooms II</a></li>
+        <li><a href="#279--perfect-squares">279  Perfect Squares</a></li>
+        <li><a href="#283--move-zeroes">283  Move Zeroes</a></li>
+        <li><a href="#287--find-the-duplicate-number">287  Find the Duplicate Number</a></li>
+        <li><a href="#295--find-median-from-data-stream">295  Find Median from Data Stream</a></li>
+        <li><a href="#297--serialize-and-deserialize-binary-tree">297  Serialize and Deserialize Binary Tree</a></li>
+        <li><a href="#300--longest-increasing-subsequence">300  Longest Increasing Subsequence</a></li>
+        <li><a href="#322--coin-change">322  Coin Change</a></li>
+        <li><a href="#337--house-robber-iii">337  House Robber III</a></li>
+        <li><a href="#338--counting-bits">338  Counting Bits</a></li>
+        <li><a href="#347--top-k-frequent-elements">347  Top K Frequent Elements</a></li>
+        <li><a href="#394--decode-string">394  Decode String</a></li>
+        <li><a href="#406--queue-reconstruction-by-height">406  Queue Reconstruction by Height</a></li>
+        <li><a href="#416--partition-equal-subset-sum">416  Partition Equal Subset Sum</a></li>
+        <li><a href="#437--path-sum-iii">437  Path Sum III</a></li>
+        <li><a href="#438--find-all-anagrams-in-a-string">438  Find All Anagrams in a String</a></li>
+        <li><a href="#448--find-all-numbers-disappeared-in-an-array">448  Find All Numbers Disappeared in an Array</a></li>
+        <li><a href="#494--target-sum">494  Target Sum</a></li>
+        <li><a href="#543--diameter-of-binary-tree">543  Diameter of Binary Tree</a></li>
+        <li><a href="#560--subarray-sum-equals-k">560  Subarray Sum Equals K</a></li>
+        <li><a href="#581--shortest-unsorted-continuous-subarray">581  Shortest Unsorted Continuous Subarray</a></li>
+        <li><a href="#617--merge-two-binary-trees">617  Merge Two Binary Trees</a></li>
+        <li><a href="#621--task-scheduler">621  Task Scheduler</a></li>
+        <li><a href="#647--palindromic-substrings">647  Palindromic Substrings</a></li>
+        <li><a href="#739--daily-temperatures">739  Daily Temperatures</a></li>
+        <li><a href="#763--partition-labels">763  Partition Labels</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <table>
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Difficulty</th>
+<th>Train of thought</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="https://leetcode.com/problems/two-sum">Two Sum</a></td>
+<td><strong>Easy</strong></td>
+<td>return <em>indices of the two numbers in an array such that they add up to <code>target</code></em>. Can we use additional space somehow? Like maybe a hash map to speed up the search?</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="https://leetcode.com/problems/add-two-numbers">Add Two Numbers</a></td>
+<td><strong>Medium</strong></td>
+<td>two <strong>non-empty</strong> linked lists stored in <strong>reverse order</strong> representing two non-negative integers.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters">Longest Substring Without Repeating Characters</a></td>
+<td><strong>Medium</strong></td>
+<td>The reason is that if $s[j]$ have a duplicate in the range $[i, j)$ with index $j'$, we don&rsquo;t need to increase $i$ little by little. We can skip all the elements in the range $[i, j']$ and let $i$ to be $j' + 1$ directly.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="https://leetcode.com/problems/median-of-two-sorted-arrays">Median of Two Sorted Arrays</a></td>
+<td><strong>Hard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="https://leetcode.com/problems/longest-palindromic-substring">Longest Palindromic Substring</a></td>
+<td><strong>Medium</strong></td>
+<td>This yields a straight forward DP solution, which we first initialize the one and two letters palindromes, and work our way up finding all three letters palindromes, and so on.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="https://leetcode.com/problems/regular-expression-matching">Regular Expression Matching</a></td>
+<td><strong>Hard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="https://leetcode.com/problems/container-with-most-water">Container With Most Water</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td><a href="https://leetcode.com/problems/3sum">3Sum</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>17</td>
+<td><a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number">Letter Combinations of a Phone Number</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list">Remove Nth Node From End of List</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td><a href="https://leetcode.com/problems/valid-parentheses">Valid Parentheses</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>21</td>
+<td><a href="https://leetcode.com/problems/merge-two-sorted-lists">Merge Two Sorted Lists</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>22</td>
+<td><a href="https://leetcode.com/problems/generate-parentheses">Generate Parentheses</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>23</td>
+<td><a href="https://leetcode.com/problems/merge-k-sorted-lists">Merge k Sorted Lists</a></td>
+<td><strong>Hard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>32</td>
+<td><a href="https://leetcode.com/problems/longest-valid-parentheses">Longest Valid Parentheses</a></td>
+<td><strong>Hard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>33</td>
+<td><a href="https://leetcode.com/problems/search-in-rotated-sorted-array">Search in Rotated Sorted Array</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>34</td>
+<td><a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array">Find First and Last Position of Element in Sorted Array</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>39</td>
+<td><a href="https://leetcode.com/problems/combination-sum">Combination Sum</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>41</td>
+<td><a href="https://leetcode.com/problems/first-missing-positive">First Missing Positive</a></td>
+<td><strong>Hard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>42</td>
+<td><a href="https://leetcode.com/problems/trapping-rain-water">Trapping Rain Water</a></td>
+<td><strong>Hard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>45</td>
+<td><a href="https://leetcode.com/problems/jump-game-ii">Jump Game II</a></td>
+<td><strong>Hard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>46</td>
+<td><a href="https://leetcode.com/problems/permutations">Permutations</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>48</td>
+<td><a href="https://leetcode.com/problems/rotate-image">Rotate Image</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>49</td>
+<td><a href="https://leetcode.com/problems/group-anagrams">Group Anagrams</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>53</td>
+<td><a href="https://leetcode.com/problems/maximum-subarray">Maximum Subarray</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>55</td>
+<td><a href="https://leetcode.com/problems/jump-game">Jump Game</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>56</td>
+<td><a href="https://leetcode.com/problems/merge-intervals">Merge Intervals</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>62</td>
+<td><a href="https://leetcode.com/problems/unique-paths">Unique Paths</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>64</td>
+<td><a href="https://leetcode.com/problems/minimum-path-sum">Minimum Path Sum</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>70</td>
+<td><a href="https://leetcode.com/problems/climbing-stairs">Climbing Stairs</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>72</td>
+<td><a href="https://leetcode.com/problems/edit-distance">Edit Distance</a></td>
+<td><strong>Hard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>75</td>
+<td><a href="https://leetcode.com/problems/sort-colors">Sort Colors</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>76</td>
+<td><a href="https://leetcode.com/problems/minimum-window-substring">Minimum Window Substring</a></td>
+<td><strong>Hard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>78</td>
+<td><a href="https://leetcode.com/problems/subsets">Subsets</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>79</td>
+<td><a href="https://leetcode.com/problems/word-search">Word Search</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>84</td>
+<td><a href="https://leetcode.com/problems/largest-rectangle-in-histogram">Largest Rectangle in Histogram</a></td>
+<td><strong>Hard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>85</td>
+<td><a href="https://leetcode.com/problems/maximal-rectangle">Maximal Rectangle</a></td>
+<td><strong>Hard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>94</td>
+<td><a href="https://leetcode.com/problems/binary-tree-inorder-traversal">Binary Tree Inorder Traversal</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>96</td>
+<td><a href="https://leetcode.com/problems/unique-binary-search-trees">Unique Binary Search Trees</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>98</td>
+<td><a href="https://leetcode.com/problems/validate-binary-search-tree">Validate Binary Search Tree</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>101</td>
+<td><a href="https://leetcode.com/problems/symmetric-tree">Symmetric Tree</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>102</td>
+<td><a href="https://leetcode.com/problems/binary-tree-level-order-traversal">Binary Tree Level Order Traversal</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>104</td>
+<td><a href="https://leetcode.com/problems/maximum-depth-of-binary-tree">Maximum Depth of Binary Tree</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>105</td>
+<td><a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal">Construct Binary Tree from Preorder and Inorder Traversal</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>114</td>
+<td><a href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list">Flatten Binary Tree to Linked List</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>121</td>
+<td><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock">Best Time to Buy and Sell Stock</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>124</td>
+<td><a href="https://leetcode.com/problems/binary-tree-maximum-path-sum">Binary Tree Maximum Path Sum</a></td>
+<td><strong>Hard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>128</td>
+<td><a href="https://leetcode.com/problems/longest-consecutive-sequence">Longest Consecutive Sequence</a></td>
+<td><strong>Hard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>136</td>
+<td><a href="https://leetcode.com/problems/single-number">Single Number</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>138</td>
+<td><a href="https://leetcode.com/problems/copy-list-with-random-pointer">Copy List with Random Pointer</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>139</td>
+<td><a href="https://leetcode.com/problems/word-break">Word Break</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>141</td>
+<td><a href="https://leetcode.com/problems/linked-list-cycle">Linked List Cycle</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>142</td>
+<td><a href="https://leetcode.com/problems/linked-list-cycle-ii">Linked List Cycle II</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>146</td>
+<td><a href="https://leetcode.com/problems/lru-cache">LRU Cache</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>148</td>
+<td><a href="https://leetcode.com/problems/sort-list">Sort List</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>152</td>
+<td><a href="https://leetcode.com/problems/maximum-product-subarray">Maximum Product Subarray</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>155</td>
+<td><a href="https://leetcode.com/problems/min-stack">Min Stack</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>160</td>
+<td><a href="https://leetcode.com/problems/intersection-of-two-linked-lists">Intersection of Two Linked Lists</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>169</td>
+<td><a href="https://leetcode.com/problems/majority-element">Majority Element</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>198</td>
+<td><a href="https://leetcode.com/problems/house-robber">House Robber</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>199</td>
+<td><a href="https://leetcode.com/problems/binary-tree-right-side-view">Binary Tree Right Side View</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>200</td>
+<td><a href="https://leetcode.com/problems/number-of-islands">Number of Islands</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>206</td>
+<td><a href="https://leetcode.com/problems/reverse-linked-list">Reverse Linked List</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>207</td>
+<td><a href="https://leetcode.com/problems/course-schedule">Course Schedule</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>208</td>
+<td><a href="https://leetcode.com/problems/implement-trie-prefix-tree">Implement Trie (Prefix Tree)</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>215</td>
+<td><a href="https://leetcode.com/problems/kth-largest-element-in-an-array">Kth Largest Element in an Array</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>221</td>
+<td><a href="https://leetcode.com/problems/maximal-square">Maximal Square</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>226</td>
+<td><a href="https://leetcode.com/problems/invert-binary-tree">Invert Binary Tree</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>230</td>
+<td><a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst">Kth Smallest Element in a BST</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>234</td>
+<td><a href="https://leetcode.com/problems/palindrome-linked-list">Palindrome Linked List</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>236</td>
+<td><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree">Lowest Common Ancestor of a Binary Tree</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>238</td>
+<td><a href="https://leetcode.com/problems/product-of-array-except-self">Product of Array Except Self</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>239</td>
+<td><a href="https://leetcode.com/problems/sliding-window-maximum">Sliding Window Maximum</a></td>
+<td><strong>Hard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>240</td>
+<td><a href="https://leetcode.com/problems/search-a-2d-matrix-ii">Search a 2D Matrix II</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>253</td>
+<td><a href="https://leetcode.com/problems/meeting-rooms-ii">Meeting Rooms II</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>279</td>
+<td><a href="https://leetcode.com/problems/perfect-squares">Perfect Squares</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>283</td>
+<td><a href="https://leetcode.com/problems/move-zeroes">Move Zeroes</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>287</td>
+<td><a href="https://leetcode.com/problems/find-the-duplicate-number">Find the Duplicate Number</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>295</td>
+<td><a href="https://leetcode.com/problems/find-median-from-data-stream">Find Median from Data Stream</a></td>
+<td><strong>Hard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>297</td>
+<td><a href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree">Serialize and Deserialize Binary Tree</a></td>
+<td><strong>Hard</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>300</td>
+<td><a href="https://leetcode.com/problems/longest-increasing-subsequence">Longest Increasing Subsequence</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>322</td>
+<td><a href="https://leetcode.com/problems/coin-change">Coin Change</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>337</td>
+<td><a href="https://leetcode.com/problems/house-robber-iii">House Robber III</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>338</td>
+<td><a href="https://leetcode.com/problems/counting-bits">Counting Bits</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>347</td>
+<td><a href="https://leetcode.com/problems/top-k-frequent-elements">Top K Frequent Elements</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>394</td>
+<td><a href="https://leetcode.com/problems/decode-string">Decode String</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>406</td>
+<td><a href="https://leetcode.com/problems/queue-reconstruction-by-height">Queue Reconstruction by Height</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>416</td>
+<td><a href="https://leetcode.com/problems/partition-equal-subset-sum">Partition Equal Subset Sum</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>437</td>
+<td><a href="https://leetcode.com/problems/path-sum-iii">Path Sum III</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>438</td>
+<td><a href="https://leetcode.com/problems/find-all-anagrams-in-a-string">Find All Anagrams in a String</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>448</td>
+<td><a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array">Find All Numbers Disappeared in an Array</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>494</td>
+<td><a href="https://leetcode.com/problems/target-sum">Target Sum</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>543</td>
+<td><a href="https://leetcode.com/problems/diameter-of-binary-tree">Diameter of Binary Tree</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>560</td>
+<td><a href="https://leetcode.com/problems/subarray-sum-equals-k">Subarray Sum Equals K</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>581</td>
+<td>Shortest Unsorted Continuous Subarray</td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>617</td>
+<td><a href="https://leetcode.com/problems/merge-two-binary-trees">Merge Two Binary Trees</a></td>
+<td><strong>Easy</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>621</td>
+<td><a href="https://leetcode.com/problems/task-scheduler">Task Scheduler</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>647</td>
+<td><a href="https://leetcode.com/problems/palindromic-substrings">Palindromic Substrings</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>739</td>
+<td><a href="https://leetcode.com/problems/daily-temperatures">Daily Temperatures</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>763</td>
+<td><a href="https://leetcode.com/problems/partition-labels">Partition Labels</a></td>
+<td><strong>Medium</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="1--two-sum">1  Two Sum</h3>
+<pre><code>class Solution(object):
+    def twoSum(self, nums, target):
+        &quot;&quot;&quot;
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        &quot;&quot;&quot;
+        d = {}
+        for i, n in enumerate(nums):
+            complement = target - n
+            if complement in d:
+                return [d[complement], i]
+            d[n] = i
+</code></pre><h3 id="2--add-two-numbers">2  Add Two Numbers</h3>
+<pre><code># Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution(object):
+    def addTwoNumbers(self, l1, l2):
+        &quot;&quot;&quot;
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        &quot;&quot;&quot;
+        dummy_head = ListNode(0)
+        curr = dummy_head
+        carry = 0
+        while (l1 or l2 or carry):
+            if l1:
+                carry += l1.val
+                l1 = l1.next
+            if l2:
+                carry += l2.val
+                l2 = l2.next
+            carry, out = divmod(carry, 10)
+            
+            curr.next = ListNode(out)
+            curr = curr.next
+
+        return dummy_head.next
+</code></pre><h3 id="3--longest-substring-without-repeating-characters">3  Longest Substring Without Repeating Characters</h3>
+<pre><code>class Solution:
+    def lengthOfLongestSubstring(self, s: str) -&gt; int:
+        n = len(s)
+        ans = 0
+        # mp stores the current index of a character
+        mp = {}
+
+        i = 0
+        # try to extend the range [i, j]
+        for j in range(n):
+            if s[j] in mp:
+                i = max(mp[s[j]], i)
+
+            ans = max(ans, j - i + 1)
+            mp[s[j]] = j + 1
+
+        return ans
+</code></pre><h3 id="4--median-of-two-sorted-arrays">4  Median of Two Sorted Arrays</h3>
+<h3 id="5--longest-palindromic-substring">5  Longest Palindromic Substring</h3>
+<pre><code>public String longestPalindrome(String s) {
+    if (s == null || s.length() &lt; 1) return &quot;&quot;;
+    int start = 0, end = 0;
+    for (int i = 0; i &lt; s.length(); i++) {
+        int len1 = expandAroundCenter(s, i, i);
+        int len2 = expandAroundCenter(s, i, i + 1);
+        int len = Math.max(len1, len2);
+        if (len &gt; end - start) {
+            start = i - (len - 1) / 2;
+            end = i + len / 2;
+        }
+    }
+    return s.substring(start, end + 1);
+}
+
+private int expandAroundCenter(String s, int left, int right) {
+    int L = left, R = right;
+    while (L &gt;= 0 &amp;&amp; R &lt; s.length() &amp;&amp; s.charAt(L) == s.charAt(R)) {
+        L--;
+        R++;
+    }
+    return R - L - 1;
+}
+</code></pre><pre><code>
+class Solution(object):
+    def longestPalindrome(self, s):
+        &quot;&quot;&quot;
+        :type s: str
+        :rtype: str
+        &quot;&quot;&quot;
+        res = &quot;&quot;
+        for i in range(len(s)):
+            res = max(self.helper(s,i,i), self.helper(s,i,i+1), res, key=len)
+        return res
+       
+    def helper(self,s,l,r):
+        while 0&lt;=l and r &lt; len(s) and s[l]==s[r]:
+                l-=1; r+=1
+        return s[l+1:r]
+</code></pre><h3 id="10--regular-expression-matching">10  Regular Expression Matching</h3>
+<h3 id="11--container-with-most-water">11  Container With Most Water</h3>
+<pre><code>class Solution:
+    def maxArea(self, height):
+        max_area, beg, end = 0, 0, len(height) - 1
+        while beg &lt; end:
+            max_area = max(max_area, min(height[beg], height[end]) * (end - beg))
+            if height[beg] &lt; height[end]:
+                beg += 1
+            else:
+                end -= 1
+        return max_area
+</code></pre><h3 id="15--3sum">15  3Sum</h3>
+<pre><code>class Solution(object):
+    def threeSum(self, nums):
+        &quot;&quot;&quot;
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        &quot;&quot;&quot;
+        nums.sort()
+        N, result = len(nums), []
+        for i in range(N):
+            if i &gt; 0 and nums[i] == nums[i-1]:
+                continue
+            target = nums[i]*-1
+            s,e = i+1, N-1
+            while s&lt;e:
+                if nums[s]+nums[e] == target:
+                    result.append([nums[i], nums[s], nums[e]])
+                    s = s+1
+                    while s&lt;e and nums[s] == nums[s-1]:
+                        s = s+1
+                elif nums[s] + nums[e] &lt; target:
+                    s = s+1
+                else:
+                    e = e-1
+        return result
+</code></pre><h3 id="17--letter-combinations-of-a-phone-number">17  Letter Combinations of a Phone Number</h3>
+<pre><code>class Solution:
+    def letterCombinations(self, digits):
+        &quot;&quot;&quot;
+        :type digits: str
+        :rtype: List[str]
+        &quot;&quot;&quot;
+        phone = {'2': ['a', 'b', 'c'],
+                 '3': ['d', 'e', 'f'],
+                 '4': ['g', 'h', 'i'],
+                 '5': ['j', 'k', 'l'],
+                 '6': ['m', 'n', 'o'],
+                 '7': ['p', 'q', 'r', 's'],
+                 '8': ['t', 'u', 'v'],
+                 '9': ['w', 'x', 'y', 'z']}
+                
+        def backtrack(combination, next_digits):
+            # if there is no more digits to check
+            if len(next_digits) == 0:
+                # the combination is done
+                output.append(combination)
+            # if there are still digits to check
+            else:
+                # iterate over all letters which map 
+                # the next available digit
+                for letter in phone[next_digits[0]]:
+                    # append the current letter to the combination
+                    # and proceed to the next digits
+                    backtrack(combination + letter, next_digits[1:])
+                    
+        output = []
+        if digits:
+            backtrack(&quot;&quot;, digits)
+        return output
+</code></pre><h3 id="19--remove-nth-node-from-end-of-list">19  Remove Nth Node From End of List</h3>
+<pre><code>def removeNthFromEnd(self, head, n):
+    dummy = ListNode(0)
+    dummy.next = head
+    fast = slow = dummy
+    for _ in xrange(n):
+        fast = fast.next
+    while fast and fast.next:
+        fast = fast.next
+        slow = slow.next
+    slow.next = slow.next.next
+    return dummy.next
+</code></pre><h3 id="20--valid-parentheses">20  Valid Parentheses</h3>
+<pre><code>class Solution(object):
+    def isValid(self, s):
+        &quot;&quot;&quot;
+        :type s: str
+        :rtype: bool
+        &quot;&quot;&quot;
+
+        # The stack to keep track of opening brackets.
+        stack = []
+
+        # Hash map for keeping track of mappings. This keeps the code very clean.
+        # Also makes adding more types of parenthesis easier
+        mapping = {&quot;)&quot;: &quot;(&quot;, &quot;}&quot;: &quot;{&quot;, &quot;]&quot;: &quot;[&quot;}
+
+        # For every bracket in the expression.
+        for char in s:
+
+            # If the character is an closing bracket
+            if char in mapping:
+
+                # Pop the topmost element from the stack, if it is non empty
+                # Otherwise assign a dummy value of '#' to the top_element variable
+                top_element = stack.pop() if stack else '#'
+
+                # The mapping for the opening bracket in our hash and the top
+                # element of the stack don't match, return False
+                if mapping[char] != top_element:
+                    return False
+            else:
+                # We have an opening bracket, simply push it onto the stack.
+                stack.append(char)
+
+        # In the end, if the stack is empty, then we have a valid expression.
+        # The stack won't be empty for cases like ((()
+        return not stack
+</code></pre><h3 id="21--merge-two-sorted-lists">21  Merge Two Sorted Lists</h3>
+<pre><code># iteratively
+def mergeTwoLists1(self, l1, l2):
+    dummy = cur = ListNode(0)
+    while l1 and l2:
+        if l1.val &lt; l2.val:
+            cur.next = l1
+            l1 = l1.next
+        else:
+            cur.next = l2
+            l2 = l2.next
+        cur = cur.next
+    cur.next = l1 or l2
+    return dummy.next
+    
+# recursively    
+def mergeTwoLists2(self, l1, l2):
+    if not l1 or not l2:
+        return l1 or l2
+    if l1.val &lt; l2.val:
+        l1.next = self.mergeTwoLists(l1.next, l2)
+        return l1
+    else:
+        l2.next = self.mergeTwoLists(l1, l2.next)
+        return l2
+</code></pre><h3 id="22--generate-parentheses">22  Generate Parentheses</h3>
+<pre><code>class Solution(object):
+    def generateParenthesis(self, N):
+        ans = []
+        def backtrack(S = '', left = 0, right = 0):
+            if len(S) == 2 * N:
+                ans.append(S)
+                return
+            if left &lt; N:
+                backtrack(S+'(', left+1, right)
+            if right &lt; left:
+                backtrack(S+')', left, right+1)
+
+        backtrack()
+        return ans
+</code></pre><h3 id="23--merge-k-sorted-lists">23  Merge k Sorted Lists</h3>
+<pre><code>class Solution(object):
+    def mergeKLists(self, lists):
+        if not lists:
+            return None
+        if len(lists) == 1:
+            return lists[0]
+        mid = len(lists) // 2
+        l, r = self.mergeKLists(lists[:mid]), self.mergeKLists(lists[mid:])
+        return self.merge(l, r)
+    
+    def merge(self, l, r):
+        dummy = p = ListNode()
+        while l and r:
+            if l.val &lt; r.val:
+                p.next = l
+                l = l.next
+            else:
+                p.next = r
+                r = r.next
+            p = p.next
+        p.next = l or r
+        return dummy.next
+</code></pre><h3 id="32--longest-valid-parentheses">32  Longest Valid Parentheses</h3>
+<h3 id="33--search-in-rotated-sorted-array">33  Search in Rotated Sorted Array</h3>
+<pre><code>class Solution:
+    # @param {integer[]} numss
+    # @param {integer} target
+    # @return {integer}
+    def search(self, nums, target):
+        if not nums:
+            return -1
+
+        low, high = 0, len(nums) - 1
+
+        while low &lt;= high:
+            mid = (low + high) / 2
+            if target == nums[mid]:
+                return mid
+
+            if nums[low] &lt;= nums[mid]:
+                if nums[low] &lt;= target &lt;= nums[mid]:
+                    high = mid - 1
+                else:
+                    low = mid + 1
+            else:
+                if nums[mid] &lt;= target &lt;= nums[high]:
+                    low = mid + 1
+                else:
+                    high = mid - 1
+
+        return -1
+</code></pre><h3 id="34--find-first-and-last-position-of-element-in-sorted-array">34  Find First and Last Position of Element in Sorted Array</h3>
+<pre><code>class Solution:
+    def searchRange(self, nums, target):
+        &quot;&quot;&quot;
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        &quot;&quot;&quot;
+        if not nums:
+            return [-1, -1]
+
+        def bisect_left(nums, target):
+            l, r = 0, len(nums) - 1
+            while l &lt; r:
+                m = (l + r) // 2
+                if nums[m] &lt; target:
+                    l = m + 1
+                else:
+                    r = m
+            return l if nums[l] == target else -1
+
+        def bisect_right(nums, target):
+            l, r = 0, len(nums) - 1
+            while l &lt; r:
+                m = (l + r) // 2 + 1
+                if nums[m] &gt; target:
+                    r = m - 1
+                else:
+                    l = m
+            return l if nums[l] == target else -1
+
+        return [bisect_left(nums, target), bisect_right(nums, target)]
+</code></pre><h3 id="39--combination-sum">39  Combination Sum</h3>
+<h3 id="41--first-missing-positive">41  First Missing Positive</h3>
+<h3 id="42--trapping-rain-water">42  Trapping Rain Water</h3>
+<h3 id="45--jump-game-ii">45  Jump Game II</h3>
+<h3 id="46--permutations">46  Permutations</h3>
+<h3 id="48--rotate-image">48  Rotate Image</h3>
+<h3 id="49--group-anagrams">49  Group Anagrams</h3>
+<h3 id="53--maximum-subarray">53  Maximum Subarray</h3>
+<h3 id="55--jump-game">55  Jump Game</h3>
+<h3 id="56--merge-intervals">56  Merge Intervals</h3>
+<h3 id="62--unique-paths">62  Unique Paths</h3>
+<h3 id="64--minimum-path-sum">64  Minimum Path Sum</h3>
+<h3 id="70--climbing-stairs">70  Climbing Stairs</h3>
+<h3 id="72--edit-distance">72  Edit Distance</h3>
+<h3 id="75--sort-colors">75  Sort Colors</h3>
+<h3 id="76--minimum-window-substring">76  Minimum Window Substring</h3>
+<h3 id="78--subsets">78  Subsets</h3>
+<h3 id="79--word-search">79  Word Search</h3>
+<h3 id="84--largest-rectangle-in-histogram">84  Largest Rectangle in Histogram</h3>
+<h3 id="85--maximal-rectangle">85  Maximal Rectangle</h3>
+<h3 id="94--binary-tree-inorder-traversal">94  Binary Tree Inorder Traversal</h3>
+<h3 id="96--unique-binary-search-trees">96  Unique Binary Search Trees</h3>
+<h3 id="98--validate-binary-search-tree">98  Validate Binary Search Tree</h3>
+<h3 id="101--symmetric-tree">101  Symmetric Tree</h3>
+<h3 id="102--binary-tree-level-order-traversal">102  Binary Tree Level Order Traversal</h3>
+<h3 id="104--maximum-depth-of-binary-tree">104  Maximum Depth of Binary Tree</h3>
+<h3 id="105--construct-binary-tree-from-preorder-and-inorder-traversal">105  Construct Binary Tree from Preorder and Inorder Traversal</h3>
+<h3 id="114--flatten-binary-tree-to-linked-list">114  Flatten Binary Tree to Linked List</h3>
+<h3 id="121--best-time-to-buy-and-sell-stock">121  Best Time to Buy and Sell Stock</h3>
+<h3 id="124--binary-tree-maximum-path-sum">124  Binary Tree Maximum Path Sum</h3>
+<h3 id="128--longest-consecutive-sequence">128  Longest Consecutive Sequence</h3>
+<h3 id="136--single-number">136  Single Number</h3>
+<h3 id="138--copy-list-with-random-pointer">138  Copy List with Random Pointer</h3>
+<h3 id="139--word-break">139  Word Break</h3>
+<h3 id="141--linked-list-cycle">141  Linked List Cycle</h3>
+<h3 id="142--linked-list-cycle-ii">142  Linked List Cycle II</h3>
+<h3 id="146--lru-cache">146  LRU Cache</h3>
+<h3 id="148--sort-list">148  Sort List</h3>
+<h3 id="152--maximum-product-subarray">152  Maximum Product Subarray</h3>
+<h3 id="155--min-stack">155  Min Stack</h3>
+<h3 id="160--intersection-of-two-linked-lists">160  Intersection of Two Linked Lists</h3>
+<h3 id="169--majority-element">169  Majority Element</h3>
+<h3 id="198--house-robber">198  House Robber</h3>
+<h3 id="199--binary-tree-right-side-view">199  Binary Tree Right Side View</h3>
+<h3 id="200--number-of-islands">200  Number of Islands</h3>
+<h3 id="206--reverse-linked-list">206  Reverse Linked List</h3>
+<h3 id="207--course-schedule">207  Course Schedule</h3>
+<h3 id="208--implement-trie-prefix-tree">208  Implement Trie (Prefix Tree)</h3>
+<h3 id="215--kth-largest-element-in-an-array">215  Kth Largest Element in an Array</h3>
+<h3 id="221--maximal-square">221  Maximal Square</h3>
+<h3 id="226--invert-binary-tree">226  Invert Binary Tree</h3>
+<h3 id="230--kth-smallest-element-in-a-bst">230  Kth Smallest Element in a BST</h3>
+<h3 id="234--palindrome-linked-list">234  Palindrome Linked List</h3>
+<h3 id="236--lowest-common-ancestor-of-a-binary-tree">236  Lowest Common Ancestor of a Binary Tree</h3>
+<h3 id="238--product-of-array-except-self">238  Product of Array Except Self</h3>
+<h3 id="239--sliding-window-maximum">239  Sliding Window Maximum</h3>
+<h3 id="240--search-a-2d-matrix-ii">240  Search a 2D Matrix II</h3>
+<h3 id="253--meeting-rooms-ii">253  Meeting Rooms II</h3>
+<h3 id="279--perfect-squares">279  Perfect Squares</h3>
+<h3 id="283--move-zeroes">283  Move Zeroes</h3>
+<h3 id="287--find-the-duplicate-number">287  Find the Duplicate Number</h3>
+<h3 id="295--find-median-from-data-stream">295  Find Median from Data Stream</h3>
+<h3 id="297--serialize-and-deserialize-binary-tree">297  Serialize and Deserialize Binary Tree</h3>
+<h3 id="300--longest-increasing-subsequence">300  Longest Increasing Subsequence</h3>
+<h3 id="322--coin-change">322  Coin Change</h3>
+<h3 id="337--house-robber-iii">337  House Robber III</h3>
+<h3 id="338--counting-bits">338  Counting Bits</h3>
+<h3 id="347--top-k-frequent-elements">347  Top K Frequent Elements</h3>
+<h3 id="394--decode-string">394  Decode String</h3>
+<h3 id="406--queue-reconstruction-by-height">406  Queue Reconstruction by Height</h3>
+<h3 id="416--partition-equal-subset-sum">416  Partition Equal Subset Sum</h3>
+<h3 id="437--path-sum-iii">437  Path Sum III</h3>
+<h3 id="438--find-all-anagrams-in-a-string">438  Find All Anagrams in a String</h3>
+<h3 id="448--find-all-numbers-disappeared-in-an-array">448  Find All Numbers Disappeared in an Array</h3>
+<h3 id="494--target-sum">494  Target Sum</h3>
+<h3 id="543--diameter-of-binary-tree">543  Diameter of Binary Tree</h3>
+<h3 id="560--subarray-sum-equals-k">560  Subarray Sum Equals K</h3>
+<h3 id="581--shortest-unsorted-continuous-subarray">581  Shortest Unsorted Continuous Subarray</h3>
+<h3 id="617--merge-two-binary-trees">617  Merge Two Binary Trees</h3>
+<h3 id="621--task-scheduler">621  Task Scheduler</h3>
+<h3 id="647--palindromic-substrings">647  Palindromic Substrings</h3>
+<h3 id="739--daily-temperatures">739  Daily Temperatures</h3>
+<h3 id="763--partition-labels">763  Partition Labels</h3>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2020-12-01
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://www.yezheng.pro/tags/leetcode/">leetCode</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/interview/algorithms/leetcode-solution-github/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">LeetCode Solution Github</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/interview/algorithms/leetcode-top-interview/">
+            <span class="next-text nav-default">LeetCode Top interview Questions</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://www.yezheng.pro/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2021
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

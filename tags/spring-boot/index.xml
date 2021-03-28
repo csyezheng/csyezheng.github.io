@@ -17,6 +17,35 @@
     </item>
     
     <item>
+      <title>Spring Config</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/spring/config/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/spring/config/</guid>
+      <description>application.properties import org.springframework.beans.factory.annotation.Value; import com.alibaba.fastjson.JSONObject; import org.apache.http.entity.ContentType; class MessageRestController { @Value(&amp;quot;${restService_url: default_url}&amp;quot;) private String url; @RequestMapping(&amp;quot;/message&amp;quot;) String getMessage() { CloseableHttpClient httpClient = HttpClients.createDefault(); String body; if (param instanceof String) { body = (String) param; } else { body = JSONObject.toJSONString(param); } try { // 创建Http Post请求 HttpPost httpPost = new HttpPost(url); // 添加http headers if</description>
+    </item>
+    
+    <item>
+      <title>Spring Context</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/spring/mybatis/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/spring/mybatis/</guid>
+      <description>applicationContext.xml &amp;lt;context:component-scan base-package=&amp;quot;org.example&amp;quot;/&amp;gt; Classpath scanning and managed components
+&amp;lt;bean id=&amp;quot;txManager&amp;quot; class=&amp;quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&amp;quot;&amp;gt; &amp;lt;property name=&amp;quot;dataSource&amp;quot; ref=&amp;quot;dataSource&amp;quot;/&amp;gt; &amp;lt;/bean&amp;gt; &amp;lt;tx:annotation-driven transaction-manager=&amp;quot;txManager&amp;quot;/&amp;gt; &amp;lt;tx:advice id=&amp;quot;txAdvice&amp;quot; transaction-manager=&amp;quot;txManager&amp;quot;&amp;gt; &amp;lt;tx:attributes&amp;gt; &amp;lt;tx:method name=&amp;quot;create*&amp;quot; propagation=&amp;quot;REQUIRED&amp;quot; timeout=&amp;quot;300&amp;quot; rollback-for=&amp;quot;java.lang.Exception&amp;quot; /&amp;gt; &amp;lt;tx:method name=&amp;quot;delete*&amp;quot; propagation=&amp;quot;REQUIRED&amp;quot; timeout=&amp;quot;300&amp;quot; rollback-for=&amp;quot;java.lang.Exception&amp;quot; /&amp;gt; &amp;lt;tx:method name=&amp;quot;update*&amp;quot; propagation=&amp;quot;REQUIRED&amp;quot; timeout=&amp;quot;300&amp;quot; rollback-for=&amp;quot;java.lang.Exception&amp;quot; /&amp;gt; &amp;lt;tx:method name=&amp;quot;get*&amp;quot; propagation=&amp;quot;REQUIRED&amp;quot; read-only=&amp;quot;true&amp;quot; timeout=&amp;quot;300&amp;quot; /&amp;gt; &amp;lt;tx:method name=&amp;quot;*&amp;quot; propagation=&amp;quot;REQUIRED&amp;quot; read-only=&amp;quot;true&amp;quot; timeout=&amp;quot;300&amp;quot; rollback-for=&amp;quot;java.lang.Exception&amp;quot;/&amp;gt; &amp;lt;/tx:attributes&amp;gt; &amp;lt;/tx:advice&amp;gt; &amp;lt;aop:config&amp;gt; &amp;lt;aop:pointcut id=&amp;quot;txPointcut&amp;quot; expression=&amp;quot;execution(* com.mico.emptyspring.service.*ServiceA.*(..))&amp;quot; /&amp;gt; &amp;lt;aop:advisor pointcut-ref=&amp;quot;txPointcut&amp;quot; advice-ref=&amp;quot;txAdvice&amp;quot; /&amp;gt; &amp;lt;/aop:config&amp;gt; Transaction Management
+&amp;lt;bean id=&amp;quot;sqlSessionFactory&amp;quot; class=&amp;quot;org.mybatis.spring.SqlSessionFactoryBean&amp;quot;&amp;gt; &amp;lt;property name=&amp;quot;dataSource&amp;quot; ref=&amp;quot;dataSource&amp;quot; /&amp;gt; &amp;lt;property name=&amp;quot;configuration&amp;quot;&amp;gt; &amp;lt;bean class=&amp;quot;org.</description>
+    </item>
+    
+    <item>
+      <title>Spring Practice</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/spring/practice/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/spring/practice/</guid>
+      <description>vo  package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } }  dao  import org.</description>
+    </item>
+    
+    <item>
       <title>Spring</title>
       <link>http://www.yezheng.pro/post/specialization/web-application/back-end/spring/</link>
       <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>

@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.81.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.61b9e7bcbd6f12a4e9f5db11b9643a2092aa9c93ca136cf497edd5e0f3efca61.css" integrity="sha256-YbnnvL1vEqTp9dsRuWQ6IJKqnJPKE2z0l&#43;3V4PPvymE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,10 +62,9 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-<meta property="og:updated_time" content="2021-03-07T00:00:00+00:00" />
+
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
-<meta itemprop="description" content="Here is where I keep my programming notes.">
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
 <meta name="twitter:description" content="Here is where I keep my programming notes."/>
 
@@ -296,15 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/front-end/html/">HTML</a>
+      <a class="post-link" href="/post/engineering-fundamentals/scala/getting-started/">Getting Started with Scala</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2015-11-21" class="post-time">
-        2015-11-21
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -316,10 +315,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Introduction to HTML Getting started with HTML What is HTML? HTML (Hypertext Markup Language) is not a programming language; it is a markup language used to tell your browser how to structure the web pages you visit. HTML consists of a series of elements, an element may contain a data item or a chunk of text or an image, or perhaps nothing. A typical element includes an opening tag with
+      Create A Scala Project With sbt In The Command Line Installation   Java 8 JDK javac -version 
+  install sbt
+  Create a project $ mkdir practice &amp;&amp; cd practice $ sbt new scala/hello-world.g8 # pull template from GitHub - hello-world - project (sbt uses this to install manage plugins and dependencies) - build.properties - src - main - scala (All of your scala code goes here) -Main.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/front-end/html/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/scala/getting-started/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,15 +331,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/master-path/learning-path/">learning path for computer science</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/gin/">Gin</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2015-01-01" class="post-time">
-        2015-01-01
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/master-path/"> master-path </a>
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -350,10 +351,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Mathematics Math19 Calculus Math20 Calculus Math21 Calculus Linear Algebra, Multivariable Calculus, and Modern Applications Description 线性代数部分包括正交性，线性独立性，矩阵代数和特征值，其应用包括最小二乘法，线性回归和马尔可夫链（与总体动力学
+      sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
+$ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/sessions&quot; cookie-based Example import ( &quot;github.com/gin-contrib/sessions&quot; &quot;github.com/gin-contrib/sessions/cookie&quot; &quot;github.com/gin-gonic/gin&quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&quot;secret&quot;)) r.Use(sessions.Sessions(&quot;mysession&quot;, store)) r.GET(&quot;/incr&quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&quot;count&quot;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&quot;count&quot;, count) session.
     </div>
     <div class="read-more">
-      <a href="/post/master-path/learning-path/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/gin/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -364,14 +366,17 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/any-path/hackintosh/"></a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/glide/">glide</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="0001-01-01" class="post-time">
-        0001-01-01
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
-      
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          
+        </div>
       
       
       
@@ -381,11 +386,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Hackintosh Install Full Guide Step 0: Preparation You will need a computer running macOS already to follow this guide. If you do not have a Mac you will need to spend some time setting up a virtual machine on your Windows/Linux PC first.
- vmware workstation vmware macos unlocker workstation unlocker: https://github.com/paolo-projects/unlocker.git Download macOS Catalina Image file for VMWare  Step 1: Download macOS Catalina Download Catalina 10.15 from the Mac App Store
+      使用 glide install 或 glide up 时报 Cannot detect VCS image.png 解决 这个是国内访问golang.org被墙导致的 解决方法如下： glide mirror set https://golang.org/x/crypto https://github.com/golang/crypto 理论上这样后再执行 glide install 或 glide up 就可以了 如果按
     </div>
     <div class="read-more">
-      <a href="/post/any-path/hackintosh/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/glide/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -441,9 +445,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -464,9 +466,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -487,9 +487,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -510,9 +508,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -533,9 +529,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -556,9 +550,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -579,9 +571,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -602,9 +592,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -625,9 +613,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -648,9 +634,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -671,9 +655,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -694,9 +676,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -717,9 +697,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -740,9 +718,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -763,9 +739,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -786,9 +760,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -809,9 +781,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -832,9 +802,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -855,9 +823,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -878,9 +844,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -901,9 +865,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -924,9 +886,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -947,9 +907,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -970,9 +928,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -993,9 +949,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -1016,9 +970,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -1039,9 +991,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -1062,9 +1012,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -1085,9 +1033,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -1108,9 +1054,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -1131,9 +1075,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -1154,9 +1096,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -1177,9 +1117,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -1200,9 +1138,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -1223,9 +1159,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -1246,9 +1180,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -1269,9 +1201,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -1292,9 +1222,7 @@
           
 
             
-            
 
-          
           
 
         
@@ -1315,104 +1243,72 @@
           
 
             
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
             
               
             
 
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/39/">
-              39
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/40/">
-              40
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
-          
-
-        
-        
-
-        
-        
-          <li class="">
-            <a href="/page/41/">
-              41
-            </a>
-          </li>
-        
-
-      
-
-        
-
-        
-        
-
-          
-          
-          
-
-            
-            
-              
-            
-
-          
           
 
         
@@ -1439,11 +1335,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1470,11 +1364,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1501,11 +1393,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1532,11 +1422,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1563,11 +1451,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1594,11 +1480,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1625,11 +1509,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1656,11 +1538,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1687,11 +1567,9 @@
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1708,6 +1586,492 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/52/">
+              52
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/53/">
+              53
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+              
+            
+
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/54/">
+              54
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/49/">»</a></li>
@@ -1715,7 +2079,7 @@
 
       
       
-      <li><a href="/page/51/">»»</a></li>
+      <li><a href="/page/73/">»»</a></li>
       
 
       </ul>

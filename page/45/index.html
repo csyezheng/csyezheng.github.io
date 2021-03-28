@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.81.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.61b9e7bcbd6f12a4e9f5db11b9643a2092aa9c93ca136cf497edd5e0f3efca61.css" integrity="sha256-YbnnvL1vEqTp9dsRuWQ6IJKqnJPKE2z0l&#43;3V4PPvymE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,10 +62,9 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-<meta property="og:updated_time" content="2021-03-07T00:00:00+00:00" />
+
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
-<meta itemprop="description" content="Here is where I keep my programming notes.">
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
 <meta name="twitter:description" content="Here is where I keep my programming notes."/>
 
@@ -296,15 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/any-path/git/">Git cheat sheet </a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/elasticsearch/">Elasticsearch Tutorial</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2016-10-30" class="post-time">
-        2016-10-30
+      <time datetime="2019-05-15" class="post-time">
+        2019-05-15
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -316,16 +315,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Create Clone an existing repository
-$ git clone ssh://user@domain.tld/repo.git Clone an existing repository and all its sub-modules recursively
-$ git clone --recurse-submodules ssh://user@domain.tld/repo.git Create a new local repository
-$ git init Configuration Set the name attached to all your commits
-$ git config [--global] user.name &lt;name&gt; Set the email attached to all your commits
-$ git config [--global] user.email &lt;email&gt; Set colorization of command line output for all repos
-$ git config [--global] color.
+      Getting Started Installing and Running Elasticsearch Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
+Installing Sense Sense is a Kibana app that provides an interactive console for submitting requests to Elasticsearch directly from your browser.
     </div>
     <div class="read-more">
-      <a href="/post/any-path/git/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/elasticsearch/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -336,15 +330,15 @@ $ git config [--global] color.
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/any-path/vim/">vim tutorial</a>
+      <a class="post-link" href="/post/specialization/big-data/elk-stack/">elk stack</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2016-10-30" class="post-time">
-        2016-10-30
+      <time datetime="2019-05-15" class="post-time">
+        2019-05-15
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
+          <a href="http://www.yezheng.pro/categories/big-data/"> big-data </a>
           
         </div>
       
@@ -356,17 +350,12 @@ $ git config [--global] color.
   <div class="post-content">
     
     <div class="post-summary">
-      vimtutor To move the cursor, press the h, j, k, l keys as indicated.
-:q! exits the editor, DISCARDING any changes you have made.
-Press x to delete the character under the cursor.
-Use :wq to save a file and exit.
-Press i to insert text.
-Type a to insert text AFTER the cursor.
-Press A to append text.
-Type o to open a line below the cursor and place you in Insert mode.
+      Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
+Install Beats Install Filebeat Install Metricbeat sudo pacman -S metricbeat sudo vim /etc/metricbeat/metricbeat.yml setup.dashboards.enabled: true From the Metricbeat install directory, enable the system module
+cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricbeat.
     </div>
     <div class="read-more">
-      <a href="/post/any-path/vim/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/big-data/elk-stack/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -377,15 +366,15 @@ Type o to open a line below the cursor and place you in Insert mode.
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/any-path/bash/">Bash Reference Manual</a>
+      <a class="post-link" href="/post/specialization/devops/docker/">Docker</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2016-09-26" class="post-time">
-        2016-09-26
+      <time datetime="2019-04-25" class="post-time">
+        2019-04-25
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
+          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
           
         </div>
       
@@ -397,11 +386,10 @@ Type o to open a line below the cursor and place you in Insert mode.
   <div class="post-content">
     
     <div class="post-summary">
-      Bash Reference Manual Basic Shell Features Shell Syntax Shell Operation Quoting Escape Character A non-quoted backslash \ is the Bash escape character. It preserves the literal value of the next character that follows, with the exception of \newline.
-Single Quotes Enclosing characters in single quotes (') preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash.
+      Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker sudo pacman -S docker systemctl start docker.
     </div>
     <div class="read-more">
-      <a href="/post/any-path/bash/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/devops/docker/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -457,9 +445,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -480,9 +466,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -503,9 +487,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -526,9 +508,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -549,9 +529,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -572,9 +550,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -595,9 +571,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -618,9 +592,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -641,9 +613,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -664,9 +634,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -687,9 +655,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -710,9 +676,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -733,9 +697,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -756,9 +718,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -779,9 +739,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -802,9 +760,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -825,9 +781,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -848,9 +802,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -871,9 +823,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -894,9 +844,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -917,9 +865,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -940,9 +886,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -963,9 +907,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -986,9 +928,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -1009,9 +949,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -1032,9 +970,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -1055,9 +991,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -1078,9 +1012,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -1101,9 +1033,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -1124,9 +1054,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -1147,9 +1075,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -1170,9 +1096,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -1193,9 +1117,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -1216,9 +1138,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -1239,9 +1159,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -1262,9 +1180,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -1285,9 +1201,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -1308,9 +1222,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
 
-          
           
 
         
@@ -1330,12 +1242,10 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
           
 
-            
             
               
             
 
-          
           
 
         
@@ -1362,11 +1272,9 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1393,11 +1301,9 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1424,11 +1330,9 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1455,11 +1359,9 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1486,11 +1388,9 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1517,11 +1417,9 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1548,11 +1446,9 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1579,11 +1475,9 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1610,11 +1504,9 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1641,11 +1533,9 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1672,11 +1562,9 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1703,11 +1591,9 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1724,6 +1610,468 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/46/">»</a></li>
@@ -1731,7 +2079,7 @@ Single Quotes Enclosing characters in single quotes (') preserves the literal va
 
       
       
-      <li><a href="/page/51/">»»</a></li>
+      <li><a href="/page/73/">»»</a></li>
       
 
       </ul>

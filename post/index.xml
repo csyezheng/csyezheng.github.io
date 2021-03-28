@@ -6,7 +6,101 @@
     <description>Recent content in Posts on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>distributed systems</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/distribute-systems/distribute-systems/</link>
+      <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/distribute-systems/distribute-systems/</guid>
+      <description>Java分布式应用如何入门以及有哪些资料？ 怎样才是一个基本水平的java程序员？</description>
+    </item>
+    
+    <item>
+      <title>summarization</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/summarization/</link>
+      <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/summarization/</guid>
+      <description> https://github.com/huggingface/transformers/tree/master/examples/seq2seq https://github.com/tensorflow/models/tree/master/research/textsum https://github.com/atulkum/pointer_summarizer https://github.com/vrindav/just-news-it https://github.com/pytorch/fairseq https://github.com/abisee/pointer-generator   </description>
+    </item>
+    
+    <item>
+      <title>domain-driven design read me</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/readme/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/readme/</guid>
+      <description> https://zhuanlan.zhihu.com/p/32459776 https://www.zhihu.com/question/25089273/answer/233316164 https://zhuanlan.zhihu.com/p/343388831 https://zhuanlan.zhihu.com/p/75931257 https://zhuanlan.zhihu.com/p/348706530 https://zhuanlan.zhihu.com/p/334999899 https://www.zhihu.com/question/31687912/answer/95842364 https://github.com/VaughnVernon/IDDD_Samples  </description>
+    </item>
+    
+    <item>
+      <title>domain-driven design with python</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/python/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/python/</guid>
+      <description> https://github.com/cosmicpython/code/branches/all Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices  </description>
+    </item>
+    
+    <item>
+      <title>products</title>
+      <link>http://www.yezheng.pro/post/specialization/product/product/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/product/product/</guid>
+      <description>APM(Application Performance Management) ADS(Application Deploy Service) WAS(WebSphere Application Server) Dynatrace Pinpoint UEM用户体验运营 ADS RDS 用户行为分析: Google Analysis AS SAAS: API Gateway: Kong/Kong Centralized config server: Apollo Nacos Spring Cloud Config Go Microservices, Part 8: Centralized Configuration With Viper and Spring Cloud Config spring-cloud-alibaba APM： Pinpoint CodeHub: GitLab SCS (Stream Compute Service): Flink</description>
+    </item>
+    
+    <item>
+      <title>[转]数据库系统概念</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5/</guid>
+      <description>第一章、引言 1.1 文件管理系统坏处 1.2 数据视图 1.3 数据模型 1.4 数据库语言 第二章、关系模型介绍 2.1 关系数据库的结构 2.2 数据库模式 2.3 码 第三章、SQL 3.1 SQL 查询语</description>
+    </item>
+    
+    <item>
+      <title>[转]数据库系统概念</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5%E7%AC%94%E8%AE%B0/</guid>
+      <description>引言 数据库管理系统（DBMS）由一个互相关联的数据的集合（数据库）和一组用以访问这些数据的程序组成。 数据库系统的一个主要目的是为用户提供数据</description>
+    </item>
+    
+    <item>
+      <title>Data Management and Data Systems</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/cs145/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/cs145/</guid>
+      <description>Why Databases? Concepts: Data models, DB systems overview
+SQL I Concepts: Schemas, Systems, Select-From-Where See Course Info for general submission information and the regrade policy.
+SQL II Concepts: Joins, Set operators, Subqueries
+SQL III Advanced Concepts: Grouping, Aggregations, Nested queries 9:30 AM — 10:20 AM Remote
+Scale: Indexing and IO Model Sorting, Building Indices Part 1 B+ Trees Query Optimization Part 1 See Course Info for general submission information and the regrade policy.</description>
+    </item>
+    
+    <item>
+      <title>Hands-On Docker for Microservices with Python</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/hands-on_docker_for_microservices_with_python/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/hands-on_docker_for_microservices_with_python/</guid>
+      <description>Preface For the technical aspects, we will use well-tailored tools, including the following: Python, to implement RESTful web services Git source control, to track the changes in an implementation, and GitHub, to share those changes Docker containers, to standardize the operation of each of the microservices Kubernetes, to coordinate the execution of multiple services Cloud services, such as Travis CI or AWS, to leverage existing commercial solutions to problems We</description>
+    </item>
+    
+    <item>
+      <title>microservices with python</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/microservices/python/</link>
+      <pubDate>Sun, 20 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/microservices/python/</guid>
+      <description>Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices Hands-On Microservices with Spring Boot and Spring Cloud: Build and deploy Java microservices using Spring Cloud, Istio, and Kubernetes  Hands-On Docker for Microservices with Python: Design, deploy, and operate a complex system with multiple microservices using Docker and Kubernetes</description>
+    </item>
+    
     <item>
       <title>evaluate the quality of the training phrases in intents</title>
       <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</link>
@@ -84,111 +178,21 @@ Record user events User events track user actions such as clicking on a product,
     </item>
     
     <item>
-      <title>algorithms interview questions</title>
-      <link>http://www.yezheng.pro/post/interview/algorithms/</link>
-      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      <title>search engine</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/architecture/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/interview/algorithms/</guid>
-      <description>1 红黑树 红黑树与AVL的比较： AVL是严格平衡树，因此在增加或者删除节点的时候，根据不同情况，旋转的次数比红黑树要多； 红黑是用非严格的平衡来</description>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/architecture/</guid>
+      <description>nginx gateway flask gunicorn microservice elasticsearch * 6 redis * 2 mysql * 3 mongo * 1</description>
     </item>
     
     <item>
-      <title>computer networks interview questions</title>
-      <link>http://www.yezheng.pro/post/interview/computer-networks/</link>
-      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      <title>search engine</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/article/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/interview/computer-networks/</guid>
-      <description>1 三次握手 客户端通过向服务器端发送一个SYN来创建一个主动打开，作为三次握手的一部分。客户端把这段连接的序号设定为随机数 A。 服务器端应当为一</description>
-    </item>
-    
-    <item>
-      <title>databases interview questions</title>
-      <link>http://www.yezheng.pro/post/interview/databases/</link>
-      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/databases/</guid>
-      <description>1 事务 数据库事务(Database Transaction) ，是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。 彻底理解数据库事务: http://www.hollischuang.com/archives/898 2 数</description>
-    </item>
-    
-    <item>
-      <title>LeetCode Top 100 Liked Questions</title>
-      <link>http://www.yezheng.pro/post/interview/leetcode-top-liked/</link>
-      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/leetcode-top-liked/</guid>
-      <description># Title Difficulty Train of thought     1 Two Sum Easy return indices of the two numbers in an array such that they add up to target. Can we use additional space somehow? Like maybe a hash map to speed up the search?   2 Add Two Numbers Medium two non-empty linked lists stored in reverse order representing two non-negative integers.   3 Longest Substring Without Repeating Characters Medium The reason is that if $s[j]$ have a duplicate in the range $[i, j)$ with index $j&#39;$, we don&amp;rsquo;t need to increase $i$ little by little.</description>
-    </item>
-    
-    <item>
-      <title>LeetCode Top interview Questions</title>
-      <link>http://www.yezheng.pro/post/interview/leetcode-top-interview/</link>
-      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/leetcode-top-interview/</guid>
-      <description>   # Title Difficulty Train of thought     1 Two Sum Easy    2 Add Two Numbers Medium    3 Longest Substring Without Repeating Characters Medium    4 Median of Two Sorted Arrays Hard    5 Longest Palindromic Substring Medium    7 Reverse Integer Easy    8 String to Integer (atoi) Medium    10 Regular Expression Matching Hard    11 Container With Most Water Medium    13 Roman to Integer Easy    14 Longest Common Prefix Easy    15 3Sum Medium    17 Letter Combinations of a Phone Number Medium    19 Remove Nth Node From End of List Medium    20 Valid Parentheses Easy    21 Merge Two Sorted Lists Easy    22 Generate Parentheses Medium    23 Merge k Sorted Lists Hard    26 Remove Duplicates from Sorted Array Easy    28 Implement strStr() Easy    29 Divide Two Integers Medium    33 Search in Rotated Sorted Array Medium    34 Find First and Last Position of Element in Sorted Array Medium    36 Valid Sudoku Medium    38 Count and Say Medium    41 First Missing Positive Hard    42 Trapping Rain Water Hard    44 Wildcard Matching Hard    46 Permutations Medium    48 Rotate Image Medium    49 Group Anagrams Medium    50 Pow(x, n) Medium    53 Maximum Subarray Easy    54 Spiral Matrix Medium    55 Jump Game Medium    56 Merge Intervals Medium    62 Unique Paths Medium    66 Plus One Easy    69 Sqrt(x) Easy    70 Climbing Stairs Easy    73 Set Matrix Zeroes Medium    75 Sort Colors Medium    76 Minimum Window Substring Hard    78 Subsets Medium    79 Word Search Medium    84 Largest Rectangle in Histogram Hard    88 Merge Sorted Array Easy    91 Decode Ways Medium    94 Binary Tree Inorder Traversal Medium    98 Validate Binary Search Tree Medium    101 Symmetric Tree Easy    102 Binary Tree Level Order Traversal Medium    103 Binary Tree Zigzag Level Order Traversal Medium    104 Maximum Depth of Binary Tree Easy    105 Construct Binary Tree from Preorder and Inorder Traversal Medium    108 Convert Sorted Array to Binary Search Tree Easy    116 Populating Next Right Pointers in Each Node Medium    118 Pascal&amp;rsquo;s Triangle Easy    121 Best Time to Buy and Sell Stock Easy    122 Best Time to Buy and Sell Stock II Easy    124 Binary Tree Maximum Path Sum Hard    125 Valid Palindrome Easy    127 Word Ladder Hard    128 Longest Consecutive Sequence Hard    130 Surrounded Regions Medium    131 Palindrome Partitioning Medium    134 Gas Station Medium    136 Single Number Easy    138 Copy List with Random Pointer Medium    139 Word Break Medium    140 Word Break II Hard    141 Linked List Cycle Easy    146 LRU Cache Medium    148 Sort List Medium    149 Max Points on a Line Hard    150 Evaluate Reverse Polish Notation Medium    152 Maximum Product Subarray Medium    155 Min Stack Easy    160 Intersection of Two Linked Lists Easy    162 Find Peak Element Medium    163 Missing Ranges Easy    166 Fraction to Recurring Decimal Medium    169 Majority Element Easy    171 Excel Sheet Column Number Easy    172 Factorial Trailing Zeroes Easy    179 Largest Number Medium    189 Rotate Array Medium    190 Reverse Bits Easy    191 Number of 1 Bits Easy    198 House Robber Medium    200 Number of Islands Medium    202 Happy Number Easy    204 Count Primes Easy    206 Reverse Linked List Easy    207 Course Schedule Medium    208 Implement Trie (Prefix Tree) Medium    210 Course Schedule II Medium    212 Word Search II Hard    215 Kth Largest Element in an Array Medium    217 Contains Duplicate Easy    218 The Skyline Problem Hard    227 Basic Calculator II Medium    230 Kth Smallest Element in a BST Medium    234 Palindrome Linked List Easy    236 Lowest Common Ancestor of a Binary Tree Medium    237 Delete Node in a Linked List Easy    238 Product of Array Except Self Medium    239 Sliding Window Maximum Hard    240 Search a 2D Matrix II Medium    242 Valid Anagram Easy    251 Flatten 2D Vector Medium    253 Meeting Rooms II Medium    268 Missing Number Easy    269 Alien Dictionary Hard    277 Find the Celebrity Medium    279 Perfect Squares Medium    283 Move Zeroes Easy    285 Inorder Successor in BST Medium    287 Find the Duplicate Number Medium    289 Game of Life Medium    295 Find Median from Data Stream Hard    297 Serialize and Deserialize Binary Tree Hard    300 Longest Increasing Subsequence Medium    308 Range Sum Query 2D - Mutable Hard    315 Count of Smaller Numbers After Self Hard    322 Coin Change Medium    324 Wiggle Sort II Medium    326 Power of Three Easy    328 Odd Even Linked List Medium    329 Longest Increasing Path in a Matrix Hard    334 Increasing Triplet Subsequence Medium    340 Longest Substring with At Most K Distinct Characters Medium    341 Flatten Nested List Iterator Medium    344 Reverse String Easy    347 Top K Frequent Elements Medium    348 Design Tic-Tac-Toe Medium    350 Intersection of Two Arrays II Easy    371 Sum of Two Integers Medium    378 Kth Smallest Element in a Sorted Matrix Medium    380 Insert Delete GetRandom O(1) Medium    384 Shuffle an Array Medium    387 First Unique Character in a String Easy    395 Longest Substring with At Least K Repeating Characters Medium    412 Fizz Buzz Easy    454 4Sum II Medium     1 Two Sum 2 Add Two Numbers 3 Longest Substring Without Repeating Characters 4 Median of Two Sorted Arrays 5 Longest Palindromic Substring 7 Reverse Integer 8 String to Integer (atoi) 10 Regular Expression Matching 11 Container With Most Water 13 Roman to Integer 14 Longest Common Prefix 15 3Sum 17 Letter Combinations of a Phone Number 19 Remove Nth Node From End of List 20 Valid Parentheses 21 Merge Two Sorted Lists 22 Generate Parentheses 23 Merge k Sorted Lists 26 Remove Duplicates from Sorted Array 28 Implement strStr() 29 Divide Two Integers 33 Search in Rotated Sorted Array 34 Find First and Last Position of Element in Sorted Array 36 Valid Sudoku 38 Count and Say 41 First Missing Positive 42 Trapping Rain Water 44 Wildcard Matching 46 Permutations 48 Rotate Image 49 Group Anagrams 50 Pow(x, n) 53 Maximum Subarray 54 Spiral Matrix 55 Jump Game 56 Merge Intervals 62 Unique Paths 66 Plus One 69 Sqrt(x) 70 Climbing Stairs 73 Set Matrix Zeroes 75 Sort Colors 76 Minimum Window Substring 78 Subsets 79 Word Search 84 Largest Rectangle in Histogram 88 Merge Sorted Array 91 Decode Ways 94 Binary Tree Inorder Traversal 98 Validate Binary Search Tree 101 Symmetric Tree 102 Binary Tree Level Order Traversal 103 Binary Tree Zigzag Level Order Traversal 104 Maximum Depth of Binary Tree 105 Construct Binary Tree from Preorder and Inorder Traversal 108 Convert Sorted Array to Binary Search Tree 116 Populating Next Right Pointers in Each Node 118 Pascal&amp;rsquo;s Triangle 121 Best Time to Buy and Sell Stock 122 Best Time to Buy and Sell Stock II 124 Binary Tree Maximum Path Sum 125 Valid Palindrome 127 Word Ladder 128 Longest Consecutive Sequence 130 Surrounded Regions 131 Palindrome Partitioning 134 Gas Station 136 Single Number 138 Copy List with Random Pointer 139 Word Break 140 Word Break II 141 Linked List Cycle 146 LRU Cache 148 Sort List 149 Max Points on a Line 150 Evaluate Reverse Polish Notation 152 Maximum Product Subarray 155 Min Stack 160 Intersection of Two Linked Lists 162 Find Peak Element 163 Missing Ranges 166 Fraction to Recurring Decimal 169 Majority Element 171 Excel Sheet Column Number 172 Factorial Trailing Zeroes 179 Largest Number 189 Rotate Array 190 Reverse Bits 191 Number of 1 Bits 198 House Robber 200 Number of Islands 202 Happy Number 204 Count Primes 206 Reverse Linked List 207 Course Schedule 208 Implement Trie (Prefix Tree) 210 Course Schedule II 212 Word Search II 215 Kth Largest Element in an Array 217 Contains Duplicate 218 The Skyline Problem 227 Basic Calculator II 230 Kth Smallest Element in a BST 234 Palindrome Linked List 236 Lowest Common Ancestor of a Binary Tree 237 Delete Node in a Linked List 238 Product of Array Except Self 239 Sliding Window Maximum 240 Search a 2D Matrix II 242 Valid Anagram 251 Flatten 2D Vector 253 Meeting Rooms II 268 Missing Number 269 Alien Dictionary 277 Find the Celebrity 279 Perfect Squares 283 Move Zeroes 285 Inorder Successor in BST 287 Find the Duplicate Number 289 Game of Life 295 Find Median from Data Stream 297 Serialize and Deserialize Binary Tree 300 Longest Increasing Subsequence 308 Range Sum Query 2D - Mutable 315 Count of Smaller Numbers After Self 322 Coin Change 324 Wiggle Sort II 326 Power of Three 328 Odd Even Linked List 329 Longest Increasing Path in a Matrix 334 Increasing Triplet Subsequence 340 Longest Substring with At Most K Distinct Characters 341 Flatten Nested List Iterator 344 Reverse String 347 Top K Frequent Elements 348 Design Tic-Tac-Toe 350 Intersection of Two Arrays II 371 Sum of Two Integers 378 Kth Smallest Element in a Sorted Matrix 380 Insert Delete GetRandom O(1) 384 Shuffle an Array 387 First Unique Character in a String 395 Longest Substring with At Least K Repeating Characters 412 Fizz Buzz 454 4Sum II </description>
-    </item>
-    
-    <item>
-      <title>operation systems interview questions</title>
-      <link>http://www.yezheng.pro/post/interview/operating-systems/</link>
-      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/operating-systems/</guid>
-      <description>1 select,poll和epoll 其实所有的I/O都是轮询的方法,只不过实现的层面不同罢了. 这个问题可能有点深入了,但相信能回答出这个问题</description>
-    </item>
-    
-    <item>
-      <title>python interview questions</title>
-      <link>http://www.yezheng.pro/post/interview/python/</link>
-      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/python/</guid>
-      <description>1 Python的函数参数传递 看两个例子: a = 1 def fun(a): a = 2 fun(a) print a # 1 a = [] def fun(a): a.append(1) fun(a) print a # [1] 所有的变量都可以理解是内存中一个对象的“引用”，或者</description>
-    </item>
-    
-    <item>
-      <title>redis interview questions</title>
-      <link>http://www.yezheng.pro/post/interview/redis/</link>
-      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/redis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Deploying machine learning models in production</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/deploy/</link>
-      <pubDate>Sun, 29 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/deploy/</guid>
-      <description>Reference 训练好的深度学习模型是怎么部署的？ PyTorch模型的加速及部署 ahkarami/Deep-Learning-in-Production Accelerating Inference In TF-TRT User Guide tensorflow/tensorrt Tensorrt API Reference Containers: nvidia:tensorflow Model inference using TensorFlow and TensorRT Speed up TensorFlow Inference on GPUs with TensorRT TF20-TF-TRT-inference-from-Keras-saved-model.ipynb</description>
-    </item>
-    
-    <item>
-      <title>Developing Lightweight Microservices Using Kubernetes</title>
-      <link>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-kubernetes/</link>
-      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-kubernetes/</guid>
-      <description>Introduction to Kubernetes Deploying Our Microservices in Kubernetes Implementing Kubernetes Features as an Alternative Using a Service Mesh to Improve Observability and Management Centralized Logging with the EFK Stack Monitoring Microservices </description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Microservice Development Using Spring Boot</title>
-      <link>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-spring-boot/</link>
-      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-spring-boot/</guid>
-      <description>Introduction to Microservices Benefits Each component in the platform can be delivered and upgraded separately. Each component in the platform can also be scaled out to multiple servers independently Challenges Many small components that use synchronous communication can cause a chain of failure problem, especially under high load. Keeping the configuration consistent and up to date in all the instances Monitoring the state of the platform in terms of latency</description>
-    </item>
-    
-    <item>
-      <title>Leveraging Spring Cloud to Manage Microservices</title>
-      <link>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-spring-cloud/</link>
-      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-spring-cloud/</guid>
-      <description>Introduction to Spring Cloud    Design pattern Current component Replaced by Software component     Service discovery Netflix Eureka &amp;amp; Netflix Ribbon Netflix Eureka and Spring Cloud load balancer   Edge server Netflix Zuul Spring Cloud Gateway and Spring Security OAuth   Centralized configuration  Spring Cloud Configuration Server   Circuit breaker Netflix Hystrix Resilience4j   Distributed tracing  Spring Cloud Sleuth and Zipkin    Adding Service Discovery Using Netflix Eureka and Ribbon Using Spring Cloud Gateway to Hide Microservices Behind an Edge Server Securing Access to APIs Centralized Configuration Improving Resilience Using Resilience4j Understanding Distributed Tracing </description>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/article/</guid>
+      <description>https://www.6aiq.com/article/1588904027930?m=0&amp;amp;p=1 全面理解搜索 Query https://m.sohu.com/a/341401199_473283/ https://blog.csdn.net/qq_40027052/article/details/78579587</description>
     </item>
     
   </channel>

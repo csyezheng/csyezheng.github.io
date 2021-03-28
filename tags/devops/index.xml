@@ -69,6 +69,34 @@ mysql -h 172.</description>
     </item>
     
     <item>
+      <title>DevOps books</title>
+      <link>http://www.yezheng.pro/post/specialization/devops/books/</link>
+      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/devops/books/</guid>
+      <description>Python for DevOps: Learn Ruthlessly Effective Automation  Hands-On Docker for Microservices with Python: Design, deploy, and operate a complex system with multiple microservices using Docker and Kubernetes
+Ansible for DevOps: Server and configuration management for humans
+Terraform: Up &amp;amp; Running: Writing Infrastructure as Code
+Kubernetes: Up and Running: Dive into the Future of Infrastructure</description>
+    </item>
+    
+    <item>
+      <title>DevOps CI/CD</title>
+      <link>http://www.yezheng.pro/post/specialization/devops/tools/</link>
+      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/devops/tools/</guid>
+      <description>Gitlab https://gitlab.com/gitlab-org/gitlab
+https://github.com/gitlabhq/gitlabhq
+https://docs.gitlab.com/ee/README.html
+Docker integration https://docs.gitlab.com/ee/ci/docker/README.html
+Jenkins CI service https://docs.gitlab.com/ee/integration/jenkins.html
+GitLab Jira integration https://docs.gitlab.com/ee/user/project/integrations/jira.html
+Auto DevOps https://docs.gitlab.com/ee/topics/autodevops/
+Auto Build Auto Build using a Dockerfile Auto Test Auto Code Quality Auto SAST Auto Secret Detection Auto Load Performance Testing Auto Deploy JIRA </description>
+    </item>
+    
+    <item>
       <title>Kubernetes Basics</title>
       <link>http://www.yezheng.pro/post/specialization/devops/kubernetes/</link>
       <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
@@ -78,6 +106,15 @@ mysql -h 172.</description>
 applications need to be packaged in a way that decouples them from individual hosts: they need to be containerized.
 Kubernetes automates the distribution and scheduling of application containers across a cluster in a more efficient way.
 A Kubernetes cluster consists of two types of resources:</description>
+    </item>
+    
+    <item>
+      <title>project management</title>
+      <link>http://www.yezheng.pro/post/specialization/devops/project-management/</link>
+      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/devops/project-management/</guid>
+      <description></description>
     </item>
     
     <item>

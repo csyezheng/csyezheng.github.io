@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.81.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.61b9e7bcbd6f12a4e9f5db11b9643a2092aa9c93ca136cf497edd5e0f3efca61.css" integrity="sha256-YbnnvL1vEqTp9dsRuWQ6IJKqnJPKE2z0l&#43;3V4PPvymE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,10 +62,9 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-<meta property="og:updated_time" content="2021-03-07T00:00:00+00:00" />
+
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
-<meta itemprop="description" content="Here is where I keep my programming notes.">
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
 <meta name="twitter:description" content="Here is where I keep my programming notes."/>
 
@@ -296,15 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/cpp/3rd-libraries/">C&#43;&#43; 3rd party libraries</a>
+      <a class="post-link" href="/post/specialization/web-application/spring/mybatis/">Spring Context</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-09-15" class="post-time">
-        2019-09-15
+      <time datetime="2020-11-18" class="post-time">
+        2020-11-18
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -316,10 +315,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      grpc/libevent/libev/libasio 实现高性能网络服务器 protobuf 数据结构序列化/反序列化，方便数据交换 LevelDB/RocksDB 嵌入式KV数据库 snappy/zlib/lz4 数据压缩，解压缩 jemalloc/tcmalloc 高效内存分配器，尤其多线程场景 jerasure Reed Sol
+      applicationContext.xml &lt;context:component-scan base-package=&quot;org.example&quot;/&gt; Classpath scanning and managed components
+&lt;bean id=&quot;txManager&quot; class=&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt; &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt; &lt;/bean&gt; &lt;tx:annotation-driven transaction-manager=&quot;txManager&quot;/&gt; &lt;tx:advice id=&quot;txAdvice&quot; transaction-manager=&quot;txManager&quot;&gt; &lt;tx:attributes&gt; &lt;tx:method name=&quot;create*&quot; propagation=&quot;REQUIRED&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot; /&gt; &lt;tx:method name=&quot;delete*&quot; propagation=&quot;REQUIRED&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot; /&gt; &lt;tx:method name=&quot;update*&quot; propagation=&quot;REQUIRED&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot; /&gt; &lt;tx:method name=&quot;get*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; timeout=&quot;300&quot; /&gt; &lt;tx:method name=&quot;*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot;/&gt; &lt;/tx:attributes&gt; &lt;/tx:advice&gt; &lt;aop:config&gt; &lt;aop:pointcut id=&quot;txPointcut&quot; expression=&quot;execution(* com.mico.emptyspring.service.*ServiceA.*(..))&quot; /&gt; &lt;aop:advisor pointcut-ref=&quot;txPointcut&quot; advice-ref=&quot;txAdvice&quot; /&gt; &lt;/aop:config&gt; Transaction Management
+&lt;bean id=&quot;sqlSessionFactory&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&gt; &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt; &lt;property name=&quot;configuration&quot;&gt; &lt;bean class=&quot;org.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/cpp/3rd-libraries/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/spring/mybatis/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,15 +331,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/cpp/jsoncpp/">jsoncpp</a>
+      <a class="post-link" href="/post/specialization/web-application/spring/practice/">Spring Practice</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-09-15" class="post-time">
-        2019-09-15
+      <time datetime="2020-11-18" class="post-time">
+        2020-11-18
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -350,10 +351,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      
+      vo  package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } }  dao  import org.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/cpp/jsoncpp/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/spring/practice/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -364,15 +365,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/cpp/cmake/">CMake</a>
+      <a class="post-link" href="/post/any-path/blog/">Link custom domain to Github pages</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-09-13" class="post-time">
-        2019-09-13
+      <time datetime="2020-11-15" class="post-time">
+        2020-11-15
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
           
         </div>
       
@@ -384,10 +385,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      如果工程存在多个目录,需要确保每个要管理的目录都存在一个 CMakeLists.txt． Set a name, version, and enable languages for the entire project. project(&lt;PROJECT-NAME&gt; [LANGUAGES] [&lt;language-name&gt;...]) Sets the name of the project and stores the name in the PROJECT_NAME
+      Register Domain Name Namesilo
+Use a Custom Domain If you’d like to use a custom domain for your GitHub Pages site, create a file static/CNAME. Your custom domain name should be the only contents inside CNAME. Since it’s inside static, the published site will contain the CNAME file at the root of the published site, which is a requirements of GitHub Pages.
+DNS service provider Create Cloudflare account Enter your domain name yezheng.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/cpp/cmake/" class="read-more-link">Read more</a>
+      <a href="/post/any-path/blog/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1608,6 +1611,468 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/23/">»</a></li>
@@ -1615,7 +2080,7 @@
 
       
       
-      <li><a href="/page/51/">»»</a></li>
+      <li><a href="/page/73/">»»</a></li>
       
 
       </ul>

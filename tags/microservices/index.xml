@@ -6,7 +6,25 @@
     <description>Recent content in microservices on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hands-On Docker for Microservices with Python</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/hands-on_docker_for_microservices_with_python/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/hands-on_docker_for_microservices_with_python/</guid>
+      <description>Preface For the technical aspects, we will use well-tailored tools, including the following: Python, to implement RESTful web services Git source control, to track the changes in an implementation, and GitHub, to share those changes Docker containers, to standardize the operation of each of the microservices Kubernetes, to coordinate the execution of multiple services Cloud services, such as Travis CI or AWS, to leverage existing commercial solutions to problems We</description>
+    </item>
+    
+    <item>
+      <title>microservices with python</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/microservices/python/</link>
+      <pubDate>Sun, 20 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/microservices/python/</guid>
+      <description>Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices Hands-On Microservices with Spring Boot and Spring Cloud: Build and deploy Java microservices using Spring Cloud, Istio, and Kubernetes  Hands-On Docker for Microservices with Python: Design, deploy, and operate a complex system with multiple microservices using Docker and Kubernetes</description>
+    </item>
+    
     <item>
       <title>Developing Lightweight Microservices Using Kubernetes</title>
       <link>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-kubernetes/</link>

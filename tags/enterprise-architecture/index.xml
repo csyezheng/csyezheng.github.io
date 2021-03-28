@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>enterprise-architecture on Ye Zheng&#39;s Blog</title>
+    <link>http://www.yezheng.pro/tags/enterprise-architecture/</link>
+    <description>Recent content in enterprise-architecture on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/enterprise-architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enterprise Architecture: roles</title>
+      <link>http://www.yezheng.pro/post/enterprise-architecture/enterprise-architecture/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/enterprise-architecture/enterprise-architecture/</guid>
+      <description>Reference Enterprise Architecture An overview</description>
+    </item>
+    
+    <item>
+      <title>Enterprise Architecture: roles</title>
+      <link>http://www.yezheng.pro/post/enterprise-architecture/roles/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/enterprise-architecture/roles/</guid>
+      <description>xx业务应用部 产品经理 技术架构师 应用架构师 子产品经理 BA: 提供满足业务需求的IT解决方案 SE TE 子产品经理 BA SE TE … 产品经理 技术架构师 应用架构师 子产品</description>
+    </item>
+    
+  </channel>
+</rss>

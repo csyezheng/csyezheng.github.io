@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>systems on Ye Zheng&#39;s Blog</title>
+    <link>http://www.yezheng.pro/categories/systems/</link>
+    <description>Recent content in systems on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 19 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/systems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[转]数据库系统概念</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5/</guid>
+      <description>第一章、引言 1.1 文件管理系统坏处 1.2 数据视图 1.3 数据模型 1.4 数据库语言 第二章、关系模型介绍 2.1 关系数据库的结构 2.2 数据库模式 2.3 码 第三章、SQL 3.1 SQL 查询语</description>
+    </item>
+    
+    <item>
+      <title>[转]数据库系统概念</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5%E7%AC%94%E8%AE%B0/</guid>
+      <description>引言 数据库管理系统（DBMS）由一个互相关联的数据的集合（数据库）和一组用以访问这些数据的程序组成。 数据库系统的一个主要目的是为用户提供数据</description>
+    </item>
+    
+    <item>
+      <title>Data Management and Data Systems</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/cs145/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/cs145/</guid>
+      <description>Why Databases? Concepts: Data models, DB systems overview
+SQL I Concepts: Schemas, Systems, Select-From-Where See Course Info for general submission information and the regrade policy.
+SQL II Concepts: Joins, Set operators, Subqueries
+SQL III Advanced Concepts: Grouping, Aggregations, Nested queries 9:30 AM — 10:20 AM Remote
+Scale: Indexing and IO Model Sorting, Building Indices Part 1 B+ Trees Query Optimization Part 1 See Course Info for general submission information and the regrade policy.</description>
+    </item>
+    
+    <item>
+      <title>Transport Layer</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-3/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-3/</guid>
+      <description>Introduction and Transport-Layer Services 运输层位于应用层和网络层之间，该层为运行在不同主机上的应用进程提供直接的通信服务，它将网络层的在两个端系统之间的交付服务扩展到运行在</description>
+    </item>
+    
+    <item>
+      <title>Application Layer</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-2/</link>
+      <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-2/</guid>
+      <description>Principles of Network Applications 研究网络应用程序的核心是写出能够运行在不同的端系统和通过网络彼此通信的程序。不需要写在网络核心设备如路由器或链路层交换机上运行的软件</description>
+    </item>
+    
+    <item>
+      <title>Computer Networks and the Internet</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-1/</link>
+      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-1/</guid>
+      <description>What Is the Internet? A Nuts-and-Bolts Description 设备：称为主机（host）或端系统（end system） 端系统通过**通信链路（communication link）和分组交换</description>
+    </item>
+    
+    <item>
+      <title>How the Internet Works</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/computer-networking/how-the-internet-works/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/computer-networking/how-the-internet-works/</guid>
+      <description>Multiple packets in pipeline at same time Packets may be damaged Packets may arrive out of order Packets may be duplicated They may not arrive at all!  Summary so far: Applications send and receive data in packets over an Internet that is unreliable.
+How packets find their way across the Internet? Internet addresses | Data | Internet &amp;ldquo;IP&amp;rdquo; Address |
+All Internet packets carry a destination IP address. We usually write the IP address like this: 171.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Computer Networking</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/computer-networking/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/computer-networking/</guid>
+      <description>How the Internet works
+Application protocols
+Transport &amp;amp; reliability
+TCP
+Packet Switching Part 1
+Packet Switching Part 2
+Why Congestion Control
+How Congestion Control
+Routing Lecture 1
+Routing Lecture 2
+Ethernet
+Physical and Link layers
+Disaggregation SDN
+Network Virtualization</description>
+    </item>
+    
+  </channel>
+</rss>

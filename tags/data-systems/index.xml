@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data-systems on Ye Zheng&#39;s Blog</title>
+    <link>http://www.yezheng.pro/tags/data-systems/</link>
+    <description>Recent content in data-systems on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 19 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/data-systems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[转]数据库系统概念</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5/</guid>
+      <description>第一章、引言 1.1 文件管理系统坏处 1.2 数据视图 1.3 数据模型 1.4 数据库语言 第二章、关系模型介绍 2.1 关系数据库的结构 2.2 数据库模式 2.3 码 第三章、SQL 3.1 SQL 查询语</description>
+    </item>
+    
+    <item>
+      <title>[转]数据库系统概念</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5%E7%AC%94%E8%AE%B0/</guid>
+      <description>引言 数据库管理系统（DBMS）由一个互相关联的数据的集合（数据库）和一组用以访问这些数据的程序组成。 数据库系统的一个主要目的是为用户提供数据</description>
+    </item>
+    
+    <item>
+      <title>Data Management and Data Systems</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/cs145/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/cs145/</guid>
+      <description>Why Databases? Concepts: Data models, DB systems overview
+SQL I Concepts: Schemas, Systems, Select-From-Where See Course Info for general submission information and the regrade policy.
+SQL II Concepts: Joins, Set operators, Subqueries
+SQL III Advanced Concepts: Grouping, Aggregations, Nested queries 9:30 AM — 10:20 AM Remote
+Scale: Indexing and IO Model Sorting, Building Indices Part 1 B+ Trees Query Optimization Part 1 See Course Info for general submission information and the regrade policy.</description>
+    </item>
+    
+  </channel>
+</rss>

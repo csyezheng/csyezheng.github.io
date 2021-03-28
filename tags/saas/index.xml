@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>saas on Ye Zheng&#39;s Blog</title>
+    <link>http://www.yezheng.pro/tags/saas/</link>
+    <description>Recent content in saas on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/saas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SaaS</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/saas/saas/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/saas/saas/</guid>
+      <description> https://blog.sentry.io/2018/11/14/how-to-build-saas-application/ https://youtu.be/W1fkGyIcePA  </description>
+    </item>
+    
+    <item>
+      <title>SaaS with Flask</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/saas/flask/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/saas/flask/</guid>
+      <description> https://github.com/nickjj/build-a-saas-app-with-flask  </description>
+    </item>
+    
+  </channel>
+</rss>

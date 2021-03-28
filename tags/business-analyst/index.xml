@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>business-analyst on Ye Zheng&#39;s Blog</title>
+    <link>http://www.yezheng.pro/tags/business-analyst/</link>
+    <description>Recent content in business-analyst on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/business-analyst/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Business analyst</title>
+      <link>http://www.yezheng.pro/post/enterprise-architecture/business-analyst/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/enterprise-architecture/business-analyst/</guid>
+      <description>BA目标 以用户为中心，实现用户体验的持续改进，提升用户满意度 BA职责 参与产品架构的规划，负责产品应用架构的看护，确保产品需求符合产品应用架构</description>
+    </item>
+    
+  </channel>
+</rss>

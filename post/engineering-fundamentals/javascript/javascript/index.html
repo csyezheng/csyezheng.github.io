@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.81.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/engineering-fundamentals/javascript/javascript/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.61b9e7bcbd6f12a4e9f5db11b9643a2092aa9c93ca136cf497edd5e0f3efca61.css" integrity="sha256-YbnnvL1vEqTp9dsRuWQ6IJKqnJPKE2z0l&#43;3V4PPvymE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,19 +62,15 @@
 <meta property="og:title" content="JavaScript" />
 <meta property="og:description" content="概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.yezheng.pro/post/engineering-fundamentals/javascript/javascript/" />
-<meta property="article:published_time" content="2019-03-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-03-01T00:00:00+00:00" />
+<meta property="og:url" content="http://www.yezheng.pro/post/engineering-fundamentals/javascript/javascript/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-03-01T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2019-03-01T00:00:00&#43;00:00" />
+
 <meta itemprop="name" content="JavaScript">
-<meta itemprop="description" content="概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //">
-<meta itemprop="datePublished" content="2019-03-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="description" content="概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //"><meta itemprop="datePublished" content="2019-03-01T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-03-01T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="5067">
-
-
-
-<meta itemprop="keywords" content="JavaScript," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="JavaScript," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="JavaScript"/>
 <meta name="twitter:description" content="概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //"/>
 
@@ -393,8 +389,8 @@ null === underfined    // return false
 // array</p>
 <pre><code>// 对象是键值对的集合，字符串到值得映射
 let book = {
-    topic: &quot;JavaScript&quot;,
-    fat: true
+	topic: &quot;JavaScript&quot;,
+	fat: true
 };
 
 // 通过&quot;.&quot;或&quot;[]&quot;来访问对象属性
@@ -411,12 +407,12 @@ primes[4] = 9;                // 通过赋值来添加新元素，底层是链�
 
 // 数组和对象都可以包含另一个数组或对象
 let points = [
-    {x: 0, y: 0},
-    {x: 1, y: 1}
+	{x: 0, y: 0},
+	{x: 1, y: 1}
 ];
 let data = {
-    trial1: [[1,2 ], [3,4]],
-    trial2: [[2,3],[4,5]]
+	trial1: [[1,2 ], [3,4]],
+	trial2: [[2,3],[4,5]]
 };
 
 
@@ -450,15 +446,15 @@ a === b;   // true
 let a = ['a', 'b', 'c']
 let b = [];
 for (let i = 0; i &lt; a.length; i++) {
-    b[i] = a[i];
+	b[i] = a[i];
 }
 
 // 比较两个单独的对象或数组
 function equalArrays(a, b) {
-    if (a.length != b.length) return false;
-    for (let i = 0; i &lt; a.length; i++)
+	if (a.length != b.length) return false;
+	for (let i = 0; i &lt; a.length; i++)
         if (a[i] !== b[i] return false;
-    return true;
+	return true;
 }
 
 
@@ -531,17 +527,17 @@ d instanceof Object;     // true      所有对象都是object的实例
 
 // eval()
 // ? :
-    x &gt; 0 ? x : -x
+	x &gt; 0 ? x : -x
 // typeof
-    (typeof value == &quot;string&quot;) ? &quot;'&quot; + value + &quot;'&quot; : value
+	(typeof value == &quot;string&quot;) ? &quot;'&quot; + value + &quot;'&quot; : value
 // delete 删除对象属性或数组元素
-    let o = {x:1, y:2};
-    delete o.x;
-    let a = [1,2,3];
-    delete a[2];          
-    a.length                 // =&gt; 3 删除属性或者删除数组元素是设置了一个underfined的值
+	let o = {x:1, y:2};
+	delete o.x;
+	let a = [1,2,3];
+	delete a[2];          
+	a.length                 // =&gt; 3 删除属性或者删除数组元素是设置了一个underfined的值
 // void
-    出现在操作数之前，操作数会照常计算，但会忽略计算结果并返回underfined
+	出现在操作数之前，操作数会照常计算，但会忽略计算结果并返回underfined
 </code></pre>
 <p>​
 ​	// &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; function &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
@@ -564,77 +560,77 @@ a.reverse();
 
 // 自定义方法，this 是对定义方法的对象的引用
 points.dist = function() {
-    let p1 = this[0];
-    let p2 = this[2];
-    let a = p2.x - p1.x;
-    let b = p2.y - p1.y，吗 
-    return Math.sqrt(a * a + b * b);
+	let p1 = this[0];
+	let p2 = this[2];
+	let a = p2.x - p1.x;
+	let b = p2.y - p1.y，吗 
+	return Math.sqrt(a * a + b * b);
 };
 points.dist()
 
 // ------------------------------ control sentence ------------------------------------ 
 
 function abx(x) {
-    if (x &gt; 0) {
+	if (x &gt; 0) {
         return x;
-    } else if (x = 0) {
+	} else if (x = 0) {
         return x;
-    } else {
+	} else {
         return -x;
-    }
+	}
 }
 
 switch(n) {
-    case 1:
+	case 1:
         statements
         break;
-    case 2;
+	case 2;
         statements
         break;
-    default:
+	default:
         statements
         break;
 }
 
 function factorial(n) {
-    let product = 1;
-    while (n &gt; 1) {
+	let product = 1;
+	while (n &gt; 1) {
         product *= n;
         n--;
-    }
-    return product;
+	}
+	return product;
 }
 
 factorial(4);
 
 function factorial2(n) {
-    let i, product = 1;
-    for (i = 2; i &lt;= n; i++)
+	let i, product = 1;
+	for (i = 2; i &lt;= n; i++)
         product *= i;
-    return product;
+	return product;
 }
 
 factorial2(5)
 
 for (let variable in object)
-    object[variable]            // 依次枚举对象的属性或者数组的索引，内置方法是不可枚举的
+	object[variable]            // 依次枚举对象的属性或者数组的索引，内置方法是不可枚举的
 	
 break;
 continue;
 
 try {
-    statements
+	statements
 }
 catch(e) {
-    statements
-    throw expression;
+	statements
+	throw expression;
 }
 finally {
-    statements
+	statements
 }
 
 with (object) {
-    statement                        // 临时扩展作用域链，不要用
+	statement                        // 临时扩展作用域链，不要用
 }
 
 debugger;
@@ -648,30 +644,30 @@ debugger;
 普通对象都从原型对象继承了属性，对象方法通常是继承的属性，原型式继承。
 JavaScript对象是动态的，可新增属性，也可删除属性。对象是可变的，而且简单拷贝其实是引用。
 直接量:
-    let book = {
+	let book = {
         &quot;main title&quot;: &quot;JavaScript&quot;,          // 属性名里用空格或连字符或保留字，必须用字符串表示
         author: {
             firstname: &quot;David&quot;,
             surname: &quot;Flanagan&quot;
         }
-    };
+	};
 使用new:
-    let o = new Object();
-    let a = new Array();
-    let d = new Date();
-    let r = new RegExp(&quot;js&quot;);
+	let o = new Object();
+	let a = new Array();
+	let d = new Date();
+	let r = new RegExp(&quot;js&quot;);
 原型：
-    Object.prototype获得对原型对象的引用，通过new和构造函数调用创建的对象的原型就是构造函数的prototype属性的值。
-    new Object()创建的对象继承自Object.prototype  
-    new Array()创建的对象继承自 Array.prototype和Object.prototype 
-    new Date()创建的对象继承自Date.prototype和Object.prototype 
-    所有的内置构造函数都具有一个继承自Object.prototype的原型
-    原型链
+	Object.prototype获得对原型对象的引用，通过new和构造函数调用创建的对象的原型就是构造函数的prototype属性的值。
+	new Object()创建的对象继承自Object.prototype  
+	new Array()创建的对象继承自 Array.prototype和Object.prototype 
+	new Date()创建的对象继承自Date.prototype和Object.prototype 
+	所有的内置构造函数都具有一个继承自Object.prototype的原型
+	原型链
 Object.create():
-    let o1 = Object.create({x:1, y:2});
-    let o3 = Object.create(Object.prototype);       // =&gt; {}   the same as new Object()
+	let o1 = Object.create({x:1, y:2});
+	let o3 = Object.create(Object.prototype);       // =&gt; {}   the same as new Object()
 	
-    function inherit(p) {
+	function inherit(p) {
         if (p == null) throw TypeError();
         if (Object.create) return Object.create(p);
         let t = typeof p;
@@ -679,23 +675,23 @@ Object.create():
         function f() {};                        // 定义一个新的构造函数
         f.prototype = p;                       // 将其原型属性设为p
         return new f();
-    }
+	}
 	
-    通过编写构造函数定义对象的“类”。
-    给构造函数的prototype属性赋值可以让其“实例”直接使用这个原型上的属性和方法。
+	通过编写构造函数定义对象的“类”。
+	给构造函数的prototype属性赋值可以让其“实例”直接使用这个原型上的属性和方法。
 	
-    .和[]的方法访问对象属性
+	.和[]的方法访问对象属性
 	
-    // 获取subtitle的length或underfined，避免类型错误异常
-    var len = book &amp;&amp; book.subtitle &amp;&amp; book.subtitle.length;      
+	// 获取subtitle的length或underfined，避免类型错误异常
+	var len = book &amp;&amp; book.subtitle &amp;&amp; book.subtitle.length;      
 	
-    delete object.attribute;
+	delete object.attribute;
 	
-    检测是否包含属性：
+	检测是否包含属性：
         attributeName in object              // true or not      自由属性和继承属性都检测
         object.hasOwnPreperty(attributeName)       // true or not 仅检测自有属性
         propertyIsEnumerable()                // true or not 仅检测可枚举的自有属性
-    枚举：
+	枚举：
         function extend(o, o) {
             for (prop in p) {
                 o[prop] = p[prop];
@@ -735,7 +731,7 @@ Object.create():
             return result;
         }
 	
-    getter, setter:
+	getter, setter:
         对象的存取器属性getter, setter, 定义存取器属性使用对象直接量，用get, set替代function关键字
         var o = {
             $data_prop: value,                                         // $ 起始的属性名为私有属性
@@ -743,25 +739,25 @@ Object.create():
             set accessor_prop() { /* 函数体 */};
         }
         若同名属性只有get, 没有set则为只读
-    Object.getOwnPropertyDescriptor()
+	Object.getOwnPropertyDescriptor()
         获得某个对象特定属性的特性描述符
-    Object.defineProperty()
+	Object.defineProperty()
         设置属性的特性
-    Object.getPrototypeOf()
+	Object.getPrototypeOf()
         查询原型，但并不可靠，constructor.prototype才是真的原型，Object.create()则不是
-    o.isProtypeOf(p)         
+	o.isProtypeOf(p)         
         // 检测p是否是o的原型
-    类属性：
+	类属性：
         function classof (o) {
             if (o === null) return &quot;Null&quot;;
             if (o === underfined) return &quot;Underfined&quot;;
             return Object.prototype.toString.call(o).slice(8, -1);
         }
-    序列化对象：
+	序列化对象：
         JSON.stringify()             //序列化对象           只能序列化可枚举的自由属性
         JSON.parse()                 // 还原对象          不会还原日期对象
         函数 RegExp undefined Error对象不能序列化和还原
-    对象方法：
+	对象方法：
         Object.toString()
         Object.toLocalString()            // 会针对DateTime, Number 做本地化转换
         Object.toJSON()
@@ -793,37 +789,37 @@ a.push(elem)
 let keys = Object.keys(o);
 let values = [];
 for (let i = 0; i &lt; keys.length; ++i) {
-    let key = keys[i];
-    values.push(o[key]);
+	let key = keys[i];
+	values.push(o[key]);
 }
 
 数组上不该使用for/in 循环，因为能够枚举继承的属性名，除非用 if (a.hasOwnProperty(i)) 判断
 
 forEach():
-    let data = [1, 2, 3, 4, 5];
-    let sumOfSquares = 0;
-    data.forEach(function(x) {
+	let data = [1, 2, 3, 4, 5];
+	let sumOfSquares = 0;
+	data.forEach(function(x) {
         sumOfSquares += x*x;
         });
-    sumOfSquares    
+	sumOfSquares    
 	
 Array.join()
-    let a = [1, 2, 3]; 
-    a.join();                 // =&gt; &quot;1, 2, 3&quot;            默认为都好分隔
-    a.join(&quot; &quot;);            // =&gt; &quot;1 2 3&quot;
+	let a = [1, 2, 3]; 
+	a.join();                 // =&gt; &quot;1, 2, 3&quot;            默认为都好分隔
+	a.join(&quot; &quot;);            // =&gt; &quot;1 2 3&quot;
 Array.reverse()
-    // 改变了原数组，不创建新数组
+	// 改变了原数组，不创建新数组
 Array.sort()
-    // 返回排序后的数组，不改变原数组，可选谓词做参数
-    a.sort(function(a, b) {
+	// 返回排序后的数组，不改变原数组，可选谓词做参数
+	a.sort(function(a, b) {
             return b - a;
         });
 Array.concat(array)
-    // 创建并返回拼接的新数组
+	// 创建并返回拼接的新数组
 Array.slice(start, end)
-    // 不包含第二个元素
+	// 不包含第二个元素
 Array.splice(start, end)
-    //插入或删除元素，返回删除元素组成的数组，不太懂
+	//插入或删除元素，返回删除元素组成的数组，不太懂
 Array.push()
 Array.pop()
 Array.unshift()
@@ -832,53 +828,53 @@ Array.toString()
 Array.toLocalString()
 
 Array.forEach(function(elem, index, array) { })
-    let data = [1,2,3,4,5]
-    let sum = 0;
-    data.forEach(function(value) { sum += value; });
-    data.forEach(function(v, i, a) { a[i] = v + 1; });    // 给数组每个元素自加一
+	let data = [1,2,3,4,5]
+	let sum = 0;
+	data.forEach(function(value) { sum += value; });
+	data.forEach(function(v, i, a) { a[i] = v + 1; });    // 给数组每个元素自加一
 
 Array.map(function(elem){})
-    a = [1, 2, 3];
-    b = a.map(function(x) { return x*x; });       // =&gt; [1, 4, 9]
+	a = [1, 2, 3];
+	b = a.map(function(x) { return x*x; });       // =&gt; [1, 4, 9]
 	
 Array.filer(function(elem, index) {} )
-    a = [5, 4, 3, 2, 1];
-    smallvalues = a.filter(function(x) { return x &lt; 3; });       // [2,1]
-    everyother = a.filter(function(x, i) { return i%2 == 0; });    // [5,3,1]
+	a = [5, 4, 3, 2, 1];
+	smallvalues = a.filter(function(x) { return x &lt; 3; });       // [2,1]
+	everyother = a.filter(function(x, i) { return i%2 == 0; });    // [5,3,1]
 	
 Array.every(function)
-    a = [1,2,3,4,5];
-    a.every(function(x) {return x &lt; 10; });             // true
-    a.every(function(x) { return x % 2 === 0; });            // false
+	a = [1,2,3,4,5];
+	a.every(function(x) {return x &lt; 10; });             // true
+	a.every(function(x) { return x % 2 === 0; });            // false
 
 Array.some(function)
-    a = [1,2,3,4,5] [1,2,3,4,5];
-    a.some(function(x) { return x%2 === 0; })        // true
-    a.some(isNaN);                                                         // false
+	a = [1,2,3,4,5] [1,2,3,4,5];
+	a.some(function(x) { return x%2 === 0; })        // true
+	a.some(isNaN);                                                         // false
 
 
 // ------------------------------- Class and OOP ------------------------------ 
 
 继承：
-    let o = {};                                       // 继承Object.prototype的方法
-    o.x = 1;                                          // 给o定义属性x
-    let p = inherit(o);                         // 继承o 和 Object.prototype的属性和方法
-    p.y = 2;                                           // 给p定义属性y
-    let q = inherit(p);                         // 继承p, o 和 Object.prototype的属性和方法
-    q.z = 3;                                           // 给q定义属性y
-    let s = q.toString();                     // toString继承自Object.prototype
-    q.x + q.y                                        // =&gt; 3    
-    在JavaScript中，只用查询的时候才体会继承的原型链查找，设置属性时与继承无关，不改变原型
-    let unitcircle = {r: 1};
-    let c = inherit(unitcircle);
-    c.x = 1; c.y =1;                   
-    c.r = 2;                                          // 对属性赋值要么创建属性要么覆盖继承来的属性
-    unitcircle.r;                                 // 1,     原型对象没有修改
+	let o = {};                                       // 继承Object.prototype的方法
+	o.x = 1;                                          // 给o定义属性x
+	let p = inherit(o);                         // 继承o 和 Object.prototype的属性和方法
+	p.y = 2;                                           // 给p定义属性y
+	let q = inherit(p);                         // 继承p, o 和 Object.prototype的属性和方法
+	q.z = 3;                                           // 给q定义属性y
+	let s = q.toString();                     // toString继承自Object.prototype
+	q.x + q.y                                        // =&gt; 3    
+	在JavaScript中，只用查询的时候才体会继承的原型链查找，设置属性时与继承无关，不改变原型
+	let unitcircle = {r: 1};
+	let c = inherit(unitcircle);
+	c.x = 1; c.y =1;                   
+	c.r = 2;                                          // 对属性赋值要么创建属性要么覆盖继承来的属性
+	unitcircle.r;                                 // 1,     原型对象没有修改
 
 // 定义一个构造函数以初始化一个新的Point对象
 function Point(x, y) {                                  // 按照惯例，构造函数均以大写字母开始
-    this.x = x;                                           // 关键字this 指代初始化的实例
-    this.y = y;                                          // 将函数参数存储为对象的属性
+	this.x = x;                                           // 关键字this 指代初始化的实例
+	this.y = y;                                          // 将函数参数存储为对象的属性
 }                                                                     // 不需要return
 
 // 使用new 关键字和构造函数来创建一个实例
@@ -886,10 +882,10 @@ let p = new Point(1, 1);             // 平面几何中的点(1, 1)
 
 // 通过给构造函数的prototype对象赋值来给Point对象定义方法
 Point.prototype.r = function() {
-    return Math.sqrt(
+	return Math.sqrt(
         this.x * this.y +
         this.y * this.y)
-    );
+	);
 };
 
 // Point的所有实例对象对继承了方法r()
@@ -900,10 +896,10 @@ p.r()
 
 &lt;script&gt;
 function moveon() {
-    // 弹出一个对话框
-    let answer = confirm(&quot;准备好了吗?&quot;);
-    // 单击确定按钮，浏览器会加载一个新页面
-    if (answer) window.location = &quot;http://toabo.com&quot;;
+	// 弹出一个对话框
+	let answer = confirm(&quot;准备好了吗?&quot;);
+	// 单击确定按钮，浏览器会加载一个新页面
+	if (answer) window.location = &quot;http://toabo.com&quot;;
 }
 //在1分钟后执行定义的这个函数
 setTimeout(moveon, 600000);
@@ -918,34 +914,34 @@ setTimeout(moveon, 600000);
 
 // 在document中的指定区域输出调试消息
 function debug(msg) {
-    let log = document.getElementById(&quot;debuglog&quot;);
-    // 如果document不存在这个元素，则创建一个
-    if (!log) {
+	let log = document.getElementById(&quot;debuglog&quot;);
+	// 如果document不存在这个元素，则创建一个
+	if (!log) {
         log = document.createElement(&quot;div&quot;);
         log.id = &quot;debuglog&quot;;
         log.innerHTML = &quot;&lt;h1&gt;Debug Log&lt;/h1&gt;&quot;;                #定义初始内容
         doucument.body.appendChild(log);              
-    }
-    let pre = document.createElement(&quot;pre&quot;);
-    let text = document.createTextNode(&quot;msg&quot;);                  # 将msg包装在一个文本节点中
-    pre.appendChild(text);
-    log.appendChild(pre);
+	}
+	let pre = document.createElement(&quot;pre&quot;);
+	let text = document.createTextNode(&quot;msg&quot;);                  # 将msg包装在一个文本节点中
+	pre.appendChild(text);
+	log.appendChild(pre);
 }
 
 // ---------------------------- 通过脚本操纵CSS样式 ----------------------------- 
 
 function hide(e, reflow) {                       // 通过JavaScript操作样式来隐藏元素e
-    if (reflow) {                                    // 如果第二个参数是true
+	if (reflow) {                                    // 如果第二个参数是true
         e.style.display = &quot;none&quot;                             // 隐藏这个元素，所占空间也消失
-    }
-    else {                                                                     
+	}
+	else {                                                                     
         e.style.visibility = &quot;hidden&quot;;             // 否则将e隐藏，但是保留其所占的空间
-    }
+	}
 }
 function highlight(e) {                               // 通过设置CSS类来高亮显示e
                               // 简单加类属性，这里假设CSS样式表已经有&quot;hilite&quot;类的定义
-    if (!e.classNmae) e.className = &quot;hilite&quot;;       
-    else e.classNmae += &quot;hilite&quot;;
+	if (!e.classNmae) e.className = &quot;hilite&quot;;       
+	else e.classNmae += &quot;hilite&quot;;
 }
 
 
@@ -965,19 +961,19 @@ world
 // &quot;load&quot;事件只有在文档加载完成后才会触发
 // 通常需要等待load事件发生后才开始执行JavaScript代码
 windows.onload = function() {
-    let images = document.getElementsByTagName(&quot;img&quot;);
-    // 遍历images，给每个节点的&quot;click&quot;事件添加事件处理程序
-    // 在点击图片的时候将图片隐藏
-    for(let i = 0; i &lt; images.length; i++) {
+	let images = document.getElementsByTagName(&quot;img&quot;);
+	// 遍历images，给每个节点的&quot;click&quot;事件添加事件处理程序
+	// 在点击图片的时候将图片隐藏
+	for(let i = 0; i &lt; images.length; i++) {
         let image = images[i];
         if (image.addEventListener)          
                    // 注册事件处理程序的另一种方法
             image.addEventListener(&quot;click&quot;, hide, false);
         else
             image.attachEvent(&quot;onclick&quot;, hide);      // 兼容IE8及以前版本
-    }
-    // 这便是上面注册的事件处理函数
-    function hide(event) { event.target.style.visibility = &quot;hidden&quot;; }
+	}
+	// 这便是上面注册的事件处理函数
+	function hide(event) { event.target.style.visibility = &quot;hidden&quot;; }
 };
 
 

@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>[转]数据库系统概念 - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="第一章、引言 1.1 文件管理系统坏处 1.2 数据视图 1.3 数据模型 1.4 数据库语言 第二章、关系模型介绍 2.1 关系数据库的结构 2.2 数据库模式 2.3 码 第三章、SQL 3.1 SQL 查询语" />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.81.0" />
+
+
+<link rel="canonical" href="http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.61b9e7bcbd6f12a4e9f5db11b9643a2092aa9c93ca136cf497edd5e0f3efca61.css" integrity="sha256-YbnnvL1vEqTp9dsRuWQ6IJKqnJPKE2z0l&#43;3V4PPvymE=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="[转]数据库系统概念" />
+<meta property="og:description" content="第一章、引言 1.1 文件管理系统坏处 1.2 数据视图 1.3 数据模型 1.4 数据库语言 第二章、关系模型介绍 2.1 关系数据库的结构 2.2 数据库模式 2.3 码 第三章、SQL 3.1 SQL 查询语" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-03-19T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-03-19T00:00:00&#43;00:00" />
+
+<meta itemprop="name" content="[转]数据库系统概念">
+<meta itemprop="description" content="第一章、引言 1.1 文件管理系统坏处 1.2 数据视图 1.3 数据模型 1.4 数据库语言 第二章、关系模型介绍 2.1 关系数据库的结构 2.2 数据库模式 2.3 码 第三章、SQL 3.1 SQL 查询语"><meta itemprop="datePublished" content="2021-03-19T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-03-19T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="23490">
+<meta itemprop="keywords" content="data-systems," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[转]数据库系统概念"/>
+<meta name="twitter:description" content="第一章、引言 1.1 文件管理系统坏处 1.2 数据视图 1.3 数据模型 1.4 数据库语言 第二章、关系模型介绍 2.1 关系数据库的结构 2.2 数据库模式 2.3 码 第三章、SQL 3.1 SQL 查询语"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">[转]数据库系统概念</h1>
+      
+      <div class="post-meta">
+        <time datetime="2021-03-19" class="post-time">
+          2021-03-19
+        </time>
+        <div class="post-category">
+            <a href="http://www.yezheng.pro/categories/systems/"> systems </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>第一章、引言</p>
+<p>1.1 文件管理系统坏处</p>
+<p>1.2 数据视图</p>
+<p>1.3 数据模型</p>
+<p>1.4 数据库语言</p>
+<p>第二章、关系模型介绍</p>
+<p>2.1 关系数据库的结构</p>
+<p>2.2 数据库模式</p>
+<p>2.3 码</p>
+<p>第三章、SQL</p>
+<p>3.1 SQL 查询语言概览</p>
+<p>3.2 SQL数据定义</p>
+<p>3.2.1基本类型</p>
+<p>3.2.2基本模式定义</p>
+<p>3.3 sql查询的基本结构</p>
+<p>3.3.1 单关系查询</p>
+<p>3.3.2 多关系查询</p>
+<p>3.3.3 自然连接</p>
+<p>3.4 附加基本运算</p>
+<p>3.5 集合运算</p>
+<p>3.6 空值</p>
+<p>3.7 聚集函数</p>
+<p>3.8 嵌套子查询，</p>
+<p>第四章、中级SQL</p>
+<p>4.1 连接表达式</p>
+<p>4.2 视图</p>
+<p>4.2.3 物化视图</p>
+<p>4.2.4 视图更新</p>
+<p>4.3 事务</p>
+<p>4.4 完整性约束</p>
+<p>4.5 SQL的数据类型和模式</p>
+<p>4.6 模式的授权</p>
+<p>第六章、 形式化关系查询语言</p>
+<p>6.1 关系代数</p>
+<p>6.1.1 基本运算</p>
+<p>6.1.2 关系运算的形式化定义</p>
+<p>6.1.3 附加的关系代数运算</p>
+<p>6.1.4 扩展的关系代数运算</p>
+<p>第七章、数据库设计和E-R模型</p>
+<p>7.1 设计过程概览</p>
+<p>7.2 E-R模型</p>
+<p>7.3 约束</p>
+<p>7.3.1 映射基数</p>
+<p>7.3.2 参与约束</p>
+<p>7.3.3 码more</p>
+<p>7.5 实体-联系图</p>
+<p>7.5.1 基本结构</p>
+<p>7.5.3 复杂的属性</p>
+<p>7.5.4 角色</p>
+<p>7.5.5 非二元的联系集</p>
+<p>7.5.6 弱实体集</p>
+<p>7.6 转换为关系模式</p>
+<p>7.6.1 具有简单属性的强实体集的表示</p>
+<p>7.6.2 具有复杂属性的强实体集的表示</p>
+<p>7.6.3 弱实体集的表示</p>
+<p>第八章、 关系数据库设计</p>
+<p>8.1 好的关系设计的特点</p>
+<p>8.2 原子域和第一范式</p>
+<p>8.3 使用函数依赖进行分解</p>
+<p>8.3.1 码和函数依赖</p>
+<p>8.3.2 范式</p>
+<p>8.4 函数依赖理论</p>
+<p>第十二章、事务管理</p>
+<p>12.1 事务概念</p>
+<p>12.2 事务的原子性和持久性</p>
+<p>12.3 事务的隔离性</p>
+<p>12.4 可串行化</p>
+<p>12.5 可恢复性</p>
+<p>12.6 并发控制</p>
+<p>12.6.1 基于锁的协议</p>
+<p>12.6.2 保证可串行性的封锁协议（两阶段封锁协议）</p>
+<p>12.6.3 多粒度封锁的必要性</p>
+<p>12.7 恢复系统</p>
+<p>12.7.1 故障分类</p>
+<p>12.7.2 数据访问</p>
+<p>12.7.3  恢复和原子性</p>
+<p>第一章、引言
+数据库系统有一个相互关联的数据的集合和一组用以访问这些戴护具的程序组成。这个数据集合通常称为数据库。DBS主要的目的是提供一种方面、高效的存取是数据库通常称为数据库。
+数据库系统：DBMS数据库管理系统，管理员，开发的软件。
+1.1 文件管理系统坏处
+数据的冗余和不一致
+数据访问困难
+数据孤立
+完整性问题
+原子性问题
+并发访问异常
+安全性问题
+1.2 数据视图
+数据抽象：物理层描述数据实际上是怎样存储的。 逻辑层描述数据库中存储什么数据及这些数据间存在什么关系。视图层只描述数据库的某个部分。物理数据独立性、逻辑数据独立性
+最后，在视图层。计算机用户看见的是为其屏蔽了数据类型细节的一组应用程序。除了屏蔽数据库的逻辑层细节之外，视图还提供了防止用户访问数据库的某些部分的安全性机制。
+特定时刻存储在数据库中的信息的集合称作数据库的一个实例，而数据库的总体设计称作数据库模式。
+1.3 数据模型
+数据库结构的基础是数据模型。数据模型是一个描述数据、数据联系、数据语义以及一致性约束的概念工具的集合。数据模型提供了一种描述物理层、逻辑层及视图表达层数据库设计的方式。
+关系模型。用表的集合表示数据和数据之间的联系。是基于记录的模型的一种
+E-R实体-联系模型
+基于对象的数据模型
+半结构化数据模型
+1.4 数据库语言
+DDL定义数据库模式，以及数据库操纵语言（DML）来表达数据库查询和更新
+DDL的一些一致性约束：域约束、参照完整性、断言、授权。DDL的输出放在数据字典中，数据字典包含了元数据，元数据是关于数据的数据。
+DML分为过程化DML，要求用户指定需要什么数据及如何获得这些数据。声明式DML（非过程化）只要求用户指定需要什么数据，而不指明如何获得这些数据。
+查询是要求对信息进行检索的语句。DML中涉及信息检索部分称作查询语言。
+第二章、关系模型介绍
+数据模型是描述数据、数据联系、数据语义以及一致性约束的概念工具的集合。
+2.1 关系数据库的结构
+关系数据库由表的集合组成表中一行代表了一组值之间的一种联系。由于一个表就是这种联系的一种集合，表这个概念和数学上的关系这个概念是紧密相连的，元组只是一组值的序列。
+关系用来指代表，而元组用来指代行。属性指代的表中的列。属性位置不重要。因为关系是元组集合，所以元组在关系中出现的顺序是无关紧要的。
+对于关系的每个属性，都存在一个取值的集合，称为该属性的域
+关系实例这个术语用来代表一个关系的特定实例。
+关系是笛卡儿积的子集
+要求对所有关系r而言，r的所有属性的域都是原子的。如果域中元素被看作是不可再分的单元，而域是原子的。
+null空值代表一种特殊的值，一种状态。表示未知或不存在。
+2.2 数据库模式
+数据库模式是数据库的逻辑设计，数据库实例是给定时刻数据库中数据的一个快照
+关系的概念对应程序设计语言中变量的概念，关系模式对应于类型定义的概念，关系实例的概念是变量的值的概念
+2.3 码
+r(R) r是关系实例，R是关系模式
+一个元组的属性值必须是能唯一区分元组的，一个关系中没有两个元组在所有属性上的取值都相同
+超码是一个或多个属性的集合，这些属性的组合可以使我们在一个关系中唯一标识一个元组。
+有一些超码，他们的任意真子集都不能称为超码，这样的最小超码称为候选码。出现在任何一个候选码中的属性&ndash;&gt;主属性
+几个不同的属性集都可以用作候选码的情况是存在的。
+用主码这个术语来代表被数据库设计者选中的、主要用来在一个关系中区分不同元组的候选码。码是整个关系的一种性质，而不是单个元组的性质。
+主码应该选那些值从不或很少变化的属性。
+完整性约束包括完整性约束：主码的属性不能为空，参照完整性约束/子集依赖：在参照关系上的任意元组在特定属性上的取值必然等于被参照关系中某个元组在特定属性上的取值或null。不同于外码依赖，参照完整性约束不要求依赖的一定是主码。
+一个关系模式（r1)可能在他的属性中包括另一个关系模式（r2)的主码。这个属性在r1上称作参照r2的外码。关系r1也称为外码依赖的参照关系，r2叫做外码的被参照关系。
+第三章、SQL
+3.1 SQL 查询语言概览
+sql是数据库查询语言。有以下几个部分：</p>
+<p>数据定义语言（DDL）：定义关系模式、删除关系、修改关系模式、每个属性的取值类型、每个关系维护的索引集合、每个关系的安全性和权限信息、每个关系在磁盘上的物理存储结构。
+数据操纵语言（DML）：从数据库中查询信息，在数据库中插入元组、删除元组、修改元组的部分。
+完整性：sql DDL包括定义完整性约束的命令，破坏完整性的更新是不被允许的。
+视图定义
+事务控制
+嵌入式sql忽然动态sql：sql如何嵌入到通用编程语言。
+授权：sql DDL包括定义对关系和视图的访问权限的命令。
+3.2 SQL数据定义
+3.2.1基本类型
+char(n) 固定长度字符串。空格补位
+varchar(n) 可变长度字符串。不补位
+int
+smallint
+numeric(p,d)定点数
+real,double precision :浮点数和双精度浮点数
+float(n)精度至少为n位的浮点数
+char和char比较时，长度不同追加空格 。char和varchar比较可能返true、false。建议使用varchar而不是char来解决问题。</p>
+<p>3.2.2基本模式定义
+primary key(A1,A2&hellip;An)
+foreigh key(A1,A2&hellip;An) references:
+not null
+create
+sql允许为属性指定默认值
+mysql&gt; create table d(
+-&gt; good varchar(20),
+-&gt; g varchar(20) not null,
+-&gt; primary key(good,g)
+-&gt; );</p>
+<p>create table b(
+course_id varchar(20),
+tot_cred numeric(3,0) default 0,
+foreign key(course_id) references d
+);
+insert。可以在查询结果的基础上加入元组。在执行插入前执行完select语句很重要。没有被赋值的属性为空。
+insert into wang values(&ldquo;L&rdquo;,15,69);</p>
+<p>insert intp wang(a,b,c) values(&ldquo;L&rdquo;,15,69); //推荐</p>
+<p>mysql&gt; insert into list(id)
+-&gt; select id
+-&gt; from consumer;
+delete,删除关系中所有元祖。
+drop删除表
+alter  在表中增加、删除列。新属性的值为null
+在执行删除前先执行所有元组的测试很重要
+delete from wang where name=&lsquo;Liu&rsquo;;</p>
+<p>drop table wang;</p>
+<p>alter table user add good varchar(20);</p>
+<p>alter table user drop good;</p>
+<p>update,必须在更新前检查关系中的所有元组</p>
+<p>mysql&gt; update list
+-&gt; set days=1
+-&gt; where days=2;
+case语句可以用在任何应该出现值的地方。有条件没有被覆盖，返回null
+mysql&gt; update student S
+-&gt; set tot_cred=(
+-&gt;             select case when sum(credits) is not null then sum(credits)
+else 0
+end
+-&gt;             from takes natural join course
+-&gt;             where S.ID=takes.ID and
+-&gt;             takes.grade&lt;&gt;&lsquo;F&rsquo; and takes.grade is not null);
+3.3 sql查询的基本结构
+3.3.1 单关系查询
+一般sql不去重distinct 显示去重，all显示不去重
+select distinct id from list;
+select all id from list;
+支持+，-，<em>，/。逻辑词and,or,not。比较运算符&lt;,&gt;,&lt;=,&gt;=,&lt;&gt;.
+mysql&gt; select no</em>2 from list
+-&gt; where no&gt;1000 and days&lt;&gt;1;
+3.3.2 多关系查询
+from语句定义了一个在该语句中所列出关系的笛卡尔集。where中的谓词限制笛卡尔集的集合。在属性前加前缀区分属性来自哪个关系。sql会通过只产生满足where子句的笛卡尔元素优化执行。
+逻辑顺序   from&ndash;where&ndash;group by&ndash;having&ndash;order by&ndash;select   所有运算都是表运算，输入输出都是一个表。
+select name,course_id
+from instructor,teachers
+where instructor.ID=teaches.ID
+3.3.3 自然连接
+只取在共同属性上取值相同的元组对。列出的属性顺序：共同的&ndash;第一个&ndash;第二个
+join&hellip;using需要一个属性列表，允许用户来确定哪些列相等
+mysql&gt; select *
+-&gt; from consumer natural join list;</p>
+<p>mysql&gt; select *
+-&gt; from consumer join list using(id)
+-&gt; ;
+3.4 附加基本运算
+更名运算 as.可以出现在select、from中
+字符串运算。用双引号代表单引号。大小写敏感。串接||、upper(s)、lower(s)、trim(s).    like/not like模式匹配。百分号：匹配任意字串。_匹配任意一个字符.   允许转义字符，直接在特殊字符前面，表示特殊字符为普通字符，escape定义转义字符
+order  by. 默认升序    desc降序      asc升序<br>
+[not]between&hellip;.and闭区间
+(a,b,&hellip;c)n维元组，可以按字典序比较运算
+mysql&gt; select T.sex as bala
+-&gt; from consumer as c,consumer as t
+-&gt; where c.sex=t.sex and t.name=&lsquo;王文萱&rsquo;;</p>
+<p>mysql&gt; select * from list where id like &lsquo;211%';</p>
+<p>mysql&gt; select * from list
+-&gt; order by id desc,no asc;</p>
+<p>mysql&gt; select * from list
+-&gt; where no not between 1000 and 1001;</p>
+<p>mysql&gt; select * from instructor,teaches
+-&gt; where (instructor.ID,dept_name)=(teaches.ID,&lsquo;Biology&rsquo;);
+3.5 集合运算
+union
+intersect
+except
+全部自动去重，后面加上all不去重。</p>
+<p>3.6 空值
+算术表达式的任一输入为空，结果为空。
+SQL设计控制任何比较运算的结果为unknown（既不是is null,也不是is not null),这创建了除true和false外的第三个逻辑值。
+如果子句谓词对一个元组计算出false或unknown，则该院组不能加入结果集中。
+用is null和not is null判断是否是null值。用is unknown和not is unknown判断是否是unknow值
+当一个查询使用select distinct 语句时，重复元组将被去除。为了达到这个目的，当比较两个元组对应的属性值时，如果这两个元组都是非空且值相等，或者都是为空，那么它们是相同的。所以诸如{（A,null),(A,null)}这样的两个元组拷贝被认为是相同的，即使在某些属性上存在空值。使用distinct子句会保留这样的相同元组的一份拷贝。
+mysql&gt; select * from list
+-&gt; where no is unknown;</p>
+<p>mysql&gt; select * from list
+-&gt; where no is null;
+3.7 聚集函数
+avg
+min
+max
+count
+sum
+sum和avg的输入必须是数字集
+聚集函数以以下规则处理空值：除了count(<em>)外所有的聚集函数都忽略输入集合的空值。规定空集的count为0，其它所有聚集函数在输入为空集的情况下返回一个空值。
+任何出现在having子句中，但没有被聚集的属性必须出现在group by中
+任何出现在select子句中，但没有被聚集的属性必须出现在group by中
+having子句中的谓词只有在形成分组后才起作用
+使用关键字distinct可以删除重复元素，不允许在count(</em>)时使用distinct.
+group by子句中给出一个或多个属性是用来构造分组的。
+3.8 嵌套子查询，
+子查询在where子句中，通常对成员资格、集合的比较以及集合的基数进行检查。
+集合成员资格：in  /not in  测试是否是集合中的成员。也可用于枚举集合，在SQL测试任意关系的成员资格也是可以的。
+mysql&gt;
+mysql&gt; select distinct course_id
+-&gt; from section
+-&gt; where semester=&lsquo;Fall&rsquo; and year=&lsquo;2009&rsquo;
+-&gt; and course_id in(select distinct course_id
+-&gt;                  from section
+-&gt;                  where semester=&lsquo;Spring&rsquo; and year=2010);</p>
+<p>mysql&gt; select distinct name
+-&gt; from instructor
+-&gt; where name not in(&lsquo;Wang&rsquo;,&lsquo;Wen&rsquo;);</p>
+<p>mysql&gt;
+mysql&gt; select count(distinct ID)
+-&gt; from takes
+-&gt; where (course_id,sec_id,semester,year)in(select course_id,sec_id,semester,year
+-&gt;                                          from teaches
+-&gt;                                          where teaches.ID=10101);
+集合的比较
+至少比某一个要大/小/相等用some表示。&lt;&gt;some不等价not in,=some等价in
+至少比所有要大/小/相等用all表示。&lt;&gt;all等价not in,=some不等价in
+mysql&gt; select name
+-&gt; from instructor
+-&gt; where salary&gt;some(select salary
+-&gt;                  from instructor
+-&gt;                  where dept_name=&lsquo;Biology&rsquo;)
+-&gt; ;</p>
+<p>mysql&gt; select dept_name
+-&gt; from instructor
+-&gt; group by dept_name
+-&gt; having avg(salary)&gt;all(
+-&gt;             select avg(salary)
+-&gt;             from instructor
+-&gt;             group by dept_name);
+空关系测试   exists 参数的子查询非空时返回true/not exists
+来自外层循环的一个相关名称可以用在where的子查询中。使用了外层查询相关名称的查询为相关子查询。如果一个相关名称在外层和子查询中定义，则子查询中定义有效。
+关系A包含关系B   not exists(B except A)
+select name
+from student
+where not exists(
+(
+select course_id
+from course
+where dept_name=&lsquo;Biology&rsquo;
+)
+except
+(
+select T.course_id
+from takes as T
+where S.ID=T.ID
+)
+);
+重复元组存在性测试。sql提供一个布尔函数，用于测试在一个子查询的结果中是否存在重复元组。如果作为参数的子查询结果中没有重复的元组、unique结构将返回true值。在空集上计算出真值。还有not unique.对一个unique测试结果为假的定义是，当且仅当在关系中存在这两个元组t1和t2,且t1=t2.由于在t1或t2的某个域为空时，判断t1=t2为假，所以尽管一个元组有多个副本，只要该元组有一个属性为空unique测试可能为真。
+select T.course_id
+from course as T
+where unique(select R.course_id
+from section as R
+where T.course_id=R.course_id and R.year=2009);
+from语句中的子查询。任何select-from-where表达式返回的结果都是关系，因而可以被插入到另一个select-from-where中任何关系可以出现的位置。
+可以用as子句给子查询的结果关系起个名字。
+from子句嵌套的子查询中不能使用来自from子句其它关系的相关变量。加入lateral作为前缀，可以访问from子句中在它前面的表或子查询中的属性。
+with子句提供定义临时关系的方法。
+SQL允许子查询出现在单个值的表达式可以出现的任何地方，只要子查询只返回单个属性的单个元组；这样的子查询称为标量子查询。select、where、having子句都可以使用标量子查询。
+select dept_name
+from (select dept_name,avg(salary) as avg_salary
+from instructor
+group by dept_name)
+as dept_avg(dept_name,avg_salary)
+where avg_salary&gt;42000;</p>
+<p>select dept_name
+from (select dept_name,avg(salary) as avg_salary
+from instructor
+group by dept_name)
+where avg_salary&gt;42000;</p>
+<p>select name
+from instructor I1,lateral (select avg(salary) as avg_salary
+from instructor I2
+where I2.dept_name=I1.dept_name);</p>
+<p>with dept_total(dept_name,value) as
+(select sept_name,sum(salary)
+from instructor
+group by dept_name),</p>
+<p>dept_total_avg(value) as
+(select avg(value)
+from dept_total)</p>
+<p>select dept_name
+from dept_total,dept_total_avg
+where dept_total.val&gt;=dept_total_avg.value;
+3.8 其他sql
+展示建表语句
+show create table XXX</p>
+<p>第四章、中级SQL
+4.1 连接表达式
+on条件允许在参与连接的关系上设置通用的谓词
+外连接运算与我们已经学过的连接运算类似，但通过在结果中创建空值元组的方式，保留了那些在连接中丢失的元组。
+实际上有三种形式的外连接
+左外连接(left join)	只保留出现在左连接之前的关系中的元组
+右外连接(right join)	只保留出现在右外连接之后的关系中的元组
+全外连接(full join)	保留出现在两个关系中的元组
+我们之前学过的不保留未匹配元组的连接运算称为内连接运算
+我们可以按照如下方式计算左外连接运算：</p>
+<p>首先，像前面那样计算出内连接的结果；然后，对于在内连接的左侧关系中任意一个与右侧关系中任何元组都不匹配的元组t,向连接结果中加入一个元组r,r的构造如下：</p>
+<p>元组r从左侧关系得到的属性为t中的值
+r的其它属性被设为空值
+on子句可以与外连接一起使用，与where中使用条件表现不同
+当join子句中没有使用outer前缀，默认的连接类型就是inner join
+任意的连接形式可以与任意的连接条件进行组合
+连接类型	连接条件
+inner join、left outer join、right outer join、full outer join	natural、on、using</p>
+<p>mysql&gt; select *
+-&gt; from consumer join list on consumer.id=list.id;</p>
+<p>mysql&gt; select *
+-&gt; from(select *
+-&gt;      from list)
+-&gt; natural full outer join
+-&gt;     (select *
+-&gt;      from consumer);
+4.2 视图
+为了向用户隐藏部分信息
+<a href="https://blog.csdn.net/kanglovejava/article/details/52961244">https://blog.csdn.net/kanglovejava/article/details/52961244</a>
+SQL允许通过查询来定义“虚关系”。它在概念上包含查询的结果。虚关系并不预先计算并存储，而是在使用虚关系的时候才通过查询被计算出来。任何不是逻辑模型的一部分，但作为虚关系对用户可见的关系称为视图。
+视图关系在概念上包含查询结果中的元组，但并不预先计算和存储。相反，数据库系统存储与视图关系相关联的查询表达式。当视图关系被访问时，其中的元组是计算查询结果而被创建出来的。
+一旦创建了视图，我们就可以使用视图名指代该视图生成的虚关系，视图名可以出现在任何关系名出现的地方。视图的属性名可以限定。
+可以在视图定义的末尾加上with check option.这样，如果不满足check约束，更新被拒绝。
+mysql&gt; create view f as
+-&gt; select * from list;
+Query OK, 0 rows affected (0.13 sec)</p>
+<p>mysql&gt; create view w(id) as
+-&gt; select id from list;
+Query OK, 0 rows affected (0.05 sec)</p>
+<p>mysql&gt; select * from w；
+mysql&gt; select * from f；</p>
+<p>mysql&gt; create view g as
+-&gt; select *
+-&gt; from list
+-&gt; where no&lt;2000
+-&gt; with check option;
+Query OK, 0 rows affected (0.08 sec)</p>
+<p>mysql&gt; insert into g(id,no) values(&lsquo;211022199906030548&rsquo;,5000);
+ERROR 1369 (HY000): CHECK OPTION failed &lsquo;haha.g&rsquo;
+4.2.3 物化视图
+特定数据库系统允许存储视图关系，但是它们保证：如果用于定义视图的实际关系改变,视图也跟着修改。这样的视图成为物化视图</p>
+<p>保护物化视图一直在更新状态的过程称为物化视图维护，或者简称视图维护</p>
+<p>那些需要快速响应基大于关系上聚集运算的特定查询也会从创建和查询对应物化视图受益良多。</p>
+<p>物化视图带来的好处还需要和存储代价和增加的更新开销相权衡。</p>
+<p>4.2.4 视图更新
+如果定义视图的查询对下列条件满足，我们称视图是可更新的：</p>
+<p>from 子句中只有一个数据库关系
+select 子句中只包括关系的属性名，不包含任何表达式、聚集和distinct声明
+任何没有出现在select子句中的属性可以取空值；即这些属性上没有not null约束，也不构成主码的一部分。
+查询中不含有group by 和having子句
+4.3 事务
+<a href="https://blog.csdn.net/w_linux/article/details/79666086">https://blog.csdn.net/w_linux/article/details/79666086</a>
+SQL规定当一条SQL语句被执行，就隐式的开始了一个事务</p>
+<p>下列SQL语句会结束一个事务</p>
+<p>commit work：提交当前事务，也就是将该事物所做的更新在数据库中持久保存。在事物被提交后，一个新的事物自动开始</p>
+<p>rollback work：回滚当前事务，也就是撤销该事务中所有SQL语句对数据库的更新，就恢复到执行该事务第一语句之前的状态。</p>
+<p>关键词work可选</p>
+<p>一个事务或者在完成所有步骤后提交其行为，或者在不能成功完成其所有动作的情况下回滚其所有动作，通过这种方式数据库提供了对事务具有原子性的抽象，原子性即不可分割性。</p>
+<p>要么所有事务的所有影响被反映到数据库中，要么任何影响都没有（在回滚之后）
+允许将所有SQL语句加载begin atomic……end之间。关键字之间的语句构成了单一事务。</p>
+<p>mysql&gt; start transaction;
+Query OK, 0 rows affected (0.08 sec)</p>
+<p>mysql&gt; insert into exam values(2);
+Query OK, 1 row affected (0.03 sec)</p>
+<p>mysql&gt; rollback;
+Query OK, 0 rows affected (0.06 sec)</p>
+<p>mysql&gt; select * from exam;
++&mdash;&mdash;+
+| id   |
++&mdash;&mdash;+
+|    1 |
++&mdash;&mdash;+</p>
+<p>mysql&gt; start transaction;
+Query OK, 0 rows affected (0.00 sec)</p>
+<p>mysql&gt; update exam set id=2 where id=1;
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0</p>
+<p>mysql&gt; commit;
+Query OK, 0 rows affected (0.06 sec)</p>
+<p>mysql&gt; select * from exam;
++&mdash;&mdash;+
+| id   |
++&mdash;&mdash;+
+|    2 |
++&mdash;&mdash;+
+1 row in set (0.00 sec)
+4.4 完整性约束
+alter语句可以更改约束条件，add也是在加入列的同时加入约束条件。不是直接加约束条件的意思。当执行命令时，系统首先保证关系满足指定的约束条件。不满足，拒绝执行命令。
+也可以alter table A add constraint。如果之前的关系不满足这个约束将拒绝执行该命令。
+unique约束：在关系中没有2个元组能在所有列出的属性上取值相同，然而候选码可以为空
+check子句：check（P）子句指定一个谓词，关系中的每一个元组都必须满足谓词P，check子句保证属性值满足指定的条件。check子句中的谓词可以是包括子查询在内的任意谓词
+references可以显示指定被参照关系的属性列表，然而这个指定的属性列表必须声明为被参照关系的候选码。当违反参照完整性约束时，通常是拒绝执行导致完整性破坏的操作（即进行更新操作的事务被回滚）</p>
+<p>on delete cascade ,若删除department中的元组导致了此参照完整性约束被违反，则删除并不被系统拒绝，而是对course关系作级联删除</p>
+<p>事务中对完整性约束的违反，SQL允许将initially deffrred子句加入到约束声明中，这样完整性约束不是在事务的中间步骤上检查，而是在事务结束的时候检查。默认情况下它会被立即检查</p>
+<p>复杂check条件检测开销很大，我们可以使用断言，表达数据库总能满足某一个条件</p>
+<p>mysql&gt; alter table example change id id varchar(10) primary key;</p>
+<p>mysql&gt; alter table example add id varchar(20) primary key;
+ERROR 1060 (42S21): Duplicate column name &lsquo;id&rsquo;</p>
+<p>mysql&gt; create table x(
+-&gt; id varchar(20,
+-&gt; check(id in (&lsquo;Fall&rsquo;,&lsquo;Winter&rsquo;));
+mysql&gt; create table wang(
+-&gt; id varchar(20)
+-&gt; check(id in(select id from list))
+-&gt; );</p>
+<p>mysql&gt; create table e(
+-&gt; id int,
+-&gt; unique(id));</p>
+<p>mysql&gt; create table wang(
+-&gt; id varchar(20),
+-&gt; foreign key(id) references list
+-&gt;             on delete cascade);</p>
+<p>mysql&gt; create assertion a check
+-&gt; (not exists(select *
+-&gt;             from list
+-&gt;             where no&gt;9000)
+-&gt; );
+4.5 SQL的数据类型和模式
+SQL允许指定默认值</p>
+<p>SQL中的日期和时间类型</p>
+<p>一些获取当前日期和时间的函数</p>
+<p>current_date返回当前日期</p>
+<p>current_time返回当前时间</p>
+<p>localtime返回当前的本地时间</p>
+<p>时间戳（日期加上时间）由current_timestamp(带有时区)</p>
+<p>localtimestamp(本地日期和时间，不带时区)</p>
+<p>SQL允许在上面列出的所有类型上进行比较运算，也允许在各种数字类型上进行算术运算和比较运算</p>
+<p>还支持interval数据类型，允许在日期、时间、和时间间隔上进行运算</p>
+<p>x,y都是date类型，那x-y就是时间间隔类型，其值为日期x到日期y间隔的天数</p>
+<p>mysql&gt; select current_date - date'2001-05-24&rsquo;;</p>
+<p>mysql&gt; select current_date;</p>
+<p>mysql&gt; select date'2001-04-25',time'09:30:00',timestamp'2001-04-25 09:30:00';</p>
+<p>//从date中提取域。有year,month,day,hour,minute,second
+mysql&gt; select extract(year from date'2001-05-24');</p>
+<p>mysql&gt; cast(&lsquo;2001-05-24&rsquo; as DATE);  //将字符串转化称DATE
+创建索引
+mysql&gt; create index i on wang(id);
+大对象类型
+一个应用通常使用一个SQL查询来检索一个大对象的定位器，然后在宿主语言中用这个定位器来操纵对象。</p>
+<p>mysql&gt; create table wen(
+-&gt; a clob(10KB),
+-&gt; b blob (10MB));
+用户定义的类型
+SQL支持用户两种形式的用户自定义类型。第一种称为独特类型，第二种成为结构化数据类型
+可以用create type子句来定义新类型。不能为一种类型的变量赋予另一种类型的值。新创建的类型就可以用作关系属性的类型
+SQL提供了drop type 和 alter type子句来删除或修改以前创建过的类型
+mysql&gt; create type Dollars as numeric(12,2);
+mysql&gt; create type Dollar as numeric(12,2);
+create table department(
+budget Dollars
+);</p>
+<p>//如果不转换的话，Dollars=Dollar会报错
+cast(department.Dollars to numeric(12,2);</p>
+<p>在把用户定义类型加入到SQL之前，有一个相似但稍有不同的概念，域，它可以在基本类型上施加完整性约束
+域和类型的差别：</p>
+<p>1.在域上，可以声明约束，也可以为域类型变量定义默认或默认值</p>
+<p>2.域不是强类型，一种域类型的值可以被赋给另一种域类型的变量，只要他们基本类型相同</p>
+<p>把check子句用到域上，被声明为来自该域的任何变量都必须满足这个谓词</p>
+<p>constraint salary_value_test子句可选，用来将该约束命名为salary_value_test</p>
+<p>create domain DDollaers as numeric(12,2) not null;</p>
+<p>create domain YearlySalary numeric(8,2)
+constrait salary check(value&gt;=29000);
+create table 的扩展</p>
+<p>创建与现有的表模式相同的表</p>
+<p>把查询的结果存储成一个新表</p>
+<p>一条用于创建表，另一条用于把查询结果插入到表中</p>
+<p>create table&hellip;as与create view语句非常相似</p>
+<p>区别在于当表被创建时表的内容被加载，但视图总是反应当前查询的结果</p>
+<p>模式，目录和环境</p>
+<p>当代数据库系统提供了三层结构的关系命名机制。最顶层由目录构成，每个目录可以包含模式。诸如关系、视图都包含在模式中</p>
+<p>create schema和drop schema来创建和删除模式。</p>
+<p>4.6 模式的授权
+权限包括select、insert、update、delete</p>
+<p>all privileges所有权限可以用作所有权限的简写形式</p>
+<p>一个创建了新关系的用户将自动被授予该关系上的所有权限</p>
+<p>展示当前用户权限</p>
+<p>show grants;
+grant用来授予权限</p>
+<p>update可以在关系的所有属性上授予，也可以只在某些属性上授予</p>
+<p>insert也可以指定属性列表，系统将其他属性要么赋予默认值要么赋值为null</p>
+<p>用户名public指系统的所有当前用户和将来用户</p>
+<p>默认情况下，被授予权限的用户和角色无权把此权限授予其他用户/角色</p>
+<p>SQL允许用授予权限的接受者可以进一步把权限授予其他人</p>
+<p>不允许对一个关系的指定元组授权</p>
+<p>远程连接时:</p>
+<p>GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP ON 你的数据库.* TO &lsquo;用户名&rsquo;@'%' identified by &lsquo;密码&rsquo;
+使用revoke语句来收回权限</p>
+<p>grant select on department to Amith;</p>
+<p>grant update(no) on department tomith;</p>
+<p>grant select on department to public;</p>
+<p>revoke select on department to Amith;</p>
+<p>revoke update(no) on department tomith;</p>
+<p>revoke select on department to public;
+角色</p>
+<p>在数据库中建立一个角色集，可以给角色授予权限，就和给每一个用户授权的方式完全一样</p>
+<p>创建角色</p>
+<p>授权给角色</p>
+<p>角色可以授权给用户，也可以授权给其他角色</p>
+<p>一个用户或一个角色的权限包括：</p>
+<pre><code>    所有直接授予用户/角色的权限
+    所有授予给用户/角色所拥有角色的权限
+</code></pre>
+<p>create role instructor;
+grant select on takes to instructor;</p>
+<p>grant dean to Amith;
+create role dean;
+grant indtructor to dean;
+grant dean to Satoshi;
+视图的授权。在这个例子中，视图的创建者必须在instructor关系上具有select权限，否则系统会拒绝这样的视图创建请求</p>
+<p>create view geo_instructor as
+(
+select *
+from instructor
+);</p>
+<p>模式的授权</p>
+<p>只有模式的拥有则才能执行对模式的修改。</p>
+<p>//允许Amith创建参照department的dept_name的关系
+grant references (dept_name) on department to Amith;</p>
+<p>权限的转移，允许权限的接受者将该权限授予给其他用户</p>
+<p>grant select on department to Amith with grant option;
+权限的收回</p>
+<p>revoke select on department to Amith restrict;</p>
+<p>revoke select on department to Amith cascade;</p>
+<p>set role me;
+granted by current_role;
+restrict防止权限的级联收回</p>
+<p>替换成cascade表示需要级联收回，默认需要级联收回。</p>
+<p>授予权限时将授权人设置为一个会话所关联的当前角色，并且当角色不为空时，可在授权语句后加</p>
+<p>收回角色/权限时任然能保持当前角色</p>
+<p>第六章、 形式化关系查询语言
+关系代数、元组关系演算、域关系演算</p>
+<p>6.1 关系代数
+6.1.1 基本运算
+关系代数基本运算：选择、投影、并、集合差、笛卡尔积、更名</p>
+<p>选择运算，一元运算</p>
+<p>选出满足给定谓词的元组，用sigma(σ)来表示，将谓词写作σ的下表</p>
+<p>例如：属于物理系的元组可以这样写</p>
+<p>通常，我们允许在选择谓词中进行比较，使用的是=、≠、&lt;、≤、&gt;、≥</p>
+<p>另外，我们可以用连词将多个谓词合并为一个较大的谓词。</p>
+<p>例如：</p>
+<p>投影运算</p>
+<p>投影运算是一元运算，它返回作为参数的关系，但把某些属性排除在外。重复行去除</p>
+<p>例如：</p>
+<p>关系运算的组合</p>
+<p>例如：找出物理系的所有教师的名字</p>
+<p>并运算</p>
+<p>就是将两个集合并起来。去重</p>
+<p>例如：找出开设在2009年秋季学期或者2010年春季学期或者这两者皆开的所有课程的集合</p>
+<p>另一方面，设r和s是数据库关系或者作为关系代数表达式结果的临时关系。要使r U s有意义，需满足以下两个条件：</p>
+<p>（1）关系r和s必须是同元的，即它们的属性数目必须相同</p>
+<p>（2）对所有的i，r的第i个属性的域必须和s的第i个属性的域相同</p>
+<p>集合差运算</p>
+<p>用 - 表示集合差运算，可以找出在一个关系中而不在另一个关系中的那些元组。</p>
+<p>例如：找出所有开设在2009年秋季学期但是在2010年春季学期不开的课程</p>
+<p>另一方面，设r和s是数据库关系或者作为关系代数表达式结果的临时关系。要使r - s有意义，需满足以下两个条件：</p>
+<p>（1）关系r和s必须是同元的，即它们的属性数目必须相同</p>
+<p>（2）对所有的i，r的第i个属性的域必须和s的第i个属性的域相同</p>
+<p>笛卡尔积运算</p>
+<p>用X表示笛卡尔积，可以将任意两个关系的信息组合在一起。</p>
+<p>更名运算</p>
+<p>关系代数表达式的结果没有可供我们引用的名字，我们可以通过小写希腊字母rho(ρ)表示的更名运算来完成这一任务。</p>
+<p>返回表达式E的结果，并把名字x赋给了它</p>
+<p>返回表达式E的结果，并赋给它名字x，同时将各属性更名为A1，A2，&hellip; ，An</p>
+<p>6.1.2 关系运算的形式化定义
+关系代数中基本的表达式是如下二者之一：</p>
+<p>数据库的一个关系
+一个常数关系
+若E1，E2是关系代数表达式，则一下这些都是关系代数表达式：</p>
+<p>6.1.3 附加的关系代数运算
+集合交运算</p>
+<p>例如：在2009年秋季和2010年春季都开设的课程</p>
+<p>集合交运算与集合差运算的关系：</p>
+<p>自然连接运算</p>
+<p>用连接符号来表示</p>
+<p>自然连接运算首先形成它的两个参数的笛卡尔积，然后基于两个关系模式中都出现的属性上的相等性进行选择，最后还要去除重复属性。</p>
+<p>例如：找出所有教师的姓名，连同他们教的所有课程的course_id</p>
+<p>自然连接是可结合的</p>
+<p>theta连接是自然连接的扩展，它使得我们可以把一个选择运算和一个笛卡尔积运算合并为单独的一个运算，即自然连接是选出笛卡尔积中相同的属性，而theta连接是选出笛卡尔积中满足该选择运算的属性。</p>
+<p>赋值运算</p>
+<p>将R x S的结果赋给temp1</p>
+<p>外连接运算</p>
+<p>外连接是连接运算的扩展，可以处理确实的信息。有左外连接、右外连接和全外连接</p>
+<p>左外连接（）：取出左侧关系中所有与右侧关系的任一元组都不匹配的元组，用空值填充所有来自右侧关系的属性，再把产生的元组加到自然连接的结果中。</p>
+<p>右外连接（）：与左外连接相对称</p>
+<p>全外连接（）：既做左外连接又做右外连接，既填充左侧关系中与右侧关系的任一元组都不匹配的元组，又填充右侧关系中与左侧关系的任一元组都不匹配的元组，并把结果都加到连接的结果中。</p>
+<p>6.1.4 扩展的关系代数运算
+广义投影</p>
+<p>广义投影允许在投影列表中使用算术运算和字符串函数等来对投影进行扩展。</p>
+<p>例如：</p>
+<p>聚集</p>
+<p>聚集运算可以用来对值的集合使用聚集函数，例如计算最小值或者求平均值</p>
+<p>聚集函数：输入值的一个汇集，将单一值作为结果返回。比如输入几个数的集合，返回他们的和作为结果</p>
+<p>将distinct添加在函数名后，可以去除重复</p>
+<p>例如：</p>
+<p>元组关系演算</p>
+<p>元组关系演算表达式具有如下形式：</p>
+<p>其中P是一个公式，公示中可以出现多个元组变量。如果元组不被“存在”或“任意”修饰，则称为自由变量。</p>
+<p>域关系演算</p>
+<p>域关系演算是从属性域中取值的域变量，而不是整个元组的值。</p>
+<p>第七章、数据库设计和E-R模型
+7.1 设计过程概览
+概念设计：E-R图创建</p>
+<p>逻辑设计：E-R模型映射到关系模式</p>
+<p>物理设计。</p>
+<p>设计一个数据库模式的时候，必须避免的两个主要的缺陷</p>
+<p>（1）冗余：一个不好的设计可能会重复信息。信息的冗余表达的最大问题是当对一条信息进行更新，但没有将这条信息的所有拷贝都更新时这条信息的拷贝会变得不一致。</p>
+<p>（2）不完整：如字面意思，一个不好的设计可能会使得企事业机构的某些方面难于甚至无法建模。</p>
+<p>7.2 E-R模型
+实体-联系（E-R）数据模型的提出旨在方便数据库的设计，它是通过允许定义代表数据库全局逻辑结构的企业模式实现的。</p>
+<p>实体：是现实世界中可区别于所有其他对象的一个“事物”或“对象”。</p>
+<p>实体集：是相同类型即具有相同性质（或属性）的一个实体集合。例如一所给定大学的所有教师的集合可定义为实体集instructor。实体集不必互不相交</p>
+<p>实体集的外延：属于实体集的实体的实际集合</p>
+<p>联系：是指多个实体间的相互关联，也可以具有描述性属性</p>
+<p>联系集：是相同类型联系的集合。</p>
+<p>参与：实体集之间的关联称为参与。也就是说，实体集E1,E2,&hellip;,En参与联系集R</p>
+<p>角色：实体在联系中扮演的功能称为实体的角色。</p>
+<p>属性：实体集的属性是将实体集映射到域的函数。由于一个实体集可能有多个属性，因此每个实体可以用一组（属性，数据值）对来表示，实体集的每个属性对应一个这样的对。</p>
+<p>联系集的度：参与联系集的实体集的数目。</p>
+<p>给定的联系集中的联系实例必须是由其参与实体唯一标识的。</p>
+<p>相同的 实体集可能会参与到多于一个联系集中</p>
+<p>每个属性都有一个可取值的集合，称为该属性的域，或则值集</p>
+<p>E-R模型中的属性可以按照如下的属性类型来划分</p>
+<p>（1）简单和复合属性：简单属性指不能划分为更小的部分；复合属性指可以再划分为更小的部分（即其他属性）。例如属性name可设计为一个包含first_name、middle_initial和last_name的复合属性</p>
+<p>（2）单值和多值属性：我们直接用例子说明：对某个特定的学生实体而言，student_ID属性只对应于一个学生ID，这样的属性为单值；在教师实体中，每个教师可以有0个、1个或多个电话号码，这个phone_number属性就是多值的。{}</p>
+<p>（3）派生属性：这类属性的值可以从别的相关属性或实体派生出来。派生属性的值不存储，在需要的时候计算出来</p>
+<p>7.3 约束
+7.3.1 映射基数
+映射基数：表示一个实体通过一个联系集能关联的实体的个数。</p>
+<p>（1）一对一：A中的一个实体至多与B中的一个实体相关联，并且B中的一个实体也至多与A中的一个实体相关联</p>
+<p>（2）一对多：A中的一个实体至多与B中的零个或多个实体相关联，而B中的一个实体也至多与A中的一个实体相关联</p>
+<p>（3）多对一：A中的一个实体至多与B中的一个实体相关联，而B中的一个实体可以与A中的零个或多个实体相关联</p>
+<p>（4）多对多：A中的一个实体至多与B中的零个或多个实体相关联，而且B中的一个实体也可以与A中的零个或多个实体相关联</p>
+<p>7.3.2 参与约束
+如果实体集E中的每个实体都参与到联系集的至少一个联系之中，实体集E在联系集R中的参与称为全部的。如果实体集E中只有部分实体参与到联系集的之中，实体集E在联系集R中的参与称为部分的。</p>
+<p>7.3.3 码more
+关系模式中的超码、候选码、主码的概念同样适用于实体集</p>
+<p>7.5 实体-联系图
+7.5.1 基本结构
+分成两部分的矩形：代表实体集，上面的第一部分为实体集的名字，下面的第二部分包含实体集中所有属性的名字</p>
+<p>菱形：代表联系集</p>
+<p>未分割的矩形：代表联系集的属性，构成主码的属性以下划线表明</p>
+<p>线段：将实体集连接到联系集</p>
+<p>虚线：将联系集属性连接到联系集</p>
+<p>双线：显示实体在联系集中的参与度</p>
+<p>双菱形：代表连接到弱实体集的标志性联系集</p>
+<p>联系集和实体集之间也有映射基数，意思同约束中的映射技术，联系集为实体A，实体集为实体B</p>
+<p>约束的方式有两种：</p>
+<p>一、</p>
+<p>二、用l..h的形式表示一个关联的最小和最大的映射基数</p>
+<p>7.5.3 复杂的属性
+表示方法：</p>
+<p>name、address、street为复合属性</p>
+<p>{phone_number}为多值属性</p>
+<p>{age()}为派生属性age</p>
+<p>7.5.4 角色
+通过在菱形和矩形之间的连线上进行标注来表示角色，例如下图中的course_id和prereq_id</p>
+<p>7.5.5 非二元的联系集
+我们至多允许一个箭头</p>
+<p>7.5.6 弱实体集
+弱实体集：没有足够的属性以形成主码的实体集称作弱实体集</p>
+<p>强实体集：有主码的实体集称作强实体集</p>
+<p>弱实体集必须与另一个称作标识或属主实体集的实体集关联才能有意义。每个弱实体必须和一个标识实体关联；也就是说，弱实体集存在依赖于标识实体集。我们称标识实体集拥有它所标识的弱实体集。将弱实体集与其标识实体集相联的联系称为标识性联系。</p>
+<p>标识性联系是从弱实体集到强实体集多对一的，并且弱实体集在联系中的参与是全部的。标识性联系集不应该有任何描述性属性，因为这种属性中的任意一个都可以与弱实体集相关联。</p>
+<p>分辨符：虽然弱实体集没有主码，但是我们仍然需要区分依赖于特定强实体集的弱实体集中的实体的方法。弱实体集的分辨符是使我们进行这种区分的属性集合，也称为该实体集的部分码。</p>
+<p>弱实体集的主码由标识实体集的主码加上弱实体集的分辨符构成。</p>
+<p>图形表示：</p>
+<p>弱实体集的分辨符以虚下划线标明，而不是实线。</p>
+<p>关联弱关系集和标识性强实体集的联系集用双菱形表示。</p>
+<p>弱实体集可以参与标识性联系意外的联系。弱实体集可以作为属主与另一个弱实体集参与一个标识性联系。一个弱实体集也可能与不止一个标识实体集相关联。这样，一个特定的弱实体集将被一个实体的组合标识，其中每个标识实体集有一个实体在组合中。弱实体集的主码可以由标识实体集的主码加上弱实体集的分辨符构成。</p>
+<p>如果弱实体集属性少，直接归并到实体集中。否则自成一家。</p>
+<p>7.6 转换为关系模式
+7.6.1 具有简单属性的强实体集的表示
+设E是只具有简单描述性属性a1,a2,&hellip;,an的强实体集。我们用具有n个不同属性的模式E来表示这个实体集。该模式的关系中的每个远足同实体集E的一个实体相对应。</p>
+<p>7.6.2 具有复杂属性的强实体集的表示
+这个就比上面的情况复杂一点，我们通过为每个子属性创建一个单独的和属性来处理符合属性，我们并不为复合属性自身创建一个单独的属性。</p>
+<p>例如instructor实体集，里面有复合属性name，为instructor生成的末世包括属性first_name、middle_initial和last_name；没有单独的属性或末世表示name。其他属性类似。</p>
+<p>对于一个多值属性M，构建关系模式R，该模式包含一个对应与M的属性A，以及对应于M所在的实体集或联系集的属性。</p>
+<p>在一个实体集只有两个属性的情况下——一个主码B和多值属性M——该实体集的关系模式只含有一个属性，即主码属性B，可以删除这个关系，同时保留属性B和对应M的属性A的关系模式。</p>
+<p>7.6.3 弱实体集的表示
+设A是具有属性a1,a2,&hellip;,am的弱实体集，设B是A所依赖的强实体集，设B的主码包括属性b1,b2,&hellip;,bn。我们用名为A的关系模式表示实体集A，该模式的每个属性对应以下集合中的一个成员：</p>
+<p>所以A的模式的属性有：A的属性和B的主码。</p>
+<p>该模式的主码由实体集B的主码和A的分辨符组成。</p>
+<p>7.6.4 联系的表示
+若实体间联系是1:1，可以在两个实体类型转换成的两个关系模式中任意一个关系模式的属性中加入另一个关系模式的键（作为外键）和联系类型的属性。
+若实体间联系是1:N，则在N端实体类型转换成的关系模式中加入1端实体类型的键（作为外键）和联系类型的属性。
+若实体间联系是M:N，则将联系类型也转换成关系模式，其属性为两端实体类型的键（作为外键）加上联系类型的属性，而键为两端实体键的组合
+7.6.5 模式的合并
+考虑实体集A，B和联系集AB。假设A在该联系中的参与是全部的，那么我们可以将A和AB合并称单个包含两个模式所有属性的并集的模式。</p>
+<p>8.1 好的关系设计的特点
+有损分解：分解关系的时候损失了信息。</p>
+<p>无损分解：分解关系的时候没有损失了信息。</p>
+<p>8.2 原子域和第一范式
+第一范式（1NF）</p>
+<p>如果某个域的元素被认为是不可再分的单元，那么这个域就是原子的(atomic)。如果一个关系模式R的所有的属性域都是原子的，我们称关系模式R属于第一范式(first normal form, 1NF)。</p>
+<p>8.3 使用函数依赖进行分解
+8.3.1 码和函数依赖
+设R(U)是属性集U上的关系模式，α,β含于 U， r是R(U) 上的任意一个关系，如果成立</p>
+<pre><code>   对于r中所有元组对t , s ∈ r，若t[α] = s[]，则t[β] = s[β]
+
+   那么称“α函数决定β”，或“β函数依赖于α”，记作αβ
+
+   称α为决定因素，β为被决定因素。说该函数依赖在关系模式R(U)上成立
+</code></pre>
+<p>平凡函数依赖</p>
+<pre><code>   如果αβ，但β不含于α，则称其为非平凡的函数依赖，否则(即β含于α)称为平凡(trivial)的函数依赖。如(sno，sname)sname是平凡的函数依赖。
+</code></pre>
+<p>8.3.2 范式
+范式是对关系的不同数据依赖程度的要求。通过模式分解将一个低级范式转换为若干个高级范式的过程称作规范化。
+1NF</p>
+<p>关系中每一分量不可再分。即不能以集合、序列等作为属性值。
+2NF</p>
+<p>若R∈1NF，且每个属性满足下列准则之一：</p>
+<p>它出现在一个候选码中</p>
+<p>它没有部分依赖于一个候选码，则称R∈2NF。</p>
+<p>2NF消除了非主属性对码的部分依赖.
+3NF</p>
+<p>关系模式R&lt; U , F &gt;中，F+中所有函数依赖αβ ，至少有以下之一成立 ：</p>
+<p>① αβ是平凡的函数依赖；</p>
+<p>② α是超码；</p>
+<p>③  β-α的每一个属性A都包含在R的候选码中，则称R∈3NF。</p>
+<p>3NF消除了非主属性对码的传递依赖。</p>
+<p>作为判断3NF时的一种优化，可以只考虑F上的函数依赖，而不是F+,也可以分解F上的函数依赖，让它们的右半部只包含一个属性，并用这个结果代替F。</p>
+<p>3NF的判断被证明是无法求解的，是NP问题。
+BCNF</p>
+<p>关系模式R&lt; U , F &gt;中，所有的形如αβ的函数依赖（ α∈U，β∈U ），下面至少有一个成立：</p>
+<p>① αβ是平凡的函数依赖；</p>
+<p>2.α是模式R的一个超码，则称R∈BCNF。</p>
+<p>如SPC ∉ BCNF，因为tnocno，而tno不是超码。</p>
+<p>改造：将S分解为：（sno，tno），（tno，cno）。</p>
+<p>BCNF分解：</p>
+<p>我们对函数依赖进行数据库设计的目标：</p>
+<p>无损
+BDNF
+保持依赖
+无损分解：</p>
+<p>8.4 函数依赖理论
+被F所逻辑蕴涵的函数依赖的全体所构成的集合称作F的闭包。
+Armstrong公理系统</p>
+<p>各希腊字母都为属性集</p>
+<p>自反律：若β含于α，则αβ</p>
+<p>增补率：若αβ，则αγβγ</p>
+<p>传递率：若αβ，βγ，则αγ</p>
+<p>合并率：若αβ，αγ，则αβγ</p>
+<p>分解率：若αβγ，则αβ，αγ</p>
+<p>伪传递率：若αβ，γβδ，则γαδ</p>
+<p>属性集的闭包</p>
+<p>令α为属性集，将函数依赖集F下被α函数确定的所有属性的集合称作F下α的闭包，记作α+</p>
+<p>α+= {A |αA能由F根据Armstrong公理导出}。可以求候选码</p>
+<p>范式是对关系的不同数据依赖程度的要求。通过模式分解将一个低级范式转换为若干个高级范式的过程称作规范化。
+1NF</p>
+<p>关系中每一分量不可再分。即不能以集合、序列等作为属性值。
+2NF</p>
+<p>若R∈1NF，且每个属性满足下列准则之一：</p>
+<p>它出现在一个候选码中</p>
+<p>它没有部分依赖于一个候选码，则称R∈2NF。</p>
+<p>2NF消除了非主属性对码的部分依赖.
+3NF</p>
+<p>关系模式R&lt; U , F &gt;中，F+中所有函数依赖αàβ ，至少有以下之一成立 ：</p>
+<p>① αàβ是平凡的函数依赖；</p>
+<p>② α是超码；</p>
+<p>③  β-α的每一个属性A都包含在R的候选码中，则称R∈3NF。</p>
+<p>3NF消除了非主属性对码的传递依赖。</p>
+<p>作为判断3NF时的一种优化，可以只考虑F上的函数依赖，而不是F+,也可以分解F上的函数依赖，让它们的右半部只包含一个属性，并用这个结果代替F。</p>
+<p>3NF的判断被证明是无法求解的，是NP问题。
+BCNF</p>
+<p>关系模式R&lt; U , F &gt;中，所有的形如αàβ的函数依赖（ α∈U，β∈U ），下面至少有一个成立：</p>
+<p>1.αàβ是平凡的函数依赖，</p>
+<p>2.α是模式R的一个超码，则称R∈BCNF。</p>
+<p>如SPC ∉ BCNF，因为tnoàcno，而tno不是超码。</p>
+<p>改造：将S分解为：（sno，tno），（tno，cno）。
+多值依赖</p>
+<pre><code>   对称性，函数依赖是多值依赖的特例，传递性
+</code></pre>
+<p>函数依赖好多值依赖区别</p>
+<p>函数依赖规定某些元组不能出现在关系中，也称为相等产生依赖。</p>
+<p>多值依赖要求某种形式的其它元组必须在关系中，称为元组产生依赖。
+闭包</p>
+<p>令D表示函数依赖和多值依赖的集合，D的闭包D+是由D逻辑蕴涵的所有函数依赖和多值依赖的集合。
+4NF</p>
+<p>函数依赖和多值依赖集为D的关系模式R属于4NF的条件是：对于所有D+中形如： αààβ的多值依赖（其中α包含于R∧β包含于R），至少有以下条件之一成立：</p>
+<p>1.αàà β是一个平凡的多值依赖；</p>
+<p>2.α是模式R的超码，则称R∈4NF。</p>
+<pre><code>   如关系模式TEACH，cnoààtno，cnoààbno，码为(cno, tno, bno)，所以CTB∉4NF。改造：将CTB分解为CT（cno，tno），CB（cno，bno），在分解后的关系中分量为Ci的元组共有m + n个
+</code></pre>
+<p>4NF的本质</p>
+<p>(在只考虑函数和多值依赖的前提下)，4NF只讲一件事，非码的多值决定关系讲述了另外一件事。</p>
+<p>R(cno,bno,tno)</p>
+<pre><code>                cno→→bno
+
+                cno→→tno
+
+   R讲述了(cno,bno)和(cno,tno)两件事。
+</code></pre>
+<p>有效且完备的公理系统</p>
+<p>范式之间的关系</p>
+<p>1NF：数据库表的每一列都是不可分割的原子数据项，而不能是集合，数组，记录等非原子数据项。</p>
+<p>2NF：1NF的基础上，非码属性必须完全依赖于码。在1NF基础上消除非主属性对主码的部分函数依赖。</p>
+<p>3NF：在1NF基础上，任何非主属性不依赖于其它非主属性。在2NF基础上消除传递依赖。</p>
+<p>BCNF：在1NF基础上，任何非主属性不能对主键子集依赖，在3NF基础上消除对主码子集的依赖。</p>
+<p>4NF：在多值依赖的视角评价关系模式。
+解除规范化</p>
+<p>把一个规范化的模式变成非规范化的过程。目的：用于调整系统的性能</p>
+<p>第十二章、事务管理
+事务是作为单个逻辑工作单元执行的一系列数据库操作。这些操作要么都做，要么都不做，是一个不可分割的工作单位</p>
+<p>12.1 事务概念
+事务是访问并可能更新各种数据项的一个程序执行单元。</p>
+<p>事物特性（ACID）</p>
+<p>原子性(Atomicity)</p>
+<pre><code>   事务中包含的所有操作要么全做，要么全不做。原子性由恢复系统实现。
+</code></pre>
+<p>一致性(Consistency)</p>
+<pre><code>   事务的隔离执行必须保证数据库的一致性。事务开始前，数据库处于一致性的状态；事务结束后，数据库必须仍处于一致性状态；事务的执行过程中可以暂时的不一致。数据库的一致性状态由用户来负责，由并发控制系统实现。
+
+    如银行转账，转账前后两个帐户金额之和应保持不变。
+</code></pre>
+<p>隔离性(Isolation)</p>
+<pre><code>   系统必须保证事务不受其它并发执行事务的影响。对任何一对事务T1，T2，在T1看来，T2要么在T1开始之前已经结束，要么在T1完成之后再开始执行。隔离性通过并发控制系统实现。
+</code></pre>
+<p>持久性(Durability)</p>
+<pre><code>   一个事务一旦提交之后，它对数据库的影响必须是永久的。系统发生故障不能改变事务的持久性。持久性通过恢复系统实现。
+</code></pre>
+<p>由于故障，系统的状态不再反应数据库本应描述的现实世界的真实状态，我们把这种状态称为不一致状态。
+恢复系统保证原子性和持久性。</p>
+<p>并发控制系统保证隔离性和一致性。</p>
+<p>12.2 事务的原子性和持久性
+一旦事务已提交，我们不能通过中止他来撤销其造成的影响，撤销已提交事务造成的影响的唯一方法就是执行一个补偿事务。书写一个补偿事务的责任留给用户</p>
+<p>事务的几种状态：
+1、活跃的：初始状态，事务开始执行时处于这个状态
+2、部分提交的：最后一条语句执行后。可能发生硬件故障。当数据库往磁盘上写了足够的信息，确保即使发生硬件故障更新也能在系统重启时创建。当最后一条这样的信息写完之后，事务进入提交状态。
+3、失败的：发现正常的执行不能继续后
+4、中止的：事务回滚并且数据库恢复到事务执行之前的状态后
+5、提交的：成功执行后
+状态转换图如下：</p>
+<p>如果事务是提交的或则终止的，我们称事务是已经结束的</p>
+<p>事务进入中止状态后，系统这时候有两种选择：
+1、重启事务：当且仅当中止是由硬件错误造成的或者不是事物本身逻辑所产生的错误时。重启的事务会被看成一个新的事务
+2、杀死事务：如果中止是由事务内部逻辑错误导致的那么事务就会被杀死。</p>
+<p>当处理可见的外部写，比如写到屏幕上一定要小心。大多数系统只允许在操作在事务进入提交状态后发生。</p>
+<p>12.3 事务的隔离性
+两条很好的理由允许并发：</p>
+<p>提高吞吐量和资源利用率
+减少等待时间
+事务调度</p>
+<p>事务的执行顺序称为一个调度(schedule)，表示事务的指令在系统中执行的时间顺序。
+串行调度：属于同一事务的指令在调度中紧挨在一起</p>
+<p>可串行化调度：并发执行中，保证所执行的任何调度的效果与没有并发执行的调度效果一样。这样可以保证数据库的一致性。调度应该在某种意义上等价与一个串行调度。这种调度称为可串行化调度。</p>
+<p>12.4 可串行化
+串行调度是可串行化的。</p>
+<p>冲突指令：</p>
+<p>当两条指令是不同事务在相同数据项上的操作，并且其中至少有一个是write指令时，则称这两条指令是冲突的。</p>
+<p>冲突等价：</p>
+<pre><code>   如果调度S可以经过一系列非冲突指令交换转换成调度S'，则称调度S与S'是冲突等价的(conflictequivalent)。不是所有的串行调度都冲突等价。
+</code></pre>
+<p>冲突可串行化：</p>
+<pre><code>   当一个调度S与一个串行调度冲突等价时，则称该调度S是冲突可串行化的
+</code></pre>
+<p>12.5 可恢复性
+一个事务失败了，应该能够撤消该事务对数据库的影响。如果有其它事务读取了失败事务写入的数据，则该事务也应该撤消。</p>
+<p>可恢复调度：</p>
+<p>对于每对事务T1与T2，如果T2读取了T1所写的数据，则T1必须先于T2提交。</p>
+<p>级联调度：</p>
+<p>由于一个事务故障而导致一系列事务回滚。</p>
+<p>无级联调度：</p>
+<p>对于每对事务T1与T2，如果T2读取了T1所写的数据，则T1必须在T2读取之前提交。</p>
+<p>&lt;注&gt;无级联调度必是可恢复调度</p>
+<p>并发操作带来的数据不一致性
+（1）丢失修改（Lost Update）
+两个事务T1和T2读入同一数据并修改，T2的提交结果破坏了T1提交的结果，导致T1的修改被丢失。
+（2）不可重复读（Non-repeatable Read）
+不可重复读是指事务T1读取数据后，事务T2执行更新操作，使T1无法再现前一次读取结果。</p>
+<p>不可重复读包括三种情况：</p>
+<p>事务T1读取某一数据后，事务T2对其做了修改，当事务T1再次读该数据时，得到与前一次不同的值
+事务T1按一定条件从数据库中读取了某些数据记录后，事务T2删除了其中部分记录，当T1再次按相同条件读取数据时，发现某些记录神秘地消失了。
+事务T1按一定条件从数据库中读取某些数据记录后，事务T2插入了一些记录，当T1再次按相同条件读取数据时，发现多了一些记录。
+后两种不可重复读有时也称为幻影现象（Phantom Row）
+（3）读“脏”数据（Dirty Read）
+读“脏”数据是指：
+事务T1修改某一数据，并将其写回磁盘
+事务T2读取同一数据后，T1由于某种原因被撤销
+这时T1已修改过的数据恢复原值，T2读到的数据就与数据库中的数据不一致
+T2读到的数据就为“脏”数据，即不正确的数据。</p>
+<p>事务隔离性</p>
+<p>按照隔离级别从低到高的顺序：</p>
+<p>未提交读：允许读取未提交数据。（当事务A更新某条数据时，不容许其他事务来更新该数据，但可以读取。）</p>
+<p>已提交读：只允许读取已提交数据，但不要求可重复读。（当事务A更新某条数据时，不容许其他事务进行任何操作包括读取，但事务A读取时，其他事务可以进行读取、更新。）</p>
+<p>可重复读：只允许读取已提交数据，而且一个事务两次读取一个数据项期间，其他事务不得更新该数据，但是该事务不要求与其他事务可串行化。</p>
+<p>可串行化：保证可串行化调度。</p>
+<p>以上所有隔离级别都不允许脏写，即如果一个数据项已经被另外一个尚未提交的事务写入，则不允许对该数据项执行写操作。</p>
+<p>12.6 并发控制
+并发控制机制的任务：对并发操作进行正确调度、保证事务的隔离性、保证数据库的一致性。</p>
+<p>12.6.1 基于锁的协议
+基本封锁类型：</p>
+<p>排它锁（exclusive lock，简记为X锁）
+共享锁（Share lock，简记为S锁）
+共享锁</p>
+<p>共享锁又称为读锁。若事务T对数据对象Q加上S锁，事务T可读但不能写Q，其它事务只能再对Q加S锁，而不能加X锁，直到T释放Q上的S锁。
+排它锁</p>
+<p>排它锁又称为写锁。若事务T对数据对象Q加上X锁，则事务T既可以读又可以写Q，其它任何事务都不能再对Q加任何类型的锁，直到T释放A上的锁。</p>
+<p>假设对于某对象，事物j请求A型锁，事物i拥有B型锁。如果事物j可以立刻得到A型锁。则称A与B锁是相容的。</p>
+<p>让事务在对数据项最后一次访问后立即释放锁也未必是可取的，因为可能不能保证可串行化。
+死锁：一种哪个事物都不能正常执行的状态。当死锁发生时，必须回滚两个事务中的一个。</p>
+<p>饥饿/饿死：</p>
+<p>不断出现的申请并获得S锁的事务，使申请X锁的事务一直处在等待状态。</p>
+<p>饥饿的防止：</p>
+<p>对申请S锁的事务，如果有先于该事务且等待的加X锁的事务，令申请S锁的事务等待。</p>
+<p>12.6.2 保证可串行性的封锁协议（两阶段封锁协议）
+定义：每个事务分两个阶段提出加锁和解锁申请。</p>
+<p>增长阶段(growing phase)：事务可以获得锁，但不能释放锁。</p>
+<p>缩减阶段(shrinking phase)：事务可以释放锁，但不能获得新锁。</p>
+<p>封锁点(lock point)：事务最后加锁的位置，称为事务的封锁点, 记作Lp(T)。</p>
+<p>并行执行的所有事务均遵守两段锁协议，则对这些事务的所有并行调度策略都是可串行化的。所有遵守两段锁协议的事务，其并行执行的结果一定是正确的。</p>
+<p>事务遵守两段锁协议是可串行化调度的充分条件，而不是必要条件。可串行化的调度中，不一定所有事务都必须符合两段锁协议。</p>
+<p>两阶段封锁协议不保证不会发生死锁。</p>
+<p>严格两阶段封锁协议：除了要求封锁是两阶段之外，还要求事务持有的所有排他锁必须在事务结束后，方可释放。</p>
+<p>强两阶段封锁协议：事务提交之前，不得释放任何锁。在强两阶段封锁协议下，事务可以按其结束的顺序串行化。</p>
+<p>12.6.3 多粒度封锁的必要性
+事务访问数据的粒度不同</p>
+<p>DB、Table、Tuple、…</p>
+<p>单一封锁粒度的问题</p>
+<p>封锁粒度大：并发性低</p>
+<p>封锁粒度小：访问大粒度数据加锁量巨大</p>
+<p>多粒度封锁：根据访问数据的粒度，确定封锁的粒度。以求加锁量有限，并可获得最大的并发性</p>
+<p>多粒度封锁的基本原则：</p>
+<p>大粒度数据由小粒度数据组成；</p>
+<p>允许对不同粒度数据进行封锁；</p>
+<p>事务对大粒度数据加锁，隐含地对组成大粒度数据的所有小粒度数据加锁。</p>
+<p>多粒度层次结构</p>
+<p>多粒度层次树，子节点表示的数据是父节点表示数据的一部分。</p>
+<p>意向锁(intention lock mode)</p>
+<p>如果一个节点加上了意向锁，则意味着要在树的较低层进行显示加锁。</p>
+<p>在一个节点显式加锁之前，该结点的全部祖先均加上了意向锁。</p>
+<p>事务判定是否能够成功地给一个结点加锁时，不必搜索整棵树。</p>
+<p>多粒度封锁相容矩阵</p>
+<p>共享意向锁（IS）/排他意向锁（IX）/共享排他意向锁（SIX）</p>
+<p>多粒度封锁协议：</p>
+<p>遵从锁的相容矩阵；
+根结点必须首先加锁，可以加任何类型的锁；
+仅当Ti对Q的父结点持有IX或IS锁时，Ti对于结点Q加S或者Is锁；
+仅当Ti对Q的父结点持有IX或SIX锁时， Ti对于结点Q加X、SIX、IX锁；
+仅当Ti未曾对任何结点解锁时，Ti可以对结点加锁（两阶段的）；
+仅当Ti当前不持有Q的子节点的锁时，Ti可以对节点Q解锁。
+特点：</p>
+<p>增加了并发行，减少了锁开销。</p>
+<p>适应范围：</p>
+<p>只存取几个数据项的短事务，</p>
+<p>由整个文件或一组文件形成报表的长事务。</p>
+<p>释放顺序：多粒度协议要求加锁按照自顶向下的顺序，而锁的释放按照自底向上的顺序</p>
+<p>12.7 恢复系统
+12.7.1 故障分类
+1.事务内部的故障:
+（1）有的是可以通过事务程序本身发现的。
+（2）有的是非预期的，不能由事务程序处理的。
+事务内部更多的故障是非预期的，是不能由应用程序处理的
+（1）运算溢出 逻辑错误
+（2）并发事务发生死锁而被选中撤销该事务 系统错误
+（3）违反了某些完整性限制而被终止等 逻辑错误
+以后，事务故障仅指这类非预期的故障
+2.系统崩溃
+1、系统故障
+称为软故障，是指造成系统停止运转的任何事件，使得系统要重新启动。
+（1）整个系统的正常运行突然被破坏
+（2）所有正在运行的事务都非正常终止
+（3）不破坏数据库
+（4）内存中数据库缓冲区的信息全部丢失
+2、系统故障的常见原因
+（1）特定类型的硬件错误（如CPU故障）
+（2）操作系统故障
+（3）数据库管理系统代码错误
+（4）系统断电</p>
+<p>3.磁盘故障
+称为硬故障，指外存故障
+（1）磁盘损坏
+（2）磁头碰撞
+（3）瞬时强磁场干扰
+介质故障破坏数据库或部分数据库，并影响正在存取这部分数据的所有事务
+介质故障比前两类故障的可能性小得多，但破坏性大得多</p>
+<p>我们把存储器分成3类：非易失性存储器、易失性存储器、稳定存储器
+各类故障，对数据库的影响有两种可能性
+一是数据库本身被破坏
+二是数据库没有被破坏，但数据可能不正确，这是由于事务的运行被非正常终止造成的。</p>
+<p>恢复算法两部分：</p>
+<p>在正常事务处理时采取措施，保证有足够的信息可用于故障恢复
+故障发生后采取措施，将数据库内容恢复到某个保证数据库ACID的状态。
+12.7.2 数据访问
+磁盘中的块：物理块。主存中的块：缓冲块。内存中临时用来存放块的区域：磁盘缓存区。</p>
+<p>缓冲块最终被写道磁盘上，要么是应为缓冲区管理器用于其它用途，要么是因为数据库系统希望将B的变化映射到磁盘上。后一种称为数据库系统对缓冲块强制输出。</p>
+<p>12.7.3  恢复和原子性
+（1）恢复操作的基本原理：冗余
+利用存储在系统别处的冗余数据来重建数据库中已被破坏或不正确的那部分数据
+（2）恢复的实现技术：复杂
+一个大型数据库产品，恢复子系统的代码要占全部代码的10%以上
+恢复机制涉及的关键问题</p>
+<ol>
+<li>如何建立冗余数据
+数据转储（backup）：转储是指数据库管理员定期地将整个数据库复制到磁带、磁盘或其他存储介质上保存起来的过程
+登记日志文件（logging）</li>
+</ol>
+<p>2.转储方法</p>
+<p>静态转储
+在系统中无运行事务时进行的转储操作</p>
+<p>动态转储
+转储操作与用户事务并发进行</p>
+<p>海量转储: 每次转储全部数据库
+增量转储: 只转储上次转储后更新过的数据
+日志文件(log file)：是用来记录事务对数据库的更新操作的文件
+以记录为单位的日志文件，每条日志记录的内容：</p>
+<p>事务标识（标明是哪个事务）
+操作类型（插入、删除或修改）
+操作对象（记录ID、Block NO.）
+更新前数据的旧值（对插入操作而言，此项为空值）
+更新后数据的新值（对删除操作而言, 此项为空值）
+一些日志记录类型：<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>为什么要先写日志文件
+写数据库和写日志文件是两个不同的操作
+在这两个操作之间可能发生故障
+如果先写了数据库修改，而在日志文件中没有登记下这个修改，则以后就无法恢复这个修改了
+如果先写日志，但没有修改数据库，按日志文件恢复时只不过是多执行一次不必要的UNDO操作，并不会影响数据库的正确性</p>
+<p>为了保证故障恢复时能使用日志文件，日志必须存放在稳定存储器中。</p>
+<p>12.7.3.2 数据库修改</p>
+<p>如果一个事务直到提交时都没有修改数据库，我们称它采用了延迟修改。如果数据库修改数据库时事务仍活跃，我们称它使用了立即修改。
+对于事物的undo完成后，写一个abort日志记录，表明撤销完成了</p>
+<p>当一个事务的commit日志记录输出到稳定存储器后，我们说这个事务提交了。如果系统崩溃在commit日志记录输出到稳定存储器之前，事务将回滚。
+故障的恢复
+系统故障造成数据库不一致状态的原因
+（1）未完成事务对数据库的更新可能已写入数据库
+（2）已提交事务对数据库的更新可能还留在缓冲区没来得及写入数据库
+恢复方法
+（1） Undo 故障发生时未完成的事务
+（2） Redo 已完成的事务
+系统故障的恢复由系统在重新启动时自动完成，不需要用户干预
+（1）正向扫描日志文件（即从头扫描日志文件）    事务故障反向
+重做(REDO) 队列: 在故障发生前已经提交的事务
+这些事务既有BEGIN TRANSACTION记录，也有COMMIT记录或abort记录
+撤销 (UNDO)队列:故障发生时尚未完成的事务
+这些事务只有BEGIN TRANSACTION记录，无相应的COMMIT记录或abort记录
+（2） 对撤销(UNDO)队列事务进行撤销(UNDO)处理
+反向扫描日志文件，对每个撤销事务的更新操作执行逆操作
+即将日志记录中“更新前的值”写入数据库
+（3）对重做(REDO)队列事务进行重做(REDO)处理
+正向扫描日志文件，对每个重做事务重新执行登记的操作
+即将日志记录中“更新后的值”写入数据库</p>
+<p>1、两个问题
+（1）搜索整个日志将耗费大量的时间
+（2）重做处理：重新执行，浪费了大量时间
+2、解决方案
+具有检查点（checkpoint）的恢复技术
+（1）在日志文件中增加检查点记（checkpoint）。
+（2）增加重新开始文件。
+（3）恢复子系统在登录日志文件期间动态地维护日志。</p>
+<p>10.6.2.检查点技术
+1、检查点记录的内容
+（1）建立检查点时刻所有正在执行的事务清单
+（2）这些事务最近一个日志记录的地址
+2、重新开始文件的内容
+记录各个检查点记录在日志文件中的地址
+3、动态维护日志文件的方法
+周期性地执行如下操作：建立检查点，保存数据库状态。
+具体步骤是：
+（1）将当前日志缓冲区中的所有日志记录写入磁盘的日志文件上
+（2）在日志文件中写入一个检查点记录
+（3）将当前数据缓冲区的所有数据记录写入磁盘的数据库中
+（4）把检查点记录在日志文件中的地址写入一个重新开始文件
+4、建立检查点
+恢复子系统可以定期或不定期地建立检查点,保存数据库状态:
+定期：按照预定的一个时间间隔，如每隔一小时建立一个检查点
+不定期：按照某种规则，如日志文件已写满一半建立一个检查点</p>
+<p>10.6.3.利用检查点的恢复策略
+1、使用检查点方法可以改善恢复效率
+（1）当事务T在一个检查点之前提交，T对数据库所做的修改已写入数据库。
+（2）写入时间是在这个检查点建立之前或在这个检查点建立之时。
+（3）在进行恢复处理时，没有必要对事务T执行重做操作
+2、利用检查点的恢复步骤
+（1）从重新开始文件中找到最后一个检查点记录在日志文件中的地址，由该地址在日志文件中找到最后一个检查点记录
+（2）由该检查点记录得到检查点建立时刻所有正在执行的事务清单ACTIVE-LIST
+建立两个事务队列
+UNDO-LIST
+REDO-LIST
+把ACTIVE-LIST暂时放入UNDO-LIST队列，REDO队列暂为空。
+（3）从检查点开始正向扫描日志文件，直到日志文件结束
+如有新开始的事务Ti，把Ti暂时放入UNDO-LIST队列
+如有提交的事务Tj，把Tj从UNDO-LIST队列移到REDO-LIST队列;直到日志文件结束
+（4）对UNDO-LIST中的每个事务执行UNDO操作
+对REDO-LIST中的每个事务执行REDO操作</p>
+<p>————————————————
+版权声明：本文为CSDN博主「头秃的女程序员」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_39326472/article/details/88420916</p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2021-03-19
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://www.yezheng.pro/tags/data-systems/">data-systems</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/specialization/product/product/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">products</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5%E7%AC%94%E8%AE%B0/">
+            <span class="next-text nav-default">[转]数据库系统概念</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://www.yezheng.pro/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2021
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lifecycles on Ye Zheng&#39;s Blog</title>
+    <link>http://www.yezheng.pro/tags/lifecycles/</link>
+    <description>Recent content in Lifecycles on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/lifecycles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enterprise life cycle</title>
+      <link>http://www.yezheng.pro/post/enterprise-architecture/lifecycles/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/enterprise-architecture/lifecycles/</guid>
+      <description>业务提供业务方案，用户旅程 BA评估需求，接纳需求，评估工作量，输出US，IT方案 BA向开发进行需求交接 Enterprise life cycle</description>
+    </item>
+    
+  </channel>
+</rss>

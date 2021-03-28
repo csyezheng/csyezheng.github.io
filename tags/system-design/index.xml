@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>system design on Ye Zheng&#39;s Blog</title>
+    <title>system-design on Ye Zheng&#39;s Blog</title>
     <link>http://www.yezheng.pro/tags/system-design/</link>
-    <description>Recent content in system design on Ye Zheng&#39;s Blog</description>
+    <description>Recent content in system-design on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 26 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/system-design/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/system-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>system design</title>
+      <link>http://www.yezheng.pro/post/interview/system-design/books/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/system-design/books/</guid>
+      <description> System Design Interview – An insider&amp;rsquo;s guide, Second Edition  </description>
+    </item>
+    
     <item>
       <title>Concurrent-Programming-for-Scalable-Web-Architectures</title>
       <link>http://www.yezheng.pro/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/</link>

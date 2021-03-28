@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>[转]网上整理的google面试题 - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="1.1024! 末尾有多少个0？ 末尾0的个数取决于乘法中因子2和5的个数。显然乘法中因子2的个数大于5的个数，所以我们只需统计因子5的个数。 是5的倍数的数" />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.81.0" />
+
+
+<link rel="canonical" href="http://www.yezheng.pro/post/interview/puzzles/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.61b9e7bcbd6f12a4e9f5db11b9643a2092aa9c93ca136cf497edd5e0f3efca61.css" integrity="sha256-YbnnvL1vEqTp9dsRuWQ6IJKqnJPKE2z0l&#43;3V4PPvymE=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="[转]网上整理的google面试题" />
+<meta property="og:description" content="1.1024! 末尾有多少个0？ 末尾0的个数取决于乘法中因子2和5的个数。显然乘法中因子2的个数大于5的个数，所以我们只需统计因子5的个数。 是5的倍数的数" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.yezheng.pro/post/interview/puzzles/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-12-01T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2020-12-01T00:00:00&#43;00:00" />
+
+<meta itemprop="name" content="[转]网上整理的google面试题">
+<meta itemprop="description" content="1.1024! 末尾有多少个0？ 末尾0的个数取决于乘法中因子2和5的个数。显然乘法中因子2的个数大于5的个数，所以我们只需统计因子5的个数。 是5的倍数的数"><meta itemprop="datePublished" content="2020-12-01T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-12-01T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="8344">
+<meta itemprop="keywords" content="interview," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[转]网上整理的google面试题"/>
+<meta name="twitter:description" content="1.1024! 末尾有多少个0？ 末尾0的个数取决于乘法中因子2和5的个数。显然乘法中因子2的个数大于5的个数，所以我们只需统计因子5的个数。 是5的倍数的数"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">[转]网上整理的google面试题</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-12-01" class="post-time">
+          2020-12-01
+        </time>
+        <div class="post-category">
+            <a href="http://www.yezheng.pro/categories/interview/"> interview </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>1.1024! 末尾有多少个0？</p>
+<p>末尾0的个数取决于乘法中因子2和5的个数。显然乘法中因子2的个数大于5的个数，所以我们只需统计因子5的个数。
+是5的倍数的数有： 1024 /5 = 204个
+是25的倍数的数有：1024 /25 = 40个（25是5*5 所以包含25的包括了两个5）
+是125的倍数的数有：1024/ 125 = 8个
+是625的倍数的数有：1024/ 625 = 1个
+所以1024! 中总共有204+40+8+1=253个因子5。
+也就是说1024! 末尾有253个0。</p>
+<ol start="2">
+<li>给定一个数据流，其中包含无穷尽的搜索关键字（比如，人们在谷歌搜索时不断输入的关键字）。如何才能从这个无穷尽的流中随机的选取1000个关键字？</li>
+</ol>
+<p>定义长度为1000的数组。
+对于数据流中的前1000个关键字，显然都要放到数组中。
+对于数据流中的的第n（n&gt;1000）个关键字，我们知道这个关键字被随机选中的概率为 1000/n。所以我们以1000/n 的概率用这个关键字去替换数组中的随机一个。这样就可以保证所有关键字都以 1000/n的概率被选中。
+对于后面的关键字都进行这样的处理，这样我们就可以保证数组中总是保存着1000个随机关键字。</p>
+<ol start="3">
+<li>将下列表达式按照复杂度排序
+2^n     n^Googol (其中 Googol = 10^100)   n!    n^n</li>
+</ol>
+<p>按照复杂度从低到高为
+n^Googol
+2^n
+n!
+n^n</p>
+<ol start="4">
+<li>在半径为1的圆中随机选取一点。</li>
+</ol>
+<p>假设圆心所在位置为坐标元点(0, 0)。方法1.
+在x轴[-1, 1]，y轴[-1, 1]的正方形内随机选取一点。然后判断此点是否在圆内（通过计算此点到圆心的距离）。如果在圆内，则此点即为所求；如果不在，则重新选取直到找到为止。
+正方形的面积为4，圆的面积为pi，所以正方形内的随机点在圆内的概率是 pi / 4。
+方法2.
+从[0, 2*pi)中随机选一个角度，对应于圆中的一条半径，然后在此半径上选一个点。但半径上的点不能均匀选取，选取的概率应该和距圆心的长度成正比，这样才能保证随机点在圆内是均匀分布的。</p>
+<ol start="5">
+<li>给定一个未知长度的整数流，如何随机选取一个数？</li>
+</ol>
+<p>方法1.将整个整数流保存到一个数组中，然后再随机选取。
+如果整数流很长，无法保存下来，则此方法不能使用。
+方法2.如果整数流在第一个数后结束，则我们必定会选第一个数作为随机数。
+如果整数流在第二个数后结束，我们选第二个数的概率为1/2。我们以1/2的概率用第2个数替换前面选的随机数，得到满足条件的新随机数。
+&hellip;.
+如果整数流在第n个数后结束，我们选第n个数的概率为1/n。我们以1/n的概率用第n个数替换前面选的随机数，得到满足条件的新随机数。
+&hellip;.
+利用这种方法，我们只需保存一个随机数，和迄今整数流的长度即可。所以可以处理任意长的整数流。</p>
+<ol start="6">
+<li>
+<p>设计一个数据结构，其中包含两个函数，1.插入一个数字，2.获得中数。并估计时间复杂度。</p>
+</li>
+<li>
+<p>使用数组存储。
+插入数字时，在O(1)时间内将该数字插入到数组最后。
+获取中数时，在O(n)时间内找到中数。（选数组的第一个数和其它数比较，并根据比较结果的大小分成两组，那么我们可以确定中数在哪组中。然后对那一组按照同样的方法进一步细分，直到找到中数。）</p>
+</li>
+<li>
+<p>使用排序数组存储。
+插入数字时，在O(logn)时间内找到要插入的位置，在O(n)时间里移动元素并将新数字插入到合适的位置。
+获得中数时，在O(1)复杂度内找到中数。</p>
+</li>
+<li>
+<p>使用大根堆和小根堆存储。
+使用大根堆存储较小的一半数字，使用小根堆存储较大的一半数字。
+插入数字时，在O(logn)时间内将该数字插入到对应的堆当中，并适当移动根节点以保持两个堆数字相等（或相差1）。
+获取中数时，在O(1)时间内找到中数。</p>
+</li>
+<li>
+<p>给定一个固定长度的数组，将递增整数序列写入这个数组。当写到数组尾部时，返回数组开始重新写，并覆盖先前写过的数。
+请在这个特殊数组中找出给定的整数。</p>
+</li>
+</ol>
+<p>假设数组为a[0, 1, &hellip;, N-1]。
+我们可以采用类似二分查找的策略。
+首先比较a[0]和a[N/2]，如果a[0] &lt; a[N/2]，则说明a[0,1,&hellip;,N/2]为递增子序列，否则另一部分是递增子序列。
+然后判断要找的整数是否在递增子序列范围内。如果在，则使用普通的二分查找方法继续查找；如果不在，则重复上面的查找过程，直到找到或者失败为止。</p>
+<ol start="8">
+<li>给定两个已排序序列，找出共同的元素。</li>
+</ol>
+<p>不妨假设序列是从小到大排序的。定义两个指针分别指向序列的开始。
+如果指向的两个元素相等，则找到一个相同的元素；如果不等，则将指向较小元素的指针向前移动。重复执行上面的步骤，直到有一个指针指向序列尾端。（我上次面试面度的时候他们问这道题了，等分情况，如果两个数组大小差不多，用你的方法就行了，如果数组大小差得很多，就遍历小的，然后在大的里二分查找~ ）</p>
+<ol start="9">
+<li>给定能随机生成整数1到5的函数，写出能随机生成整数1到7的函数。</li>
+</ol>
+<p>此题的关键是让生成的 1 到 7 的数出现概率相同。只要我们可以从 n 个数中随机选出 1 到 n 个数，反复进行这种运算，直到剩下最后一个数即可。
+我们可以调用 n 次给定函数，生成 n 个 1 到 5 之间的随机数，选取最大数所在位置即可满足以上要求。</p>
+<p>例如
+初始的 7 个数[1,2,3,4,5,6,7].
+7 个 1 到 5 的随机数 [5, 3,1,4,2,5,5]
+那么我们保留下[1,6,7],
+3 个1 到 5 的随机数[2,4,1]
+那么我们保留下[6]
+6 就是我们这次生成的随机数。</p>
+<ol start="10">
+<li>判断一个自然数是否是某个数的平方。当然不能使用开方运算。</li>
+</ol>
+<p>假设待判断的数字是 N。</p>
+<p>方法1：
+遍历从1到N的数字，求取平方并和N进行比较。
+如果平方小于N，则继续遍历；如果等于N，则成功退出；如果大于N，则失败退出。
+复杂度为O(n^0.5)。</p>
+<p>方法2：
+使用二分查找法，对1到N之间的数字进行判断。
+复杂度为O(log n)。</p>
+<p>方法3：
+由于
+(n+1)^2
+=n^2 + 2n + 1，
+= &hellip;
+= 1 + (2<em>1 + 1) + (2</em>2 + 1) + &hellip; + (2*n + 1)
+注意到这些项构成了等差数列（每项之间相差2）。
+所以我们可以比较 N-1， N - 1 - 3， N - 1 - 3 - 5&hellip; 和0的关系。
+如果大于0，则继续减；如果等于0，则成功退出；如果小于 0，则失败退出。
+复杂度为O(n^0.5)。不过方法3中利用加减法替换掉了方法1中的乘法，所以速度会更快些。</p>
+<ol start="11">
+<li>给定一个数据流，其中包含无穷尽的搜索关键字（比如，人们在谷歌搜索时不断输入的关键字）。如何才能从这个无穷尽的流中随机的选取1000个关键字？</li>
+</ol>
+<p>定义长度为1000的数组。对于数据流中的前1000个关键字，显然都要放到数组中。对于数据流中的的第n（n&gt;1000）个关键字，我们知道这个关键字被随机选中的概率为 1000/n。所以我们以 1000/n 的概率用这个关键字去替换数组中的随机一个。这样就可以保证所有关键字都以 1000/n的概率被选中。对于后面的关键字都进行这样的处理，这样我们就可以保证数组中总是保存着1000个随机关键字。</p>
+<ol start="12">
+<li>将下列表达式按照复杂度排序
+2^n   n^Googol (其中 Googol = 10^100)   n!    n^n</li>
+</ol>
+<p>按照复杂度从低到高为
+n^Googol  2^n   n!   n^n</p>
+<ol start="13">
+<li>
+<p>谷歌笔试题：在半径为1的圆中随机选取一点
+假设圆心所在位置为坐标元点(0, 0)。
+方法1.在x轴[-1, 1]，y轴[-1, 1]的正方形内随机选取一点。然后判断此点是否在圆内（通过计算此点到圆心的距离）。如果在圆内，则此点即为所求；如果不在，则重新选取直到找到为止。
+正方形的面积为4，圆的面积为pi，所以正方形内的随机点在圆内的概率是 pi / 4。
+方法2.从[0, 2*pi)中随机选一个角度，对应于圆中的一条半径，然后在此半径上选一个点。但半径上的点不能均匀选取，选取的概率应该和距圆心的长度成正比，这样才能保证随机点在圆内是均匀分布的。</p>
+</li>
+<li>
+<p>给定一个未知长度的整数流，如何随机选取一个数
+方法1.将整个整数流保存到一个数组中，然后再随机选取。
+如果整数流很长，无法保存下来，则此方法不能使用。
+方法2.如果整数流在第一个数后结束，则我们必定会选第一个数作为随机数。
+如果整数流在第二个数后结束，我们选第二个数的概率为1/2。我们以1/2的概率用第2个数替换前面选的随机数，得到满足条件的新随机数。&hellip;.如果整数流在第n个数后结束，我们选第n个数的概率为1/n。我们以1/n的概率用第n个数替换前面选的随机数，得到满足条件的新随机数。&hellip;.
+利用这种方法，我们只需保存一个随机数，和迄今整数流的长度即可。所以可以处理任意长的整数流。</p>
+</li>
+</ol>
+<p>15.设计一个数据结构，其中包含两个函数，1.插入一个数字，2.获得中数。并估计时间复杂度。</p>
+<ol>
+<li>使用数组存储。
+插入数字时，在O(1)时间内将该数字插入到数组最后。
+获取中数时，在O(n)时间内找到中数。（选数组的第一个数和其它数比较，并根据比较结果的大小分成两组，那么我们可以确定中数在哪组中。然后对那一组按照同样的方法进一步细分，直到找到中数。）</li>
+<li>使用排序数组存储。插入数字时，在O(logn)时间内找到要插入的位置，在O(n)时间里移动元素并将新数字插入到合适的位置。获得中数时，在O(1)复杂度内找到中数。</li>
+<li>使用大根堆和小根堆存储。使用大根堆存储较小的一半数字，使用小根堆存储较大的一半数字。插入数字时，在O(logn)时间内将该数字插入到对应的堆当中，并适当移动根节点以保持两个堆数字相等（或相差1）。获取中数时，在O(1)时间内找到中数。给定一个固定长度的数组，将递增整数序列写入这个数组。当写到数组尾部时，返回数组开始重新写，并覆盖先前写过的数。请在这个特殊数组中找出给定的整数。假设数组为a[0, 1, &hellip;, N-1]。我们可以采用类似二分查找的策略。首先比较a[0]和a[N/2]，如果a[0] &lt; a[N/2]，则说明a[0,1,&hellip;,N/2]为递增子序列，否则另一部分是递增子序列。然后判断要找的整数是否在递增子序列范围内。如果在，则使用普通的二分查找方法继续查找；如果不在，则重复上面的查找过程，直到找到或者失败为止。给定两个已排序序列，找出共同的元素。不妨假设序列是从小到大排序的。定义两个指针分别指向序列的开始。如果指向的两个元素相等，则找到一个相同的元素；如果不等，则将指向较小元素的指针向前移动。重复执行上面的步骤，直到有一个指针指向序列尾端。</li>
+</ol>
+<p>16找到链表的倒数第m个节点。
+方法1：首先遍历链表，统计链表的长度N。然后再次遍历链表，找到第N-m个节点，即为倒数第m个节点。
+方法2：使用两个指针，并使它们指向的节点相距m-1个。然后同时向前移动两个指针，当一个指针指最后一个节点时，第二个指针指向倒数第m个节点。两个方法的复杂度都是O(n)。但是当N较大而m较小时，方法2可能会更快一些。因为方法2能更好利用CPU的缓存。
+更多阅读：
+<a href="http://baike.baidu.com/view/2089.htm">http://baike.baidu.com/view/2089.htm</a> CPU -&gt; 缓存</p>
+<p>17给定一个排序数组，如何构造一个二叉排序树？
+采用递归算法。选取数组中间的一个元素作为根节点，左边的元素构造左子树，右边的节点构造有子树。</p>
+<ol start="18">
+<li>
+<p>数组中是否有两个数的和为10
+1.比较任意两个数的和是否为10。如
+for (int i = 0; i &lt; n; ++i) { for (int j = i+1; j &lt; n; ++j) { &hellip;. }}
+复杂度为O(n*n)。
+2.将数组排序后，对每个数m，使用二分查找在数组中寻找10-m。
+复杂度为O(nlogn)。
+3.将数组存储到hash_set中去，对每个数m，在hash_set中寻找10-m。
+复杂度为O(n)。
+4.如果数组很大，超过内存的容量，可以按照hash(max(m, 10-m))%g，将数据分到g个小的group中。然后对每个小的group进行单独处理。
+复杂度为O(n)。</p>
+</li>
+<li>
+<p>找到两个字符串的公共字符，并按照其中一个的排序</p>
+</li>
+</ol>
+<p>写一函数f(a,b)，它带有两个字符串参数并返回一串字符，该字符串只包含在两个串中都有的并按照在a中的顺序。写一个版本算法复杂度O(N^2)和一个O(N)
+O(N^2)：对于a中的每个字符，遍历b中的每个字符，如果相同，则拷贝到新字符串中。</p>
+<p>O(N)：首先使用b中的字符建立一个hash_map，对于a中的每个字符，检测hash_map中是否存在，如果存在则拷贝到新字符串中。
+20.给定一个整数序列，其中有些是负数，有些是正数，从该序列中找出最大和的子序列。比如：-5，20，-4，10，-18，子序列[20，-4，10]具有最大和26。</p>
+<p>Int GetMaxSubArraySum(int*array,int array_len)</p>
+<p>{
+int current_sum =0;</p>
+<pre><code>intmax_sum=0;
+
+for(inti=0;i&lt;array_len;i++)
+
+{
+   curren_sum+=array;
+
+   if(current_sum&gt;max_sum)
+
+   {
+       max_sum=current_sum;
+</code></pre>
+<p>}</p>
+<p>else if(current_sum&lt;0)</p>
+<p>{
+current_sum=0;</p>
+<p>}</p>
+<p>}</p>
+<p>return max_sum;</p>
+<p>}</p>
+<p>或者 int maxsum(int n,int *list)</p>
+<p>{
+int ret,sum=0;</p>
+<p>int i;</p>
+<p>for(ret =list[i=0];i&lt;n;i++)</p>
+<p>sum=(sum&gt;0?sum:0)+list,ret=(sum&gt;0?sum:ret);</p>
+<p>return ret;</p>
+<p>}</p>
+<ol start="21">
+<li>将无向无环连通图转换成深度最小的树</li>
+</ol>
+<p>已知一个无向无环连通图T的所有顶点和边的信息，现需要将其转换为一棵树，要求树的深度最小，请设计一个算法找到所有满足要求的树的根结点，并分析时空复杂度。</p>
+<p>最简单直接的方法就是把每个节点都试一遍：假设某个节点为根节点，计算树的深度。当遍历完所有节点后，也就找到了使树的深度最小的根节点。但这个方法的复杂度很高。如果有n个节点，则时间复杂度为O(n^2)。树的深度取决于根节点到最深叶节点的距离，所以我们可以从叶节点入手。叶节点会且只会和某一个节点连通（反之不成立，因为根节点也可能只和一个节点连通），所以我们很容易找到所有可能的叶节点。题目可以等价于找到了两个叶节点，使得两个叶节点之间的距离最远。根节点就是这两个叶节点路径的中间点（或者中间两个点的任意一个）。我们可以每次都将连接度为1的节点删掉，直到最后只剩下1个或2个节点，则这一个节点，或者两个节点中的任意一个，就是我们要找的根节点。</p>
+<ol start="22">
+<li>将字符串中的小写字母排在大写字母的前面</li>
+</ol>
+<p>有一个由大小写组成的字符串，现在需要对它进行修改，将其中的所有小写字母排在大写字母的前面（大写或小写字母之间不要求保持原来次序）。初始化两个int变量A和B，代表字符串中的两个位置。开始时A指向字符串的第一个字符，B指向字符串的最后一个字符。逐渐增加A的值使其指向一个大写字母，逐渐减小B使其指向一个小写字母，交换A，B所指向的字符，然后继续增加A，减小B&hellip;.。当A&gt;=B时，就完成了重新排序。i指向最后一个小写字符，j寻找小写字符。</p>
+<p>void swapString(char *str,intlen)</p>
+<p>{
+inti=len-1,j=0;</p>
+<pre><code>while(j&lt;=i)
+
+{
+   boolflag1=0,flag2=0;
+
+   if(str[i]&gt;'z'||str[i]&lt;'a')
+
+   {
+       i--;
+
+   }
+
+   else
+
+       flag1=1;
+
+
+
+
+   if(str[j]&gt;'Z'||str[j]&lt;'A')
+
+   {
+       j++;
+</code></pre>
+<p>​</p>
+<pre><code>   }
+
+   else
+
+       flag2=1;
+
+   if(flag1&amp;&amp;flag2)
+
+   {
+       swap(str[i],str[j]);
+
+   }
+</code></pre>
+<p>​</p>
+<pre><code>}
+</code></pre>
+<p>}</p>
+<ol start="23">
+<li>在重男轻女的国家里，男女的比例是多少？在一个重男轻女的国家里，每个家庭都想生男孩，如果他们生的孩子是女孩，就再生一个，直到生下的是男孩为止。这样的国家，男女比例会是多少？</li>
+</ol>
+<p>还是1：1。在所有出生的第一个小孩中，男女比例是1：1；在所有出生的第二个小孩中，男女比例是1：1；&hellip;. 在所有出生的第n个小孩中，男女比例还是1：1。所以总的男女比例是1：1。</p>
+<ol start="24">
+<li>如何拷贝特殊链表,有一个特殊的链表，其中每个节点不但有指向下一个节点的指针pNext，还有一个指向链表中任意节点的指针pRand，如何拷贝这个特殊链表？</li>
+</ol>
+<p>拷贝pNext指针非常容易，所以题目的难点是如何拷贝pRand指针。假设原来链表为A1 -&gt; A2 -&gt;&hellip; -&gt; An，新拷贝链表是B1 -&gt; B2 -&gt;&hellip;-&gt; Bn。为了能够快速的找到pRand指向的节点，并把对应的关系拷贝到B中。我们可以将两个链表合并成 A1 -&gt; B1 -&gt; A2 -&gt; B2 -&gt; &hellip; -&gt; An -&gt; Bn。从A1节点出发，很容易找到A1的pRand指向的节点Ax,然后也就找到了Bx，将B1的pRand指向Bx也就完成了B1节点pRand的拷贝。依次类推。当所有节点的pRand都拷贝完成后，再将合并链表分成两个链表就可以了。</p>
+<p>25如何尽快找到一个好人</p>
+<p>有n个人，其中超过半数是好人，剩下的是坏人。好人只说真话，坏人可能说真话也可能说假话。这n个人互相都知道对方是好人还是坏人。现在要你从这n个人当中找出一个好人来，只能通过以下方式：每次挑出两个人，让这两个人互相说出对方的身份，你根据两个人的话进行判断。问通过何种方法才能最快的找出一个好人来。(要考虑最坏的情况)</p>
+<p>和百度面试题中的芯片测试问题非常相似，不再赘述。请参考：
+<a href="http://hi.baidu.com/mianshiti/blog/item/2bcc4a8225fa1ad4bd3e1e17.html">http://hi.baidu.com/mianshiti/blog/item/2bcc4a8225fa1ad4bd3e1e17.html</a>按照这个方法，答案为3n，不知有没有更快的方法。</p>
+<ol start="26">
+<li>如果在高速公路上30分钟内看到一辆车开过的几率是0.95，那么在10分钟内看到一辆车开过的几率是多少？(假设为常概率条件下)</li>
+</ol>
+<p>假设10分钟内看到一辆车开过的概率是x，那么没有看到车开过的概率就是1-x，30分钟没有看到车开过的概率是(1-x)^3，也就是0.05。所以得到方程
+(1-x)^3 = 0.05
+解方程得到x大约是0.63。</p>
+<ol start="27">
+<li>有25匹马，每次比赛只能有5匹马参加，问最少进行几次比赛才可以得到25匹马中跑得最快的前3名？</li>
+</ol>
+<p>最少需要7次。
+首先将马分成a,b,c,d,e 5个组，每组5匹，每组单独比赛。然后将每组的第一名放在一起比赛。假设结果如下
+a0,a1,a2,a3,a4
+b0,b1,b2,b3,b4
+c0,c1,c2,c3,c4
+d0,d1,d2,d3,d4
+e0,e1,e2,e3,e4
+其中a, b,c,d,e小组都是按照名次排列（速度a0&gt;a1&gt;a2&gt;a3&gt;a4,b0&gt;b1&hellip;.)。并第6次比赛的结果为a0&gt;b0&gt;c0&gt;d0&gt;e0。
+那么第6次比赛结束后，我们知道最快的一匹为a0。
+我们知道第2名的马一定是a1或者b0，所以在接下来的比赛中要包含这两匹马。如果a1快，那么第3名是a2或者b0，如果b0快，那么第3名是a1，b1或者c0。也就是说第2名和第3名一定在a1，a2，b0，b1和c0当中，所以在第7场比赛中包括这5匹马就可以得到第2名和第3名。
+所以7次比赛就可以获得前3名的马。</p>
+<ol start="28">
+<li>
+<p>有5个海盗，按照等级从5到1排列。最大的海盗有权提议他们如何分享100枚金币。但其他人要对此表决，如果多数（所有人中的多数）反对，那他就会被杀死。他应该提出怎样的方案，既让自己拿到尽可能多的金币又不会被杀死？
+分配方案是98，0，1，0，1。
+5级海盗会不会被杀死，取决于5级海盗死后其他海盗是否会获得更多的利益。如果可以获得更多的利益，则肯定会反对，如果会获得更少的利益，则肯定会支持，如果利益没有变化，则反对或支持都可以。如果5级海盗死了，则有4级海盗分配，4级海盗面临同样的问题，需要看自己死后的利益分配变化。然后是3级海盗，2级海盗。2级海盗无论提出什么方案，都不会有多数人反对（自己支持，另一个人反对不能构成多数反对）。所以2级海盗肯定会提出100，0的分配方案，自己独享所有金币。猜到2级海盗的分配方案后，3级海盗会提出99，0，1的分配方案。这样1级海盗因获得了比2级海盗方案中更多的金币，所以会支持3级海盗的方案。猜到3级海盗的分配方案后，4级海盗会提出99，0，1，0的分配方案。这样2级海盗获得了比3级海盗方案中更多的金币，所以会支持4级海盗的方案。猜到4级海盗的分配方案后，5级海盗会提出98，0，1，0，1的分配方案。这样1级海盗和3级海盗获得了比4级海盗方案中更多的金币，所以会支持5级海盗的方案。</p>
+</li>
+<li>
+<p>4 个人晚上要穿过一座索桥回到他们的营地。可惜他们手上只有一支只能再坚持17分钟的手电筒。通过索桥必须要拿着手电，而且索桥每次只能撑得起两个人的份量。这四个人过索桥的速度都不一样，第一个走过索桥需要1分钟，第二个2分钟，第三个5分钟，最慢的那个要10分钟。他们怎样才能在17分钟内全部走过索桥？
+1）第一个和第二个一起过去，用掉2分钟；
+2）第一个回来，用掉1分钟；
+3）第三个和第四个一起过去，用掉10分钟；
+4）第二个回来，用掉2分钟；
+5）第一个和第二个一起过去，用掉2分钟。
+总共用掉17分钟。</p>
+</li>
+</ol>
+<p>30如何从8只球中找出比较重的一个
+你有8个一样大小的球，其中7个的重量是一样的，另一个比较重。怎样能够用天平仅称两次将那个重一些的球找出来。
+解答：先取6个，天平上一边3个，同重则称剩余2个即可；不同重，则取重的3个中的2个来称。分析：此题可以通过倒推法来解决。如果我们知道重球在某两个球中，则可以通过天平两边各放一个，比较重量发现重球。如果我们知道重球在某三个球中，则可以通过天平两边各放一个，如果一样重，则第三个球是重球，否则天平上较重的即是重球。如果我们知道重球在大于等于四个球中，则不能通过一次称重发现重球。所以通过第一次称重，我们必须将重球限定在某两个或三个球当中。另外，天平两端放的球数应该相等，否则结果基本没有意义。
+满足两端球相等的所有可能的比较方法
+左，右
+1， 1
+2， 2
+3， 3
+4， 4
+再考虑到必须将重球限定在2或3个球中，第一次只能采取3，3的比较方法。
+此题还可以扩展一下：在m只大小相同的球中，m-1只重量相同，另外一只比较重。问需要用天平称多少次才能将重球找出来？
+从上面的分析中可以知道，称一次最多可以</p>
+<ul>
+<li>将重球从3个球中找出来。</li>
+<li>将重球从9个球中限定在3个球中。</li>
+<li>将重球从27个球中限定在9个球中。
+&hellip;..
+所以，称n次最多可以将重球从3^n中找出来。倒推回去也就可以获得m个球需要称多少次。
+（天平就三种状态 左重,左轻,平衡 那么N次最多可以有3^N种状态,而坏球有轻重两种状态,唯一特殊的是N次都平衡时可以找到坏球但不知道坏球轻重,那M个球可以有2(M-1)+1种状态 所以在有足量标准球时,有2(M-1)+1≤3^N即M≤(3＾n+1)/2 ）</li>
+</ul>
+<h2 id="reference">Reference</h2>
+<p><a href="https://blog.csdn.net/WXWTJ/article/details/6621430">网上整理的google面试题</a></p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2020-12-01
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://www.yezheng.pro/tags/interview/">interview</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/specialization/artificial-intelligence/search/%E8%AF%8D%E5%BA%93/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">search engine</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/interview/algorithms/">
+            <span class="next-text nav-default">algorithms interview questions</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://www.yezheng.pro/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2021
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

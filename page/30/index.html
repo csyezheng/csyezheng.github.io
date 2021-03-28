@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.81.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.61b9e7bcbd6f12a4e9f5db11b9643a2092aa9c93ca136cf497edd5e0f3efca61.css" integrity="sha256-YbnnvL1vEqTp9dsRuWQ6IJKqnJPKE2z0l&#43;3V4PPvymE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,10 +62,9 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-<meta property="og:updated_time" content="2021-03-07T00:00:00+00:00" />
+
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
-<meta itemprop="description" content="Here is where I keep my programming notes.">
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
 <meta name="twitter:description" content="Here is where I keep my programming notes."/>
 
@@ -296,15 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/go/">Golang</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/spring/">Spring</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2020-08-09" class="post-time">
+        2020-08-09
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -316,25 +315,14 @@
   <div class="post-content">
     
     <div class="post-summary">
-      a-tour-of-go
-standard-library
-Debugging-with-Delve
-generate-model-structs-from-database
-glide
-gopm
-material
-package_download
-quick-start
-web-dev-with-gin-needed
-gin
-go-get-golang-x-solution.md
-good-at.md
-gorm.md
-modules.md
-photoprism.md
+      Installation Install JDK Download jdk-8u261-linux-x64.tar.gz from Oracle
+sudo pacman -S jdk8-openjdk vim ~/.bashrc export JAVA_HOME=/usr/lib/jvm/java-8-openjdk source ~/.bashrc Install maven sudo pacman -S maven cp /opt/maven/conf/settings.xml ~/.m2/ vim ~/.m2/settings.xml &lt;mirror&gt; &lt;id&gt;alimaven&lt;/id&gt; &lt;mirrorOf&gt;central&lt;/mirrorOf&gt; &lt;name&gt;aliyun maven&lt;/name&gt; &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt; &lt;/mirror&gt; Installing the Spring Boot CLI Download the Spring Boot CLI
+wget https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-cli/2.3.3.BUILD-SNAPSHOT/spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip Extract to a directory that supports file execution.
+sudo unzip spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip -d /opt/ vim ~/.bashrc Add the following line to the file
+export PATH=/opt/spring-2.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/go/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/spring/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -345,15 +333,15 @@ photoprism.md
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/good-at/">Golang Pros and Cons</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/spring-boot-cxf-jax-rs-starter/">Spring Boot CXF JAX-RS Starter</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2020-08-03" class="post-time">
+        2020-08-03
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -365,10 +353,13 @@ photoprism.md
   <div class="post-content">
     
     <div class="post-summary">
-      Golang Pros  Modular design means the compiled binary is as small as possible and requires no dependencies. Like Java, it’s platform independent. You can compile it for any platform your servers and applications run on. Take that, Apple. Easy for your developers to learn because it’s based on C. You don’t need to go to a code bootcamp to become proficient. Has static type checking, meaning your code gets its bugs cleaned up at compile time, not in production.
+      Features Registers CXF Servlet with a &ldquo;/services/*&rdquo; URL pattern for serving CXF JAX-RS endpoints.
+Optionally auto-discovers JAX-RS root resources and providers and creates a JAX-RS endpoint.
+Note the use of CXF JAX-RS Clients in SpringBoot Application is covered in this section.
+Databases sudo docker container start mysql-container-id sudo docker exec -it mysql-container-name mysql -u root -p mysql&gt; create database demo; mysql&gt; USE demo; mysql&gt; SET FOREIGN_KEY_CHECKS=0; mysql&gt; DROP TABLE IF EXISTS `student`; mysql&gt; CREATE TABLE `student` ( -&gt; `id` int(10) NOT NULL, -&gt; `name` varchar(100) DEFAULT NULL, -&gt; `sex` char(6) DEFAULT NULL, -&gt; `address` varchar(255) DEFAULT NULL, -&gt; `age` int(10) DEFAULT NULL, -&gt; PRIMARY KEY (`id`) -&gt; ) ENGINE=InnoDB DEFAULT CHARSET=utf8; mysql&gt; INSERT INTO `student` VALUES ('1', '', '', '', '22'); Creating a project spring init -d=web,mybatis,mysql --build=maven mysite dependency  &lt;dependency&gt; &lt;groupId&gt;org.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/good-at/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/spring-boot-cxf-jax-rs-starter/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -379,15 +370,15 @@ photoprism.md
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/gopm/">gopm</a>
+      <a class="post-link" href="/post/specialization/devops/xc/">欣宸Blog</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2020-07-25" class="post-time">
+        2020-07-25
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
           
         </div>
       
@@ -399,10 +390,10 @@ photoprism.md
   <div class="post-content">
     
     <div class="post-summary">
-      go get -u github.com/gpmgo/gopm 
+      https://cloud.tencent.com/developer/column/1662
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/gopm/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/devops/xc/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1623,6 +1614,468 @@ photoprism.md
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/31/">»</a></li>
@@ -1630,7 +2083,7 @@ photoprism.md
 
       
       
-      <li><a href="/page/51/">»»</a></li>
+      <li><a href="/page/73/">»»</a></li>
       
 
       </ul>

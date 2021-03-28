@@ -6,7 +6,43 @@
     <description>Recent content in web-application on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/web-application/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/web-application/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>distributed systems</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/distribute-systems/distribute-systems/</link>
+      <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/distribute-systems/distribute-systems/</guid>
+      <description>Java分布式应用如何入门以及有哪些资料？ 怎样才是一个基本水平的java程序员？</description>
+    </item>
+    
+    <item>
+      <title>domain-driven design read me</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/readme/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/readme/</guid>
+      <description> https://zhuanlan.zhihu.com/p/32459776 https://www.zhihu.com/question/25089273/answer/233316164 https://zhuanlan.zhihu.com/p/343388831 https://zhuanlan.zhihu.com/p/75931257 https://zhuanlan.zhihu.com/p/348706530 https://zhuanlan.zhihu.com/p/334999899 https://www.zhihu.com/question/31687912/answer/95842364 https://github.com/VaughnVernon/IDDD_Samples  </description>
+    </item>
+    
+    <item>
+      <title>domain-driven design with python</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/python/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/python/</guid>
+      <description> https://github.com/cosmicpython/code/branches/all Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices  </description>
+    </item>
+    
+    <item>
+      <title>microservices with python</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/microservices/python/</link>
+      <pubDate>Sun, 20 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/microservices/python/</guid>
+      <description>Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices Hands-On Microservices with Spring Boot and Spring Cloud: Build and deploy Java microservices using Spring Cloud, Istio, and Kubernetes  Hands-On Docker for Microservices with Python: Design, deploy, and operate a complex system with multiple microservices using Docker and Kubernetes</description>
+    </item>
+    
     <item>
       <title>Developing Lightweight Microservices Using Kubernetes</title>
       <link>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-kubernetes/</link>
@@ -32,6 +68,53 @@
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-spring-cloud/</guid>
       <description>Introduction to Spring Cloud    Design pattern Current component Replaced by Software component     Service discovery Netflix Eureka &amp;amp; Netflix Ribbon Netflix Eureka and Spring Cloud load balancer   Edge server Netflix Zuul Spring Cloud Gateway and Spring Security OAuth   Centralized configuration  Spring Cloud Configuration Server   Circuit breaker Netflix Hystrix Resilience4j   Distributed tracing  Spring Cloud Sleuth and Zipkin    Adding Service Discovery Using Netflix Eureka and Ribbon Using Spring Cloud Gateway to Hide Microservices Behind an Edge Server Securing Access to APIs Centralized Configuration Improving Resilience Using Resilience4j Understanding Distributed Tracing </description>
+    </item>
+    
+    <item>
+      <title>SaaS</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/saas/saas/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/saas/saas/</guid>
+      <description> https://blog.sentry.io/2018/11/14/how-to-build-saas-application/ https://youtu.be/W1fkGyIcePA  </description>
+    </item>
+    
+    <item>
+      <title>SaaS with Flask</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/saas/flask/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/saas/flask/</guid>
+      <description> https://github.com/nickjj/build-a-saas-app-with-flask  </description>
+    </item>
+    
+    <item>
+      <title>Spring Config</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/spring/config/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/spring/config/</guid>
+      <description>application.properties import org.springframework.beans.factory.annotation.Value; import com.alibaba.fastjson.JSONObject; import org.apache.http.entity.ContentType; class MessageRestController { @Value(&amp;quot;${restService_url: default_url}&amp;quot;) private String url; @RequestMapping(&amp;quot;/message&amp;quot;) String getMessage() { CloseableHttpClient httpClient = HttpClients.createDefault(); String body; if (param instanceof String) { body = (String) param; } else { body = JSONObject.toJSONString(param); } try { // 创建Http Post请求 HttpPost httpPost = new HttpPost(url); // 添加http headers if</description>
+    </item>
+    
+    <item>
+      <title>Spring Context</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/spring/mybatis/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/spring/mybatis/</guid>
+      <description>applicationContext.xml &amp;lt;context:component-scan base-package=&amp;quot;org.example&amp;quot;/&amp;gt; Classpath scanning and managed components
+&amp;lt;bean id=&amp;quot;txManager&amp;quot; class=&amp;quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&amp;quot;&amp;gt; &amp;lt;property name=&amp;quot;dataSource&amp;quot; ref=&amp;quot;dataSource&amp;quot;/&amp;gt; &amp;lt;/bean&amp;gt; &amp;lt;tx:annotation-driven transaction-manager=&amp;quot;txManager&amp;quot;/&amp;gt; &amp;lt;tx:advice id=&amp;quot;txAdvice&amp;quot; transaction-manager=&amp;quot;txManager&amp;quot;&amp;gt; &amp;lt;tx:attributes&amp;gt; &amp;lt;tx:method name=&amp;quot;create*&amp;quot; propagation=&amp;quot;REQUIRED&amp;quot; timeout=&amp;quot;300&amp;quot; rollback-for=&amp;quot;java.lang.Exception&amp;quot; /&amp;gt; &amp;lt;tx:method name=&amp;quot;delete*&amp;quot; propagation=&amp;quot;REQUIRED&amp;quot; timeout=&amp;quot;300&amp;quot; rollback-for=&amp;quot;java.lang.Exception&amp;quot; /&amp;gt; &amp;lt;tx:method name=&amp;quot;update*&amp;quot; propagation=&amp;quot;REQUIRED&amp;quot; timeout=&amp;quot;300&amp;quot; rollback-for=&amp;quot;java.lang.Exception&amp;quot; /&amp;gt; &amp;lt;tx:method name=&amp;quot;get*&amp;quot; propagation=&amp;quot;REQUIRED&amp;quot; read-only=&amp;quot;true&amp;quot; timeout=&amp;quot;300&amp;quot; /&amp;gt; &amp;lt;tx:method name=&amp;quot;*&amp;quot; propagation=&amp;quot;REQUIRED&amp;quot; read-only=&amp;quot;true&amp;quot; timeout=&amp;quot;300&amp;quot; rollback-for=&amp;quot;java.lang.Exception&amp;quot;/&amp;gt; &amp;lt;/tx:attributes&amp;gt; &amp;lt;/tx:advice&amp;gt; &amp;lt;aop:config&amp;gt; &amp;lt;aop:pointcut id=&amp;quot;txPointcut&amp;quot; expression=&amp;quot;execution(* com.mico.emptyspring.service.*ServiceA.*(..))&amp;quot; /&amp;gt; &amp;lt;aop:advisor pointcut-ref=&amp;quot;txPointcut&amp;quot; advice-ref=&amp;quot;txAdvice&amp;quot; /&amp;gt; &amp;lt;/aop:config&amp;gt; Transaction Management
+&amp;lt;bean id=&amp;quot;sqlSessionFactory&amp;quot; class=&amp;quot;org.mybatis.spring.SqlSessionFactoryBean&amp;quot;&amp;gt; &amp;lt;property name=&amp;quot;dataSource&amp;quot; ref=&amp;quot;dataSource&amp;quot; /&amp;gt; &amp;lt;property name=&amp;quot;configuration&amp;quot;&amp;gt; &amp;lt;bean class=&amp;quot;org.</description>
+    </item>
+    
+    <item>
+      <title>Spring Practice</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/spring/practice/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/spring/practice/</guid>
+      <description>vo  package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } }  dao  import org.</description>
     </item>
     
     <item>
@@ -114,108 +197,6 @@ To create a new entry simply use the Django admin panel.</description>
       <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/elasticsearch/</guid>
       <description>Getting Started Installing and Running Elasticsearch Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &amp;quot;localhost&amp;quot; elasticsearch.hosts: [&amp;quot;http://localhost:9200&amp;quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
 Installing Sense Sense is a Kibana app that provides an interactive console for submitting requests to Elasticsearch directly from your browser.</description>
-    </item>
-    
-    <item>
-      <title>microservices</title>
-      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/microservices/</link>
-      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/microservices/</guid>
-      <description>第1章 微服务 1.1 什么是微服务 微服务就是一些协同工作的小而自治的服务 1.1.1 很小，专注于做好一件事 在一个单块系统内，通常会创建一些抽象层或者模块来保证</description>
-    </item>
-    
-    <item>
-      <title>Building Java Projects with Maven</title>
-      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/spring-boot/</link>
-      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/spring-boot/</guid>
-      <description>Install Maven Maven is downloadable as a zip file at https://maven.apache.org/download.cgi.
-Once you have downloaded the zip file, unzip it to your computer. Then add the bin folder to your path.
-$ mvn -v Define a simple Maven build Maven projects are defined with an XML file named pom.xml. Create a file named pom.xml at the root of the project (i.e. put it next to the src folder) and give it the following contents:</description>
-    </item>
-    
-    <item>
-      <title>edx oauth</title>
-      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/edx_oauth/</link>
-      <pubDate>Thu, 22 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/edx_oauth/</guid>
-      <description>Request URL: http://localhost:18381/api-auth/login/?next=/api/v1/courses/
-Query String Parameters: next: /api/v1/courses/
-Request Method: GET
-Status Code: 302 Found
-  Request URL: http://localhost:18381/login/edx-oidc/?next=/api/v1/courses/
-Query String Parameters: next: /api/v1/courses/
-Request Method: GET
-Status Code: 302 Found
-  Request URL: http://localhost:18000/oauth2/authorize/?redirect_uri=http://localhost:18381/complete/edx-oidc/&amp;amp;client_id=discovery-key&amp;amp;scope=openid+profile+email+permissions&amp;amp;response_type=code&amp;amp;state=W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x
-Query String Parameters:
- redirect_uri: http://localhost:18381/complete/edx-oidc/ client_id: discovery-key scope: openid profile email permissions response_type: code state: W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x  Request Method: GET
-Status Code: 302 Found
-  Request URL: http://localhost:18000/oauth2/authorize/confirm
-Request Method: GET</description>
-    </item>
-    
-    <item>
-      <title>Wagtail</title>
-      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/wagtail/</link>
-      <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/wagtail/</guid>
-      <description>Getting started setting up a brand new Wagtail project $ pip install wagtail $ wagtail start mysite $ cd mysite $ pip install -r requirements.txt $ ./manage.py migrate $ ./manage.py createsuperuser $ ./manage.py runserver http://localhost:8000
-http://localhost:8000/admin/
-Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page.</description>
-    </item>
-    
-    <item>
-      <title>gRPC by Go</title>
-      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/grpc/</link>
-      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/grpc/</guid>
-      <description>$ go version $ go get -u google.golang.org/grpc Install Protocol Buffers v3
- download pre-compiled binaries for your platform(protoc-&amp;lt;version&amp;gt;-&amp;lt;platform&amp;gt;.zip) from here: https://github.com/google/protobuf/releases Unzip this file. Update the environment variable PATH to include the path to the protoc binary file.  $ go get -u github.com/golang/protobuf/protoc-gen-go $ export PATH=$PATH:$GOPATH/bin Build the example $ cd $GOPATH/src/google.golang.org/grpc/examples/helloworld </description>
-    </item>
-    
-    <item>
-      <title>JSON Web Tokens</title>
-      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/jwt/</link>
-      <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/jwt/</guid>
-      <description>What is JSON Web Token? JSON Web Token (JWT) is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
-When should you use JSON Web Tokens? Here are some scenarios where JSON Web Tokens are useful:</description>
-    </item>
-    
-    <item>
-      <title>Concurrent-Programming-for-Scalable-Web-Architectures</title>
-      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/</link>
-      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/</guid>
-      <description>Introduction Scope of this Thesis We will have a detailed look on concurrency in three distinct areas of web architectures&amp;ndash;connection handling, application logic and backend persistence. For each stage, we will discuss its main challenges and issues and explain existing approaches to tackle concurrency.
-Web Applications distinguish two separate types of web applications &amp;ndash; web sites and web services.
-Web Sites some popular types for web sites that are interesting in terms of scalability and concurrency</description>
-    </item>
-    
-    <item>
-      <title>distributed systems</title>
-      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/distributed-systems/</link>
-      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/distributed-systems/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>high concurrency</title>
-      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/high-concurrency/</link>
-      <pubDate>Sun, 26 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/high-concurrency/</guid>
-      <description>高并发 高并发其实挺容易的，当你明白了一万并发的原理，然后扩展到百万、千万、亿万级很easy 要点有如下几项： 1、垂直分层：DNS层、跨机房部署</description>
     </item>
     
   </channel>

@@ -6,7 +6,79 @@
     <description>Recent content in Tags on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>distributed systems</title>
+      <link>http://www.yezheng.pro/tags/distributed-systems/</link>
+      <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/tags/distributed-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>summarization</title>
+      <link>http://www.yezheng.pro/tags/summarization/</link>
+      <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/tags/summarization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>domain-driven-design</title>
+      <link>http://www.yezheng.pro/tags/domain-driven-design/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/tags/domain-driven-design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>products</title>
+      <link>http://www.yezheng.pro/tags/products/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/tags/products/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data-systems</title>
+      <link>http://www.yezheng.pro/tags/data-systems/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/tags/data-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>http://www.yezheng.pro/tags/docker/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>http://www.yezheng.pro/tags/kubernetes/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>microservices</title>
+      <link>http://www.yezheng.pro/tags/microservices/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/tags/microservices/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>computer-networking</title>
       <link>http://www.yezheng.pro/tags/computer-networking/</link>
@@ -112,78 +184,6 @@
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/tags/data-lakes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data-warehouse</title>
-      <link>http://www.yezheng.pro/tags/data-warehouse/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/tags/data-warehouse/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>design</title>
-      <link>http://www.yezheng.pro/tags/design/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/tags/design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hadoop</title>
-      <link>http://www.yezheng.pro/tags/hadoop/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/tags/hadoop/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hive</title>
-      <link>http://www.yezheng.pro/tags/hive/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/tags/hive/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>luigi</title>
-      <link>http://www.yezheng.pro/tags/luigi/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/tags/luigi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>machine learning</title>
-      <link>http://www.yezheng.pro/tags/machine-learning/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>recommendation</title>
-      <link>http://www.yezheng.pro/tags/recommendation/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/tags/recommendation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>recommendation-system</title>
-      <link>http://www.yezheng.pro/tags/recommendation-system/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/tags/recommendation-system/</guid>
       <description></description>
     </item>
     

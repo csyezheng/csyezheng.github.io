@@ -8,6 +8,15 @@
     <language>en</language>
     <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/thinking/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>[转]万字详文阐释程序员修炼之道</title>
+      <link>http://www.yezheng.pro/post/other/thinking/programming/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/other/thinking/programming/</guid>
+      <description>综述 我写过一篇《Code Review 我都 CR 些什么》，讲解了 Code Review 对团队有什么价值，我认为 CR 最重要的原则有哪些。最近我在团队工作中还发现了： 原则不清晰。对</description>
+    </item>
+    
+    <item>
       <title>Programming Thinking</title>
       <link>http://www.yezheng.pro/post/other/thinking/thinking/</link>
       <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>

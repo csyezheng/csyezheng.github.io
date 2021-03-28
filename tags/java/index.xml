@@ -9,11 +9,148 @@
     <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Java 3rd Library</title>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/1/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/1/</guid>
+      <description>import org.alibaba.fastjson.JSONArray; import org.alibaba.fastjson.JSONObject; import com.amazonaws.Request; import com.amazonaws.utils.StringUtils; import com.atomikos.datasource.xa.StringUtils;
+import com.fasterxml.jackson.core.JsonParseException; import com.fasterxml.jackson.annotation.JsonFormat; import com.fasterxml.jackson.core.io.JsonStringEncoder; import com.fasterxml.jackson.core.type.TypeReference; import com.fasterxml.jackson.databind.JavaType; import com.fasterxml.jackson.databind.DeserializationFeature; import com.fasterxml.jackson.databind.JsonMappingException; import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.cache.CacheBuilder; import com.google.common.cache.CacheLoader; import com.google.common.cache.LoadingCache;
+import com.google.gson.Gson;
+import com.ibm.db2.jcc.am.re;
+import com.jayway.restassured.RestAssured; import com.jayway.restassured.path.json.JsonPath; import com.jayway.restassured.config.RestAssuredconfig; import com.jayway.restassured.response.Response; import com.jayway.restassured.response.ValidatableResponse; import com.jayway.restassured.specification.RequestSpecification;
+import freemarker.template.Template; import freemarker.template.TemplateException;
+import groovy.json.internal.JsonFastParser; import groovy.json.internal.ValueMap;</description>
+    </item>
+    
+    <item>
+      <title>The Java 3rd Library</title>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/13/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/13/</guid>
+      <description>import org.apache.ws.security.WSSecurityException; import org.apache.ws.security.util.Base64;</description>
+    </item>
+    
+    <item>
+      <title>The Java 3rd Library</title>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/2/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/2/</guid>
+      <description>net.sf.json JSONArray JSONNull JSONObject org.activiti.engine https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1 commons beanutils BeanUtils; collection CollectionUtils collections CollectionUtils httpclient DefaultHttpMethodRetryHandler HttpClient; HttpException HttpMethod; HttpStatus; NameValuePair; UsernamePasswordCredentials URIException; methods GetMethod; PostMethod; PutMehod RequestEntity StringRequestEntity; .HttpConnectionManagerParams; params. HttpMethodParams; io FileUtils Lang ClassUtils; StringUtils; EqualsBuilder HashCodeBuilder time DateUtils StopWatch lang3 BooleanUtils StringUtils time DateFormatUtils org.apache.http.client.H</description>
+    </item>
+    
+    <item>
+      <title>The Java 3rd Library</title>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/4/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/4/</guid>
+      <description>import org.springframework.beans.factory.DisposableBean; import org.springframework.beans.factory.InitializingBean;
+import org.springframework.stereotype.Service; import org.springframework.transaction.annotation.Propagation; import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.PlatformTransactionManager; import org.springframework.transaction.TransactionDefinition; import org.springframework.transaction.TransactionStatus; import org.springframework.transaction.annotation.Propagation; import org.springframework.transaction.annotation.Transactional; import org.springframework.transaction.support.DefaultTransactionDefinition;
+import org.springframework.core.io.Resource; import org.springframework.core.io.support.PathMatchingResourcePatternResolver; import org.springframework.core.io.support.ResourcePatternResolver;
+import org.springframework.util.ClassUtils;
+import org.springframework.util.Assert; import org.springframework.util.CollectionUtils; import org.springframework.util.ReflectionUtils; import org.springframework.util.StringUtils;</description>
+    </item>
+    
+    <item>
+      <title>The Java 3rd Library</title>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/libraries/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/libraries/</guid>
+      <description>org.apache.http org.apache.commons.dbcp2 org.apache.commons.collections
+fastjson mysql-connector-java liquibase-core liquibase-maven-plugin commons.dbcp commons.collections commons-lang3 import org.apache.commons.lang.StringUtils; jedis
+junit dbunit spring-test-dbunit spring-test spring-boot-starter-test
+disruptor
+cxf-spring-boot-starter-jaxrs cxf-spring-boot-starter-jaxws cxf-rt-rs-service-description-swagger swagger-ui</description>
+    </item>
+    
+    <item>
+      <title>The Java 3rd Library</title>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/mybatis-/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/mybatis-/</guid>
+      <description>import org.apache.ibatis.annotations.Param; session.Configuration Session.SqlsessionFactory</description>
+    </item>
+    
+    <item>
+      <title>The Java 3rd Library</title>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/plugins/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-3rd-party-libraries/plugins/</guid>
+      <description>maven-assembly-plugin maven-dependency-plugin</description>
+    </item>
+    
+    <item>
+      <title>The Java 3rd Library</title>
       <link>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-3rd-party-library/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-3rd-party-library/</guid>
       <description>import org.alibaba.fastjson.JSONArray; import org.alibaba.fastjson.JSONObject; import com.amazonaws.Request; import com.amazonaws.utils.StringUtils; import com.atomikos.datasource.xa.StringUtils; import com.fasterxml.jackson.core.JsonParseException; import com.fasterxml.jackson.annotation.JsonFormat; import com.fasterxml.jackson.core.io.JsonStringEncoder; import com.fasterxml.jackson.core.type.TypeReference; import com.fasterxml.jackson.databind.JavaType; import com.fasterxml.jackson.databind.DeserializationFeature; import com.fasterxml.jackson.databind.JsonMappingException; import com.fasterxml.jackson.databind.ObjectMapper; import com.google.common.cache.CacheBuilder; import com.google.common.cache.CacheLoader; import com.google.common.cache.LoadingCache; import com.google.gson.Gson; import com.ibm.db2.jcc.am.re; import com.jayway.restassured.RestAssured; import com.jayway.restassured.path.json.JsonPath; import com.jayway.restassured.config.RestAssuredconfig; import com.jayway.restassured.response.Response; import com.jayway.restassured.response.ValidatableResponse; import com.jayway.restassured.specification.RequestSpecification; import freemarker.template.Template; import freemarker.template.TemplateException; import groovy.json.internal.JsonFastParser; import groovy.json.internal.ValueMap; import org.apache.ws.security.WSSecurityException; import org.apache.ws.security.util.Base64; net.sf.json JSONArray JSONNull JSONObject org.activiti.engine https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1 commons beanutils BeanUtils; collection</description>
+    </item>
+    
+    <item>
+      <title>The Java Standard Library</title>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/2/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/2/</guid>
+      <description>java  io  BufferedReader BufferedWriter ByteArrayInputStream ByteArrayOutputStream File FileFilter FileInputStream FileOutputStream IOException InputStream IntputStreamReader OutputStream OutputStreamWriter PrintWriter Reader Serializable StringReader StringWriter   lang  reflect  Field Method InvocationTargetException     math  BigDecimal   net  HttpURLConnection URL URLConnection URLDecoder URLEncoder   nio  charset  Charset     security  MessageDigest SecureRandom InvalidAlgorithmParameterException InvalidKeyException KeyManagementException NoSuchAlgorithmException NoSuchProviderException   sql  Date ResultSet ResultSetMetaData SQLException Timestamp   text  DateFormat DecimalFormat MessageFormat Normalizer NumberFormat SimpleDateFormat ParseException   util  ArrayList Arrays Base64.</description>
+    </item>
+    
+    <item>
+      <title>The Java Standard Library</title>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/javaee-rest/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/javaee-rest/</guid>
+      <description>import javax.ws.rs.GET; import javax.ws.rs.POST; import javax.ws.rs.PUT; import javax.ws.rs.DELETE; import javax.ws.rs.Produces; import javax.ws.rs.Path; import javax.ws.rs.PathParam; import javax.ws.rs.QueryParam; import javax.ws.rs.core.Context; import javax.ws.rs.core.MediaType;
+import javax.servlet.http.HttpServlet;
+https://docs.oracle.com/cd/E19226-01/820-7627/6nisfjmk8/index.html</description>
+    </item>
+    
+    <item>
+      <title>The Java Standard Library</title>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/javaee/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/javaee/</guid>
+      <description> javax  inject  Inject Named   jms  Message MessageListener TextMessage   persistence  Transient   servlet  Filter FilterChain FilterConfig ServletInputStream ServletOutputStream ServletRequest ServletResponse ServletException http  Cookie HttpServlet HttpServletRequest HttpServletResponse HttpServletRequestWrapper HttpServletResponseWrapper     transaction  Transactional   ws  rs  DELETE GET POST PUT Path PathParam Produces QueryParam   core  Context MediaType        </description>
+    </item>
+    
+    <item>
+      <title>The Java Standard Library</title>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/javafx/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/javafx/</guid>
+      <description>import java.util.List; import java.util.Map; import java.util.HashMap;
+import java.util.Date; import java.io.Serializable;
+https://docs.oracle.com/javafx/2/collections/jfxpub-collections.htm</description>
+    </item>
+    
+    <item>
+      <title>The Java Standard Library</title>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/javax/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/javax/</guid>
+      <description> javax  activation  DataHandler MimetypesFileTypeMap   crypto  BadPaddingException Cipher IllegalBlockSizeException NoSuchPaddingException spec  IvParameterSpec SecretKeySpec     net  ssl  HostnameVerifier HttpsURLConnection SSLSession SSLContext TrustManager X509TrustManager     script  ScriptException   security  auth  login  LoginException       xml  bind  Unmarshaller JAXBContext annotation  XmlAccessType XmlAccessorType XmlElement XmlElementWrapper XmlRootElement XmlType     namespace  QName   parsers  DocumentBuilder DocumentBuilderFactory SAXParser SAXParserFactory   soap  SOAPBody SOAPBodyElement SOAPEnvelope SOAPMessage SOAPPart SOAPException         </description>
+    </item>
+    
+    <item>
+      <title>The Java Standard Library</title>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/standardlibraries/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/standardlibraries/</guid>
+      <description>Generic Array Lists ArrayList&amp;lt;Employee&amp;gt; staff = new ArrayList&amp;lt;Employee&amp;gt;(); var staff = new ArrayList&amp;lt;Employee&amp;gt;(); // diamond syntax ArrayList&amp;lt;Employee&amp;gt; staff = new ArrayList&amp;lt;&amp;gt;(); staff.add(new Employee(&amp;quot;Harry Hacker&amp;quot;, . . .)); staff.add(new Employee(&amp;quot;Tony Tester&amp;quot;, . . .)); staff.ensureCapacity(100); ArrayList&amp;lt;Employee&amp;gt; staff = new ArrayList&amp;lt;&amp;gt;(100); int sz = staff.size(); staff. trimToSize(); Employee e = staff.get(i); // use set only to replace a previously added element. staff.set(i, harry); var a = new X[staff.size()]; staff.toArray(a); int n = staff.</description>
     </item>
     
     <item>

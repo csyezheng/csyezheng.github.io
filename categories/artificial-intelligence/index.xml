@@ -6,7 +6,16 @@
     <description>Recent content in artificial-intelligence on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>summarization</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/summarization/</link>
+      <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/summarization/</guid>
+      <description> https://github.com/huggingface/transformers/tree/master/examples/seq2seq https://github.com/tensorflow/models/tree/master/research/textsum https://github.com/atulkum/pointer_summarizer https://github.com/vrindav/just-news-it https://github.com/pytorch/fairseq https://github.com/abisee/pointer-generator   </description>
+    </item>
+    
     <item>
       <title>evaluate the quality of the training phrases in intents</title>
       <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</link>
@@ -66,152 +75,138 @@ Record user events User events track user actions such as clicking on a product,
     </item>
     
     <item>
-      <title>Deploying machine learning models in production</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/deploy/</link>
-      <pubDate>Sun, 29 Nov 2020 00:00:00 +0000</pubDate>
+      <title>search engine</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/architecture/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/deploy/</guid>
-      <description>Reference 训练好的深度学习模型是怎么部署的？ PyTorch模型的加速及部署 ahkarami/Deep-Learning-in-Production Accelerating Inference In TF-TRT User Guide tensorflow/tensorrt Tensorrt API Reference Containers: nvidia:tensorflow Model inference using TensorFlow and TensorRT Speed up TensorFlow Inference on GPUs with TensorRT TF20-TF-TRT-inference-from-Keras-saved-model.ipynb</description>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/architecture/</guid>
+      <description>nginx gateway flask gunicorn microservice elasticsearch * 6 redis * 2 mysql * 3 mongo * 1</description>
     </item>
     
     <item>
-      <title>Question answering</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <title>search engine</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/article/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/question-answering/</guid>
-      <description>Reference
- https://github.com/deepmipt/DeepPavlov https://github.com/deepset-ai/FARM https://github.com/huggingface/transformers https://github.com/deepset-ai/haystack https://github.com/deepset-ai/COVID-QA https://demo.allennlp.org/reading-comprehension https://github.com/baidu/AnyQ https://github.com/allenai/bi-att-flow https://github.com/google-research/language/tree/master/language/question_answering BERT Question Answering Inference with Mixed Precision in TensorFlow https://www.kaggle.com/c/tensorflow2-question-answering/ https://github.com/chrischute/squad https://github.com/ColasGael/QA-squad https://github.com/IBM/MAX-Question-Answering http://web.stanford.edu/class/cs224n/project/default-final-project-handout.pdf https://github.com/baidu/DuReader  </description>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/article/</guid>
+      <description>https://www.6aiq.com/article/1588904027930?m=0&amp;amp;p=1 全面理解搜索 Query https://m.sohu.com/a/341401199_473283/ https://blog.csdn.net/qq_40027052/article/details/78579587</description>
     </item>
     
     <item>
-      <title>Top 20 Python Libraries for Data Science</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <title>search engine</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/es/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</guid>
-      <description>Core Libraries &amp;amp; Statistics  NumPy SciPy Pandas StatsModels  Visualization Matplotlib Seaborn Plotly Bokeh Pydot  Machine Learning Scikit-learn XGBoost Eli5  Deep Learning TensorFlow PyTorch Keras  Distributed Deep Learning Dist-keras / elephas / spark-deep-learning  Natural Language Processing NLTK SpaCy Gensim  Data Scraping Scrapy  </description>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/es/</guid>
+      <description>https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-aliases.html#filtered https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-routing-field.html https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-aliases.html#aliases-routing https://discuss.elastic.co/t/what-is-best-indexing-strategy-for-multitenant-data/4353 多租户 规模 https://www.elastic.co/guide/en/elasticsearch/guide/current/user-based.html https://www.elastic.co/guide/en/elasticsearch/guide/current/shared-index.html https://www.elastic.co/guide/en/elasticsearch/guide/current/faking-it.html https://www.elastic.co/guide/en/elasticsearch/guide/current/one-big-user.html https://www.elastic.co/blog/found-multi-tenancy https://techblog.bozho.net/elasticsearch-multitenancy-with-routing/</description>
     </item>
     
     <item>
-      <title>Top Websites for Machine Learning</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/top-websites/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <title>search engine</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/learn/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/top-websites/</guid>
-      <description>AI Hub</description>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/learn/</guid>
+      <description> ICS UCI CSE 163 CA106B Search Engine NYU Search Engine Page Rank Overview - Building a Search Engine | Coursera CSC 575 Intelligent Information Retrieval   </description>
     </item>
     
     <item>
-      <title>Bert</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/bert/</link>
-      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      <title>search engine</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/ltr/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/bert/</guid>
-      <description>BERT 可解释性-从&amp;quot;头&amp;quot;说起 一、背景介绍 搜索场景下用户搜索的 query 和召回文章标题(title)的相关性对提升用户的搜索体验有很大</description>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/ltr/</guid>
+      <description>https://en.m.wikipedia.org/wiki/Learning_to_rank
+https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/learning-to-rank.html
+https://github.com/dmlc/xgboost/tree/master/demo/rank
+https://github.com/o19s/
+https://github.com/o19s/es-tmdb
+https://github.com/o19s/elasticsearch-learning-to-rank
+https://github.com/o19s/elasticsearch-ltr-demo
+https://github.com/o19s/hello-ltr
+https://github.com/ehsangolshani/ranklib-demo
+https://github.com/andrew-sn/sltr_demo
+https://blog.csdn.net/ctrip_tech/article/details/103519193
+https://www.infoq.cn/article/we-are-bringing-learning-to-rank-to-elasticsearch
+https://github.com/o19s/rated-ranking-evaluator
+https://github.com/o19s/relevant-search-book
+https://github.com/o19s/word2vec-experiments
+https://github.com/o19s/splainer
+https://github.com/o19s/splainer-search
+https://github.com/elastic/elasticsearch-dsl-py</description>
     </item>
     
     <item>
-      <title>Tensorflow</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/tensorflow/</link>
-      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      <title>search engine</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/project/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/tensorflow/</guid>
-      <description>TensorFlow Install TensorFlow 2    Version Python version Compiler Build tools     tensorflow-2.2.0 3.5-3.8 GCC 7.3.1 Bazel 2.0.0   tensorflow-2.1.0 2.7, 3.5-3.7 GCC 7.3.1 Bazel 0.27.1   tensorflow-2.0.0 2.7, 3.3-3.7 GCC 7.3.1 Bazel 0.26.1    sudo pacman -U cuda-10.1.243-2-x86_64.pkg.tar.xz sudo pacman -U cudnn-7.6.5.32-2-x86_64.pkg.tar.xz pip install tensorflow-gpu Data input pipelines Keras Sequential API When to use a Sequential model A Sequential model is appropriate for a plain stack of layers where each layer has exactly one input tensor and one output tensor.</description>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/project/</guid>
+      <description>BaseService init_service 各个应用的模型 字典加载 service 对外暴露接口的统一 SearchService(BaseService) do_es_search 词库加载方案 多租户，每个租户词库隔离，每个租户一个JiebaTokenizer，一个wor</description>
     </item>
     
     <item>
-      <title>Multi-label classification</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/multi-label-classification/</link>
-      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <title>search engine</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/python/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/multi-label-classification/</guid>
-      <description>In the multi-label problem there is no constraint on how many of the classes the instance can be assigned to. Formally, multi-label classification is the problem of finding a model that maps inputs x to binary vectors y (assigning a value of 0 or 1 for each element (label) in y).
-Problem transformation methods   Transformation into binary classification problems
-  binary relevance
-amounts to independently training one binary classifier for each label.</description>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/python/</guid>
+      <description> https://github.com/django-haystack/django-haystack/blob/master/haystack/backends/elasticsearch_backend.py   self.conn.indices.create( index=self.index_name, body=self.DEFAULT_SETTINGS, ignore=400 ) self.conn.indices.put_mapping( index=self.index_name, doc_type=&amp;quot;modelresult&amp;quot;, body=current_mapping ) </description>
     </item>
     
     <item>
-      <title>Machine Learning Crash Course Courses</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/crash-course/</link>
-      <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
+      <title>search engine</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/types/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/crash-course/</guid>
-      <description>Machine Learning Crash Course Courses ML Concepts Introduction to ML First, it gives you a tool to reduce the time you spend programming. Second, it will allow you to customize your products, making them better for specific groups of people. Third, machine learning lets you solve problems that you, as a programmer, have no idea how to do by hand. machine learning changes the way you think about a problem.</description>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/types/</guid>
+      <description>Removal of mapping types
+https://www.elastic.co/guide/en/elasticsearch/reference/current/removal-of-types.html</description>
     </item>
     
     <item>
-      <title>notes of deep learning with python</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/notes-deep-learning-with-python/</link>
-      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      <title>search engine</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E4%BA%A7%E5%93%81/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/notes-deep-learning-with-python/</guid>
-      <description>Deep Learning with Python PART 1 - FUNDAMENTALS OF DEEP LEARNING 1.What is deep learning? Artificial intelligence, machine learning, and deep learning Before deep learning: a brief history of machine learning Why deep learning? Why now? 2.Before we begin: the mathematical building blocks of neural networks A first look at a neural network Data representations for neural networks tensor: it’s a container for numbers. You may be already familiar with matrices, which are 2D tensors: tensors are a generalization of matrices to an arbitrary number of dimensions (note that in the context of tensors, a dimension is often called an axis).</description>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E4%BA%A7%E5%93%81/</guid>
+      <description>服务名称 服务UUID APPID 服务Owner 创建时间 修改时间 ABtest 应用特性： 智能纠错 意图识别 槽位填充 搜索 个性化排序 平台特性： 多租户 服务解耦 租户级意图与槽</description>
     </item>
     
     <item>
-      <title>scikit-learn</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/scikit-learn/</link>
-      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      <title>search engine</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E5%8F%8C%E6%B4%BB/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/scikit-learn/</guid>
-      <description>scikit-learn   sklearn
-  preprocessing
-  MultiLabelBinarizer
-Transforms between iterable of iterables and a multilabel format (binary matrix)
-    utils
-  class_weight
-  compute_class_weight
-Estimate class weights for unbalanced datasets.
-        </description>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E5%8F%8C%E6%B4%BB/</guid>
+      <description>双活复制搭建一套系统，出现故障时能够一键切换，主系统和双活的数据一致性，主系统和双活的版本同步节奏 | Pro | DR | | - - | - - | | gateway | gateway | | 微服务</description>
     </item>
     
     <item>
-      <title>Solution for imbalanced data</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/solution/</link>
-      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      <title>search engine</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/solution/</guid>
-      <description>FAQ imbalanced data  https://www.tensorflow.org/tutorials/structured_data/imbalanced_data https://stackoverflow.com/questions/43481490/keras-class-weights-class-weight-for-one-hot-encoding https://github.com/jbjorne/TEES/blob/master/Detectors/KerasDetectorBase.py https://towardsdatascience.com/practical-tips-for-class-imbalance-in-binary-classification-6ee29bcdb8a7 https://stackoverflow.com/questions/48485870/multi-label-classification-with-class-weights-in-keras  Class weight degrades Multi Label Classification Performance  https://datascience.stackexchange.com/questions/28040/class-weight-degrades-multi-label-classification-performance  What is the difference between multilabel and multiclass classification?  https://www.quora.com/What-is-the-difference-between-multilabel-and-multiclass-classification https://stats.stackexchange.com/questions/260505/should-i-use-a-categorical-cross-entropy-or-binary-cross-entropy-loss-for-binary  </description>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E5%BA%94%E7%94%A8/</guid>
+      <description>垂直搜索 数据接入 索引库设计 字段名称 字段描述 类型 父级字段 不涉及 是否唯一键 是否分词 普通、单字、英文普通、最全、分隔符、不分词 分词选项 用途：展示/</description>
     </item>
     
     <item>
-      <title>Few shot learning</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/</link>
-      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      <title>search engine</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E6%90%9C%E7%B4%A2%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/</guid>
-      <description>Reference  https://github.com/AnthonyMRios/multi-label-zero-shot Few-Shot and Zero-Shot Multi-Label Learning for Structured Label Spaces Deep Neural Networks for Multi-Label Text Classification https://github.com/YujiaBao/Distributional-Signatures Induction Networks for Few-Shot Text Classification https://github.com/laohur/LearnToCompareText  </description>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E6%90%9C%E7%B4%A2%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/</guid>
+      <description>垂直搜索 Query输入 搜索词 自定义入参 Query理解 槽位名称 槽位识别方式 自定义字典 索引字段 选择字段 替换字典 自定义关键词列表 自定义列表 替换字典</description>
     </item>
     
     <item>
-      <title>Learning Path for Machine Learning</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/learn-ml/</link>
-      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      <title>search engine</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/learn-ml/</guid>
-      <description>Learning Path for Machine Learning Basics of machine learning with TensorFlow Step 1: Understand what ML is all about The book ‘Deep Learning in Python’ by Francois Chollet, creator of Keras, is a great place to get started. Read chapters 1-4 to understand the fundamentals of ML from a programmer’s perspective.
-Google Developers Machine Learning Crash Course
-Machine Learning Glossary
-Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which takes you beyond the basics into introductory Computer Vision, NLP, and Sequence modelling.</description>
-    </item>
-    
-    <item>
-      <title>kaggle</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/kaggle/</link>
-      <pubDate>Sun, 25 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/kaggle/</guid>
-      <description>https://www.kaggle.com/stackoverflow/statsquestions
-https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
-https://developer.ibm.com/exchanges/models/all/max-toxic-comment-classifier/
-https://www.quora.com/Is-binary-relevance-same-as-one-vs-all
-https://stackoverflow.com/questions/44674847/what-are-the-differences-between-all-these-cross-entropy-losses-in-keras-and-ten
-https://vict0rs.ch/2018/06/17/multilabel-text-classification-tensorflow/
-https://github.com/tensorflow/skflow/issues/113
-https://towardsdatascience.com/journey-to-the-center-of-multi-label-classification-384c40229bff
-https://www.reddit.com/r/MLQuestions/comments/5n82zb/loss_function_for_sparse_multilabel_classification/</description>
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E7%AE%A1%E7%90%86/</guid>
+      <description>运营分析 Dashboard 热搜词统计 用户行为明细 业务管理 小程序 直通车 敏感词 推荐词</description>
     </item>
     
   </channel>

@@ -6,22 +6,49 @@
     <description>Recent content in Categories on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>computer-networking</title>
-      <link>http://www.yezheng.pro/categories/computer-networking/</link>
-      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      <title>artificial-intelligence</title>
+      <link>http://www.yezheng.pro/categories/artificial-intelligence/</link>
+      <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/categories/computer-networking/</guid>
+      <guid>http://www.yezheng.pro/categories/artificial-intelligence/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>artificial-intelligence</title>
-      <link>http://www.yezheng.pro/categories/artificial-intelligence/</link>
-      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      <title>web-application</title>
+      <link>http://www.yezheng.pro/categories/web-application/</link>
+      <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/categories/artificial-intelligence/</guid>
+      <guid>http://www.yezheng.pro/categories/web-application/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>products</title>
+      <link>http://www.yezheng.pro/categories/products/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/categories/products/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>microservices</title>
+      <link>http://www.yezheng.pro/categories/microservices/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/categories/microservices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>systems</title>
+      <link>http://www.yezheng.pro/categories/systems/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/categories/systems/</guid>
       <description></description>
     </item>
     
@@ -35,6 +62,15 @@
     </item>
     
     <item>
+      <title>enterprise-architecture</title>
+      <link>http://www.yezheng.pro/categories/enterprise-architecture/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/categories/enterprise-architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>interview</title>
       <link>http://www.yezheng.pro/categories/interview/</link>
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
@@ -44,11 +80,20 @@
     </item>
     
     <item>
-      <title>web-application</title>
-      <link>http://www.yezheng.pro/categories/web-application/</link>
-      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      <title>security</title>
+      <link>http://www.yezheng.pro/categories/security/</link>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/categories/web-application/</guid>
+      <guid>http://www.yezheng.pro/categories/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>storage</title>
+      <link>http://www.yezheng.pro/categories/storage/</link>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/categories/storage/</guid>
       <description></description>
     </item>
     
@@ -89,20 +134,20 @@
     </item>
     
     <item>
+      <title>other</title>
+      <link>http://www.yezheng.pro/categories/other/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/categories/other/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>devops</title>
       <link>http://www.yezheng.pro/categories/devops/</link>
       <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/categories/devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>other</title>
-      <link>http://www.yezheng.pro/categories/other/</link>
-      <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/categories/other/</guid>
       <description></description>
     </item>
     

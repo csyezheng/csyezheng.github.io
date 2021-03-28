@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.81.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/engineering-fundamentals/typescript/typescript/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.0493617b29ca314c4891213673bd17850fd873c91d68aa156d61f090a97c5ca6.css" integrity="sha256-BJNheynKMUxIkSE2c70XhQ/Yc8kdaKoVbWHwkKl8XKY=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.61b9e7bcbd6f12a4e9f5db11b9643a2092aa9c93ca136cf497edd5e0f3efca61.css" integrity="sha256-YbnnvL1vEqTp9dsRuWQ6IJKqnJPKE2z0l&#43;3V4PPvymE=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,19 +62,15 @@
 <meta property="og:title" content="TypeScript" />
 <meta property="og:description" content="TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.yezheng.pro/post/engineering-fundamentals/typescript/typescript/" />
-<meta property="article:published_time" content="2019-03-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-03-01T00:00:00+00:00" />
+<meta property="og:url" content="http://www.yezheng.pro/post/engineering-fundamentals/typescript/typescript/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-03-01T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2019-03-01T00:00:00&#43;00:00" />
+
 <meta itemprop="name" content="TypeScript">
-<meta itemprop="description" content="TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件">
-<meta itemprop="datePublished" content="2019-03-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="description" content="TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件"><meta itemprop="datePublished" content="2019-03-01T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-03-01T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="4736">
-
-
-
-<meta itemprop="keywords" content="TypeScript," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="TypeScript," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="TypeScript"/>
 <meta name="twitter:description" content="TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件"/>
 
@@ -457,38 +453,38 @@ alert(&ldquo;Is NOT valid&rdquo;);
 <pre><code>let message = isValid ? &quot;Is valid!&quot; : &quot;Is NOT valid!&quot;;
 
 switch(n) {
-    case 1:
+	case 1:
         statements
         break;
-    case 2;
+	case 2;
         statements
         break;
-    default:
+	default:
         statements
         break;
 }
 
 while (n &gt; 1) {
-    product *= n;
-    n--;
+	product *= n;
+	n--;
 }
 
 let i: number = 0;
 do {
-    i += 1;
-    console.log(i);
+	i += 1;
+	console.log(i);
 } while (i &lt; 5);
 
 for (let i: number = 0; i &lt; 9; i++) {
-    console.log(i);
+	console.log(i);
 }
 
 // for .. in  迭代对象的属性（包括继承的属性）
 let obj: any = { a: 1, b: 2, c: 3 };
 for (let key in obj) {
-    if (obj.hasOwnProperty(prop)) {           // hasOwnProperty只枚举对象自己的属性
+	if (obj.hasOwnProperty(prop)) {           // hasOwnProperty只枚举对象自己的属性
         // prop 没有被继承
-    }
+	}
 }
 </code></pre>
 <p>函数：
@@ -639,37 +635,37 @@ npm install typescript -g             <br>
 // 全局安装的包并不会出现在package.json中，手动添加到package.json的devDependencies或peerDependencies中
 npm install jquery &ndash;save</p>
 <pre><code>    https://api.jquery.com
-    package.json的某些字段必须手动配置 https://docs.nomjs.com/files/package.json
+	package.json的某些字段必须手动配置 https://docs.nomjs.com/files/package.json
 	
-    .gitignore 忽略node_modules目录，以后clone下来 npm install即可
+	.gitignore 忽略node_modules目录，以后clone下来 npm install即可
 	
-    npm install -g bower                 // 只用于管理前端的依赖包
-    bower init                                // 
-    bower install jquery
-    bower install jquery --save
-    bower install jasmine --save-dev
+	npm install -g bower                 // 只用于管理前端的依赖包
+	bower init                                // 
+	bower install jquery
+	bower install jquery --save
+	bower install jasmine --save-dev
 	
-    http://bower.io/docs/ config/
-    .gitignore 忽略bower_components目录，以后clone下来 bower install即可
+	http://bower.io/docs/ config/
+	.gitignore 忽略bower_components目录，以后clone下来 bower install即可
 	
-    npm install tsd -g                  // 管理TypeScript应用描述文件的工具
-    tsd init                           // 生成tsd.json
-    tsd install jquery --save             // 安装jQuery描述符文件
-    https://github.com/borisyankov/DefinitelyTyped 搜索tsd包
+	npm install tsd -g                  // 管理TypeScript应用描述文件的工具
+	tsd init                           // 生成tsd.json
+	tsd install jquery --save             // 安装jQuery描述符文件
+	https://github.com/borisyankov/DefinitelyTyped 搜索tsd包
 	
 自动化任务工具
-    $ npm install -g gulp
-    $ npm install --save-dev gulp
+	$ npm install -g gulp
+	$ npm install --save-dev gulp
 	
-    ---------------- gulpfile.js -----------------------
-    let gulp = require('gulp');
-    gulp.task('default', function() {
+	---------------- gulpfile.js -----------------------
+	let gulp = require('gulp');
+	gulp.task('default', function() {
         console.log('Hello Gulp!');
-    });
+	});
 	
-    $ gulp
+	$ gulp
 	
-    检查代码质量的任务
+	检查代码质量的任务
         npm install gulp-tslint --save-dev
 		
         ---------------- gulpfile.js -----------------------
@@ -688,7 +684,7 @@ npm install jquery &ndash;save</p>
         ---------------- gulpfile.js -----------------------
         gulp.task('default', ['lint']);
 	
-    编译TypeScript代码的任务
+	编译TypeScript代码的任务
         npm install gulp-typescript --save-dev
 		
         ---------------- gulp-typescript -----------------------
@@ -744,53 +740,53 @@ npm install jquery &ndash;save</p>
         footerView.render();
         loadingView.render(); 
 		
-    npm install browserify viny-transform gulp-uglify gulp-sourcemaps
+	npm install browserify viny-transform gulp-uglify gulp-sourcemaps
 	
-    let browserify = require('browserfiy'),
+	let browserify = require('browserfiy'),
         transform = require('vinyl-transform'),
         uglify = require('gulp-uglify'),
         sourcemaps = require('gulp-sourcemaps');
-    let browserified = transform(function(filename) {
+	let browserified = transform(function(filename) {
         let b = browserify({ entries: filename, debug: true });
         return b.bundle();
-    });
+	});
 	
-    browserified会把一个普通的Node.js流转换为一个Gulp流
+	browserified会把一个普通的Node.js流转换为一个Gulp流
 	
-    gulp.task('bundle-js', function() {
+	gulp.task('bundle-js', function() {
         return gulp.src('./temp/source/js/main.js')
             .pipe(browserified)
             .pipe(sourcemaps.init( { loadMaps: true }))
             .pipe(uglify())
             .pipe(sourcemaps.write('./'))
             .pipe(gulp.dest('./dist/source/js/'));
-    });
+	});
 	
-    gulp.task('bundle-test', function () {
+	gulp.task('bundle-test', function () {
         return gulp.src('./temp/test/**/**.test.js')
         .pipe(browserified)
         .pipe(browserified)
         .pipe(gulp.desc('./dist/test/'));
-    });
+	});
 	
-    gulp.task('default', ['lint', 'tsc', 'tsc-tests', 'bundle-js', 'bundle-test']);
+	gulp.task('default', ['lint', 'tsc', 'tsc-tests', 'bundle-js', 'bundle-test']);
 	
 自动化测试工具
-    npm install mocha chai sinon --save-dev
-    npm install karma karma-mocha karma-chai karma-sinon karma-coverage karma-phantomjs-launcher gulp-karma --save-dev
-    npm install -g browser-sync
+	npm install mocha chai sinon --save-dev
+	npm install karma karma-mocha karma-chai karma-sinon karma-coverage karma-phantomjs-launcher gulp-karma --save-dev
+	npm install -g browser-sync
 持续集成工具
-    Travis CI
-    ---------- travis.yml -----------
-    language: node_js
-    node_js:
-    - &quot;0.10&quot;
+	Travis CI
+	---------- travis.yml -----------
+	language: node_js
+	node_js:
+	- &quot;0.10&quot;
 脚手架工具
-    npm install -g yo
-    npm install -g generator-typescript
-    yo typescript
-    npm install -g generator-gulp-sass-typescript
-    yo generator-gulp-sass-typescript
+	npm install -g yo
+	npm install -g generator-typescript
+	yo typescript
+	npm install -g generator-gulp-sass-typescript
+	yo generator-gulp-sass-typescript
 </code></pre>
 <p>使用函数
 函数声明和函数表达式：
@@ -886,28 +882,28 @@ console.log(foo);          // error</p>
 <pre><code>// 传递一个变量，更好的控制作用域之外创建的变量
 let bar = 0;    // gloabl
 (function(global) {
-    let foo : number = 0;   //local
-    bar = 1;   // global
-    console.log(global.bar);        // 1
-    console.log(foo);            // 0
+	let foo : number = 0;   //local
+	bar = 1;   // global
+	console.log(global.bar);        // 1
+	console.log(foo);            // 0
 })(this);
 consolg.log(bar);                // 1
 console.log(foo);           // error
 
 class Counter {
-    private _i : number;                             // _开始的变量为私有变量名
-    constructor() {
+	private _i : number;                             // _开始的变量为私有变量名
+	constructor() {
         this._i = 0;
-    }
-    get() : number {
+	}
+	get() : number {
         return this._i;
-    }
-    set(val : number) : void {
+	}
+	set(val : number) : void {
         this._i = val;
-    }
-    increment() : void {
+	}
+	increment() : void {
         this._i++;
-    }
+	}
 }
 let counter = new Counter();
 console.log(counter.get());
@@ -999,19 +995,19 @@ let remo = new Person(&ldquo;remo&rdquo;);
 remo.greet();         // &ldquo;Hi! My name is remo&rdquo;
 remo.greetDelay(1000);    // &ldquo;Hi! My name is &quot;</p>
 <pre><code>class Person {
-    name : string;
-    constructor (name : string) {
+	name : string;
+	constructor (name : string) {
         this.name = name;
-    }
-    greet() {
+	}
+	greet() {
         alert(`Hi! My name is ${ this.name }`);
-    }
-    // 箭头函数表达式的词法会在其作用域内绑定this操作符
-    greetDelay(time : number) {
+	}
+	// 箭头函数表达式的词法会在其作用域内绑定this操作符
+	greetDelay(time : number) {
         setTimeout(function() {
             alert(`Hi! My name is ${this.name}`);
         }, time);
-    }
+	}
 }
 let remo = new Person(&quot;remo&quot;);
 remo.greet();         // &quot;Hi! My name is remo&quot;
@@ -1138,7 +1134,7 @@ rejected: 代表异步操作失败
 <pre><code>promise 构造接受一个函数为参数，这个函数有resolve和reject两个参数，这个函数需要成功时执行resolve, 失败时执行reject.
 
 function foo() {
-    return new Promise( (fulfill, reject) =&gt; {
+	return new Promise( (fulfill, reject) =&gt; {
         try {                                               // 其实并不需要try catch, 出现错误会自动rejected
             // do something
             fulfill(value);
@@ -1146,10 +1142,10 @@ function foo() {
         catch(e) {
             reject(reason);
         }
-    });
+	});
 }
 foo().then(function(value) { console.log(value); })
-    .catch(function(e) { console.log(e); });
+	.catch(function(e) { console.log(e); });
 	
 foo函数返回一个promise，promise处于fulfilled状态调用then方法，then方法接受一个函数。promise处于rejected状态调用catch方法，catch方法接受一个函数。
 
