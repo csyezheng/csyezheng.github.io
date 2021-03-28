@@ -295,6 +295,40 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/engineering-fundamentals/go/standard-library/">standard-library</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      io io.Writer import	stdlog &quot;log&quot; var loggers []*Logger var logLevel = Debug type Logger struct { level int logger *stdlog.Logger } func NewLogger(out io.Writer) *Logger { ret := &amp;Logger{level: logLevel, logger: stdlog.New(out, &quot;&quot;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)} loggers = append(loggers, ret) return ret } io.MultiWriter func init() { rand.Seed(time.Now().UTC().UnixNano()) log.SetLevel(&quot;warn&quot;) logger = log.NewLogger(os.Stdout) model.LoadConf() util.LoadMarkdown() i18n.Load() theme.Load() replaceServerConf() if &quot;dev&quot; == model.Conf.RuntimeMode { gin.SetMode(gin.DebugMode) } else { gin.SetMode(gin.ReleaseMode) } gin.DefaultWriter = io.MultiWriter(os.Stdout) } io.
+    </div>
+    <div class="read-more">
+      <a href="/post/engineering-fundamentals/go/standard-library/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/engineering-fundamentals/java/the-java-tutorials/">The Java Tutorials</a>
     </h1>
     
@@ -355,40 +389,6 @@ all source code is first written in plain text files ending with the .java exten
     </div>
     <div class="read-more">
       <a href="/post/engineering-fundamentals/python/standard-library-by-example/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/engineering-fundamentals/python/the-python-tutorial/">The Python Tutorial</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      The Python Tutorial 1. Whetting Your Appetite The Python interpreter is easily extended with new functions and data types implemented in C or C++ (or other languages callable from C). Python allows you to split your program into modules that can be reused in other Python programs. It comes with a large collection of standard modules that you can use as the basis of your programs — or as examples
-    </div>
-    <div class="read-more">
-      <a href="/post/engineering-fundamentals/python/the-python-tutorial/" class="read-more-link">Read more</a>
     </div>
     
   </div>

@@ -19,6 +19,17 @@ DNS service provider Create Cloudflare account Enter your domain name yezheng.</
     </item>
     
     <item>
+      <title>Hackintosh Install Full Guide</title>
+      <link>http://www.yezheng.pro/post/any-path/hackintosh/</link>
+      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/any-path/hackintosh/</guid>
+      <description>Step 0: Preparation You will need a computer running macOS already to follow this guide. If you do not have a Mac you will need to spend some time setting up a virtual machine on your Windows/Linux PC first.
+ vmware workstation vmware macos unlocker workstation unlocker: https://github.com/paolo-projects/unlocker.git Download macOS Catalina Image file for VMWare  Step 1: Download macOS Catalina Download Catalina 10.15 from the Mac App Store
+For machines that need a specific OS release or can&amp;rsquo;t download from the App Store, you can use the gibMacOS utility.</description>
+    </item>
+    
+    <item>
       <title>circumvent Internet censorship</title>
       <link>http://www.yezheng.pro/post/any-path/circumvent-internet-censorship/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
