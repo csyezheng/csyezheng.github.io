@@ -295,46 +295,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/artificial-intelligence/deep-learning/keras/">keras</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/edx_oauth/">edx oauth</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-03-26" class="post-time">
-        2018-03-26
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Keras import tensorflow as tf from tensorflow import keras 
-    </div>
-    <div class="read-more">
-      <a href="/post/specialization/artificial-intelligence/deep-learning/keras/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/web-application/back-end/make-a-web-site/">MAKE A WEBSITE</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2018-03-18" class="post-time">
-        2018-03-18
+      <time datetime="2018-11-22" class="post-time">
+        2018-11-22
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
@@ -349,10 +315,23 @@
   <div class="post-content">
     
     <div class="post-summary">
-      GET A DOMAIN &amp; WEB HOSTING Register a domain name Namesilo Create New Account csyezheng csye3631 SEARCH Domain and REGISTER NameServers：域名解析服务器设置，未确定的可以等稍后在后台设置也一样； Auto-Renew
+      Request URL: http://localhost:18381/api-auth/login/?next=/api/v1/courses/
+Query String Parameters: next: /api/v1/courses/
+Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18381/login/edx-oidc/?next=/api/v1/courses/
+Query String Parameters: next: /api/v1/courses/
+Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18000/oauth2/authorize/?redirect_uri=http://localhost:18381/complete/edx-oidc/&amp;client_id=discovery-key&amp;scope=openid+profile+email+permissions&amp;response_type=code&amp;state=W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x
+Query String Parameters:
+ redirect_uri: http://localhost:18381/complete/edx-oidc/ client_id: discovery-key scope: openid profile email permissions response_type: code state: W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x  Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18000/oauth2/authorize/confirm
+Request Method: GET
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/make-a-web-site/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/edx_oauth/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -363,15 +342,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/computer-science-core/algorithms/leetcode/">Leetcode</a>
+      <a class="post-link" href="/post/master-path/courses/">courses</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-01-30" class="post-time">
-        2018-01-30
+      <time datetime="2018-11-08" class="post-time">
+        2018-11-08
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/computer-science-core/"> computer-science-core </a>
+          <a href="http://www.yezheng.pro/categories/master-path/"> master-path </a>
           
         </div>
       
@@ -383,10 +362,47 @@
   <div class="post-content">
     
     <div class="post-summary">
-      LeetCode最常考察 1 Two Sum 2 Add Two Numbers 3 Longest Substring Without Repeating Characters 8 String to Integer (atoi) 15 3Sum 19 Remove Nth Node From End of List 21 Merge Two Sorted Lists 23 Merge k Sorted Lists 25 Reverse Nodes in k-Group 33 Search in Rotated Sorted Array 34 Search for a Range 42 Trapping Rain Water
+      google cloud java spring
+Getting Started with Go
     </div>
     <div class="read-more">
-      <a href="/post/computer-science-core/algorithms/leetcode/" class="read-more-link">Read more</a>
+      <a href="/post/master-path/courses/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/specialization/web-application/back-end/wagtail/">Wagtail</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2018-11-02" class="post-time">
+        2018-11-02
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Getting started setting up a brand new Wagtail project $ pip install wagtail $ wagtail start mysite $ cd mysite $ pip install -r requirements.txt $ ./manage.py migrate $ ./manage.py createsuperuser $ ./manage.py runserver http://localhost:8000
+http://localhost:8000/admin/
+Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page.
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/web-application/back-end/wagtail/" class="read-more-link">Read more</a>
     </div>
     
   </div>

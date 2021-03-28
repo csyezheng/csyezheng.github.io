@@ -8,6 +8,15 @@
     <language>en</language>
     <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/chatbot/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>chatbot</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/chatbot/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/chatbot/</guid>
+      <description>Building a FAQ Chatbot in Python – The Future of Information Searching 用Rasa NLU构建自己的中文NLU系统 MITIE and Chinese support Chinese_models_for_SpaCy Tuning Your NLU Model Rasa 入坑指南一：初识 Rasa rasa_chatbot_cn diet_classifier Rasa入门教程专栏 rasa文章导</description>
+    </item>
+    
+    <item>
       <title>evaluate the quality of the training phrases in intents</title>
       <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>

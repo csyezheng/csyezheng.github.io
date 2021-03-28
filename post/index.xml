@@ -26,6 +26,17 @@
     </item>
     
     <item>
+      <title>code quality gate</title>
+      <link>http://www.yezheng.pro/post/specialization/devops/checker/</link>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/devops/checker/</guid>
+      <description>sourcemonitor simian
+coverity fotify klocwork
+Sonar checkstyle-idea findbugs-idea PMDPlugin Save Actions</description>
+    </item>
+    
+    <item>
       <title>domain-driven design read me</title>
       <link>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/readme/</link>
       <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
@@ -102,6 +113,36 @@ Scale: Indexing and IO Model Sorting, Building Indices Part 1 B+ Trees Query Opt
     </item>
     
     <item>
+      <title>Tensorflow Docker</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/tensorflow-docker/</link>
+      <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/tensorflow-docker/</guid>
+      <description>TensorFlow Docker requirements Install Docker
+sudo pacman -S docker systemctl enable docker.service systemctl start docker.service For GPU support on Linux,
+yay -S nvidia-container-toolkit The official TensorFlow Docker images are located in the tensorflow/tensorflow Docker Hub repository.
+Start a TensorFlow Docker container docker run [-it] [--rm] [-p hostPort:containerPort] tensorflow/tensorflow[:tag] [command] Examples using CPU-only images docker pull tensorflow/tensorflow docker run -it --rm tensorflow/tensorflow \ python -c &amp;quot;import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))&amp;quot; Start a bash shell session within a TensorFlow-configured container:</description>
+    </item>
+    
+    <item>
+      <title>chatbot</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/chatbot/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/chatbot/</guid>
+      <description>Building a FAQ Chatbot in Python – The Future of Information Searching 用Rasa NLU构建自己的中文NLU系统 MITIE and Chinese support Chinese_models_for_SpaCy Tuning Your NLU Model Rasa 入坑指南一：初识 Rasa rasa_chatbot_cn diet_classifier Rasa入门教程专栏 rasa文章导</description>
+    </item>
+    
+    <item>
+      <title>dialog systems and chatbots</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/dialog-systems-and-chatbots/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/dialog-systems-and-chatbots/</guid>
+      <description>Intent matching Matching algorithms two algorithms to match intents: rule-based grammar matching and ML matching. simultaneously attempts both algorithms and chooses the best result. Algorithm Pros Cons Rule-based grammar matching Accurate with a small or large number of training phrase examples.Models are updated quickly. Does not support the automated expansion entity option. ML matching Accurate with a large number of training phrase examples. Matching is fast. Inaccurate with a small</description>
+    </item>
+    
+    <item>
       <title>evaluate the quality of the training phrases in intents</title>
       <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
@@ -154,45 +195,6 @@ The approach you take is to generate semantic embeddings of the training phrases
       
       <guid>http://www.yezheng.pro/post/specialization/big-data/edx-analytics-pipeline/</guid>
       <description>Reference  edX Insights edX Analytics Pipeline edx-analytics-pipeline luigi  </description>
-    </item>
-    
-    <item>
-      <title>Machine Learning Models for Predictions in Cloud Dataflow Pipelines</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</guid>
-      <description>This solution describes and compares the different design approaches for calling a machine learning model during a Dataflow pipeline, and examines the tradeoffs involved in choosing one approach or another. We present the results of a series of experiments that we ran to explore different approaches and illustrate these tradeoffs, both in batch and stream processing pipelines. This solution is designed for people who integrate trained models into data processing pipelines, rather than for data scientists who want to build machine learning models.</description>
-    </item>
-    
-    <item>
-      <title>recommendations</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/product-overview/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/product-overview/</guid>
-      <description>Implementing Recommendations Steps   Set up a project
-  Import your product catalog You can add items to your Recommendations AI product catalog individually by using the import Files or API.
-  Information of the products sold to customers. This includes the product title, description, in stock availability, pricing, and so on.
-Record user events User events track user actions such as clicking on a product, adding an item to a shopping cart, or purchasing an item, and so on.</description>
-    </item>
-    
-    <item>
-      <title>search engine</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/architecture/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/architecture/</guid>
-      <description>nginx gateway flask gunicorn microservice elasticsearch * 6 redis * 2 mysql * 3 mongo * 1</description>
-    </item>
-    
-    <item>
-      <title>search engine</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/article/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/article/</guid>
-      <description>https://www.6aiq.com/article/1588904027930?m=0&amp;amp;p=1 全面理解搜索 Query https://m.sohu.com/a/341401199_473283/ https://blog.csdn.net/qq_40027052/article/details/78579587</description>
     </item>
     
   </channel>

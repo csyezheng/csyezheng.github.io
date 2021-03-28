@@ -295,15 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/scala/getting-started/">Getting Started with Scala</a>
+      <a class="post-link" href="/post/specialization/devops/books/">DevOps books</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-30" class="post-time">
+        2019-05-30
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
           
         </div>
       
@@ -315,12 +315,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Create A Scala Project With sbt In The Command Line Installation   Java 8 JDK javac -version 
-  install sbt
-  Create a project $ mkdir practice &amp;&amp; cd practice $ sbt new scala/hello-world.g8 # pull template from GitHub - hello-world - project (sbt uses this to install manage plugins and dependencies) - build.properties - src - main - scala (All of your scala code goes here) -Main.
+      Python for DevOps: Learn Ruthlessly Effective Automation  Hands-On Docker for Microservices with Python: Design, deploy, and operate a complex system with multiple microservices using Docker and Kubernetes
+Ansible for DevOps: Server and configuration management for humans
+Terraform: Up &amp; Running: Writing Infrastructure as Code
+Kubernetes: Up and Running: Dive into the Future of Infrastructure
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/scala/getting-started/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/devops/books/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,15 +332,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/gin/">Gin</a>
+      <a class="post-link" href="/post/specialization/devops/tools/">DevOps CI/CD</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-30" class="post-time">
+        2019-05-30
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
           
         </div>
       
@@ -351,11 +352,17 @@
   <div class="post-content">
     
     <div class="post-summary">
-      sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
-$ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/sessions&quot; cookie-based Example import ( &quot;github.com/gin-contrib/sessions&quot; &quot;github.com/gin-contrib/sessions/cookie&quot; &quot;github.com/gin-gonic/gin&quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&quot;secret&quot;)) r.Use(sessions.Sessions(&quot;mysession&quot;, store)) r.GET(&quot;/incr&quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&quot;count&quot;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&quot;count&quot;, count) session.
+      Gitlab https://gitlab.com/gitlab-org/gitlab
+https://github.com/gitlabhq/gitlabhq
+https://docs.gitlab.com/ee/README.html
+Docker integration https://docs.gitlab.com/ee/ci/docker/README.html
+Jenkins CI service https://docs.gitlab.com/ee/integration/jenkins.html
+GitLab Jira integration https://docs.gitlab.com/ee/user/project/integrations/jira.html
+Auto DevOps https://docs.gitlab.com/ee/topics/autodevops/
+Auto Build Auto Build using a Dockerfile Auto Test Auto Code Quality Auto SAST Auto Secret Detection Auto Load Performance Testing Auto Deploy JIRA 
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/gin/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/devops/tools/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -366,15 +373,15 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/glide/">glide</a>
+      <a class="post-link" href="/post/specialization/devops/kubernetes/">Kubernetes Basics</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-30" class="post-time">
+        2019-05-30
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
           
         </div>
       
@@ -386,10 +393,13 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
   <div class="post-content">
     
     <div class="post-summary">
-      使用 glide install 或 glide up 时报 Cannot detect VCS image.png 解决 这个是国内访问golang.org被墙导致的 解决方法如下： glide mirror set https://golang.org/x/crypto https://github.com/golang/crypto 理论上这样后再执行 glide install 或 glide up 就可以了 如果按
+      Using Minikube to Create a Cluster Kubernetes Clusters Kubernetes coordinates a highly available cluster of computers that are connected to work as a single unit.
+applications need to be packaged in a way that decouples them from individual hosts: they need to be containerized.
+Kubernetes automates the distribution and scheduling of application containers across a cluster in a more efficient way.
+A Kubernetes cluster consists of two types of resources:
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/glide/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/devops/kubernetes/" class="read-more-link">Read more</a>
     </div>
     
   </div>

@@ -295,7 +295,44 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/">Joint intent and slot classification</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/deep-learning/tensorflow-docker/">Tensorflow Docker</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-12-09" class="post-time">
+        2020-12-09
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      TensorFlow Docker requirements Install Docker
+sudo pacman -S docker systemctl enable docker.service systemctl start docker.service For GPU support on Linux,
+yay -S nvidia-container-toolkit The official TensorFlow Docker images are located in the tensorflow/tensorflow Docker Hub repository.
+Start a TensorFlow Docker container docker run [-it] [--rm] [-p hostPort:containerPort] tensorflow/tensorflow[:tag] [command] Examples using CPU-only images docker pull tensorflow/tensorflow docker run -it --rm tensorflow/tensorflow \ python -c &quot;import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))&quot; Start a bash shell session within a TensorFlow-configured container:
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/artificial-intelligence/deep-learning/tensorflow-docker/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/specialization/artificial-intelligence/chatbot/chatbot/">chatbot</a>
     </h1>
     
     <div class="post-meta">
@@ -315,10 +352,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Reference  Joint_Intent_and_Slot_Classification.ipynb  
+      Building a FAQ Chatbot in Python – The Future of Information Searching 用Rasa NLU构建自己的中文NLU系统 MITIE and Chinese support Chinese_models_for_SpaCy Tuning Your NLU Model Rasa 入坑指南一：初识 Rasa rasa_chatbot_cn diet_classifier Rasa入门教程专栏 rasa文章导
     </div>
     <div class="read-more">
-      <a href="/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/chatbot/chatbot/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -329,7 +366,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/">Named Entity Recognition using Spacy and Tensorflow</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/natural-language-processing/dialog-systems-and-chatbots/">dialog systems and chatbots</a>
     </h1>
     
     <div class="post-meta">
@@ -349,44 +386,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Reference  Named Entity Recognition using Spacy and Tensorflow  
+      Intent matching Matching algorithms two algorithms to match intents: rule-based grammar matching and ML matching. simultaneously attempts both algorithms and chooses the best result. Algorithm Pros Cons Rule-based grammar matching Accurate with a small or large number of training phrase examples.Models are updated quickly. Does not support the automated expansion entity option. ML matching Accurate with a large number of training phrase examples. Matching is fast. Inaccurate with a small
     </div>
     <div class="read-more">
-      <a href="/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/">Building a Recommendation System in TensorFlow</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-12-05" class="post-time">
-        2020-12-05
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Background theory for recommendations the background theory for matrix factorization-based collaborative filtering as applied to recommendation systems. Collaborative filtering for recommendation systems Collaborative filtering relies only on observed user behavior to make recommendations—no profile data or content access is necessary. The basic assumption is that similar user behavior reflects similar fundamental preferences, allowing
-    </div>
-    <div class="read-more">
-      <a href="/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/natural-language-processing/dialog-systems-and-chatbots/" class="read-more-link">Read more</a>
     </div>
     
   </div>

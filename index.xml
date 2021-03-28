@@ -61,6 +61,27 @@
     </item>
     
     <item>
+      <title>code quality gate</title>
+      <link>http://www.yezheng.pro/post/specialization/devops/checker/</link>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/devops/checker/</guid>
+      
+        <description>&lt;p&gt;sourcemonitor
+simian&lt;/p&gt;
+&lt;p&gt;coverity
+fotify
+klocwork&lt;/p&gt;
+&lt;p&gt;Sonar
+checkstyle-idea
+findbugs-idea
+PMDPlugin
+Save Actions&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>domain-driven design read me</title>
       <link>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/readme/</link>
       <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
@@ -3363,6 +3384,133 @@ An address managed by RIPE. An address  The computer at (European Koç Universit
     </item>
     
     <item>
+      <title>Tensorflow Docker</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/tensorflow-docker/</link>
+      <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/tensorflow-docker/</guid>
+      
+        <description>&lt;h2 id=&#34;tensorflow-docker-requirements&#34;&gt;TensorFlow Docker requirements&lt;/h2&gt;
+&lt;p&gt;Install Docker&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S docker
+systemctl enable docker.service
+systemctl start docker.service
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For GPU support on Linux,&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;yay -S nvidia-container-toolkit
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The official TensorFlow Docker images are located in the &lt;a href=&#34;https://hub.docker.com/r/tensorflow/tensorflow/&#34;&gt;tensorflow/tensorflow&lt;/a&gt; Docker Hub repository.&lt;/p&gt;
+&lt;h2 id=&#34;start-a-tensorflow-docker-container&#34;&gt;Start a TensorFlow Docker container&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;docker run [-it] [--rm] [-p hostPort:containerPort] tensorflow/tensorflow[:tag] [command]
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;examples-using-cpu-only-images&#34;&gt;Examples using CPU-only images&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;docker pull tensorflow/tensorflow 
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;docker run -it --rm tensorflow/tensorflow \
+   python -c &amp;quot;import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Start a &lt;code&gt;bash&lt;/code&gt; shell session within a TensorFlow-configured container:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker run -it tensorflow/tensorflow bash
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To run a TensorFlow program developed on the &lt;em&gt;host&lt;/em&gt; machine within a container, mount the host directory and change the container&amp;rsquo;s working directory (&lt;code&gt;-v hostDir:containerDir -w workDir&lt;/code&gt;):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker run -it --rm -v $PWD:/tmp -w /tmp tensorflow/tensorflow python ./script.py
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Permission issues can arise when files created within a container are exposed to the host. It&amp;rsquo;s usually best to edit files on the host system.&lt;/p&gt;
+&lt;p&gt;Start a &lt;a href=&#34;https://jupyter.org/&#34;&gt;Jupyter Notebook&lt;/a&gt; server using TensorFlow&amp;rsquo;s nightly build:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker run -it -p 8888:8888 tensorflow/tensorflow:nightly-jupyter
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Follow the instructions and open the URL in your host web browser: &lt;code&gt;http://127.0.0.1:8888/?token=...&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker pull tensorflow/tensorflow:1.15.4-py3-jupyter
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;docker run -it tensorflow/tensorflow:1.15.4-py3-jupyter bash
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;gpu-support&#34;&gt;GPU support&lt;/h2&gt;
+&lt;p&gt;Check if a GPU is available:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;lspci | grep -i nvidia
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Verify your &lt;code&gt;nvidia-docker&lt;/code&gt; installation:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker run --gpus all --rm nvidia/cuda nvidia-smi
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;docker pull tensorflow/tensorflow:1.15.4-gpu-py3
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;examples-using-gpu-enabled-images&#34;&gt;Examples using GPU-enabled images&lt;/h3&gt;
+&lt;p&gt;Download and run a GPU-enabled TensorFlow image (may take a few minutes):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bsh&#34; data-lang=&#34;bsh&#34;&gt;docker run --gpus all -it --rm tensorflow/tensorflow:latest-gpu \
+   python -c &amp;quot;import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It can take a while to set up the GPU-enabled image. If repeatedly running GPU-based scripts, you can use &lt;code&gt;docker exec&lt;/code&gt; to reuse a container.&lt;/p&gt;
+&lt;p&gt;Use the latest TensorFlow GPU image to start a &lt;code&gt;bash&lt;/code&gt; shell session in the container:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker run --gpus all -it tensorflow/tensorflow:latest-gpu bash
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.tensorflow.org/install/docker&#34;&gt;https://www.tensorflow.org/install/docker&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>chatbot</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/chatbot/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/chatbot/</guid>
+      
+        <description>&lt;p&gt;&lt;a href=&#34;https://www.analyticsvidhya.com/blog/2018/01/faq-chatbots-the-future-of-information-searching/&#34;&gt;Building a FAQ Chatbot in Python – The Future of Information Searching&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qfire/article/details/78964212&#34;&gt;用Rasa NLU构建自己的中文NLU系统&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/RasaHQ/rasa/issues/972&#34;&gt;MITIE and Chinese support&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/howl-anderson/Chinese_models_for_SpaCy/blob/master/README.en-US.md#ner-new&#34;&gt;Chinese_models_for_SpaCy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://rasa.com/docs/rasa/tuning-your-model/&#34;&gt;Tuning Your NLU Model&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.52nlp.cn/rasa%E5%85%A5%E5%9D%91%E6%8C%87%E5%8D%97-%E5%88%9D%E8%AF%86rasa&#34;&gt;Rasa 入坑指南一：初识 Rasa&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/GaoQ1/rasa_chatbot_cn&#34;&gt;rasa_chatbot_cn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/RasaHQ/rasa/blob/master/rasa/nlu/classifiers/diet_classifier.py&#34;&gt;diet_classifier&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/column/all-in-ai&#34;&gt;Rasa入门教程专栏&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/column/p/88112269&#34;&gt;rasa文章导引&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/RasaHQ/diet-paper&#34;&gt;DIET-paper&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloud.google.com/solutions/building-and-deploying-chatbot-dialogflow&#34;&gt;Building a chatbot agent by using Dialogflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/github/Euchigere/slackbot/blob/master/chatbot.ipynb&#34;&gt;Conversational_Chatbot.ipynb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/drive/1fqshAYRT9FBaJwd1nIOSonUt4MoIsgl-&#34;&gt;Rasa_Emergency_Chatbot_Colab.ipynb&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>dialog systems and chatbots</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/dialog-systems-and-chatbots/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/dialog-systems-and-chatbots/</guid>
+      
+        <description>&lt;h2 id=&#34;intent-matching&#34;&gt;Intent matching&lt;/h2&gt;
+&lt;h3 id=&#34;matching-algorithms&#34;&gt;Matching algorithms&lt;/h3&gt;
+&lt;p&gt;two algorithms to match intents: &lt;em&gt;rule-based grammar matching&lt;/em&gt; and &lt;em&gt;ML matching&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;simultaneously attempts both algorithms and chooses the best result.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Algorithm&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Pros&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Cons&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Rule-based grammar matching&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Accurate with a small or large number of training phrase examples.Models are updated quickly.&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Does not support the &lt;strong&gt;automated expansion&lt;/strong&gt; entity option.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ML matching&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Accurate with a large number of &lt;strong&gt;training phrase examples&lt;/strong&gt;. Matching is fast.&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Inaccurate with a small number of training phrase examples.Models are updated slowly.Less accurate than grammar matching for agents with training phrases in template mode.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;intent-priority&#34;&gt;Intent priority&lt;/h2&gt;
+&lt;p&gt;You can set &lt;strong&gt;priorities&lt;/strong&gt; for intents. When two or more intents match the same end-user expression with similar confidence scores, priority is used to select the best match. Otherwise, the confidence score for intent matching is more important than priority.&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://web.stanford.edu/~jurafsky/slp3/&#34;&gt;Speech and Language Processing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://aihub.cloud.google.com/p/products%2F93f57f99-eddf-477c-a0a3-b44a3e637052&#34;&gt;Evaluation of Intents Classification Model using Dialogflow Client Library&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/drive/1wgWdxUpKf3FWJgqA6ogBGDEzxAosjJMI#scrollTo=tD8kyW6EUQRL&#34;&gt;transformers_joint_intent_classification_slot_filling.ipynb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloud.google.com/dialogflow/es/docs&#34;&gt;Dialogflow ES documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sz128/slot_filling_and_intent_detection_of_SLU&#34;&gt;sz128/slot_filling_and_intent_detection_of_SLU&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.huaweicloud.com/qs-cbs/cbs_05_0005.html#cbs_05_0005__section205397381978&#34;&gt;如何创建一个问答对话流程&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>evaluate the quality of the training phrases in intents</title>
       <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
@@ -3784,253 +3932,6 @@ display(separation_df.sort_values(&#39;Separation&#39;))
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://cloud.google.com/solutions/assessing-the-quality-of-training-phrases-in-dialogflow-intents&#34;&gt;Assessing the quality of training phrases in Dialogflow intents&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Joint intent and slot classification</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</link>
-      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</guid>
-      
-        <description>&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/github/NVIDIA/NeMo/blob/main/tutorials/nlp/Joint_Intent_and_Slot_Classification.ipynb&#34;&gt;Joint_Intent_and_Slot_Classification.ipynb&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Named Entity Recognition using Spacy and Tensorflow</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</link>
-      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</guid>
-      
-        <description>&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://aihub.cloud.google.com/p/products%2F2290fc65-0041-4c87-a898-0289f59aa8ba&#34;&gt;Named Entity Recognition using Spacy and Tensorflow&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Building a Recommendation System in TensorFlow</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</guid>
-      
-        <description>&lt;h2 id=&#34;background-theory-for-recommendations&#34;&gt;Background theory for recommendations&lt;/h2&gt;
-&lt;p&gt;the background theory for matrix factorization-based collaborative filtering as applied to recommendation systems.&lt;/p&gt;
-&lt;h3 id=&#34;collaborative-filtering-for-recommendation-systems&#34;&gt;Collaborative filtering for recommendation systems&lt;/h3&gt;
-&lt;p&gt;Collaborative filtering relies only on &lt;strong&gt;observed user behavior&lt;/strong&gt; to make recommendations—no profile data or content access is necessary.&lt;/p&gt;
-&lt;p&gt;The basic &lt;strong&gt;assumption&lt;/strong&gt; is that similar user behavior reflects similar fundamental preferences, allowing a recommendation engine to make suggestions accordingly.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;For example&lt;/strong&gt;, suppose User 1 has viewed items A, B, C, D, E, and F. User 2 has viewed items A, B, D, E and F, but not C. Because both users viewed five of the same six items, it&amp;rsquo;s likely that they share some basic preferences. User 1 liked item C, and it&amp;rsquo;s probable that User 2 would also like item C if the user were aware of its existence.&lt;/p&gt;
-&lt;h3 id=&#34;matrix-factorization-for-collaborative-filtering&#34;&gt;Matrix factorization for collaborative filtering&lt;/h3&gt;
-&lt;p&gt;The collaborative filtering problem can be solved using matrix factorization.&lt;/p&gt;
-&lt;p&gt;Suppose you have a &lt;strong&gt;matrix&lt;/strong&gt; consisting of &lt;strong&gt;user IDs&lt;/strong&gt; and their interactions with your products. &lt;strong&gt;Each row&lt;/strong&gt; corresponds to a unique user, and &lt;strong&gt;each column&lt;/strong&gt; corresponds to an &lt;strong&gt;item&lt;/strong&gt;. Each entry in the matrix captures a user&amp;rsquo;s rating or preference for a single item. The rating could be &lt;strong&gt;explicit&lt;/strong&gt;, directly generated by user feedback, or it could be &lt;strong&gt;implicit&lt;/strong&gt;, based on user purchases or time spent interacting with an article or video.&lt;/p&gt;
-&lt;p&gt;Ratings in the &lt;code&gt;MovieLens&lt;/code&gt; dataset range from 1 to 5. Empty rating entries have value 0, meaning that a given user hasn&amp;rsquo;t rated the item.&lt;/p&gt;
-&lt;h4 id=&#34;defining-the-matrix-factorization-method&#34;&gt;Defining the matrix factorization method&lt;/h4&gt;
-&lt;p&gt;A ratings matrix consists of a matrix $R$, where entries $r_{ij}$ are ratings of user $i$ for item $j$.&lt;/p&gt;
-&lt;p&gt;The matrix factorization method &lt;strong&gt;assumes&lt;/strong&gt; that there is a set of &lt;strong&gt;attributes&lt;/strong&gt; common to all items, with &lt;strong&gt;items differing&lt;/strong&gt; in the &lt;strong&gt;degree&lt;/strong&gt; to which they &lt;strong&gt;express these attributes&lt;/strong&gt;. Furthermore, the matrix factorization method &lt;strong&gt;assumes&lt;/strong&gt; that each user has their own expression for each of these attributes, independent of the items.  In this way, a &lt;strong&gt;user&amp;rsquo;s item rating can be approximated by summing&lt;/strong&gt; the user&amp;rsquo;s strength for each attribute weighted by the degree to which the item expresses this attribute. These attributes are sometimes called &lt;strong&gt;hidden or &lt;em&gt;latent&lt;/em&gt; factors&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Intuitively, it&amp;rsquo;s easy to see that these hypothetical latent factors actually exist. In the case of movies, it&amp;rsquo;s clear that many users prefer certain genres, actors, or directors.  Much of the power of the matrix factorization approach to collaborative filtering derives from the fact that it&amp;rsquo;s not necessary to know the number of  hypothetical latent factors that might comprise the entirety of a given user&amp;rsquo;s preferences. It&amp;rsquo;s &lt;strong&gt;simply assumed there are an arbitrary number of hypothetical latent factors&lt;/strong&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;transforming-the-matrix-to-represent-latent-factors&#34;&gt;Transforming the matrix to represent latent factors&lt;/h4&gt;
-&lt;p&gt;To translate the existence of latent factors into the matrix of ratings, you do this: for a set of users $U$ of size $u$ and items $I$ of size $i$, you &lt;strong&gt;pick an arbitrary number $k$ of latent factors&lt;/strong&gt; and &lt;strong&gt;factorize&lt;/strong&gt; the large matrix $R$ into two much smaller matrices $X$ (the &amp;ldquo;row factor&amp;rdquo;) and $Y$ (the &amp;ldquo;column factor&amp;rdquo;). Matrix $X$ has dimension $u × k$, and $Y$ has dimension $k × i$.&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;In linear algebra this is called a &lt;strong&gt;low-rank approximation&lt;/strong&gt;. Every user is represented by a vector in this $k$-dimensional space, and each row $x_u$ in $X$ corresponds to the strength of the user&amp;rsquo;s preferences for these $k$ factors. Similarly, every item represented by a vector in this $k$-dimensional space has a column $y_i$ in $Y$ corresponding to the item&amp;rsquo;s expression of the same $k$ factors.&lt;/p&gt;
-&lt;p&gt;To calculate the predicted rating of user &lt;em&gt;u&lt;/em&gt; for item &lt;em&gt;i&lt;/em&gt;, you take the dot product of the two vectors:
-$$
-r_{ui} = x_u^T . y_i
-$$
-You can define a loss function measuring the accuracy of the approximation in the following way, sum the squared difference between the approximate rating $x_u^T⋅y_i$ and the actual rating from the training set $r_{ui}$.:
-$$
-L=\sum_{u,i}(r_{ui}−x_u^T⋅y_i)^2
-$$
-It&amp;rsquo;s common practice to add **regularization terms** to this loss function to help prevent **overfitting**. Adding **L2 regularization terms** for both row and column factors gives the following:
-$$
-L=\sum_{u,i}(r_{ui}−x_u^T⋅y_i)^2 + \lambda\sum_{u}||x_u||^2 + \lambda\sum_{i}||y_i||^2
-$$
-Here, $λ$ is a **regularization constant**, one of the model’s hyperparameters.&lt;/p&gt;
-&lt;h3 id=&#34;the-wals-method-of-matrix-factorization&#34;&gt;The WALS method of matrix factorization&lt;/h3&gt;
-&lt;h4 id=&#34;alternating-least-squares-method-交替最小二乘法&#34;&gt;Alternating least squares method (交替最小二乘法)&lt;/h4&gt;
-&lt;p&gt;The alternating least squares method of matrix factorization is an &lt;strong&gt;iterative&lt;/strong&gt; method for determining the &lt;strong&gt;optimal factors&lt;/strong&gt; $X$ and $Y$ that best approximate $R$. In each iteration, &lt;strong&gt;one of&lt;/strong&gt; the row or column factors &lt;strong&gt;is held fixed&lt;/strong&gt; and &lt;strong&gt;the other is computed&lt;/strong&gt; by minimizing the loss function with respect to the other factor.&lt;/p&gt;
-&lt;p&gt;First, you begin with the row factors:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Set the column factors to constant values.&lt;/li&gt;
-&lt;li&gt;Take the derivative of the loss function with respect to the row factors.&lt;/li&gt;
-&lt;li&gt;Set the equation equal to zero.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;$$
-\frac {\partial{L}} {\partial{x_u}} = −2 \sum_i (r_{ui} − x_u^T⋅y_i)y_i^T + 2\lambda_{xu}^T
-$$&lt;/p&gt;
-&lt;p&gt;$$
-0 = −(r_u − x_u^TY^T)Y + \lambda x_u^T
-$$&lt;/p&gt;
-&lt;p&gt;$$
-x_u^T(Y^TY + \lambda I) = r_uY
-$$&lt;/p&gt;
-&lt;p&gt;$$
-x_u^T = r_uY(Y^TY + \lambda I)^{−1}
-$$&lt;/p&gt;
-&lt;p&gt;Alternating row and column factors, the iterative process is repeated until convergence.&lt;/p&gt;
-&lt;h4 id=&#34;weighted-alternating-least-squares-wals-method-加权交替最小二乘法&#34;&gt;Weighted alternating least squares (WALS) method (加权交替最小二乘法)&lt;/h4&gt;
-&lt;p&gt;$$
-L^w = {W} \sum_{u,i}(r_{ui}−x_u^T⋅y_i)^2
-$$&lt;/p&gt;
-&lt;p&gt;In this equation:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;$$w_{ui} = \omega_{0}$$                                  for zero (unobserved) entries in the ratings matrix&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$$w_{ui} = \omega_{0} + f(c_{i})$$                   for observed entries&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$$c_{i} = \sum_{u,i}1 \text{  if  } r_{ui} &amp;gt; 0$$            the sum of the number of nonzero entries for column $i$&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The weight is scaled by the sum of the nonzero entries in a row to normalize the weight for users who have rated a different number of items. This type of weighting allows for a more flexible model of the user&amp;rsquo;s preferences and produces better empirical results than the unweighted version.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The function $f$ varies&lt;/strong&gt; according to the dataset and whether ratings are explicit or implicit.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;The &lt;code&gt;MovieLens&lt;/code&gt; dataset contains &lt;strong&gt;explicit ratings&lt;/strong&gt;. In this case, a better choice for $f$ is one that weighs the observed entries linearly:&lt;/p&gt;
-&lt;p&gt;$$f = \omega_{k}c_{i}$$   where $\omega_{k}$ is the observed weight.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;For &lt;strong&gt;implicit ratings&lt;/strong&gt; related to dynamic events, where each rating corresponds to the number of times a video has been watched, an article read, or a web page viewed, the rating itself may have an exponential distribution due to user behavior. There will be many low-value ratings as users click on a page or video and navigate away quickly. There will be fewer large implicit ratings as users read an entire article, watch an entire video, or watch a given scheduled show multiple times. In this case, an appropriate $f$ is one that weights the observed ratings to account &lt;strong&gt;for this distribution&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;$f = \left(\frac{1}{c_{i}}\right)^{e}$   where $e$ is the feature weight exponent.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;wals-compared-to-other-techniques&#34;&gt;WALS compared to other techniques&lt;/h3&gt;
-&lt;p&gt;Many matrix factorization techniques are used for collaborative filtering, including &lt;strong&gt;SVD&lt;/strong&gt; and &lt;strong&gt;Stochastic Gradient Descent&lt;/strong&gt;. In some cases these techniques give better reduced-rank approximations than WALS. It&amp;rsquo;s worth noting the following advantages of WALS:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;The weights used in WALS make it suitable for &lt;strong&gt;implicit ratings&lt;/strong&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;WALS includes &lt;strong&gt;algorithmic optimizations&lt;/strong&gt; that make it easy to incorporate weights and efficiently calculate row and column factor updates.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;It&amp;rsquo;s relatively straightforward to create a &lt;strong&gt;distributed version&lt;/strong&gt; of the algorithm.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;create-the-model&#34;&gt;Create the Model&lt;/h2&gt;
-&lt;h3 id=&#34;create-docker-image-environment&#34;&gt;Create Docker image environment&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;docker pull tensorflow/tensorflow:1.15.4-py3-jupyter
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;git clone https://github.com/GoogleCloudPlatform/tensorflow-recommendation-wals
-cd tensorflow-recommendation-wals
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;vim Dockerfile
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# Use an official tensorflow runtime as a parent image
-FROM tensorflow/tensorflow:1.15.4-py3-jupyter
-
-# Set the working directory to /app
-WORKDIR /app
-
-# Copy the requirement list into the container at /app
-ADD requirements.txt /app
-
-# Change mirrors and install vim
-RUN sed -i &amp;quot;s@http://archive.ubuntu.com@http://mirrors.tuna.tsinghua.edu.cn@g&amp;quot; /etc/apt/sources.list &amp;amp;&amp;amp; sed -i &amp;quot;s@http://security.ubuntu.com@http://mirrors.tuna.tsinghua.edu.cn@g&amp;quot; /etc/apt/sources.list &amp;amp;&amp;amp; rm -Rf /var/lib/apt/lists/* &amp;amp;&amp;amp; apt-get update &amp;amp;&amp;amp; apt-get install -y vim
-
-# Upgrading pip
-RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
-
-# set package index url
-RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-
-# Install any needed packages specified in requirements.txt
-RUN pip install -r requirements.txt
-
-# Make port 8888 available to the world outside this container
-EXPOSE 8888
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;docker build -t tfrec:latest --no-cache --network=host .
-docker image ls
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;download-the-movielens-dataset&#34;&gt;Download the &lt;code&gt;MovieLens&lt;/code&gt; dataset&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;curl -O &#39;http://files.grouplens.org/datasets/movielens/ml-100k.zip&#39;
-umzip ml-100k.zip
-mkdir /data/datasets/ml-100k
-cp ml-100k/u.data /data/datasets/ml-100k/
-rm -r ml-100k ml-100k.zip
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;run-jupyter-notebook&#34;&gt;Run Jupyter notebook&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;docker run -it --rm -v $PWD:/app -v /data/datasets/ml-100k:/datasets -w /app -p 8888:8888 tfrec:latest bash
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;jupyter notebook --ip 0.0.0.0 --no-browser --allow-root ./notebooks/Part1.ipynb
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;train-and-tune-the-model&#34;&gt;Train and tune the model&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;cd wals_ml_engine
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;docker run -it --rm -v $PWD:/app -v /data/datasets/ml-100k:/datasets -w /app tfrec:latest python -m trainer.task --job-dir=/app --train-file=/datasets/u.data --data-type=ratings --delimiter=&#39;\t&#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Install miniconda&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ yay -S miniconda3
-$ echo &amp;quot;export PATH=/opt/miniconda3/bin/:$PATH&amp;quot; &amp;gt;&amp;gt; ~/.bashrc
-$ echo &amp;quot;[ -f /opt/miniconda3/etc/profile.d/conda.sh ] &amp;amp;&amp;amp; source /opt/miniconda3/etc/profile.d/conda.sh&amp;quot; &amp;gt;&amp;gt; ~/.bashrc
-$ source ~/.bashrc
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Install the Python packages and TensorFlow.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ conda create -y -n tfrec                     # -y:  Do not ask for confirmation, -n: Name of environment.
-$ conda install -y -n tfrec --file conda.txt   # --file FILE: Read package versions from the given file
-$ source activate tfrec
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ conda deactivate
-$ conda remove -n tfrec --all
-$ conda create -y -n tfrec python=3.7          # with a specific version of Python
-$ pip install -r requirements.txt
-$ pip install tensorflow==1.15
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;api-and-predict&#34;&gt;API and Predict&lt;/h2&gt;
-&lt;p&gt;ensure that the application bind to &lt;code&gt;0.0.0.0&lt;/code&gt; and not &lt;code&gt;127.0.0.1&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;docker run -it --rm -v $PWD:/app -v /data/datasets/ml-100k:/datasets -w /app tfrec:latest python -m trainer.task --job-dir=/app --train-file=/datasets/u.data --data-type=ratings --delimiter=&#39;\t&#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;deploy-the-recommendation-system&#34;&gt;Deploy the Recommendation System&lt;/h2&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://cloud.google.com/solutions/machine-learning/recommendation-system-tensorflow-overview&#34;&gt;Building a Recommendation System in TensorFlow&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://developers.google.com/machine-learning/recommendation&#34;&gt;&lt;strong&gt;Recommendation Systems&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://aihub.cloud.google.com/p/products%2F88c7d41c-bc75-4e36-a966-50a0aa38fa2a&#34;&gt;Recommender System with Matrix Factorization&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.gcp.expert/recommendation-system-tensorflow-overview/&#34;&gt;如何在 TensorFlow 內建立推薦系統：總覽&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/19711823&#34;&gt;有哪些好用的开源推荐系统？&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/tensorflow/models/tree/08bb9eb5ad79e6bceffc71aeea6af809cc78694b/official/recommendation&#34;&gt;Recommendation Model&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/57902387/matrix-factorization-in-tensorflow-2-0-using-wals-method&#34;&gt;Matrix Factorization in tensorflow 2.0 using WALS Method&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;reviewing &lt;a href=&#34;https://github.com/tensorflow/models/tree/08bb9eb5ad79e6bceffc71aeea6af809cc78694b/official/recommendation&#34;&gt;https://github.com/tensorflow/models/tree/08bb9eb5ad79e6bceffc71aeea6af809cc78694b/official/recommendation&lt;/a&gt; for how to get started&lt;/p&gt;
-&lt;p&gt;I was able to dig around and find a very similar approach in the tutorials
-&lt;a href=&#34;https://developers.google.com/machine-learning/recommendation/dnn/softmax&#34;&gt;https://developers.google.com/machine-learning/recommendation/dnn/softmax&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;(props to whoever put those tutorials together was helpful getting another look at the approach and tradeoffs)&lt;/p&gt;
-&lt;p&gt;note for anyone else looking for example apps I bumped into a couple by Nvidia
-&lt;a href=&#34;https://github.com/NVIDIA/DeepLearningExamples/tree/master/PyTorch/Recommendation/NCF&#34;&gt;https://github.com/NVIDIA/DeepLearningExamples/tree/master/PyTorch/Recommendation/NCF&lt;/a&gt;
-&lt;a href=&#34;https://github.com/NVIDIA/DeepLearningExamples/tree/master/TensorFlow/Recommendation/NCF&#34;&gt;https://github.com/NVIDIA/DeepLearningExamples/tree/master/TensorFlow/Recommendation/NCF&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;cool overview for intel&amp;rsquo;s analytics zoo (office depot) across models MF, ncf, wide &amp;amp; deep, and session recommender
-&lt;a href=&#34;https://software.intel.com/en-us/articles/real-time-product-recommendations-for-office-depot-using-apache-spark-and-analytics-zoo-on&#34;&gt;https://software.intel.com/en-us/articles/real-time-product-recommendations-for-office-depot-using-apache-spark-and-analytics-zoo-on&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;it looks like Google&amp;rsquo;s official example leverages apache spark&amp;rsquo;s als model
-&lt;a href=&#34;https://cloud.google.com/solutions/recommendations-using-machine-learning-on-compute-engine&#34;&gt;https://cloud.google.com/solutions/recommendations-using-machine-learning-on-compute-engine&lt;/a&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>data lakes</title>
-      <link>http://www.yezheng.pro/post/specialization/big-data/data-lakes/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/big-data/data-lakes/</guid>
-      
-        <description>&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://delta.io/&#34;&gt;Delta Lake&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://databricks.com/blog/2020/01/30/what-is-a-data-lakehouse.html&#34;&gt;What is a Lakehouse?&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
       

@@ -295,7 +295,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/python/datetime/">Python datetime</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/debugging-with-delve/">Delve Documentation</a>
     </h1>
     
     <div class="post-meta">
@@ -315,13 +315,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      datetime 8.1. datetime
-The datetime module, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation.
-There are two kinds of date and time objects: “naive” and “aware”.
-An aware object has sufficient knowledge of applicable algorithmic and political time adjustments, such as time zone and daylight saving time information, to locate itself relative to other aware objects. An aware object is used to represent a specific moment in time.
+      Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &quot;fmt&quot; &quot;log&quot; &quot;net/http&quot; &quot;os&quot; ) const port = &quot;8000&quot; func main() { http.HandleFunc(&quot;/hi&quot;, hi) fmt.Println(&quot;runing on port: &quot; + port) log.Fatal(http.ListenAndServe(&quot;:&quot; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &quot;HostName: %s&quot;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/python/datetime/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/debugging-with-delve/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -332,7 +329,7 @@ An aware object has sufficient knowledge of applicable algorithmic and political
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/quick-start/">quick-start</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/generate-model-structs-from-database/">generate-model-structs-from-database</a>
     </h1>
     
     <div class="post-meta">
@@ -352,11 +349,14 @@ An aware object has sufficient knowledge of applicable algorithmic and political
   <div class="post-content">
     
     <div class="post-summary">
-        Create your project folder and cd inside
-mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot;   go mod edit -require=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b go mod edit -replace=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b=github.com/google/go-genproto@v0.0.0-20180831171423-11092d34479b go mod edit -require=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -replace=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223=github.com/golang/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -require=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299 go mod edit -replace=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299=github.com/golang/crypto@v0.0.0-20180614174826-fd5f17ee7299 gen --connstr &quot;zhengye:csye3631@tcp(127.0.0.1:3307)/discovery&quot; --database discovery --json --gorm --guregu --rest 
+      Generate gorm model structs from database
+  https://github.com/smallnest/gen
+  https://github.com/wantedly/pq2gorm
+  https://github.com/go-xorm/cmd
+  
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/quick-start/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/generate-model-structs-from-database/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -367,7 +367,7 @@ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; 
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/scala/scalabyexample/">Scala By Example</a>
+      <a class="post-link" href="/post/engineering-fundamentals/scala/getting-started/">Getting Started with Scala</a>
     </h1>
     
     <div class="post-meta">
@@ -387,11 +387,12 @@ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; 
   <div class="post-content">
     
     <div class="post-summary">
-      Introduction Scala smoothly integrates object-oriented and functional programming.
- Abstract types and mixin composition unify concepts from object and module systems. Pattern matching over class hierarchies uniﬁes functional and object-oriented data access. It greatly simpliﬁes the processing of XML trees. A ﬂexible syntax and type system enables the construction of advanced libraries and new domain speciﬁc languages.  Starting with simple expressions and functions, and working up through objects and classes, lists and streams, mutable state, pattern matching to more complete examples that show interesting programming techniques.
+      Create A Scala Project With sbt In The Command Line Installation   Java 8 JDK javac -version 
+  install sbt
+  Create a project $ mkdir practice &amp;&amp; cd practice $ sbt new scala/hello-world.g8 # pull template from GitHub - hello-world - project (sbt uses this to install manage plugins and dependencies) - build.properties - src - main - scala (All of your scala code goes here) -Main.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/scala/scalabyexample/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/scala/getting-started/" class="read-more-link">Read more</a>
     </div>
     
   </div>

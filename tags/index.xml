@@ -26,6 +26,15 @@
     </item>
     
     <item>
+      <title>DevOps</title>
+      <link>http://www.yezheng.pro/tags/devops/</link>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>domain-driven-design</title>
       <link>http://www.yezheng.pro/tags/domain-driven-design/</link>
       <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
@@ -107,20 +116,29 @@
     </item>
     
     <item>
+      <title>deep learning</title>
+      <link>http://www.yezheng.pro/tags/deep-learning/</link>
+      <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tensorflow</title>
+      <link>http://www.yezheng.pro/tags/tensorflow/</link>
+      <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/tags/tensorflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>chatbot</title>
       <link>http://www.yezheng.pro/tags/chatbot/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/tags/chatbot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>deep learning</title>
-      <link>http://www.yezheng.pro/tags/deep-learning/</link>
-      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/tags/deep-learning/</guid>
       <description></description>
     </item>
     
@@ -166,24 +184,6 @@
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/tags/spacy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tensorflow</title>
-      <link>http://www.yezheng.pro/tags/tensorflow/</link>
-      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/tags/tensorflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data-lakes</title>
-      <link>http://www.yezheng.pro/tags/data-lakes/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/tags/data-lakes/</guid>
       <description></description>
     </item>
     

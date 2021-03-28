@@ -79,6 +79,27 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/post/specialization/devops/checker/</loc>
+    <lastmod>2021-03-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/devops/</loc>
+    <lastmod>2021-03-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/categories/devops/</loc>
+    <lastmod>2021-03-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/readme/</loc>
     <lastmod>2021-03-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -254,6 +275,27 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/tags/deep-learning/</loc>
+    <lastmod>2020-12-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/tensorflow/</loc>
+    <lastmod>2020-12-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/tensorflow-docker/</loc>
+    <lastmod>2020-12-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/tags/chatbot/</loc>
     <lastmod>2020-12-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -261,7 +303,14 @@
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/tags/deep-learning/</loc>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/chatbot/</loc>
+    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/dialog-systems-and-chatbots/</loc>
     <lastmod>2020-12-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -318,13 +367,6 @@
   
   <url>
     <loc>http://www.yezheng.pro/tags/spacy/</loc>
-    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/tags/tensorflow/</loc>
     <lastmod>2020-12-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -409,6 +451,13 @@
   
   <url>
     <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</loc>
+    <lastmod>2020-12-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/pytorch-recommendation-ncf/</loc>
     <lastmod>2020-12-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1143,20 +1192,6 @@
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/tags/devops/</loc>
-    <lastmod>2020-07-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/categories/devops/</loc>
-    <lastmod>2020-07-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://www.yezheng.pro/post/specialization/devops/xc/</loc>
     <lastmod>2020-07-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1551,6 +1586,69 @@
   <url>
     <loc>http://www.yezheng.pro/tags/web-scraping/</loc>
     <lastmod>2020-01-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/interview/backend/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/interview/cpp/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/interview/django/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/interview/go/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/interview/java/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/interview/mongodb/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/interview/mysql/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/interview/system-design/system-design/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/interview/unix/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2607,90 +2705,6 @@
   
   <url>
     <loc>http://www.yezheng.pro/post/any-path/hackintosh/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/interview/backend/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/interview/cpp/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/interview/django/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/interview/go/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/interview/java/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/interview/mongodb/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/interview/mysql/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/interview/system-design/system-design/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/interview/unix/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/chatbot/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/tensorflow-docker/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/dialog-systems-and-chatbots/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/pytorch-recommendation-ncf/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/specialization/devops/checker/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

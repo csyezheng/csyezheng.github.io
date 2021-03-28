@@ -17,6 +17,36 @@
     </item>
     
     <item>
+      <title>Tensorflow Docker</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/tensorflow-docker/</link>
+      <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/tensorflow-docker/</guid>
+      <description>TensorFlow Docker requirements Install Docker
+sudo pacman -S docker systemctl enable docker.service systemctl start docker.service For GPU support on Linux,
+yay -S nvidia-container-toolkit The official TensorFlow Docker images are located in the tensorflow/tensorflow Docker Hub repository.
+Start a TensorFlow Docker container docker run [-it] [--rm] [-p hostPort:containerPort] tensorflow/tensorflow[:tag] [command] Examples using CPU-only images docker pull tensorflow/tensorflow docker run -it --rm tensorflow/tensorflow \ python -c &amp;quot;import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))&amp;quot; Start a bash shell session within a TensorFlow-configured container:</description>
+    </item>
+    
+    <item>
+      <title>chatbot</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/chatbot/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/chatbot/</guid>
+      <description>Building a FAQ Chatbot in Python – The Future of Information Searching 用Rasa NLU构建自己的中文NLU系统 MITIE and Chinese support Chinese_models_for_SpaCy Tuning Your NLU Model Rasa 入坑指南一：初识 Rasa rasa_chatbot_cn diet_classifier Rasa入门教程专栏 rasa文章导</description>
+    </item>
+    
+    <item>
+      <title>dialog systems and chatbots</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/dialog-systems-and-chatbots/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/dialog-systems-and-chatbots/</guid>
+      <description>Intent matching Matching algorithms two algorithms to match intents: rule-based grammar matching and ML matching. simultaneously attempts both algorithms and chooses the best result. Algorithm Pros Cons Rule-based grammar matching Accurate with a small or large number of training phrase examples.Models are updated quickly. Does not support the automated expansion entity option. ML matching Accurate with a large number of training phrase examples. Matching is fast. Inaccurate with a small</description>
+    </item>
+    
+    <item>
       <title>evaluate the quality of the training phrases in intents</title>
       <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
@@ -60,6 +90,15 @@ The approach you take is to generate semantic embeddings of the training phrases
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/</guid>
       <description>This solution describes and compares the different design approaches for calling a machine learning model during a Dataflow pipeline, and examines the tradeoffs involved in choosing one approach or another. We present the results of a series of experiments that we ran to explore different approaches and illustrate these tradeoffs, both in batch and stream processing pipelines. This solution is designed for people who integrate trained models into data processing pipelines, rather than for data scientists who want to build machine learning models.</description>
+    </item>
+    
+    <item>
+      <title>pytorch recommendation ncf</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/pytorch-recommendation-ncf/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/pytorch-recommendation-ncf/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -171,42 +210,6 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/removal-of-types
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E4%BA%A7%E5%93%81/</guid>
       <description>服务名称 服务UUID APPID 服务Owner 创建时间 修改时间 ABtest 应用特性： 智能纠错 意图识别 槽位填充 搜索 个性化排序 平台特性： 多租户 服务解耦 租户级意图与槽</description>
-    </item>
-    
-    <item>
-      <title>search engine</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E5%8F%8C%E6%B4%BB/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E5%8F%8C%E6%B4%BB/</guid>
-      <description>双活复制搭建一套系统，出现故障时能够一键切换，主系统和双活的数据一致性，主系统和双活的版本同步节奏 | Pro | DR | | - - | - - | | gateway | gateway | | 微服务</description>
-    </item>
-    
-    <item>
-      <title>search engine</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E5%BA%94%E7%94%A8/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E5%BA%94%E7%94%A8/</guid>
-      <description>垂直搜索 数据接入 索引库设计 字段名称 字段描述 类型 父级字段 不涉及 是否唯一键 是否分词 普通、单字、英文普通、最全、分隔符、不分词 分词选项 用途：展示/</description>
-    </item>
-    
-    <item>
-      <title>search engine</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E6%90%9C%E7%B4%A2%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E6%90%9C%E7%B4%A2%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1/</guid>
-      <description>垂直搜索 Query输入 搜索词 自定义入参 Query理解 槽位名称 槽位识别方式 自定义字典 索引字段 选择字段 替换字典 自定义关键词列表 自定义列表 替换字典</description>
-    </item>
-    
-    <item>
-      <title>search engine</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E7%AE%A1%E7%90%86/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/%E7%AE%A1%E7%90%86/</guid>
-      <description>运营分析 Dashboard 热搜词统计 用户行为明细 业务管理 小程序 直通车 敏感词 推荐词</description>
     </item>
     
   </channel>

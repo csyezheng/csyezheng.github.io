@@ -295,7 +295,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/javascript/javascript/">JavaScript</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/a-tour-of-go/">A Tour of Go</a>
     </h1>
     
     <div class="post-meta">
@@ -315,10 +315,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //
+      Basics Packages, variables, and functions. Packages Programs start running in package main.
+By convention, the package name is the same as the last element of the import path. For instance, the &quot;math/rand&quot; package comprises files that begin with the statement package rand.
+Imports It is good style to use the factored import statement.
+import ( &quot;fmt&quot; &quot;math/rand&quot; ) Exported names In Go, a name is exported if it begins with a capital letter.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/javascript/javascript/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/a-tour-of-go/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -329,7 +332,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/package_download/">package_download</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/spring-boot/">Building Java Projects with Maven</a>
     </h1>
     
     <div class="post-meta">
@@ -337,7 +340,7 @@
         2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -349,10 +352,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      gopm get -g -v golang.org/x/sys 
+      Install Maven Maven is downloadable as a zip file at https://maven.apache.org/download.cgi.
+Once you have downloaded the zip file, unzip it to your computer. Then add the bin folder to your path.
+$ mvn -v Define a simple Maven build Maven projects are defined with an XML file named pom.xml. Create a file named pom.xml at the root of the project (i.e. put it next to the src folder) and give it the following contents:
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/package_download/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/spring-boot/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -363,7 +368,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/photoprism/">photoprism</a>
+      <a class="post-link" href="/post/engineering-fundamentals/javascript/debug/">Debugging JavaScript in Chrome DevTools</a>
     </h1>
     
     <div class="post-meta">
@@ -383,13 +388,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Step 1: Clone this project:
-git clone https://github.com/photoprism/photoprism.git Step 2: Start Docker containers:
-cd photoprism sudo docker-compose up Step 3: Open a new terminal to the photoprism container:
-sudo docker-compose exec photoprism bash 
+      Get Started Step 2: Get familiar with the Sources panel UI The Sources panel is where you debug JavaScript.
+Open DevTools by pressing Command+Option+I (Mac) or Control+Shift+I (Windows, Linux). This shortcut opens the Consolepanel.
+Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: Set a line-of-code breakpoint Step 6: Check variable values 
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/photoprism/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/javascript/debug/" class="read-more-link">Read more</a>
     </div>
     
   </div>

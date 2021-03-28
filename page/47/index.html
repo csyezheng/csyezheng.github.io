@@ -295,12 +295,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/javascript/debug/">Debugging JavaScript in Chrome DevTools</a>
+      <a class="post-link" href="/post/engineering-fundamentals/java/maven/">maven</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-07-15" class="post-time">
+        2019-07-15
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
@@ -315,12 +315,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Get Started Step 2: Get familiar with the Sources panel UI The Sources panel is where you debug JavaScript.
-Open DevTools by pressing Command+Option+I (Mac) or Control+Shift+I (Windows, Linux). This shortcut opens the Consolepanel.
-Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: Set a line-of-code breakpoint Step 6: Check variable values 
+      Introduction to the Build Lifecycle Build Lifecycle Basics Maven is based around the central concept of a build lifecycle. What this means is that the process for building and distributing a particular artifact (project) is clearly defined.
+There are three built-in build lifecycles: default, clean and site. The default lifecycle handles your project deployment, the clean lifecycle handles project cleaning, while the site lifecycle handles the creation of your project&rsquo;s site documentation.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/javascript/debug/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/java/maven/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,15 +330,15 @@ Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: S
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/debugging-with-delve/">Delve Documentation</a>
+      <a class="post-link" href="/post/specialization/devops/devops/">DevOps</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-30" class="post-time">
+        2019-05-30
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
           
         </div>
       
@@ -351,10 +350,10 @@ Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: S
   <div class="post-content">
     
     <div class="post-summary">
-      Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &quot;fmt&quot; &quot;log&quot; &quot;net/http&quot; &quot;os&quot; ) const port = &quot;8000&quot; func main() { http.HandleFunc(&quot;/hi&quot;, hi) fmt.Println(&quot;runing on port: &quot; + port) log.Fatal(http.ListenAndServe(&quot;:&quot; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &quot;HostName: %s&quot;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.
+      What is DevOps? DevOps (a clipped compound of &ldquo;development&rdquo; and &ldquo;operations&quot;) is a software engineering culture and practice that aims at unifying software development (Dev) and software operation (Ops). The main characteristic of the DevOps movement is to strongly advocate automation and monitoring at all steps of software construction, from integration, testing, releasing to deployment and infrastructure management. DevOps aims at shorter development cycles, increased deployment frequency, and more dependable
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/debugging-with-delve/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/devops/devops/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -365,15 +364,15 @@ Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: S
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/generate-model-structs-from-database/">generate-model-structs-from-database</a>
+      <a class="post-link" href="/post/specialization/devops/docker-mysql/">DevOps</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-30" class="post-time">
+        2019-05-30
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
           
         </div>
       
@@ -385,14 +384,16 @@ Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: S
   <div class="post-content">
     
     <div class="post-summary">
-      Generate gorm model structs from database
-  https://github.com/smallnest/gen
-  https://github.com/wantedly/pq2gorm
-  https://github.com/go-xorm/cmd
-  
+      pull this image
+$ sudo docker pull mysql Start a mysql server instance
+$ sudo docker run --name some-mysql -p 3310:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7 logged in to the conainer
+$ sudo docker exec -it some-mysql mysql -u root -p Install mariadb package.
+sudo pacman -S mariadb Find out the ip of the docker container over the docker bridge:
+sudo docker inspect some-mysql | grep IPAddress connect to mysql
+mysql -h 172.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/generate-model-structs-from-database/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/devops/docker-mysql/" class="read-more-link">Read more</a>
     </div>
     
   </div>

@@ -6,7 +6,18 @@
     <description>Recent content in devops on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 25 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>code quality gate</title>
+      <link>http://www.yezheng.pro/post/specialization/devops/checker/</link>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/devops/checker/</guid>
+      <description>sourcemonitor simian
+coverity fotify klocwork
+Sonar checkstyle-idea findbugs-idea PMDPlugin Save Actions</description>
+    </item>
+    
     <item>
       <title>欣宸Blog</title>
       <link>http://www.yezheng.pro/post/specialization/devops/xc/</link>

@@ -8,6 +8,15 @@
     <language>en</language>
     <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/named-entity-recognition/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>dialog systems and chatbots</title>
+      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/dialog-systems-and-chatbots/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/dialog-systems-and-chatbots/</guid>
+      <description>Intent matching Matching algorithms two algorithms to match intents: rule-based grammar matching and ML matching. simultaneously attempts both algorithms and chooses the best result. Algorithm Pros Cons Rule-based grammar matching Accurate with a small or large number of training phrase examples.Models are updated quickly. Does not support the automated expansion entity option. ML matching Accurate with a large number of training phrase examples. Matching is fast. Inaccurate with a small</description>
+    </item>
+    
+    <item>
       <title>Named Entity Recognition using Spacy and Tensorflow</title>
       <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
