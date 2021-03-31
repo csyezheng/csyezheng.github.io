@@ -6,7 +6,7 @@
     <description>Recent content on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Mar 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://www.yezheng.pro/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,6 +20,171 @@
       
         <description>&lt;p&gt;I&amp;rsquo;m graduated from the Hebei GEO University with a degree in marketing, because I thought computers were cool from an early age, so I chose programmers as my future employment direction in my third year of college. In the third year of college, I learned some front-end knowledge, and in the fourth year of college I learned some C ++ related knowledge. After graduating, I naturally found a job related to programming.&lt;/p&gt;
 &lt;p&gt;In the first company, I was mainly engaged in web crawling. I was responsible for scraping various financial data including stock exchanges, performing data cleaning, and completing an announcement classification system during the period. I worked as a data development engineer in the second company, and solved development problems such as real-time data forwarding, reception, and storage. I worked as a back-end development engineer at a third company and built the entire edx-based online learning system.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>business-analyst</title>
+      <link>http://www.yezheng.pro/post/interview/business-analyst/</link>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/business-analyst/</guid>
+      
+        <description>&lt;h3 id=&#34;1-how-would-you-work-with-a-difficult-stakeholder困难的利益相关者&#34;&gt;1. How would you work with a difficult stakeholder（困难的利益相关者）?&lt;/h3&gt;
+&lt;p&gt;As a business analyst, you will likely deal with many different personalities occupying a variety of positions（与担任各种职位的许多不同人物打交道）. Situational questions like this one measure your &lt;strong&gt;problem-solving skills, communication skills and ability to resolve difficult situations&lt;/strong&gt;. This question assesses whether you can successfully navigate interactions with many different stakeholders.&lt;/p&gt;
+&lt;p&gt;Provide a direct answer and explain a related challenge you faced in past work. You can use the &lt;a href=&#34;https://www.indeed.com/career-advice/interviewing/how-to-use-the-star-interview-response-technique&#34;&gt;STAR interview response framework&lt;/a&gt; to structure your answer by addressing the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Situation:&lt;/strong&gt; Briefly explain the issue you were dealing with in a positive, constructive way.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Task:&lt;/strong&gt; Explain your role in the situation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action:&lt;/strong&gt; Explain what you did to resolve or address the situation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Result:&lt;/strong&gt; Explain your learnings and how your actions resulted in a positive impact for the business.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;During your discussion with the interviewer, you also gain insight into the challenges you might face in the new role, which can be a helpful context to understand before accepting an offer.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我发现同理心，沟通和行动可以解决大部分问题。例如，有一次业务owner是很生气的，他提出了很多需求，因为版本容量和开发人力的缘故，没有纳入版本计划，他不知道什么时候能够上线。我的任务是有义务澄清需求版本的。我决定立即与项目交付经理确定版本计划，并在后续需求接纳后及时反馈版本。在那之后，需求的版本就清晰了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;2-describe-a-time-when-you-had-to-advise-a-client-toward-a-different-course-of-action&#34;&gt;2. Describe a time when you had to advise a client toward a different course of action.&lt;/h3&gt;
+&lt;p&gt;As a business analyst, it is your job to make recommendations both in the interest of the client and the organization. Your perspective should be based on the collected data as you interpret it. Should a client pursue a certain course of action you do not feel is in their best interest, you may be required to present the data in new and interesting ways to convince them otherwise.&lt;/p&gt;
+&lt;p&gt;In your answer, you should explain the ways you can apply your problem-solving skills to navigate potentially difficult situations with clients and other important stakeholders.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;直播发放积分，直播课程发放积分，积分交互的方式，积分发放的条件随堂测试完成百分比。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;3-what-is-the-most-important-aspect-of-analytical-reporting&#34;&gt;3. What is the most important aspect of analytical reporting?&lt;/h3&gt;
+&lt;p&gt;Analytical reporting is a type of business reporting that offers information, data analysis and recommendations. The recommendations are what set &lt;strong&gt;this type of reporting apart from informational reporting&lt;/strong&gt;. Analytical reporting allows people to use data to make decisions.&lt;/p&gt;
+&lt;p&gt;As a business analyst, you &lt;strong&gt;should understand the importance and limitations of analytical reporting.&lt;/strong&gt; In your answer, explain the measurable impact you have made with analytical reporting in previous roles. This helps employers understand the value you have to offer at their organization. Formulate your response to demonstrate your critical thinking and analytical skills, showing how you can create recommendations from data sources.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;虽然数据本身无法解决问题，但是当进行上下文分析时，它可以使您做出正确的业务决策。即使某个决策不能产生您所期望的结果，数据也可以使您从这些结果中学习并继续进行改进。分析报告的最重要方面是解决问题和根据事实做出决策的能力。试图根据无根据的猜测或假设做出决策可能会出现问题，分析报告提供了切实的信息，可用来制定战略和方向。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;4-describe-your-familiarity-with-sql-queries&#34;&gt;4. Describe your familiarity with SQL queries.&lt;/h3&gt;
+&lt;p&gt;SQL is the standard language for relational database management systems. Since SQL allows you to work with structured data where there are relations between different variables, SQL queries are commonly used in the business analyst role.&lt;/p&gt;
+&lt;p&gt;Though it is not necessary for a business analyst to demonstrate advanced technical skills, certain skills are incredibly valuable. You may be asked to explain the elements of a SQL Statement during an interview so employers can assess your related technical skills and advanced analysis skills. In addition to providing definitions that demonstrate your knowledge, you might also consider providing an example of how you have used SQL to make an impact in your previous BA work.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There are four parts to an SQL statement. The &lt;strong&gt;DDL&lt;/strong&gt;, or the Data Definition Language, is used for defining data structure. The &lt;strong&gt;DML&lt;/strong&gt;, or Data Manipulation Language, is used for inserting, deleting and modifying data. The &lt;strong&gt;DCL&lt;/strong&gt;, or Data Control Language, is used to control access to data stored in the database. Finally, the &lt;strong&gt;TCL&lt;/strong&gt;, or Transactional Control Language, is used to organize data adjusted by the DML. I have used SQL statements to determine which of my client&amp;rsquo;s customers are purchasing which products, which has helped them make important decisions about future product lines. This work has made them a repeat customer three years running.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;5-what-tools-do-you-consider-the-most-important-for-a-business-analyst-to-do-their-job-well&#34;&gt;5. What tools do you consider the most important for a business analyst to do their job well?&lt;/h3&gt;
+&lt;p&gt;This question allows an interviewer to test your basic technical skills and familiarity with standard business analytics applications as well as those they may use at the company. BAs commonly use tools like the Microsoft Office Suite, though you may have used other tools or programs in your work. Tailor your answer to highlight your own unique experience and skills.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我通常使用诸如Word，Excel，PowerPoint，MS Visio和Rational工具之类的工具。我还具有高级SQL技巧-当我需要分析诸如客户购买之类的商品时，使用SQL会很有帮助。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;6-describe-how-you-typically-approach-a-project&#34;&gt;6. Describe how you typically approach a project.&lt;/h3&gt;
+&lt;p&gt;Understanding a candidate&amp;rsquo;s workflow can help employers gauge their teamwork, project management and organizational skills. To answer, explain general phases you work through with standard deliverables you typically produce instead of listing specific processes or tasks the interviewer may not be familiar with. Focus on your actual experience to describe your skills and how you use them.&lt;/p&gt;
+&lt;p&gt;For example, if you worked on the planning stages of a project, you could mention deliverables such as a communication plan, a work breakdown structure (WBS), a requirements management plan and a business analysis approach, including whether it is plan-driven or change-driven.&lt;/p&gt;
+&lt;p&gt;Speak about how you have customized specific approaches to the needs of a given project. You can follow up by asking about the organization&amp;rsquo;s projects and processes to give yourself a better sense of how you would fit in and to show the interviewer that you are invested in the way they work.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我首先倾听客户的需求，关注客户明确表达的项目目标。然后，我对数据进行了更深入的研究，以找出如何指导他们走向成功或如何改变客户的方式我们正在考虑以更高的生产率前进的目标，当然，每个项目和每个客户都需要一些新的东西，因此，我始终确保考虑到特定的情况，而不是自动采用“一刀切”的解决方案，IT方案是可灵活配置的，不该绑定死的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;7-name-two-diagrams-you-use-as-a-business-analyst-and-describe-how-they-impact-your-work&#34;&gt;7. Name two diagrams you use as a business analyst, and describe how they impact your work.&lt;/h3&gt;
+&lt;p&gt;The interviewer may ask this question to ensure that you are familiar with &lt;strong&gt;standard BA documents&lt;/strong&gt; and how to apply them to a client&amp;rsquo;s case. Even if they do not directly ask about your past experience here, providing examples can validate your ability to bring value to the employer.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我更喜欢使用的两个图是活动图和用例图。活动图显示了各个部门之间发生的各种活动。我使用活动图来显示谁与系统进行交互以及他们通过该系统实现的主要目标。当我需要可视化给定系统的功能需求时，我发现用例图非常有用，这样我就可以在设计和确定开发优先级时做出明智的选择。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;8-what-questions-do-you-have&#34;&gt;8. What questions do you have?&lt;/h3&gt;
+&lt;p&gt;Asking intelligent questions at the conclusion of your interview shows that you know how to ask the right questions to get the right information—a necessary skill for business analysts. This is your chance to have a thoughtful conversation with your prospective employer or colleague. Make sure to use active listening skills during your interview to inform your questions. The person interviewing you should feel that you are invested and engaged throughout the interview.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我经常与希望扩展业务的客户一起工作，并且擅长指导他们做出明智的决定，从而扩大他们已有的优势。典型的客户对您来说是什么样子？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;reference&#34;&gt;Reference&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.indeed.com/career-advice/interviewing/business-analyst-interview-questions&#34;&gt;Top 8 Business Analyst Interview Questions and Answers&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>How To Prepare for a Behavioral Interview</title>
+      <link>http://www.yezheng.pro/post/interview/behavioral-interview/</link>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/behavioral-interview/</guid>
+      
+        <description>&lt;h2 id=&#34;what-is-a-behavioral-interview&#34;&gt;What is a Behavioral Interview?&lt;/h2&gt;
+&lt;p&gt;A behavioral interview is a popular interview technique employers use to assess job candidates &lt;strong&gt;based on their past behavior&lt;/strong&gt;. For example, instead of asking &lt;strong&gt;hypothetical questions&lt;/strong&gt; like, “How would you react if you were under a lot of pressure at work?” they would instead ask &lt;strong&gt;situational questions&lt;/strong&gt; like, “Describe a time you were under a lot of pressure at work. How did you react?”&lt;/p&gt;
+&lt;h2 id=&#34;behavioral-interview-tips&#34;&gt;Behavioral Interview Tips&lt;/h2&gt;
+&lt;p&gt;Here are some important tips to consider when preparing for your next behavioral interview:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Study the job description.&lt;/li&gt;
+&lt;li&gt;Review major projects you’ve worked on.&lt;/li&gt;
+&lt;li&gt;Revisit previous job performance reviews.&lt;/li&gt;
+&lt;li&gt;Make a list of your professional accomplishments.&lt;/li&gt;
+&lt;li&gt;Use the STAR method to structure your response.&lt;/li&gt;
+&lt;li&gt;Be open and honest in your answer.&lt;/li&gt;
+&lt;li&gt;Practice your interview responses aloud.&lt;/li&gt;
+&lt;li&gt;Keep your answers under two minutes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With these kinds of questions, interviewers are usually trying to learn three things: First, they want to know how you behaved in a real-world situation. Second, they want to understand the measurable value you added to that situation. Finally, they are trying to learn how you define something like “pressure at work”—a concept different people might interpret differently.&lt;/p&gt;
+&lt;p&gt;Success in a behavioral interview is all about preparation. There aren’t necessarily wrong answers. These questions are aimed at getting to know the real you. The important thing is to be honest and to practice structuring your responses in a way that communicates what you have to offer.&lt;/p&gt;
+&lt;h3 id=&#34;use-the-star-method-to-structure-answers-to-behavioral-questions&#34;&gt;Use the STAR method to structure answers to behavioral questions&lt;/h3&gt;
+&lt;p&gt;You can use the STAR interview method to prepare for behavioral interviews—a technique that helps you structure your response to behavioral interview questions. Using this method, you create a deliberate story arc that your interviewer can easily follow. Here’s how it works:&lt;/p&gt;
+&lt;h4 id=&#34;situation&#34;&gt;Situation&lt;/h4&gt;
+&lt;p&gt;What is the context of your story? In setting the situation, you are telling your listener when or where this event took place. For example, “&lt;em&gt;We were working on a six-month contract for a high-value client when our agency merged with another, larger firm…&lt;/em&gt;”&lt;/p&gt;
+&lt;h4 id=&#34;task&#34;&gt;Task&lt;/h4&gt;
+&lt;p&gt;What was your role in this situation? For example, “It was my role to lead the transition for my group while also communicating with our client to keep the project on track.”&lt;/p&gt;
+&lt;h4 id=&#34;action&#34;&gt;Action&lt;/h4&gt;
+&lt;p&gt;What did you do? For example, “I set up weekly check-ins with the client to update them on the progress of the merger. This cemented an important level of trust between us. I also had regular one-on-ones with each person on the team, both to assess how they were handling the change and to make sure we would meet our deadlines.”&lt;/p&gt;
+&lt;h4 id=&#34;result&#34;&gt;Result&lt;/h4&gt;
+&lt;p&gt;What did your actions lead to? For example, “We ended up completing the project on time, meeting all of their specifications. It was incredibly rewarding to navigate a lot of change and succeed under pressure.”&lt;/p&gt;
+&lt;h3 id=&#34;how-to-prepare&#34;&gt;How to prepare&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Read the job description carefully. Make a list of the top skills or qualifications it calls for. Think of a story that demonstrates your ability in each area. Following the STAR technique, write your stories down, including the situation, task, action and result. Then, practice saying them out loud several times, either by yourself or with a friend.&lt;/strong&gt; Keep in mind that your answer should only take about 1 1/2 to 2 minutes. As you include each of the elements, try to be succinct.&lt;/p&gt;
+&lt;p&gt;If you’re feeling shy or lacking confidence, this practice is all the more important. You should get comfortable with these stories. Remember, you won’t be able to anticipate every behavioral question you get, but with a strong set of anecdotes, you’ll be able to answer each one with confidence.&lt;/p&gt;
+&lt;h2 id=&#34;behavioral-interview-questions&#34;&gt;Behavioral interview questions&lt;/h2&gt;
+&lt;p&gt;Here are several examples of questions you might be asked in your next behavioral interview. Take some time to prepare sample answers for each both to practice and plan so you will be prepared for future interviews.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Give me an example of a difficult problem you solved. How did you solve this problem?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;编程开发时Pandas的Dataframe用Django的ORM写入数据库。Google查资料和翻源码。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tell me about a mistake that you’ve made. How did you handle it?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Can you tell me about a challenging situation you overcame at work?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;会议的引导能力，会议总会被各种各样的问题打断，需要能够及时把主题带回到会议议题上。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tell me about a time you learned a new skill. How did you approach it and how to did you apply your new learnings?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Has there been a time when you had to pitch an idea to a manager or senior leader? What was the outcome?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tell me about a time when you overcame a conflict at work.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Explain a situation in which you would have handled things differently.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tell me about a time you handled a stressful situation when you were under a lot of pressure.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;工作至今最大的压力是2020年Q4在华为做课程融合专项时。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Can you tell me about a time you set and achieved a certain goal?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;设定并实现特定目标&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;What is your proudest professional accomplishment and why?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最自豪的职业成就&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;behavioral-interview-sample-answer&#34;&gt;Behavioral interview sample answer&lt;/h2&gt;
+&lt;p&gt;Using the above techniques, here is an example of how you might answer a behavioral interview question:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt; Tell me about a time when you overcame a conflict at work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt; &lt;em&gt;“At my last job, my colleague and I disagreed on how to handle a sensitive situation with our client. We made a mistake in their campaign that resulted in poor overall performance. While my colleague wanted to move forward without explaining the mistake, I thought it would be best to let the client know what happened.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;After going back and forth, I asked him if we could set some time aside to weigh the costs and benefits of each option. In the end, we needed to see each other’s motivations and fears to get a better understanding of the other.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;We decided to let the client know what had happened and agreed to provide them with another campaign at no cost. While it did result in a short-term loss for the company, the client appreciated our honesty and booked an annual campaign exceeding their spending with us in the past. My colleague and I were also recognized for our teamwork and ended up counseling other client teams on conflict resolution.”&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.indeed.com/career-advice/interviewing/how-to-prepare-for-a-behavioral-interview&#34;&gt;How To Prepare for a Behavioral Interview&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>
@@ -1848,10 +2013,10 @@ Guest Lecture&lt;/p&gt;
     
     <item>
       <title>Hands-On Docker for Microservices with Python</title>
-      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/hands-on_docker_for_microservices_with_python/</link>
+      <link>http://www.yezheng.pro/post/specialization/web-application/microservices/hands-on_docker_for_microservices_with_python/</link>
       <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/hands-on_docker_for_microservices_with_python/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/web-application/microservices/hands-on_docker_for_microservices_with_python/</guid>
       
         <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
 &lt;p&gt;For the technical aspects, we will use well-tailored tools, including the following:&lt;/p&gt;
@@ -1993,41 +2158,68 @@ the WSGI protocol), run by mod_wsgi—https://github.com/GrahamDumpleton/mod_wsg
 The consolidation phase – steady migration to microservices
 The final phase – the microservices shop&lt;/p&gt;
 &lt;h2 id=&#34;chapter-2-creating-a-rest-service-with-python&#34;&gt;Chapter 2: Creating a REST Service with Python&lt;/h2&gt;
-&lt;p&gt;Technical requirements
-Analyzing the Thoughts Backend microservice
-Understanding the security layer
-Designing the RESTful API
-Specifying the API endpoints&lt;/p&gt;
-&lt;p&gt;Defining the database schema
-Working with SQLAlchemy&lt;/p&gt;
-&lt;p&gt;Implementing the service
-Introducing Flask-RESTPlus
-Handling resources
-Parsing input parameters
-Serializing results
-Performing the action
-Authenticating the requests&lt;/p&gt;
-&lt;p&gt;Testing the code
-Defining the pytest fixtures
-Understanding test_token_validation.py
-test_thoughts.py&lt;/p&gt;
+&lt;h4 id=&#34;technical-requirements&#34;&gt;Technical requirements&lt;/h4&gt;
+&lt;h4 id=&#34;analyzing-the-thoughts-backend-microservice&#34;&gt;Analyzing the Thoughts Backend microservice&lt;/h4&gt;
+&lt;h6 id=&#34;understanding-the-security-layer&#34;&gt;Understanding the security layer&lt;/h6&gt;
+&lt;p&gt;This security layer will come in the shape of a header. This header will contain information that is signed by the user backend, verifying its origin. It will take the form of a JSON Web Token (JWT), &lt;a href=&#34;https://jwt.io/introduction/,&#34;&gt;https://jwt.io/introduction/,&lt;/a&gt; which is a standard for this purpose.&lt;/p&gt;
+&lt;p&gt;A JWT is not the only possibility for the token, and there are other alternatives such as storing the equivalent data in a session cookie or in more secure environments using similar modules such as PASETO (&lt;a href=&#34;https://github.com/paragonie/paseto)&#34;&gt;https://github.com/paragonie/paseto)&lt;/a&gt;. Be sure that you review the security implications of your system, which are beyond the scope of this book.&lt;/p&gt;
+&lt;p&gt;With an understanding of how the authentication system is going to work, we can start designing the API interface.&lt;/p&gt;
+&lt;h4 id=&#34;designing-the-restful-api&#34;&gt;Designing the RESTful API&lt;/h4&gt;
+&lt;p&gt;It&amp;rsquo;s always good to have a brief reminder about REST before starting an API design, so you can check &lt;a href=&#34;https://restfulapi.net/&#34;&gt;https://restfulapi.net/&lt;/a&gt; for a recap.&lt;/p&gt;
+&lt;h6 id=&#34;specifying-the-api-endpoints&#34;&gt;Specifying the API endpoints&lt;/h6&gt;
+&lt;h4 id=&#34;defining-the-database-schema&#34;&gt;Defining the database schema&lt;/h4&gt;
+&lt;h6 id=&#34;working-with-sqlalchemy&#34;&gt;Working with SQLAlchemy&lt;/h6&gt;
+&lt;p&gt;The first approach is well represented by the Python database API specification (PEP 249—https://www.python.org/dev/peps/pep-0249/), which is followed by all major databases, such as psycopg2 (&lt;a href=&#34;http://initd.org/psycopg/&#34;&gt;http://initd.org/psycopg/&lt;/a&gt;) for PostgreSQL.&lt;/p&gt;
+&lt;p&gt;For the second approach, the best-known example is probably the Django ORM (&lt;a href=&#34;https://docs.djangoproject.com/en/2.2/topics/db/)&#34;&gt;https://docs.djangoproject.com/en/2.2/topics/db/)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;SQLAlchemy (&lt;a href=&#34;https://www.sqlalchemy.org/&#34;&gt;https://www.sqlalchemy.org/&lt;/a&gt;) is quite flexible and can work on both ends of the spectrum. it can take an existing, complicated legacy database and map it, allowing you to perform simple operations easily and complicated operations in exactly the way you want.&lt;/p&gt;
+&lt;h4 id=&#34;implementing-the-service&#34;&gt;Implementing the service&lt;/h4&gt;
+&lt;h6 id=&#34;introducing-flask-restplus&#34;&gt;Introducing Flask-RESTPlus&lt;/h6&gt;
+&lt;p&gt;Flask-RESTPlus adds some very interesting capabilities that allow for good developing practices and speed of development.&lt;/p&gt;
+&lt;p&gt;We will use the connector for SQLAlchemy, Flask-SQLAlchemy (&lt;a href=&#34;https://flask-sqlalchemy.palletsprojects.com/en/2.x/)&#34;&gt;https://flask-sqlalchemy.palletsprojects.com/en/2.x/)&lt;/a&gt;. Its documentation covers most of the common cases, while the SQLAlchemy documentation is more detailed and can be a bit overwhelming. To run the tests, the pytest-flask module (&lt;a href=&#34;https://pytest-flask.readthedocs.io/en/latest/&#34;&gt;https://pytest-flask.readthedocs.io/en/latest/&lt;/a&gt;) creates some fixtures ready to work with a Flask application. We will talk more about this in the Testing the code section.&lt;/p&gt;
+&lt;h6 id=&#34;handling-resources&#34;&gt;Handling resources&lt;/h6&gt;
+&lt;h6 id=&#34;parsing-input-parameters&#34;&gt;Parsing input parameters&lt;/h6&gt;
+&lt;h6 id=&#34;serializing-results&#34;&gt;Serializing results&lt;/h6&gt;
+&lt;h6 id=&#34;performing-the-action&#34;&gt;Performing the action&lt;/h6&gt;
+&lt;h6 id=&#34;authenticating-the-requests&#34;&gt;&lt;strong&gt;Authenticating the requests&lt;/strong&gt;&lt;/h6&gt;
+&lt;p&gt;Note that we are using a private/public key schema, instead of a symmetric key schema, to encode and decode the tokens. This means that the decoding and encoding keys are different.&lt;/p&gt;
+&lt;p&gt;In our microservice structure, only the signing authority requires the private key. This increases the security as any key leakage in other services won&amp;rsquo;t be able to retrieve a key capable of signing bearer tokens. We&amp;rsquo;ll need to generate proper private and public keys, though.&lt;/p&gt;
+&lt;p&gt;To generate a private/public key, run the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ openssl genrsa -out key.pem 2048
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then, to extract the public key, use the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ openssl rsa -in key.pem -outform PEM -pubout -out key.pub
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Reading them in text format will be enough to use them as keys for encoding/decoding the JWT token:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt; with open(&#39;private.pem&#39;) as fp:
+&amp;gt;&amp;gt; .. private_key = fp.read()
+&amp;gt;&amp;gt; generate_token_header(&#39;peter&#39;, private_key)
+&#39;Bearer &amp;lt;token&amp;gt;&#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;inject this secret using an environment variable, and in Chapter 11, Handling Change, Dependencies, and Secrets in the System, we&amp;rsquo;ll see how to properly deal with secrets in production environments.&lt;/p&gt;
+&lt;h4 id=&#34;testing-the-code&#34;&gt;Testing the code&lt;/h4&gt;
+&lt;h6 id=&#34;defining-the-pytest-fixtures&#34;&gt;Defining the pytest fixtures&lt;/h6&gt;
+&lt;h6 id=&#34;understanding-test_token_validationpy&#34;&gt;Understanding test_token_validation.py&lt;/h6&gt;
+&lt;h6 id=&#34;test_thoughtspy&#34;&gt;test_thoughts.py&lt;/h6&gt;
 &lt;h2 id=&#34;chapter-3-build-run-and-test-your-service-using-docker&#34;&gt;Chapter 3: Build, Run, and Test Your Service Using Docker&lt;/h2&gt;
-&lt;p&gt;Technical requirements&lt;/p&gt;
-&lt;p&gt;Building your service with a Dockerfile
-Executing commands
-Understanding the Docker cache
-Building a web service container
-Configuring uWSGI
-Refreshing Docker commands&lt;/p&gt;
-&lt;p&gt;Operating with an immutable container
-Testing the container
-Creating a PostgreSQL database container&lt;/p&gt;
-&lt;p&gt;Configuring your service
-Deploying the Docker service locally
-Pushing your Docker image to a remote registry
-Obtaining public images from Docker Hub
-Using tags
-Pushing into a registry&lt;/p&gt;
+&lt;h4 id=&#34;technical-requirements-1&#34;&gt;Technical requirements&lt;/h4&gt;
+&lt;h4 id=&#34;building-your-service-with-a-dockerfile&#34;&gt;Building your service with a Dockerfile&lt;/h4&gt;
+&lt;h6 id=&#34;executing-commands&#34;&gt;Executing commands&lt;/h6&gt;
+&lt;h6 id=&#34;understanding-the-docker-cache&#34;&gt;Understanding the Docker cache&lt;/h6&gt;
+&lt;p&gt;This also means that an image will never get smaller in size, adding a new layer even if the layer removes data, as the previous layer is still stored on the disk.&lt;/p&gt;
+&lt;p&gt;Keeping your containers small is quite important. In any Docker system, the tendency is to have a bunch of containers and lots of images. Big images for no reason will fill up repositories quickly. They&amp;rsquo;ll be slow to download and push, and also slow to start, as the container is copied around in your infrastructure.&lt;/p&gt;
+&lt;p&gt;There are several practices for keeping your images small. Other than being careful to not install extra elements, the main ones are creating a single, complicated layer that installs and uninstalls, and multi-stage images. Multi-stage Dockerfiles are a way of referring to a previous intermediate layer and copying data from there. Check the Docker documentation (&lt;a href=&#34;https://docs.docker.com/develop/develop-images/multistage-build/)&#34;&gt;https://docs.docker.com/develop/develop-images/multistage-build/)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Compilers, in particular, tend to get a lot of space. When possible, try to use precompiled binaries. You can use a multi-stage Dockerfile to compile in one container and then copy the binaries to the running one.&lt;/p&gt;
+&lt;p&gt;You can learn more about the differences between the two strategies in this article: https:/ /pythonspeed.com/articles/smaller-python-docker-images/.
+A good tool to analyze a particular image and the layers that compose it is dive (&lt;a href=&#34;https://github.com/wagoodman/dive)&#34;&gt;https://github.com/wagoodman/dive)&lt;/a&gt;. It will also discover ways that an image can be reduced in size.&lt;/p&gt;
+&lt;h6 id=&#34;building-a-web-service-container&#34;&gt;Building a web service container&lt;/h6&gt;
+&lt;h6 id=&#34;configuring-uwsgi&#34;&gt;Configuring uWSGI&lt;/h6&gt;
+&lt;h6 id=&#34;refreshing-docker-commands&#34;&gt;Refreshing Docker commands&lt;/h6&gt;
+&lt;h4 id=&#34;operating-with-an-immutable-container&#34;&gt;Operating with an immutable container&lt;/h4&gt;
+&lt;h4 id=&#34;testing-the-container&#34;&gt;Testing the container&lt;/h4&gt;
+&lt;h4 id=&#34;creating-a-postgresql-database-container&#34;&gt;Creating a PostgreSQL database container&lt;/h4&gt;
+&lt;h4 id=&#34;configuring-your-service&#34;&gt;Configuring your service&lt;/h4&gt;
+&lt;h4 id=&#34;deploying-the-docker-service-locally&#34;&gt;Deploying the Docker service locally&lt;/h4&gt;
+&lt;h4 id=&#34;pushing-your-docker-image-to-a-remote-registry&#34;&gt;Pushing your Docker image to a remote registry&lt;/h4&gt;
+&lt;h4 id=&#34;obtaining-public-images-from-docker-hub&#34;&gt;Obtaining public images from Docker Hub&lt;/h4&gt;
+&lt;h4 id=&#34;using-tags&#34;&gt;Using tags&lt;/h4&gt;
+&lt;h4 id=&#34;pushing-into-a-registry&#34;&gt;Pushing into a registry&lt;/h4&gt;
 &lt;h2 id=&#34;chapter-4-creating-a-pipeline-and-workflow&#34;&gt;Chapter 4: Creating a Pipeline and Workflow&lt;/h2&gt;
 &lt;p&gt;Technical requirements
 Understanding continuous integration practices
@@ -3458,480 +3650,6 @@ systemctl start docker.service
 &lt;li&gt;&lt;a href=&#34;https://cloud.google.com/solutions/building-and-deploying-chatbot-dialogflow&#34;&gt;Building a chatbot agent by using Dialogflow&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/github/Euchigere/slackbot/blob/master/chatbot.ipynb&#34;&gt;Conversational_Chatbot.ipynb&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/drive/1fqshAYRT9FBaJwd1nIOSonUt4MoIsgl-&#34;&gt;Rasa_Emergency_Chatbot_Colab.ipynb&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>dialog systems and chatbots</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/dialog-systems-and-chatbots/</link>
-      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/dialog-systems-and-chatbots/</guid>
-      
-        <description>&lt;h2 id=&#34;intent-matching&#34;&gt;Intent matching&lt;/h2&gt;
-&lt;h3 id=&#34;matching-algorithms&#34;&gt;Matching algorithms&lt;/h3&gt;
-&lt;p&gt;two algorithms to match intents: &lt;em&gt;rule-based grammar matching&lt;/em&gt; and &lt;em&gt;ML matching&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;simultaneously attempts both algorithms and chooses the best result.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Algorithm&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Pros&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Cons&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Rule-based grammar matching&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Accurate with a small or large number of training phrase examples.Models are updated quickly.&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Does not support the &lt;strong&gt;automated expansion&lt;/strong&gt; entity option.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;ML matching&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Accurate with a large number of &lt;strong&gt;training phrase examples&lt;/strong&gt;. Matching is fast.&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Inaccurate with a small number of training phrase examples.Models are updated slowly.Less accurate than grammar matching for agents with training phrases in template mode.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;intent-priority&#34;&gt;Intent priority&lt;/h2&gt;
-&lt;p&gt;You can set &lt;strong&gt;priorities&lt;/strong&gt; for intents. When two or more intents match the same end-user expression with similar confidence scores, priority is used to select the best match. Otherwise, the confidence score for intent matching is more important than priority.&lt;/p&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://web.stanford.edu/~jurafsky/slp3/&#34;&gt;Speech and Language Processing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://aihub.cloud.google.com/p/products%2F93f57f99-eddf-477c-a0a3-b44a3e637052&#34;&gt;Evaluation of Intents Classification Model using Dialogflow Client Library&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://colab.research.google.com/drive/1wgWdxUpKf3FWJgqA6ogBGDEzxAosjJMI#scrollTo=tD8kyW6EUQRL&#34;&gt;transformers_joint_intent_classification_slot_filling.ipynb&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cloud.google.com/dialogflow/es/docs&#34;&gt;Dialogflow ES documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/sz128/slot_filling_and_intent_detection_of_SLU&#34;&gt;sz128/slot_filling_and_intent_detection_of_SLU&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://support.huaweicloud.com/qs-cbs/cbs_05_0005.html#cbs_05_0005__section205397381978&#34;&gt;如何创建一个问答对话流程&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>evaluate the quality of the training phrases in intents</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</link>
-      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</guid>
-      
-        <description>&lt;p&gt;This tutorial shows you how to analyze and evaluate the quality of the training phrases supplied to your &lt;a href=&#34;https://dialogflow.com/&#34;&gt;Dialogflow&lt;/a&gt; agent&amp;rsquo;s intents. The purpose of this analysis is to avoid confusing the agent with phrases irrelevant to the intents supplied to, or more relevant to, other intents.&lt;/p&gt;
-&lt;p&gt;The approach you take is to generate semantic embeddings of the training phrases by using the &lt;a href=&#34;https://www.tensorflow.org/hub/&#34;&gt;TensorFlow Hub&lt;/a&gt; (&lt;code&gt;tf.Hub&lt;/code&gt;) Universal Sentence Encoder module. You then compute cohesion and separation measurements based on the similarity between embeddings within the same intents and different intents. The tutorial also identifies &amp;ldquo;confusing&amp;rdquo; training phrases, where they are nearer—in the embedding space—to intents that are different from the ones supplied for.&lt;/p&gt;
-&lt;p&gt;You can find the code for this tutorial in this &lt;a href=&#34;https://colab.research.google.com/drive/1QQblWJX5aZ6TajVXNAogFpVJlzYDbMtX&#34;&gt;Colab notebook&lt;/a&gt;. The article assumes that you have a basic background knowledge of Dialogflow. To learn more about Dialogflow, see this &lt;a href=&#34;https://cloud.google.com/solutions/building-and-deploying-chatbot-dialogflow&#34;&gt;multi-part tutorial&lt;/a&gt; on how to build, secure, and scale a chatbot by using Dialogflow Enterprise Edition on Google Cloud.&lt;/p&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://dialogflow.com/&#34;&gt;Dialogflow&lt;/a&gt; lets you build conversational interfaces on top of your products and services by providing a powerful natural-language understanding (NLU) engine to process and understand natural language input. Use cases for Dialogflow include:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Building booking and reservation bots for airlines, cinemas, and so on.&lt;/li&gt;
-&lt;li&gt;Simplifying a system for ordering fast food for delivery.&lt;/li&gt;
-&lt;li&gt;Enabling efficient customer service through semi-automated call centers.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Although you can implement complex conversational flows to handle a user utterance, Dialogflow fundamentally performs the following steps:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;The user asks questions like, &amp;ldquo;What is the total of my bill for the last month?&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;The &lt;em&gt;agent&lt;/em&gt; parses the input and matches it to an &lt;em&gt;intent&lt;/em&gt; such as &lt;code&gt;bill_value_inquiry&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;The agent also extracts &lt;em&gt;entities&lt;/em&gt; information, like &amp;ldquo;last month&amp;rdquo;.&lt;/li&gt;
-&lt;li&gt;Given the intent of the extracted entities, the agent then invokes a &lt;em&gt;fulfillment&lt;/em&gt; to respond to the user&amp;rsquo;s request.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The following table describes the key concepts in the Dialogflow platform.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Term&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://dialogflow.com/docs/agents&#34;&gt;agent&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Agents are best described as NLU modules that can be integrated into your system. An agent converts text or spoken user requests into actionable data, when a user&amp;rsquo;s input matches an intent in your agent.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://dialogflow.com/docs/intents&#34;&gt;intent&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;In a conversation, intents map user input to responses. In each intent, you define examples (training phrases) of user utterances that can trigger the intent, what to extract from each utterance, and how to respond.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://dialogflow.com/docs/entities&#34;&gt;entities&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Where intents allow your agent to understand the motivation behind a particular user input, entities are used to pick out specific pieces of information that your users mention. For example, street addresses, product names, or amounts with units can be used to fulfill the user&amp;rsquo;s request.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://dialogflow.com/docs/fulfillment&#34;&gt;fulfillment&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Fulfillment allows you to use the entity information extracted by the agent to generate dynamic responses or trigger actions on your backend on an intent-by-intent basis.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;For more details on Dialogflow concepts, see the &lt;a href=&#34;https://dialogflow.com/docs/&#34;&gt;Dialogflow documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Intents are essential to a Dialogflow system, because they link the user request to the right business logic to fulfill it. For example, a Dialogflow system for a telecom services provider might have intents like &lt;code&gt;bill_value_inquiry&lt;/code&gt;, &lt;code&gt;pay_bill&lt;/code&gt;, &lt;code&gt;upgrade_contract&lt;/code&gt;, &lt;code&gt;cancel_contract&lt;/code&gt;, and &lt;code&gt;add_service&lt;/code&gt;. However, in order to match the user utterance (text or speech) to the right intent, intents need to be trained with a set of relevant training phrases. For example, for a weather inquiry intent, training phrases might be:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;ldquo;What is the weather like right now?&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;What is the temperature in Cairo tomorrow?&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;Do I need to take an umbrella with me to Zurich next week?&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;When you create several intents in your system, some phrases you supply to an intent might be confusing or misleading—for example, a phrase that&amp;rsquo;s more relevant to another intent might be used to train the wrong intent. For example, suppose you have a Dialogflow agent that serves as the source of truth for a sales organization. You might have two intents for fetching contacts: one for the internal account teams and one for the customer. You might call these &lt;code&gt;get_internal_contacts&lt;/code&gt; and &lt;code&gt;get_external_contacts&lt;/code&gt;. A typical training phrase for each intent would be:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;get_internal_contacts&lt;/code&gt;: &amp;ldquo;Who is the point of contact for Customer X?&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;get_external_contacts&lt;/code&gt;: &amp;ldquo;How do I get in contact with Customer X?&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Suppose that your users supplied the following request as they were looking for the external contacts: &amp;ldquo;Contacts for Customer X&amp;rdquo;. This request can confuse the Dialogflow agent because the phrase can match both intents. If the wrong intent matches, users will have a poor experience because they must change the formulation of the request, which is annoying and time consuming.&lt;/p&gt;
-&lt;p&gt;Therefore, you want to make sure that phrases within the same intent are more similar, while phrases between different intents are less similar. The rest of the tutorial explains how to evaluate the quality of the training phrase supplied for each intent, and how to identify potentially confusing training phrases.&lt;/p&gt;
-&lt;h2 id=&#34;approach&#34;&gt;Approach&lt;/h2&gt;
-&lt;p&gt;The approach used in this tutorial is to compute the similarity between two phrases and, by extension, to compute the similarity matrix for all the training phrases. Once you have that matrix, you can compute the following:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Cohesion&lt;/strong&gt;: The average similarity value between each pair of phrases in the same intent. That value is computed for each intent. The higher the intent cohesion value, the better the intent training phrases.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Separation&lt;/strong&gt;: Given two intents, the average distance between each pair of training phrases in the two intents.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Confusing phrases&lt;/strong&gt;: Training phrases that are highly similar to training phrases in other intents.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To compute a similarity value between two phrases, you must convert each phrase to a real-value feature vector, which represents the semantics of the phrase (&lt;a href=&#34;https://developers.google.com/machine-learning/glossary/#embeddings&#34;&gt;embeddings&lt;/a&gt;). To help with this task, the tutorial uses &lt;a href=&#34;https://www.tensorflow.org/hub/&#34;&gt;TensorFlow Hub&lt;/a&gt; (&lt;code&gt;tf.Hub&lt;/code&gt;), a library used for the publication, discovery, and consumption of reusable &lt;a href=&#34;https://tfhub.dev/&#34;&gt;modules&lt;/a&gt; of machine learning models. These modules can be pre-trained models or embeddings that are extracted from text, images, and so on. You can browse the &lt;a href=&#34;https://tfhub.dev/s?module-type=text-embedding&#34;&gt;available text embeddings&lt;/a&gt;. The tutorial uses the &lt;a href=&#34;https://tfhub.dev/google/universal-sentence-encoder/2&#34;&gt;Universal Sentence Encoder&lt;/a&gt; (v2) module, which is used to encode text into 512 dimensional vectors that can be used for text classification, semantic similarity, clustering, and other natural-language tasks.&lt;/p&gt;
-&lt;p&gt;In this tutorial, you use &lt;a href=&#34;https://wikipedia.org/wiki/Cosine_similarity&#34;&gt;cosine similarity&lt;/a&gt; as a proximity metric between two embedding vectors. Given two real-value vectors (in our example, two embedding vectors extracted from two training phrases), cosine similarity calculates the cosine of the angle between them, using the following formula:&lt;/p&gt;
-&lt;p&gt;$$ \cos(A,B) = \frac{\sum_{i=1}^{n}A_iB_i}{\sqrt{\sum_{i=1}^{n}{A_i^2}}\sqrt{\sum_{i=1}^{n}{B_i^2}}} $$&lt;/p&gt;
-&lt;p&gt;cos⁡(A,B)=∑i=1nAiBi∑i=1nAi2∑i=1nBi2&lt;/p&gt;
-&lt;p&gt;In this formula, &lt;em&gt;n&lt;/em&gt; is the number of elements in the vector. The smaller the angle between the vectors, the bigger the cosine value of this angle, indicating higher similarity. The cosine similarity value between any two vectors is always between 0 and 1.&lt;/p&gt;
-&lt;p&gt;Figure 1 shows an overview of the approach:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-eval-intents.svg&#34; alt=&#34;Overview of evaluating intents cohesion and separation&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Figure 1&lt;/strong&gt;: Overview of evaluating intents cohesion and separation&lt;/p&gt;
-&lt;p&gt;The figure illustrates the following sequence:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Import the intents and their training phrases.&lt;/li&gt;
-&lt;li&gt;Generate embeddings for the training phrases using the &lt;code&gt;tf.Hub&lt;/code&gt; Universal Sentence Encoder pre-trained module.&lt;/li&gt;
-&lt;li&gt;Create a visualization of the generated embeddings in a two-dimensional space.&lt;/li&gt;
-&lt;li&gt;Compute the embeddings cosine similarity matrix containing the pairwise similarity values between all the training phrases in different intents.&lt;/li&gt;
-&lt;li&gt;Calculate the cohesion and separation metrics.&lt;/li&gt;
-&lt;li&gt;Identify the confusing phrases.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;objectives&#34;&gt;Objectives&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;(Optional) Create a Dialogflow agent.&lt;/li&gt;
-&lt;li&gt;Import intents with training phrases.&lt;/li&gt;
-&lt;li&gt;Run the Colab notebook for intent quality assessment.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;costs&#34;&gt;Costs&lt;/h2&gt;
-&lt;p&gt;This tutorial uses the following billable components of Google Cloud:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Dialogflow&lt;/strong&gt;: Standard Edition is free, while Enterprise Edition offers paid enterprise support. You can choose which edition to use when you create your Dialogflow agent. Your account can include agents from both editions. For more details, refer to the &lt;a href=&#34;https://dialogflow.com/pricing&#34;&gt;Dialogflow Pricing page&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;before-you-begin&#34;&gt;Before you begin&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;In the Google Cloud Console, on the project selector page, select or create a Google Cloud project.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: If you don&amp;rsquo;t plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://console.cloud.google.com/projectselector2/home/dashboard&#34;&gt;Go to the project selector page&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Make sure that billing is enabled for your Cloud project. &lt;a href=&#34;https://cloud.google.com/billing/docs/how-to/modify-project&#34;&gt;Learn how to confirm that billing is enabled for your project&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Enable the Dialogflow API.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://console.cloud.google.com/flows/enableapi?apiid=dialogflow.googleapis.com&#34;&gt;Enable the API&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Create a service account to call the Dialogflow API.&lt;/p&gt;
-&lt;p&gt;Create service account&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In the &lt;strong&gt;Service account details&lt;/strong&gt; dialog, enter the account name and description as shown in the following screenshot, and then click &lt;strong&gt;Create&lt;/strong&gt;:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Set the role to &lt;strong&gt;Dialogflow API Client&lt;/strong&gt; and click &lt;strong&gt;Continue&lt;/strong&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;completing-the-tutorial-in-the-colab-notebook&#34;&gt;Completing the tutorial in the Colab notebook&lt;/h2&gt;
-&lt;p&gt;The following sections walk through the steps discussed in the &lt;a href=&#34;https://cloud.google.com/solutions/assessing-the-quality-of-training-phrases-in-dialogflow-intents#approach&#34;&gt;approach&lt;/a&gt; section to calculate the cohesion and separation metrics and to identify confusing phrases.&lt;/p&gt;
-&lt;h3 id=&#34;getting-started-with-the-colab-notebook&#34;&gt;Getting started with the Colab notebook&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Go to the Colab notebook: &lt;a href=&#34;https://colab.research.google.com/drive/1QQblWJX5aZ6TajVXNAogFpVJlzYDbMtX&#34;&gt;https://colab.research.google.com/drive/&amp;hellip;&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Make a local copy to your Google Drive.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-copy.png&#34; alt=&#34;Copying the notebook to your Google Drive&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In Cloud Shell, install the Python libraries needed for the rest of the tutorial, before importing the required libraries and modules.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;!pip install --quiet --upgrade tensorflow dialogflow scipy tensorflow-hub seaborn
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Set your Google Cloud &lt;code&gt;PROJECT_ID&lt;/code&gt; and the &lt;code&gt;SERVICE_ACCOUNT_EMAIL&lt;/code&gt; that you created in the &lt;a href=&#34;https://cloud.google.com/solutions/assessing-the-quality-of-training-phrases-in-dialogflow-intents#before-you-begin&#34;&gt;Before you begin&lt;/a&gt; section.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-id-email.png&#34; alt=&#34;Set your Google Cloud PROJECT_ID and SERVICE_ACCOUNT_EMAIL&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Authenticate your session to create a key for your service account:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;auth.authenticate_user()
-!gcloud config set project {PROJECT_ID}
-!gcloud iam service-accounts keys create sa-key.json \
-    --iam-account={SERVICE_ACCOUNT_EMAIL} --project={PROJECT_ID}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After you run these commands, a link is displayed.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Follow the link to authenticate your user account.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Copy the authentication code from the web page, and paste it in the &lt;strong&gt;Enter verification code&lt;/strong&gt; field in the notebook:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-verification.png&#34; alt=&#34;Enter verification code field in the notebook&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;setting-up-a-dialogflow-agent&#34;&gt;Setting up a Dialogflow agent&lt;/h3&gt;
-&lt;p&gt;If you already have a Dialogflow agent that you want to use in this tutorial, you can skip this step. However, if you don&amp;rsquo;t have an agent, or you want to set up a new one, you can download a zip file with the content of an exported Dialogflow agent, called &lt;code&gt;intents-healthcheck&lt;/code&gt;. You import this agent into your Dialogflow account as follows:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Download the zip file of the imported agent:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;gsutil cp gs://dialogflow-intent-health-check/intent-quality-demo.zip .
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Go to &lt;a href=&#34;https://dialogflow.com/&#34;&gt;https://dialogflow.com/&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Click the &lt;a href=&#34;https://console.dialogflow.com/api-client/#/login&#34;&gt;Go to Console&lt;/a&gt; button on the top right.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In the left menu, click &lt;strong&gt;Create new agent&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-console.png&#34; alt=&#34;Create new agent&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Enter the &lt;strong&gt;agent name&lt;/strong&gt;: &lt;code&gt;intents-healthcheck&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Select your Google Cloud project from the &lt;strong&gt;Google Project&lt;/strong&gt; list.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A Google Cloud project can have only one Dialogflow agent. So if you don&amp;rsquo;t find your Google Cloud project in the list, an agent is already associated with your project.&lt;/li&gt;
-&lt;li&gt;If you select &lt;strong&gt;Create a new project&lt;/strong&gt;, Dialogflow creates a Google Cloud project with the same name as your agent.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Click &lt;strong&gt;Create&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-agent-info.png&#34; alt=&#34;Entering information about the agent&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In the left-hand menu, select the new agent and then click the &lt;strong&gt;Settings&lt;/strong&gt; &lt;em&gt;settings&lt;/em&gt; icon. Then in the menu in the middle of the page, select &lt;strong&gt;Export and Import&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-import-export.png&#34; alt=&#34;Export and Import dialog&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Click &lt;strong&gt;Restore from zip&lt;/strong&gt;:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Select the &lt;code&gt;agent-backup.zip&lt;/code&gt; file you downloaded in step 1.&lt;/li&gt;
-&lt;li&gt;Type &lt;code&gt;RESTORE&lt;/code&gt; in the text box at the bottom of the form to confirm.&lt;/li&gt;
-&lt;li&gt;Click &lt;strong&gt;Restore&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-zip-restore.png&#34; alt=&#34;Restore the agent from a zip file&#34;&gt;&lt;/p&gt;
-&lt;p&gt;After restoring the agent, Dialogflow creates five intents.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Verify the imported intents by selecting &lt;strong&gt;Intents&lt;/strong&gt; from the menu on the left. You find the following intents:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-imported-intents.png&#34; alt=&#34;Verifying the imported intents&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;You use this restored agent for the rest of the tutorial.&lt;/p&gt;
-&lt;h2 id=&#34;walking-through-the-code-in-the-colab-notebook&#34;&gt;Walking through the code in the Colab notebook&lt;/h2&gt;
-&lt;p&gt;The sections that follow describe what the code in the notebook does when you run it.&lt;/p&gt;
-&lt;h3 id=&#34;fetching-your-intents&#34;&gt;Fetching your intents&lt;/h3&gt;
-&lt;p&gt;The following code fetches intents and their training phrases from the Dialogflow agent using the &lt;code&gt;fetch_intents_training_phrases&lt;/code&gt; method. This method returns a dictionary, where the keys are the intents named in your Dialogflow agent, and each value is a list of the training phrases in each entity. In the code, &lt;code&gt;project&lt;/code&gt; references the project to which your agent belongs, and &lt;code&gt;service_account_file&lt;/code&gt; references the file that you created earlier.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;def get_intents(service_account_file, project):
-
-    dialogflow_entity_client =  dialogflow.EntityTypesClient.from_service_account_file(service_account_file)
-    parent = dialogflow_entity_client.project_agent_path(project)
-    entities = list(dialogflow_entity_client.list_entity_types(parent))
-
-    dialogflow_intents_client = dialogflow.IntentsClient.from_service_account_file(service_account_file)
-    parent = dialogflow_intents_client.project_agent_path(project)
-    intents = list(dialogflow_intents_client.list_intents(
-        parent=parent,
-        intent_view=dialogflow.enums.IntentView.INTENT_VIEW_FULL))
-
-    entities_name_to_value = {}
-    for intent in intents:
-        entities_used = {entity.display_name
-            for entity in intent.parameters}
-
-        for entity in entities:
-            if entity.display_name in entities_used \
-                    and entity.display_name not in entities_name_to_value:
-                entities_name_to_value[entity.display_name] = np.random.choice(
-                    np.random.choice(entity.entities).synonyms, replace=False)
-
-    intent_to_training_phrases = defaultdict(list)
-    for intent in intents:
-        for training_phrase in intent.training_phrases:
-            parts = [entities_name_to_value[part.alias] if part.entity_type else part.text
-                for part in training_phrase.parts]
-            intent_to_training_phrases[intent.display_name].append(&amp;quot;&amp;quot;.join(parts))
-        # Remove intents with no training phrases
-        if not intent_to_training_phrases[intent.display_name]:
-            del intent_to_training_phrases[intent.display_name]
-    return intent_to_training_phrases
- 
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The following code verifies the retrieved intents:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;intent_training_phrases = fetch_intents_training_phrases(&amp;quot;sa-key.json&amp;quot;, project_id)
-for intent in intent_training_phrases:
-    print(&amp;quot;{}:{}&amp;quot;.format(intent, len(intent_training_phrases[intent])))
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;fetch_intents_training_phrases&lt;/code&gt; method returns the following listing. This code snippet shows the intents in the demo &lt;code&gt;intents-healthcheck&lt;/code&gt; agent, followed by the count of the training phrases available in each intent.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;start_conversation:4
-close_conversation:5
-get_internal_contacts:17
-request_help:7
-get_external_contacts:6
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;generating-embeddings-for-the-training-phrases&#34;&gt;Generating embeddings for the training phrases&lt;/h3&gt;
-&lt;p&gt;The following code downloads the &lt;code&gt;tf.Hub&lt;/code&gt; Universal Sentence Encoder pre-trained module:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;embed_module = hub.Module(&amp;quot;https://tfhub.dev/google/universal-sentence-encoder/2&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After the first use, the module is cached locally.&lt;/p&gt;
-&lt;p&gt;The following code implements a method that accepts a list of sentences and returns a list of embeddings based on the &lt;code&gt;tf.Hub&lt;/code&gt; module:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;def make_embeddings_fn():
-    placeholder = tf.placeholder(dtype=tf.string)
-    embed = embed_module(placeholder)
-    session = tf.Session()
-    session.run([tf.global_variables_initializer(), tf.tables_initializer()])
-    def _embeddings_fn(sentences):
-        computed_embeddings = session.run(
-            embed, feed_dict={placeholder: sentences})
-        return computed_embeddings
-    return _embeddings_fn
-
-generate_embeddings = make_embeddings_fn()
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This method ensures that the &lt;code&gt;tf.Session&lt;/code&gt; is created and that the embedding module is loaded only once, not every time the method is called.&lt;/p&gt;
-&lt;p&gt;The following code generates embeddings for the training phrases in the intents:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{
-    intent: {
-        training_phrase&#39;: [embedding_array]
-    }
-}
-
-training_phrases_with_embeddings = defaultdict(list)
-for intent_name, training_phrases_list in intent_training_phrases.items():
-    computed_embeddings = generate_embeddings(training_phrases_list)
-    training_phrases_with_embeddings[intent_name] = dict(zip(training_phrases_list, computed_embeddings))
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This code snippet creates the &lt;code&gt;training_phrases_with_embeddings&lt;/code&gt; nested dictionary.&lt;/p&gt;
-&lt;p&gt;The following code verifies the generated embeddings:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;training_phrases_with_embeddings = defaultdict(list)
-for intent_name, training_phrases_list in intent_training_phrases.items():
-    computed_embeddings = generate_embeddings(training_phrases_list)
-    training_phrases_with_embeddings[intent_name] = dict(zip(training_phrases_list, computed_embeddings))
- 
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The following code snippet shows each training phrase in the &lt;code&gt;start_conversation&lt;/code&gt; intent, along with the first five elements of the embedding vector of each phrase. The Universal Sentence Encoder generates a 512-dimension embedding vector for each training phrase.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Ciao!:[-0.03649221  0.02498418 -0.03456857  0.02827227  0.00471277]
-Howdy!:[-0.02732556 -0.00821852 -0.00794602  0.06356855 -0.03726532]
-Hello!:[-0.0255452   0.00690543 -0.00611844  0.05633081 -0.0142823 ]
-Hi!:[-0.03227544 -0.00985429 -0.01329378  0.06012927 -0.03646606]
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;visualizing-embeddings-in-two-dimensional-space&#34;&gt;Visualizing embeddings in two-dimensional space&lt;/h3&gt;
-&lt;p&gt;The following code reduces the dimensionality of the embeddings from 512 to 2 by using &lt;a href=&#34;https://en.wikipedia.org/wiki/Principal_component_analysis&#34;&gt;Principal Component Analysis&lt;/a&gt; to compute the principal components:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;from sklearn.decomposition import PCA
-embedding_vectors = None
-
-for intent in training_phrases_with_embeddings:
-    embeddings = list(training_phrases_with_embeddings[intent].values())
-    if embedding_vectors is None:
-        embedding_vectors = embeddings
-    else:
-        embedding_vectors = np.concatenate((only_embeddings, embeddings))
-
-pca = PCA(n_components=3)
-pca.fit(embedding_vectors)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This code snippet uses the &lt;code&gt;PCA&lt;/code&gt; class in &lt;code&gt;sklearn&lt;/code&gt; to generate a 2D representation of the training phrases embeddings.&lt;/p&gt;
-&lt;p&gt;The following code generates a visualization of the phrase embeddings with the reduced dimensionality:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import matplotlib.pyplot as plt
-
-fig = plt.figure(figsize=(15,10))
-ax = fig.add_subplot(111)
-
-legend = []
-
-for color, intent in enumerate(training_phrases_with_embeddings):
-    phrases = list(training_phrases_with_embeddings[intent].keys())
-    embeddings = list(training_phrases_with_embeddings[intent].values())
-    points = pca.transform(embeddings)
-    xs = points[:,0]
-    ys = points[:,1]
-    ax.scatter(xs, ys, marker=&#39;o&#39;, s=100, c=&amp;quot;C&amp;quot;+str(color))
-    for i, phrase in enumerate(phrases):
-        ax.annotate(phrase, (xs[i], ys[i]))
-    legend.append(intent)
-
-ax.legend(legend)
-plt.show()
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The following figure shows the resulting visualization: &lt;img src=&#34;https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-visualize-embeddings.png&#34; alt=&#34;Visualizing the phrase embeddings with the reduced dimensionality&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;computing-pairwise-similarity-between-phrases&#34;&gt;Computing pairwise similarity between phrases&lt;/h3&gt;
-&lt;p&gt;The following code computes the pairwise cosine similarity for the training phrases embeddings, using &lt;code&gt;sklearn.metrics.pairwise.cosine_similarity&lt;/code&gt;. The code creates a Dataframe, &lt;code&gt;similarity_df&lt;/code&gt;, with the pairwise similarity values.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;from sklearn.metrics.pairwise import cosine_similarity
-
-flatten = []
-for intent in training_phrases_with_embeddings:
-        for phrase in training_phrases_with_embeddings[intent]:
-            flatten.append((intent, phrase, training_phrases_with_embeddings[intent][phrase]))
-
-data = []
-for i in range(len(flatten)):
-    for j in range(i+1, len(flatten)):
-        intent_1 = flatten[i][0]
-        phrase_1 = flatten[i][1]
-        embedd_1 = flatten[i][2]
-        intent_2 = flatten[j][0]
-        phrase_2 = flatten[j][1]
-        embedd_2 = flatten[j][2]
-        similarity = cosine_similarity([embedd_1], [embedd_2])[0][0]
-        record = [intent_1, phrase_1, intent_2, phrase_2, similarity]
-        data.append(record)
-
-similarity_df = pd.DataFrame(data,
-    columns=[&amp;quot;Intent A&amp;quot;, &amp;quot;Phrase A&amp;quot;, &amp;quot;Intent B&amp;quot;, &amp;quot;Phrase B&amp;quot;, &amp;quot;Similarity&amp;quot;])
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The following code displays sample similarity records:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;different_intent = similarity_df[&#39;Intent A&#39;] != similarity_df[&#39;Intent B&#39;]
-display(similarity_df[different_intent].sort_values(&#39;Similarity&#39;,
-ascending=False).head(5))
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The following code snippet shows the most similar training phrases that don&amp;rsquo;t belong to the same intent:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-similar-phrases.png&#34; alt=&#34;The most similar training phrases that don&amp;rsquo;t belong to the same intent&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Phrases in different intents that have high similarity value can be confusing to the Dialogflow agent, and could lead to directing the user input to the wrong intent.&lt;/p&gt;
-&lt;h3 id=&#34;measuring-cohesion-and-separation-of-intents&#34;&gt;Measuring cohesion and separation of intents&lt;/h3&gt;
-&lt;p&gt;The following code computes a cohesion value for each intent, as described in the &lt;a href=&#34;https://cloud.google.com/solutions/assessing-the-quality-of-training-phrases-in-dialogflow-intents#approach&#34;&gt;Approach section&lt;/a&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;same_intent = similarity_df[&#39;Intent A&#39;] == similarity_df[&#39;Intent B&#39;]
-cohesion_df = pd.DataFrame(similarity_df[different_intent].groupby(&#39;Intent A&#39;, as_index=False)[&#39;Similarity&#39;].mean())
-cohesion_df.columns = [&#39;Intent&#39;, &#39;Cohesion&#39;]
-display(cohesion_df)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The result is a cohesion value for each intent:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-cohesion-values.png&#34; alt=&#34;Computing a cohesion value for each intent&#34;&gt;&lt;/p&gt;
-&lt;p&gt;The following code computes the pairwise separation between intents, as described in the &lt;a href=&#34;https://cloud.google.com/solutions/assessing-the-quality-of-training-phrases-in-dialogflow-intents#approach&#34;&gt;Approach section&lt;/a&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;different_intent = similarity_df[&#39;Intent A&#39;] != similarity_df[&#39;Intent B&#39;]
-separation_df = pd.DataFrame(similarity_df[different_intent].groupby([&#39;Intent A&#39;, &#39;Intent B&#39;], as_index=False)[&#39;Similarity&#39;].mean())
-separation_df[&#39;Separation&#39;] = 1 - separation_df[&#39;Similarity&#39;]
-del separation_df[&#39;Similarity&#39;]
-display(separation_df.sort_values(&#39;Separation&#39;))
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The result is the pairwise separation between intents:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-pairwise-separation.png&#34; alt=&#34;Computing the pairwise separation between intents&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;further-improvements&#34;&gt;Further improvements&lt;/h2&gt;
-&lt;p&gt;To improve the quality of the training phrases for your intents, consider the following approaches:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Find the phrases in different intents with high similarity, and change or remove them.&lt;/li&gt;
-&lt;li&gt;Find the phrases with the most similar phrases that belong to different intents.&lt;/li&gt;
-&lt;li&gt;Add more training phrases in intents with low cohesion, and investigate training phrases in intents with low separation.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;cleaning-up&#34;&gt;Cleaning up&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Caution&lt;/strong&gt;: Deleting a project has the following effects:&lt;strong&gt;Everything in the project is deleted.&lt;/strong&gt; If you used an existing project for this tutorial, when you delete it, you also delete any other work you&amp;rsquo;ve done in the project.&lt;strong&gt;Custom project IDs are lost.&lt;/strong&gt; When you created this project, you might have created a custom project ID that you want to use in the future. To preserve the URLs that use the project ID, such as an &lt;code&gt;appspot.com&lt;/code&gt; URL, delete selected resources inside the project instead of deleting the whole project.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In the Cloud Console, go to the&lt;/p&gt;
-&lt;p&gt;Manage resources&lt;/p&gt;
-&lt;p&gt;page.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://console.cloud.google.com/iam-admin/projects&#34;&gt;Go to Manage resources&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In the project list, select the project that you want to delete, and then click &lt;strong&gt;Delete&lt;/strong&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In the dialog, type the project ID, and then click &lt;strong&gt;Shut down&lt;/strong&gt; to delete the project.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s next&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Read the &lt;a href=&#34;https://cloud.google.com/solutions/machine-learning/overview-extracting-and-serving-feature-embeddings-for-machine-learning&#34;&gt;Overview of extracting and serving feature embeddings for machine learning&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;For more details about embeddings and &lt;code&gt;tf.Hub&lt;/code&gt;, see &lt;a href=&#34;https://cloud.google.com/solutions/machine-learning/overview-extracting-and-serving-feature-embeddings-for-machine-learning&#34;&gt;Overview of extracting and serving feature embeddings for machine learning&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Learn about the &lt;a href=&#34;https://cloud.google.com/solutions/architecture-of-a-serverless-ml-model&#34;&gt;Architecture of a serverless machine learning model&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Learn about &lt;a href=&#34;https://cloud.google.com/solutions/comparing-ml-model-predictions-using-cloud-dataflow-pipelines&#34;&gt;Comparing machine learning models for predictions in Cloud Dataflow pipelines&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Take the 5-course Coursera specialization on Machine Learning with &lt;a href=&#34;https://www.coursera.org/specializations/machine-learning-tensorflow-gcp&#34;&gt;TensorFlow on Google Cloud&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Learn about best practices for ML engineering in &lt;a href=&#34;https://developers.google.com/machine-learning/guides/rules-of-ml/&#34;&gt;Rules of ML&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Try out other Google Cloud features for yourself. Have a look at our &lt;a href=&#34;https://cloud.google.com/docs/tutorials&#34;&gt;tutorials&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://cloud.google.com/solutions/assessing-the-quality-of-training-phrases-in-dialogflow-intents&#34;&gt;Assessing the quality of training phrases in Dialogflow intents&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
       

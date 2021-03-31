@@ -295,6 +295,77 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/">Few shot learning</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-04-27" class="post-time">
+        2020-04-27
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Reference  https://github.com/AnthonyMRios/multi-label-zero-shot Few-Shot and Zero-Shot Multi-Label Learning for Structured Label Spaces Deep Neural Networks for Multi-Label Text Classification https://github.com/YujiaBao/Distributional-Signatures Induction Networks for Few-Shot Text Classification https://github.com/laohur/LearnToCompareText  
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/specialization/artificial-intelligence/machine-learning/learn-ml/">Learning Path for Machine Learning</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-04-27" class="post-time">
+        2020-04-27
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Learning Path for Machine Learning Basics of machine learning with TensorFlow Step 1: Understand what ML is all about The book ‘Deep Learning in Python’ by Francois Chollet, creator of Keras, is a great place to get started. Read chapters 1-4 to understand the fundamentals of ML from a programmer’s perspective.
+Google Developers Machine Learning Crash Course
+Machine Learning Glossary
+Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which takes you beyond the basics into introductory Computer Vision, NLP, and Sequence modelling.
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/artificial-intelligence/machine-learning/learn-ml/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/any-path/wireshark/">Wireshark</a>
     </h1>
     
@@ -319,74 +390,6 @@
     </div>
     <div class="read-more">
       <a href="/post/any-path/wireshark/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/web-application/back-end/scrapy-with-django/">Scraping with Scrapy and Django Integration</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-02-12" class="post-time">
-        2020-02-12
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Installing Dependencies (Optional) $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple $ python -m pip install --user virtualenv $ python -m pip install --user virtualenvwrapper $ vim ~/.bashrc export WORKON_HOME=$HOME/.virtualenvs export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv source $HOME/.local/bin/virtualenvwrapper.sh $ source ~/.bashrc $ mkvirtualenv stock-screener pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat Creating a Django Project $ django-admin startproject stock_screener $ cd stock_screener $ mkdir stock_screener/apps/basic_info $ django-admin startapp basic_info stock_screener/apps/basic_info $ mkdir stock_screener/apps/northbound $ django-admin startapp northbound stock_screener/apps/northbound $ mkdir stock_screener/apps/financial_metrics $ django-admin startapp financial_metrics stock_screener/apps/financial_metrics $ mkdir stock_screener/apps/quotes $ django-admin startapp quotes stock_screener/apps/quotes $ mkdir stock_screener/apps/jobs $ django-admin startapp jobs stock_screener/apps/jobs Cannot add backslash suffix when run startapp command.
-    </div>
-    <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/scrapy-with-django/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/information-management-and-analytics/web-scraping/proxy/">proxy for crawler</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-01-15" class="post-time">
-        2020-01-15
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/information-management-and-analytics/"> information-management-and-analytics </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      from proxybroker import Broker, Checker async def check(proxy): broker = Broker() ip = await broker._resolver.get_real_ext_ip() checker = Checker(judges=None, real_ext_ip=ip) results = [] for proto in ['HTTPS', 'HTTP']: result = await checker._check(proxy, proto) results.append(result) return True if any(results) else False 
-    </div>
-    <div class="read-more">
-      <a href="/post/specialization/information-management-and-analytics/web-scraping/proxy/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2069,6 +2072,27 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/42/">»</a></li>
@@ -2076,7 +2100,7 @@
 
       
       
-      <li><a href="/page/73/">»»</a></li>
+      <li><a href="/page/74/">»»</a></li>
       
 
       </ul>

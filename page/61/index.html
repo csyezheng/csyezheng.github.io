@@ -295,15 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/wagtail/">Wagtail</a>
+      <a class="post-link" href="/post/engineering-fundamentals/java/learn-java-in-y-minutes/">learn Java in Y minutes</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-11-02" class="post-time">
-        2018-11-02
+      <time datetime="2019-02-01" class="post-time">
+        2019-02-01
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -315,12 +315,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Getting started setting up a brand new Wagtail project $ pip install wagtail $ wagtail start mysite $ cd mysite $ pip install -r requirements.txt $ ./manage.py migrate $ ./manage.py createsuperuser $ ./manage.py runserver http://localhost:8000
-http://localhost:8000/admin/
-Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page.
+      // Single-line comments start with // /* Multi-line comments look like this. */ /** * JavaDoc comments look like this. Used to describe the Class or various * attributes of a Class. * Main attributes: * * @author Name (and contact information such as email) of author(s). * @version Current version of the program. * @since When this part of the program was first added. * @param For describing the different parameters for a method.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/wagtail/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/java/learn-java-in-y-minutes/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,12 +329,12 @@ Extend the HomePage model # home/models.py from django.db import models from wag
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/grpc/">gRPC by Go</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/edx_oauth/">edx oauth</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-10-13" class="post-time">
-        2018-10-13
+      <time datetime="2018-11-22" class="post-time">
+        2018-11-22
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
@@ -351,11 +349,23 @@ Extend the HomePage model # home/models.py from django.db import models from wag
   <div class="post-content">
     
     <div class="post-summary">
-      $ go version $ go get -u google.golang.org/grpc Install Protocol Buffers v3
- download pre-compiled binaries for your platform(protoc-&lt;version&gt;-&lt;platform&gt;.zip) from here: https://github.com/google/protobuf/releases Unzip this file. Update the environment variable PATH to include the path to the protoc binary file.  $ go get -u github.com/golang/protobuf/protoc-gen-go $ export PATH=$PATH:$GOPATH/bin Build the example $ cd $GOPATH/src/google.golang.org/grpc/examples/helloworld 
+      Request URL: http://localhost:18381/api-auth/login/?next=/api/v1/courses/
+Query String Parameters: next: /api/v1/courses/
+Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18381/login/edx-oidc/?next=/api/v1/courses/
+Query String Parameters: next: /api/v1/courses/
+Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18000/oauth2/authorize/?redirect_uri=http://localhost:18381/complete/edx-oidc/&amp;client_id=discovery-key&amp;scope=openid+profile+email+permissions&amp;response_type=code&amp;state=W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x
+Query String Parameters:
+ redirect_uri: http://localhost:18381/complete/edx-oidc/ client_id: discovery-key scope: openid profile email permissions response_type: code state: W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x  Request Method: GET
+Status Code: 302 Found
+  Request URL: http://localhost:18000/oauth2/authorize/confirm
+Request Method: GET
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/grpc/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/edx_oauth/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -366,15 +376,15 @@ Extend the HomePage model # home/models.py from django.db import models from wag
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/jwt/">JSON Web Tokens</a>
+      <a class="post-link" href="/post/master-path/courses/">courses</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-10-09" class="post-time">
-        2018-10-09
+      <time datetime="2018-11-08" class="post-time">
+        2018-11-08
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          <a href="http://www.yezheng.pro/categories/master-path/"> master-path </a>
           
         </div>
       
@@ -386,11 +396,11 @@ Extend the HomePage model # home/models.py from django.db import models from wag
   <div class="post-content">
     
     <div class="post-summary">
-      What is JSON Web Token? JSON Web Token (JWT) is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
-When should you use JSON Web Tokens? Here are some scenarios where JSON Web Tokens are useful:
+      google cloud java spring
+Getting Started with Go
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/jwt/" class="read-more-link">Read more</a>
+      <a href="/post/master-path/courses/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2073,6 +2083,27 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/62/">»</a></li>
@@ -2080,7 +2111,7 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
 
       
       
-      <li><a href="/page/73/">»»</a></li>
+      <li><a href="/page/74/">»»</a></li>
       
 
       </ul>

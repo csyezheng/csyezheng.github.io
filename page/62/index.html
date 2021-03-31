@@ -295,12 +295,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/">Concurrent-Programming-for-Scalable-Web-Architectures</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/wagtail/">Wagtail</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-08-26" class="post-time">
-        2018-08-26
+      <time datetime="2018-11-02" class="post-time">
+        2018-11-02
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
@@ -315,12 +315,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Introduction Scope of this Thesis We will have a detailed look on concurrency in three distinct areas of web architectures&ndash;connection handling, application logic and backend persistence. For each stage, we will discuss its main challenges and issues and explain existing approaches to tackle concurrency.
-Web Applications distinguish two separate types of web applications &ndash; web sites and web services.
-Web Sites some popular types for web sites that are interesting in terms of scalability and concurrency
+      Getting started setting up a brand new Wagtail project $ pip install wagtail $ wagtail start mysite $ cd mysite $ pip install -r requirements.txt $ ./manage.py migrate $ ./manage.py createsuperuser $ ./manage.py runserver http://localhost:8000
+http://localhost:8000/admin/
+Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/wagtail/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,12 +331,12 @@ Web Sites some popular types for web sites that are interesting in terms of scal
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/distributed-systems/">distributed systems</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/grpc/">gRPC by Go</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-08-26" class="post-time">
-        2018-08-26
+      <time datetime="2018-10-13" class="post-time">
+        2018-10-13
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
@@ -351,10 +351,11 @@ Web Sites some popular types for web sites that are interesting in terms of scal
   <div class="post-content">
     
     <div class="post-summary">
-      
+      $ go version $ go get -u google.golang.org/grpc Install Protocol Buffers v3
+ download pre-compiled binaries for your platform(protoc-&lt;version&gt;-&lt;platform&gt;.zip) from here: https://github.com/google/protobuf/releases Unzip this file. Update the environment variable PATH to include the path to the protoc binary file.  $ go get -u github.com/golang/protobuf/protoc-gen-go $ export PATH=$PATH:$GOPATH/bin Build the example $ cd $GOPATH/src/google.golang.org/grpc/examples/helloworld 
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/distributed-systems/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/grpc/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -365,12 +366,12 @@ Web Sites some popular types for web sites that are interesting in terms of scal
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/high-concurrency/">high concurrency</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/jwt/">JSON Web Tokens</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-08-26" class="post-time">
-        2018-08-26
+      <time datetime="2018-10-09" class="post-time">
+        2018-10-09
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
@@ -385,10 +386,11 @@ Web Sites some popular types for web sites that are interesting in terms of scal
   <div class="post-content">
     
     <div class="post-summary">
-      高并发 高并发其实挺容易的，当你明白了一万并发的原理，然后扩展到百万、千万、亿万级很easy 要点有如下几项： 1、垂直分层：DNS层、跨机房部署
+      What is JSON Web Token? JSON Web Token (JWT) is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
+When should you use JSON Web Tokens? Here are some scenarios where JSON Web Tokens are useful:
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/high-concurrency/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/jwt/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2071,6 +2073,27 @@ Web Sites some popular types for web sites that are interesting in terms of scal
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/63/">»</a></li>
@@ -2078,7 +2101,7 @@ Web Sites some popular types for web sites that are interesting in terms of scal
 
       
       
-      <li><a href="/page/73/">»»</a></li>
+      <li><a href="/page/74/">»»</a></li>
       
 
       </ul>

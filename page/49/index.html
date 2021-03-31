@@ -295,7 +295,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/devops/kubernetes/">Kubernetes Basics</a>
+      <a class="post-link" href="/post/specialization/devops/docker-mysql/">DevOps</a>
     </h1>
     
     <div class="post-meta">
@@ -315,13 +315,16 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Using Minikube to Create a Cluster Kubernetes Clusters Kubernetes coordinates a highly available cluster of computers that are connected to work as a single unit.
-applications need to be packaged in a way that decouples them from individual hosts: they need to be containerized.
-Kubernetes automates the distribution and scheduling of application containers across a cluster in a more efficient way.
-A Kubernetes cluster consists of two types of resources:
+      pull this image
+$ sudo docker pull mysql Start a mysql server instance
+$ sudo docker run --name some-mysql -p 3310:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7 logged in to the conainer
+$ sudo docker exec -it some-mysql mysql -u root -p Install mariadb package.
+sudo pacman -S mariadb Find out the ip of the docker container over the docker bridge:
+sudo docker inspect some-mysql | grep IPAddress connect to mysql
+mysql -h 172.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/devops/kubernetes/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/devops/docker-mysql/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -332,7 +335,7 @@ A Kubernetes cluster consists of two types of resources:
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/devops/project-management/">project management</a>
+      <a class="post-link" href="/post/specialization/devops/books/">DevOps books</a>
     </h1>
     
     <div class="post-meta">
@@ -352,10 +355,13 @@ A Kubernetes cluster consists of two types of resources:
   <div class="post-content">
     
     <div class="post-summary">
-      
+      Python for DevOps: Learn Ruthlessly Effective Automation  Hands-On Docker for Microservices with Python: Design, deploy, and operate a complex system with multiple microservices using Docker and Kubernetes
+Ansible for DevOps: Server and configuration management for humans
+Terraform: Up &amp; Running: Writing Infrastructure as Code
+Kubernetes: Up and Running: Dive into the Future of Infrastructure
     </div>
     <div class="read-more">
-      <a href="/post/specialization/devops/project-management/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/devops/books/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -366,15 +372,15 @@ A Kubernetes cluster consists of two types of resources:
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/oauth2/">Django oauth2 provider</a>
+      <a class="post-link" href="/post/specialization/devops/tools/">DevOps CI/CD</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-05-26" class="post-time">
-        2019-05-26
+      <time datetime="2019-05-30" class="post-time">
+        2019-05-30
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
           
         </div>
       
@@ -386,12 +392,17 @@ A Kubernetes cluster consists of two types of resources:
   <div class="post-content">
     
     <div class="post-summary">
-      Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... 'provider', 'provider.oauth2', ) # urls.py url(r'^oauth2/', include('provider.oauth2.urls', namespace = 'oauth2')), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ?   Create a client entry in your database
-To find out which type of client you need to create, read Section 2.1.
-To create a new entry simply use the Django admin panel.
+      Gitlab https://gitlab.com/gitlab-org/gitlab
+https://github.com/gitlabhq/gitlabhq
+https://docs.gitlab.com/ee/README.html
+Docker integration https://docs.gitlab.com/ee/ci/docker/README.html
+Jenkins CI service https://docs.gitlab.com/ee/integration/jenkins.html
+GitLab Jira integration https://docs.gitlab.com/ee/user/project/integrations/jira.html
+Auto DevOps https://docs.gitlab.com/ee/topics/autodevops/
+Auto Build Auto Build using a Dockerfile Auto Test Auto Code Quality Auto SAST Auto Secret Detection Auto Load Performance Testing Auto Deploy JIRA 
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/oauth2/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/devops/tools/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2074,6 +2085,27 @@ To create a new entry simply use the Django admin panel.
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/50/">»</a></li>
@@ -2081,7 +2113,7 @@ To create a new entry simply use the Django admin panel.
 
       
       
-      <li><a href="/page/73/">»»</a></li>
+      <li><a href="/page/74/">»»</a></li>
       
 
       </ul>

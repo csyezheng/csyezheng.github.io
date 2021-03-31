@@ -6,7 +6,25 @@
     <description>Recent content in Posts on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>business-analyst</title>
+      <link>http://www.yezheng.pro/post/interview/business-analyst/</link>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/business-analyst/</guid>
+      <description>1. How would you work with a difficult stakeholder（困难的利益相关者）? As a business analyst, you will likely deal with many different personalities occupying a variety of positions（与担任各种职位的许多不同人物</description>
+    </item>
+    
+    <item>
+      <title>How To Prepare for a Behavioral Interview</title>
+      <link>http://www.yezheng.pro/post/interview/behavioral-interview/</link>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/behavioral-interview/</guid>
+      <description>What is a Behavioral Interview? A behavioral interview is a popular interview technique employers use to assess job candidates based on their past behavior. For example, instead of asking hypothetical questions like, “How would you react if you were under a lot of pressure at work?” they would instead ask situational questions like, “Describe</description>
+    </item>
+    
     <item>
       <title>distributed systems</title>
       <link>http://www.yezheng.pro/post/specialization/web-application/distribute-systems/distribute-systems/</link>
@@ -96,10 +114,10 @@ Scale: Indexing and IO Model Sorting, Building Indices Part 1 B+ Trees Query Opt
     
     <item>
       <title>Hands-On Docker for Microservices with Python</title>
-      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/hands-on_docker_for_microservices_with_python/</link>
+      <link>http://www.yezheng.pro/post/specialization/web-application/microservices/hands-on_docker_for_microservices_with_python/</link>
       <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/hands-on_docker_for_microservices_with_python/</guid>
+      <guid>http://www.yezheng.pro/post/specialization/web-application/microservices/hands-on_docker_for_microservices_with_python/</guid>
       <description>Preface For the technical aspects, we will use well-tailored tools, including the following: Python, to implement RESTful web services Git source control, to track the changes in an implementation, and GitHub, to share those changes Docker containers, to standardize the operation of each of the microservices Kubernetes, to coordinate the execution of multiple services Cloud services, such as Travis CI or AWS, to leverage existing commercial solutions to problems We</description>
     </item>
     
@@ -177,24 +195,6 @@ The approach you take is to generate semantic embeddings of the training phrases
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</guid>
       <description>Background theory for recommendations the background theory for matrix factorization-based collaborative filtering as applied to recommendation systems. Collaborative filtering for recommendation systems Collaborative filtering relies only on observed user behavior to make recommendations—no profile data or content access is necessary. The basic assumption is that similar user behavior reflects similar fundamental preferences, allowing</description>
-    </item>
-    
-    <item>
-      <title>data lakes</title>
-      <link>http://www.yezheng.pro/post/specialization/big-data/data-lakes/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/big-data/data-lakes/</guid>
-      <description>Reference  Delta Lake What is a Lakehouse?  </description>
-    </item>
-    
-    <item>
-      <title>edX Analytics Pipeline</title>
-      <link>http://www.yezheng.pro/post/specialization/big-data/edx-analytics-pipeline/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/big-data/edx-analytics-pipeline/</guid>
-      <description>Reference  edX Insights edX Analytics Pipeline edx-analytics-pipeline luigi  </description>
     </item>
     
   </channel>

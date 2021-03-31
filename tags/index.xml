@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>behavioral-interview</title>
+      <link>http://www.yezheng.pro/tags/behavioral-interview/</link>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/tags/behavioral-interview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>business-analyst</title>
+      <link>http://www.yezheng.pro/tags/business-analyst/</link>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/tags/business-analyst/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>distributed systems</title>
       <link>http://www.yezheng.pro/tags/distributed-systems/</link>
@@ -166,24 +184,6 @@
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/tags/natural-language-processing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>slot</title>
-      <link>http://www.yezheng.pro/tags/slot/</link>
-      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/tags/slot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>spacy</title>
-      <link>http://www.yezheng.pro/tags/spacy/</link>
-      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/tags/spacy/</guid>
       <description></description>
     </item>
     
