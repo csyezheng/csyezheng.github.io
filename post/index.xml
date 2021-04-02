@@ -6,7 +6,44 @@
     <description>Recent content in Posts on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>25 Phone Interview Tips</title>
+      <link>http://www.yezheng.pro/post/interview/phone-interview-tips/</link>
+      <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/phone-interview-tips/</guid>
+      <description>Phone Interview Questions Tell me about yourself / Tell me about your background Describe yourself Why are you applying for this position? Why do you want this jon? Tell me what you know the role Why do you want to work here? Why are you looking for jobs? What are you passionate about? What are your salary expectations? Are you interviewing with other companies? Phone interview tips 1. Confirm the</description>
+    </item>
+    
+    <item>
+      <title>General Interview Question</title>
+      <link>http://www.yezheng.pro/post/interview/general/</link>
+      <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/general/</guid>
+      <description>1. What past accomplishments are you most proud of? 在大型团队会议中，同样几个人会一直说话，而其他人则保持沉默。我向经理建议，我们在会议召开前48小时给团队一个提示，并邀请他</description>
+    </item>
+    
+    <item>
+      <title>How To Use the STAR Interview Response Technique</title>
+      <link>http://www.yezheng.pro/post/interview/star/</link>
+      <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/star/</guid>
+      <description>What is the STAR interview method? The STAR interview method is a technique you can use to prepare for behavioral and situational interview questions. STAR stands for: situation, task, action and result. This method will help you prepare clear and concise responses using real-life examples. How does the STAR method work? The STAR method helps you create an easy-to-follow story with a clear conflict and resolution. Here</description>
+    </item>
+    
+    <item>
+      <title>SWOT Analysis Guide (With Examples)</title>
+      <link>http://www.yezheng.pro/post/any-path/swot/</link>
+      <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/any-path/swot/</guid>
+      <description>A SWOT analysis is a way to evaluate strengths, weaknesses, opportunities and threats. You might perform this analysis for a product, team, organization, leadership or other entities. SWOT analyses are used in many business environments to gain a better understanding of how to plan for the future.
+In this article, we discuss what a SWOT analysis is in further detail, why they are used and how to perform a SWOT analysis.</description>
+    </item>
+    
     <item>
       <title>business-analyst</title>
       <link>http://www.yezheng.pro/post/interview/business-analyst/</link>
@@ -158,43 +195,6 @@ Start a TensorFlow Docker container docker run [-it] [--rm] [-p hostPort:contain
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/dialog-systems-and-chatbots/</guid>
       <description>Intent matching Matching algorithms two algorithms to match intents: rule-based grammar matching and ML matching. simultaneously attempts both algorithms and chooses the best result. Algorithm Pros Cons Rule-based grammar matching Accurate with a small or large number of training phrase examples.Models are updated quickly. Does not support the automated expansion entity option. ML matching Accurate with a large number of training phrase examples. Matching is fast. Inaccurate with a small</description>
-    </item>
-    
-    <item>
-      <title>evaluate the quality of the training phrases in intents</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</link>
-      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/</guid>
-      <description>This tutorial shows you how to analyze and evaluate the quality of the training phrases supplied to your Dialogflow agent&amp;rsquo;s intents. The purpose of this analysis is to avoid confusing the agent with phrases irrelevant to the intents supplied to, or more relevant to, other intents.
-The approach you take is to generate semantic embeddings of the training phrases by using the TensorFlow Hub (tf.Hub) Universal Sentence Encoder module. You then compute cohesion and separation measurements based on the similarity between embeddings within the same intents and different intents.</description>
-    </item>
-    
-    <item>
-      <title>Joint intent and slot classification</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</link>
-      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</guid>
-      <description>Reference  Joint_Intent_and_Slot_Classification.ipynb  </description>
-    </item>
-    
-    <item>
-      <title>Named Entity Recognition using Spacy and Tensorflow</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</link>
-      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</guid>
-      <description>Reference  Named Entity Recognition using Spacy and Tensorflow  </description>
-    </item>
-    
-    <item>
-      <title>Building a Recommendation System in TensorFlow</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/</guid>
-      <description>Background theory for recommendations the background theory for matrix factorization-based collaborative filtering as applied to recommendation systems. Collaborative filtering for recommendation systems Collaborative filtering relies only on observed user behavior to make recommendations—no profile data or content access is necessary. The basic assumption is that similar user behavior reflects similar fundamental preferences, allowing</description>
     </item>
     
   </channel>
