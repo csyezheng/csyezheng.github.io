@@ -295,12 +295,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/postgresql/">PostgreSQL</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/jwt/">JSON Web Tokens</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-09-30" class="post-time">
-        2017-09-30
+      <time datetime="2018-10-09" class="post-time">
+        2018-10-09
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
@@ -315,10 +315,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Installing PostgreSQL $ sudo pacman -S postgresql $ sudo -u postgres -i [postgres]$ initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data' [postgres]$ exit $ pg_ctl -D /var/lib/postgres/data -l logfile start $ systemctl start postgresql.service $ systemctl enable postgresql.service Create your first database/user Access the database shell $ [postgres]$ psql -d myDatabaseName \help \c &lt;database&gt; \du # list all users and their permission levels \dt # show summary information about all tables \q \?
+      What is JSON Web Token? JSON Web Token (JWT) is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
+When should you use JSON Web Tokens? Here are some scenarios where JSON Web Tokens are useful:
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/postgresql/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/jwt/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -329,15 +330,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/any-path/post-installation-for-archlinux/">Post-installation for archlinux</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/">Concurrent-Programming-for-Scalable-Web-Architectures</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-09-26" class="post-time">
-        2017-09-26
+      <time datetime="2018-08-26" class="post-time">
+        2018-08-26
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -349,12 +350,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Reboot into the new system Set the keyboard layout and Console fonts If you have the 4K display, console fonts will be extremely small.
-$ setfont sun12x22 Connect to the internet nmcli device wifi list nmcli device wifi connect TP-LINK_GZS password a3628436 ping baidu.com Unofficial user repositories sudo vim /etc/pacman.conf [archlinuxcn] Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch Adding unofficial keys
-sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman -S ttc-iosevka-slab noto-fonts noto-fonts-cjk noto-fonts-emoji tf-latinmodern-math ttf-inconsolata Graphical user interface Display server sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight xorg-xrdb is using to loading a user-level configuration dotfile, typically located at ~/.
+      Introduction Scope of this Thesis We will have a detailed look on concurrency in three distinct areas of web architectures&ndash;connection handling, application logic and backend persistence. For each stage, we will discuss its main challenges and issues and explain existing approaches to tackle concurrency.
+Web Applications distinguish two separate types of web applications &ndash; web sites and web services.
+Web Sites some popular types for web sites that are interesting in terms of scalability and concurrency
     </div>
     <div class="read-more">
-      <a href="/post/any-path/post-installation-for-archlinux/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/concurrent-programming-for-scalable-web-architectures/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -365,15 +366,15 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/any-path/setup-a-archlinux-windows10-dual-booting-system/">Setup a Archlinux / Windows10 dual booting system</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/distributed-systems/">distributed systems</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-09-25" class="post-time">
-        2017-09-25
+      <time datetime="2018-08-26" class="post-time">
+        2018-08-26
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -385,15 +386,10 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
   <div class="post-content">
     
     <div class="post-summary">
-      Before   Check the hardware, three disks on my Lenovo ThinkPad P50
-  Samsung SSD 970 EVO Plus 250GB for installing windows
-  Samsung SSD 960 EVO 250GB for installling archlinux
-  WDC WD5000LPLX-0 HHD 500GB for data storage
-    Disable Windows Fast Startup if start from windows
-  Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)
+      
     </div>
     <div class="read-more">
-      <a href="/post/any-path/setup-a-archlinux-windows10-dual-booting-system/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/distributed-systems/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2139,6 +2135,111 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/70/">»</a></li>
@@ -2146,7 +2247,7 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
 
       
       
-      <li><a href="/page/76/">»»</a></li>
+      <li><a href="/page/81/">»»</a></li>
       
 
       </ul>

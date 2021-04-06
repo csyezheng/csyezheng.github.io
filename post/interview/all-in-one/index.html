@@ -1,0 +1,2231 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>all in one - Ye Zheng&#39;s Blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Ye Zheng" />
+  <meta name="description" content="1 计算机网络 1.1 网络分层和常见概念 介绍网络5层模型，每一层都实现什么功能 物理层：确保原始的数据可在各种物理媒体上以比特流的形式可靠地传输 数据链" />
+
+  <meta name="keywords" content="technique, programming, computer science" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.81.0" />
+
+
+<link rel="canonical" href="http://www.yezheng.pro/post/interview/all-in-one/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.61b9e7bcbd6f12a4e9f5db11b9643a2092aa9c93ca136cf497edd5e0f3efca61.css" integrity="sha256-YbnnvL1vEqTp9dsRuWQ6IJKqnJPKE2z0l&#43;3V4PPvymE=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="all in one" />
+<meta property="og:description" content="1 计算机网络 1.1 网络分层和常见概念 介绍网络5层模型，每一层都实现什么功能 物理层：确保原始的数据可在各种物理媒体上以比特流的形式可靠地传输 数据链" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.yezheng.pro/post/interview/all-in-one/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-12-01T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2020-12-01T00:00:00&#43;00:00" />
+
+<meta itemprop="name" content="all in one">
+<meta itemprop="description" content="1 计算机网络 1.1 网络分层和常见概念 介绍网络5层模型，每一层都实现什么功能 物理层：确保原始的数据可在各种物理媒体上以比特流的形式可靠地传输 数据链"><meta itemprop="datePublished" content="2020-12-01T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-12-01T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="21561">
+<meta itemprop="keywords" content="interview," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="all in one"/>
+<meta name="twitter:description" content="1 计算机网络 1.1 网络分层和常见概念 介绍网络5层模型，每一层都实现什么功能 物理层：确保原始的数据可在各种物理媒体上以比特流的形式可靠地传输 数据链"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Ye Zheng's Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Ye Zheng's Blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/">Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://www.yezheng.pro/about/">About</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">all in one</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-12-01" class="post-time">
+          2020-12-01
+        </time>
+        <div class="post-category">
+            <a href="http://www.yezheng.pro/categories/interview/"> interview </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#11-网络分层和常见概念">1.1 网络分层和常见概念</a></li>
+    <li><a href="#12-udp">1.2 UDP</a></li>
+    <li><a href="#13-tcp">1.3 TCP</a>
+      <ul>
+        <li><a href="#tcp基础">TCP基础</a></li>
+        <li><a href="#tcp拥塞控制">TCP拥塞控制</a></li>
+        <li><a href="#差错控制">差错控制</a></li>
+        <li><a href="#深入问题">深入问题</a></li>
+      </ul>
+    </li>
+    <li><a href="#14-dns">1.4 DNS</a></li>
+    <li><a href="#15-http">1.5 HTTP</a>
+      <ul>
+        <li><a href="#方法与字段">方法与字段</a></li>
+        <li><a href="#高级特性">高级特性</a></li>
+        <li><a href="#session与cookie">Session与cookie</a></li>
+      </ul>
+    </li>
+    <li><a href="#16-https">1.6 HTTPS</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#21-事务">2.1 事务</a></li>
+    <li><a href="#22-索引">2.2 索引</a></li>
+    <li><a href="#23-具体语法与语句执行">2.3 具体语法与语句执行</a></li>
+    <li><a href="#24-数据库动手题">2.4 数据库动手题</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#31-用户态和核心态">3.1 用户态和核心态</a></li>
+    <li><a href="#32-进程">3.2 进程</a>
+      <ul>
+        <li><a href="#进程线程协程">进程，线程，协程</a></li>
+        <li><a href="#进程调度与通信">进程调度与通信</a></li>
+        <li><a href="#进程间资源共享与死锁">进程间资源共享与死锁</a></li>
+        <li><a href="#进程的内存空间">进程的内存空间</a></li>
+      </ul>
+    </li>
+    <li><a href="#33-内存管理">3.3 内存管理</a></li>
+    <li><a href="#34-linux常用命令">3.4 Linux常用命令</a></li>
+    <li><a href="#35-io模型">3.5 IO模型</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#41-高级语法">4.1 高级语法</a></li>
+    <li><a href="#42-数据结构">4.2 数据结构</a></li>
+    <li><a href="#43-语言特性">4.3 语言特性</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#51-哈希表">5.1 哈希表</a></li>
+    <li><a href="#52-面向对象">5.2 面向对象</a></li>
+    <li><a href="#53-redis">5.3 Redis</a></li>
+    <li><a href="#54-设计模式">5.4 设计模式</a></li>
+    <li><a href="#55-git">5.5 Git</a></li>
+    <li><a href="#56-behaviour-question">5.6 Behaviour Question</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#71-经典题目">7.1 经典题目</a>
+      <ul>
+        <li><a href="#最长上升子序列">最长上升子序列</a></li>
+        <li><a href="#剑指48最长不含重复字符的子字符串">剑指48.最长不含重复字符的子字符串</a></li>
+        <li><a href="#接雨水">接雨水</a></li>
+        <li><a href="#lru实现">LRU实现</a></li>
+        <li><a href="#三数之和">三数之和</a></li>
+        <li><a href="#一个字符串找出出现第二多的字符">一个字符串，找出出现第二多的字符</a></li>
+        <li><a href="#鸡蛋掉落">鸡蛋掉落</a></li>
+        <li><a href="#一个先递增后递减的数组找出独特元素的个数">一个先递增后递减的数组找出独特元素的个数</a></li>
+        <li><a href="#实现循环队列-leetcode-622">实现循环队列 (leetcode 622)</a></li>
+        <li><a href="#二叉树转双向链表">二叉树转双向链表</a></li>
+        <li><a href="#爬楼梯--不允许到达7的倍数层">爬楼梯 =&gt; 不允许到达7的倍数层</a></li>
+        <li><a href="#树中两个点的最长路径和-leetcode-124">树中两个点的最长路径和 (leetcode 124)</a></li>
+        <li><a href="#找比当前数大的下一个数如1243结果是1324">找比当前数大的下一个数（如1243，结果是1324）</a></li>
+        <li><a href="#求x的y次方想出比直接for循环更好的方案">求x的y次方，想出比直接for循环更好的方案</a></li>
+        <li><a href="#求众数">求众数</a></li>
+        <li><a href="#找出一个未排序的整数数组中没有出现的最小的正整数">找出一个未排序的整数数组中没有出现的最小的正整数</a></li>
+        <li><a href="#给定一个字符串请你找出其中不含有重复字符的-最长子串-的长度">给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度</a></li>
+        <li><a href="#二维数组按行递增按列递增问是否能找到某个数字">二维数组，按行递增，按列递增，问是否能找到某个数字</a></li>
+        <li><a href="#一个ip地址转成int类型数据ip地址是32个比特int也是32个比特">一个IP地址转成int类型数据（IP地址是32个比特，int也是32个比特）</a></li>
+        <li><a href="#二叉树找两个节点的公共父节点">二叉树找两个节点的公共父节点</a></li>
+        <li><a href="#快排当有很多重复数时怎么优化">快排当有很多重复数时怎么优化</a></li>
+        <li><a href="#一组数字怎么排列组合出的数最大">一组数字怎么排列组合出的数最大</a></li>
+        <li><a href="#字符矩阵是否存在给定的字符串">字符矩阵是否存在给定的字符串</a></li>
+        <li><a href="#非负整数字符串重新排列使得结果最小">非负整数字符串重新排列使得结果最小</a></li>
+        <li><a href="#给定字符串找出最短的包含指定字符的子串">给定字符串，找出最短的包含指定字符的子串</a></li>
+        <li><a href="#leetcode-54-螺旋矩阵做完提问怎样保证不会重复输出">LeetCode 54 螺旋矩阵，做完提问怎样保证不会重复输出.</a></li>
+        <li><a href="#leetcode103-二叉树的锯齿形层次遍历">Leetcode103 二叉树的锯齿形层次遍历</a></li>
+        <li><a href="#leetcode25-k-个一组翻转链表">Leetcode25 K 个一组翻转链表</a></li>
+        <li><a href="#找出第一个缺失的正整数">找出第一个缺失的正整数</a></li>
+        <li><a href="#rand1-5实现rand1-7">rand(1, 5)实现rand(1, 7)</a></li>
+      </ul>
+    </li>
+    <li><a href="#72-大数据量">7.2 大数据量</a>
+      <ul>
+        <li><a href="#10亿个无序整数找出中位数">10亿个无序整数找出中位数。</a></li>
+        <li><a href="#内存只能存1000条数据如何对5000条数据进行排序">内存只能存1000条数据。如何对5000条数据进行排序?</a></li>
+        <li><a href="#10万个ip求出现频率最高的10个ip">10万个ip，求出现频率最高的10个IP</a></li>
+        <li><a href="#1000-亿个无符号整数找最大的-100-个">1000 亿个无符号整数，找最大的 100 个</a></li>
+      </ul>
+    </li>
+    <li><a href="#73-信号量与锁">7.3 信号量与锁</a>
+      <ul>
+        <li><a href="#信号量实现哲学家进餐">信号量实现哲学家进餐</a></li>
+        <li><a href="#用条件变量实现读写锁">用条件变量实现读写锁</a></li>
+        <li><a href="#生产者消费者">生产者消费者</a></li>
+        <li><a href="#实现阻塞队列">实现阻塞队列</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#小白鼠喝毒药">小白鼠喝毒药</a></li>
+        <li><a href="#烧香计时">烧香计时</a></li>
+        <li><a href="#海盗分金币">海盗分金币</a></li>
+        <li><a href="#老虎吃羊">老虎吃羊</a></li>
+        <li><a href="#螺丝与螺母">螺丝与螺母</a></li>
+        <li><a href="#赛马">赛马</a></li>
+        <li><a href="#12个球一个质量不一样最多称三次如何称">12个球，一个质量不一样，最多称三次，如何称</a></li>
+        <li><a href="#a中5个球b中7个球甲乙两个人每次至少取一个球且只能取同一个箱子的球取到最后一个球的人输问先手是否有必胜策略">A中5个球，B中7个球，甲乙两个人每次至少取一个球，且只能取同一个箱子的球。取到最后一个球的人输。问先手是否有必胜策略？</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#三门问题">三门问题</a></li>
+        <li><a href="#给一个函数gg以p的概率输出1以1-p的概率输出0设计一个函数f以等概率的情况输出0和1">给一个函数g，g以p的概率输出1，以1-p的概率输出0，设计一个函数f以等概率的情况输出0和1</a></li>
+        <li><a href="#一个圆内随机三个点刚好在一个半圆的概率">一个圆内随机三个点刚好在一个半圆的概率</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h1 id="1-计算机网络">1 计算机网络</h1>
+<h2 id="11-网络分层和常见概念">1.1 网络分层和常见概念</h2>
+<ul>
+<li>介绍网络5层模型，每一层都实现什么功能
+<ul>
+<li><strong>物理层</strong>：确保原始的数据可在各种物理媒体上以比特流的形式<strong>可靠地</strong>传输</li>
+<li><strong>数据链路层</strong>：将源自网络层来的数据<strong>可靠地</strong>传输到<strong>相邻节点</strong>的目标机网络层</li>
+<li><strong>网络层</strong>：实现两个<strong>主机</strong>之间的数据透明传送（<strong>不一定可靠(IP)</strong>）。主要功能：路由选择Routing；存储转发Forwarding；（一部分的）拥塞控制Congestion Control</li>
+<li><strong>传输层</strong>：实现两个<strong>应用程序</strong>之间的数据透明传送（<strong>不一定可靠(UDP)</strong>）。将上层数据分段，提供<strong>端到端</strong>的可靠的(TCP)和不可靠的(UDP)服务。</li>
+<li><strong>应用层</strong>：为<strong>操作系统</strong>或<strong>网络应用程序</strong>提供访问网络服务的接口</li>
+</ul>
+</li>
+<li>端到端，点到点的区别
+<ul>
+<li><strong>端到端是针对传输层</strong>说的。在数据传输之前，先为数据的传输开辟一条通道，然后在进行传输。</li>
+<li><strong>点到点通信是针对数据链路层或网络层</strong>来说的，是指一个设备发数据给<strong>直接连接</strong>的其他设备，通过一台一台直接相连的设备把数据传递到接收端。</li>
+<li>端到端的优点是，链路建立之后，发送端知道接收端<strong>一定能收到</strong>。而点到点发送端发出数据后，<strong>不知道</strong>接收端能否收到或何时能收到数据。</li>
+<li>端到端传输的缺点是直到接收端收到数据为止，<strong>发送端的设备一直要参与</strong>传输。点到点传输则在发送端设备送出数据后，它的<strong>任务已经完成</strong>。</li>
+<li>端到端经过中间交换设备时不需要进行存储转发（至少不可见），而点到点需要。但如果接收端设备关机或故障，点到点传输可以采用<strong>存储转发技术进行缓冲</strong>，端到端则传输失败。</li>
+</ul>
+</li>
+<li>7层模型，5层模型，4层模型
+<ul>
+<li>OSI: 物理层；数据链路层；网络层；传输层；会话层；表示层；应用层</li>
+<li>5层模型: 物理层；数据链路层；网络层；传输层；应用层</li>
+<li>TCP/IP: 网络接口层；网络层；传输层；应用层</li>
+</ul>
+</li>
+<li>每一层有哪些常见协议？
+<ul>
+<li>数据链路层：以太网协议</li>
+<li>网络层：IP; ICMP; ARP; RARP</li>
+<li>传输层：TCP;UDP</li>
+<li>应用层：HTTP(80); HTTPS(443); FTP(21); SSH(22); TELNET(23); DNS(53)</li>
+</ul>
+</li>
+<li>路由器/交换机是哪一层
+<ul>
+<li>网络层和数据链路层</li>
+</ul>
+</li>
+<li>10.101.102.103是公网IP还是内网IP，如何区分公网内网
+<ul>
+<li>这是内网ip</li>
+<li><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1871a2b78816477a9153953efaec15b3~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></li>
+<li>除了这三个ip地址段为私有ip地址外，其它的都为公网ip。这些地址已被声明私有化，任何内网中的设备可以任意使用这些地址，但是在这三个范围内的IP地址不允许出现在Internet（外网）上。</li>
+</ul>
+</li>
+<li>MAC地址和IP地址分别有什么作用
+<ul>
+<li>二层基于MAC地址转发数据帧，三层基于IP地址转发报文</li>
+<li>实际上，IP地址只在网络间寻址才起作用，在同一个网络内，IP地址在发送端被转化为MAC地址进行寻址，而这种转化和交换的对应关系，依赖于ARP协议和MAC地址表</li>
+<li>交换机：维护一张“MAC地址表”，用来记录目的MAC地址-端口的映射关系</li>
+<li>路由器：维护“路由表” 用来记录目的IP地址-端口的映射关系</li>
+</ul>
+</li>
+<li>ARP过程
+<ul>
+<li>同一网段：使用MAC = 0xFFFFFFFFFFFF广播询问B的MAC，B回复一下自己的MAC地址，A自然就知道了</li>
+<li>不同网段：使用广播通信，发现网关的MAC地址，把IP报文发给自己的网关</li>
+</ul>
+</li>
+</ul>
+<h2 id="12-udp">1.2 UDP</h2>
+<ul>
+<li>TCP和UDP的本质区别
+<ul>
+<li>面向连接&amp;无连接；</li>
+<li>可靠交付&amp;尽力而为交付</li>
+</ul>
+</li>
+<li>什么时候选择TCP/UDP
+<ul>
+<li>看重速度，不看重准确率：UDP. (如在线视频，DNS)</li>
+<li>其他：TCP (HTTP,FTP)</li>
+</ul>
+</li>
+<li>dns为什么要用udp
+<ul>
+<li>访问冷门网站时，可能多次迭代查询，如果用TCP每一次都握手浪费时间。</li>
+<li>DNS发送数据量很小，一般一个包就可以，所以不需要可靠传输</li>
+<li><strong>DNS有时也会用TCP</strong>，比如解析到的IP太多了，一个响应的UDP包放不下。这是通常的做法是如果客户端收到一个被截断的UDP响应包，<strong>用TCP重新请求</strong>一次DNS</li>
+<li><strong>应对DNS污染</strong>：DNS over TLS(<strong>DoT</strong>)和DNS over https(<strong>DoH</strong>)</li>
+</ul>
+</li>
+<li>HTTP为什么不用UDP
+<ul>
+<li>HTTP需要可靠传输，UDP不行</li>
+<li>HTTP3好像用(实现了可靠传输的)UDP了。。。</li>
+</ul>
+</li>
+<li>怎么改进UDP让他实现可靠传输（好像是可以利用应用层来实现TCP的一些功能，从而达到可靠性，具体可能可以参考一下QUIC）</li>
+</ul>
+<h2 id="13-tcp">1.3 TCP</h2>
+<h3 id="tcp基础">TCP基础</h3>
+<ul>
+<li>
+<p>三次握手</p>
+</li>
+<li>
+<p>四次挥手time_wait的</p>
+<p>两个原因</p>
+<ul>
+<li>原因1：为了保证客户端发送的<strong>最后一个ack报文段</strong>能够到达服务器.</li>
+<li>原因2：2msl的时间足以让本次连接产生的所有报文段都从网络中消失，这样下一次新的连接中就肯定不会出现<strong>旧连接的报文段</strong>了。</li>
+</ul>
+</li>
+<li>
+<p>四次挥手time_wait时间</p>
+<ul>
+<li>time-wait的的持续时间为2 * MSL.</li>
+<li>MSL（<strong>Maximum Segment Lifetime</strong>,报文最大生存时间），工程上为2min。</li>
+<li>PS: 服务器如果收不到最后一个ack，会在RTO之内重传FIN. 一般MSL设置要远比RTO(Retransmission Timeout)要长, 因此2MSL时间内如果服务器重传FIN，客户端一定能收到</li>
+</ul>
+</li>
+<li>
+<p>握手时产生的序列号干什么用的</p>
+<ul>
+<li>给<strong>字节流排序</strong>，表明前后关系。</li>
+<li>随机产生：<strong>防止误接收</strong>过时的TCP报文段。</li>
+</ul>
+</li>
+<li>
+<p>讲一下接收窗口</p>
+<ul>
+<li>取决于<strong>接收缓存区</strong>的大小</li>
+<li>但是因为TCP头部原因，接收窗口要小于缓存区大小</li>
+<li>而且如果对方经常发小包，有溢出的危险</li>
+</ul>
+</li>
+</ul>
+<h3 id="tcp拥塞控制">TCP拥塞控制</h3>
+<ul>
+<li>主要有<strong>四种方法</strong>：滑动窗口机制、慢启动机制、拥塞避免机制、快速重传与恢复。</li>
+<li>【滑动窗口机制】包括发送窗口(SWND)、接受窗口(RWND)和拥塞窗口(CWND)。其中MAX（SWND）=MIN（CWND，RWND）。</li>
+<li>【慢启动机制】新建TCP连接的时候,拥塞窗口以一个数据包大小(512Byte)为基数,每接受一个ACK确认就会指数式增加CWND。</li>
+<li>【拥塞避免机制】拥塞避免机制就是在CWND达到ssthresh之后缓慢增大,每次只加一。</li>
+<li>【快速重传与恢复】如果发送方收到重复的三个确认，则会立即重传确认所期待的下一个报文。并从ssthresh/2开始恢复。（超时则重新慢启动）</li>
+</ul>
+<h3 id="差错控制">差错控制</h3>
+<p>主要使用校验和、确认、超时重传这三个工具进行差错控制</p>
+<ul>
+<li>数据正确：<strong>校验和</strong></li>
+<li>顺序正确：用<strong>序列号</strong>对失序数据包重新排序</li>
+<li>发包重复：丢弃重复数据</li>
+<li>发包缺失：<strong>确认号</strong>(ACK) + <strong>超时重发</strong></li>
+</ul>
+<h3 id="深入问题">深入问题</h3>
+<ul>
+<li>TCP攻击(SYN-Flooding)
+<ul>
+<li>Server收到SYN时，将发送一个（ACK，SYN）应答报文，同时创建一个控制结构.如果 Server 在一段时间内没有收到应答消息，则控制块将被释放。</li>
+<li>在 TCP 协议软件中，通常对<strong>每个端口</strong>等待建立链接的<strong>数目</strong>有一定限制，当<strong>队列长度</strong>到达设定阈值时，将丢弃后面到达的 TCP SYN 请求报文。</li>
+<li>如果攻击者不断发送大量的 TCP SYN 报文，其他用户就无法再链接到被攻击者服务器</li>
+<li>SYN-Flooding防御：启用SYN Cookie；增加SYN最大队列长度；降低SYN+ACK最大重试次数；TCP首包丢弃测试假IP；屏蔽握手过慢的可疑IP一段时间.<a href="https://www.zhihu.com/question/26741164/answer/52776074">DDoS（分布式拒绝服务）攻击是无解的吗？ - 刘浩博的回答 - 知乎</a></li>
+</ul>
+</li>
+<li>TCP 粘包
+<ul>
+<li>TCP是流协议，不存在所谓粘包，需要使用或自定义应用层协议</li>
+<li>法1：分隔符（但数据里的相应字符也要转义。不方便。）</li>
+<li>法2：Header+Payload，如每段数据前加一个2 byte的header记录长度</li>
+<li>法3：等长数据段 每个包就固定500 byte这样收发，肯定没问题</li>
+</ul>
+</li>
+<li>TCP keepalive
+<ul>
+<li>TCP协议在HTTP短连接环境下，数据交互完毕后就主动释放连接；但是<strong>HTTP长连接</strong>的环境下，客户端可能意外断电或者中间路由网络无故断开，导致非常多的<strong>半打开连接</strong>，浪费服务器资源</li>
+<li>保活机制默认是关闭的，TCP连接的<strong>任何一方</strong>都可打开此功能。</li>
+<li>三个参数：
+<ul>
+<li><strong>保活时间</strong>：<strong>tcp_keepalive_time</strong>。TCP连接没有发送数据多少<strong>秒</strong>之后，开始发送Keep-Alive探活包。</li>
+<li><strong>探测时间间隔</strong>：<strong>tcp_keepalive_intvl</strong>。Keep-Alive数据包发送的间隔。</li>
+<li><strong>探测循环次数</strong>：<strong>tcp_keepalive_probes</strong>。最多会发送多少个Keep-Alive数据包。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="14-dns">1.4 DNS</h2>
+<ul>
+<li>DNS是基于什么协议，有没有其他情况
+<ul>
+<li>一般是基于UDP, 因为
+<ul>
+<li>访问冷门网站时，可能多次迭代查询，如果用TCP每一次都握手浪费时间。</li>
+<li>DNS发送数据量很小，一般一个包就可以，所以不需要可靠传输</li>
+</ul>
+</li>
+<li>也有其他情况
+<ul>
+<li><strong>DNS有时也会用TCP</strong>，比如解析到的IP太多了，一个响应的UDP包放不下。这是通常的做法是如果客户端收到一个被截断的UDP响应包，<strong>用TCP重新请求</strong>一次DNS</li>
+<li><strong>应对DNS污染</strong>：DNS over TLS(<strong>DoT</strong>)和DNS over https(<strong>DoH</strong>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>DNS解析出错误ip的原因</li>
+<li>问了不了解DNS劫持
+<ul>
+<li><code>TODO 以后再说</code></li>
+</ul>
+</li>
+<li>问DNS怎么查询二级域名
+<ul>
+<li><code>TODO 以后再说</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="15-http">1.5 HTTP</h2>
+<h3 id="方法与字段">方法与字段</h3>
+<ul>
+<li>HTTP的方法，head get post (待补充，这下面是RESTful)
+<ul>
+<li><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/93e23bbe0bfb436a9361d10e442e08fe~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></li>
+<li>GET: 单纯获取资源信息。集合/单个项目均可作用。看语义。</li>
+<li>POST: 创建一个新资源。需要施加在一个集合上，而非尚未存在的项目。</li>
+<li>PUT: 替代性更新原资源。集合/单个项目均可作用。看语义。</li>
+<li>PATCH: 部分更新原资源。集合/单个项目均可作用。看语义。</li>
+<li>DELETE: 删除资源。集合/单个项目均可作用。看语义。</li>
+</ul>
+</li>
+<li>GET和POST的区别
+<ol>
+<li>GET是<strong>幂等</strong>的，即读取同一个资源总是得到相同的数据，POST不是幂等的；</li>
+<li>GET一般用于从服务器<strong>获取</strong>资源，而POST有可能<strong>改变</strong>服务器上的资源；</li>
+<li>GET请求（包括参数）<strong>可被保存</strong>到收藏夹，POST则不可以</li>
+<li>GET请求的数据明文附在<strong>URL之后</strong>；POST请求的数据在HTTP <strong>body中</strong>；</li>
+<li>GET只允许ASCII字符，POST对<strong>数据类型</strong>没有要求，也允许二进制数据；</li>
+<li>GET的长度有限制（操作系统或者浏览器），而POST<strong>数据大小</strong>无限制</li>
+</ol>
+</li>
+<li>HTTP状态码。502和504有什么区别。301 302 500状态码</li>
+<li>content-type了解吗
+<ul>
+<li>HTTP请求中的Content-Type是用来指定请求或者响应的<strong>内容类型</strong></li>
+<li>常见的媒体格式
+<ul>
+<li>text/html(plain/xml) (<strong>charset</strong>=utf-8)</li>
+<li>image/gif(jpeg/png)</li>
+</ul>
+</li>
+<li>以application开头的媒体格式
+<ul>
+<li>application/xml(json/pdf/msword)</li>
+<li>application/x-www-form-urlencoded 表单默认的key-value提交数据格式</li>
+</ul>
+</li>
+<li>使用POST请求批量上传文件分割用
+<ul>
+<li>multipart/form-data（有<strong>boundary</strong>参数进行分割）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>http的结构，大小如何确定？没有content-length字段呢？
+<ul>
+<li>请求结构 = 请求行(方法；URL；版本) + 请求头 + 请求体</li>
+<li>响应结构 = 状态行(版本；状态码；状态码描述) + 响应头 + 响应体</li>
+<li>大小：content-length</li>
+<li>Content-Length如果存在且生效, 必须是正确的, 否则会发生异常.(大于实际值会超时, 小于实际值会截断并可能导致后续的数据解析混乱)</li>
+<li>如果报文中包含 <strong>Transfer-Encoding: chunked</strong> 首部, 那么Content-Length将被忽略.主要应用要传输大量数据, 但在请求在没有被处理完之前响应的长度是无法获得的的情况.</li>
+<li><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/89bae88a092a4832bff83cb68743c700~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></li>
+</ul>
+</li>
+</ul>
+<h3 id="高级特性">高级特性</h3>
+<ul>
+<li>http2.0了解吗？
+<ul>
+<li>HTTP/2专注于<strong>性能</strong>，最大的一个目标是在用户和网站间只用<strong>一个连接</strong>。</li>
+<li><strong>概念</strong>：流；消息；帧</li>
+<li><strong>改进</strong>：二进制；多路复用；header压缩；server推送</li>
+</ul>
+</li>
+<li>问了我HTTP如何改善一个request对应一个response的情况，聊到了keepalive，聊了聊HTTP 1.0 1.1 2.0，聊了聊多路复用，流水线
+<ul>
+<li>自行去看笔记去！这里不多说了~</li>
+</ul>
+</li>
+</ul>
+<h3 id="session与cookie">Session与cookie</h3>
+<ul>
+<li>Session和cookie的区别
+<ul>
+<li>Cookie和Session不是一个维度的东西。
+<ul>
+<li>Cookie和LocalStorage是同类的，都是浏览器保存数据的地方，是一个具体的东西。</li>
+<li>Session和Token是同类的，都是记录服务端和客户端会话状态的机制，是一个抽象的东西。</li>
+</ul>
+</li>
+<li>Cookie属于<strong>http</strong>协议的一部分；既不是客户端也不是后端，而是两者之间的桥梁。后端可以设置修改cookie；前端可以获取到cookie。</li>
+<li>Session借助cookie(或者URL重写，不安全)才能正常工作</li>
+</ul>
+</li>
+<li>Session和cookie的区别（正常答案）
+<ul>
+<li>session保存在服务器，cookie保存在客户端</li>
+<li>session保存的是对象，大小无限制；cookie保存的是字符串，单个cookie不能超过4KB</li>
+<li>session不能区分路径，同一个网站都可访问；cookie如果设置路径，则在某些地方不能访问</li>
+<li>Cookie 可以设置任意时间有效，而 Session 一般失效时间短</li>
+<li>每次访问都要传送cookie浪费带宽；保存太多session浪费服务器</li>
+<li>Session的安全性大于cookie, 因为 Cookie 可以通过客户端修改,有些状态不能保存在客户端</li>
+</ul>
+</li>
+<li>浏览器关闭，session就销毁了嘛？
+<ul>
+<li>要看session是否过期，和浏览器是否关闭无关。</li>
+</ul>
+</li>
+<li>服务器关闭，session就销毁了嘛？
+<ul>
+<li>正常关闭不会。非正常关闭可能就&hellip;销毁了。</li>
+</ul>
+</li>
+<li>禁用cookie，如何使用Session ID
+<ul>
+<li>url重写</li>
+</ul>
+</li>
+<li>Session存在哪里，怎么把session_id返回给客户端？
+<ul>
+<li>服务器端（内存，数据库，文件）</li>
+<li>在<strong>返回头</strong>中有setCookie，把session_id存到cookie中</li>
+</ul>
+</li>
+</ul>
+<h2 id="16-https">1.6 HTTPS</h2>
+<ul>
+<li>HTTPS的连接过程
+<ul>
+<li><strong>Client Hello：</strong> 客户端向服务器发送请求，同时发送<strong>客户端支持的一套</strong>加密规则（包括对称加密、非对称加密、摘要算法）；</li>
+<li><strong>Server Hello：</strong> 服务器从中<strong>选出一组</strong>加密算法与Hash算法，并将自己的证书和加密<strong>公钥</strong>发送给客户端；</li>
+<li><strong>客户端验证：</strong> 使用发行者<strong>证书发行者的公钥</strong>解开服务器的证书，查看是否和服务器的实际域名相匹配；</li>
+<li><strong>客户端发送密匙：</strong> 生成一个随机密钥，使用Hash算法对握手消息进行摘要计算，并将随机密钥和摘要一起用服务器提供的<strong>公钥</strong>加密发送给服务器；</li>
+<li><strong>服务器验证：</strong> 服务器使用自己的私钥解密得到对称加密的密钥，并验证握手消息是否一致</li>
+<li><strong>服务器对称加密：</strong> 服务器使用对称加密的密钥加密握手消息发给客户端；</li>
+<li><strong>客户端对称解密：</strong> 客户端解密并验证摘要，若一致，则握手结束。之后的数据传送都使用对称加密进行</li>
+</ul>
+</li>
+<li>HTTPS怎么确认收到的包就是服务器发来的
+<ul>
+<li>HTTPS (建立安全连接之后) 虽然加密但是也不会把ip和portal加密了呀</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-数据库">2 数据库</h1>
+<h2 id="21-事务">2.1 事务</h2>
+<ul>
+<li>事务的四大特性
+<ul>
+<li>Atomic原子性：要么全做，要么全不做。</li>
+<li>Consistency一致性：不违反合法语义，如balance&gt;0，主键唯一。</li>
+<li>Isolation隔离性：并发事务不能互相干扰。</li>
+<li>Durability持久性：一旦commit，对数据库的改变是永久的。</li>
+</ul>
+</li>
+<li>四种隔离级别
+<ul>
+<li>Read Uncommited 读未提交</li>
+<li>Read Commited 读已提交（解决脏读）</li>
+<li>Repeatable Read 可重复读（解决脏读，不可重复读，幻读）</li>
+<li>Serialized 串行化（解决脏读，不可重复读，幻读，丢失更新）</li>
+</ul>
+</li>
+<li>MySQL的可重复读底层是怎么实现的:MVCC</li>
+<li>MVCC是怎么实现的
+<ul>
+<li>Innodb里面每行数据都可以有多个版本，字段trx_id记录生成这个版本的事务的ID。这些不同版本的数据不是物理存在的，而是每次通过undo log动态算出来的。</li>
+<li>InnoDB 利用 undo log 和 trx_id 的配合，实现了事务启动瞬间创建快照的能力。MVCC的核心在于每个事务自己维护的一个<strong>事务ID数组</strong>。</li>
+<li><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/89de8447010d4c298992ac28ec52c413~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></li>
+<li>如果 trx_id 小于低水位，表示这个版本在事务启动前已经提交，可见；</li>
+<li>如果 trx_id 大于高水位，表示这个版本在事务启动后生成，不可见；</li>
+<li>如果 trx_id 大于低水位，小于高水位，分为两种情况：
+<ul>
+<li>若 trx_id 在数组中，表示这个版本在事务启动时还未提交，不可见；</li>
+<li>若 trx_id <strong>不在</strong>数组中，表示这个版本在事务启动时已经提交，<strong>可见</strong>。</li>
+</ul>
+</li>
+<li><a href="https://zhuanlan.zhihu.com/p/146010424">MySQL是如何实现可重复读的? - 超超不会飞的文章 - 知乎</a></li>
+</ul>
+</li>
+<li>什么是幻读
+<ul>
+<li>在同一事务内查询返回不同的结果集合。一般是由于其他事务<strong>插入并提交</strong>了一些记录造成的。</li>
+</ul>
+</li>
+<li>InnoDB 怎么防止幻读
+<ul>
+<li>在RR的隔离级别下，Innodb使用MVCC和next-key locks解决幻读
+<ul>
+<li>MVCC解决的是普通读（<strong>快照读</strong>）的幻读</li>
+<li>next-key locks解决的是<strong>当前读</strong>情况下的幻读。</li>
+</ul>
+</li>
+<li><strong>多说一句：在RC的模式下，MVCC解决不了幻读和不可重复读</strong>，因为每次读都会读它自己刷新的<strong>最新的快照</strong>版本（读已提交）</li>
+</ul>
+</li>
+</ul>
+<h2 id="22-索引">2.2 索引</h2>
+<ul>
+<li>什么是B+树
+<ul>
+<li>B+树是一个平衡的多叉树，从根节点到每个叶子节点的<strong>高度差值不超过1</strong>，而且<strong>同层级</strong>的节点间有指针相互链接。</li>
+</ul>
+</li>
+<li>为什么用B+树
+<ul>
+<li>相对于b树/二叉树来说,B树每个节点能存储的节点数更多，<strong>层级更低</strong>。</li>
+<li>相对于b树来说,每次查询是一定要到叶子节点，<strong>查询就更稳定</strong></li>
+<li>相对于b树/二叉树/Hash来说,叶子节点有双向链表，便于<strong>范围查询</strong>。</li>
+<li>哈希索引在<strong>等值查询</strong>上有绝对优势，但是无法<strong>范围查询</strong>，无法用于<strong>排序</strong>，不支持最左前缀匹配原则（必须全部match）</li>
+</ul>
+</li>
+<li>B+树叶子满了，要添加新值怎么办
+<ul>
+<li>尝试插入；如果key的个数满了就节点分裂，如果分裂后父节点也满了就长高</li>
+</ul>
+</li>
+<li>mysql索引有哪些</li>
+<li>联合索引的使用场景
+<ul>
+<li>在查询时有多个字段<strong>总是同时出现</strong>则这些字段就可以作为复合索引,形成索引覆盖,提高where/group by/order by/limit 语句的查询效率</li>
+<li>最左匹配当遇到<strong>范围查询</strong>(&gt;、&lt;、between、like)就会<strong>停止匹配</strong>。</li>
+<li>将<strong>区分度高</strong>的字段放在前面，区分度低的字段放后面</li>
+<li>索引越少越好，在修改数据时每个索引都要进行更新，降低写速度</li>
+</ul>
+</li>
+</ul>
+<h2 id="23-具体语法与语句执行">2.3 具体语法与语句执行</h2>
+<ul>
+<li>
+<p>一条 SQL 语句的执行流程</p>
+<p>肥猫三千问</p>
+<ol>
+<li><strong>查询缓存</strong>：是一个哈希表，将执行过的语句及其结果以key-value的形式保存。已经被历史淘汰。</li>
+<li><strong>分析器</strong>：解析器(词法分析语法分析，保证语法正确)；预处理器(验证查找的数据的确存在且权限满足，保证语义正确)</li>
+<li><strong>优化器</strong>：根据语法树，自动优化生成执行计划</li>
+<li><strong>执行器</strong>：根据执行计划，逐条调用底层存储引擎逐步执行</li>
+</ol>
+</li>
+<li>
+<p>MySQL：各种连接的区别</p>
+<ul>
+<li>自连接；内连接；交叉连接；外连接</li>
+<li><strong>自连接</strong>：一张表，使用多个别名，表面上进行多表连接查询</li>
+<li><strong>内连接</strong>查询操作<strong>只列出与连接条件匹配</strong>的数据行（等值；不等；自然）</li>
+<li><strong>交叉连接</strong>：笛卡尔积</li>
+<li><strong>外连接</strong>：不只列出与<strong>连接条件</strong>相匹配的行，而是所有符合<strong>搜索条件</strong>的数据行，不满足连接条件则置空。</li>
+</ul>
+</li>
+<li>
+<p>mysql的数据类型有哪些</p>
+<ul>
+<li>数值；字符串；日期时间</li>
+<li><a href="https://zhuanlan.zhihu.com/p/50891083">Mysql数据库中有哪些数据类型? - 51Testing软件测试网的文章 - 知乎</a></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/759ee0cb058c4a058e57eea0e9898837~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p>
+<ul>
+<li>int(10) 和 varchar(10)有什么区别
+<ul>
+<li>int字段长度其实是固定的，就是4个字节，括号里的长度是和zerofill配合<strong>打印</strong>用的。</li>
+<li>varchar(10) 是真的用了10+1个字节的空间。</li>
+<li>varchar为可变长度，但在字符的最后面会加一个1个字符，用来存储位置</li>
+<li>char为固定长度，多余的存储空间会用空格来补齐，读取时尾部空格会丢失</li>
+</ul>
+</li>
+<li>where, ordered by, grouped by 等执行先后顺序
+<ul>
+<li>先where，再group by, 最后order by</li>
+</ul>
+</li>
+<li>sql优化，a&gt;&lsquo;x&rsquo; and z=&lsquo;x&rsquo; 会不会失效</li>
+<li>explain有哪些字段
+<ul>
+<li><strong>id</strong>：数字越大越先执行，一样大则从上往下执行</li>
+<li><strong>select_type</strong>:查询的种类，有simple,primary, subquery,derived,union等。</li>
+<li><strong>table</strong>：表名</li>
+<li><strong>type</strong>：使用的索引类型</li>
+<li>还有possible_keys，key，extra 等等</li>
+</ul>
+</li>
+</ul>
+<h2 id="24-数据库动手题">2.4 数据库动手题</h2>
+<ul>
+<li>写一个建表语句</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> t_user2(id INT ,
+userName VARCHAR(<span style="color:#ae81ff">20</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,	<span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">增加约束</span>
+password VARCHAR(<span style="color:#ae81ff">20</span>),
+age INT,
+<span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (id),	<span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">指定主键</span>
+<span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (P_Id) <span style="color:#66d9ef">REFERENCES</span> Persons(P_Id)	<span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">指定外键</span>
+<span style="color:#66d9ef">UNIQUE</span> <span style="color:#66d9ef">INDEX</span> index_userName(userName)  <span style="color:#f92672">#</span><span style="color:#960050;background-color:#1e0010">同时创建索引</span>
+<span style="color:#66d9ef">CHECK</span> (age<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>)		<span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">增加约束</span>
+);
+<span style="color:#960050;background-color:#1e0010">复制代码</span>
+</code></pre></div><ul>
+<li>一个sql语句student(sno, sname, &hellip;)中以“王”姓开头的个数
+<ul>
+<li><code>SELECT COUNT(*) FROM student WHERE sname LIKE '王%'</code></li>
+</ul>
+</li>
+<li>数据库设计：文件的增加、删除、移动、列出子目录。设计一个表结构。</li>
+<li>MySQL 有一个表 user表，有两个字段 userid, userdata。 ( userdata是json格式，有很多数据，包括name, age等等)</li>
+<li>设计一个接口，传入一个id， 和任意类型的数据，比如age，name，然后对特定的数据进行修改。 SQL怎么写？两个设备下，一个设备修改age，另一个设备修改name，同时修改，但是最后发现age修改成功了，name没有修改成功，为什么？加了事务还是会，怎么解决？除了 select&hellip; for update 还有什么思路吗</li>
+<li>做一个设计题，用户关系服务设计
+<ul>
+<li>用户可以关注、取关任何一个人</li>
+<li>可以快速判断一个用户和一群用户的关系（无关系，粉丝，关注，好友）</li>
+<li>可以查看自己的粉丝列表，关注列表（以分页的形式）</li>
+<li>可以查看关注数和粉丝数</li>
+<li>随着用户增长，可能遇到什么瓶颈，如何优化？</li>
+<li>数据表的设计，sql查询语句，如何建索引，怎么查看sql有没有用索引，数据量大如何分表（回答的是hash(user_id)/N），这样分表后如何扩容，（想不出来了），大v怎么存，redis set zset，大v的粉丝都需要存到redis中吗？（不应该，但也不知道咋整）</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-操作系统">3 操作系统</h1>
+<h2 id="31-用户态和核心态">3.1 用户态和核心态</h2>
+<ul>
+<li>什么是用户态和内核态
+<ul>
+<li>系统态（核心态、特态、管态）：执行全部指令。</li>
+<li>用户态（常态、目态）：执行非特权指令。</li>
+</ul>
+</li>
+<li>用户态如何切换到内核态
+<ul>
+<li>外部中断；程序异常；系统调用</li>
+</ul>
+</li>
+<li>中断分为哪些？
+<ul>
+<li><strong>外部中断</strong>：由<strong>CPU</strong>外部设备引起，又叫<strong>异步中断</strong>。包括硬中断（IO）和<strong>软中断(系统调用</strong>/陷入).</li>
+<li><strong>内部中断</strong>：由<strong>CPU</strong>内部引起。如除0错、地址访问越界。又叫<strong>异常</strong>，<strong>同步中断</strong>。</li>
+</ul>
+</li>
+</ul>
+<h2 id="32-进程">3.2 进程</h2>
+<h3 id="进程线程协程">进程，线程，协程</h3>
+<ul>
+<li>进程和线程的区别
+<ul>
+<li>进程是<strong>资源分配</strong>的基本单位，而进程是CPU调度的基本单位</li>
+<li>线程共享进程的<strong>代码，地址空间，文件/网络句柄</strong>等资源，</li>
+</ul>
+</li>
+<li>线程不共享的部分
+<ul>
+<li>栈：函数调用的<strong>参数</strong>和<strong>返回地址</strong>、<strong>局部变量</strong>等内容</li>
+<li>PC（Program Couner）：程序计数器，指向代码所在的<strong>内存</strong>地址。</li>
+<li>TLS（Thread local storage）：线程在共享的<strong>堆</strong>中分配的变量。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5217bc4f24f64f6083f344256e55a7ff~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p>
+<ul>
+<li>fork函数
+<ul>
+<li>fork给父进程返回子进程pid，给其拷贝出来的子进程返回0，</li>
+<li>这也是他的特点之一，一次调用，两次返回。</li>
+<li>两次返回看上去有点神秘，实质是在子进程的栈中构造好数据后，子进程从栈中获取到的返回值。</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    <span style="color:#66d9ef">int</span> pid <span style="color:#f92672">=</span> fork();
+    <span style="color:#66d9ef">if</span> (pid <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">if</span> (pid) printf(<span style="color:#e6db74">&#34;I am father, my pid is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, getpid());
+    <span style="color:#66d9ef">else</span> printf(<span style="color:#e6db74">&#34;I am child, my pid is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, getpid());
+}
+<span style="color:#960050;background-color:#1e0010">复制代码</span>
+</code></pre></div><ul>
+<li>线程与协程
+<ul>
+<li>协程既不是进程也不是线程，协程是一个特殊的函数</li>
+<li>协程被称作<strong>用户级线程</strong>，对于操作系统是并不可见的，<strong>不再被内核调度</strong>，而是交给了程序自己。</li>
+<li>协程也存在CPU上下文切换的问题，但相比线程<strong>切换更加高效</strong>。</li>
+<li>协程失去了使用多CPU的能力，实际上性能不如线程。说协程性能好的是<strong>瓶颈在IO上面</strong></li>
+</ul>
+</li>
+<li>协程的使用场景
+<ul>
+<li>IO密集型：总是在阻塞，总是在切换</li>
+</ul>
+</li>
+<li>多进程多线程应用场景
+<ul>
+<li>需要大量<strong>共享数据或频繁通信</strong>时，使用多线程，其他情况下尽量使用多进程。</li>
+<li>多进程有<strong>更强的容错性</strong>；并且资源天然隔离<strong>没有同步问题</strong>；通过增加CPU可以容易<strong>扩充性能</strong>。</li>
+</ul>
+</li>
+</ul>
+<h3 id="进程调度与通信">进程调度与通信</h3>
+<ul>
+<li>进程调度方法
+<ul>
+<li>FCFS; SJF; HRRN</li>
+<li>时间片轮转；优先级；多级反馈队列</li>
+</ul>
+</li>
+<li>进程的状态转换
+<ul>
+<li>新建；就绪；运行；阻塞；终止</li>
+</ul>
+</li>
+<li>进程切换发生哪些事情
+<ol>
+<li>切换新的<strong>页表</strong>，然后使用<strong>新的虚拟地址</strong>空间(页表切换后TLB就失效了，那么虚拟地址转换为物理地址就会变慢,这就是为什么切进程比切线程效率低)</li>
+<li>切换内核栈和硬件上下文</li>
+</ol>
+</li>
+<li>进程间通信的方式
+<ul>
+<li>管道(PIPE/FIFO)；消息队列；共享内存；信号；信号量；socket</li>
+</ul>
+</li>
+<li>进程间通信的方式，哪种最快
+<ul>
+<li>共享内存（无需拷贝数据同时读写）</li>
+</ul>
+</li>
+</ul>
+<h3 id="进程间资源共享与死锁">进程间资源共享与死锁</h3>
+<ul>
+<li>信号量怎么实现对共享资源的访问
+<ul>
+<li>信号量本质是一个计数器，表示该共享资源的余量</li>
+<li>PV原语是…… 如果信号量为0，则阻塞等待……</li>
+</ul>
+</li>
+<li>并发和并行的区别
+<ul>
+<li>并发：同一<strong>时间段</strong>中有多个程序在运行</li>
+<li>并行：<strong>多CPU系统中</strong>，多个程序无论宏观还是微观上都是同时执行的</li>
+<li>异步：在等待某个资源的时候继续做自己的事</li>
+</ul>
+</li>
+<li>死锁发生的原因
+<ul>
+<li>互斥条件；请求与保持条件；不剥夺条件；循环等待条件</li>
+</ul>
+</li>
+<li>银行家算法流程，怎么检测不安全状态</li>
+</ul>
+<h3 id="进程的内存空间">进程的内存空间</h3>
+<ul>
+<li>
+<p>进程的内存模型</p>
+<ul>
+<li>一个特别详细的文章： <a href="https://www.cnblogs.com/clover-toeic/p/3754433.html">www.cnblogs.com/clover-toei…</a></li>
+<li><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4b0d6f69a9cc464cb3958ba9c101e709~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></li>
+</ul>
+<ol>
+<li>栈区（stack）：由<strong>编译器</strong>自动分配释放</li>
+<li>堆区（heap）：一般由<strong>程序员</strong>分配释放，程序结束时可能由OS回收。与数据结构中的堆是两回事，分配方式倒是类似于链表</li>
+<li>静态区（static）：全局变量和静态变量. 初始化的在一块区域，未初始化的在相邻的另一块区域。程序结束后由系统释放。</li>
+<li>文字常量区：常量字符串就是放在这里的。程序结束后由系统释放</li>
+<li>程序代码区：存放函数体的二进制代码。</li>
+</ol>
+</li>
+<li>
+<p>全局变量存储位置</p>
+<ul>
+<li>已经初始化：data；未初始化：bss</li>
+</ul>
+</li>
+<li>
+<p>(java)堆什么时候做内存回收</p>
+</li>
+<li>
+<p>堆和栈的区别？</p>
+<ul>
+<li><strong>大小限制</strong>：<strong>栈底</strong>的地址和栈的<strong>最大容量</strong>是系统预先规定好的（2M/1M，总之是一个编译时就确定的常数），如果申请的空间超过栈的剩余空间, stack overflow。因此，能从栈获得的空间较小。<strong>堆</strong>是用<strong>链表</strong>来存储的<strong>不连续</strong>内存区域，大小受限于计算机系统中有效的虚拟内存。由此可见，堆获得的空间比较<strong>灵活</strong>，也比较<strong>大</strong>。</li>
+<li><strong>申请效率</strong>：栈由系统自动分配，速度较<strong>快</strong>。但程序员是<strong>无法控制</strong>的。堆是由new分配的内存，一般速度比较<strong>慢</strong>，而且容易产生内存<strong>碎片</strong>,不过用起来最<strong>方便</strong>.</li>
+<li><strong>存储内容</strong>：栈存储<strong>返回地址，参数，局部变量</strong>。<strong>堆</strong>在这块内存空间中的首地址处记录本次分配的大小，具体内容由程序员安排。</li>
+<li><strong>数据访问</strong>：存储在堆中的对象是<strong>全局可以被访问</strong>的，然而栈内存<strong>不能</strong>被其他线程所访问，且遵循<strong>LIFO</strong>原则。</li>
+<li><strong>生命周期</strong>：栈内存的生命周期很短，而堆内存的生命周期从程序的运行开始到运行结束。</li>
+</ul>
+</li>
+</ul>
+<h2 id="33-内存管理">3.3 内存管理</h2>
+<ul>
+<li>讲一下操作系统的内存管理，如何进行内存分配
+<ul>
+<li>连续内存分配（首次适配，最佳适配，最差适配）</li>
+<li>非连续内存分配（分段，分页）&ndash; 虚拟内存技术&amp;页面置换算法</li>
+</ul>
+</li>
+<li>内存为何要分页
+<ul>
+<li><strong>内存的连续分配</strong>总是会有碎片的产生，不连续就能解决碎片问题</li>
+</ul>
+</li>
+<li>页置换算法(LRU 最近最久未使用)</li>
+<li>地址转换</li>
+<li>虚拟地址和物理地址怎么对应的？
+<ul>
+<li>基址 + 偏移</li>
+</ul>
+</li>
+<li>页表机制中TLB做了什么？MMU做了什么？
+<ul>
+<li><strong>MMU内存管理单元</strong>: 将<strong>页号</strong>分离出来，然后判断该虚拟页面是否<strong>有效</strong>，是否<strong>在内存</strong>，是否<strong>受到保护</strong>。并做出相应的反应（禁止访问/缺页中断/正常找到对应物理页号）</li>
+<li><strong>Translation Look-Aside Buffer,TLB 翻译快表</strong>：最近使用页面映射的<strong>缓存</strong>。其记录的格式与内容和正常页表一样。使用硬件<strong>O(1)并行查找</strong>记录。<strong>减少访问内存</strong>页表或多级页表的次数。在查找的时候，TLB与正常页表<strong>同时进行</strong>。</li>
+</ul>
+</li>
+</ul>
+<h2 id="34-linux常用命令">3.4 Linux常用命令</h2>
+<ul>
+<li>Linux常用命令
+<ul>
+<li>cd; ls;</li>
+<li>find / -name passwd # 查找文件名为passwd的文件</li>
+<li>cp; mv; rm</li>
+<li>ps 用于将某个时间点的进程process运行情况选取下来并输出</li>
+<li>top 和ps命令的输出也很多重叠的部分; top命令可以一直动态刷新显示</li>
+<li>kill -signal PID</li>
+<li>cat; head; tail</li>
+</ul>
+</li>
+<li>Linux查看所有进程占内存最高得前10个（top）</li>
+<li>linux如何查看哪个端口被占用呢？
+<ul>
+<li>lsof -i -P -n | grep LISTEN</li>
+<li>lsof -i:22  ## see a specific port such as 22 ##</li>
+<li>netstat; ss</li>
+</ul>
+</li>
+<li>linux的命令，如何查看服务器负载？
+<ul>
+<li>top：CPU内存</li>
+<li>iostat：IO的开销</li>
+</ul>
+</li>
+<li>如何查看远程服务器某一个端口被占用(nc命令，nmap命令，telnet命令)</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> nmap <span style="color:#ae81ff">192.168</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1.8</span> <span style="color:#f92672">-</span>p <span style="color:#ae81ff">22</span>
+ 
+Starting Nmap <span style="color:#ae81ff">7.70</span> ( https:<span style="color:#f92672">//</span>nmap<span style="color:#f92672">.</span>org ) at <span style="color:#ae81ff">2019</span><span style="color:#f92672">-</span><span style="color:#ae81ff">03</span><span style="color:#f92672">-</span><span style="color:#ae81ff">16</span> <span style="color:#ae81ff">03</span>:<span style="color:#ae81ff">37</span> IST Nmap scan report <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">192.168</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1.8</span> Host <span style="color:#f92672">is</span> up (<span style="color:#ae81ff">0.00031</span>s latency)<span style="color:#f92672">.</span>
+
+PORT STATE SERVICE
+ 
+<span style="color:#ae81ff">22</span><span style="color:#f92672">/</span>tcp open ssh
+<span style="color:#960050;background-color:#1e0010">复制代码</span>
+</code></pre></div><ul>
+<li>怎么查看django server的进程呢？</li>
+<li>怎么查看硬盘的占用情况呢？</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">crysflair@crysflair:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+udev             <span style="color:#ae81ff">1004100</span>       <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">1004100</span>   0% /dev
+tmpfs             <span style="color:#ae81ff">204800</span>    <span style="color:#ae81ff">2744</span>    <span style="color:#ae81ff">202056</span>   2% /run
+...文件系统的占用
+
+crysflair@crysflair:~$ du -sh ~
+262M    /home/crysflair
+文件夹的大小
+复制代码
+</code></pre></div><h2 id="35-io模型">3.5 IO模型</h2>
+<ul>
+<li>Linux io模型</li>
+</ul>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fd8313dd121e4d8898494276af4c7050~tplv-k3u1fbpfcp-zoom-1.image" alt="img"> 另一个精辟好文： <a href="https://zhuanlan.zhihu.com/p/36344554">zhuanlan.zhihu.com/p/36344554</a></p>
+<ul>
+<li>讲讲同步IO、异步IO，从用户态与内核态的角度讲
+<ul>
+<li>对于一次IO访问（以read举例），数据会先被拷贝到操作系统<strong>内核的缓冲区</strong>中，然后才会从操作系统内核的缓冲区拷贝到应用程序的地址空间</li>
+<li><strong>同步IO</strong>的执行者是IO操作的发起者（用户进程）。同步IO<strong>需要发起者进行</strong>内核态到用户态的数据拷贝过程，所以这里必须<strong>存在阻塞</strong>。</li>
+<li><strong>异步IO</strong>是指用户进程触发I/O操作以后就立即返回，当I/O操作已经完成的时候会得到I/O完成的通知。异步IO的执行者是<strong>内核线程</strong>，内核线程将数据从内核态拷贝到用户态，所以这里<strong>没有阻塞</strong></li>
+</ul>
+</li>
+<li>Epoll和其他两个IO复用的区别
+<ul>
+<li><strong>select</strong> 以<strong>数组</strong>形式存储文件描述符fd，64位机器默认2048个，<strong>数量有限</strong>。无法感知具体是哪个流OK了，所以<strong>需要遍历</strong>，函数的时间复杂度为O(n)。而且多次复制句柄数组产生<strong>大量开销</strong>。只支持<strong>水平触发</strong>（没有完成IO下次还会返回）。</li>
+<li><strong>poll</strong> 以<strong>链表</strong>形式存储文件描述符，没有长度限制。本质与select相同。</li>
+<li><strong>epoll</strong> 是基于事件驱动的，如果某个流准备好了，会以事件通知，不需要遍历，函数的时间复杂度为O(1)。（<strong>内存红黑树组织自己的文件系统；新添加的socket注册回调函数；中断内核插入就绪链表</strong>）</li>
+</ul>
+</li>
+<li>多线程的IO复用和单线程的IO复用有什么区别，为什么要用多线程呢</li>
+<li>Redis为什么高效，为什么它不用多线程呢</li>
+<li>水平触发和边缘触发的区别和使用场景</li>
+</ul>
+<h1 id="4-python语言">4 Python语言</h1>
+<h2 id="41-高级语法">4.1 高级语法</h2>
+<ul>
+<li>什么是生成器
+<ul>
+<li>用yield函数的方式实现迭代器</li>
+<li>另一种做法是Generator Comprehension.圆括号.</li>
+<li>不立刻产生全部结果，节省内存，效率高。</li>
+</ul>
+</li>
+<li>什么是迭代器；
+<ul>
+<li>所有能用next访问取值的对象（当然同时也能for）</li>
+</ul>
+</li>
+<li>什么是装饰器；
+<ul>
+<li>使用一个函数return另一个函数，并动态添加特定的效果</li>
+</ul>
+</li>
+<li>手写装饰器</li>
+</ul>
+<h2 id="42-数据结构">4.2 数据结构</h2>
+<ul>
+<li>python的数据类型都有哪些？和别的语言有什么不同的数据类型吗？
+<ul>
+<li>Number(int,float,bool,complex)</li>
+<li>String</li>
+<li>List, Set, Dict, Tuple</li>
+</ul>
+</li>
+<li>元组和list的区别
+<ul>
+<li>list可变，元组不可变. 底层都是<strong>变长数组</strong>，速度没有区别。</li>
+</ul>
+</li>
+<li>Python中的dict底层怎么实现的
+<ul>
+<li>哈希表。使用<strong>伪随机探查法</strong>处理哈希冲突。</li>
+</ul>
+</li>
+<li>双等于和is有什么区别
+<ul>
+<li>==判断两个对象的<strong>值</strong>是否相等（ <code>__eq__</code> ）</li>
+<li>is判断的是<strong>对象的id</strong>是否相同</li>
+</ul>
+</li>
+</ul>
+<h2 id="43-语言特性">4.3 语言特性</h2>
+<ul>
+<li>
+<p>垃圾回收</p>
+<ul>
+<li>主要通过<strong>引用计数</strong>进行垃圾回收；</li>
+<li>通过 “<strong>标记-清除</strong>” 解决<strong>容器对象</strong>可能产生的循环引用问题；</li>
+<li>通过 “<strong>分代回收</strong>” 以空间换时间的方法提高垃圾回收效率</li>
+</ul>
+</li>
+<li>
+<p>深拷贝浅拷贝</p>
+<ul>
+<li>Python不会对值相同的<strong>不可变对象</strong>申请单独的内存空间。只会记录它的引用次数。因此深浅拷贝是针对<strong>可变对象</strong>说的。</li>
+<li><strong>浅拷贝</strong>：拷贝了原始元素的引用（内存地址）</li>
+<li><strong>深拷贝</strong>：在遇到<strong>可变对象</strong>时，又在内部新建了一个副本。</li>
+</ul>
+</li>
+<li>
+<pre><code>__init__.py
+</code></pre><p>文件的作用是什么？除了引入模块之外还有别的作用吗？引入的模块都会被执行吗？</p>
+<ul>
+<li>去import一个Package的时候，会隐性执行 <code>__init__.py</code>。在 <code>__init__.py</code> 中定义的对象，会被绑定到当前的<strong>命名空间</strong>里面来</li>
+<li>导入子模块的时候，它会优先执行父模块中的 init ，接着执行自己模块中的 init. 导入父模块则只执行父模块的 init，可以在父模块使用 <code>__all__=['submodule1','submodule2']</code> 这样的方法批量导入命名空间</li>
+<li>除了引入模块，可以在 <code>__init__.py</code> 做一些<strong>初始化的操作</strong>，比如数据库 session 的创建</li>
+</ul>
+</li>
+<li>
+<p>常用的库都有哪些呢？</p>
+</li>
+</ul>
+<h1 id="5-散装知识">5 散装知识</h1>
+<blockquote>
+<p>散装知识就是……
+既不是计算机网络，又不是操作系统，还不是数据库 ٩(๑`—´๑)۶</p>
+</blockquote>
+<h2 id="51-哈希表">5.1 哈希表</h2>
+<ul>
+<li>
+<p>HashMap（java）解决Hash冲突的方法。HashMap原理和扩容</p>
+<ul>
+<li>HashMap 底层是 hash 数组和单向链表实现，数组中的每个元素都是链表。</li>
+<li>解决Hash冲突的方法：拉链法。当链表长度超过 8 时，链表转换为红黑树。</li>
+<li>扩容：实际填充度大于loadFactor装载因子（默认值是0.75）。扩容时，调用 resize()方法将table长度变为原来的两倍（初始长度默认16）</li>
+</ul>
+</li>
+<li>
+<p>哈希表是如何解决高并发的? 链表是如何形成环的？</p>
+<ul>
+<li>ReHash在并发的情况下可能会形成链表环 <a href="https://zhuanlan.zhihu.com/p/31614195">漫画：高并发下的HashMap - 小灰的文章 - 知乎</a></li>
+<li>使用线程安全的 ConcurrentHashMap</li>
+</ul>
+</li>
+<li>
+<p>ConcurrentHashMap底层是怎么实现的</p>
+</li>
+<li>
+<p>hash冲突除了链表还有什么方法？</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/f9239c9377c5">hash算法原理详解</a></li>
+</ul>
+<ol>
+<li>开放定址法
+<ul>
+<li>线性探测再散列(+1,+2,+3&hellip;+n)</li>
+<li>二次探测再散列(+1,-1,+2,-2,+4,-4&hellip;+2^n, -2^n)</li>
+<li>伪随机探测再散列(+3,-6,+8,-7,-10,+2,+4..一串包含值从1到M–1的permutation随机序列)）</li>
+<li>双散列探查法((hash1(key) + i * hash2(key)) % TABLE_SIZE, i为步长，若再次碰撞则+1)</li>
+</ul>
+</li>
+<li><strong>再哈希法</strong>(一个要是算出来重复啦，再用另一个算法去算)</li>
+<li>链地址法(Java hashmap就是这么做的)</li>
+<li><strong>建立一个公共溢出区</strong></li>
+</ol>
+</li>
+<li>
+<p>开放寻址法有什么缺点？</p>
+<ol>
+<li>记录的数目不能超过桶数组的长度，如果超过就需要<strong>扩容</strong>，导致某次操作的时间成本飙升</li>
+<li>使用探测序列需要计算，可能时间成本高</li>
+<li>记录尺寸或总数规模很大时，空槽占用的空间会导致明显的<strong>内存浪费</strong></li>
+<li><strong>删除记录时</strong>，比较麻烦。需要设置删除标记。导致额外的空间和操作。</li>
+</ol>
+<ul>
+<li>优点：便于<strong>序列化</strong></li>
+</ul>
+</li>
+<li>
+<p>拉链法有什么优点</p>
+<ol>
+<li>对于记录总数频繁可变的情况，处理的比较好（<strong>避免了</strong>动态调整的开销）</li>
+<li>由于记录存储在动态分配的节点中，<strong>不会造成内存的浪费</strong>，适合那种记录本身尺寸（size）很大的情况，此时指针的开销可以忽略不计</li>
+<li><strong>删除记录时</strong>，比较方便，直接通过指针操作即可</li>
+</ol>
+<ul>
+<li><strong>缺点</strong>：相比结构紧凑的数据类型（比如数组），哈希表的跳转访问会带来额外的时间开销；不便于序列化。</li>
+</ul>
+<p>拉链法&amp;开放寻址对比总结：空间的问题；删除的问题；访问速度的问题；系列化的问题</p>
+</li>
+</ul>
+<h2 id="52-面向对象">5.2 面向对象</h2>
+<ul>
+<li>
+<p>Override和overload的区别</p>
+<ul>
+<li>重载Overload：表示<strong>同一个类</strong>中可以有多个名称相同的方法，但这些方法的参数列表各不相同（即参数个数或类型不同）。和编译器有关，和OOP无关。</li>
+<li>重写Override：表示子类中的方法可以与父类中的某个方法的<strong>名称和参数</strong>完全相同，通过子类对象调用这个方法时将调用子类中的方法(即使是父类指针)。可以实现<strong>多态</strong>。</li>
+</ul>
+</li>
+<li>
+<p>Restful api</p>
+<ul>
+<li>REST代表Representational State Transfer（表象层状态转变），是一种API设计风格。<a href="https://zhuanlan.zhihu.com/p/90367875">面试官：你连RESTful都不知道我怎么敢要你？ - 布莱恩特的文章 - 知乎</a></li>
+</ul>
+<ol>
+<li><strong>统一接口</strong>Uniform Interface：接口要包括URL（一种资源）和自描述信息（如何处理这种资源）。可读性强。使得客户端只需要关注实现接口就可以。</li>
+<li><strong>无状态性</strong>Stateless：客户端的每一次请求带有充分的信息（url,header,body）能够让服务端识别。好处是便于debug，坏处是浪费传输带宽。</li>
+<li><strong>Client-Server</strong>：数据存储在Server端，Client端只需使用就行。两端彻底分离。使client端代码的可移植性变强，Server端的拓展性变强。</li>
+<li><strong>可缓存Cacheable</strong>：管理得当的缓存会部分地或完全地除去客户端和服务端之间的交互，进一步改善性能和延展性</li>
+<li><strong>系统分层</strong>Layered System：客户端通常无法得知自己是直接还是间接与端服务器进行连接。分层时同样要考虑安全策略。</li>
+</ol>
+</li>
+<li>
+<p>如果要给软件加一个功能，是要用组合还是用继承</p>
+<ul>
+<li>如果需求上一些功能是可自由组合的，那么应该用组合，强行用继承的话会产生<strong>组合爆炸</strong>（Combinatorial explosion）问题。</li>
+<li>继承层次过深、过复杂，会影响到代码的<strong>可维护性</strong>。</li>
+<li>继承主要有三个作用：表示<strong>is-a 关系</strong>，支持<strong>多态</strong>特性，<strong>代码复用</strong>。</li>
+<li>从理论上讲，通过<strong>组合、接口、委托</strong>三个技术手段，可以替换掉继承。在项目中不用或者少用继承关系，特别是一些复杂的继承关系。</li>
+<li>继承<strong>向上传递</strong>调用以实现<strong>复用</strong>，组合<strong>向内传递</strong>以实现<strong>委托</strong>。</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Ostrich</span> implements Tweetable, EggLayable {<span style="color:#75715e">//鸵鸟
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span> TweetAbility tweetAbility <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TweetAbility(); <span style="color:#75715e">//组合
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span> EggLayAbility eggLayAbility <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> EggLayAbility(); <span style="color:#75715e">//组合
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//... 省略其他属性和方法...
+</span><span style="color:#75715e"></span>  <span style="color:#960050;background-color:#1e0010">@</span>Override
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> tweet() {
+    tweetAbility.tweet(); <span style="color:#75715e">// 委托
+</span><span style="color:#75715e"></span>  }
+  <span style="color:#960050;background-color:#1e0010">@</span>Override
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> layEgg() {
+    eggLayAbility.layEgg(); <span style="color:#75715e">// 委托
+</span><span style="color:#75715e"></span>  }
+}
+
+<span style="color:#960050;background-color:#1e0010">作者：沐晨</span>
+<span style="color:#960050;background-color:#1e0010">链接：</span>https:<span style="color:#75715e">//zhuanlan.zhihu.com/p/93899632
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">来源：知乎</span>
+<span style="color:#960050;background-color:#1e0010">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span>
+<span style="color:#960050;background-color:#1e0010">复制代码</span>
+</code></pre></div><ul>
+<li>多重继承 如何解决钻石模型</li>
+<li>面向对象语言的三大特性
+<ul>
+<li><strong>封装</strong>：隐藏对象的属性和实现细节，<strong>仅对外公开接口</strong>。目的是增强<strong>安全性</strong>和<strong>简化编程</strong></li>
+<li><strong>继承</strong>：就是子类继承父类的特征(变量)和行为(函数)。可以代码重用(但也带来高耦合)，最大的意义在于<strong>实现多态</strong>。</li>
+<li><strong>多态</strong>：子类对象可以被视作一个父类对象。根据程序运行时实际使用的类来达成不同的效果(执行子类自己<strong>重写</strong>的函数)。</li>
+</ul>
+</li>
+</ul>
+<h2 id="53-redis">5.3 Redis</h2>
+<p><a href="https://zhuanlan.zhihu.com/p/81195864">为什么要用Redis？Redis为什么这么快？ - 胖狗子的文章 - 知乎</a></p>
+<ul>
+<li>Redis的数据结构
+<ul>
+<li>String 整<strong>数</strong>，浮点数或者字符串</li>
+<li>Set 集合</li>
+<li>Zset 有序集合（跳跃表实现）</li>
+<li>Hash 散列表</li>
+<li>List 列表</li>
+</ul>
+</li>
+<li>Redis为什么快，为什么单线程
+<ul>
+<li>首先，<strong>采用了多路复用阻塞io机制</strong>;</li>
+<li>然后，<strong>数据结构简单</strong>，操作节省时间;</li>
+<li>最后，<strong>运行在内存中</strong>，自然速度快</li>
+<li><strong>单线程</strong>：Redis的瓶颈不是cpu的运行速度，而往往是网络带宽和机器的内存大小。单线程切换开销小，容易实现。</li>
+</ul>
+</li>
+</ul>
+<h2 id="54-设计模式">5.4 设计模式</h2>
+<ul>
+<li>
+<p>用过哪些设计模式，我说单例、工厂、观察者、代理模式。（他想让我说策略模式、装饰模式和适配器模式，但这三个我都不知道）</p>
+</li>
+<li>
+<p>装饰器模式</p>
+<ul>
+<li><strong>动态</strong>地给某个<strong>对象</strong>添加额外的行为，比生成子类更为<strong>灵活</strong>(因为装饰的是对象不是类)</li>
+</ul>
+<ol>
+<li>抽象组件(Component): 定义被装饰对象的接口</li>
+<li>具体组件(ConcreteComponent)：定义被装饰器装饰的对象</li>
+<li>抽象装饰器(Decorator): 维护对Component的引用</li>
+<li>具体装饰器角色(ConcreteDecorator)：向组件添加新的职责</li>
+</ol>
+<ul>
+<li>示例代码：<a href="https://zhuanlan.zhihu.com/p/25003369">设计模式之装饰器模式 - 林东洲的文章 - 知乎</a></li>
+</ul>
+</li>
+<li>
+<p>设计模式了解吗，说一下策略模式</p>
+<ol>
+<li><strong>环境类</strong>(Context):持有一个具体的策略类的引用，提供给<strong>客户端</strong>调用。屏蔽高层模块对策略/算法的直接访问. 还可以提供一些公共功能或者是存储一些状态。</li>
+<li><strong>抽象策略类</strong>(Strategy): 策略的抽象，一般<strong>定义接口</strong>。</li>
+<li><strong>具体策略类</strong>(ConcreteStrategy):具体的抽象策略实现，<strong>实现接口</strong>。</li>
+</ol>
+<ul>
+<li><strong>优点</strong>：切换策略很方便，增加策略也方便。</li>
+<li><strong>缺点</strong>：每个策略都是一个类（数量增多），策略类都需要对外暴露（上层模块必须知道有哪些策略然后才能决定使用哪一个）</li>
+</ul>
+</li>
+<li>
+<p>适配器模式</p>
+<ul>
+<li>适配器模式可以让<strong>原本接口不匹配</strong>的两个类可以协同工作，起到转换的作用。</li>
+<li><strong>类的适配器模式</strong>：把适配的类的API转换成为目标类的API。<strong>继承</strong>extend原始的被适配类，实现implement目标的接口。</li>
+<li><strong>对象的适配器模式</strong>：也是把适配的类的API转换成为目标类的API。但是通过组合而非继承来完成。<strong>包含</strong>被适配类的对象，实现implement目标的接口。</li>
+</ul>
+</li>
+</ul>
+<h2 id="55-git">5.5 Git</h2>
+<ul>
+<li>git rebase git merge 的区别</li>
+</ul>
+<h2 id="56-behaviour-question">5.6 Behaviour Question</h2>
+<ul>
+<li>看你简历有xxx，我们来聊一下</li>
+<li>给我说说你现在都在关注哪些最新的技术好么</li>
+<li>描述一个解决的问题，如何去解决的</li>
+<li>描述一个未解决的问题，探索解决问题的途径</li>
+<li>对一个陌生的工作，如何去开展工作</li>
+<li>最近看了什么非技术的书和技术的书</li>
+<li>会不会给自己比较大的压力</li>
+</ul>
+<h1 id="6-项目">6 项目</h1>
+<blockquote>
+<p>显然项目这个引人而异，我是挑了几个和我的项目比较沾边的。</p>
+</blockquote>
+<ul>
+<li>项目里的登录状态怎么做的
+<ul>
+<li>django自带的auth模块</li>
+</ul>
+</li>
+<li>token有哪些好处,相比较cookie+session
+<ul>
+<li><a href="https://wp-rocket.me/blog/difference-json-web-tokens-vs-session-cookies/">wp-rocket.me/blog/differ…</a></li>
+</ul>
+</li>
+<li>Mvc，MTV</li>
+<li>大量连接时sessionid可能重复？
+<ul>
+<li>可能会。但概率很小。</li>
+</ul>
+</li>
+<li>django的orm</li>
+<li>如何搜索数据库里的文章</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Django ORM: 搜索标题或内容包含指定字符串的文章，大小写不限</span>
+articles <span style="color:#f92672">=</span> articles<span style="color:#f92672">.</span>filter(
+    Q(title__icontains<span style="color:#f92672">=</span>search) <span style="color:#f92672">|</span>
+    Q(body__icontains<span style="color:#f92672">=</span>search))
+<span style="color:#75715e"># 这个Q是把条件包起来，因为filter直接逗号分隔的话，是AND。用了Q,和 | 运算符可以实现OR</span>
+<span style="color:#960050;background-color:#1e0010">复制代码</span>
+</code></pre></div><ul>
+<li>标签-文章表太慢怎么办(not sure)
+<ul>
+<li>文章上加索引。标签重复度高，不能加索引</li>
+<li>加缓存。一般用户按标签看文章都是看最上面的那几篇</li>
+</ul>
+</li>
+<li><a href="https://juejin.cn/post/6844904046436843527">大文件上传</a></li>
+</ul>
+<h1 id="7-算法">7 算法</h1>
+<h2 id="71-经典题目">7.1 经典题目</h2>
+<h3 id="最长上升子序列">最长上升子序列</h3>
+<p>这是一道考烂了的题</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 定义 arr[i]: 长度为i+1的连续上升子序列的尾部数字大小</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lengthOfLIS</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> int:
+        arr <span style="color:#f92672">=</span> []    
+        <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> nums:
+            <span style="color:#75715e"># 特殊情况：一开始还没有数据的时候</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> arr: 
+                arr<span style="color:#f92672">.</span>append(n)
+                <span style="color:#66d9ef">continue</span>
+            <span style="color:#75715e"># 从后往前找到比当前值小的数，在它的基础上延长</span>
+            i <span style="color:#f92672">=</span> len(arr)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>  
+            <span style="color:#66d9ef">while</span> arr[i] <span style="color:#f92672">&gt;=</span> n <span style="color:#f92672">and</span> i<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>: i <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+            
+            <span style="color:#66d9ef">if</span> arr[i] <span style="color:#f92672">&lt;</span> n:  <span style="color:#75715e"># 因为找到小值而停止</span>
+                <span style="color:#66d9ef">if</span> i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span> len(arr):  <span style="color:#75715e"># 如果后面有人，尝试更新这个长度。尾部数字越小越好</span>
+                    arr[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> min(arr[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>], n)
+                <span style="color:#66d9ef">else</span>:   <span style="color:#75715e"># 如果后面没人，新开一个长度</span>
+                    arr<span style="color:#f92672">.</span>append(n)
+            <span style="color:#66d9ef">else</span>:   <span style="color:#75715e"># 没有找到比自己更小的，在0处停止</span>
+                arr[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> n
+
+        <span style="color:#66d9ef">return</span> len(arr)
+<span style="color:#960050;background-color:#1e0010">复制代码</span>
+<span style="color:#75715e"># 使用二分查找优化至 O(NlogN)</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lengthOfLIS</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> int:
+        arr <span style="color:#f92672">=</span> []    <span style="color:#75715e"># arr[i]: 长度为i+1的连续上升子序列的尾部数字大小</span>
+        <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> nums:
+            <span style="color:#75715e"># 如果arr中没有比n大的数</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> arr <span style="color:#f92672">or</span> arr[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">&lt;</span>n: 
+                arr<span style="color:#f92672">.</span>append(n)
+                <span style="color:#66d9ef">continue</span>
+            <span style="color:#75715e"># 找比n刚好大一点的数，二分查找</span>
+            left,right<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,len(arr)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;=</span> right:
+                mid <span style="color:#f92672">=</span> (left<span style="color:#f92672">+</span>right)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+                midval <span style="color:#f92672">=</span> arr[mid]
+                <span style="color:#66d9ef">if</span> midval <span style="color:#f92672">&gt;</span> n:
+                    right <span style="color:#f92672">=</span> mid<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+                <span style="color:#66d9ef">elif</span> midval <span style="color:#f92672">&lt;</span> n:
+                    left <span style="color:#f92672">=</span> mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+                <span style="color:#66d9ef">else</span>:
+                    left <span style="color:#f92672">=</span> right <span style="color:#f92672">=</span> mid
+                    <span style="color:#66d9ef">break</span>
+            <span style="color:#75715e"># 经过分析，left所指的肯定就是比n大一点或等于n的</span>
+            arr[left] <span style="color:#f92672">=</span> min(arr[left], n)
+            
+        <span style="color:#66d9ef">return</span> len(arr)
+<span style="color:#960050;background-color:#1e0010">复制代码</span>
+</code></pre></div><h3 id="剑指48最长不含重复字符的子字符串">剑指48.最长不含重复字符的子字符串</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lengthOfLongestSubstring</span>(self, s: str) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> s: <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+        left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>	
+        <span style="color:#75715e"># 左开右闭。right负责探索未知天地。</span>
+        contain <span style="color:#f92672">=</span> set()
+        contain<span style="color:#f92672">.</span>add(s[left])
+        ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+        
+        <span style="color:#66d9ef">while</span> right <span style="color:#f92672">&lt;</span> len(s):
+            <span style="color:#66d9ef">if</span> s[right] <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> contain:
+                contain<span style="color:#f92672">.</span>add(s[right])
+                ans <span style="color:#f92672">=</span> max(ans, len(contain))
+                right <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">else</span>:	
+            <span style="color:#75715e"># 如果发现重复，就扔掉左边字符，直到不重复为止</span>
+            <span style="color:#75715e"># 极端情况下，left=right，相当于扔空原有集合</span>
+                contain<span style="color:#f92672">.</span>discard(s[left])
+                left <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">return</span> ans
+<span style="color:#960050;background-color:#1e0010">复制代码</span>
+</code></pre></div><h3 id="接雨水">接雨水</h3>
+<ul>
+<li>每面墙一旦出现，就把<strong>它和左边墙之间</strong>能填的缝隙全都使用水泥填上。（这里假装是水泥，比水更形象。浇过的水泥也会变成墙）</li>
+<li>那么左边已经处理的部分，一定是先增加再减少的阶梯型，没有凹陷。对一面新出现的墙，它的左边<strong>由近及远是从比它矮的墙到比他高的墙</strong></li>
+<li>按层次浇筑水泥。<strong>一开始的瓶颈是左边的矮墙</strong>，随着一层层浇筑水泥，池底的高度也越来越高。最后的瓶颈是它<strong>自己作为右边的矮墙</strong>。</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">trap</span>(self, height: List[int]) <span style="color:#f92672">-&gt;</span> int:
+        stack <span style="color:#f92672">=</span> []
+        ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">for</span> i, h <span style="color:#f92672">in</span> enumerate(height):
+            <span style="color:#66d9ef">if</span> h <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                <span style="color:#66d9ef">continue</span>
+            bar <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>  <span style="color:#75715e"># 对于每一面新处理的墙，bar都是全新的</span>
+            <span style="color:#66d9ef">while</span> stack:
+                i_, h_ <span style="color:#f92672">=</span> stack[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+                <span style="color:#66d9ef">if</span> h_ <span style="color:#f92672">&lt;=</span> h:     <span style="color:#75715e"># 如果栈顶&lt;=当前的墙, 用当前的墙不断碰撞左边的墙，并且逐步提升bar</span>
+                    ans <span style="color:#f92672">+=</span> (i<span style="color:#f92672">-</span>i_<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> (h_ <span style="color:#f92672">-</span> bar)
+                    bar <span style="color:#f92672">=</span> h_
+                    stack<span style="color:#f92672">.</span>pop()
+                <span style="color:#66d9ef">else</span>:           <span style="color:#75715e"># 如果栈顶&gt;当前的墙, 当前的墙成为了右边的矮子，根据当前bar加水。</span>
+                    <span style="color:#75715e"># 当前bar是当前的墙和此时栈顶之间的墙的最大值，在第一步的不断碰撞中已经计算好了</span>
+                    ans <span style="color:#f92672">+=</span> (i<span style="color:#f92672">-</span>i_<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> (h <span style="color:#f92672">-</span> bar)
+                    <span style="color:#66d9ef">break</span>
+            stack<span style="color:#f92672">.</span>append((i,h))
+        <span style="color:#66d9ef">return</span> ans
+<span style="color:#960050;background-color:#1e0010">复制代码</span>
+</code></pre></div><h3 id="lru实现">LRU实现</h3>
+<h3 id="三数之和">三数之和</h3>
+<p><a href="https://leetcode-cn.com/problems/3sum/solution/pai-xu-shuang-zhi-zhen-zhu-xing-jie-shi-python3-by">wu_yan_zu - 力扣题解</a></p>
+<h3 id="一个字符串找出出现第二多的字符">一个字符串，找出出现第二多的字符</h3>
+<ul>
+<li>这应该只能哈希表计数吧？</li>
+</ul>
+<h3 id="鸡蛋掉落">鸡蛋掉落</h3>
+<p>这个题写的时候屡屡受挫，要注意：</p>
+<ul>
+<li><strong>思考的时候就要用题里给的符号，要么就全程用自己的符号。总之要统一！！！</strong> 这个题草稿纸上想的时候用的是f(N,d)思考，但题目的顺序是(K,N),结果各种顺序写反也看不出来，浪费好多不必要时间。</li>
+<li>Debug复杂的递归代码的时候，一下子打印一大片，分隔线也不好画，而且请相信即使分开了思路也是不可能follow的。。。另一种办法是<strong>按代码的逻辑功能分开，控制变量地测试。</strong> 例如&quot;把二分替换成穷举&quot;结果就由错变对了，说明二分代码有bug而其他代码无bug。不过这么做的前提是这个逻辑模块有“更愚蠢但可靠”的替代品。<strong>如穷举法。</strong></li>
+<li>这题一开始我去找极值点了，侥幸认为没有那么多水平线除非答案附近，而实际上导数为0的地方还挺多的，离真正的最小值也挺远的。。。这就导致midval=midrval的时候非常难以处理。正解是去搜索upper=downer的地方。可见一开始考虑不周后果不堪设想。</li>
+<li>对于多次进入的递归函数，要考虑到<strong>输入参数的可能范围</strong>。鸡蛋是每次递归最多减一，因此可以保证在K=1的时候肯定已经被处理，不会有K=0的情况。如果出现N=0的情况一定是因为mid=1或mid=N。理论上前者有可能出现，因此还是处理一下比较好。</li>
+</ul>
+<h3 id="一个先递增后递减的数组找出独特元素的个数">一个先递增后递减的数组找出独特元素的个数</h3>
+<p>先用set 需要O(n)的时间复杂度 然后写了个双指针 写完了也不用跑就结束了</p>
+<h3 id="实现循环队列-leetcode-622">实现循环队列 (leetcode 622)</h3>
+<ul>
+<li>使用一个 k+1 长度的数组存储</li>
+<li>注意在MOD数组下标的时候也要按k+1取模啊！</li>
+</ul>
+<h3 id="二叉树转双向链表">二叉树转双向链表</h3>
+<h3 id="爬楼梯--不允许到达7的倍数层">爬楼梯 =&gt; 不允许到达7的倍数层</h3>
+<ul>
+<li>类似斐波那契数列。不允许到达7的倍数层就不算了呗。</li>
+</ul>
+<h3 id="树中两个点的最长路径和-leetcode-124">树中两个点的最长路径和 (leetcode 124)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maxPathSum</span>(self, root: TreeNode) <span style="color:#f92672">-&gt;</span> int:
+        ans <span style="color:#f92672">=</span> root<span style="color:#f92672">.</span>val
+        
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">work</span>(node):
+            nonlocal ans
+            <span style="color:#75715e"># ans: node+max(0,左边最长链长)+max(0,右边最长链长)</span>
+            <span style="color:#75715e"># work函数：返回以node为头结点的最长链长，可能为负数</span>
+            
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> node: <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+            leftmax <span style="color:#f92672">=</span> work(node<span style="color:#f92672">.</span>left)
+            rightmax <span style="color:#f92672">=</span> work(node<span style="color:#f92672">.</span>right)
+            <span style="color:#75715e">#print(&#34;at node&#34;, root.val, &#34;leftmax,rightmax=&#34;,leftmax, rightmax)</span>
+            ans <span style="color:#f92672">=</span> max(ans, node<span style="color:#f92672">.</span>val <span style="color:#f92672">+</span> max(<span style="color:#ae81ff">0</span>,leftmax) <span style="color:#f92672">+</span> max(<span style="color:#ae81ff">0</span>,rightmax))
+            <span style="color:#66d9ef">return</span> max(leftmax, rightmax, <span style="color:#ae81ff">0</span>) <span style="color:#f92672">+</span> node<span style="color:#f92672">.</span>val
+        
+        work(root)
+        <span style="color:#66d9ef">return</span> ans
+<span style="color:#960050;background-color:#1e0010">复制代码</span>
+</code></pre></div><h3 id="找比当前数大的下一个数如1243结果是1324">找比当前数大的下一个数（如1243，结果是1324）</h3>
+<ul>
+<li>注意严谨。爬山的时候等于也要爬。这样才能正确处理重复数字</li>
+<li>python中nums[nextdigit+1:].sort()行不通</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:	<span style="color:#75715e"># LeetCode 31</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">nextPermutation</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> None:
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Do not return anything, modify nums in-place instead.
+</span><span style="color:#e6db74">        这个函数也可以处理有重复值的情况~ 注意“爬山”时候的大于等于号~
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        
+        cur <span style="color:#f92672">=</span> len(nums)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>  <span style="color:#75715e"># 从后往前找第一个跌落(&lt;)的地方</span>
+        <span style="color:#66d9ef">while</span> cur <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> nums[cur<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">&gt;=</span> nums[cur]: cur <span style="color:#f92672">-=</span><span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">if</span> cur<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>:
+            nums<span style="color:#f92672">.</span>reverse()
+            <span style="color:#66d9ef">return</span>
+        nextdigit <span style="color:#f92672">=</span> cur<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>  <span style="color:#75715e"># 即将增大进位的那个数位</span>
+
+        cur <span style="color:#f92672">=</span> len(nums)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>  <span style="color:#75715e"># 从后往前找最小的大于target的数</span>
+        <span style="color:#66d9ef">while</span> nums[cur] <span style="color:#f92672">&lt;=</span> nums[nextdigit]: cur <span style="color:#f92672">-=</span><span style="color:#ae81ff">1</span>
+
+        nums[cur], nums[nextdigit] <span style="color:#f92672">=</span> nums[nextdigit], nums[cur]
+        nums[nextdigit<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:] <span style="color:#f92672">=</span> sorted(nums[nextdigit<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:])
+<span style="color:#960050;background-color:#1e0010">复制代码</span>
+</code></pre></div><h3 id="求x的y次方想出比直接for循环更好的方案">求x的y次方，想出比直接for循环更好的方案</h3>
+<ul>
+<li>二进制快速幂</li>
+</ul>
+<h3 id="求众数">求众数</h3>
+<ul>
+<li>摩尔投票</li>
+</ul>
+<h3 id="找出一个未排序的整数数组中没有出现的最小的正整数">找出一个未排序的整数数组中没有出现的最小的正整数</h3>
+<p>用列表下标做哈希。</p>
+<h3 id="给定一个字符串请你找出其中不含有重复字符的-最长子串-的长度">给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度</h3>
+<p>滑动窗口。</p>
+<h3 id="二维数组按行递增按列递增问是否能找到某个数字">二维数组，按行递增，按列递增，问是否能找到某个数字</h3>
+<ol>
+<li>从左下角右上角找的简单办法。但面试官会让你写正常二分，哈哈。</li>
+<li>矩阵分成4块。但不是按行列中心点切割。具体见<a href="https://leetcode-cn.com/problems/search-a-2d-matrix-ii/solution/sou-suo-er-wei-ju-zhen-ii-by-leetcode-2/">题解方法3</a></li>
+</ol>
+<h3 id="一个ip地址转成int类型数据ip地址是32个比特int也是32个比特">一个IP地址转成int类型数据（IP地址是32个比特，int也是32个比特）</h3>
+<h3 id="二叉树找两个节点的公共父节点">二叉树找两个节点的公共父节点</h3>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/de9f8c03606740468e480eaae20b9efa~tplv-k3u1fbpfcp-zoom-1.image" alt="img"></p>
+<h3 id="快排当有很多重复数时怎么优化">快排当有很多重复数时怎么优化</h3>
+<p>三路快排.这玩意必须得手写一遍！</p>
+<h3 id="一组数字怎么排列组合出的数最大">一组数字怎么排列组合出的数最大</h3>
+<p>和字符串同理。自定义规则排序。</p>
+<h3 id="字符矩阵是否存在给定的字符串">字符矩阵是否存在给定的字符串</h3>
+<ul>
+<li>dfs，计算时间复杂度.剑指 Offer 12. 矩阵中的路径</li>
+</ul>
+<h3 id="非负整数字符串重新排列使得结果最小">非负整数字符串重新排列使得结果最小</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 剑指 Offer 45. 把数组排成最小的数</span>
+<span style="color:#f92672">from</span> functools <span style="color:#f92672">import</span> cmp_to_key    <span style="color:#75715e"># python大法好!!</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">compare</span>(x1, x2):   <span style="color:#75715e"># 如果x1更大返回正数，更小返回负数，相等返回0.</span>
+    <span style="color:#66d9ef">return</span> int(x1<span style="color:#f92672">+</span>x2) <span style="color:#f92672">-</span> int(x2<span style="color:#f92672">+</span>x1)
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minNumber</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> str:
+        nums <span style="color:#f92672">=</span> [str(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> nums]
+        nums<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span>cmp_to_key(compare))
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(nums)
+<span style="color:#960050;background-color:#1e0010">复制代码</span>
+</code></pre></div><h3 id="给定字符串找出最短的包含指定字符的子串">给定字符串，找出最短的包含指定字符的子串</h3>
+<p>并说出算法的时间复杂度，证明算法的有效性。</p>
+<ul>
+<li>应该和最长不重复子串一个思路，维护左右指针和一个集合</li>
+</ul>
+<h3 id="leetcode-54-螺旋矩阵做完提问怎样保证不会重复输出">LeetCode 54 螺旋矩阵，做完提问怎样保证不会重复输出.</h3>
+<p>这个题有两种方法：分圈打印法，和四周“剥边”法。下面是分圈打印的代码。 保证不会重复输出也就是在left,right重合，或top,down重合的时候，不打印第二个即可。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:		<span style="color:#75715e"># 分圈打印法</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spiralOrder</span>(self, matrix: List[List[int]]) <span style="color:#f92672">-&gt;</span> List[int]:
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> matrix: <span style="color:#66d9ef">return</span> []
+        
+        m,n <span style="color:#f92672">=</span> len(matrix),len(matrix[<span style="color:#ae81ff">0</span>])
+        left,right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        top,down <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, m<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        
+        ans <span style="color:#f92672">=</span> []   
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">printCircle</span>(top, left, down, right):
+            nonlocal ans
+            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(left,right<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+                ans<span style="color:#f92672">.</span>append(matrix[top][i])
+            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(top<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, down):
+                ans<span style="color:#f92672">.</span>append(matrix[j][right])
+                
+            <span style="color:#66d9ef">if</span> top <span style="color:#f92672">!=</span> down:     <span style="color:#75715e"># 这一部分可能被吞哦！</span>
+                <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(right, left<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+                    ans<span style="color:#f92672">.</span>append(matrix[down][i])
+            <span style="color:#66d9ef">if</span> left <span style="color:#f92672">!=</span> right:   <span style="color:#75715e"># 这一部分可能被吞哦！</span>
+                <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(down<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, top, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+                    ans<span style="color:#f92672">.</span>append(matrix[j][left])
+        
+        <span style="color:#66d9ef">while</span> left<span style="color:#f92672">&lt;=</span>right <span style="color:#f92672">and</span> top <span style="color:#f92672">&lt;=</span> down:
+            printCircle(top,left,down,right)
+            top, left, down, right <span style="color:#f92672">=</span> top<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, left<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, down<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, right<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+            
+        <span style="color:#66d9ef">return</span> ans
+<span style="color:#960050;background-color:#1e0010">复制代码</span>
+</code></pre></div><h3 id="leetcode103-二叉树的锯齿形层次遍历">Leetcode103 二叉树的锯齿形层次遍历</h3>
+<h3 id="leetcode25-k-个一组翻转链表">Leetcode25 K 个一组翻转链表</h3>
+<h3 id="找出第一个缺失的正整数">找出第一个缺失的正整数</h3>
+<ul>
+<li>输入的正整数有n个的话，第一个缺失的正整数一定是在[1,n+1]这个区间里</li>
+<li>扫描列表，记录[1,n+1]的出现状况</li>
+<li>扫描数组，找到[1,n+1]中第一个没有出现的数</li>
+</ul>
+<h3 id="rand1-5实现rand1-7">rand(1, 5)实现rand(1, 7)</h3>
+<ul>
+<li>调用两次rand5，生成1~25种组合</li>
+<li>对1~21，使用%7+1，输出结果</li>
+<li>否则，拒绝采样，重头再来一遍</li>
+</ul>
+<h2 id="72-大数据量">7.2 大数据量</h2>
+<h3 id="10亿个无序整数找出中位数">10亿个无序整数找出中位数。</h3>
+<p>由于是 10 亿个整数，因此无法在内存中处理。也就是说要采用合适的外排序算法。 这里可以使用桶排序，使用 n 个区间均匀的桶，遍历一遍整数，将它们存入对应区间的桶中，并统计桶中数字个数。这样就可以找到中位数所在的桶，如果桶中数字还是很多，再进行桶排序，否则进内存中排序即可。</p>
+<h3 id="内存只能存1000条数据如何对5000条数据进行排序">内存只能存1000条数据。如何对5000条数据进行排序?</h3>
+<ul>
+<li>5k条分为5组，每组1k条</li>
+<li>每组分别读入内存，排序后写入硬盘</li>
+<li>从5组的每组中读入前200条，每次5选1，写入硬盘。当一组中的200条排完后，再从读该组200条，直到排序完成。</li>
+</ul>
+<h3 id="10万个ip求出现频率最高的10个ip">10万个ip，求出现频率最高的10个IP</h3>
+<ul>
+<li>先哈希分组成多个小文件</li>
+<li>在每个小文件中求出现频率最高的10个IP</li>
+<li>计算全局的频率最高的10个IP</li>
+</ul>
+<h3 id="1000-亿个无符号整数找最大的-100-个">1000 亿个无符号整数，找最大的 100 个</h3>
+<blockquote>
+<p>内存不够的情况下用什么方案？内存充足的情况下呢？ partition 的方案不稳定，有什么稳定的方法吗？</p>
+</blockquote>
+<ul>
+<li>内存不够堆排序（建立一个k=100大小的小顶堆，然后遍历数据，有大于根结点的值将堆根节点替换上）他说时间复杂度呢，我说 N * log K。</li>
+<li>内存够用计数排序（无符号整数就那么多，1000亿肯定有重复的。计数排序的优点是O(n),缺点是内存占用太大。既然内存够用就随便用咯~）</li>
+<li>桶排序可以认为是弱化版的计数排序，计数排序是桶的大小为1的桶排序。</li>
+</ul>
+<h2 id="73-信号量与锁">7.3 信号量与锁</h2>
+<h3 id="信号量实现哲学家进餐">信号量实现哲学家进餐</h3>
+<ul>
+<li>方法一：给五个叉子编号为 0-4，每个哲学家必须先拿编号小的叉子。</li>
+<li>方法二：允许最多4个哲学家去持有叉子，可保证至少有 1 个哲学家能吃上面。</li>
+<li>方法三：让编号为奇数的哲学家先拿左边，编号为偶数的哲学家先拿右边。</li>
+</ul>
+<p><a href="https://leetcode-cn.com/problems/the-dining-philosophers/solution/san-chong-si-lu-po-pi-xun-huan-deng-dai-by-ngcafai">三种思路 - 破坏循环等待 - ngcafai - 力扣题解</a></p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e8ce0c0222314fb9b0f811a411909607~tplv-k3u1fbpfcp-watermark.image" alt="img"></p>
+<h3 id="用条件变量实现读写锁">用条件变量实现读写锁</h3>
+<h3 id="生产者消费者">生产者消费者</h3>
+<p>手撕生产者、消费者模型，10个生产者，10个消费者，队列容量为30个 (下图是不while死循环的生产者消费者, 和原面经有所区别) <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1de9c2e0d7bb4a2fa4328e83a49edfac~tplv-k3u1fbpfcp-watermark.image" alt="img"></p>
+<h3 id="实现阻塞队列">实现阻塞队列</h3>
+<p>且要求取的时候先取优先级最大的. 我先直接用优先队列，后面面试官让我再实现最大堆.(下方代码并没有实现最大堆)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> threading
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BoundedBlockingQueue</span>(object):	<span style="color:#75715e"># LeetCode1188</span>
+    
+    <span style="color:#66d9ef">def</span> __init__(self, capacity: int):
+        self<span style="color:#f92672">.</span>capacity <span style="color:#f92672">=</span> capacity
+        self<span style="color:#f92672">.</span>q <span style="color:#f92672">=</span> []
+        self<span style="color:#f92672">.</span>con <span style="color:#f92672">=</span> threading<span style="color:#f92672">.</span>Condition()
+
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">enqueue</span>(self, element: int) <span style="color:#f92672">-&gt;</span> None:
+        <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>con:  <span style="color:#75715e"># 自动acquire,release</span>
+            <span style="color:#66d9ef">while</span> len(self<span style="color:#f92672">.</span>q) <span style="color:#f92672">==</span> self<span style="color:#f92672">.</span>capacity:   <span style="color:#75715e"># 满</span>
+                self<span style="color:#f92672">.</span>con<span style="color:#f92672">.</span>wait()
+            self<span style="color:#f92672">.</span>q<span style="color:#f92672">.</span>append(element)
+            self<span style="color:#f92672">.</span>con<span style="color:#f92672">.</span>notify()
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dequeue</span>(self) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>con: 
+            <span style="color:#66d9ef">while</span> len(self<span style="color:#f92672">.</span>q) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:  <span style="color:#75715e"># 空</span>
+                self<span style="color:#f92672">.</span>con<span style="color:#f92672">.</span>wait()
+            ans <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>q<span style="color:#f92672">.</span>pop(<span style="color:#ae81ff">0</span>)
+            self<span style="color:#f92672">.</span>con<span style="color:#f92672">.</span>notify()
+            <span style="color:#66d9ef">return</span> ans
+        
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">size</span>(self) <span style="color:#f92672">-&gt;</span> int:
+        <span style="color:#66d9ef">return</span> len(self<span style="color:#f92672">.</span>q)
+<span style="color:#960050;background-color:#1e0010">复制代码</span>
+</code></pre></div><h1 id="8-智力题">8 智力题</h1>
+<blockquote>
+<p>这里是我千辛万苦攒的智力题，后来面试一个智力题都没问，好气 (= _=)</p>
+</blockquote>
+<h3 id="小白鼠喝毒药">小白鼠喝毒药</h3>
+<p>1000瓶水，有一瓶是毒药，你有无限只小白鼠，喝了毒药一小时后毒发，怎样在一个小时内知道哪瓶水有毒？最少要用多少只小白鼠？<a href="https://zhuanlan.zhihu.com/p/24375080">1000瓶药水，1瓶有毒药，几只小白鼠能够找出？ - 温笛的文章 - 知乎</a></p>
+<p>这道题考察的是对2进制的理解。</p>
+<ul>
+<li>鼠1: 喝个位编号为1的瓶子，鼠2：喝十位编号为1的瓶子……</li>
+<li>如鼠1死了，鼠2没死，鼠3死了，那么就是101=5号瓶子有毒。那么就是101=5号瓶子有毒。</li>
+<li>N只老鼠的量程为2^N，1000只瓶子位于2^9 ~ 2^10，即10只小鼠可以测1000瓶水。</li>
+</ul>
+<p>如果30分钟就会毒发呢？（<strong>可以测2轮</strong>）</p>
+<ul>
+<li>类比三进制，在对应的位数，第一轮喝1的瓶子，死了填1，第二轮喝2的瓶子，死了填2，两轮都没死就填0.</li>
+</ul>
+<h3 id="烧香计时">烧香计时</h3>
+<p>两根可以烧一小时的香，确定45分钟</p>
+<ol>
+<li>A两端点燃，B一端点燃</li>
+<li>A烧灭后，B还剩半根香，正常来说还要30分钟烧完</li>
+<li>两端点燃B, 15分钟后烧完</li>
+</ol>
+<h3 id="海盗分金币">海盗分金币</h3>
+<p>五个海盗抢来了一百个金币。五个海盗都很贪婪但同时又都很明智。他们按照抽签的方法，排出一个次序。首先由抽到一号签的海盗说出一套分金的方案，如果5个人中有50％以上（不含50％）的人同意，那么便依照这个方案执行，否则这个提出方案的人将被扔到海里喂鱼，接下来再由抽到二号签的海盗继续说出一套方案，然后依次类推到第五个。如果你是抽到一号签的海盗，你计划提出一套什么样的方案，在保住小命的前提下，分得最多的金子？</p>
+<p>对于这个问题要采用倒推方法：</p>
+<ul>
+<li><strong>如果只剩5号</strong>：5号自己独吞所有金币</li>
+<li><strong>如果只剩4号和5号</strong>：5号一定投反对票让4号喂鲨鱼，以独吞全部金币。这种情况对4号是死局。</li>
+<li><strong>如果只剩3，4，5号</strong>：3号自己有一票，只需要再争取1票即可通过。如果3号的方案通不过，就会变成两个人的情况。对4号是死局，对5号是利好。4号不需要金钱也会支持三号。分配方案：“100，0，0”</li>
+<li><strong>如果剩2，3，4，5号</strong>：2号自己有一票，需要争取2票即可通过。如果2号的方案通不过，就会变成3个人的情况。对3号是利好，对4号是获得0个金币，对5号是获得0个金币。因此2号可以通过 “98，0，1，1” 拉拢4号5号。</li>
+<li><strong>如果剩1，2，3，4，5号</strong>：1号自己有一票，需要争取2票即可通过。如果1号的方案通不过，就会变成4个人的情况。对2号是利好，对3号是0个金币，对4号是1个金币，对5号是1个金币。因此1号可以通过（97，0，1，2，0）或（97，0，1，0，2）拉拢3号，和4或5号。</li>
+<li><strong>如果剩0，1，2，3，4，5号(自己加的)</strong>：0号自己有一票，需要争取3票即可通过。如果0号的方案通不过，就会变成5个人的情况。对1号是利好，对2号是0个金币，对3号是1个金币，对4号是2个或0个金币，对5号是2个或0个金币。因此1号可以通过（95，1，2，2，0）拉拢2,3,4号，或（95，1，2，0，2）拉拢2,3,5号。</li>
+</ul>
+<h3 id="老虎吃羊">老虎吃羊</h3>
+<p>100只老虎可以靠吃草活下来，但是它们更喜欢吃羊。每次只有一头老虎可以吃羊，但是吃了羊的那头老虎也会变成羊。假设所有老虎都很聪明，首先考虑保命然后再考虑吃羊，问羊是否会被吃？</p>
+<ul>
+<li>1只老虎的时候：果断吃羊</li>
+<li>2只老虎的时候：不能吃，不然自己就变成了1只老虎的情况里的那只羊</li>
+<li>3只老虎的时候：吃。吃羊后会变成2只老虎的情况，而两只老虎的情况不吃羊。</li>
+</ul>
+<p>以此类推，偶数只老虎的话，羊不会被吃，奇数只的话羊会被吃</p>
+<h3 id="螺丝与螺母">螺丝与螺母</h3>
+<h3 id="赛马">赛马</h3>
+<p>25匹马5个跑道。每场比赛每个跑道只允许一匹马，每次只能记录名次不能记录时间，不存在并列。问最少比多少次能选出最快的3匹马？ 赛马64匹马，8个赛道，求前四名最少次数。面试官提示有的情况是11次，有的情况是10次。 <a href="https://zhuanlan.zhihu.com/p/103572219">腾讯算法面试——赛马问题 - 一帆诗的文章 - 知乎</a></p>
+<h3 id="12个球一个质量不一样最多称三次如何称">12个球，一个质量不一样，最多称三次，如何称</h3>
+<p>神级通解：<a href="https://www.zhihu.com/question/20854512/answer/16411345">N 个乒乓球中有一个和其他的质量不同，用天平最少几次一定能称出来？ - 知乎</a></p>
+<p>分为3组，记为{1，2，3，4}，{5，6，7，8}，{9，10，11，12}</p>
+<ul>
+<li>[第一次]先称前两组，如果重量相同，我们知道8一定是正常球。然后[第二次]称{9，10}，{8，11}。
+<ol>
+<li>若重量相同，说明9,10,11都是正品，12是次品。[第三次]把12和1称一下即可判断是轻了还是重了。</li>
+<li>{9，10}重，则9或10重,或者11轻。[第三次]比较9和10：如果一样则11轻，否则那个重的就是次品。</li>
+<li>{9，10}轻，则9或10轻,或者11重。[第三次]比较9和10：如果一样则11重，否则那个轻的就是次品。</li>
+</ol>
+</li>
+<li>如果前两组中，{1，2，3，4}重，则1-4中有某个重或者5-8某个轻。我们知道9-12都是正常球。[第二次]比较{1，2，5}(2个第一组的，1个第二组的)和{3，6，9}(第1,2,3组各一个)
+<ol>
+<li>{1，2，5}重: 可能是<strong>1重或2重</strong>，或者<strong>6轻</strong>。[第三次]这时比较1、2，若不一样重，重的是次品。若一样重，6是次品。</li>
+<li>一样重：说明1,2,5,3,6,9都是正常球。4重，或者7轻或8轻，[第三次]比较7，8。</li>
+<li>{1，2，5}轻：说明5轻或者3重，[第三次]比较3（或者5）和一个正常地即可（比如9）c)</li>
+</ol>
+</li>
+<li>如果前两组中，{5，6，7，8}重，同{1，2，3，4}重的情况分析。</li>
+</ul>
+<h3 id="a中5个球b中7个球甲乙两个人每次至少取一个球且只能取同一个箱子的球取到最后一个球的人输问先手是否有必胜策略">A中5个球，B中7个球，甲乙两个人每次至少取一个球，且只能取同一个箱子的球。取到最后一个球的人输。问先手是否有必胜策略？</h3>
+<ul>
+<li>有。这个题就是手工dp。a,b&lt;=1时分析很简单，略。 在a=b,a&gt;=2的时候先手会输，其余时候先手必胜。</li>
+</ul>
+<h1 id="9-数学题">9 数学题</h1>
+<h3 id="三门问题">三门问题</h3>
+<p>有三个盒子，其中一个有奖品，参与者选中一个后，主持人打开另一个盒子没有奖品，问参与者是否换盒子，换与不换的中奖概率是？</p>
+<h3 id="给一个函数gg以p的概率输出1以1-p的概率输出0设计一个函数f以等概率的情况输出0和1">给一个函数g，g以p的概率输出1，以1-p的概率输出0，设计一个函数f以等概率的情况输出0和1</h3>
+<p>拒绝采样法 ：调用两次g, 如果结果是0/1，输出0，结果是1/0输出1，结果是1/1或者0/0则再重新算一次。</p>
+<h3 id="一个圆内随机三个点刚好在一个半圆的概率">一个圆内随机三个点刚好在一个半圆的概率</h3>
+<p><a href="https://www.zhihu.com/question/339701586/answer/783235268">圆内任取三点/四点在同一半圆内的概率是多少？ - 心月狐的回答 - 知乎</a> 灵感： 在圆周上随机取三个点，形成锐角三角形、直角三角形、钝角三角形的概率分别为？ （答案：1/4 0 3/4）其实钝角三角形就是在同一个半圆上。</p>
+<hr>
+<p>最后 <strong>点个赞再走呗 (≧▽≦)/</strong> [疯狂暗示][疯狂暗示][疯狂暗示]</p>
+<p>作者：铃离
+链接：https://juejin.cn/post/6901683754851532813</p>
+<p>链接：https://juejin.cn/post/6901692006465011719</p>
+<p>来源：掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Ye Zheng</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2020-12-01
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://www.yezheng.pro/tags/interview/">interview</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/interview/algorithms/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">algorithms interview questions</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/interview/any-path/">
+            <span class="next-text nav-default">any path</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:csyezheng@gmail.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://stackoverflow.com/users/5694480" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://www.linkedin.com/in/%E7%83%A8-%E9%83%91-a2a987100/" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/csyezheng" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://www.yezheng.pro/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/csyezheng/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2021
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Ye Zheng
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

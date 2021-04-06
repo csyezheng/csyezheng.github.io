@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="" />
+  <meta name="description" content="进程间通信 Liunx多路复用机制 epoll特点、和select区别、底层实现 水平触发、边沿触发 父进程有十个线程fork出的子进程有几个线程 子" />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -60,19 +60,19 @@
 
 
 <meta property="og:title" content="unix" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="进程间通信 Liunx多路复用机制 epoll特点、和select区别、底层实现 水平触发、边沿触发 父进程有十个线程fork出的子进程有几个线程 子" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/interview/unix/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2019-12-01T00:00:00&#43;00:00" />
 <meta property="article:modified_time" content="2019-12-01T00:00:00&#43;00:00" />
 
 <meta itemprop="name" content="unix">
-<meta itemprop="description" content=""><meta itemprop="datePublished" content="2019-12-01T00:00:00&#43;00:00" />
+<meta itemprop="description" content="进程间通信 Liunx多路复用机制 epoll特点、和select区别、底层实现 水平触发、边沿触发 父进程有十个线程fork出的子进程有几个线程 子"><meta itemprop="datePublished" content="2019-12-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-12-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="0">
+<meta itemprop="wordCount" content="1182">
 <meta itemprop="keywords" content="interview," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="unix"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="进程间通信 Liunx多路复用机制 epoll特点、和select区别、底层实现 水平触发、边沿触发 父进程有十个线程fork出的子进程有几个线程 子"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -317,13 +317,106 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#advanced-io">Advanced I/O</a>
+      <ul>
+        <li><a href="#nonblocking-io">Nonblocking I/O</a></li>
+        <li><a href="#io-multiplexing-io多路复用">I/O Multiplexing (I/O多路复用)</a></li>
+        <li><a href="#asynchronous-io">Asynchronous I/O</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
 </div>
 
     
     <div class="post-content">
-      
+      <p>进程间通信</p>
+<p>Liunx多路复用机制</p>
+<p>epoll特点、和select区别、底层实现</p>
+<p>水平触发、边沿触发</p>
+<p>父进程有十个线程fork出的子进程有几个线程
+子进程会克隆哪些资源
+机器有4G内存,系统本身占1G,如果父进程占用2G内存,fork子进程能否成功 有没有尝试过
+进程状态为Z、D是什么意思,为什么会出现
+怎么查看程序所占带宽,带宽满了怎么排查是哪个程序</p>
+<p>一个机器最多可以向多少个服务器发起请求</p>
+<p>一个服务器最多可以处理多少<a href="">客户端</a>连接,有没有测试过</p>
+<p>端口复用是干什么的?</p>
+<p>有没有用socket编程?服务器有没有出现TIMEWAIT状态,怎么解决的?为什么nginx不会出现这种问题?➡️端口复用</p>
+<p>Linux命令重定向 &gt; 和 &raquo;</p>
+<p>top命令，netstat命令</p>
+<p>消息队列有了解吗</p>
+<p>怎么看LINUX的状态</p>
+<p>怎么看一个服务的状态</p>
+<p>我说ps得到PID，然后NATSTAT这个PID得到连接状态</p>
+<p>问感觉后端的话给移动端和给网站的接口有什么差别</p>
+<p>一个东西只用单线程会怎么样</p>
+<p>怎么查看内存啊怎么看硬盘</p>
+<p>linux 查询七天前的日志</p>
+<p>linux查询当前目录下最大的前十个个文件</p>
+<p>linux的awk命令</p>
+<p>shell，如何查看一个进程打开了哪些文件？</p>
+<p>shell脚本，输出一个日志文件第五行出现次数最多的五个第五行的内容。</p>
+<p>shell ：统计今天的日志的个数</p>
+<p>shell：统计某某和</p>
+<p>查看端口占用</p>
+<p>ps -aux | grep</p>
+<p>netstat -anp | grep</p>
+<p>用户空间和什么空间的区别</p>
+<p>管道命令，查询，替换</p>
+<p>Linux常用操作命令</p>
+<p>自己在linux配过ip吗，ifconfig</p>
+<p>查询端口占用用什么命令: lsof、netstat</p>
+<p>查看进程: ps</p>
+<p>如何查找文件</p>
+<p>常用的Linux的命令</p>
+<p>Shell</p>
+<p>awk 取最后一列怎么写？$0 表示什么？
+查看 Linux 内核版本用什么命令？</p>
+<p>linux查询内存命令（free能查到哪些内容）</p>
+<p>怎么远程连接服务器</p>
+<p>linux中软连接和硬链接。硬链接，软链接区别
+linux替换命令是什么</p>
+<p>如何杀死 test.py进程（我说先用ps查看进程号，然后kill -9 kill掉，然后就问我如何用一行命令杀死）</p>
+<p>统计在文件夹/root 下，包含“word”的文件的个数</p>
+<p>Linux了解哪些，777代表什么权限</p>
+<h2 id="advanced-io">Advanced I/O</h2>
+<h3 id="nonblocking-io">Nonblocking I/O</h3>
+<h3 id="io-multiplexing-io多路复用">I/O Multiplexing (I/O多路复用)</h3>
+<p>IO多路复用是什么</p>
+<p>IO多路复用哪些方式</p>
+<h4 id="selectpoll和epoll">select,poll和epoll</h4>
+<p>其实所有的I/O都是轮询的方法,只不过实现的层面不同罢了.</p>
+<p>这个问题可能有点深入了,但相信能回答出这个问题是对I/O多路复用有很好的了解了.其中tornado使用的就是epoll的.</p>
+<p><a href="http://www.cnblogs.com/Anker/p/3265058.html">selec,poll和epoll区别总结</a></p>
+<p>基本上select有3个缺点:</p>
+<ol>
+<li>连接数受限</li>
+<li>查找配对速度慢</li>
+<li>数据由内核拷贝到用户态</li>
+</ol>
+<p>poll改善了第一个缺点</p>
+<p>epoll改了三个缺点.</p>
+<p>关于epoll的: <a href="http://www.cnblogs.com/my_life/articles/3968782.html">http://www.cnblogs.com/my_life/articles/3968782.html</a></p>
+<h4 id="edge-and-level-trigger-边沿触发和水平触发">Edge and Level Trigger (边沿触发和水平触发)</h4>
+<p>边缘触发是指每当状态变化时发生一个 io 事件，条件触发是只要满足条件就发生一个 io 事件</p>
+<pre><code># https://github.com/Lawouach/WebSocket-for-Python/blob/master/ws4py/manager.py
+
+class EPollPoller(object):
+    def __init__(self, timeout=0.1):
+        &quot;&quot;&quot;
+        An epoll poller that uses the ``epoll``
+        implementation to determines which
+        file descriptors have data available to read.
+        Available on Unix flavors mostly.
+        &quot;&quot;&quot;
+        self.poller = select.epoll()
+        self.timeout = timeout
+</code></pre><h3 id="asynchronous-io">Asynchronous I/O</h3>
+
     </div>
 
     
@@ -374,8 +467,8 @@
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
-          <a class="next" href="/post/interview/system-design/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
-            <span class="next-text nav-default">数据库分库分表</span>
+          <a class="next" href="/post/interview/web-application/">
+            <span class="next-text nav-default">web applications</span>
             <span class="prev-text nav-mobile">Next</span>
             
             <i class="iconfont">

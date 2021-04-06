@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="1 事务 数据库事务(Database Transaction) ，是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。 彻底理解数据库事务: http://www.hollischuang.com/archives/898 2 数" />
+  <meta name="description" content="数据库索引优化 使用什么存储引擎 有没有测试过数据量过大对并发效果的影响 表数据量太大怎么解决 分表需要停机吗 可以不停机吗(先复制一份出来分表再迁移" />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -60,19 +60,19 @@
 
 
 <meta property="og:title" content="databases interview questions" />
-<meta property="og:description" content="1 事务 数据库事务(Database Transaction) ，是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。 彻底理解数据库事务: http://www.hollischuang.com/archives/898 2 数" />
+<meta property="og:description" content="数据库索引优化 使用什么存储引擎 有没有测试过数据量过大对并发效果的影响 表数据量太大怎么解决 分表需要停机吗 可以不停机吗(先复制一份出来分表再迁移" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/interview/databases/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-12-01T00:00:00&#43;00:00" />
 <meta property="article:modified_time" content="2020-12-01T00:00:00&#43;00:00" />
 
 <meta itemprop="name" content="databases interview questions">
-<meta itemprop="description" content="1 事务 数据库事务(Database Transaction) ，是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。 彻底理解数据库事务: http://www.hollischuang.com/archives/898 2 数"><meta itemprop="datePublished" content="2020-12-01T00:00:00&#43;00:00" />
+<meta itemprop="description" content="数据库索引优化 使用什么存储引擎 有没有测试过数据量过大对并发效果的影响 表数据量太大怎么解决 分表需要停机吗 可以不停机吗(先复制一份出来分表再迁移"><meta itemprop="datePublished" content="2020-12-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-12-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2106">
+<meta itemprop="wordCount" content="3224">
 <meta itemprop="keywords" content="interview," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="databases interview questions"/>
-<meta name="twitter:description" content="1 事务 数据库事务(Database Transaction) ，是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。 彻底理解数据库事务: http://www.hollischuang.com/archives/898 2 数"/>
+<meta name="twitter:description" content="数据库索引优化 使用什么存储引擎 有没有测试过数据量过大对并发效果的影响 表数据量太大怎么解决 分表需要停机吗 可以不停机吗(先复制一份出来分表再迁移"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -346,7 +346,75 @@
 
     
     <div class="post-content">
-      <h2 id="1-事务">1 事务</h2>
+      <p>数据库索引优化
+使用什么存储引擎 有没有测试过数据量过大对并发效果的影响
+表数据量太大怎么解决
+分表需要停机吗 可以不停机吗(先复制一份出来分表再迁移?)
+复制的时候可以写入吗</p>
+<p>数据库的优化方法</p>
+<p>数据太多怎么办</p>
+<p>表里按照grade来group，该怎么加速</p>
+<p>数据库索引的数据结构？</p>
+<p>left join 、in</p>
+<p>数据库怎么建索引比较好</p>
+<p>数据库优化查询方法</p>
+<p>数据库设计, 优化, 索引的原理, 哈希之类的</p>
+<p>数据库的三种设计模式还是设计方法来着</p>
+<p>要是数据库里的数据内存中装不下的话该怎么办</p>
+<p>sql class_id,student_id cs表 查询前10个学生最多的班级</p>
+<p>数据库的范式，除了三范式还有吗？</p>
+<p>手撕了一个SQL代码：姓名，课程，成绩，选出总成绩TOP5的学生。</p>
+<p>数据库的左链接右链接全链接是个啥，以及数据库建模的流程。</p>
+<p>索引问题，什么情况下该加索引，性别应该加索引吗？</p>
+<p>一道sql题，出个场景写sql，怎么加索引，加了之后的执行过程。</p>
+<p>分析 sql语句的时间</p>
+<p>有一个表，只有一个字段队名，四条数据abcd。假设abcd分别代表四只足球队，写一条sql，结果是四只球队之间的对阵。</p>
+<p>知道哪些存储引擎</p>
+<p>存储引擎在MySQL这个系统架构的哪个位置</p>
+<p>事务的特点</p>
+<p>什么是持久性、一致性</p>
+<p>如何实现事务，MVCC是什么</p>
+<p>数据库索引结构是什么样的?B+树，然后问对磁盘有什么优势，降低IO次数，问为什么，B+树的特点</p>
+<p>三范式
+传递依赖，举个例子
+那我们平时数据库设计时候要按照三范式设计吗</p>
+<p>数据库的索引了解吗？干嘛用的？有哪些种类？主键索引和普通索引区别是什么？</p>
+<p>MySQL索引为什么使用B+树，而不是B树 二叉树</p>
+<p>数据库的ACID是什么？通过什么实现的？</p>
+<p>为什么要写 redo log 呢？比直接写入数据库有什么优势吗？</p>
+<p>幻读是什么？是什么造成了幻读。</p>
+<p>什么是联合索引？索引越多越好吗</p>
+<p>求一个表内有个字段是日期类型，求各个时间段的条目</p>
+<p>sql题:
+给一个表a class_id student_id 找到学生最多的十个班级</p>
+<p>sql执行流程
+mysql如何实现事务？(redo undo ..居然没想起来)</p>
+<p>orm insert many</p>
+<p>ORM和原生数据库的区别</p>
+<p>ORM还有什么其他优点</p>
+<p>什么是SQL注入</p>
+<p>数据库中一二三范式各解决了什么问题</p>
+<p>sql语句，group by，having，limit，distinct，case when，表联结？</p>
+<p>关系型数据库与非关系型数据库的区别，它们的索引是一样的吗</p>
+<p>数据库索引原理</p>
+<p>数据库怎么建立索引？
+数据库的事务四大特性？分别是什么意思？</p>
+<p>还知道其他时序数据库？</p>
+<p>时序数据库和其他数据库之间的区别？</p>
+<p>时序数据库数据存入之后能修改吗？因为是时序，默认是不能修改的只能append。</p>
+<p>数据库分组查询</p>
+<p>select执行顺序</p>
+<p>聚簇索引是什么
+联合索引是什么
+最左匹配原则
+B+树索引和Hash索引的区别</p>
+<p>事务隔离性
+什么是幻读
+怎么解决幻读的</p>
+<p>MySQL索引是什么结构</p>
+<p>B+树和普通搜索树的区别</p>
+<p>sql的语法 group by</p>
+<h2 id="1-事务">1 事务</h2>
 <p>数据库事务(Database Transaction) ，是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。 彻底理解数据库事务: <a href="http://www.hollischuang.com/archives/898">http://www.hollischuang.com/archives/898</a></p>
 <h2 id="2-数据库索引">2 数据库索引</h2>
 <p>推荐: <a href="http://tech.meituan.com/mysql-index.html">http://tech.meituan.com/mysql-index.html</a></p>
@@ -458,7 +526,7 @@
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/interview/computer-networks/">
+          <a class="prev" href="/post/interview/computer-systems/">
             
             <i class="iconfont">
               <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -468,7 +536,7 @@
 </svg>
 
             </i>
-            <span class="prev-text nav-default">computer networks interview questions</span>
+            <span class="prev-text nav-default">computer systems</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         

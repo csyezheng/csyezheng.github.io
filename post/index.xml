@@ -8,24 +8,6 @@
     <language>en</language>
     <lastBuildDate>Thu, 01 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>25 Phone Interview Tips</title>
-      <link>http://www.yezheng.pro/post/interview/phone-interview-tips/</link>
-      <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/phone-interview-tips/</guid>
-      <description>Phone Interview Questions Tell me about yourself / Tell me about your background Describe yourself Why are you applying for this position? Why do you want this jon? Tell me what you know the role Why do you want to work here? Why are you looking for jobs? What are you passionate about? What are your salary expectations? Are you interviewing with other companies? Phone interview tips 1. Confirm the</description>
-    </item>
-    
-    <item>
-      <title>General Interview Question</title>
-      <link>http://www.yezheng.pro/post/interview/general/</link>
-      <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/general/</guid>
-      <description>1. What past accomplishments are you most proud of? 在大型团队会议中，同样几个人会一直说话，而其他人则保持沉默。我向经理建议，我们在会议召开前48小时给团队一个提示，并邀请他</description>
-    </item>
-    
-    <item>
       <title>How To Use the STAR Interview Response Technique</title>
       <link>http://www.yezheng.pro/post/interview/star/</link>
       <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
@@ -156,6 +138,24 @@ Scale: Indexing and IO Model Sorting, Building Indices Part 1 B+ Trees Query Opt
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/microservices/hands-on_docker_for_microservices_with_python/</guid>
       <description>Preface For the technical aspects, we will use well-tailored tools, including the following: Python, to implement RESTful web services Git source control, to track the changes in an implementation, and GitHub, to share those changes Docker containers, to standardize the operation of each of the microservices Kubernetes, to coordinate the execution of multiple services Cloud services, such as Travis CI or AWS, to leverage existing commercial solutions to problems We</description>
+    </item>
+    
+    <item>
+      <title>monitor</title>
+      <link>http://www.yezheng.pro/post/interview/monitor/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/monitor/</guid>
+      <description>zabbix部署过程，可以监控nginx的哪些参数，zabbix要监控nginx，nginx在另外一台服务器上那zabbix是如何知道ngi</description>
+    </item>
+    
+    <item>
+      <title>Must ask</title>
+      <link>http://www.yezheng.pro/post/interview/must-ask/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/must-ask/</guid>
+      <description>简单自我介绍 项目大概介绍 对岗位了解吗 项目遇到什么问题 怎么解决 作为组长怎么管理 发展方向 让说说自己的优缺点 你觉得你能为我们带来什么？ 请用三个词评</description>
     </item>
     
     <item>

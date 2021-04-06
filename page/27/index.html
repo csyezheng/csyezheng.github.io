@@ -295,15 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/big-data/flink/">flink</a>
+      <a class="post-link" href="/post/specialization/web-application/spring/mybatis/">Spring Context</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-11-12" class="post-time">
-        2020-11-12
+      <time datetime="2020-11-18" class="post-time">
+        2020-11-18
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/big-data/"> big-data </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -315,10 +315,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Apache Flink Web Dashboard
+      applicationContext.xml &lt;context:component-scan base-package=&quot;org.example&quot;/&gt; Classpath scanning and managed components
+&lt;bean id=&quot;txManager&quot; class=&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt; &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt; &lt;/bean&gt; &lt;tx:annotation-driven transaction-manager=&quot;txManager&quot;/&gt; &lt;tx:advice id=&quot;txAdvice&quot; transaction-manager=&quot;txManager&quot;&gt; &lt;tx:attributes&gt; &lt;tx:method name=&quot;create*&quot; propagation=&quot;REQUIRED&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot; /&gt; &lt;tx:method name=&quot;delete*&quot; propagation=&quot;REQUIRED&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot; /&gt; &lt;tx:method name=&quot;update*&quot; propagation=&quot;REQUIRED&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot; /&gt; &lt;tx:method name=&quot;get*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; timeout=&quot;300&quot; /&gt; &lt;tx:method name=&quot;*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot;/&gt; &lt;/tx:attributes&gt; &lt;/tx:advice&gt; &lt;aop:config&gt; &lt;aop:pointcut id=&quot;txPointcut&quot; expression=&quot;execution(* com.mico.emptyspring.service.*ServiceA.*(..))&quot; /&gt; &lt;aop:advisor pointcut-ref=&quot;txPointcut&quot; advice-ref=&quot;txAdvice&quot; /&gt; &lt;/aop:config&gt; Transaction Management
+&lt;bean id=&quot;sqlSessionFactory&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&gt; &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt; &lt;property name=&quot;configuration&quot;&gt; &lt;bean class=&quot;org.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/big-data/flink/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/spring/mybatis/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -329,15 +331,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/cloud-computing/15-319/">Cloud Computing</a>
+      <a class="post-link" href="/post/specialization/web-application/spring/practice/">Spring Practice</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-10-27" class="post-time">
-        2020-10-27
+      <time datetime="2020-11-18" class="post-time">
+        2020-11-18
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/cloud-computing/"> cloud-computing </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -349,10 +351,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Introduction and Course Logistics Data Analytics Big Data Analytics Elasticity and Auto Scaling Containers and Kubernetes Serverless Computing and Functions-as-a-Service Flat Files and Databases &amp; Team Project Social Network, Heterogenous Storage and DBaaS &amp; Team Project Replication and Consistency and Team Project Phase 1 Team Project Phase 1 Iterative Batch Processing in Spark and Team Project Phase 2 Team Project Phase 2 and Live Test Machine Learning on the Cloud and Team Project Phase 3 Team Project Phase 3 and Live Test Stream Processing with Kafka &amp; Samza Reference  https://www.
+      vo  package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } }  dao  import org.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/cloud-computing/15-319/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/spring/practice/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -363,15 +365,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/cloud-computing/infrastructure/introduction-to-cloud-infrastructure-technologies/">Introduction to Cloud Infrastructure Technologies</a>
+      <a class="post-link" href="/post/any-path/blog/">Link custom domain to Github pages</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-10-12" class="post-time">
-        2020-10-12
+      <time datetime="2020-11-15" class="post-time">
+        2020-11-15
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/cloud-computing/"> cloud-computing </a>
+          <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
           
         </div>
       
@@ -383,11 +385,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Chapter 1. Virtualization Introduction and Learning Objectives Introduction to Cloud Computing and Technologies Historically, the word cloud was used as a metaphor for Internet. Later on, it was used to depict the Internet in computer network diagrams. To find out more about the origin of the cloud, you can take a look at the details provided on Wikipedia.
-Cloud computing can be referred as the allocation of resources on the cloud.
+      Register Domain Name Namesilo
+Use a Custom Domain If you’d like to use a custom domain for your GitHub Pages site, create a file static/CNAME. Your custom domain name should be the only contents inside CNAME. Since it’s inside static, the published site will contain the CNAME file at the root of the published site, which is a requirements of GitHub Pages.
+DNS service provider Create Cloudflare account Enter your domain name yezheng.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/cloud-computing/infrastructure/introduction-to-cloud-infrastructure-technologies/" class="read-more-link">Read more</a>
+      <a href="/post/any-path/blog/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2133,6 +2136,111 @@ Cloud computing can be referred as the allocation of resources on the cloud.
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/28/">»</a></li>
@@ -2140,7 +2248,7 @@ Cloud computing can be referred as the allocation of resources on the cloud.
 
       
       
-      <li><a href="/page/76/">»»</a></li>
+      <li><a href="/page/81/">»»</a></li>
       
 
       </ul>

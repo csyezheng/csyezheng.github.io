@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="1 Python的函数参数传递 看两个例子: a = 1 def fun(a): a = 2 fun(a) print a # 1 a = [] def fun(a): a.append(1) fun(a) print a # [1] 所有的变量都可以理解是内存中一个对象的“引用”，或者" />
+  <meta name="description" content="python装饰器 python可变对象不可变对象 项目运行环境一般是什么 list和tuple的区别 list去重 装饰器（用函数实现，和类实现） def" />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -60,19 +60,19 @@
 
 
 <meta property="og:title" content="python interview questions" />
-<meta property="og:description" content="1 Python的函数参数传递 看两个例子: a = 1 def fun(a): a = 2 fun(a) print a # 1 a = [] def fun(a): a.append(1) fun(a) print a # [1] 所有的变量都可以理解是内存中一个对象的“引用”，或者" />
+<meta property="og:description" content="python装饰器 python可变对象不可变对象 项目运行环境一般是什么 list和tuple的区别 list去重 装饰器（用函数实现，和类实现） def" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/interview/python/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-12-01T00:00:00&#43;00:00" />
 <meta property="article:modified_time" content="2020-12-01T00:00:00&#43;00:00" />
 
 <meta itemprop="name" content="python interview questions">
-<meta itemprop="description" content="1 Python的函数参数传递 看两个例子: a = 1 def fun(a): a = 2 fun(a) print a # 1 a = [] def fun(a): a.append(1) fun(a) print a # [1] 所有的变量都可以理解是内存中一个对象的“引用”，或者"><meta itemprop="datePublished" content="2020-12-01T00:00:00&#43;00:00" />
+<meta itemprop="description" content="python装饰器 python可变对象不可变对象 项目运行环境一般是什么 list和tuple的区别 list去重 装饰器（用函数实现，和类实现） def"><meta itemprop="datePublished" content="2020-12-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-12-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="7540">
+<meta itemprop="wordCount" content="11282">
 <meta itemprop="keywords" content="interview," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="python interview questions"/>
-<meta name="twitter:description" content="1 Python的函数参数传递 看两个例子: a = 1 def fun(a): a = 2 fun(a) print a # 1 a = [] def fun(a): a.append(1) fun(a) print a # [1] 所有的变量都可以理解是内存中一个对象的“引用”，或者"/>
+<meta name="twitter:description" content="python装饰器 python可变对象不可变对象 项目运行环境一般是什么 list和tuple的区别 list去重 装饰器（用函数实现，和类实现） def"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -369,7 +369,217 @@
 
     
     <div class="post-content">
-      <h2 id="1-python的函数参数传递">1 Python的函数参数传递</h2>
+      <p>python装饰器
+python可变对象不可变对象</p>
+<p>项目运行环境一般是什么</p>
+<p>list和tuple的区别</p>
+<p>list去重</p>
+<p>装饰器（用函数实现，和类实现）</p>
+<pre><code>def f1(func):
+    def f2(*args,**kwargs):
+        ...
+        return func(*args,**kwargs)
+    return f2
+
+class fn1:
+    def __init__(self,func):
+        self.func=func
+    def __call__(self, *args, **kwargs):
+        ...
+        return self.func(*args,**kwargs)
+</code></pre><p>装饰器处理异常并且记录（没太理解，用的try expect）</p>
+<pre><code>def h1(func):
+    def h2(*args,**kwargs):
+        try:
+            return func(*args,**kwargs)
+        except Exception as e:
+            print(e)
+@h1
+def test():
+    list=[]
+    return list[100]
+test()
+</code></pre><p>gil锁</p>
+<p>用过哪些python解释器</p>
+<p>问C JAVA python有什么不同</p>
+<p>列表嵌套元组，分别按字母和数字排序</p>
+<p>元组列表区别;</p>
+<p>列表嵌套列表排序，年龄数字相同怎么办？</p>
+<p>根据键对字典排序(方法一，zip函数)</p>
+<p>根据键对字典排序(方法二,不用zip)</p>
+<p>列表推导式、字典推导式、生成器</p>
+<p>根据字符串长度排序，看排序是否灵活运用</p>
+<p>问程序在计算机中运行时的全部底层构成，就是堆、栈、程序计数器、寄存器这些的，问IOError、AttributeError、ImportError、IndentationError、IndexError、KeyError、SyntaxError、NameError分别代表什么异常</p>
+<p>a = ”  hehheh  “,去除收尾空格</p>
+<p>举例sort和sorted对列表排序，list=[0,-1,3,-10,5,9]</p>
+<p>对list排序foo = [-5,8,0,4,9,-4,-20,-2,8,2,-4],使用lambda函数从小到大排序</p>
+<p>列表嵌套字典的排序，分别根据年龄和姓名排序</p>
+<p>python的闭包</p>
+<p>s=”info:xiaoZhang 33 shandong”,用正则切分字符串输出[‘info‘, ‘xiaoZhang‘, ‘33‘, ‘shandong‘]</p>
+<p>正则匹配以163.com结尾的邮箱</p>
+<p>递归求和</p>
+<p>python字典和json字符串相互转化方法</p>
+<p>python引用计数机制</p>
+<p>生成器，感觉主要就是问面向对象相关的</p>
+<p>与数据库是怎么交互的，我说了操作，他问我底层是怎么实现的呢</p>
+<p>python的多态怎么实现的，装饰器和可变参数、关键字参数</p>
+<p>filter方法求出列表所有奇数并构造新列表，a =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</p>
+<p>正则re.complie作用</p>
+<p>用python删除文件和用linux命令删除文件方法</p>
+<p>log日志中，我们需要用时间戳记录error,warning等的发生时间，请用datetime模块打印当前时间戳 “2018-04-01 11:38:54”</p>
+<p>请列出你会的任意一种统计图(条形图、折线图等)绘制的开源库，第三方也行</p>
+<p>写一段自定义异常代码</p>
+<p>正则表达式匹配中，(.<em>)和(.</em>?)匹配区别？</p>
+<p>简述Django的orm</p>
+<p>[[1,2],[3,4],[5,6]]一行代码展开该列表，得出[1,2,3,4,5,6]</p>
+<p>x=”abc”,y=”def”,z=[“d”,”e”,”f”],分别求出x.join(y)和x.join(z)返回的结果</p>
+<p>举例说明异常模块中try except else finally的相关意义</p>
+<p>python中交换两个数值</p>
+<p>举例说明zip()函数用法</p>
+<p>a=”张明 98分”，用re.sub，将98替换为100</p>
+<p>a=”hello”和b=”你好”编码成bytes类型</p>
+<p>[1,2,3]+[4,5,6]的结果是多少？</p>
+<p>提高python运行效率的方法</p>
+<p>写一个单列模式</p>
+<p>保留两位小数</p>
+<p>求三个方法打印结果</p>
+<p>使用pop和del删除字典中的”name”字段，dic={“name”:”zs”,”age”:18}</p>
+<p>zip函数</p>
+<p>简述any()和all()方法</p>
+<p>python中copy和deepcopy区别</p>
+<p>列出几种魔法方法并简要介绍用途</p>
+<p>C:\Users\ry-wu.junya\Desktop&gt;python 1.py 22 33命令行启动程序并传参，print(sys.argv)会输出什么数据？文件名和参数构成的列表</p>
+<p>请将[i for i in range(3)]改成生成器</p>
+<p>r、r+、rb、rb+文件打开模式区别</p>
+<p>python传参数是传值还是传址？</p>
+<p>求两个列表的交集、差集、并集</p>
+<p>生成0-100的随机数</p>
+<p>lambda匿名函数好处</p>
+<p>单引号、双引号、三引号用法</p>
+<p>python垃圾回收机制</p>
+<p>python中读取Excel文件的方法</p>
+<p>python正则中search和match</p>
+<p>8转二进制</p>
+<p>python 参数 *和**区别</p>
+<p>python 装饰器</p>
+<p>python的计算密集和IO密集任务</p>
+<p>泛型什么意思</p>
+<p>面向对象编程和面向切面编程</p>
+<p>说一下你对修饰器和@的认识</p>
+<p>垃圾回收机制</p>
+<p>print(0+”0”)会不会报错，为什么</p>
+<p>爬取数据的时候遇到了什么反爬虫情况？你了解有哪些反爬虫机制？</p>
+<p>python中list和tuple有什么区别？怎么转化？</p>
+<p>python的内存管理</p>
+<p>gevent你是怎么使用的？
+Django有什么模块？</p>
+<p>Python的深拷贝和浅拷贝怎么理解</p>
+<p>GIL是个啥</p>
+<p>Python多进程和多线程在哪些情况下使用</p>
+<p>说出你常用的几个库；说出几个比较难得内置函数</p>
+<p>如何计算多个函数花费的时间</p>
+<p>问了字符串反转</p>
+<p>python相关知识，迭代器、生成器、装饰器？metaclass、args、kwargs。Flask与wsgi是如何交互的？Flask源码读过么？Flask的IO多路复用用在了什么地方？</p>
+<p>python装饰器，输入类型和输出类型</p>
+<p>unit test用例的执行顺序</p>
+<p>python执行Linux命令</p>
+<p>python，使用过的包</p>
+<p>python和C++、Java的区别是什么？python有编译吗？</p>
+<p>python的args和kwargs、_<em>metaclass</em>_、反射</p>
+<p>python的装饰器、functools.wraps的原理、atexit、多种方法实现单例模式。</p>
+<p>Flask的context、threadlocal。</p>
+<p>python的dict 底层是什么 哈希算法</p>
+<p>python的垃圾回收机制</p>
+<p>递归太深会怎样？答栈溢出。为什么会栈溢出？python函数中的临时变量存在哪？那很深的时候，用循环会怎样呢？为什么不会栈溢出？</p>
+<p>什么是阻塞？</p>
+<p>装饰器是什么？装饰器中的变量是放在哪的呢？</p>
+<p>反射是什么</p>
+<p>如何测试rpc服务的并发量。python的多线程可以么？python有GIL，为什么多线程还生效？</p>
+<p>Thrift有什么优缺点。</p>
+<p>dict的底层实现</p>
+<p>python的迭代器和生成器，有什么区别和特性</p>
+<p>python装饰器、有参数的装饰器和没参数的装饰器有什么区别</p>
+<p>python里is和==的区别？a=1，b=1，a is b是啥？python会缓存什么？</p>
+<p>内存中堆和栈的区别？临时变量放哪？</p>
+<p>Python dict 底层实现（哈希表）</p>
+<p>编译型和解释型语言的区别</p>
+<p>GIL是什么？为什么有GIL？</p>
+<p>python如何利用多核（多进程就可以啦）</p>
+<p>什么wsgi</p>
+<p>python的list底层是怎么实现的？各种操作复杂度？</p>
+<p>python和C++区别</p>
+<p>用Python实现一个二分查找</p>
+<p>Python多线程和多进程的区别？</p>
+<p>Python画图都用过哪些模块，画过哪些图？</p>
+<p>Python GIL，如何解决</p>
+<p>协程</p>
+<p>迭代器、生成器</p>
+<p>垃圾回收</p>
+<p>手撕单例</p>
+<p>实例方法、类方法、静态方法</p>
+<p>用过哪些python的库</p>
+<p>高阶函数，迭代器，生成器</p>
+<p>python的xrang和rang区别</p>
+<p>Python 2 和 Python 3 的区别有哪些？</p>
+<p>range(100) 是什么意思？迭代器是 Python 2 还是 Python 3的？</p>
+<p>Python 中 search 和 match 的区别？他们扫描开始的位置有什么区别？</p>
+<p>mapreduce原理</p>
+<p>多个reduce的输出，但是要统计的是uv，怎么弄</p>
+<p>协程写过吗</p>
+<p>Django和flask区别</p>
+<p>ORM语句（模糊查询，Like）</p>
+<p>go和python的协程</p>
+<p>说一下Flask架构</p>
+<p>flask跟django有什么区别</p>
+<p>ORM有什么优点和缺点</p>
+<p>python多线程有什么情况适用</p>
+<p>那python里面有没有其他异步方式</p>
+<p>命令的方式抓包</p>
+<p>常用的python库</p>
+<p>list和字典的区别，有序和无序</p>
+<p>class中的self</p>
+<p>python异常处理(try,except,else,catch,finally,raise)；</p>
+<p>迭代器自带方法(next);</p>
+<p>python的多继承。</p>
+<p>装饰器有用过吗？能大概说一下怎么定义一个装饰器吗？定义完装饰器以后怎么使用它？</p>
+<p>你能写一个递归函数吗？随便一个场景说一下</p>
+<p>平时有用到 Python 的文本开发环境吗？</p>
+<p>zip函数功能</p>
+<p>字典怎么删除键值</p>
+<p><code>__init__</code>和<code>__new__</code>的区别</p>
+<p>Python线程寫法</p>
+<p>线程接收web高并发</p>
+<p>String类型和char类型数据的区别。</p>
+<p>判断字典键是否存在有几种方法。好像是有三种。</p>
+<p>python分代回收中的数据结构</p>
+<p>python中的回收对象怎么快速确定内存位置</p>
+<p>python回收内存溢出情况，怎么检查以及处理</p>
+<ul>
+<li>什么是python元类</li>
+<li>python库？</li>
+<li>python进程/线程/协程</li>
+<li>python协程怎么使用</li>
+<li>python死锁怎么处理？怎么避免</li>
+</ul>
+<p>字典、元组、列表的in方法哪个更快</p>
+<p>open和with open的区别，平常用哪个比较多</p>
+<p>正則<code>.*</code>和<code>.*?</code>的区别</p>
+<p>Django中客户端发送过来的请求如何处理，返回一个什么对象</p>
+<p>字典树</p>
+<p>迭代器</p>
+<p>Python数据类型</p>
+<p>如何更新字典，如果key有重复用哪个value</p>
+<p>如何合并两个list</p>
+<p>list如何快速去重</p>
+<p>Python用过哪些库</p>
+<p>正则表达式 .*是什么意思，*是什么意思</p>
+<p>search和match区别</p>
+<p>match()函数只检测字符串开头位置是否匹配，匹配成功才会返回结果，否则返回None
+search()函数会在整个字符串内查找模式匹配,只到找到第一个匹配然后返回一个包含匹配信息的对象
+异常处理
+index的作用
+列表去重</p>
+<h2 id="1-python的函数参数传递">1 Python的函数参数传递</h2>
 <p>看两个例子:</p>
 <pre><code>a = 1
 def fun(a):
@@ -717,8 +927,9 @@ my_singleton.foo()
 <li>外部函数的返回值必须是内嵌函数</li>
 </ol>
 <p>感觉闭包还是有难度的,几句话是说不明白的,还是查查相关资料.</p>
-<p>重点是函数运行后并不会被撤销,就像16题的instance字典一样,当函数运行完后,instance并不被销毁,而是继续留在内存空间里.这个功能类似类里的类变量,只不过迁移到了函数上.</p>
+<p>重点是函数运行后并不会被撤销,就像16题的instance字典一样,当函数运行完后,instance并不被销毁,<strong>而是继续留在内存空间里</strong>.这个功能类似类里的类变量,只不过迁移到了函数上. 这种方式外部函数的局部变量会长时间驻留在内存里,</p>
 <p>闭包就像个空心球一样,你知道外面和里面,但你不知道中间是什么样.</p>
+<p>内部函数如何修改外部函数的局部变量？nonlocal</p>
 <h2 id="21-lambda函数">21 lambda函数</h2>
 <p>其实就是一个匿名函数,为什么叫lambda?因为和后面的函数式编程有关.</p>
 <p>推荐: <a href="http://www.zhihu.com/question/20125256">知乎</a></p>
@@ -784,6 +995,9 @@ d =  [1, 2, 3, 4, ['a', 'b']]
 <p>推荐: <a href="http://www.jianshu.com/p/J4U6rR">http://www.jianshu.com/p/J4U6rR</a></p>
 <h2 id="26-python的is">26 Python的is</h2>
 <p>is是对比地址,==是对比值</p>
+<p>每个对象都有一个唯一的身份信息, 可以用id()获取, is比较的就是这个值</p>
+<p>a = [], b=[], a is b return False</p>
+<p>判断是否是None时候可以用is，其实None是用的单例模式</p>
 <h2 id="27-readreadline和readlines">27 read,readline和readlines</h2>
 <ul>
 <li>read 读取整个文件</li>

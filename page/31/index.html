@@ -295,7 +295,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/java/java-standard-libraries/2/">The Java Standard Library</a>
+      <a class="post-link" href="/post/engineering-fundamentals/java/java-3rd-party-libraries/2/">The Java 3rd Library</a>
     </h1>
     
     <div class="post-meta">
@@ -315,10 +315,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      java  io  BufferedReader BufferedWriter ByteArrayInputStream ByteArrayOutputStream File FileFilter FileInputStream FileOutputStream IOException InputStream IntputStreamReader OutputStream OutputStreamWriter PrintWriter Reader Serializable StringReader StringWriter   lang  reflect  Field Method InvocationTargetException     math  BigDecimal   net  HttpURLConnection URL URLConnection URLDecoder URLEncoder   nio  charset  Charset     security  MessageDigest SecureRandom InvalidAlgorithmParameterException InvalidKeyException KeyManagementException NoSuchAlgorithmException NoSuchProviderException   sql  Date ResultSet ResultSetMetaData SQLException Timestamp   text  DateFormat DecimalFormat MessageFormat Normalizer NumberFormat SimpleDateFormat ParseException   util  ArrayList Arrays Base64.
+      net.sf.json JSONArray JSONNull JSONObject org.activiti.engine https://blog.csdn.net/fanxiangru999/article/details/79381966?utm_medium=distribute.wap_relevant.none-task-blog-baidulandingword-1 commons beanutils BeanUtils; collection CollectionUtils collections CollectionUtils httpclient DefaultHttpMethodRetryHandler HttpClient; HttpException HttpMethod; HttpStatus; NameValuePair; UsernamePasswordCredentials URIException; methods GetMethod; PostMethod; PutMehod RequestEntity StringRequestEntity; .HttpConnectionManagerParams; params. HttpMethodParams; io FileUtils Lang ClassUtils; StringUtils; EqualsBuilder HashCodeBuilder time DateUtils StopWatch lang3 BooleanUtils StringUtils time DateFormatUtils org.apache.http.client.H
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/java/java-standard-libraries/2/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/java/java-3rd-party-libraries/2/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -329,7 +329,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/java/java-standard-libraries/javaee-rest/">The Java Standard Library</a>
+      <a class="post-link" href="/post/engineering-fundamentals/java/java-3rd-party-libraries/4/">The Java 3rd Library</a>
     </h1>
     
     <div class="post-meta">
@@ -349,12 +349,15 @@
   <div class="post-content">
     
     <div class="post-summary">
-      import javax.ws.rs.GET; import javax.ws.rs.POST; import javax.ws.rs.PUT; import javax.ws.rs.DELETE; import javax.ws.rs.Produces; import javax.ws.rs.Path; import javax.ws.rs.PathParam; import javax.ws.rs.QueryParam; import javax.ws.rs.core.Context; import javax.ws.rs.core.MediaType;
-import javax.servlet.http.HttpServlet;
-https://docs.oracle.com/cd/E19226-01/820-7627/6nisfjmk8/index.html
+      import org.springframework.beans.factory.DisposableBean; import org.springframework.beans.factory.InitializingBean;
+import org.springframework.stereotype.Service; import org.springframework.transaction.annotation.Propagation; import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.PlatformTransactionManager; import org.springframework.transaction.TransactionDefinition; import org.springframework.transaction.TransactionStatus; import org.springframework.transaction.annotation.Propagation; import org.springframework.transaction.annotation.Transactional; import org.springframework.transaction.support.DefaultTransactionDefinition;
+import org.springframework.core.io.Resource; import org.springframework.core.io.support.PathMatchingResourcePatternResolver; import org.springframework.core.io.support.ResourcePatternResolver;
+import org.springframework.util.ClassUtils;
+import org.springframework.util.Assert; import org.springframework.util.CollectionUtils; import org.springframework.util.ReflectionUtils; import org.springframework.util.StringUtils;
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/java/java-standard-libraries/javaee-rest/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/java/java-3rd-party-libraries/4/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -365,7 +368,7 @@ https://docs.oracle.com/cd/E19226-01/820-7627/6nisfjmk8/index.html
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/java/java-standard-libraries/javaee/">The Java Standard Library</a>
+      <a class="post-link" href="/post/engineering-fundamentals/java/java-3rd-party-libraries/libraries/">The Java 3rd Library</a>
     </h1>
     
     <div class="post-meta">
@@ -385,10 +388,14 @@ https://docs.oracle.com/cd/E19226-01/820-7627/6nisfjmk8/index.html
   <div class="post-content">
     
     <div class="post-summary">
-       javax  inject  Inject Named   jms  Message MessageListener TextMessage   persistence  Transient   servlet  Filter FilterChain FilterConfig ServletInputStream ServletOutputStream ServletRequest ServletResponse ServletException http  Cookie HttpServlet HttpServletRequest HttpServletResponse HttpServletRequestWrapper HttpServletResponseWrapper     transaction  Transactional   ws  rs  DELETE GET POST PUT Path PathParam Produces QueryParam   core  Context MediaType        
+      org.apache.http org.apache.commons.dbcp2 org.apache.commons.collections
+fastjson mysql-connector-java liquibase-core liquibase-maven-plugin commons.dbcp commons.collections commons-lang3 import org.apache.commons.lang.StringUtils; jedis
+junit dbunit spring-test-dbunit spring-test spring-boot-starter-test
+disruptor
+cxf-spring-boot-starter-jaxrs cxf-spring-boot-starter-jaxws cxf-rt-rs-service-description-swagger swagger-ui
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/java/java-standard-libraries/javaee/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/java/java-3rd-party-libraries/libraries/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2134,6 +2141,111 @@ https://docs.oracle.com/cd/E19226-01/820-7627/6nisfjmk8/index.html
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/32/">»</a></li>
@@ -2141,7 +2253,7 @@ https://docs.oracle.com/cd/E19226-01/820-7627/6nisfjmk8/index.html
 
       
       
-      <li><a href="/page/76/">»»</a></li>
+      <li><a href="/page/81/">»»</a></li>
       
 
       </ul>

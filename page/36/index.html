@@ -295,15 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/artificial-intelligence/natural-language-processing/question-answering/">Question answering</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/spring/">Spring</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-06-25" class="post-time">
-        2020-06-25
+      <time datetime="2020-08-09" class="post-time">
+        2020-08-09
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -315,11 +315,14 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Reference
- https://github.com/deepmipt/DeepPavlov https://github.com/deepset-ai/FARM https://github.com/huggingface/transformers https://github.com/deepset-ai/haystack https://github.com/deepset-ai/COVID-QA https://demo.allennlp.org/reading-comprehension https://github.com/baidu/AnyQ https://github.com/allenai/bi-att-flow https://github.com/google-research/language/tree/master/language/question_answering BERT Question Answering Inference with Mixed Precision in TensorFlow https://www.kaggle.com/c/tensorflow2-question-answering/ https://github.com/chrischute/squad https://github.com/ColasGael/QA-squad https://github.com/IBM/MAX-Question-Answering http://web.stanford.edu/class/cs224n/project/default-final-project-handout.pdf https://github.com/baidu/DuReader https://github.com/google-research/language/tree/master/language/question_answering https://www.kaggle.com/c/tensorflow2-question-answering/ https://github.com/chrischute/squad https://github.com/ColasGael/QA-squad https://github.com/IBM/MAX-Question-Answering http://web.stanford.edu/class/cs224n/project/default-final-project-handout.pdf https://github.com/allenai/bi-att-flow  
+      Installation Install JDK Download jdk-8u261-linux-x64.tar.gz from Oracle
+sudo pacman -S jdk8-openjdk vim ~/.bashrc export JAVA_HOME=/usr/lib/jvm/java-8-openjdk source ~/.bashrc Install maven sudo pacman -S maven cp /opt/maven/conf/settings.xml ~/.m2/ vim ~/.m2/settings.xml &lt;mirror&gt; &lt;id&gt;alimaven&lt;/id&gt; &lt;mirrorOf&gt;central&lt;/mirrorOf&gt; &lt;name&gt;aliyun maven&lt;/name&gt; &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt; &lt;/mirror&gt; Installing the Spring Boot CLI Download the Spring Boot CLI
+wget https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-cli/2.3.3.BUILD-SNAPSHOT/spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip Extract to a directory that supports file execution.
+sudo unzip spring-boot-cli-2.3.3.BUILD-SNAPSHOT-bin.zip -d /opt/ vim ~/.bashrc Add the following line to the file
+export PATH=/opt/spring-2.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/artificial-intelligence/natural-language-processing/question-answering/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/spring/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -330,15 +333,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/master-path/carees/tencent-nlp-interview/">tencent nlp interview</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/spring-boot-cxf-jax-rs-starter/">Spring Boot CXF JAX-RS Starter</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-06-25" class="post-time">
-        2020-06-25
+      <time datetime="2020-08-03" class="post-time">
+        2020-08-03
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/master-path/"> master-path </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -350,10 +353,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      一面（技术面） 面试形式：电话面试。 简要的自我介绍。 研究生阶段最有挑战的项目是什么？ 对于这个项目，传统的方法是怎么样的？ 列举下这个任务在传统用
+      Features Registers CXF Servlet with a &ldquo;/services/*&rdquo; URL pattern for serving CXF JAX-RS endpoints.
+Optionally auto-discovers JAX-RS root resources and providers and creates a JAX-RS endpoint.
+Note the use of CXF JAX-RS Clients in SpringBoot Application is covered in this section.
+Databases sudo docker container start mysql-container-id sudo docker exec -it mysql-container-name mysql -u root -p mysql&gt; create database demo; mysql&gt; USE demo; mysql&gt; SET FOREIGN_KEY_CHECKS=0; mysql&gt; DROP TABLE IF EXISTS `student`; mysql&gt; CREATE TABLE `student` ( -&gt; `id` int(10) NOT NULL, -&gt; `name` varchar(100) DEFAULT NULL, -&gt; `sex` char(6) DEFAULT NULL, -&gt; `address` varchar(255) DEFAULT NULL, -&gt; `age` int(10) DEFAULT NULL, -&gt; PRIMARY KEY (`id`) -&gt; ) ENGINE=InnoDB DEFAULT CHARSET=utf8; mysql&gt; INSERT INTO `student` VALUES ('1', '', '', '', '22'); Creating a project spring init -d=web,mybatis,mysql --build=maven mysite dependency  &lt;dependency&gt; &lt;groupId&gt;org.
     </div>
     <div class="read-more">
-      <a href="/post/master-path/carees/tencent-nlp-interview/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/spring-boot-cxf-jax-rs-starter/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -364,15 +370,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/artificial-intelligence/natural-language-processing/tensor2tensor/">tensor2tensor</a>
+      <a class="post-link" href="/post/specialization/devops/xc/">欣宸Blog</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-06-25" class="post-time">
-        2020-06-25
+      <time datetime="2020-07-25" class="post-time">
+        2020-07-25
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
+          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
           
         </div>
       
@@ -384,10 +390,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      TranslateEnzhWmt8k =&gt; TranslateProblem ==&gt; Text2TextProblem ==&gt; Problem
+      https://cloud.tencent.com/developer/column/1662
     </div>
     <div class="read-more">
-      <a href="/post/specialization/artificial-intelligence/natural-language-processing/tensor2tensor/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/devops/xc/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2133,6 +2139,111 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/37/">»</a></li>
@@ -2140,7 +2251,7 @@
 
       
       
-      <li><a href="/page/76/">»»</a></li>
+      <li><a href="/page/81/">»»</a></li>
       
 
       </ul>

@@ -295,15 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/generate-model-structs-from-database/">generate-model-structs-from-database</a>
+      <a class="post-link" href="/post/specialization/devops/devops/">DevOps</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-30" class="post-time">
+        2019-05-30
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
           
         </div>
       
@@ -315,14 +315,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Generate gorm model structs from database
-  https://github.com/smallnest/gen
-  https://github.com/wantedly/pq2gorm
-  https://github.com/go-xorm/cmd
-  
+      What is DevOps? DevOps (a clipped compound of &ldquo;development&rdquo; and &ldquo;operations&quot;) is a software engineering culture and practice that aims at unifying software development (Dev) and software operation (Ops). The main characteristic of the DevOps movement is to strongly advocate automation and monitoring at all steps of software construction, from integration, testing, releasing to deployment and infrastructure management. DevOps aims at shorter development cycles, increased deployment frequency, and more dependable
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/generate-model-structs-from-database/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/devops/devops/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -333,15 +329,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/scala/getting-started/">Getting Started with Scala</a>
+      <a class="post-link" href="/post/specialization/devops/docker-mysql/">DevOps</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-30" class="post-time">
+        2019-05-30
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
           
         </div>
       
@@ -353,12 +349,16 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Create A Scala Project With sbt In The Command Line Installation   Java 8 JDK javac -version 
-  install sbt
-  Create a project $ mkdir practice &amp;&amp; cd practice $ sbt new scala/hello-world.g8 # pull template from GitHub - hello-world - project (sbt uses this to install manage plugins and dependencies) - build.properties - src - main - scala (All of your scala code goes here) -Main.
+      pull this image
+$ sudo docker pull mysql Start a mysql server instance
+$ sudo docker run --name some-mysql -p 3310:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7 logged in to the conainer
+$ sudo docker exec -it some-mysql mysql -u root -p Install mariadb package.
+sudo pacman -S mariadb Find out the ip of the docker container over the docker bridge:
+sudo docker inspect some-mysql | grep IPAddress connect to mysql
+mysql -h 172.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/scala/getting-started/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/devops/docker-mysql/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -369,15 +369,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/gin/">Gin</a>
+      <a class="post-link" href="/post/specialization/devops/books/">DevOps books</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-30" class="post-time">
+        2019-05-30
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
           
         </div>
       
@@ -389,11 +389,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
-$ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/sessions&quot; cookie-based Example import ( &quot;github.com/gin-contrib/sessions&quot; &quot;github.com/gin-contrib/sessions/cookie&quot; &quot;github.com/gin-gonic/gin&quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&quot;secret&quot;)) r.Use(sessions.Sessions(&quot;mysession&quot;, store)) r.GET(&quot;/incr&quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&quot;count&quot;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&quot;count&quot;, count) session.
+      Python for DevOps: Learn Ruthlessly Effective Automation  Hands-On Docker for Microservices with Python: Design, deploy, and operate a complex system with multiple microservices using Docker and Kubernetes
+Ansible for DevOps: Server and configuration management for humans
+Terraform: Up &amp; Running: Writing Infrastructure as Code
+Kubernetes: Up and Running: Dive into the Future of Infrastructure
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/gin/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/devops/books/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2139,6 +2141,111 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/56/">»</a></li>
@@ -2146,7 +2253,7 @@ $ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/ses
 
       
       
-      <li><a href="/page/76/">»»</a></li>
+      <li><a href="/page/81/">»»</a></li>
       
 
       </ul>

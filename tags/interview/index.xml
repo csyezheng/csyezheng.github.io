@@ -8,15 +8,6 @@
     <language>en</language>
     <lastBuildDate>Thu, 01 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/interview/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>25 Phone Interview Tips</title>
-      <link>http://www.yezheng.pro/post/interview/phone-interview-tips/</link>
-      <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/phone-interview-tips/</guid>
-      <description>Phone Interview Questions Tell me about yourself / Tell me about your background Describe yourself Why are you applying for this position? Why do you want this jon? Tell me what you know the role Why do you want to work here? Why are you looking for jobs? What are you passionate about? What are your salary expectations? Are you interviewing with other companies? Phone interview tips 1. Confirm the</description>
-    </item>
-    
-    <item>
       <title>How To Use the STAR Interview Response Technique</title>
       <link>http://www.yezheng.pro/post/interview/star/</link>
       <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
@@ -26,12 +17,30 @@
     </item>
     
     <item>
+      <title>monitor</title>
+      <link>http://www.yezheng.pro/post/interview/monitor/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/monitor/</guid>
+      <description>zabbix部署过程，可以监控nginx的哪些参数，zabbix要监控nginx，nginx在另外一台服务器上那zabbix是如何知道ngi</description>
+    </item>
+    
+    <item>
+      <title>Must ask</title>
+      <link>http://www.yezheng.pro/post/interview/must-ask/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/must-ask/</guid>
+      <description>简单自我介绍 项目大概介绍 对岗位了解吗 项目遇到什么问题 怎么解决 作为组长怎么管理 发展方向 让说说自己的优缺点 你觉得你能为我们带来什么？ 请用三个词评</description>
+    </item>
+    
+    <item>
       <title>[转]网上整理的google面试题</title>
       <link>http://www.yezheng.pro/post/interview/puzzles/</link>
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/interview/puzzles/</guid>
-      <description>1.1024! 末尾有多少个0？ 末尾0的个数取决于乘法中因子2和5的个数。显然乘法中因子2的个数大于5的个数，所以我们只需统计因子5的个数。 是5的倍数的数</description>
+      <description>有两个玻璃珠，求最快的方法找到临界的从楼上丢下来不会丢的层数 A B C D E 海盗，他们要瓜分 100 个金币。A B C D E，轮流提议，提议的人需要获得半票以</description>
     </item>
     
     <item>
@@ -44,12 +53,39 @@
     </item>
     
     <item>
+      <title>all in one</title>
+      <link>http://www.yezheng.pro/post/interview/all-in-one/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/all-in-one/</guid>
+      <description>1 计算机网络 1.1 网络分层和常见概念 介绍网络5层模型，每一层都实现什么功能 物理层：确保原始的数据可在各种物理媒体上以比特流的形式可靠地传输 数据链</description>
+    </item>
+    
+    <item>
+      <title>any path</title>
+      <link>http://www.yezheng.pro/post/interview/any-path/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/any-path/</guid>
+      <description>git的一些基本命令 liunx的一些基本命令</description>
+    </item>
+    
+    <item>
       <title>computer networks interview questions</title>
       <link>http://www.yezheng.pro/post/interview/computer-networks/</link>
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/interview/computer-networks/</guid>
-      <description>1 三次握手 客户端通过向服务器端发送一个SYN来创建一个主动打开，作为三次握手的一部分。客户端把这段连接的序号设定为随机数 A。 服务器端应当为一</description>
+      <description>https原理 socket连接流程 client先发送了A,server没读出,client再发送B,server读的是A还是AB tcp三次握</description>
+    </item>
+    
+    <item>
+      <title>computer systems</title>
+      <link>http://www.yezheng.pro/post/interview/computer-systems/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/computer-systems/</guid>
+      <description>4 程序编译与链接 推荐: http://www.ruanyifeng.com/blog/2014/11/compiler.html Bulid过程可以分解为4个步骤:预处理(Prepressing), 编译(Compilation)、汇编(Assem</description>
     </item>
     
     <item>
@@ -58,7 +94,7 @@
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/interview/databases/</guid>
-      <description>1 事务 数据库事务(Database Transaction) ，是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。 彻底理解数据库事务: http://www.hollischuang.com/archives/898 2 数</description>
+      <description>数据库索引优化 使用什么存储引擎 有没有测试过数据量过大对并发效果的影响 表数据量太大怎么解决 分表需要停机吗 可以不停机吗(先复制一份出来分表再迁移</description>
     </item>
     
     <item>
@@ -67,7 +103,7 @@
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/interview/operating-systems/</guid>
-      <description>1 select,poll和epoll 其实所有的I/O都是轮询的方法,只不过实现的层面不同罢了. 这个问题可能有点深入了,但相信能回答出这个问题</description>
+      <description>虚拟内存和物理内存 虚拟内存是什么 LINUX的内存管理系统 COW如何实现 ReentrantLock 与 synchronized 区别 线程池满了处理策略 用户态和内核态的区别 怎么样从用户态到内核态</description>
     </item>
     
     <item>
@@ -76,7 +112,7 @@
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/interview/python/</guid>
-      <description>1 Python的函数参数传递 看两个例子: a = 1 def fun(a): a = 2 fun(a) print a # 1 a = [] def fun(a): a.append(1) fun(a) print a # [1] 所有的变量都可以理解是内存中一个对象的“引用”，或者</description>
+      <description>python装饰器 python可变对象不可变对象 项目运行环境一般是什么 list和tuple的区别 list去重 装饰器（用函数实现，和类实现） def</description>
     </item>
     
     <item>
@@ -85,7 +121,43 @@
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/interview/redis/</guid>
-      <description></description>
+      <description>缓存 redis了解了多少 redis了解多少，跟mysql有啥区别，和MongoDB又有啥区别？ redis 内存满了怎么办？会存到disk吗？那Mong</description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>http://www.yezheng.pro/post/interview/security/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/security/</guid>
+      <description>csrf 举例说明SQL注入和解决办法 DDOS知道不 描述了一下渗透测试的流程，用nmap扫描端口的时候，问close和filtered是发生了什么，</description>
+    </item>
+    
+    <item>
+      <title>Algorithms</title>
+      <link>http://www.yezheng.pro/post/interview/algorithms/algorithms/</link>
+      <pubDate>Wed, 16 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/algorithms/algorithms/</guid>
+      <description>算法：一个环上有10个点,编号为0-9,从0点出发,每步可以顺时针到下一个点,也可以逆时针到上一个点,求:经过n步又回到0点有多少种不同的走</description>
+    </item>
+    
+    <item>
+      <title>machine learning</title>
+      <link>http://www.yezheng.pro/post/interview/ai/machine-learning/</link>
+      <pubDate>Wed, 16 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/ai/machine-learning/</guid>
+      <description>说一下什么是决策树，决策树可以解决什么问题 ID3，C4.5和CART三个有什么区别呢 项目中用到的XGBoost的原理是什么？为什么项目选择用</description>
+    </item>
+    
+    <item>
+      <title>25 Phone Interview Tips</title>
+      <link>http://www.yezheng.pro/post/interview/phone-interview-tips/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/phone-interview-tips/</guid>
+      <description>Phone Interview Questions Tell me about yourself / Tell me about your background Describe yourself Why are you applying for this position? Why do you want this jon? Tell me what you know the role Why do you want to work here? Why are you looking for jobs? What are you passionate about? What are your salary expectations? Are you interviewing with other companies? Phone interview tips 1. Confirm the</description>
     </item>
     
     <item>
@@ -98,93 +170,21 @@
     </item>
     
     <item>
-      <title>cpp</title>
-      <link>http://www.yezheng.pro/post/interview/cpp/</link>
+      <title>big data</title>
+      <link>http://www.yezheng.pro/post/interview/bigdata/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/interview/cpp/</guid>
-      <description></description>
+      <guid>http://www.yezheng.pro/post/interview/bigdata/</guid>
+      <description>数据预处理的方法 什么是大数据（他给我讲了十分钟大数据） Hadoop架构 Hadoop节点组成 客户端上传文件到Hadoop中的过程是怎么样的</description>
     </item>
     
     <item>
-      <title>django</title>
-      <link>http://www.yezheng.pro/post/interview/django/</link>
+      <title>coding questions</title>
+      <link>http://www.yezheng.pro/post/interview/coding-questions/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/interview/django/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>http://www.yezheng.pro/post/interview/go/</link>
-      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>java</title>
-      <link>http://www.yezheng.pro/post/interview/java/</link>
-      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mongodb</title>
-      <link>http://www.yezheng.pro/post/interview/mongodb/</link>
-      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/mongodb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mysql</title>
-      <link>http://www.yezheng.pro/post/interview/mysql/</link>
-      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/mysql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>system-design</title>
-      <link>http://www.yezheng.pro/post/interview/system-design/system-design/</link>
-      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/system-design/system-design/</guid>
-      <description>高并发大数据量系统的开发与维护 规则引擎应用背景</description>
-    </item>
-    
-    <item>
-      <title>unix</title>
-      <link>http://www.yezheng.pro/post/interview/unix/</link>
-      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/unix/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>数据库分库分表</title>
-      <link>http://www.yezheng.pro/post/interview/system-design/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/</link>
-      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/system-design/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/</guid>
-      <description>https://juejin.cn/post/6844903992909103117 https://cloud.tencent.com/developer/article/1430676 https://www.cnblogs.com/crossoverJie/p/11318984.html https://blog.csdn.net/liuhuiteng/article/details/107807204 https://blog.csdn.net/lixiaoxiong55/article/details/89978485 MySQL单表数据量在500万左右考虑分表</description>
-    </item>
-    
-    <item>
-      <title>interview question</title>
-      <link>http://www.yezheng.pro/post/interview/algorithms/1/</link>
-      <pubDate>Wed, 16 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/algorithms/1/</guid>
-      <description>笔试：一道英文算法题，考单链表，30分钟 两个单链表逆序存了两个非负整数，将这两个数求和，和逆序存入另一个链表 addTwoNumbers(node *p1, node *p2) 两个有序链表的合并 多线程</description>
+      <guid>http://www.yezheng.pro/post/interview/coding-questions/</guid>
+      <description>统计字符串中某字符出现次数 字符串转化大小写 用两种方法去空格 正则匹配不是以4和7结尾的手机号 两面都让写了正则 正则匹配，匹配日期2018-03-</description>
     </item>
     
   </channel>
