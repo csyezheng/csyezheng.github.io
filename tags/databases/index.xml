@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>databases on Ye Zheng&#39;s Blog</title>
+    <link>http://www.yezheng.pro/tags/databases/</link>
+    <description>Recent content in databases on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/databases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>databases</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/databases/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/databases/</guid>
+      <description>The Database Language SQL Simple Queries in SQL Queries Involving More Than One Relation Subqueries Full-Relation Operations Database Modifications Transactions in SQL Serializability Atomicity Transactions Read-Only Transactions Dirty Reads Other Isolation Levels Index Structures 数据库索引优化 Optimization Concurrency Control Multiversion Concurrency Control (多版本并发控制) 全称是Multi-Versi</description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/mysql/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/mysql/</guid>
+      <description>Scaling MySQL Planning for Scalability Buying Time Before Scaling Scaling Up Scaling Out Scaling by Consolidation Scaling by Clustering Scaling Back</description>
+    </item>
+    
+  </channel>
+</rss>

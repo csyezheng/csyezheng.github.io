@@ -295,7 +295,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/spring/mybatis/">Spring Context</a>
+      <a class="post-link" href="/post/specialization/web-application/saas/saas/">SaaS</a>
     </h1>
     
     <div class="post-meta">
@@ -315,12 +315,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      applicationContext.xml &lt;context:component-scan base-package=&quot;org.example&quot;/&gt; Classpath scanning and managed components
-&lt;bean id=&quot;txManager&quot; class=&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt; &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt; &lt;/bean&gt; &lt;tx:annotation-driven transaction-manager=&quot;txManager&quot;/&gt; &lt;tx:advice id=&quot;txAdvice&quot; transaction-manager=&quot;txManager&quot;&gt; &lt;tx:attributes&gt; &lt;tx:method name=&quot;create*&quot; propagation=&quot;REQUIRED&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot; /&gt; &lt;tx:method name=&quot;delete*&quot; propagation=&quot;REQUIRED&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot; /&gt; &lt;tx:method name=&quot;update*&quot; propagation=&quot;REQUIRED&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot; /&gt; &lt;tx:method name=&quot;get*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; timeout=&quot;300&quot; /&gt; &lt;tx:method name=&quot;*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot;/&gt; &lt;/tx:attributes&gt; &lt;/tx:advice&gt; &lt;aop:config&gt; &lt;aop:pointcut id=&quot;txPointcut&quot; expression=&quot;execution(* com.mico.emptyspring.service.*ServiceA.*(..))&quot; /&gt; &lt;aop:advisor pointcut-ref=&quot;txPointcut&quot; advice-ref=&quot;txAdvice&quot; /&gt; &lt;/aop:config&gt; Transaction Management
-&lt;bean id=&quot;sqlSessionFactory&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&gt; &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt; &lt;property name=&quot;configuration&quot;&gt; &lt;bean class=&quot;org.
+       https://blog.sentry.io/2018/11/14/how-to-build-saas-application/ https://youtu.be/W1fkGyIcePA  
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/spring/mybatis/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/saas/saas/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,7 +329,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/spring/practice/">Spring Practice</a>
+      <a class="post-link" href="/post/specialization/web-application/saas/flask/">SaaS with Flask</a>
     </h1>
     
     <div class="post-meta">
@@ -351,10 +349,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      vo  package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } }  dao  import org.
+       https://github.com/nickjj/build-a-saas-app-with-flask  
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/spring/practice/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/saas/flask/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -365,15 +363,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/any-path/blog/">Link custom domain to Github pages</a>
+      <a class="post-link" href="/post/specialization/web-application/spring/config/">Spring Config</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-11-15" class="post-time">
-        2020-11-15
+      <time datetime="2020-11-18" class="post-time">
+        2020-11-18
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -385,12 +383,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Register Domain Name Namesilo
-Use a Custom Domain If you’d like to use a custom domain for your GitHub Pages site, create a file static/CNAME. Your custom domain name should be the only contents inside CNAME. Since it’s inside static, the published site will contain the CNAME file at the root of the published site, which is a requirements of GitHub Pages.
-DNS service provider Create Cloudflare account Enter your domain name yezheng.
+      application.properties import org.springframework.beans.factory.annotation.Value; import com.alibaba.fastjson.JSONObject; import org.apache.http.entity.ContentType; class MessageRestController { @Value(&quot;${restService_url: default_url}&quot;) private String url; @RequestMapping(&quot;/message&quot;) String getMessage() { CloseableHttpClient httpClient = HttpClients.createDefault(); String body; if (param instanceof String) { body = (String) param; } else { body = JSONObject.toJSONString(param); } try { // 创建Http Post请求 HttpPost httpPost = new HttpPost(url); // 添加http headers if
     </div>
     <div class="read-more">
-      <a href="/post/any-path/blog/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/spring/config/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2241,6 +2237,27 @@ DNS service provider Create Cloudflare account Enter your domain name yezheng.
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/28/">»</a></li>
@@ -2248,7 +2265,7 @@ DNS service provider Create Cloudflare account Enter your domain name yezheng.
 
       
       
-      <li><a href="/page/81/">»»</a></li>
+      <li><a href="/page/82/">»»</a></li>
       
 
       </ul>

@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="MySQL的分页查询 ORM的查询 mysql事务 mysql隔离级别 mysql在可重复读隔离级别下怎么解决幻读 mysql聚集索引与非聚集索引 my" />
+  <meta name="description" content="6 MyISAM和InnoDB MyISAM 适合于一些需要大量查询的应用，但其对于有大量写操作并不是很好。甚至你只是需要update一个字段，整个表都会被" />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -60,19 +60,19 @@
 
 
 <meta property="og:title" content="mysql" />
-<meta property="og:description" content="MySQL的分页查询 ORM的查询 mysql事务 mysql隔离级别 mysql在可重复读隔离级别下怎么解决幻读 mysql聚集索引与非聚集索引 my" />
+<meta property="og:description" content="6 MyISAM和InnoDB MyISAM 适合于一些需要大量查询的应用，但其对于有大量写操作并不是很好。甚至你只是需要update一个字段，整个表都会被" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/interview/mysql/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2019-12-01T00:00:00&#43;00:00" />
 <meta property="article:modified_time" content="2019-12-01T00:00:00&#43;00:00" />
 
 <meta itemprop="name" content="mysql">
-<meta itemprop="description" content="MySQL的分页查询 ORM的查询 mysql事务 mysql隔离级别 mysql在可重复读隔离级别下怎么解决幻读 mysql聚集索引与非聚集索引 my"><meta itemprop="datePublished" content="2019-12-01T00:00:00&#43;00:00" />
+<meta itemprop="description" content="6 MyISAM和InnoDB MyISAM 适合于一些需要大量查询的应用，但其对于有大量写操作并不是很好。甚至你只是需要update一个字段，整个表都会被"><meta itemprop="datePublished" content="2019-12-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-12-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="785">
+<meta itemprop="wordCount" content="1122">
 <meta itemprop="keywords" content="interview," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="mysql"/>
-<meta name="twitter:description" content="MySQL的分页查询 ORM的查询 mysql事务 mysql隔离级别 mysql在可重复读隔离级别下怎么解决幻读 mysql聚集索引与非聚集索引 my"/>
+<meta name="twitter:description" content="6 MyISAM和InnoDB MyISAM 适合于一些需要大量查询的应用，但其对于有大量写操作并不是很好。甚至你只是需要update一个字段，整个表都会被"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -317,14 +317,28 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#6-myisam和innodb">6 MyISAM和InnoDB</a></li>
+  </ul>
+</nav>
   </div>
 </div>
 
     
     <div class="post-content">
-      <p>MySQL的分页查询</p>
+      <h2 id="6-myisam和innodb">6 MyISAM和InnoDB</h2>
+<p>MyISAM 适合于一些需要大量查询的应用，但其对于有大量写操作并不是很好。甚至你只是需要update一个字段，整个表都会被锁起来，而别的进程，就算是读进程都无法操作直到读操作完成。另外，MyISAM 对于 SELECT COUNT(*) 这类的计算是超快无比的。</p>
+<p>InnoDB 的趋势会是一个非常复杂的存储引擎，对于一些小的应用，它会比 MyISAM 还慢。他是它支持“行锁” ，于是在写操作比较多的时候，会更优秀。并且，他还支持更多的高级应用，比如：事务。</p>
+<p>mysql 数据库引擎: <a href="http://www.cnblogs.com/0201zcr/p/5296843.html">http://www.cnblogs.com/0201zcr/p/5296843.html</a> MySQL存储引擎－－MyISAM与InnoDB区别: <a href="https://segmentfault.com/a/1190000008227211">https://segmentfault.com/a/1190000008227211</a></p>
+<p>最左匹配原则Match a leftmost prefix 最左前缀原理</p>
+<p>存储引擎在MySQL这个系统架构的哪个位置</p>
+<p>知道哪些存储引擎</p>
+<p>MySQL的分页查询</p>
 <p>ORM的查询</p>
+<p>表数据量太大怎么解决</p>
+<p>分表需要停机吗 可以不停机吗(先复制一份出来分表再迁移?)</p>
+<p>数据太多怎么办</p>
 <p>mysql事务</p>
 <p>mysql隔离级别</p>
 <p>mysql在可重复读隔离级别下怎么解决幻读</p>

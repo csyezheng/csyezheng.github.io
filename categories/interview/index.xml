@@ -112,7 +112,7 @@
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/interview/databases/</guid>
-      <description>数据库索引优化 使用什么存储引擎 有没有测试过数据量过大对并发效果的影响 表数据量太大怎么解决 分表需要停机吗 可以不停机吗(先复制一份出来分表再迁移</description>
+      <description>Relational Databases 关系型数据库与非关系型数据库的区别，它们的索引是一样的吗 还知道其他时序数据库？ 时序数据库和其他数据库之间的区别？ 时序数据库数据存入之后能</description>
     </item>
     
     <item>
@@ -185,7 +185,7 @@ https://github.com/billryan/algorithm-exercise</description>
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/interview/security/</guid>
-      <description>csrf 举例说明SQL注入和解决办法 DDOS知道不 描述了一下渗透测试的流程，用nmap扫描端口的时候，问close和filtered是发生了什么，</description>
+      <description>orm insert many ORM和原生数据库的区别 ORM还有什么其他优点 什么是SQL注入 csrf 举例说明SQL注入和解决办法 DDOS知道不 描述了一下渗透测试的流程，用</description>
     </item>
     
     <item>

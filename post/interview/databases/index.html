@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="数据库索引优化 使用什么存储引擎 有没有测试过数据量过大对并发效果的影响 表数据量太大怎么解决 分表需要停机吗 可以不停机吗(先复制一份出来分表再迁移" />
+  <meta name="description" content="Relational Databases 关系型数据库与非关系型数据库的区别，它们的索引是一样的吗 还知道其他时序数据库？ 时序数据库和其他数据库之间的区别？ 时序数据库数据存入之后能" />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -60,19 +60,19 @@
 
 
 <meta property="og:title" content="databases interview questions" />
-<meta property="og:description" content="数据库索引优化 使用什么存储引擎 有没有测试过数据量过大对并发效果的影响 表数据量太大怎么解决 分表需要停机吗 可以不停机吗(先复制一份出来分表再迁移" />
+<meta property="og:description" content="Relational Databases 关系型数据库与非关系型数据库的区别，它们的索引是一样的吗 还知道其他时序数据库？ 时序数据库和其他数据库之间的区别？ 时序数据库数据存入之后能" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/interview/databases/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-12-01T00:00:00&#43;00:00" />
 <meta property="article:modified_time" content="2020-12-01T00:00:00&#43;00:00" />
 
 <meta itemprop="name" content="databases interview questions">
-<meta itemprop="description" content="数据库索引优化 使用什么存储引擎 有没有测试过数据量过大对并发效果的影响 表数据量太大怎么解决 分表需要停机吗 可以不停机吗(先复制一份出来分表再迁移"><meta itemprop="datePublished" content="2020-12-01T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Relational Databases 关系型数据库与非关系型数据库的区别，它们的索引是一样的吗 还知道其他时序数据库？ 时序数据库和其他数据库之间的区别？ 时序数据库数据存入之后能"><meta itemprop="datePublished" content="2020-12-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-12-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="3224">
+<meta itemprop="wordCount" content="1116">
 <meta itemprop="keywords" content="interview," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="databases interview questions"/>
-<meta name="twitter:description" content="数据库索引优化 使用什么存储引擎 有没有测试过数据量过大对并发效果的影响 表数据量太大怎么解决 分表需要停机吗 可以不停机吗(先复制一份出来分表再迁移"/>
+<meta name="twitter:description" content="Relational Databases 关系型数据库与非关系型数据库的区别，它们的索引是一样的吗 还知道其他时序数据库？ 时序数据库和其他数据库之间的区别？ 时序数据库数据存入之后能"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -319,26 +319,23 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-事务">1 事务</a></li>
-    <li><a href="#2-数据库索引">2 数据库索引</a></li>
-    <li><a href="#3-redis原理">3 Redis原理</a>
+    <li><a href="#relational-databases">Relational Databases</a></li>
+    <li><a href="#design-theory-for-relational-databases">Design Theory for Relational Databases</a></li>
+    <li><a href="#the-database-language-sql">The Database Language SQL</a>
       <ul>
-        <li><a href="#redis是什么">Redis是什么？</a></li>
-        <li><a href="#redis数据库">Redis数据库</a></li>
-        <li><a href="#redis缺点">Redis缺点</a></li>
+        <li><a href="#simple-queries-in-sql">Simple Queries in SQL</a></li>
+        <li><a href="#queries-involving-more-than-one-relation">Queries Involving More Than One Relation</a></li>
+        <li><a href="#subqueries">Subqueries</a></li>
+        <li><a href="#full-relation-operations">Full-Relation Operations</a></li>
+        <li><a href="#database-modifications">Database Modifications</a></li>
+        <li><a href="#transactions-in-sql">Transactions in SQL</a></li>
       </ul>
     </li>
-    <li><a href="#4-乐观锁和悲观锁">4 乐观锁和悲观锁</a></li>
-    <li><a href="#5-mvcc">5 MVCC</a>
-      <ul>
-        <li><a href="#mysqlhttplibcsdnnetbasemysql的innodb引擎是如何实现mvcc的"><a href="http://lib.csdn.net/base/mysql">MySQL</a>的innodb引擎是如何实现MVCC的</a></li>
-      </ul>
-    </li>
-    <li><a href="#6-myisam和innodb">6 MyISAM和InnoDB</a></li>
-    <li><a href="#7-索引是什么原理有什么优缺点">7 索引是什么原理？有什么优缺点？</a></li>
-    <li><a href="#8-乐观锁和悲观锁是什么">8 乐观锁和悲观锁是什么？</a></li>
-    <li><a href="#9-你为什么选择-redis-而不是-mongodb-或者其他的有个项目用了-redis">9 你为什么选择 Redis 而不是 MongoDB 或者其他的？（有个项目用了 Redis）</a></li>
-    <li><a href="#10-sql-和-nosql-区别">10 SQL 和 NoSQL 区别？</a></li>
+    <li><a href="#index-structures">Index Structures</a></li>
+    <li><a href="#query-execution">Query Execution</a></li>
+    <li><a href="#optimization">Optimization</a></li>
+    <li><a href="#coping-with-system-failures">Coping With System Failures</a></li>
+    <li><a href="#concurrency-control">Concurrency Control</a></li>
   </ul>
 </nav>
   </div>
@@ -346,149 +343,105 @@
 
     
     <div class="post-content">
-      <p>数据库索引优化
-使用什么存储引擎 有没有测试过数据量过大对并发效果的影响
-表数据量太大怎么解决
-分表需要停机吗 可以不停机吗(先复制一份出来分表再迁移?)
-复制的时候可以写入吗</p>
-<p>数据库的优化方法</p>
-<p>数据太多怎么办</p>
-<p>表里按照grade来group，该怎么加速</p>
-<p>数据库索引的数据结构？</p>
-<p>left join 、in</p>
-<p>数据库怎么建索引比较好</p>
-<p>数据库优化查询方法</p>
-<p>数据库设计, 优化, 索引的原理, 哈希之类的</p>
-<p>数据库的三种设计模式还是设计方法来着</p>
-<p>要是数据库里的数据内存中装不下的话该怎么办</p>
-<p>sql class_id,student_id cs表 查询前10个学生最多的班级</p>
-<p>数据库的范式，除了三范式还有吗？</p>
-<p>手撕了一个SQL代码：姓名，课程，成绩，选出总成绩TOP5的学生。</p>
-<p>数据库的左链接右链接全链接是个啥，以及数据库建模的流程。</p>
-<p>索引问题，什么情况下该加索引，性别应该加索引吗？</p>
-<p>一道sql题，出个场景写sql，怎么加索引，加了之后的执行过程。</p>
-<p>分析 sql语句的时间</p>
-<p>有一个表，只有一个字段队名，四条数据abcd。假设abcd分别代表四只足球队，写一条sql，结果是四只球队之间的对阵。</p>
-<p>知道哪些存储引擎</p>
-<p>存储引擎在MySQL这个系统架构的哪个位置</p>
-<p>事务的特点</p>
-<p>什么是持久性、一致性</p>
-<p>如何实现事务，MVCC是什么</p>
-<p>数据库索引结构是什么样的?B+树，然后问对磁盘有什么优势，降低IO次数，问为什么，B+树的特点</p>
-<p>三范式
-传递依赖，举个例子
-那我们平时数据库设计时候要按照三范式设计吗</p>
-<p>数据库的索引了解吗？干嘛用的？有哪些种类？主键索引和普通索引区别是什么？</p>
-<p>MySQL索引为什么使用B+树，而不是B树 二叉树</p>
-<p>数据库的ACID是什么？通过什么实现的？</p>
-<p>为什么要写 redo log 呢？比直接写入数据库有什么优势吗？</p>
-<p>幻读是什么？是什么造成了幻读。</p>
-<p>什么是联合索引？索引越多越好吗</p>
-<p>求一个表内有个字段是日期类型，求各个时间段的条目</p>
-<p>sql题:
-给一个表a class_id student_id 找到学生最多的十个班级</p>
-<p>sql执行流程
-mysql如何实现事务？(redo undo ..居然没想起来)</p>
-<p>orm insert many</p>
-<p>ORM和原生数据库的区别</p>
-<p>ORM还有什么其他优点</p>
-<p>什么是SQL注入</p>
-<p>数据库中一二三范式各解决了什么问题</p>
-<p>sql语句，group by，having，limit，distinct，case when，表联结？</p>
+      <h2 id="relational-databases">Relational Databases</h2>
 <p>关系型数据库与非关系型数据库的区别，它们的索引是一样的吗</p>
-<p>数据库索引原理</p>
-<p>数据库怎么建立索引？
-数据库的事务四大特性？分别是什么意思？</p>
 <p>还知道其他时序数据库？</p>
 <p>时序数据库和其他数据库之间的区别？</p>
 <p>时序数据库数据存入之后能修改吗？因为是时序，默认是不能修改的只能append。</p>
+<p><a href="https://segmentfault.com/q/1010000002588088/a-1020000002589415">redis、memcache、mongoDB有哪些区别？</a></p>
+<p><a href="http://www.jianshu.com/p/b32fe4fe45a3">SQL 和 NoSQL 的区别</a></p>
+<h2 id="design-theory-for-relational-databases">Design Theory for Relational Databases</h2>
+<p>传递依赖，举个例子</p>
+<p>数据库的三种设计模式还是设计方法来着</p>
+<p>数据库的范式，除了三范式还有吗？</p>
+<p>数据库建模的流程</p>
+<p>三范式</p>
+<p>那我们平时数据库设计时候要按照三范式设计吗</p>
+<p>数据库中一二三范式各解决了什么问题</p>
+<h2 id="the-database-language-sql">The Database Language SQL</h2>
+<h3 id="simple-queries-in-sql">Simple Queries in SQL</h3>
+<p>有一个表，只有一个字段队名，四条数据abcd。假设abcd分别代表四只足球队，写一条sql，结果是四只球队之间的对阵。</p>
+<h3 id="queries-involving-more-than-one-relation">Queries Involving More Than One Relation</h3>
+<h3 id="subqueries">Subqueries</h3>
+<h4 id="sql-join-expressions">SQL Join Expressions</h4>
+<p>left join 、in</p>
+<p>数据库的左链接右链接全链接是个啥</p>
+<h3 id="full-relation-operations">Full-Relation Operations</h3>
+<h4 id="eliminating-duplicates">Eliminating Duplicates</h4>
+<p>distinct</p>
+<h4 id="grouping">Grouping</h4>
+<p>表里按照grade来group，该怎么加速</p>
+<p>sql class_id,student_id cs表 查询前10个学生最多的班级</p>
+<p>手撕了一个SQL代码：姓名，课程，成绩，选出总成绩TOP5的学生。</p>
+<p>求一个表内有个字段是日期类型，求各个时间段的条目</p>
 <p>数据库分组查询</p>
-<p>select执行顺序</p>
+<p>sql的语法 group by</p>
+<h4 id="grouping-aggregation-and-nulls">Grouping, Aggregation, and Nulls</h4>
+<h4 id="having-clauses">HAVING Clauses</h4>
+<p>sql语句，group by，having，limit，distinct，case when，表联结？</p>
+<h3 id="database-modifications">Database Modifications</h3>
+<h4 id="insertion">Insertion</h4>
+<p>Inserting multiple rows</p>
+<h4 id="deletion">Deletion</h4>
+<h4 id="updates">Updates</h4>
+<h3 id="transactions-in-sql">Transactions in SQL</h3>
+<h4 id="serializability">Serializability</h4>
+<h4 id="atomicity">Atomicity</h4>
+<h4 id="transactions">Transactions</h4>
+<p>事务的特点</p>
+<p>什么是持久性、一致性</p>
+<p>如何实现事务</p>
+<p>数据库的ACID是什么？通过什么实现的？</p>
+<p>mysql如何实现事务？(redo undo ..居然没想起来)</p>
+<p>数据库的事务四大特性？分别是什么意思？</p>
+<h4 id="read-only-transactions">Read-Only Transactions</h4>
+<h4 id="dirty-reads-脏读">Dirty Reads (脏读)</h4>
+<h4 id="nonrepeatable-reads-unrepeatable-read">Nonrepeatable Reads (unrepeatable read)</h4>
+<h4 id="phantoms-幻读">Phantoms (幻读)</h4>
+<p>幻读是什么？</p>
+<p>是什么造成了幻读。</p>
+<p>怎么解决幻读的</p>
+<h4 id="other-isolation-levels">Other Isolation Levels</h4>
+<p>事务隔离性</p>
+<h2 id="index-structures">Index Structures</h2>
+<p>数据库索引优化</p>
+<p>数据库的索引了解吗？干嘛用的？有哪些种类？主键索引和普通索引区别是什么？</p>
+<p>数据库索引的数据结构？</p>
+<p>数据库怎么建索引比较好</p>
+<p>索引的原理, 哈希之类的</p>
+<p>索引问题，什么情况下该加索引，性别应该加索引吗？</p>
+<p>一道sql题，出个场景写sql，怎么加索引，加了之后的执行过程。</p>
+<p>数据库索引结构是什么样的?B+树，然后问对磁盘有什么优势，降低IO次数，问为什么，B+树的特点</p>
+<p>MySQL索引为什么使用B+树，而不是B树 二叉树</p>
+<p>什么是联合索引？索引越多越好吗</p>
+<p>数据库索引原理</p>
+<p>数据库怎么建立索引？</p>
 <p>聚簇索引是什么
-联合索引是什么
-最左匹配原则
-B+树索引和Hash索引的区别</p>
-<p>事务隔离性
-什么是幻读
-怎么解决幻读的</p>
+联合索引是什么</p>
+<p>B+树索引和Hash索引的区别</p>
 <p>MySQL索引是什么结构</p>
 <p>B+树和普通搜索树的区别</p>
-<p>sql的语法 group by</p>
-<h2 id="1-事务">1 事务</h2>
-<p>数据库事务(Database Transaction) ，是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。 彻底理解数据库事务: <a href="http://www.hollischuang.com/archives/898">http://www.hollischuang.com/archives/898</a></p>
-<h2 id="2-数据库索引">2 数据库索引</h2>
-<p>推荐: <a href="http://tech.meituan.com/mysql-index.html">http://tech.meituan.com/mysql-index.html</a></p>
-<p><a href="http://blog.codinglabs.org/articles/theory-of-mysql-index.html">MySQL索引背后的数据结构及算法原理</a></p>
-<p>聚集索引,非聚集索引,B-Tree,B+Tree,最左前缀原理</p>
-<h2 id="3-redis原理">3 Redis原理</h2>
-<h3 id="redis是什么">Redis是什么？</h3>
-<ol>
-<li>是一个完全开源免费的key-value内存数据库</li>
-<li>通常被认为是一个数据结构服务器，主要是因为其有着丰富的数据结构 strings、map、 list、sets、 sorted sets</li>
-</ol>
-<h3 id="redis数据库">Redis数据库</h3>
-<blockquote>
-<p>通常局限点来说，Redis也以消息队列的形式存在，作为内嵌的List存在，满足实时的高并发需求。在使用缓存的时候，redis比memcached具有更多的优势，并且支持更多的数据类型，把redis当作一个中间存储系统，用来处理高并发的数据库操作</p>
-</blockquote>
-<ul>
-<li>速度快：使用标准C写，所有数据都在内存中完成，读写速度分别达到10万/20万</li>
-<li>持久化：对数据的更新采用Copy-on-write技术，可以异步地保存到磁盘上，主要有两种策略，一是根据时间，更新次数的快照（save 300 10 ）二是基于语句追加方式(Append-only file，aof)</li>
-<li>自动操作：对不同数据类型的操作都是自动的，很安全</li>
-<li>快速的主&ndash;从复制，官方提供了一个数据，Slave在21秒即完成了对Amazon网站10G key set的复制。</li>
-<li>Sharding技术： 很容易将数据分布到多个Redis实例中，数据库的扩展是个永恒的话题，在关系型数据库中，主要是以添加硬件、以分区为主要技术形式的纵向扩展解决了很多的应用场景，但随着web2.0、移动互联网、云计算等应用的兴起，这种扩展模式已经不太适合了，所以近年来，像采用主从配置、数据库复制形式的，Sharding这种技术把负载分布到多个特理节点上去的横向扩展方式用处越来越多。</li>
-</ul>
-<h3 id="redis缺点">Redis缺点</h3>
-<ul>
-<li>是数据库容量受到物理内存的限制,不能用作海量数据的高性能读写,因此Redis适合的场景主要局限在较小数据量的高性能操作和运算上。</li>
-<li>Redis较难支持在线扩容，在集群容量达到上限时在线扩容会变得很复杂。为避免这一问题，运维人员在系统上线时必须确保有足够的空间，这对资源造成了很大的浪费。</li>
-</ul>
-<h2 id="4-乐观锁和悲观锁">4 乐观锁和悲观锁</h2>
-<p>悲观锁：假定会发生并发冲突，屏蔽一切可能违反数据完整性的操作</p>
-<p>乐观锁：假设不会发生并发冲突，只在提交操作时检查是否违反数据完整性。</p>
-<p>乐观锁与悲观锁的具体区别: <a href="http://www.cnblogs.com/Bob-FD/p/3352216.html">http://www.cnblogs.com/Bob-FD/p/3352216.html</a></p>
-<h2 id="5-mvcc">5 MVCC</h2>
-<blockquote>
-<p>全称是Multi-Version Concurrent Control，即多版本并发控制，在MVCC协议下，每个读操作会看到一个一致性的snapshot，并且可以实现非阻塞的读。MVCC允许数据具有多个版本，这个版本可以是时间戳或者是全局递增的事务ID，在同一个时间点，不同的事务看到的数据是不同的。</p>
-</blockquote>
-<h3 id="mysqlhttplibcsdnnetbasemysql的innodb引擎是如何实现mvcc的"><a href="http://lib.csdn.net/base/mysql">MySQL</a>的innodb引擎是如何实现MVCC的</h3>
-<p>innodb会为每一行添加两个字段，分别表示该行<strong>创建的版本</strong>和<strong>删除的版本</strong>，填入的是事务的版本号，这个版本号随着事务的创建不断递增。在repeated read的隔离级别（<a href="http://blog.csdn.net/chosen0ne/article/details/10036775">事务的隔离级别请看这篇文章</a>）下，具体各种数据库操作的实现：</p>
-<ul>
-<li>select：满足以下两个条件innodb会返回该行数据：
-<ul>
-<li>该行的创建版本号小于等于当前版本号，用于保证在select操作之前所有的操作已经执行落地。</li>
-<li>该行的删除版本号大于当前版本或者为空。删除版本号大于当前版本意味着有一个并发事务将该行删除了。</li>
-</ul>
-</li>
-<li>insert：将新插入的行的创建版本号设置为当前系统的版本号。</li>
-<li>delete：将要删除的行的删除版本号设置为当前系统的版本号。</li>
-<li>update：不执行原地update，而是转换成insert + delete。将旧行的删除版本号设置为当前版本号，并将新行insert同时设置创建版本号为当前版本号。</li>
-</ul>
-<p>其中，写操作（insert、delete和update）执行时，需要将系统版本号递增。</p>
-<p>由于旧数据并不真正的删除，所以必须对这些数据进行清理，innodb会开启一个后台线程执行清理工作，具体的规则是将删除版本号小于当前系统版本的行删除，这个过程叫做purge。</p>
-<p>通过MVCC很好的实现了事务的隔离性，可以达到repeated read级别，要实现serializable还必须加锁。</p>
-<blockquote>
-<p>参考：<a href="http://blog.csdn.net/chosen0ne/article/details/18093187">MVCC浅析</a></p>
-</blockquote>
-<h2 id="6-myisam和innodb">6 MyISAM和InnoDB</h2>
-<p>MyISAM 适合于一些需要大量查询的应用，但其对于有大量写操作并不是很好。甚至你只是需要update一个字段，整个表都会被锁起来，而别的进程，就算是读进程都无法操作直到读操作完成。另外，MyISAM 对于 SELECT COUNT(*) 这类的计算是超快无比的。</p>
-<p>InnoDB 的趋势会是一个非常复杂的存储引擎，对于一些小的应用，它会比 MyISAM 还慢。他是它支持“行锁” ，于是在写操作比较多的时候，会更优秀。并且，他还支持更多的高级应用，比如：事务。</p>
-<p>mysql 数据库引擎: <a href="http://www.cnblogs.com/0201zcr/p/5296843.html">http://www.cnblogs.com/0201zcr/p/5296843.html</a> MySQL存储引擎－－MyISAM与InnoDB区别: <a href="https://segmentfault.com/a/1190000008227211">https://segmentfault.com/a/1190000008227211</a></p>
-<h2 id="7-索引是什么原理有什么优缺点">7 索引是什么原理？有什么优缺点？</h2>
-<ul>
-<li>参考 <a href="http://blog.csdn.net/kennyrose/article/details/7532032">数据库索引的实现原理</a></li>
-</ul>
-<h2 id="8-乐观锁和悲观锁是什么">8 乐观锁和悲观锁是什么？</h2>
-<ul>
-<li><a href="http://www.hollischuang.com/archives/934">深入理解乐观锁与悲观锁</a></li>
-</ul>
-<h2 id="9-你为什么选择-redis-而不是-mongodb-或者其他的有个项目用了-redis">9 你为什么选择 Redis 而不是 MongoDB 或者其他的？（有个项目用了 Redis）</h2>
-<ul>
-<li><a href="https://segmentfault.com/q/1010000002588088/a-1020000002589415">redis、memcache、mongoDB有哪些区别？</a></li>
-</ul>
-<h2 id="10-sql-和-nosql-区别">10 SQL 和 NoSQL 区别？</h2>
-<ul>
-<li><a href="http://www.jianshu.com/p/b32fe4fe45a3">SQL 和 NoSQL 的区别</a></li>
-</ul>
+<p>聚集索引</p>
+<p>非聚集索引</p>
+<p>B-Tree</p>
+<p>B+Tree</p>
+<p>索引是什么原理？有什么优缺点？</p>
+<h2 id="query-execution">Query Execution</h2>
+<p>sql执行流程</p>
+<p>select执行顺序</p>
+<h2 id="optimization">Optimization</h2>
+<p>数据库的优化方法</p>
+<p>数据库设计, 优化</p>
+<p>数据库优化查询方法</p>
+<p>要是数据库里的数据内存中装不下的话该怎么办</p>
+<p>分析 sql语句的时间</p>
+<h2 id="coping-with-system-failures">Coping With System Failures</h2>
+<p>为什么要写 redo log 呢？比直接写入数据库有什么优势吗？</p>
+<h2 id="concurrency-control">Concurrency Control</h2>
+<p>MVCC是什么</p>
+<p>乐观锁和悲观锁是什么？</p>
+<p>有没有测试过数据量过大对并发效果的影响</p>
+<p>复制的时候可以写入吗 (Copy-on-write)</p>
 
     </div>
 
@@ -526,7 +479,7 @@ B+树索引和Hash索引的区别</p>
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/interview/computer-systems/">
+          <a class="prev" href="/post/specialization/systems/data-management-and-data-systems/databases/">
             
             <i class="iconfont">
               <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -536,7 +489,7 @@ B+树索引和Hash索引的区别</p>
 </svg>
 
             </i>
-            <span class="prev-text nav-default">computer systems</span>
+            <span class="prev-text nav-default">databases</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         

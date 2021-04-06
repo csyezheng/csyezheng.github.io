@@ -295,15 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/cpp/3rd-libraries/">C&#43;&#43; 3rd party libraries</a>
+      <a class="post-link" href="/post/interview/system-design/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">数据库分库分表</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-09-15" class="post-time">
-        2019-09-15
+      <time datetime="2019-12-01" class="post-time">
+        2019-12-01
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/interview/"> interview </a>
           
         </div>
       
@@ -315,10 +315,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      grpc/libevent/libev/libasio 实现高性能网络服务器 protobuf 数据结构序列化/反序列化，方便数据交换 LevelDB/RocksDB 嵌入式KV数据库 snappy/zlib/lz4 数据压缩，解压缩 jemalloc/tcmalloc 高效内存分配器，尤其多线程场景 jerasure Reed Sol
+      https://juejin.cn/post/6844903992909103117 https://cloud.tencent.com/developer/article/1430676 https://www.cnblogs.com/crossoverJie/p/11318984.html https://blog.csdn.net/liuhuiteng/article/details/107807204 https://blog.csdn.net/lixiaoxiong55/article/details/89978485 MySQL单表数据量在500万左右考虑分表
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/cpp/3rd-libraries/" class="read-more-link">Read more</a>
+      <a href="/post/interview/system-design/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -329,12 +329,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/cpp/jsoncpp/">jsoncpp</a>
+      <a class="post-link" href="/post/engineering-fundamentals/cpp/cpp-library-management/">C&#43;&#43; Library Management</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-09-15" class="post-time">
-        2019-09-15
+      <time datetime="2019-09-16" class="post-time">
+        2019-09-16
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
@@ -349,10 +349,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      
+      In general, you are going to have to end up with
+ Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&rsquo;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/cpp/jsoncpp/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/cpp/cpp-library-management/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -363,12 +364,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/cpp/cmake/">CMake</a>
+      <a class="post-link" href="/post/engineering-fundamentals/cpp/curl/">libcurl</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-09-13" class="post-time">
-        2019-09-13
+      <time datetime="2019-09-16" class="post-time">
+        2019-09-16
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
@@ -383,10 +384,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      如果工程存在多个目录,需要确保每个要管理的目录都存在一个 CMakeLists.txt． Set a name, version, and enable languages for the entire project. project(&lt;PROJECT-NAME&gt; [LANGUAGES] [&lt;language-name&gt;...]) Sets the name of the project and stores the name in the PROJECT_NAME
+      #include &lt;curl/curl.h&gt; When using an external library you must link with it:
+$ g++ main.cpp -lcurl 
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/cpp/cmake/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/cpp/curl/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2237,6 +2239,27 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/54/">»</a></li>
@@ -2244,7 +2267,7 @@
 
       
       
-      <li><a href="/page/81/">»»</a></li>
+      <li><a href="/page/82/">»»</a></li>
       
 
       </ul>

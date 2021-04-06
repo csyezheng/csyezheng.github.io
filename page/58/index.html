@@ -295,46 +295,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/devops/docker/">Docker</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/oauth2/">Django oauth2 provider</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-04-25" class="post-time">
-        2019-04-25
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker sudo pacman -S docker systemctl start docker.
-    </div>
-    <div class="read-more">
-      <a href="/post/specialization/devops/docker/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/web-application/back-end/microservices/">microservices</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-04-20" class="post-time">
-        2019-04-20
+      <time datetime="2019-05-26" class="post-time">
+        2019-05-26
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
@@ -349,10 +315,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      第1章 微服务 1.1 什么是微服务 微服务就是一些协同工作的小而自治的服务 1.1.1 很小，专注于做好一件事 在一个单块系统内，通常会创建一些抽象层或者模块来保证
+      Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... 'provider', 'provider.oauth2', ) # urls.py url(r'^oauth2/', include('provider.oauth2.urls', namespace = 'oauth2')), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ?   Create a client entry in your database
+To find out which type of client you need to create, read Section 2.1.
+To create a new entry simply use the Django admin panel.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/microservices/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/oauth2/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -363,15 +331,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/a-tour-of-go/">A Tour of Go</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/elasticsearch/">Elasticsearch Tutorial</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
+      <time datetime="2019-05-15" class="post-time">
+        2019-05-15
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -383,13 +351,47 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Basics Packages, variables, and functions. Packages Programs start running in package main.
-By convention, the package name is the same as the last element of the import path. For instance, the &quot;math/rand&quot; package comprises files that begin with the statement package rand.
-Imports It is good style to use the factored import statement.
-import ( &quot;fmt&quot; &quot;math/rand&quot; ) Exported names In Go, a name is exported if it begins with a capital letter.
+      Getting Started Installing and Running Elasticsearch Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
+Installing Sense Sense is a Kibana app that provides an interactive console for submitting requests to Elasticsearch directly from your browser.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/a-tour-of-go/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/elasticsearch/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/specialization/big-data/elk-stack/">elk stack</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-05-15" class="post-time">
+        2019-05-15
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/big-data/"> big-data </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
+Install Beats Install Filebeat Install Metricbeat sudo pacman -S metricbeat sudo vim /etc/metricbeat/metricbeat.yml setup.dashboards.enabled: true From the Metricbeat install directory, enable the system module
+cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricbeat.
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/big-data/elk-stack/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2240,6 +2242,27 @@ import ( &quot;fmt&quot; &quot;math/rand&quot; ) Exported names In Go, a name is
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/59/">»</a></li>
@@ -2247,7 +2270,7 @@ import ( &quot;fmt&quot; &quot;math/rand&quot; ) Exported names In Go, a name is
 
       
       
-      <li><a href="/page/81/">»»</a></li>
+      <li><a href="/page/82/">»»</a></li>
       
 
       </ul>
