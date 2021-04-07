@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="6 MyISAM和InnoDB MyISAM 适合于一些需要大量查询的应用，但其对于有大量写操作并不是很好。甚至你只是需要update一个字段，整个表都会被" />
+  <meta name="description" content="MySQL Architecture MySQL’s Logical Architecture 存储引擎在MySQL这个系统架构的哪个位置 Concurrency Control 知道或者用过mysql里的锁没有 Transactions mysql事务 Dirty reads(脏读), Nonrepeatable" />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -60,19 +60,19 @@
 
 
 <meta property="og:title" content="mysql" />
-<meta property="og:description" content="6 MyISAM和InnoDB MyISAM 适合于一些需要大量查询的应用，但其对于有大量写操作并不是很好。甚至你只是需要update一个字段，整个表都会被" />
+<meta property="og:description" content="MySQL Architecture MySQL’s Logical Architecture 存储引擎在MySQL这个系统架构的哪个位置 Concurrency Control 知道或者用过mysql里的锁没有 Transactions mysql事务 Dirty reads(脏读), Nonrepeatable" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/interview/mysql/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2019-12-01T00:00:00&#43;00:00" />
 <meta property="article:modified_time" content="2019-12-01T00:00:00&#43;00:00" />
 
 <meta itemprop="name" content="mysql">
-<meta itemprop="description" content="6 MyISAM和InnoDB MyISAM 适合于一些需要大量查询的应用，但其对于有大量写操作并不是很好。甚至你只是需要update一个字段，整个表都会被"><meta itemprop="datePublished" content="2019-12-01T00:00:00&#43;00:00" />
+<meta itemprop="description" content="MySQL Architecture MySQL’s Logical Architecture 存储引擎在MySQL这个系统架构的哪个位置 Concurrency Control 知道或者用过mysql里的锁没有 Transactions mysql事务 Dirty reads(脏读), Nonrepeatable"><meta itemprop="datePublished" content="2019-12-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-12-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1122">
+<meta itemprop="wordCount" content="921">
 <meta itemprop="keywords" content="interview," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="mysql"/>
-<meta name="twitter:description" content="6 MyISAM和InnoDB MyISAM 适合于一些需要大量查询的应用，但其对于有大量写操作并不是很好。甚至你只是需要update一个字段，整个表都会被"/>
+<meta name="twitter:description" content="MySQL Architecture MySQL’s Logical Architecture 存储引擎在MySQL这个系统架构的哪个位置 Concurrency Control 知道或者用过mysql里的锁没有 Transactions mysql事务 Dirty reads(脏读), Nonrepeatable"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -319,7 +319,47 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#6-myisam和innodb">6 MyISAM和InnoDB</a></li>
+    <li><a href="#mysql-architecture">MySQL Architecture</a>
+      <ul>
+        <li><a href="#mysqls-logical-architecture">MySQL’s Logical Architecture</a></li>
+        <li><a href="#transactions">Transactions</a></li>
+        <li><a href="#mysqls-storage-engines">MySQL’s Storage Engines</a></li>
+      </ul>
+    </li>
+    <li><a href="#optimizing-schema-and-data-types">Optimizing Schema and Data Types</a>
+      <ul>
+        <li><a href="#choosing-optimal-data-types">Choosing Optimal Data Types</a></li>
+      </ul>
+    </li>
+    <li><a href="#indexing-for-high-performance">Indexing for High Performance</a>
+      <ul>
+        <li><a href="#indexing-basics">Indexing Basics</a></li>
+        <li><a href="#indexing-strategies-for-high-performance">Indexing Strategies for High Performance</a></li>
+      </ul>
+    </li>
+    <li><a href="#query-performance-optimization">Query Performance Optimization</a>
+      <ul>
+        <li><a href="#optimizing-specific-types-of-queries">Optimizing Specific Types of Queries</a></li>
+      </ul>
+    </li>
+    <li><a href="#advanced-mysql-features">Advanced MySQL Features</a>
+      <ul>
+        <li><a href="#character-sets-and-collations">Character Sets and Collations</a></li>
+      </ul>
+    </li>
+    <li><a href="#innodb">InnoDB</a></li>
+    <li><a href="#replication">Replication</a>
+      <ul>
+        <li><a href="#advanced-features-in-mysql-replication">Advanced Features in MySQL Replication</a></li>
+      </ul>
+    </li>
+    <li><a href="#scaling-mysql">Scaling MySQL</a></li>
+    <li><a href="#availability">Availability</a>
+      <ul>
+        <li><a href="#avoiding-single-points-of-failure">Avoiding Single Points of Failure</a></li>
+        <li><a href="#failover-and-failback">Failover and Failback</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -327,67 +367,84 @@
 
     
     <div class="post-content">
-      <h2 id="6-myisam和innodb">6 MyISAM和InnoDB</h2>
-<p>MyISAM 适合于一些需要大量查询的应用，但其对于有大量写操作并不是很好。甚至你只是需要update一个字段，整个表都会被锁起来，而别的进程，就算是读进程都无法操作直到读操作完成。另外，MyISAM 对于 SELECT COUNT(*) 这类的计算是超快无比的。</p>
-<p>InnoDB 的趋势会是一个非常复杂的存储引擎，对于一些小的应用，它会比 MyISAM 还慢。他是它支持“行锁” ，于是在写操作比较多的时候，会更优秀。并且，他还支持更多的高级应用，比如：事务。</p>
-<p>mysql 数据库引擎: <a href="http://www.cnblogs.com/0201zcr/p/5296843.html">http://www.cnblogs.com/0201zcr/p/5296843.html</a> MySQL存储引擎－－MyISAM与InnoDB区别: <a href="https://segmentfault.com/a/1190000008227211">https://segmentfault.com/a/1190000008227211</a></p>
-<p>最左匹配原则Match a leftmost prefix 最左前缀原理</p>
+      <h2 id="mysql-architecture">MySQL Architecture</h2>
+<h3 id="mysqls-logical-architecture">MySQL’s Logical Architecture</h3>
 <p>存储引擎在MySQL这个系统架构的哪个位置</p>
-<p>知道哪些存储引擎</p>
-<p>MySQL的分页查询</p>
-<p>ORM的查询</p>
-<p>表数据量太大怎么解决</p>
-<p>分表需要停机吗 可以不停机吗(先复制一份出来分表再迁移?)</p>
-<p>数据太多怎么办</p>
+<h4 id="concurrency-control">Concurrency Control</h4>
+<p>知道或者用过mysql里的锁没有</p>
+<h3 id="transactions">Transactions</h3>
 <p>mysql事务</p>
-<p>mysql隔离级别</p>
-<p>mysql在可重复读隔离级别下怎么解决幻读</p>
-<p>mysql聚集索引与非聚集索引</p>
-<p>mysql索引</p>
-<p>mysql使用的存储引擎、存储结构</p>
-<p>怎么建索引</p>
-<p>范围查找怎么走索引</p>
-<p>hash索引，二叉树索引，B树索引,B+树索引</p>
-<p>mysql MyIsam与InnoDB的区别</p>
-<p>mysql优化</p>
-<p>Mysql高可用，是如何配置mha的，在多个slave中选取一个升为master，是怎么做到在多个slave中选取一个slave升为主库的，用的什么方法 vip漂移怎么做的。数据库高可用用到的模块是什么？</p>
-<p>看你简历写了数据库半同步复制，那说说什么是半同步复制，半同步复制好处是什么？
-主从有哪两个线程（我说了I/O和SQL）,他说不是SQL，我坚持说SQL，他说不是 （查了资料就是I/O和SQL呀）</p>
-<p>字符集</p>
-<p>数据库引擎</p>
-<p>索引数据结构MySQL的B+树OS的文件系统</p>
-<p>事务</p>
-<p>MysQL 隔离级别，四种默认的是哪个</p>
-<p>order by 索引</p>
-<p>聚簇&amp;非聚簇索引</p>
-<p>最左匹配原则</p>
-<p>组合索引</p>
-<p>加索引有什么原则</p>
-<p>mysql的连接</p>
-<p>手机号用mysql中的什么数据类型</p>
-<p>B+树的叶子结点存什么</p>
-<p>sql慢查询</p>
-<p>mysql建索引的原则</p>
-<p>新建一个索引会发生什么</p>
-<p>Mysql的数据char varchar text的区别和运用场景</p>
-<p>Redis、MySql、mongoDB的区别与应用</p>
-<p>mysql innodb底层原理，具体结构</p>
-<p>为什么B+树比普通二叉树快</p>
-<p>sql优化，a&gt;&lsquo;x&rsquo; and z=&lsquo;x&rsquo; 会不会失效</p>
-<p>explain有哪些字段</p>
-<p>有哪些隔离级别</p>
+<h4 id="dirty-reads脏读-nonrepeatable-reads-phantom-reads幻读">Dirty reads(脏读), Nonrepeatable reads, Phantom reads(幻读)</h4>
 <p>什么是脏读和幻读</p>
 <p>可重复读底层怎么实现的</p>
-<p>mysql索引根据什么数据类型实现</p>
-<p>创建索引命令</p>
-<p>mysql索引、然后优化、bool字段加索引有没有用</p>
+<h4 id="isolation-levels">Isolation Levels</h4>
+<p>mysql隔离级别,有哪些隔离级别</p>
+<p>mysql在可重复读隔离级别下怎么解决幻读</p>
+<p>MysQL 隔离级别，四种默认的是哪个</p>
+<h3 id="mysqls-storage-engines">MySQL’s Storage Engines</h3>
+<p>知道哪些存储引擎</p>
+<p>mysql使用的存储引擎、存储结构</p>
+<p>MyIsam与InnoDB的区别</p>
+<h2 id="optimizing-schema-and-data-types">Optimizing Schema and Data Types</h2>
+<h3 id="choosing-optimal-data-types">Choosing Optimal Data Types</h3>
+<p>手机号用mysql中的什么数据类型</p>
+<p>Mysql的数据char varchar text的区别和运用场景</p>
+<h2 id="indexing-for-high-performance">Indexing for High Performance</h2>
+<h3 id="indexing-basics">Indexing Basics</h3>
+<p>mysql索引</p>
+<p>怎么建索引</p>
+<p>order by 索引</p>
+<p>组合索引</p>
+<p>加索引有什么原则</p>
+<p>mysql建索引的原则</p>
+<p>新建一个索引会发生什么</p>
 <p>MySQL里的索引用过吧, 索引为什么快</p>
-<p>MySQL有做过优化吗, 讲讲吧</p>
-<p>知道或者用过mysql里的锁没有</p>
-<p>mysql加载机制？
-mysql innodb内部数据的保存结构</p>
+<p>bool字段加索引有没有用</p>
+<p>创建索引命令</p>
+<h4 id="types-of-indexes">Types of Indexes</h4>
+<p>索引数据结构MySQL的B+树</p>
+<p>OS的文件系统</p>
+<h6 id="b-tree-indexes">B-Tree indexes</h6>
+<p>最左匹配原则Match a leftmost prefix 最左前缀原理，最左匹配原则</p>
+<p>范围查找怎么走索引</p>
+<p>B+树的叶子结点存什么</p>
+<p>为什么B+树比普通二叉树快</p>
 <p>B树/B+树的区别</p>
+<h6 id="hash-indexes">Hash indexes</h6>
+<p>hash索引，二叉树索引，B树索引,B+树索引</p>
+<h3 id="indexing-strategies-for-high-performance">Indexing Strategies for High Performance</h3>
+<h4 id="clustered-indexes">Clustered Indexes</h4>
+<p>mysql聚集索引与非聚集索引</p>
+<p>聚簇&amp;非聚簇索引</p>
+<h2 id="query-performance-optimization">Query Performance Optimization</h2>
+<p>mysql优化</p>
+<p>sql优化，a&gt;&lsquo;x&rsquo; and z=&lsquo;x&rsquo; 会不会失效</p>
+<p>sql慢查询</p>
+<p>MySQL有做过优化吗, 讲讲吧</p>
 <p>MySQL的调优</p>
+<h3 id="optimizing-specific-types-of-queries">Optimizing Specific Types of Queries</h3>
+<h4 id="optimizing-limit-and-offset">Optimizing LIMIT and OFFSET</h4>
+<p>MySQL的分页查询</p>
+<h2 id="advanced-mysql-features">Advanced MySQL Features</h2>
+<h3 id="character-sets-and-collations">Character Sets and Collations</h3>
+<p>字符集</p>
+<h2 id="innodb">InnoDB</h2>
+<p>mysql innodb内部数据的保存结构</p>
+<p>mysql innodb底层原理，具体结构</p>
+<h2 id="replication">Replication</h2>
+<h3 id="advanced-features-in-mysql-replication">Advanced Features in MySQL Replication</h3>
+<p>看你简历写了数据库半同步复制，那说说什么是半同步复制，半同步复制好处是什么？
+主从有哪两个线程（我说了I/O和SQL）,他说不是SQL，我坚持说SQL，他说不是 （查了资料就是I/O和SQL呀）</p>
+<h2 id="scaling-mysql">Scaling MySQL</h2>
+<p>表数据量太大怎么解决，数据太多怎么办</p>
+<p>分表需要停机吗 可以不停机吗(先复制一份出来分表再迁移?)</p>
+<h2 id="availability">Availability</h2>
+<h3 id="avoiding-single-points-of-failure">Avoiding Single Points of Failure</h3>
+<h4 id="replication-based-redundancy">Replication-Based Redundancy</h4>
+<p>Mysql高可用，是如何配置mha的，在多个slave中选取一个升为master，是怎么做到在多个slave中选取一个slave升为主库的，用的什么方法 vip漂移怎么做的。数据库高可用用到的模块是什么？</p>
+<h3 id="failover-and-failback">Failover and Failback</h3>
+<p>explain有哪些字段</p>
+<p>mysql加载机制？</p>
 
     </div>
 

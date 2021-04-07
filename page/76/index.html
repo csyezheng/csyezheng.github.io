@@ -295,6 +295,81 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/any-path/post-installation-for-archlinux/">Post-installation for archlinux</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2017-09-26" class="post-time">
+        2017-09-26
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Reboot into the new system Set the keyboard layout and Console fonts If you have the 4K display, console fonts will be extremely small.
+$ setfont sun12x22 Connect to the internet nmcli device wifi list nmcli device wifi connect TP-LINK_GZS password a3628436 ping baidu.com Unofficial user repositories sudo vim /etc/pacman.conf [archlinuxcn] Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch Adding unofficial keys
+sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman -S ttc-iosevka-slab noto-fonts noto-fonts-cjk noto-fonts-emoji tf-latinmodern-math ttf-inconsolata Graphical user interface Display server sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight xorg-xrdb is using to loading a user-level configuration dotfile, typically located at ~/.
+    </div>
+    <div class="read-more">
+      <a href="/post/any-path/post-installation-for-archlinux/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/any-path/setup-a-archlinux-windows10-dual-booting-system/">Setup a Archlinux / Windows10 dual booting system</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2017-09-25" class="post-time">
+        2017-09-25
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Before   Check the hardware, three disks on my Lenovo ThinkPad P50
+  Samsung SSD 970 EVO Plus 250GB for installing windows
+  Samsung SSD 960 EVO 250GB for installling archlinux
+  WDC WD5000LPLX-0 HHD 500GB for data storage
+    Disable Windows Fast Startup if start from windows
+  Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)
+    </div>
+    <div class="read-more">
+      <a href="/post/any-path/setup-a-archlinux-windows10-dual-booting-system/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/specialization/web-application/front-end/bootstrap/">Bootstrap</a>
     </h1>
     
@@ -319,76 +394,6 @@
     </div>
     <div class="read-more">
       <a href="/post/specialization/web-application/front-end/bootstrap/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/web-application/front-end/angular/">Angular</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2017-06-21" class="post-time">
-        2017-06-21
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      QuickStart Step 1. Set up the Development Environment $ yaourt -S nodejs npm $ npm install -g @angular/cli Step 2. Create a new project $ ng new my-app Step 3: Serve the application $ cd my-app $ ng serve --open Step 4: Edit your first Angular component # ./src/app/app.component.ts export class AppComponent { title = 'My First Angular App!'; } # ./src/app/app.component.css h1 { color: #369; font-family: Arial, Helvetica, sans-serif; font-size: 250%; } Project file review my-app e2e # end-to-end tests src app.
-    </div>
-    <div class="read-more">
-      <a href="/post/specialization/web-application/front-end/angular/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/web-application/back-end/django/">Getting start with Django</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2017-05-22" class="post-time">
-        2017-05-22
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      First steps  Requests and responses Models and the admin site Views and templates Forms and generic views Testing Static files Customizing the admin site  Advanced Tutorials: How to write reusable apps | Writing your first patch for Django
-The model layer Models Generally, each model maps to a single database table.
-from django.db import models class Person(models.Model): name = models.CharField(max_length=30)  The name of the table, myapp_person, is automatically derived from the name of the app and the model class.
-    </div>
-    <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/django/" class="read-more-link">Read more</a>
     </div>
     
   </div>

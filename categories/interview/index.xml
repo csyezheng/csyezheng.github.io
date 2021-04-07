@@ -116,6 +116,15 @@
     </item>
     
     <item>
+      <title>interview questions: operation systems</title>
+      <link>http://www.yezheng.pro/post/interview/operating-systems/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/interview/operating-systems/</guid>
+      <description>Managing Concurrency Threads, Processes, and Dispatching 进程线程协程，相关的应用场景 协程切换 线程和进程的区别和联系 知道协程吗？ COW (copy on write) 如何实现 Processes 僵尸进程和孤儿进程的危害 僵尸进程和孤儿进</description>
+    </item>
+    
+    <item>
       <title>LeetCode Solution Github</title>
       <link>http://www.yezheng.pro/post/interview/algorithms/leetcode-solution-github/</link>
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
@@ -153,21 +162,12 @@ https://github.com/billryan/algorithm-exercise</description>
     </item>
     
     <item>
-      <title>operation systems interview questions</title>
-      <link>http://www.yezheng.pro/post/interview/operating-systems/</link>
-      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/operating-systems/</guid>
-      <description>虚拟内存和物理内存 虚拟内存是什么 LINUX的内存管理系统 COW如何实现 ReentrantLock 与 synchronized 区别 线程池满了处理策略 用户态和内核态的区别 怎么样从用户态到内核态</description>
-    </item>
-    
-    <item>
       <title>python interview questions</title>
       <link>http://www.yezheng.pro/post/interview/python/</link>
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/interview/python/</guid>
-      <description>python装饰器 python可变对象不可变对象 项目运行环境一般是什么 list和tuple的区别 list去重 装饰器（用函数实现，和类实现） def</description>
+      <description>ORM的查询 python装饰器 python可变对象不可变对象 项目运行环境一般是什么 list和tuple的区别 list去重 装饰器（用函数实现，</description>
     </item>
     
     <item>

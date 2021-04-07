@@ -6,7 +6,25 @@
     <description>Recent content in computer-science-core on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/computer-science-core/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/computer-science-core/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Operating Systems Principles</title>
+      <link>http://www.yezheng.pro/post/computer-science-core/operating-systems/</link>
+      <pubDate>Wed, 31 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/computer-science-core/operating-systems/</guid>
+      <description>Managing Concurrency Threads, Processes, and Dispatching Processes Threads Dispatching Process Creation Concurrency Independent and Cooperating Threads Atomic Operations The &amp;ldquo;Too Much Milk&amp;rdquo; Problem Interprocess communication 管道（Pipe）：管道可用于具有亲缘关系进程间的通信，允许一个进程和另一个与它有共同祖先的</description>
+    </item>
+    
+    <item>
+      <title>Computer Organization and Systems</title>
+      <link>http://www.yezheng.pro/post/computer-science-core/computer-systems/</link>
+      <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/computer-science-core/computer-systems/</guid>
+      <description>Topics Readings     Week 1    Lecture 1 (Mon): Welcome Intro to CS107. We&amp;rsquo;ll go through course logistics, learning goals, a tour of some surprising realities about modern systems Handouts: Course Info, Lecture slides B&amp;amp;O Ch 1 (skim chapter for quick overview of what is meant by systems and preview of topics to come) Why C still runs the world Why every programmer should learn C (Just for fun) Systems programmers and zombies   No lab during first week    Lecture 2 (Fri): Bits and bitwise operators Bits and bytes, bitwise operators, integer family types Lecture slides B&amp;amp;O Ch 2.</description>
+    </item>
+    
     <item>
       <title>Leetcode</title>
       <link>http://www.yezheng.pro/post/computer-science-core/algorithms/leetcode/</link>

@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="Scaling MySQL Planning for Scalability Buying Time Before Scaling Scaling Up Scaling Out Scaling by Consolidation Scaling by Clustering Scaling Back" />
+  <meta name="description" content="MySQL Architecture MySQL’s Logical Architecture Transactions mysql事务 mysql隔离级别 Dirty reads(脏读), Nonrepeatable reads, Phantom reads(幻读) Isolation Levels READ UNCOMMITTED READ COMMITTED REPEATABLE READ SERIALIZABLE MySQL’s Storage Engines M" />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -60,19 +60,19 @@
 
 
 <meta property="og:title" content="mysql" />
-<meta property="og:description" content="Scaling MySQL Planning for Scalability Buying Time Before Scaling Scaling Up Scaling Out Scaling by Consolidation Scaling by Clustering Scaling Back" />
+<meta property="og:description" content="MySQL Architecture MySQL’s Logical Architecture Transactions mysql事务 mysql隔离级别 Dirty reads(脏读), Nonrepeatable reads, Phantom reads(幻读) Isolation Levels READ UNCOMMITTED READ COMMITTED REPEATABLE READ SERIALIZABLE MySQL’s Storage Engines M" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/mysql/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-12-01T00:00:00&#43;00:00" />
 <meta property="article:modified_time" content="2020-12-01T00:00:00&#43;00:00" />
 
 <meta itemprop="name" content="mysql">
-<meta itemprop="description" content="Scaling MySQL Planning for Scalability Buying Time Before Scaling Scaling Up Scaling Out Scaling by Consolidation Scaling by Clustering Scaling Back"><meta itemprop="datePublished" content="2020-12-01T00:00:00&#43;00:00" />
+<meta itemprop="description" content="MySQL Architecture MySQL’s Logical Architecture Transactions mysql事务 mysql隔离级别 Dirty reads(脏读), Nonrepeatable reads, Phantom reads(幻读) Isolation Levels READ UNCOMMITTED READ COMMITTED REPEATABLE READ SERIALIZABLE MySQL’s Storage Engines M"><meta itemprop="datePublished" content="2020-12-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-12-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="21">
+<meta itemprop="wordCount" content="431">
 <meta itemprop="keywords" content="mysql,databases," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="mysql"/>
-<meta name="twitter:description" content="Scaling MySQL Planning for Scalability Buying Time Before Scaling Scaling Up Scaling Out Scaling by Consolidation Scaling by Clustering Scaling Back"/>
+<meta name="twitter:description" content="MySQL Architecture MySQL’s Logical Architecture Transactions mysql事务 mysql隔离级别 Dirty reads(脏读), Nonrepeatable reads, Phantom reads(幻读) Isolation Levels READ UNCOMMITTED READ COMMITTED REPEATABLE READ SERIALIZABLE MySQL’s Storage Engines M"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -319,7 +319,46 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
+    <li><a href="#mysql-architecture">MySQL Architecture</a>
+      <ul>
+        <li><a href="#mysqls-logical-architecture">MySQL’s Logical Architecture</a></li>
+        <li><a href="#transactions">Transactions</a></li>
+        <li><a href="#mysqls-storage-engines">MySQL’s Storage Engines</a></li>
+      </ul>
+    </li>
+    <li><a href="#optimizing-schema-and-data-types">Optimizing Schema and Data Types</a>
+      <ul>
+        <li><a href="#choosing-optimal-data-types">Choosing Optimal Data Types</a></li>
+      </ul>
+    </li>
+    <li><a href="#indexing-for-high-performance">Indexing for High Performance</a>
+      <ul>
+        <li><a href="#indexing-basics">Indexing Basics</a></li>
+        <li><a href="#indexing-strategies-for-high-performance">Indexing Strategies for High Performance</a></li>
+      </ul>
+    </li>
+    <li><a href="#query-performance-optimization">Query Performance Optimization</a>
+      <ul>
+        <li><a href="#optimizing-specific-types-of-queries">Optimizing Specific Types of Queries</a></li>
+      </ul>
+    </li>
+    <li><a href="#advanced-mysql-features">Advanced MySQL Features</a>
+      <ul>
+        <li><a href="#character-sets-and-collations">Character Sets and Collations</a></li>
+      </ul>
+    </li>
+    <li><a href="#replication">Replication</a>
+      <ul>
+        <li><a href="#advanced-features-in-mysql-replication">Advanced Features in MySQL Replication</a></li>
+      </ul>
+    </li>
     <li><a href="#scaling-mysql">Scaling MySQL</a></li>
+    <li><a href="#availability">Availability</a>
+      <ul>
+        <li><a href="#avoiding-single-points-of-failure">Avoiding Single Points of Failure</a></li>
+        <li><a href="#failover-and-failback">Failover and Failback</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -327,7 +366,50 @@
 
     
     <div class="post-content">
-      <h2 id="scaling-mysql">Scaling MySQL</h2>
+      <h2 id="mysql-architecture">MySQL Architecture</h2>
+<h3 id="mysqls-logical-architecture">MySQL’s Logical Architecture</h3>
+<p><img src="https://dev.mysql.com/doc/refman/8.0/en/images/mysql-architecture.png" alt="MySQL Architecture with Pluggable Storage Engines"></p>
+<h3 id="transactions">Transactions</h3>
+<p>mysql事务</p>
+<p>mysql隔离级别</p>
+<h4 id="dirty-reads脏读-nonrepeatable-reads-phantom-reads幻读">Dirty reads(脏读), Nonrepeatable reads, Phantom reads(幻读)</h4>
+<h4 id="isolation-levels">Isolation Levels</h4>
+<ul>
+<li>READ UNCOMMITTED</li>
+<li>READ COMMITTED</li>
+<li>REPEATABLE READ</li>
+<li>SERIALIZABLE</li>
+</ul>
+<h3 id="mysqls-storage-engines">MySQL’s Storage Engines</h3>
+<p>MyISAM和InnoDB</p>
+<p>MyISAM 适合于一些需要大量查询的应用，但其对于有大量写操作并不是很好。甚至你只是需要update一个字段，整个表都会被锁起来，而别的进程，就算是读进程都无法操作直到读操作完成。另外，MyISAM 对于 SELECT COUNT(*) 这类的计算是超快无比的。</p>
+<p>InnoDB 的趋势会是一个非常复杂的存储引擎，对于一些小的应用，它会比 MyISAM 还慢。他是它支持“行锁” ，于是在写操作比较多的时候，会更优秀。并且，他还支持更多的高级应用，比如：事务。</p>
+<p>mysql 数据库引擎: <a href="http://www.cnblogs.com/0201zcr/p/5296843.html">http://www.cnblogs.com/0201zcr/p/5296843.html</a> MySQL存储引擎－－MyISAM与InnoDB区别: <a href="https://segmentfault.com/a/1190000008227211">https://segmentfault.com/a/1190000008227211</a></p>
+<h2 id="optimizing-schema-and-data-types">Optimizing Schema and Data Types</h2>
+<h3 id="choosing-optimal-data-types">Choosing Optimal Data Types</h3>
+<h2 id="indexing-for-high-performance">Indexing for High Performance</h2>
+<h3 id="indexing-basics">Indexing Basics</h3>
+<h4 id="types-of-indexes">Types of Indexes</h4>
+<h6 id="b-tree-indexes">B-Tree indexes</h6>
+<p>Types of queries that can use a B-Tree index.：</p>
+<ul>
+<li>Match the full value</li>
+<li><strong>Match a leftmost prefix</strong></li>
+<li>Match a column prefix</li>
+<li>Match a range of values</li>
+<li>Index-only queries</li>
+</ul>
+<h6 id="hash-indexes">Hash indexes</h6>
+<h3 id="indexing-strategies-for-high-performance">Indexing Strategies for High Performance</h3>
+<h4 id="clustered-indexes">Clustered Indexes</h4>
+<h2 id="query-performance-optimization">Query Performance Optimization</h2>
+<h3 id="optimizing-specific-types-of-queries">Optimizing Specific Types of Queries</h3>
+<h4 id="optimizing-limit-and-offset">Optimizing LIMIT and OFFSET</h4>
+<h2 id="advanced-mysql-features">Advanced MySQL Features</h2>
+<h3 id="character-sets-and-collations">Character Sets and Collations</h3>
+<h2 id="replication">Replication</h2>
+<h3 id="advanced-features-in-mysql-replication">Advanced Features in MySQL Replication</h3>
+<h2 id="scaling-mysql">Scaling MySQL</h2>
 <p>Planning for Scalability
 Buying Time Before Scaling
 Scaling Up
@@ -335,6 +417,10 @@ Scaling Out
 Scaling by Consolidation
 Scaling by Clustering
 Scaling Back</p>
+<h2 id="availability">Availability</h2>
+<h3 id="avoiding-single-points-of-failure">Avoiding Single Points of Failure</h3>
+<h4 id="replication-based-redundancy">Replication-Based Redundancy</h4>
+<h3 id="failover-and-failback">Failover and Failback</h3>
 
     </div>
 
@@ -387,8 +473,8 @@ Scaling Back</p>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
-          <a class="next" href="/post/interview/operating-systems/">
-            <span class="next-text nav-default">operation systems interview questions</span>
+          <a class="next" href="/post/interview/python/">
+            <span class="next-text nav-default">python interview questions</span>
             <span class="prev-text nav-mobile">Next</span>
             
             <i class="iconfont">

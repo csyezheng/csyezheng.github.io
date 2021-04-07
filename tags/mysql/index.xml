@@ -13,7 +13,7 @@
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/mysql/</guid>
-      <description>Scaling MySQL Planning for Scalability Buying Time Before Scaling Scaling Up Scaling Out Scaling by Consolidation Scaling by Clustering Scaling Back</description>
+      <description>MySQL Architecture MySQL’s Logical Architecture Transactions mysql事务 mysql隔离级别 Dirty reads(脏读), Nonrepeatable reads, Phantom reads(幻读) Isolation Levels READ UNCOMMITTED READ COMMITTED REPEATABLE READ SERIALIZABLE MySQL’s Storage Engines M</description>
     </item>
     
     <item>

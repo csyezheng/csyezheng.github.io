@@ -793,6 +793,13 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/post/interview/operating-systems/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/tags/leetcode/</loc>
     <lastmod>2020-12-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -836,13 +843,6 @@
   
   <url>
     <loc>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/mysql/</loc>
-    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.yezheng.pro/post/interview/operating-systems/</loc>
     <lastmod>2020-12-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2564,6 +2564,27 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/categories/computer-science-core/</loc>
+    <lastmod>2018-01-31T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/computer-science-core/operating-systems/</loc>
+    <lastmod>2018-01-31T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/operating-systems/</loc>
+    <lastmod>2018-01-31T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/tags/algorithms/</loc>
     <lastmod>2018-01-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -2571,7 +2592,14 @@
   </url>
   
   <url>
-    <loc>http://www.yezheng.pro/categories/computer-science-core/</loc>
+    <loc>http://www.yezheng.pro/post/computer-science-core/computer-systems/</loc>
+    <lastmod>2018-01-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/computer-systems/</loc>
     <lastmod>2018-01-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

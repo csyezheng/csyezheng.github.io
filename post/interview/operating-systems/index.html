@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>operation systems interview questions - Ye Zheng&#39;s Blog</title>
+  <title>interview questions: operation systems - Ye Zheng&#39;s Blog</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="虚拟内存和物理内存 虚拟内存是什么 LINUX的内存管理系统 COW如何实现 ReentrantLock 与 synchronized 区别 线程池满了处理策略 用户态和内核态的区别 怎么样从用户态到内核态" />
+  <meta name="description" content="Managing Concurrency Threads, Processes, and Dispatching 进程线程协程，相关的应用场景 协程切换 线程和进程的区别和联系 知道协程吗？ COW (copy on write) 如何实现 Processes 僵尸进程和孤儿进程的危害 僵尸进程和孤儿进" />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -59,20 +59,20 @@
 
 
 
-<meta property="og:title" content="operation systems interview questions" />
-<meta property="og:description" content="虚拟内存和物理内存 虚拟内存是什么 LINUX的内存管理系统 COW如何实现 ReentrantLock 与 synchronized 区别 线程池满了处理策略 用户态和内核态的区别 怎么样从用户态到内核态" />
+<meta property="og:title" content="interview questions: operation systems" />
+<meta property="og:description" content="Managing Concurrency Threads, Processes, and Dispatching 进程线程协程，相关的应用场景 协程切换 线程和进程的区别和联系 知道协程吗？ COW (copy on write) 如何实现 Processes 僵尸进程和孤儿进程的危害 僵尸进程和孤儿进" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/interview/operating-systems/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-12-01T00:00:00&#43;00:00" />
 <meta property="article:modified_time" content="2020-12-01T00:00:00&#43;00:00" />
 
-<meta itemprop="name" content="operation systems interview questions">
-<meta itemprop="description" content="虚拟内存和物理内存 虚拟内存是什么 LINUX的内存管理系统 COW如何实现 ReentrantLock 与 synchronized 区别 线程池满了处理策略 用户态和内核态的区别 怎么样从用户态到内核态"><meta itemprop="datePublished" content="2020-12-01T00:00:00&#43;00:00" />
+<meta itemprop="name" content="interview questions: operation systems">
+<meta itemprop="description" content="Managing Concurrency Threads, Processes, and Dispatching 进程线程协程，相关的应用场景 协程切换 线程和进程的区别和联系 知道协程吗？ COW (copy on write) 如何实现 Processes 僵尸进程和孤儿进程的危害 僵尸进程和孤儿进"><meta itemprop="datePublished" content="2020-12-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-12-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2888">
+<meta itemprop="wordCount" content="874">
 <meta itemprop="keywords" content="interview," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="operation systems interview questions"/>
-<meta name="twitter:description" content="虚拟内存和物理内存 虚拟内存是什么 LINUX的内存管理系统 COW如何实现 ReentrantLock 与 synchronized 区别 线程池满了处理策略 用户态和内核态的区别 怎么样从用户态到内核态"/>
+<meta name="twitter:title" content="interview questions: operation systems"/>
+<meta name="twitter:description" content="Managing Concurrency Threads, Processes, and Dispatching 进程线程协程，相关的应用场景 协程切换 线程和进程的区别和联系 知道协程吗？ COW (copy on write) 如何实现 Processes 僵尸进程和孤儿进程的危害 僵尸进程和孤儿进"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -292,7 +292,7 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">operation systems interview questions</h1>
+      <h1 class="post-title">interview questions: operation systems</h1>
       
       <div class="post-meta">
         <time datetime="2020-12-01" class="post-time">
@@ -319,49 +319,38 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#processes-and-threads-进程与线程">PROCESSES AND THREADS (进程与线程)</a>
+    <li><a href="#managing-concurrency">Managing Concurrency</a>
       <ul>
-        <li><a href="#processes-进程">PROCESSES (进程)</a></li>
-        <li><a href="#threads-线程">THREADS (线程)</a></li>
-        <li><a href="#协程">协程</a></li>
-        <li><a href="#进程与线程区别">进程与线程区别</a></li>
-        <li><a href="#interprocess-communication-进程间通信">INTERPROCESS COMMUNICATION (进程间通信)</a></li>
-        <li><a href="#进程同步的方式">进程同步的方式</a></li>
-        <li><a href="#scheduling-调度">SCHEDULING (调度)</a></li>
+        <li><a href="#threads-processes-and-dispatching">Threads, Processes, and Dispatching</a></li>
+        <li><a href="#concurrency">Concurrency</a></li>
+        <li><a href="#interprocess-communication">Interprocess communication</a></li>
+        <li><a href="#synchronization">Synchronization</a></li>
+        <li><a href="#deadlock">Deadlock</a></li>
+        <li><a href="#scheduling">Scheduling</a></li>
       </ul>
     </li>
-    <li><a href="#memory-management-内存管理">MEMORY MANAGEMENT (内存管理)</a>
+    <li><a href="#memory-management">Memory management</a>
       <ul>
-        <li><a href="#virtual-memory-虚拟内存">VIRTUAL MEMORY (虚拟内存)</a></li>
+        <li><a href="#linking-static-and-dynamic">Linking (static and dynamic)</a></li>
+        <li><a href="#dynamic-storage-management">Dynamic Storage Management</a></li>
+        <li><a href="#virtual-memory">Virtual Memory</a></li>
+        <li><a href="#demand-paging">Demand Paging</a></li>
+        <li><a href="#magnetic-disks-hard-drives">Magnetic Disks (Hard Drives)</a></li>
       </ul>
     </li>
-    <li><a href="#paging-分页">Paging (分页)</a>
+    <li><a href="#file-systems">File systems</a>
       <ul>
-        <li><a href="#page-replacement-algorithms-页面置换算法">PAGE REPLACEMENT ALGORITHMS (页面置换算法)</a></li>
-        <li><a href="#segmentation-分段">SEGMENTATION (分段)</a></li>
+        <li><a href="#file-systems-1">File Systems</a></li>
+        <li><a href="#directories-and-links">Directories and Links</a></li>
+        <li><a href="#file-system-crash-recovery">File System Crash Recovery</a></li>
+        <li><a href="#protection">Protection</a></li>
+        <li><a href="#managing-flash-memory">Managing Flash Memory</a></li>
       </ul>
     </li>
-    <li><a href="#deadlocks-死锁">DEADLOCKS (死锁)</a></li>
-    <li><a href="#virtualization-and-the-cloud-虚拟化和云">VIRTUALIZATION AND THE CLOUD (虚拟化和云)</a></li>
-    <li><a href="#multiple-processor-systems-多处理机系统">MULTIPLE PROCESSOR SYSTEMS (多处理机系统)</a>
+    <li><a href="#virtual-machines">Virtual machines</a>
       <ul>
-        <li><a href="#multicomputers-多计算机">MULTICOMPUTERS (多计算机)</a></li>
-      </ul>
-    </li>
-    <li><a href="#安全">安全</a>
-      <ul>
-        <li><a href="#可信系统">可信系统</a></li>
-        <li><a href="#密码学原理">密码学原理</a></li>
-        <li><a href="#软件漏洞">软件漏洞</a></li>
-      </ul>
-    </li>
-    <li><a href="#case-study-1-unix-linux">CASE STUDY 1: UNIX, LINUX</a>
-      <ul>
-        <li><a href="#processes-in-linux">PROCESSES IN LINUX</a></li>
-        <li><a href="#memory-management-in-linux">MEMORY MANAGEMENT IN LINUX</a></li>
-        <li><a href="#inputoutput-in-linux">INPUT/OUTPUT IN LINUX</a></li>
-        <li><a href="#the-linux-file-system">THE LINUX FILE SYSTEM</a></li>
-        <li><a href="#security-in-linux">SECURITY IN LINUX</a></li>
+        <li><a href="#implementing-hypervisors">Implementing hypervisors</a></li>
+        <li><a href="#historyusage-of-virtual-machines">History/usage of virtual machines</a></li>
       </ul>
     </li>
   </ul>
@@ -371,207 +360,119 @@
 
     
     <div class="post-content">
-      <p>虚拟内存和物理内存</p>
-<p>虚拟内存是什么</p>
-<p>LINUX的内存管理系统</p>
-<p>COW如何实现</p>
-<p>ReentrantLock 与 synchronized 区别</p>
+      <h2 id="managing-concurrency">Managing Concurrency</h2>
+<h3 id="threads-processes-and-dispatching">Threads, Processes, and Dispatching</h3>
+<p>进程线程协程，相关的应用场景</p>
+<p>协程切换</p>
+<p>线程和进程的区别和联系</p>
+<p>知道协程吗？</p>
+<p>COW (copy on write) 如何实现</p>
+<h4 id="processes">Processes</h4>
+<p>僵尸进程和孤儿进程的危害</p>
+<p>僵尸进程和孤儿进程。</p>
 <p>线程池满了处理策略</p>
-<p>用户态和内核态的区别</p>
-<p>怎么样从用户态到内核态，举例说明中断的例子</p>
 <p>进程，线程和协程</p>
 <p>线程的几种状态</p>
 <p>如何停止线程</p>
 <p>多线程</p>
-<p>内存管理</p>
 <p>进程和线程的概念</p>
 <p>进程和线程的同步方式</p>
-<p>CPU调度算法，我说了先进先上和最短的先上、IO密集型的先上</p>
-<p>问 LRU 和 LFU，这个我知道啊，内存置换算法</p>
-<p>读写锁和互斥锁</p>
-<p>僵尸进程和孤儿进程。</p>
 <p>进程间通信 匿名管道和命名管道的区别</p>
-<p>进程的内存管理、内存分布</p>
-<p>线程同步一个进程的什么？</p>
-<p>阻塞是啥？send recv 阻塞非阻塞的区别？阻塞的线程占用CPU吗？为什么vim一个超大的文件CPU会卡？</p>
-<p>起几个线程死循环 cpu会爆吗？</p>
-<p>epoll和select？epoll 边缘触发。</p>
-<p>磁盘转一次要多久</p>
-<p>程序计数器作用，为什么是私有的</p>
 <p>进程和线程区别，线程之间通讯怎么实现？</p>
-<p>知道协程吗？</p>
-<p>死锁怎么产生的？举个例子， 那怎么解决死锁？</p>
-<p>如果线程间抢占资源，会有什么后果?</p>
-<p>当你读取一个文件 fail了，这个过程是怎么样的？</p>
-<p>信号量的实际应用</p>
-<p>用户空间和内核空间</p>
-<p>7.线程和进程的区别和联系
-8.什么是用户态和内核态
-9.什么时候会切换到内核态</p>
-<p>信号锁和互斥锁</p>
+<p>进程的内存管理、内存分布</p>
+<h4 id="threads">Threads</h4>
+<p>线程共享哪些东西，为什么还需要通信？（不太会）</p>
 <p>多线程之间数据是怎么共享的</p>
 <p>子线程结束，主线程才能结束，这个是怎么控制的？</p>
-<p>协程切换</p>
+<p>线程同步一个进程的什么？</p>
+<h4 id="dispatching">Dispatching</h4>
+<p>用户态和内核态的区别</p>
+<p>什么是用户态和内核态</p>
+<p>什么时候会切换到内核态</p>
+<p>用户空间和内核空间</p>
+<p>怎么样从用户态到内核态，举例说明中断的例子</p>
 <p>ctrl c用什么实现</p>
+<p>当你读取一个文件 fail了，这个过程是怎么样的？</p>
+<h4 id="process-creation">Process Creation</h4>
+<h3 id="concurrency">Concurrency</h3>
+<h4 id="independent-and-cooperating-threads">Independent and Cooperating Threads</h4>
+<h4 id="atomic-operations">Atomic Operations</h4>
+<h4 id="the-too-much-milk-problem">The &ldquo;Too Much Milk&rdquo; Problem</h4>
+<h3 id="interprocess-communication">Interprocess communication</h3>
+<h3 id="synchronization">Synchronization</h3>
 <p>线程同步（只答了信号量，没答锁）</p>
-<p>线程共享哪些东西，为什么还需要通信？（不太会）</p>
+<p>信号量的实际应用</p>
+<p>ReentrantLock 与 synchronized 区别</p>
+<h4 id="races">races</h4>
 <p>线程之间的冲突如何解决，会有一些锁，比如互斥锁了，读写锁了</p>
+<p>如果线程间抢占资源，会有什么后果?</p>
+<h4 id="inconsistency">inconsistency</h4>
+<h4 id="locks">Locks</h4>
 <p>读写锁和互斥锁的概念用法</p>
-<p>用过虚拟机, 知道虚拟机配网络的有哪几种模式吗&quot;,&ldquo;有桥接, nat, host-only(面试官追问它们的区别时候, nat, host-only没分清楚,这块儿只是用过, 没深入了解)</p>
-<p>进程线程协程，相关的应用场景</p>
-<p>僵尸进程和孤儿进程的危害</p>
-<h2 id="processes-and-threads-进程与线程">PROCESSES AND THREADS (进程与线程)</h2>
-<h3 id="processes-进程">PROCESSES (进程)</h3>
-<h3 id="threads-线程">THREADS (线程)</h3>
-<h3 id="协程">协程</h3>
-<h3 id="进程与线程区别">进程与线程区别</h3>
-<h3 id="interprocess-communication-进程间通信">INTERPROCESS COMMUNICATION (进程间通信)</h3>
-<ol>
-<li>管道（Pipe）：管道可用于具有亲缘关系进程间的通信，允许一个进程和另一个与它有共同祖先的进程之间进行通信。</li>
-<li>命名管道（named pipe）：命名管道克服了管道没有名字的限制，因此，除具有管道所具有的功能外，它还允许无亲缘关系进程间的通信。命名管道在文件系统中有对应的文件名。命名管道通过命令mkfifo或系统调用mkfifo来创建。</li>
-<li>信号（Signal）：信号是比较复杂的通信方式，用于通知接受进程有某种事件发生，除了用于进程间通信外，进程还可以发送信号给进程本身；linux除了支持Unix早期信号语义函数sigal外，还支持语义符合Posix.1标准的信号函数sigaction（实际上，该函数是基于BSD的，BSD为了实现可靠信号机制，又能够统一对外接口，用sigaction函数重新实现了signal函数）。</li>
-<li>消息（Message）队列：消息队列是消息的链接表，包括Posix消息队列system V消息队列。有足够权限的进程可以向队列中添加消息，被赋予读权限的进程则可以读走队列中的消息。消息队列克服了信号承载信息量少，管道只能承载无格式字节流以及缓冲区大小受限等缺</li>
-<li>共享内存：使得多个进程可以访问同一块内存空间，是最快的可用IPC形式。是针对其他通信机制运行效率较低而设计的。往往与其它通信机制，如信号量结合使用，来达到进程间的同步及互斥。</li>
-<li>内存映射（mapped memory）：内存映射允许任何多个进程间通信，每一个使用该机制的进程通过把一个共享的文件映射到自己的进程地址空间来实现它。</li>
-<li>信号量（semaphore）：主要作为进程间以及同一进程不同线程之间的同步手段。</li>
-<li>套接口（Socket）：更为一般的进程间通信机制，可用于不同机器之间的进程间通信。起初是由Unix系统的BSD分支开发出来的，但现在一般可以移植到其它类Unix系统上：Linux和System V的变种都支持套接字。</li>
-</ol>
-<ul>
-<li>竞争条件</li>
-<li>临界区</li>
-<li>忙等待的互斥</li>
-<li>睡眠与唤醒</li>
-<li>信号量</li>
-<li>互斥量</li>
-<li>管程</li>
-<li>消息传递</li>
-<li>屏障</li>
-<li>避免锁：读–复制–更新</li>
-</ul>
-<h3 id="进程同步的方式">进程同步的方式</h3>
-<h3 id="scheduling-调度">SCHEDULING (调度)</h3>
-<h4 id="scheduling-algorithms">Scheduling algorithms</h4>
-<ul>
-<li>先来先服务(FCFS, First Come First Serve)</li>
-<li>短作业优先(SJF, Shortest Job First)</li>
-<li>最高优先权调度(Priority Scheduling)</li>
-<li>时间片轮转(RR, Round Robin)</li>
-<li>多级反馈队列调度(multilevel feedback queue scheduling)</li>
-</ul>
-<p>常见的调度算法总结:http://www.jianshu.com/p/6edf8174c1eb</p>
-<p>实时调度算法:</p>
-<ol>
-<li>最早截至时间优先 EDF</li>
-<li>最低松弛度优先 LLF</li>
-</ol>
-<h2 id="memory-management-内存管理">MEMORY MANAGEMENT (内存管理)</h2>
-<h3 id="virtual-memory-虚拟内存">VIRTUAL MEMORY (虚拟内存)</h3>
-<p>虚拟存储器是指具有请求调入功能和置换功能,能从逻辑上对内存容量加以扩充的一种存储系统.</p>
-<h2 id="paging-分页">Paging (分页)</h2>
-<p>分页: 用户程序的地址空间被划分成若干固定大小的区域，称为“页”，相应地，内存空间分成若干个物理块，页和块的大小相等。可将用户程序的任一页放在内存的任一块中，实现了离散分配。</p>
-<h3 id="page-replacement-algorithms-页面置换算法">PAGE REPLACEMENT ALGORITHMS (页面置换算法)</h3>
-<ol>
-<li>最佳置换算法OPT:不可能实现</li>
-<li>先进先出FIFO</li>
-<li>最近最久未使用算法LRU:最近一段时间里最久没有使用过的页面予以置换.</li>
-<li>clock算法</li>
-</ol>
-<ul>
-<li>最优页面置换算法</li>
-<li>最近未使用页面置换算法</li>
-<li>先进先出页面置换算法</li>
-<li>第二次机会页面置换算法</li>
-<li>时钟页面置换算法</li>
-<li>最近最少使用页面置换算法</li>
-<li>用软件模拟LRU</li>
-<li>工作集页面置换算法</li>
-<li>工作集时钟页面置换算法</li>
-</ul>
-<h3 id="segmentation-分段">SEGMENTATION (分段)</h3>
-<p>分段: 将用户程序地址空间分成若干个大小不等的段，每段可以定义一组相对完整的逻辑信息。存储分配时，以段为单位，段与段在内存中可以不相邻接，也实现了离散分配。</p>
-<h4 id="分页与分段的主要区别">分页与分段的主要区别</h4>
-<ol>
-<li>页是信息的物理单位,分页是为了实现非连续分配,以便解决内存碎片问题,或者说分页是由于系统管理的需要.段是信息的逻辑单位,它含有一组意义相对完整的信息,分段的目的是为了更好地实现共享,满足用户的需要.</li>
-<li>页的大小固定,由系统确定,将逻辑地址划分为页号和页内地址是由机器硬件实现的.而段的长度却不固定,决定于用户所编写的程序,通常由编译程序在对源程序进行编译时根据信息的性质来划分.</li>
-<li>分页的作业地址空间是一维的.分段的地址空间是二维的.</li>
-</ol>
+<p>读写锁和互斥锁</p>
+<p>信号锁和互斥锁</p>
+<p>程序计数器作用，为什么是私有的</p>
+<h4 id="condition-variables">Condition Variables</h4>
+<h4 id="monitors">Monitors</h4>
+<h4 id="implementing-locks">Implementing Locks</h4>
+<h3 id="deadlock">Deadlock</h3>
+<p>死锁怎么产生的？举个例子， 那怎么解决死锁？</p>
+<h3 id="scheduling">Scheduling</h3>
+<p>CPU调度算法，我说了先进先上和最短的先上、IO密集型的先上</p>
+<h2 id="memory-management">Memory management</h2>
+<p>内存管理</p>
+<p>虚拟内存和物理内存</p>
+<p>虚拟内存是什么</p>
+<p>LINUX的内存管理系统</p>
+<p>起几个线程死循环 cpu会爆吗？</p>
+<h3 id="linking-static-and-dynamic">Linking (static and dynamic)</h3>
+<h4 id="dynamic-linking">Dynamic Linking</h4>
+<h3 id="dynamic-storage-management">Dynamic Storage Management</h3>
+<h4 id="stack-allocation">Stack Allocation</h4>
+<h4 id="heap-allocation">Heap Allocation</h4>
+<h4 id="storage-reclamation">Storage Reclamation</h4>
+<h3 id="virtual-memory">Virtual Memory</h3>
+<h4 id="dynamic-address-translation">Dynamic Address Translation</h4>
+<h4 id="base-and-bound-translation">Base and Bound Translation</h4>
+<h4 id="multiple-segments">Multiple segments</h4>
+<h4 id="paging">Paging</h4>
+<h4 id="translation-lookaside-buffers-tlbs">Translation Lookaside Buffers (TLBs)</h4>
+<h4 id="miscellaneous-topics">Miscellaneous Topics</h4>
+<h3 id="demand-paging">Demand Paging</h3>
+<h4 id="page-faults">Page Faults</h4>
+<h4 id="page-fetching">Page Fetching</h4>
+<h4 id="page-replacement">Page Replacement</h4>
+<p>问 LRU 和 LFU，这个我知道啊，内存置换算法</p>
+<h3 id="magnetic-disks-hard-drives">Magnetic Disks (Hard Drives)</h3>
+<h4 id="communicating-with-io-devices">Communicating with I/O Devices</h4>
+<p>磁盘转一次要多久</p>
+<p>阻塞是啥？send recv 阻塞非阻塞的区别？阻塞的线程占用CPU吗？为什么vim一个超大的文件CPU会卡？</p>
+<h2 id="file-systems">File systems</h2>
+<h3 id="file-systems-1">File Systems</h3>
 <p>如何判断一个文件有没有被修改过</p>
-<h2 id="deadlocks-死锁">DEADLOCKS (死锁)</h2>
-<p>原因:</p>
-<ol>
-<li>竞争资源</li>
-<li>程序推进顺序不当</li>
-</ol>
-<p>必要条件:</p>
-<ol>
-<li>互斥条件</li>
-<li>请求和保持条件</li>
-<li>不剥夺条件</li>
-<li>环路等待条件</li>
-</ol>
-<p>处理死锁基本方法:</p>
-<ol>
-<li>预防死锁(摒弃除1以外的条件)</li>
-<li>避免死锁(银行家算法)</li>
-<li>检测死锁(资源分配图)</li>
-<li>解除死锁
-<ol>
-<li>剥夺资源</li>
-<li>撤销进程</li>
-</ol>
-</li>
-</ol>
-<p>死锁概念处理策略详细介绍:https://wizardforcel.gitbooks.io/wangdaokaoyan-os/content/10.html</p>
-<h2 id="virtualization-and-the-cloud-虚拟化和云">VIRTUALIZATION AND THE CLOUD (虚拟化和云)</h2>
-<h2 id="multiple-processor-systems-多处理机系统">MULTIPLE PROCESSOR SYSTEMS (多处理机系统)</h2>
-<h3 id="multicomputers-多计算机">MULTICOMPUTERS (多计算机)</h3>
-<h4 id="remote-procedure-call-远程过程调用">Remote Procedure Call (远程过程调用)</h4>
-<p>RPC服务的概念，RPC服务一般都怎么做序列化？怎么处理传输层的字节流？</p>
-<h4 id="distributed-shared-memory-分布式共享内存">Distributed Shared Memory (分布式共享内存)</h4>
-<h4 id="multicomputer-scheduling-负载均衡">Multicomputer Scheduling (负载均衡)</h4>
-<ul>
-<li>A Graph-Theoretic Deterministic Algorithm (图论确定算法)</li>
-<li>A Sender-Initiated Distributed Heuristic Algorithm (发起者发起的分布式启发算法)</li>
-<li>A Receiver-Initiated Distributed Heuristic Algorithm (接受者发起的分布式启发算法)</li>
-</ul>
-<h2 id="安全">安全</h2>
-<h3 id="可信系统">可信系统</h3>
-<h3 id="密码学原理">密码学原理</h3>
-<ul>
-<li>私钥加密技术</li>
-<li>公钥加密技术</li>
-<li>单向函数</li>
-<li>数字签名</li>
-<li>可信平台模块</li>
-</ul>
-<h3 id="软件漏洞">软件漏洞</h3>
-<h2 id="case-study-1-unix-linux">CASE STUDY 1: UNIX, LINUX</h2>
-<h3 id="processes-in-linux">PROCESSES IN LINUX</h3>
-<p>Fundamental Concepts</p>
-<p>Process-Management System Calls in Linux CONTENTS</p>
-<p>Implementation of Processes and Threads in Linux</p>
-<p>Scheduling in Linux</p>
-<p>Booting Linux</p>
-<h3 id="memory-management-in-linux">MEMORY MANAGEMENT IN LINUX</h3>
-<p>Fundamental Concepts</p>
-<p>Memory Management System Calls in Linux</p>
-<p>Implementation of Memory Management in Linux</p>
-<p>Paging in Linux</p>
-<h3 id="inputoutput-in-linux">INPUT/OUTPUT IN LINUX</h3>
-<p>Fundamental Concepts</p>
-<p>Networking</p>
-<p>Input/Output System Calls in Linux</p>
-<p>Implementation of Input/Output in Linux</p>
-<p>Modules in Linux</p>
-<h3 id="the-linux-file-system">THE LINUX FILE SYSTEM</h3>
-<p>Fundamental Concepts</p>
-<p>File-System Calls in Linux</p>
-<p>Implementation of the Linux File System</p>
-<p>NFS: The Network File System IN LINUX</p>
-<h3 id="security-in-linux">SECURITY IN LINUX</h3>
-<p>Fundamental Concepts</p>
-<p>Security System Calls in Linux</p>
-<p>Implementation of Security in Linux</p>
+<h4 id="inodes">Inodes</h4>
+<h4 id="block-cache">Block Cache</h4>
+<h4 id="free-space-management">Free Space Management</h4>
+<h4 id="block-sizes">Block Sizes</h4>
+<h4 id="disk-scheduling">Disk Scheduling</h4>
+<h3 id="directories-and-links">Directories and Links</h3>
+<h4 id="working-directories">Working directories</h4>
+<h4 id="links">Links</h4>
+<h3 id="file-system-crash-recovery">File System Crash Recovery</h3>
+<h4 id="approach-1-check-consistency-during-reboot-repair-problems">Approach #1: check consistency during reboot, repair problems</h4>
+<h4 id="approach-2-ordered-writes">Approach #2: ordered writes</h4>
+<h4 id="approach-3-write-ahead-logging">Approach #3: write-ahead logging</h4>
+<h4 id="remaining-problems">Remaining problems</h4>
+<h3 id="protection">Protection</h3>
+<h4 id="authentication">Authentication</h4>
+<h4 id="authorization">Authorization</h4>
+<h4 id="access-enforcement">Access Enforcement</h4>
+<h4 id="rights-amplification">Rights Amplification</h4>
+<h3 id="managing-flash-memory">Managing Flash Memory</h3>
+<h2 id="virtual-machines">Virtual machines</h2>
+<p>用过虚拟机, 知道虚拟机配网络的有哪几种模式吗&quot;,&ldquo;有桥接, nat, host-only(面试官追问它们的区别时候, nat, host-only没分清楚,这块儿只是用过, 没深入了解)</p>
+<h3 id="implementing-hypervisors">Implementing hypervisors</h3>
+<h3 id="historyusage-of-virtual-machines">History/usage of virtual machines</h3>
 
     </div>
 
@@ -609,7 +510,7 @@
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/specialization/systems/data-management-and-data-systems/mysql/">
+          <a class="prev" href="/post/enterprise-architecture/lifecycles/">
             
             <i class="iconfont">
               <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -619,12 +520,12 @@
 </svg>
 
             </i>
-            <span class="prev-text nav-default">mysql</span>
+            <span class="prev-text nav-default">Enterprise life cycle</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
-          <a class="next" href="/post/interview/python/">
-            <span class="next-text nav-default">python interview questions</span>
+          <a class="next" href="/post/interview/algorithms/leetcode-solution-github/">
+            <span class="next-text nav-default">LeetCode Solution Github</span>
             <span class="prev-text nav-mobile">Next</span>
             
             <i class="iconfont">

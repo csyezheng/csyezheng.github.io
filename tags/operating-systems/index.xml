@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>operating-systems on Ye Zheng&#39;s Blog</title>
+    <link>http://www.yezheng.pro/tags/operating-systems/</link>
+    <description>Recent content in operating-systems on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 31 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/operating-systems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Operating Systems Principles</title>
+      <link>http://www.yezheng.pro/post/computer-science-core/operating-systems/</link>
+      <pubDate>Wed, 31 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/computer-science-core/operating-systems/</guid>
+      <description>Managing Concurrency Threads, Processes, and Dispatching Processes Threads Dispatching Process Creation Concurrency Independent and Cooperating Threads Atomic Operations The &amp;ldquo;Too Much Milk&amp;rdquo; Problem Interprocess communication 管道（Pipe）：管道可用于具有亲缘关系进程间的通信，允许一个进程和另一个与它有共同祖先的</description>
+    </item>
+    
+  </channel>
+</rss>
