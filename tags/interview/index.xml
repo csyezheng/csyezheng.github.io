@@ -76,7 +76,7 @@
       <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/interview/computer-networks/</guid>
-      <description>https原理 socket连接流程 client先发送了A,server没读出,client再发送B,server读的是A还是AB tcp三次握</description>
+      <description>How the Internet works 用户请求从浏览器到服务器都发生了什么 输入网址，请求解析过程 网址中输入url会发生什么 问了如果用户输入url并回车后没有反应，你作为程</description>
     </item>
     
     <item>
