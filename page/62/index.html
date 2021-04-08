@@ -295,6 +295,77 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/engineering-fundamentals/scala/getting-started/">Getting Started with Scala</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Create A Scala Project With sbt In The Command Line Installation   Java 8 JDK javac -version 
+  install sbt
+  Create a project $ mkdir practice &amp;&amp; cd practice $ sbt new scala/hello-world.g8 # pull template from GitHub - hello-world - project (sbt uses this to install manage plugins and dependencies) - build.properties - src - main - scala (All of your scala code goes here) -Main.
+    </div>
+    <div class="read-more">
+      <a href="/post/engineering-fundamentals/scala/getting-started/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/engineering-fundamentals/go/gin/">Gin</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
+$ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/sessions&quot; cookie-based Example import ( &quot;github.com/gin-contrib/sessions&quot; &quot;github.com/gin-contrib/sessions/cookie&quot; &quot;github.com/gin-gonic/gin&quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&quot;secret&quot;)) r.Use(sessions.Sessions(&quot;mysession&quot;, store)) r.GET(&quot;/incr&quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&quot;count&quot;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&quot;count&quot;, count) session.
+    </div>
+    <div class="read-more">
+      <a href="/post/engineering-fundamentals/go/gin/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/engineering-fundamentals/go/glide/">glide</a>
     </h1>
     
@@ -319,74 +390,6 @@
     </div>
     <div class="read-more">
       <a href="/post/engineering-fundamentals/go/glide/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/engineering-fundamentals/go/modules/">go modules</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      https://github.com/golang/go/wiki/Modules#quick-start
-    </div>
-    <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/modules/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/engineering-fundamentals/go/go-get-golang-x-solution/">go-get-golang-x-solution</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      问题描述 当我们使用 go get、go install、go mod 等命令时，会自动下载相应的包或依赖包。但由于众所周知的原因，类似于 golang.org/x/... 的包会出现下载失败
-    </div>
-    <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/go-get-golang-x-solution/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2258,6 +2261,48 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/63/">»</a></li>
@@ -2265,7 +2310,7 @@
 
       
       
-      <li><a href="/page/82/">»»</a></li>
+      <li><a href="/page/84/">»»</a></li>
       
 
       </ul>

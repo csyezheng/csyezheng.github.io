@@ -35,6 +35,15 @@
     </item>
     
     <item>
+      <title>UNIX环境高级编程</title>
+      <link>http://www.yezheng.pro/post/computer-science-core/unix/</link>
+      <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/computer-science-core/unix/</guid>
+      <description>聊聊C10K问题及解决方案 #1 C10K问题# 大家都知道互联网的基础就是网络通信，早期的互联网可以说是一个小群体的集合。互联网还不够普及，用户也</description>
+    </item>
+    
+    <item>
       <title>Data structures and algorithms use</title>
       <link>http://www.yezheng.pro/post/computer-science-core/algorithms/data-structures-and-algorithms-use/</link>
       <pubDate>Mon, 25 Dec 2017 00:00:00 +0000</pubDate>

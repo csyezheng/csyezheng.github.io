@@ -295,15 +295,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/computer-science-core/operating-systems/">Operating Systems Principles</a>
+      <a class="post-link" href="/post/other/thinking/thinking/">Programming Thinking</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-01-31" class="post-time">
-        2018-01-31
+      <time datetime="2018-08-15" class="post-time">
+        2018-08-15
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/computer-science-core/"> computer-science-core </a>
+          <a href="http://www.yezheng.pro/categories/other/"> other </a>
           
         </div>
       
@@ -315,10 +315,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Managing Concurrency Threads, Processes, and Dispatching Processes Threads Dispatching Process Creation Concurrency Independent and Cooperating Threads Atomic Operations The &ldquo;Too Much Milk&rdquo; Problem Interprocess communication 管道（Pipe）：管道可用于具有亲缘关系进程间的通信，允许一个进程和另一个与它有共同祖先的
+      基类的派生类的派生类需要做某些改动时，追溯到基类的一个虚函数做改动才能实现时，可以在此派生类中重写同名函数进行覆盖而不是继承这个虚函数，先拷
     </div>
     <div class="read-more">
-      <a href="/post/computer-science-core/operating-systems/" class="read-more-link">Read more</a>
+      <a href="/post/other/thinking/thinking/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -329,15 +329,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/computer-science-core/computer-systems/">Computer Organization and Systems</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/kafka/">Kafka</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-01-30" class="post-time">
-        2018-01-30
+      <time datetime="2018-07-23" class="post-time">
+        2018-07-23
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/computer-science-core/"> computer-science-core </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -349,10 +349,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Topics Readings     Week 1    Lecture 1 (Mon): Welcome Intro to CS107. We&rsquo;ll go through course logistics, learning goals, a tour of some surprising realities about modern systems Handouts: Course Info, Lecture slides B&amp;O Ch 1 (skim chapter for quick overview of what is meant by systems and preview of topics to come) Why C still runs the world Why every programmer should learn C (Just for fun) Systems programmers and zombies   No lab during first week    Lecture 2 (Fri): Bits and bitwise operators Bits and bytes, bitwise operators, integer family types Lecture slides B&amp;O Ch 2.
+      Quickstart &gt; tar -xzf kafka_2.11-1.1.0.tgz &gt; cd kafka_2.11-1.1.0 Start the server bin/zookeeper-server-start.sh config/zookeeper.properties bin/kafka-server-start.sh config/server.properties Create a topic bin/kaftopics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic my-topic bin/kafka-topics.sh --list --zookeeper localhost:2181 Send some messages bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning Python client for the Apache Kafka #!/usr/bin/env python3 import logging from kafka import KafkaProducer from kafka.errors import KafkaError import msgpack log = logging.getLogger(__name__) def send(): producer = KafkaProducer(bootstrap_servers=['localhost:9092'], value_serializer=msgpack.
     </div>
     <div class="read-more">
-      <a href="/post/computer-science-core/computer-systems/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/kafka/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -363,15 +363,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/computer-science-core/algorithms/leetcode/">Leetcode</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/deep-learning/keras/">keras</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-01-30" class="post-time">
-        2018-01-30
+      <time datetime="2018-03-26" class="post-time">
+        2018-03-26
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/computer-science-core/"> computer-science-core </a>
+          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -383,10 +383,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      LeetCode最常考察 1 Two Sum 2 Add Two Numbers 3 Longest Substring Without Repeating Characters 8 String to Integer (atoi) 15 3Sum 19 Remove Nth Node From End of List 21 Merge Two Sorted Lists 23 Merge k Sorted Lists 25 Reverse Nodes in k-Group 33 Search in Rotated Sorted Array 34 Search for a Range 42 Trapping Rain Water
+      Keras import tensorflow as tf from tensorflow import keras 
     </div>
     <div class="read-more">
-      <a href="/post/computer-science-core/algorithms/leetcode/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/deep-learning/keras/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2258,6 +2258,48 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/75/">»</a></li>
@@ -2265,7 +2307,7 @@
 
       
       
-      <li><a href="/page/82/">»»</a></li>
+      <li><a href="/page/84/">»»</a></li>
       
 
       </ul>

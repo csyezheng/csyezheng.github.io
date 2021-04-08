@@ -36,5 +36,14 @@ https://zhuanlan.zhihu.com/p/30027739
 https://www.cs.fsu.edu/~redwood/OffensiveComputerSecurity/lectures.html</description>
     </item>
     
+    <item>
+      <title>web security</title>
+      <link>http://www.yezheng.pro/post/specialization/security/web-security/</link>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/security/web-security/</guid>
+      <description>网站用户密码保存 明文保存 明文hash后保存,如md5 MD5+Salt方式,这个salt可以随机 知乎使用了Bcrypy(好像)加密 XSRF和X</description>
+    </item>
+    
   </channel>
 </rss>

@@ -69,7 +69,7 @@
 <meta itemprop="name" content="Transport Layer">
 <meta itemprop="description" content="Introduction and Transport-Layer Services 运输层位于应用层和网络层之间，该层为运行在不同主机上的应用进程提供直接的通信服务，它将网络层的在两个端系统之间的交付服务扩展到运行在"><meta itemprop="datePublished" content="2021-03-07T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-03-07T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="20525">
+<meta itemprop="wordCount" content="21027">
 <meta itemprop="keywords" content="computer-networking,tcp," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Transport Layer"/>
 <meta name="twitter:description" content="Introduction and Transport-Layer Services 运输层位于应用层和网络层之间，该层为运行在不同主机上的应用进程提供直接的通信服务，它将网络层的在两个端系统之间的交付服务扩展到运行在"/>
@@ -677,6 +677,12 @@ rwnd = RcvBuffer – [LastByteRcvd – LastByteRead]
 <p>3）在收到SYNACK报文段后，客户也要给该连接分配缓存和变量。客户主机则向服务器发送另外一个报文段；这最后一个报文段对服务器的允许连接的报文段进行了确认（首部中：①确认字段为server_isn+1;②序号字段为client_isn+1;③SYN比特置为0）。该三次握手的第三个阶段可以在报文段负载中携带客户到服务器的数据。</p>
 <p>在以后的每一个报文段中，SYN比特都被置为0；这种连接创建过程被称为3次握手(three-way handshake)。</p>
 <p><img src="http://ww1.sinaimg.cn/large/0083FLjsly1gooht0ym97j30gq0doabb.jpg" alt="rX6qD9Y.png"></p>
+<p><strong>三次握手</strong>:</p>
+<ol>
+<li>客户端通过向服务器端发送一个SYN来创建一个主动打开，作为三次握手的一部分。客户端把这段连接的序号设定为随机数 A。</li>
+<li>服务器端应当为一个合法的SYN回送一个SYN/ACK。ACK 的确认码应为 A+1，SYN/ACK 包本身又有一个随机序号 B。</li>
+<li>最后，客户端再发送一个ACK。当服务端受到这个ACK的时候，就完成了三路握手，并进入了连接创建状态。此时包序号被设定为收到的确认号 A+1，而响应则为 B+1。</li>
+</ol>
 <h6 id="tcp拆除">TCP拆除：</h6>
 <p>参与一条TCP连接的两个进程中的任意一个都能终止该连接。当连接结束后，主机中的“资源(缓存和变量)”将被释放。</p>
 <p>假设某客户打算关闭连接：</p>
@@ -703,6 +709,14 @@ rwnd = RcvBuffer – [LastByteRcvd – LastByteRead]
 <p><img src="http://ww1.sinaimg.cn/large/0083FLjsly1goohv8wiirj30gz0camy7.jpg" alt="w26dgs4.png"></p>
 <p>下面考虑一台主机接收到一个TCP报文段，其端口号或源IP地址与该主机上进行中的套接字都不匹配。则该主机将向源发送一个特殊重置报文：该报文段将RST标志位置为1.当一台主机接收一个UDP分组，它的目的端口与进行中的UDP套接字不匹配，该主机发送一个特殊的ICMP数据报。</p>
 <p>nmap是一个功能强大的工具，该工具不仅能“侦查”打开的TCP端口，也能“侦查”UDP端口，还能侦查防火墙及其配置，甚至能侦查应用程序的版本和操作系统，大多数都能通过操作TCP连接管理报文段完成。可以从http://www.nmap.org中下载nmap。</p>
+<p><strong>四次挥手</strong>:</p>
+<p><em>注意: 中断连接端可以是客户端，也可以是服务器端. 下面仅以客户端断开连接举例, 反之亦然.</em></p>
+<ol>
+<li>客户端发送一个数据分段, 其中的 FIN 标记设置为1. 客户端进入 FIN-WAIT 状态. 该状态下客户端只接收数据, 不再发送数据.</li>
+<li>服务器接收到带有 FIN = 1 的数据分段, 发送带有 ACK = 1 的剩余数据分段, 确认收到客户端发来的 FIN 信息.</li>
+<li>服务器等到所有数据传输结束, 向客户端发送一个带有 FIN = 1 的数据分段, 并进入 CLOSE-WAIT 状态, 等待客户端发来带有 ACK = 1 的确认报文.</li>
+<li>客户端收到服务器发来带有 FIN = 1 的报文, 返回 ACK = 1 的报文确认, 为了防止服务器端未收到需要重发, 进入 TIME-WAIT 状态. 服务器接收到报文后关闭连接. 客户端等待 2MSL 后未收到回复, 则认为服务器成功关闭, 客户端关闭连接.</li>
+</ol>
 <h2 id="principles-of-congestion-control">Principles of Congestion Control</h2>
 <p>在实践中，丢包一般是当网络变得拥塞时由于路由器缓存溢出而引起的。分组重传作为网络拥塞的征兆，但是却无法处理导致网络拥塞的原因。因为有大多的源想以过高的速率发送数据。为了处理网络拥塞，需要一些机制在面临网络拥塞时抑制发送方。</p>
 <h4 id="the-causes-and-the-costs-of-congestion">The Causes and the Costs of Congestion</h4>
@@ -806,6 +820,19 @@ rwnd = RcvBuffer – [LastByteRcvd – LastByteRead]
       
       <nav class="post-nav">
         
+          <a class="prev" href="/post/specialization/systems/computer-networking/computer-networks-4/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">The Network Layer</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         
           <a class="next" href="/post/specialization/systems/computer-networking/computer-networks-2/">
             <span class="next-text nav-default">Application Layer</span>

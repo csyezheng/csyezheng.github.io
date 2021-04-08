@@ -296,6 +296,13 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-4/</loc>
+    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-3/</loc>
     <lastmod>2021-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -962,6 +969,13 @@
   
   <url>
     <loc>http://www.yezheng.pro/post/specialization/security/material/</loc>
+    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/security/web-security/</loc>
     <lastmod>2020-11-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2249,6 +2263,13 @@
   </url>
   
   <url>
+    <loc>http://www.yezheng.pro/post/engineering-fundamentals/python/python-interview/</loc>
+    <lastmod>2019-03-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://www.yezheng.pro/post/engineering-fundamentals/python/datetime/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -2370,6 +2391,20 @@
   <url>
     <loc>http://www.yezheng.pro/post/specialization/web-application/back-end/wagtail/</loc>
     <lastmod>2018-11-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/tags/gateway/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/web-application/back-end/web-applications/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2607,6 +2642,13 @@
   
   <url>
     <loc>http://www.yezheng.pro/post/computer-science-core/algorithms/leetcode/</loc>
+    <lastmod>2018-01-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/computer-science-core/unix/</loc>
     <lastmod>2018-01-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2909,6 +2951,13 @@
   <url>
     <loc>http://www.yezheng.pro/tags/web/</loc>
     <lastmod>2015-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.yezheng.pro/post/specialization/web-application/front-end/browser/</loc>
+    <lastmod>2015-11-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

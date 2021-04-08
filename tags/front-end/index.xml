@@ -44,6 +44,15 @@
     </item>
     
     <item>
+      <title>browser cache</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/front-end/browser/</link>
+      <pubDate>Sat, 21 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/front-end/browser/</guid>
+      <description>浏览器缓存机制 浏览器缓存机制，其实主要就是HTTP协议定义的缓存机制（如： Expires****； Cache-control****等）。但</description>
+    </item>
+    
+    <item>
       <title>HTML</title>
       <link>http://www.yezheng.pro/post/specialization/web-application/front-end/html/</link>
       <pubDate>Sat, 21 Nov 2015 00:00:00 +0000</pubDate>

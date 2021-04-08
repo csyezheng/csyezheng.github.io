@@ -3031,6 +3031,19 @@ Running post-mortem meetings&lt;/p&gt;
     </item>
     
     <item>
+      <title>The Network Layer</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-4/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-4/</guid>
+      
+        <description>&lt;h2 id=&#34;arp协议&#34;&gt;ARP协议&lt;/h2&gt;
+&lt;p&gt;地址解析协议(Address Resolution Protocol)，其基本功能为透过目标设备的IP地址，查询目标的MAC地址，以保证通信的顺利进行。它是IPv4网络层必不可少的协议，不过在IPv6中已不再适用，并被邻居发现协议（NDP）所替代。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Transport Layer</title>
       <link>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-3/</link>
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
@@ -3351,6 +3364,12 @@ rwnd = RcvBuffer – [LastByteRcvd – LastByteRead]
 &lt;p&gt;3）在收到SYNACK报文段后，客户也要给该连接分配缓存和变量。客户主机则向服务器发送另外一个报文段；这最后一个报文段对服务器的允许连接的报文段进行了确认（首部中：①确认字段为server_isn+1;②序号字段为client_isn+1;③SYN比特置为0）。该三次握手的第三个阶段可以在报文段负载中携带客户到服务器的数据。&lt;/p&gt;
 &lt;p&gt;在以后的每一个报文段中，SYN比特都被置为0；这种连接创建过程被称为3次握手(three-way handshake)。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;http://ww1.sinaimg.cn/large/0083FLjsly1gooht0ym97j30gq0doabb.jpg&#34; alt=&#34;rX6qD9Y.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;三次握手&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;客户端通过向服务器端发送一个SYN来创建一个主动打开，作为三次握手的一部分。客户端把这段连接的序号设定为随机数 A。&lt;/li&gt;
+&lt;li&gt;服务器端应当为一个合法的SYN回送一个SYN/ACK。ACK 的确认码应为 A+1，SYN/ACK 包本身又有一个随机序号 B。&lt;/li&gt;
+&lt;li&gt;最后，客户端再发送一个ACK。当服务端受到这个ACK的时候，就完成了三路握手，并进入了连接创建状态。此时包序号被设定为收到的确认号 A+1，而响应则为 B+1。&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h6 id=&#34;tcp拆除&#34;&gt;TCP拆除：&lt;/h6&gt;
 &lt;p&gt;参与一条TCP连接的两个进程中的任意一个都能终止该连接。当连接结束后，主机中的“资源(缓存和变量)”将被释放。&lt;/p&gt;
 &lt;p&gt;假设某客户打算关闭连接：&lt;/p&gt;
@@ -3377,6 +3396,14 @@ rwnd = RcvBuffer – [LastByteRcvd – LastByteRead]
 &lt;p&gt;&lt;img src=&#34;http://ww1.sinaimg.cn/large/0083FLjsly1goohv8wiirj30gz0camy7.jpg&#34; alt=&#34;w26dgs4.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;下面考虑一台主机接收到一个TCP报文段，其端口号或源IP地址与该主机上进行中的套接字都不匹配。则该主机将向源发送一个特殊重置报文：该报文段将RST标志位置为1.当一台主机接收一个UDP分组，它的目的端口与进行中的UDP套接字不匹配，该主机发送一个特殊的ICMP数据报。&lt;/p&gt;
 &lt;p&gt;nmap是一个功能强大的工具，该工具不仅能“侦查”打开的TCP端口，也能“侦查”UDP端口，还能侦查防火墙及其配置，甚至能侦查应用程序的版本和操作系统，大多数都能通过操作TCP连接管理报文段完成。可以从http://www.nmap.org中下载nmap。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;四次挥手&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;注意: 中断连接端可以是客户端，也可以是服务器端. 下面仅以客户端断开连接举例, 反之亦然.&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;客户端发送一个数据分段, 其中的 FIN 标记设置为1. 客户端进入 FIN-WAIT 状态. 该状态下客户端只接收数据, 不再发送数据.&lt;/li&gt;
+&lt;li&gt;服务器接收到带有 FIN = 1 的数据分段, 发送带有 ACK = 1 的剩余数据分段, 确认收到客户端发来的 FIN 信息.&lt;/li&gt;
+&lt;li&gt;服务器等到所有数据传输结束, 向客户端发送一个带有 FIN = 1 的数据分段, 并进入 CLOSE-WAIT 状态, 等待客户端发来带有 ACK = 1 的确认报文.&lt;/li&gt;
+&lt;li&gt;客户端收到服务器发来带有 FIN = 1 的报文, 返回 ACK = 1 的报文确认, 为了防止服务器端未收到需要重发, 进入 TIME-WAIT 状态. 服务器接收到报文后关闭连接. 客户端等待 2MSL 后未收到回复, 则认为服务器成功关闭, 客户端关闭连接.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2 id=&#34;principles-of-congestion-control&#34;&gt;Principles of Congestion Control&lt;/h2&gt;
 &lt;p&gt;在实践中，丢包一般是当网络变得拥塞时由于路由器缓存溢出而引起的。分组重传作为网络拥塞的征兆，但是却无法处理导致网络拥塞的原因。因为有大多的源想以过高的速率发送数据。为了处理网络拥塞，需要一些机制在面临网络拥塞时抑制发送方。&lt;/p&gt;
 &lt;h4 id=&#34;the-causes-and-the-costs-of-congestion&#34;&gt;The Causes and the Costs of Congestion&lt;/h4&gt;
@@ -3507,6 +3534,12 @@ rwnd = RcvBuffer – [LastByteRcvd – LastByteRead]
 &lt;li&gt;一旦客户向它的套接字接口发送了一个请求报文，该报文就脱离了客户控制并进入TCP的控制。 因为TCP协议，一个客户进程发出的每个HTTP请求报文最终能完整地到达服务器&lt;/li&gt;
 &lt;li&gt;HTTP服务器并不保存关于客户的任何信息，所以我们说HTTP是一个无状态协议(stateless protocol)&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h4 id=&#34;idempotence幂等-&#34;&gt;Idempotence(幂等 )&lt;/h4&gt;
+&lt;p&gt;HTTP方法的幂等性是指一次和多次请求某一个资源应该具有同样的&lt;strong&gt;副作用&lt;/strong&gt;。(注意是副作用)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;GET http://www.bank.com/account/123456&lt;/code&gt;，不会改变资源的状态，不论调用一次还是N次都没有副作用。请注意，这里强调的是一次和N次具有相同的副作用，而不是每次GET的结果相同。&lt;code&gt;GET http://www.news.com/latest-news&lt;/code&gt;这个HTTP请求可能会每次得到不同的结果，但它本身并没有产生任何副作用，因而是满足幂等性的。&lt;/p&gt;
+&lt;p&gt;DELETE方法用于删除资源，有副作用，但它应该满足幂等性。比如：&lt;code&gt;DELETE http://www.forum.com/article/4231&lt;/code&gt;，调用一次和N次对系统产生的副作用是相同的，即删掉id为4231的帖子；因此，调用者可以多次调用或刷新页面而不必担心引起错误。&lt;/p&gt;
+&lt;p&gt;POST所对应的URI并非创建的资源本身，而是资源的接收者。比如：&lt;code&gt;POST http://www.forum.com/articles&lt;/code&gt;的语义是在&lt;code&gt;http://www.forum.com/articles&lt;/code&gt;下创建一篇帖子，HTTP响应中应包含帖子的创建状态以及帖子的URI。两次相同的POST请求会在服务器端创建两份资源，它们具有不同的URI；所以，POST方法不具备幂等性。&lt;/p&gt;
+&lt;p&gt;PUT所对应的URI是要创建或更新的资源本身。比如：&lt;code&gt;PUT http://www.forum/articles/4231&lt;/code&gt;的语义是创建或更新ID为4231的帖子。对同一URI进行多次PUT的副作用和一次PUT是相同的；因此，PUT方法具有幂等性。&lt;/p&gt;
 &lt;h4 id=&#34;non-persistent-and-persistent-connections&#34;&gt;Non-Persistent and Persistent Connections&lt;/h4&gt;
 &lt;p&gt;每个请求/响应对是经一个单独的TCP连接发送，还是所有的请求及其响应经相同的TCP连接发送呢?采用前一种方法，该应用程序被称为使用非持续连接(non-persistent connection); 采用后一种方法，该应用程序被称为使用持续连接(persistent connection) 。&lt;/p&gt;
 &lt;p&gt;使用持续连接或非持续连接是由应用层决定的（HTTP默认使用的是持续连接）&lt;/p&gt;
@@ -3535,6 +3568,62 @@ Accept-language: ch
 &lt;p&gt;下图是请求报文的通用格式&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/226988/201905/226988-20190525102530882-1860346972.jpg&#34; alt=&#34;&#34;&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;首部行后面的 实体体(Entity body),在使用 POST 方法时存储用户提交的表单。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;请求头Host字段,一个服务器多个网站&lt;/li&gt;
+&lt;li&gt;长链接&lt;/li&gt;
+&lt;li&gt;文件断点续传&lt;/li&gt;
+&lt;li&gt;身份认证,状态管理,Cache缓存&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;HTTP Method&lt;/p&gt;
+&lt;p&gt;同的方法规定了不同的操作指定的资源方式。服务端也会根据不同的请求方法做不同的响应。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GET和POST除了语义之外没有区别：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;现代的Web Server都是支持GET中包含BODY这样的请求。虽然这种请求不可能从浏览器发出，但是现在的Web Server又不是只给浏览器用，已经完全地超出了HTML服务器的范畴了。&lt;/li&gt;
+&lt;li&gt;HTTP头和Body都没有长度的要求。而对于URL长度上的限制，有两方面的原因造成：浏览器和服务器。API网关一般会限制报文大小&lt;/li&gt;
+&lt;li&gt;安全不安全和GET、POST没有关系&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;GET&lt;/p&gt;
+&lt;p&gt;GET请求会显示请求指定的资源。一般来说GET方法应该只用于数据的读取，而不应当用于会产生副作用的非幂等的操作中。&lt;/p&gt;
+&lt;p&gt;GET会方法请求指定的页面信息，并返回响应主体，GET被认为是不安全的方法，因为GET方法会被网络蜘蛛等任意的访问。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HEAD&lt;/p&gt;
+&lt;p&gt;HEAD方法与GET方法一样，都是向服务器发出指定资源的请求。但是，服务器在响应HEAD请求时不会回传资源的内容部分，即：响应主体。这样，我们可以不传输全部内容的情况下，就可以获取服务器的响应头信息。HEAD方法常被用于客户端查看服务器的性能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;POST&lt;/p&gt;
+&lt;p&gt;POST请求会 向指定资源提交数据，请求服务器进行处理，如：表单数据提交、文件上传等，请求数据会被包含在请求体中。POST方法是非幂等的方法，因为这个请求可能会创建新的资源或/和修改现有资源。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PUT&lt;/p&gt;
+&lt;p&gt;PUT请求会身向指定资源位置上传其最新内容，PUT方法是幂等的方法。通过该方法客户端可以将指定资源的最新数据传送给服务器取代指定的资源的内容。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DELETE&lt;/p&gt;
+&lt;p&gt;DELETE请求用于请求服务器删除所请求URI（统一资源标识符，Uniform Resource Identifier）所标识的资源。DELETE请求后指定资源会被删除，DELETE方法也是幂等的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CONNECT&lt;/p&gt;
+&lt;p&gt;CONNECT方法是HTTP/1.1协议预留的，能够将连接改为管道方式的代理服务器。通常用于SSL加密服务器的链接与非加密的HTTP代理服务器的通信。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;OPTIONS&lt;/p&gt;
+&lt;p&gt;OPTIONS请求与HEAD类似，一般也是用于客户端查看服务器的性能。 这个方法会请求服务器返回该资源所支持的所有HTTP请求方法，该方法会用’*’来代替资源名称，向服务器发送OPTIONS请求，可以测试服务器功能是否正常。JavaScript的XMLHttpRequest对象进行CORS跨域资源共享时，就是使用OPTIONS方法发送嗅探请求，以判断是否有对指定资源的访问权限。 允许&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TRACE&lt;/p&gt;
+&lt;p&gt;TRACE请求服务器回显其收到的请求信息，该方法主要用于HTTP请求的测试或诊断。&lt;/p&gt;
+&lt;p&gt;HTTP/1.1之后增加的方法&lt;/p&gt;
+&lt;p&gt;在HTTP/1.1标准制定之后，又陆续扩展了一些方法。其中使用中较多的是 PATCH 方法：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PATCH&lt;/p&gt;
+&lt;p&gt;PATCH方法出现的较晚，它在2010年的RFC 5789标准中被定义。PATCH请求与PUT请求类似，同样用于资源的更新。二者有以下两点不同：&lt;/p&gt;
+&lt;p&gt;但PATCH一般用于资源的部分更新，而PUT一般用于资源的整体更新。 当资源不存在时，PATCH会创建一个新的资源，而PUT只会对已在资源进行更新。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h6 id=&#34;http响应报文&#34;&gt;HTTP响应报文&lt;/h6&gt;
 &lt;p&gt;http响应报文由三部分组成：一个初始状态行（status line），之后有6个首部行（header line），然后是实体体（entity body）&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;HTTP/1.1 200 OK
@@ -3558,6 +3647,37 @@ Content-Type: text/html
 &lt;li&gt;404 Not Found&lt;/li&gt;
 &lt;li&gt;505 HTTP Version Not Supported&lt;/li&gt;
 &lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;状态码&lt;/th&gt;
+&lt;th&gt;定义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1xx 报告&lt;/td&gt;
+&lt;td&gt;接收到请求，继续进程&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2xx 成功&lt;/td&gt;
+&lt;td&gt;步骤成功接收，被理解，并被接受&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3xx 重定向&lt;/td&gt;
+&lt;td&gt;为了完成请求,必须采取进一步措施&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4xx 客户端出错&lt;/td&gt;
+&lt;td&gt;请求包括错的顺序或不能完成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5xx 服务器出错&lt;/td&gt;
+&lt;td&gt;服务器无法完成显然有效的请求&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;403: Forbidden 404: Not Found&lt;/p&gt;
 &lt;h4 id=&#34;user-server-interaction-cookies&#34;&gt;User-Server Interaction: Cookies&lt;/h4&gt;
 &lt;p&gt;HTTP服务器是无状态化的，这简化了服务器的设计，这让工程师可以去开发能同时处理大量数据的高性能服务器。但是有时Web站点希望能去识别用户，为此HTTP使用了cookie来进行用户跟踪。&lt;/p&gt;
 &lt;p&gt;　　cookie技术有4个组件：&lt;/p&gt;
@@ -3570,6 +3690,34 @@ Content-Type: text/html
 &lt;p&gt;　　&lt;img src=&#34;https://img2018.cnblogs.com/blog/226988/201905/226988-20190525103608022-1309036437.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
 &lt;p&gt;cookie可以用于标识一个用户，cookie可以在无状态的HTTP之上建立一个用户会话层。&lt;/p&gt;
 &lt;p&gt;站点不必知道用户身份，可以记录按什么顺序，在什么时间，访问了哪些页面。能够根据过去访问的网页对用户推荐产品。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cookie和Session&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Cookie&lt;/th&gt;
+&lt;th&gt;Session&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;储存位置&lt;/td&gt;
+&lt;td&gt;客户端&lt;/td&gt;
+&lt;td&gt;服务器端&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;目的&lt;/td&gt;
+&lt;td&gt;跟踪会话，也可以保存用户偏好设置或者保存用户名密码等&lt;/td&gt;
+&lt;td&gt;跟踪会话&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;安全性&lt;/td&gt;
+&lt;td&gt;不安全&lt;/td&gt;
+&lt;td&gt;安全&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;session技术是要使用到cookie的，之所以出现session技术，主要是为了安全。&lt;/p&gt;
 &lt;h4 id=&#34;web-caching&#34;&gt;Web Caching&lt;/h4&gt;
 &lt;p&gt;Web缓存器(Web cache)也叫代理服务器(proxy server)，它是能够代表初始Web服务器来满足HTTP请求的网络实体.Web缓存器有自己的磁盘存储空间，并在存储空间中保存最近请求过的对象的副本。&lt;/p&gt;
 &lt;p&gt;客户对过Web缓存器请求对象:&lt;/p&gt;
@@ -3607,6 +3755,8 @@ Date: Thu, 04 Feb 2010 12:38:41 GMT
 
 (empty entity body)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&amp;ldquo;Not Modified&amp;rdquo;，没有在响应报文中包含所请求的对象，高速缓存器可以使用该对象，向请求浏览器转发代理缓存器缓存的对象副本。&lt;/p&gt;
+&lt;h4 id=&#34;https&#34;&gt;HTTPS&lt;/h4&gt;
+&lt;p&gt;HTTPS握手,对称加密,非对称加密,TLS/SSL,RSA&lt;/p&gt;
 &lt;h2 id=&#34;dnsthe-internets-directory-service&#34;&gt;DNS–The Internet’s Directory Service&lt;/h2&gt;
 &lt;h4 id=&#34;services-provided-by-dns&#34;&gt;Services Provided by DNS&lt;/h4&gt;
 &lt;h4 id=&#34;overview-of-how-dns-works&#34;&gt;Overview of How DNS Works&lt;/h4&gt;
@@ -4176,18 +4326,6 @@ An address managed by RIPE. An address  The computer at (European Koç Universit
 &lt;p&gt;Applications send and receive data in packets over an Internet that is unreliable.&lt;/p&gt;
 &lt;p&gt;Packets are forwarded hop-by-hop using the IP destination address.&lt;/p&gt;
 &lt;p&gt;Our applications use TCP to make sure they are delivered and put back in the correct order.&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>monitor</title>
-      <link>http://www.yezheng.pro/post/interview/monitor/</link>
-      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/interview/monitor/</guid>
-      
-        <description>&lt;p&gt;zabbix部署过程，可以监控nginx的哪些参数，zabbix要监控nginx，nginx在另外一台服务器上那zabbix是如何知道nginx的地址&lt;/p&gt;
 </description>
       
     </item>

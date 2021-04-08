@@ -69,7 +69,7 @@
 <meta itemprop="name" content="Operating Systems Principles">
 <meta itemprop="description" content="Managing Concurrency Threads, Processes, and Dispatching Processes Threads Dispatching Process Creation Concurrency Independent and Cooperating Threads Atomic Operations The &ldquo;Too Much Milk&rdquo; Problem Interprocess communication 管道（Pipe）：管道可用于具有亲缘关系进程间的通信，允许一个进程和另一个与它有共同祖先的"><meta itemprop="datePublished" content="2018-01-31T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-01-31T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1935">
+<meta itemprop="wordCount" content="2272">
 <meta itemprop="keywords" content="operating-systems," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Operating Systems Principles"/>
 <meta name="twitter:description" content="Managing Concurrency Threads, Processes, and Dispatching Processes Threads Dispatching Process Creation Concurrency Independent and Cooperating Threads Atomic Operations The &ldquo;Too Much Milk&rdquo; Problem Interprocess communication 管道（Pipe）：管道可用于具有亲缘关系进程间的通信，允许一个进程和另一个与它有共同祖先的"/>
@@ -348,6 +348,11 @@
         <li><a href="#managing-flash-memory">Managing Flash Memory</a></li>
       </ul>
     </li>
+    <li><a href="#multiple-processor-systems">Multiple processor systems</a>
+      <ul>
+        <li><a href="#multicomputers">Multicomputers</a></li>
+      </ul>
+    </li>
     <li><a href="#virtual-machines">Virtual machines</a>
       <ul>
         <li><a href="#implementing-hypervisors">Implementing hypervisors</a></li>
@@ -516,6 +521,12 @@
 <h4 id="access-enforcement">Access Enforcement</h4>
 <h4 id="rights-amplification">Rights Amplification</h4>
 <h3 id="managing-flash-memory">Managing Flash Memory</h3>
+<h2 id="multiple-processor-systems">Multiple processor systems</h2>
+<h3 id="multicomputers">Multicomputers</h3>
+<h4 id="remote-procedure-call">Remote Procedure Call</h4>
+<p>RPC（Remote Procedure Call Protocol）——远程过程调用协议，它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的协议。RPC协议假定某些传输协议的存在，如TCP或UDP，为通信程序之间携带信息数据。在OSI网络通信模型中，RPC跨越了传输层和应用层。RPC使得开发包括网络分布式多程序在内的应用程序更加容易。</p>
+<p>总结:服务提供的两大流派.传统意义以方法调用为导向通称RPC。为了企业SOA,若干厂商联合推出webservice,制定了wsdl接口定义,传输soap.当互联网时代,臃肿SOA被简化为http+xml/json.但是简化出现各种混乱。以资源为导向,任何操作无非是对资源的增删改查，于是统一的REST出现了.</p>
+<p>进化的顺序: RPC -&gt; SOAP -&gt; RESTful</p>
 <h2 id="virtual-machines">Virtual machines</h2>
 <h3 id="implementing-hypervisors">Implementing hypervisors</h3>
 <h3 id="historyusage-of-virtual-machines">History/usage of virtual machines</h3>

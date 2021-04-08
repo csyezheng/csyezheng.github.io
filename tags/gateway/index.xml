@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gateway on Ye Zheng&#39;s Blog</title>
+    <link>http://www.yezheng.pro/tags/gateway/</link>
+    <description>Recent content in gateway on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 13 Oct 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/gateway/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gateway</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/back-end/web-applications/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/web-applications/</guid>
+      <description>7 apache和nginx的区别 nginx 相对 apache 的优点： 轻量级，同样起web 服务，比apache 占用更少的内存及资源 抗并发，nginx 处理请求是异步</description>
+    </item>
+    
+  </channel>
+</rss>

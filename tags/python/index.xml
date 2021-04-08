@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Python</title>
+      <link>http://www.yezheng.pro/post/engineering-fundamentals/python/python-interview/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/engineering-fundamentals/python/python-interview/</guid>
+      <description>urllib和urllib2的区别 这个面试官确实问过,当时答的urllib2可以Post而urllib不可以. urllib提供urlenco</description>
+    </item>
+    
+    <item>
       <title>Python datetime</title>
       <link>http://www.yezheng.pro/post/engineering-fundamentals/python/datetime/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>

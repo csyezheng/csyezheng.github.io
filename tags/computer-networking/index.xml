@@ -8,6 +8,15 @@
     <language>en</language>
     <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/computer-networking/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>The Network Layer</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-4/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-4/</guid>
+      <description>ARP协议 地址解析协议(Address Resolution Protocol)，其基本功能为透过目标设备的IP地址，查询目标的MAC地址，以保证通信的顺利进行。</description>
+    </item>
+    
+    <item>
       <title>Transport Layer</title>
       <link>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-3/</link>
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
