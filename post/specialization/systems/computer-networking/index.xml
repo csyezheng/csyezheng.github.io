@@ -8,6 +8,15 @@
     <language>en</language>
     <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/post/specialization/systems/computer-networking/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Designing and Implementing an Application Layer Network Protocol Using UNIX Sockets and TCP</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/computer-networking/custom-protocol/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/computer-networking/custom-protocol/</guid>
+      <description>Reference 如何设计与实现一个自定义的二进制协议 手把手教你实现自定义的应用层协议 Designing and Implementing an Application Layer Network Protocol Using UNIX Sockets and TCP</description>
+    </item>
+    
+    <item>
       <title>The Network Layer</title>
       <link>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-4/</link>
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>

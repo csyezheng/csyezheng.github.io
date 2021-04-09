@@ -295,6 +295,42 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/specialization/web-application/spring/mybatis/">Spring Context</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-11-18" class="post-time">
+        2020-11-18
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      applicationContext.xml &lt;context:component-scan base-package=&quot;org.example&quot;/&gt; Classpath scanning and managed components
+&lt;bean id=&quot;txManager&quot; class=&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt; &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt; &lt;/bean&gt; &lt;tx:annotation-driven transaction-manager=&quot;txManager&quot;/&gt; &lt;tx:advice id=&quot;txAdvice&quot; transaction-manager=&quot;txManager&quot;&gt; &lt;tx:attributes&gt; &lt;tx:method name=&quot;create*&quot; propagation=&quot;REQUIRED&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot; /&gt; &lt;tx:method name=&quot;delete*&quot; propagation=&quot;REQUIRED&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot; /&gt; &lt;tx:method name=&quot;update*&quot; propagation=&quot;REQUIRED&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot; /&gt; &lt;tx:method name=&quot;get*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; timeout=&quot;300&quot; /&gt; &lt;tx:method name=&quot;*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot;/&gt; &lt;/tx:attributes&gt; &lt;/tx:advice&gt; &lt;aop:config&gt; &lt;aop:pointcut id=&quot;txPointcut&quot; expression=&quot;execution(* com.mico.emptyspring.service.*ServiceA.*(..))&quot; /&gt; &lt;aop:advisor pointcut-ref=&quot;txPointcut&quot; advice-ref=&quot;txAdvice&quot; /&gt; &lt;/aop:config&gt; Transaction Management
+&lt;bean id=&quot;sqlSessionFactory&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&gt; &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt; &lt;property name=&quot;configuration&quot;&gt; &lt;bean class=&quot;org.
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/web-application/spring/mybatis/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/specialization/web-application/spring/practice/">Spring Practice</a>
     </h1>
     
@@ -355,40 +391,6 @@ DNS service provider Create Cloudflare account Enter your domain name yezheng.
     </div>
     <div class="read-more">
       <a href="/post/any-path/blog/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/master-path/read-open-source/">read open source</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-11-15" class="post-time">
-        2020-11-15
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/master-path/"> master-path </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Awesome project lists using Gin web framework: gorush: A push notification server written in Go. fnproject: The container native, cloud agnostic serverless platform. photoprism: Personal photo management powered by Go and Google TensorFlow. krakend: Ultra performant API Gateway with middlewares. picfit: An image resizing server written in Go. gotify: A simple server for sending and receiving messages in real-time per web socket. cds: Enterprise-Grade Continuous Delivery &amp; DevOps Automation Open
-    </div>
-    <div class="read-more">
-      <a href="/post/master-path/read-open-source/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2302,6 +2304,27 @@ DNS service provider Create Cloudflare account Enter your domain name yezheng.
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/30/">»</a></li>
@@ -2309,7 +2332,7 @@ DNS service provider Create Cloudflare account Enter your domain name yezheng.
 
       
       
-      <li><a href="/page/84/">»»</a></li>
+      <li><a href="/page/85/">»»</a></li>
       
 
       </ul>

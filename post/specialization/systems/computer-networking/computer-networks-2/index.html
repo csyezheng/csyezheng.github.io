@@ -69,7 +69,7 @@
 <meta itemprop="name" content="Application Layer">
 <meta itemprop="description" content="Principles of Network Applications 研究网络应用程序的核心是写出能够运行在不同的端系统和通过网络彼此通信的程序。不需要写在网络核心设备如路由器或链路层交换机上运行的软件"><meta itemprop="datePublished" content="2021-03-06T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-03-06T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="14214">
+<meta itemprop="wordCount" content="15696">
 <meta itemprop="keywords" content="computer-networking,http," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Application Layer"/>
 <meta name="twitter:description" content="Principles of Network Applications 研究网络应用程序的核心是写出能够运行在不同的端系统和通过网络彼此通信的程序。不需要写在网络核心设备如路由器或链路层交换机上运行的软件"/>
@@ -426,6 +426,16 @@
 <p>每个请求/响应对是经一个单独的TCP连接发送，还是所有的请求及其响应经相同的TCP连接发送呢?采用前一种方法，该应用程序被称为使用非持续连接(non-persistent connection); 采用后一种方法，该应用程序被称为使用持续连接(persistent connection) 。</p>
 <p>使用持续连接或非持续连接是由应用层决定的（HTTP默认使用的是持续连接）</p>
 <h6 id="采用非持续连接的http">采用非持续连接的HTTP</h6>
+<pre><code>HTTP/1.1 200 OK
+Connection: close
+Content-Encoding: gzip
+Content-Type: text/html; charset=utf-8
+Date: Thu, 11 Aug 2016 15:23:13 GMT
+Last-Modified: Mon, 25 Jul 2016 04:32:39 GMT
+Server: Apache
+
+(body)
+</code></pre><p><strong><code>Connection: close</code></strong> 不希望使用持续连接</p>
 <p>每个TCP连接只传输一个请求报文和一个响应报文。每次服务器发送响应报文后，会通知该TCP断开该TCP连接。HTTP客户接收响应报文，TCP连接关闭。</p>
 <p><img src="https://pic3.zhimg.com/80/v2-7172e4c449549b0887fe70294748815e_1440w.jpg" alt=""></p>
 <p>客户向服务器发送一个TCP报文段，服务器用TCP报文段做出响应，客户向服务器返回确认。三次握手中前两个部分所耗费时间占一个RTT。完成了三次握手的前两部分后，客户结合三次握手的第三部分(确认)向该TCP连接发送一个请求报文。一旦请求报文到达服务器，服务器就在服务器就在该TCP连接上发送 HTML文件。TCP三次握手以及时间分析，总计两个往返时间RTT（Round-Trip Time, RTT）+服务器传输Html文件的时间。因此非持续连接是非常低效率的。</p>
@@ -435,6 +445,17 @@
 <li>每个对象都要遭受两倍RTT的交付时延，一个RTT用来创建TCP，另一个RTT用来请求和接受一个对象。</li>
 </ul>
 <h6 id="采用持续连接的http">采用持续连接的HTTP</h6>
+<pre><code>HTTP/1.1 200 OK
+Connection: Keep-Alive
+Content-Encoding: gzip
+Content-Type: text/html; charset=utf-8
+Date: Thu, 11 Aug 2016 15:23:13 GMT
+Keep-Alive: timeout=5, max=1000
+Last-Modified: Mon, 25 Jul 2016 04:32:39 GMT
+Server: Apache
+
+(body)
+</code></pre><p><strong><code>Connection: Keep-Alive</code></strong> 和 <strong><code>Keep-Alive: timeout=20, max=1000</code></strong></p>
 <p>服务器在发送响应之后保持该TCP连接打开。因此，位于同一台服务器的多个Web页面都可以在单个TCP上进行传输。请求可以一个接一个地发而不必等待未决请求的回答（流水线）。如果一条连接经过一定时间间隔（一个可配置的超时间隔）仍未被使用，HTTP服务器就关闭该连接。</p>
 <p>HTTTP的默认模式是使用带流水线的持续连接。</p>
 <h4 id="http-message-format">HTTP Message Format</h4>
@@ -522,13 +543,6 @@ Content-Type: text/html
 <p>一个HTTP响应报文的通用格式</p>
 <p><img src="https://img2018.cnblogs.com/blog/226988/201905/226988-20190525103019639-986868984.jpg" alt="img"></p>
 <p>常见状态码：</p>
-<ul>
-<li>200 OK</li>
-<li>301 Moved Permanently</li>
-<li>400 Bad Request</li>
-<li>404 Not Found</li>
-<li>505 HTTP Version Not Supported</li>
-</ul>
 <table>
 <thead>
 <tr>
@@ -559,10 +573,69 @@ Content-Type: text/html
 </tr>
 </tbody>
 </table>
-<p>403: Forbidden 404: Not Found</p>
+<ul>
+<li>
+<p>200 OK</p>
+</li>
+<li>
+<p>201 Created</p>
+</li>
+<li>
+<p>204 No Content</p>
+</li>
+<li>
+<p>301 Moved Permanently</p>
+</li>
+<li>
+<p>302 Found</p>
+</li>
+<li>
+<p>304 Not Modified</p>
+<p>这用于缓存目的。它告诉客户端尚未修改响应，因此客户端可以继续使用相同的缓存版本的响应。</p>
+</li>
+<li>
+<p>401 Unauthorized</p>
+</li>
+<li>
+<p>400 Bad Request</p>
+</li>
+<li>
+<p>403 Forbidden</p>
+</li>
+<li>
+<p>404 Not Found</p>
+</li>
+<li>
+<p>405 Method Not Allowed</p>
+</li>
+<li>
+<p>500 Internal Server Error</p>
+</li>
+<li>
+<p>502 Bad Gateway</p>
+</li>
+<li>
+<p>505 HTTP Version Not Supported</p>
+</li>
+</ul>
 <h4 id="user-server-interaction-cookies">User-Server Interaction: Cookies</h4>
 <p>HTTP服务器是无状态化的，这简化了服务器的设计，这让工程师可以去开发能同时处理大量数据的高性能服务器。但是有时Web站点希望能去识别用户，为此HTTP使用了cookie来进行用户跟踪。</p>
-<p>　　cookie技术有4个组件：</p>
+<p><strong>Cookies are mainly used for three purposes:</strong></p>
+<ul>
+<li>
+<p>Session management</p>
+<p>Logins, shopping carts, game scores, or anything else the server should remember</p>
+</li>
+<li>
+<p>Personalization</p>
+<p>User preferences, themes, and other settings</p>
+</li>
+<li>
+<p>Tracking</p>
+<p>Recording and analyzing user behavior</p>
+</li>
+</ul>
+<p>cookie技术有4个组件：</p>
 <ul>
 <li>在 HTTP 响应报文中的一个 cookie 首部行；</li>
 <li>在 HTTP 请求报文中的一个 cookie 首部行；</li>
@@ -573,33 +646,12 @@ Content-Type: text/html
 <p>cookie可以用于标识一个用户，cookie可以在无状态的HTTP之上建立一个用户会话层。</p>
 <p>站点不必知道用户身份，可以记录按什么顺序，在什么时间，访问了哪些页面。能够根据过去访问的网页对用户推荐产品。</p>
 <p><strong>Cookie和Session</strong></p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Cookie</th>
-<th>Session</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>储存位置</td>
-<td>客户端</td>
-<td>服务器端</td>
-</tr>
-<tr>
-<td>目的</td>
-<td>跟踪会话，也可以保存用户偏好设置或者保存用户名密码等</td>
-<td>跟踪会话</td>
-</tr>
-<tr>
-<td>安全性</td>
-<td>不安全</td>
-<td>安全</td>
-</tr>
-</tbody>
-</table>
-<p>session技术是要使用到cookie的，之所以出现session技术，主要是为了安全。</p>
+<ul>
+<li>会话是存储用户信息的服务器端文件，而Cookie是包含本地计算机上的用户信息的客户端文件。</li>
+<li>会话依赖于Cookie，而Cookie不依赖于Session。</li>
+<li>当用户关闭浏览器或从应用程序注销时，会话结束，而Cookies在设置的时间到期。</li>
+<li>会话可以存储用户想要的尽可能多的数据，而Cookies的大小限制为4KB。</li>
+</ul>
 <h4 id="web-caching">Web Caching</h4>
 <p>Web缓存器(Web cache)也叫代理服务器(proxy server)，它是能够代表初始Web服务器来满足HTTP请求的网络实体.Web缓存器有自己的磁盘存储空间，并在存储空间中保存最近请求过的对象的副本。</p>
 <p>客户对过Web缓存器请求对象:</p>
@@ -638,7 +690,55 @@ Date: Thu, 04 Feb 2010 12:38:41 GMT
 (empty entity body)
 </code></pre><p>&ldquo;Not Modified&rdquo;，没有在响应报文中包含所请求的对象，高速缓存器可以使用该对象，向请求浏览器转发代理缓存器缓存的对象副本。</p>
 <h4 id="https">HTTPS</h4>
-<p>HTTPS握手,对称加密,非对称加密,TLS/SSL,RSA</p>
+<p>HTTPS (Hypertext Transfer Protocol Secure) is a secure version of the HTTP protocol that uses the <strong>SSL</strong>/<strong>TLS</strong> protocol for <strong>encryption</strong> and <strong>authentication</strong>.</p>
+<h6 id="how-is-https-different-from-http">How is HTTPS different from HTTP?</h6>
+<ul>
+<li>HTTPS adds <strong>encryption</strong> (加密), <strong>authentication</strong> (认证), and <strong>integrity</strong> (完整性) to the HTTP protocol:</li>
+<li>由于HTTP最初是作为纯文本协议设计的，因此容易受到<strong>窃听和中间人攻击</strong>。通过包括SSL/TLS加密，HTTPS可以防止第三方拦截和读取通过Internet发送的数据。</li>
+<li>与HTTP不同，HTTPS包括通过SSL / TLS协议进行的可靠身份验证。</li>
+<li>HTTPS Web服务器发送到浏览器的每个文档（例如网页，图像或JavaScript文件）都包含数字签名，网络浏览器可以使用该数字签名来确定文档没有被第三方或否则在运输过程中损坏。</li>
+</ul>
+<h6 id="https-message-sequence-diagram-with-detailed-tls-handshaking-steps">HTTPS message sequence diagram with detailed TLS handshaking steps</h6>
+<p><img src="https://www.researchgate.net/profile/Kanchana-Thilakarathna/publication/306187575/figure/fig1/AS:395752913293314@1471366255623/HTTPS-message-sequence-diagram-with-detailed-TLS-handshaking-steps.png" alt=""></p>
+<ol>
+<li>**“客户端问候”消息：**客户端通过向服务器发送“问候”消息来发起握手。该消息将包括客户端支持的TLS版本，支持的密码套件以及称为“客户端随机”的随机字节字符串。</li>
+<li>**“服务器问候”消息：**作为对客户端问候消息的答复，服务器发送一条消息，其中包含服务器的<a href="https://www.cloudflare.com/learning/ssl/what-is-an-ssl-certificate/">SSL证书</a>，服务器选择的密码套件和“服务器随机”，这是服务器生成的另一个随机字节字符串。</li>
+<li>**身份验证：**客户端使用颁发它的证书颁发机构验证服务器的SSL证书。这确认服务器是它所说的身份，并且该客户端正在与该域的实际所有者进行交互。</li>
+<li>**premaster机密：**客户端再发送一个随机的字节串，即“ premaster机密”。Premaster机密使用公钥加密，并且只能由服务器使用私钥解密。（客户端从服务器的SSL证书获取<a href="https://www.cloudflare.com/learning/ssl/how-does-public-key-encryption-work/">公共密钥</a>。）</li>
+<li>**使用的私钥：**服务器解密premaster机密。</li>
+<li>**创建的会话密钥：**客户端和服务器均根据客户端随机数，服务器随机数和premaster机密生成会话密钥。他们应该得出相同的结果。</li>
+<li>**客户端已准备就绪：**客户端发送“完成”消息，该消息已用会话密钥加密。</li>
+<li>**服务器已准备就绪：**服务器发送了一条用会话密钥加密的“完成”消息。</li>
+<li>**实现了安全的对称加密：**握手已完成，并且使用会话密钥继续进行通信。</li>
+</ol>
+<h6 id="how-the-client-verifies-the-servers-ssl-certificate">How the client verifies the server&rsquo;s SSL certificate</h6>
+<p>使用发行者<strong>证书发行者的公钥</strong>解开服务器的证书，查看是否和服务器的实际域名相匹配；</p>
+<h6 id="tls-cryptographic-algorithms">TLS Cryptographic Algorithms</h6>
+<ul>
+<li>
+<p>All TLS handshakes make use of <strong>asymmetric encryption</strong> (the public and private key) . which means that they <strong>use two different keys: a public key for encryption and a private key for decryption.</strong></p>
+<p>RSA (Rivest-Shamir-Adleman), DH (Difﬁe-Hellman),</p>
+</li>
+<li>
+<p>Generate session keys in order to use symmetric encryption after the handshake is complete.</p>
+<p>All the <strong>bulk cipher algorithms</strong> are <strong>symmetric algorithms</strong> using <strong>the same key for encryption and decryption</strong>.</p>
+<p>AES, RC4</p>
+</li>
+</ul>
+<h4 id="http2">HTTP2</h4>
+<h6 id="binary-framing-layer-二进制框架层">Binary framing layer (二进制框架层)</h6>
+<p>At the core of all performance enhancements of HTTP/2 is the new binary framing layer, both client and server must use the new <strong>binary encoding</strong> mechanism to understand each other.</p>
+<p><img src="https://www.oreilly.com/library/view/high-performance-browser/9781449344757/images/hpbn_1201.png" alt=""></p>
+<h6 id="streams-messages-and-frames">Streams, messages, and frames</h6>
+<p><img src="https://www.oreilly.com/library/view/high-performance-browser/9781449344757/images/hpbn_1202.png" alt=""></p>
+<p>HTTP/2 breaks down the HTTP protocol communication into an exchange of binary-encoded frames, which are then mapped to <strong>messages that belong to a particular stream</strong>, all of which are multiplexed within a single TCP connection.</p>
+<h6 id="request-and-response-multiplexing">Request and response multiplexing</h6>
+<p><img src="https://www.oreilly.com/library/view/high-performance-browser/9781449344757/images/hpbn_1203.png" alt=""></p>
+<p>使用HTTP / 1.x，如果客户端希望发出多个并行请求以提高性能，则必须使用<strong>多个TCP连接</strong>。此行为是HTTP / 1.x传递模型的直接结果，该模型确保<strong>每个连接一次只能传递一个响应</strong>（响应队列）。更糟糕的是，这还会导致行头阻塞和底层TCP连接的低效使用。</p>
+<p>HTTP / 2中新的二进制框架层消除了这些限制，并通过允许客户端和服务器将HTTP消息分解为独立的帧，进行交织，然后在另一端重新组装，从而实现了完整的请求和响应多路复用。</p>
+<h6 id="server-push">Server push</h6>
+<p>Another powerful new feature of HTTP/2 is the ability of the server to <strong>send multiple responses for a single client request</strong>. That is, in addition to the response to the original request, the server can <strong>push additional resources to the client</strong> without the client having to request each one explicitly.</p>
+<p><img src="https://www.oreilly.com/library/view/high-performance-browser/9781449344757/images/hpbn_1204.png" alt=""></p>
 <h2 id="dnsthe-internets-directory-service">DNS–The Internet’s Directory Service</h2>
 <h4 id="services-provided-by-dns">Services Provided by DNS</h4>
 <h4 id="overview-of-how-dns-works">Overview of How DNS Works</h4>

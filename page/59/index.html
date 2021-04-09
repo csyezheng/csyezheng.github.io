@@ -295,6 +295,42 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/specialization/web-application/back-end/oauth2/">Django oauth2 provider</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-05-26" class="post-time">
+        2019-05-26
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... 'provider', 'provider.oauth2', ) # urls.py url(r'^oauth2/', include('provider.oauth2.urls', namespace = 'oauth2')), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ?   Create a client entry in your database
+To find out which type of client you need to create, read Section 2.1.
+To create a new entry simply use the Django admin panel.
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/web-application/back-end/oauth2/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/specialization/web-application/back-end/elasticsearch/">Elasticsearch Tutorial</a>
     </h1>
     
@@ -356,40 +392,6 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
     </div>
     <div class="read-more">
       <a href="/post/specialization/big-data/elk-stack/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/devops/docker/">Docker</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-04-25" class="post-time">
-        2019-04-25
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker sudo pacman -S docker systemctl start docker.
-    </div>
-    <div class="read-more">
-      <a href="/post/specialization/devops/docker/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2303,6 +2305,27 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/60/">»</a></li>
@@ -2310,7 +2333,7 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
 
       
       
-      <li><a href="/page/84/">»»</a></li>
+      <li><a href="/page/85/">»»</a></li>
       
 
       </ul>

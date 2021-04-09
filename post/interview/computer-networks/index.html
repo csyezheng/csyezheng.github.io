@@ -69,7 +69,7 @@
 <meta itemprop="name" content="computer networks interview questions">
 <meta itemprop="description" content="How the Internet works 用户请求从浏览器到服务器都发生了什么 输入网址，请求解析过程 网址中输入url会发生什么 问了如果用户输入url并回车后没有反应，你作为程"><meta itemprop="datePublished" content="2020-12-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-12-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1822">
+<meta itemprop="wordCount" content="1824">
 <meta itemprop="keywords" content="interview," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="computer networks interview questions"/>
 <meta name="twitter:description" content="How the Internet works 用户请求从浏览器到服务器都发生了什么 输入网址，请求解析过程 网址中输入url会发生什么 问了如果用户输入url并回车后没有反应，你作为程"/>
@@ -363,7 +363,6 @@
 <h2 id="application-layer">Application Layer</h2>
 <h3 id="the-web-and-http">The Web and HTTP</h3>
 <p>url的组成（协议://域名或地址:端口号）</p>
-<p>https原理</p>
 <p>http请求和响应的内容格式</p>
 <p>GET和POST的区别</p>
 <p>列出常见的状态码和意义</p>
@@ -378,7 +377,9 @@
 <h4 id="non-persistent-and-persistent-connections">Non-Persistent and Persistent Connections</h4>
 <p>长连接与短连接 长连接如何实现 怎么将连接设置为短连接</p>
 <p>HTTP长连接知道吗？怎么实现的？</p>
-<p>http 长连接 http怎么解决沾包问题 thrift怎么解决沾包问题</p>
+<p>http怎么解决沾包问题，以换行符为标记</p>
+<p>thrift怎么解决沾包问题，在数据开头明确写出这个消息的长度，然后直接按照这个长度进行切分</p>
+<p>TCP是字节流协议，字节流解析就是如何设计应用层协议的问题。</p>
 <h4 id="user-server-interaction-cookies">User-Server Interaction: Cookies</h4>
 <p>服务器server怎么把cookie设置到浏览器的</p>
 <p>http有哪些头部？详细介绍一下Cookie。</p>
@@ -388,15 +389,12 @@
 <p>session和cookie的区别</p>
 <p>session是啥子，如何实现。</p>
 <h4 id="https">HTTPS</h4>
-<p>http https状态码 是对称加密吗?</p>
-<p>https的加密过程，详细讲一下</p>
+<p>https原理</p>
 <p>http和https的区别</p>
-<p>详细讲一下https的加密过程？对称加密和非对称加密是啥？blablabla。</p>
-<p>http2 了解么？</p>
-<p>HTTPS连接过程</p>
-<p>http和https的区别</p>
-<p>https的加密方式（对称加密和非对称加密</p>
+<p>详细讲一下https的加密过程？HTTPS连接过程</p>
 <p>HTTPS过程，如何判断证书是可信的</p>
+<p>https是对称加密吗? 对称加密和非对称加密是啥？</p>
+<p>http2 了解么？</p>
 <h3 id="dnsthe-internets-directory-service">DNS–The Internet’s Directory Service</h3>
 <p>DNS协议的解析过程</p>
 <p>域名解析（DNS服务器的迭代解析与递归解析）</p>
