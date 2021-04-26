@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.82.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.61b9e7bcbd6f12a4e9f5db11b9643a2092aa9c93ca136cf497edd5e0f3efca61.css" integrity="sha256-YbnnvL1vEqTp9dsRuWQ6IJKqnJPKE2z0l&#43;3V4PPvymE=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
 
 
 
@@ -295,6 +295,43 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/engineering-fundamentals/python/datetime/">Python datetime</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      datetime 8.1. datetime
+The datetime module, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation.
+There are two kinds of date and time objects: “naive” and “aware”.
+An aware object has sufficient knowledge of applicable algorithmic and political time adjustments, such as time zone and daylight saving time information, to locate itself relative to other aware objects. An aware object is used to represent a specific moment in time.
+    </div>
+    <div class="read-more">
+      <a href="/post/engineering-fundamentals/python/datetime/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/engineering-fundamentals/go/quick-start/">quick-start</a>
     </h1>
     
@@ -355,40 +392,6 @@ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; 
     </div>
     <div class="read-more">
       <a href="/post/engineering-fundamentals/scala/scalabyexample/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/engineering-fundamentals/go/standard-library/">standard-library</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      io io.Writer import	stdlog &quot;log&quot; var loggers []*Logger var logLevel = Debug type Logger struct { level int logger *stdlog.Logger } func NewLogger(out io.Writer) *Logger { ret := &amp;Logger{level: logLevel, logger: stdlog.New(out, &quot;&quot;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)} loggers = append(loggers, ret) return ret } io.MultiWriter func init() { rand.Seed(time.Now().UTC().UnixNano()) log.SetLevel(&quot;warn&quot;) logger = log.NewLogger(os.Stdout) model.LoadConf() util.LoadMarkdown() i18n.Load() theme.Load() replaceServerConf() if &quot;dev&quot; == model.Conf.RuntimeMode { gin.SetMode(gin.DebugMode) } else { gin.SetMode(gin.ReleaseMode) } gin.DefaultWriter = io.MultiWriter(os.Stdout) } io.
-    </div>
-    <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/standard-library/" class="read-more-link">Read more</a>
     </div>
     
   </div>

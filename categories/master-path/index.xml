@@ -6,7 +6,16 @@
     <description>Recent content in master-path on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/master-path/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/master-path/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data engineer roadmap</title>
+      <link>http://www.yezheng.pro/post/master-path/data-engineer-roadmap/</link>
+      <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/master-path/data-engineer-roadmap/</guid>
+      <description>Data Engineer in 2021  CS fundamentals  Basic terminal usage [general recommendation] Data structures &amp;amp; algorithms [general recommendation] APIs [general recommendation] REST [general recommendation] Structured vs unstructured data [general recommendation] Serialisation Linux [general recommendation]  CLI Vim Shell scripting Cronjobs   How does the computer work? [general recommendation] How does the Internet work? [general recommendation] Git — Version control [general recommendation] Math &amp;amp; statistics basics [general recommendation]    Note: Git is used for tracking changes in source code and coordinating work among programmers.</description>
+    </item>
+    
     <item>
       <title>read open source</title>
       <link>http://www.yezheng.pro/post/master-path/read-open-source/</link>

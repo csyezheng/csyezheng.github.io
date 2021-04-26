@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.82.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.61b9e7bcbd6f12a4e9f5db11b9643a2092aa9c93ca136cf497edd5e0f3efca61.css" integrity="sha256-YbnnvL1vEqTp9dsRuWQ6IJKqnJPKE2z0l&#43;3V4PPvymE=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
 
 
 
@@ -295,6 +295,40 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/specialization/web-application/back-end/kafka/">Kafka</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2018-07-23" class="post-time">
+        2018-07-23
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Quickstart &gt; tar -xzf kafka_2.11-1.1.0.tgz &gt; cd kafka_2.11-1.1.0 Start the server bin/zookeeper-server-start.sh config/zookeeper.properties bin/kafka-server-start.sh config/server.properties Create a topic bin/kaftopics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic my-topic bin/kafka-topics.sh --list --zookeeper localhost:2181 Send some messages bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning Python client for the Apache Kafka #!/usr/bin/env python3 import logging from kafka import KafkaProducer from kafka.errors import KafkaError import msgpack log = logging.getLogger(__name__) def send(): producer = KafkaProducer(bootstrap_servers=['localhost:9092'], value_serializer=msgpack.
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/web-application/back-end/kafka/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/specialization/artificial-intelligence/deep-learning/keras/">keras</a>
     </h1>
     
@@ -353,40 +387,6 @@
     </div>
     <div class="read-more">
       <a href="/post/specialization/web-application/back-end/make-a-web-site/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/computer-science-core/operating-systems/">Operating Systems Principles</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2018-01-31" class="post-time">
-        2018-01-31
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/computer-science-core/"> computer-science-core </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Managing Concurrency Threads, Processes, and Dispatching Processes Threads Dispatching Process Creation Concurrency Independent and Cooperating Threads Atomic Operations The &ldquo;Too Much Milk&rdquo; Problem Interprocess communication 管道（Pipe）：管道可用于具有亲缘关系进程间的通信，允许一个进程和另一个与它有共同祖先的
-    </div>
-    <div class="read-more">
-      <a href="/post/computer-science-core/operating-systems/" class="read-more-link">Read more</a>
     </div>
     
   </div>

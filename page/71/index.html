@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.82.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.61b9e7bcbd6f12a4e9f5db11b9643a2092aa9c93ca136cf497edd5e0f3efca61.css" integrity="sha256-YbnnvL1vEqTp9dsRuWQ6IJKqnJPKE2z0l&#43;3V4PPvymE=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
 
 
 
@@ -295,6 +295,42 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/specialization/web-application/back-end/wagtail/">Wagtail</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2018-11-02" class="post-time">
+        2018-11-02
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Getting started setting up a brand new Wagtail project $ pip install wagtail $ wagtail start mysite $ cd mysite $ pip install -r requirements.txt $ ./manage.py migrate $ ./manage.py createsuperuser $ ./manage.py runserver http://localhost:8000
+http://localhost:8000/admin/
+Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page.
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/web-application/back-end/wagtail/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/specialization/web-application/back-end/web-applications/">gateway</a>
     </h1>
     
@@ -354,41 +390,6 @@
     </div>
     <div class="read-more">
       <a href="/post/specialization/web-application/back-end/grpc/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/web-application/back-end/jwt/">JSON Web Tokens</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2018-10-09" class="post-time">
-        2018-10-09
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      What is JSON Web Token? JSON Web Token (JWT) is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
-When should you use JSON Web Tokens? Here are some scenarios where JSON Web Tokens are useful:
-    </div>
-    <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/jwt/" class="read-more-link">Read more</a>
     </div>
     
   </div>

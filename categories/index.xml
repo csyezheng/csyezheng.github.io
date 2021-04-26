@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>master-path</title>
+      <link>http://www.yezheng.pro/categories/master-path/</link>
+      <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/categories/master-path/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>any-path</title>
       <link>http://www.yezheng.pro/categories/any-path/</link>
@@ -112,15 +121,6 @@
       <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/categories/storage/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>master-path</title>
-      <link>http://www.yezheng.pro/categories/master-path/</link>
-      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/categories/master-path/</guid>
       <description></description>
     </item>
     

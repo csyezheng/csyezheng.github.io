@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.82.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.61b9e7bcbd6f12a4e9f5db11b9643a2092aa9c93ca136cf497edd5e0f3efca61.css" integrity="sha256-YbnnvL1vEqTp9dsRuWQ6IJKqnJPKE2z0l&#43;3V4PPvymE=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
 
 
 
@@ -295,6 +295,40 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/engineering-fundamentals/go/debugging-with-delve/">Delve Documentation</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &quot;fmt&quot; &quot;log&quot; &quot;net/http&quot; &quot;os&quot; ) const port = &quot;8000&quot; func main() { http.HandleFunc(&quot;/hi&quot;, hi) fmt.Println(&quot;runing on port: &quot; + port) log.Fatal(http.ListenAndServe(&quot;:&quot; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &quot;HostName: %s&quot;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.
+    </div>
+    <div class="read-more">
+      <a href="/post/engineering-fundamentals/go/debugging-with-delve/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/engineering-fundamentals/go/generate-model-structs-from-database/">generate-model-structs-from-database</a>
     </h1>
     
@@ -359,41 +393,6 @@
     </div>
     <div class="read-more">
       <a href="/post/engineering-fundamentals/scala/getting-started/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/engineering-fundamentals/go/gin/">Gin</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-03-01" class="post-time">
-        2019-03-01
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
-$ go get github.com/gin-contrib/sessions import &quot;github.com/gin-contrib/sessions&quot; cookie-based Example import ( &quot;github.com/gin-contrib/sessions&quot; &quot;github.com/gin-contrib/sessions/cookie&quot; &quot;github.com/gin-gonic/gin&quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&quot;secret&quot;)) r.Use(sessions.Sessions(&quot;mysession&quot;, store)) r.GET(&quot;/incr&quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&quot;count&quot;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&quot;count&quot;, count) session.
-    </div>
-    <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/gin/" class="read-more-link">Read more</a>
     </div>
     
   </div>

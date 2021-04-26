@@ -6,7 +6,7 @@
     <description>Recent content on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Apr 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://www.yezheng.pro/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,6 +20,334 @@
       
         <description>&lt;p&gt;I&amp;rsquo;m graduated from the Hebei GEO University with a degree in marketing, because I thought computers were cool from an early age, so I chose programmers as my future employment direction in my third year of college. In the third year of college, I learned some front-end knowledge, and in the fourth year of college I learned some C ++ related knowledge. After graduating, I naturally found a job related to programming.&lt;/p&gt;
 &lt;p&gt;In the first company, I was mainly engaged in web crawling. I was responsible for scraping various financial data including stock exchanges, performing data cleaning, and completing an announcement classification system during the period. I worked as a data development engineer in the second company, and solved development problems such as real-time data forwarding, reception, and storage. I worked as a back-end development engineer at a third company and built the entire edx-based online learning system.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Data engineer roadmap</title>
+      <link>http://www.yezheng.pro/post/master-path/data-engineer-roadmap/</link>
+      <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/master-path/data-engineer-roadmap/</guid>
+      
+        <description>&lt;h1 id=&#34;data-engineer-in-2021&#34;&gt;Data Engineer in 2021&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;http://ww1.sinaimg.cn/large/0083FLjsgy1gpn1dzzze6j31hc6ae4qp.jpg&#34; alt=&#34;https://github.com/datastacktv/data-engineer-roadmap/blob/master/img/roadmap.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CS fundamentals
+&lt;ul&gt;
+&lt;li&gt;Basic terminal usage [general recommendation]&lt;/li&gt;
+&lt;li&gt;Data structures &amp;amp; algorithms [general recommendation]&lt;/li&gt;
+&lt;li&gt;APIs [general recommendation]&lt;/li&gt;
+&lt;li&gt;REST [general recommendation]&lt;/li&gt;
+&lt;li&gt;Structured vs unstructured data [general recommendation]&lt;/li&gt;
+&lt;li&gt;Serialisation&lt;/li&gt;
+&lt;li&gt;Linux [general recommendation]
+&lt;ul&gt;
+&lt;li&gt;CLI&lt;/li&gt;
+&lt;li&gt;Vim&lt;/li&gt;
+&lt;li&gt;Shell scripting&lt;/li&gt;
+&lt;li&gt;Cronjobs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How does the computer work? [general recommendation]&lt;/li&gt;
+&lt;li&gt;How does the Internet work? [general recommendation]&lt;/li&gt;
+&lt;li&gt;Git — Version control [general recommendation]&lt;/li&gt;
+&lt;li&gt;Math &amp;amp; statistics basics [general recommendation]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note: Git is used for tracking changes in source code and coordinating work among programmers. In your day to day work you will use Git server as a service like GitHub, GitLab or Bitbucket.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn a programming language
+&lt;ul&gt;
+&lt;li&gt;Python [personal recommendation]&lt;/li&gt;
+&lt;li&gt;Java [general recommendation]&lt;/li&gt;
+&lt;li&gt;Scala&lt;/li&gt;
+&lt;li&gt;Go&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note: Learn how to write clean, extensibile code. Spend some time understanding programming paradigms (functional vs. OOP) and best practices (design patterns, YAGNI, stateful vs stateless applications). Get familiar with an IDE or code editor like VSCode.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Testing&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unit testing [general recommendation]&lt;/li&gt;
+&lt;li&gt;Integration testing [general recommendation]&lt;/li&gt;
+&lt;li&gt;Functional testing [general recommendation]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Database fundamentals&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SQL [general recommendation]&lt;/li&gt;
+&lt;li&gt;Normalisation [general recommendation]&lt;/li&gt;
+&lt;li&gt;ACID transactions [general recommendation]&lt;/li&gt;
+&lt;li&gt;CAP theorem [general recommendation]&lt;/li&gt;
+&lt;li&gt;OLTP vs OLAP [general recommendation]&lt;/li&gt;
+&lt;li&gt;Horizontal vs vertical scaling [general recommendation]&lt;/li&gt;
+&lt;li&gt;Dimensional modeling [general recommendation]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Relational databases&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MySQL [general recommendation]&lt;/li&gt;
+&lt;li&gt;PostgreSQL [general recommendation]&lt;/li&gt;
+&lt;li&gt;MariaDB&lt;/li&gt;
+&lt;li&gt;Amazon Aurora&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Non-relational databases&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Document databases
+&lt;ul&gt;
+&lt;li&gt;MongoDB [general recommendation]&lt;/li&gt;
+&lt;li&gt;Elasticsearch [general recommendation]&lt;/li&gt;
+&lt;li&gt;Apache CouchDB&lt;/li&gt;
+&lt;li&gt;Azure CormosDB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Wide column databases
+&lt;ul&gt;
+&lt;li&gt;Apache Cassandra [general recommendation]&lt;/li&gt;
+&lt;li&gt;Apache HBase [general recommendation]&lt;/li&gt;
+&lt;li&gt;Google Cloud Bigtable [personal recommendation]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Graph databases
+&lt;ul&gt;
+&lt;li&gt;Neo4j&lt;/li&gt;
+&lt;li&gt;Amazon Neptune&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Key-value stores
+&lt;ul&gt;
+&lt;li&gt;Redis [personal recommendation]&lt;/li&gt;
+&lt;li&gt;Memcached&lt;/li&gt;
+&lt;li&gt;Amazon DynamoDB [general recommendation]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note: Understand the difference between Document, Wide column, Graph and Key-value NoSQL databases. We recommend mastering one database from each category.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Data warehouses&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Snowflake [general recommendation]&lt;/li&gt;
+&lt;li&gt;Presto&lt;/li&gt;
+&lt;li&gt;Apache Hive&lt;/li&gt;
+&lt;li&gt;Apache Impala&lt;/li&gt;
+&lt;li&gt;Amazon Redshift [general recommendation]&lt;/li&gt;
+&lt;li&gt;Google BigQuery [personal recommendation]&lt;/li&gt;
+&lt;li&gt;Azure Synapse&lt;/li&gt;
+&lt;li&gt;ClickHouse&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Object storage&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS S3 [general recommendation]&lt;/li&gt;
+&lt;li&gt;Azure Blob Storage&lt;/li&gt;
+&lt;li&gt;Google Cloud Storage&lt;/li&gt;
+&lt;li&gt;Apache Ozone&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cluster computing fundamentals&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Apache Hadoop [general recommendation]&lt;/li&gt;
+&lt;li&gt;HDFS [general recommendation]&lt;/li&gt;
+&lt;li&gt;MapReduce [general recommendation]&lt;/li&gt;
+&lt;li&gt;Lambda &amp;amp; Kappa architectures&lt;/li&gt;
+&lt;li&gt;Managed Hadoop [general recommendation]
+&lt;ul&gt;
+&lt;li&gt;Amazon EMR&lt;/li&gt;
+&lt;li&gt;Google Dataproc&lt;/li&gt;
+&lt;li&gt;Azure Data Lake&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note: Most modern data processing frameworks are based on Apache Hadoop and MapReduce to some extent. Understanding these concepts can help you learn modern data processing frameworks much quicker.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data processing
+&lt;ul&gt;
+&lt;li&gt;Batch
+&lt;ul&gt;
+&lt;li&gt;Apache Pig [general recommendation]&lt;/li&gt;
+&lt;li&gt;Apache Arrow&lt;/li&gt;
+&lt;li&gt;data build tool [personal recommendation]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hybrid
+&lt;ul&gt;
+&lt;li&gt;Apache Spark [general recommendation]&lt;/li&gt;
+&lt;li&gt;Apache Beam [personal recommendation]&lt;/li&gt;
+&lt;li&gt;Apache Flink [general recommendation]&lt;/li&gt;
+&lt;li&gt;Apache NiFi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Streaming
+&lt;ul&gt;
+&lt;li&gt;Apache Kafka [personal recommendation]&lt;/li&gt;
+&lt;li&gt;Apache Storm [general recommendation]&lt;/li&gt;
+&lt;li&gt;Apache Samza&lt;/li&gt;
+&lt;li&gt;Amazon Kinesis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note: Hybrid frameworks are able to process both batch and streaming data. Batch data processing is often done by analytical data warehouse applications. See Data warehouses section for more.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Messaging&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RabbitMQ [general recommendation]&lt;/li&gt;
+&lt;li&gt;Apache ActiveMQ&lt;/li&gt;
+&lt;li&gt;Amazon SNS &amp;amp; SQS&lt;/li&gt;
+&lt;li&gt;Google PubSub&lt;/li&gt;
+&lt;li&gt;Azure Service Bus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Workflow scheduling&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Apache Airflow [personal recommendation]&lt;/li&gt;
+&lt;li&gt;Google Composer&lt;/li&gt;
+&lt;li&gt;Apache Oozie&lt;/li&gt;
+&lt;li&gt;Luigi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note: Cloud Composer is a managed Apache Airflow service on Google Cloud Platform.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Monitoring and observability for data pipelines&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Prometheus [general recommendation]&lt;/li&gt;
+&lt;li&gt;Datadog [general recommendation]&lt;/li&gt;
+&lt;li&gt;Sentry [general recommendation]&lt;/li&gt;
+&lt;li&gt;Monte Carlo&lt;/li&gt;
+&lt;li&gt;Datafold&lt;/li&gt;
+&lt;li&gt;Soda Data&lt;/li&gt;
+&lt;li&gt;StatsD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Networking&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Protocols [general recommendation]
+&lt;ul&gt;
+&lt;li&gt;HTTP / HTTPS&lt;/li&gt;
+&lt;li&gt;TCP&lt;/li&gt;
+&lt;li&gt;SSH&lt;/li&gt;
+&lt;li&gt;IP&lt;/li&gt;
+&lt;li&gt;DNS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Firewalls [general recommendation]&lt;/li&gt;
+&lt;li&gt;VPN [general recommendation]&lt;/li&gt;
+&lt;li&gt;VPC [general recommendation]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Infrastructure as Code&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Containers
+&lt;ul&gt;
+&lt;li&gt;Docker [personal recommendation]&lt;/li&gt;
+&lt;li&gt;LXC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Container orchestration
+&lt;ul&gt;
+&lt;li&gt;Kubernetes [general recommendation]&lt;/li&gt;
+&lt;li&gt;Docker Swarm&lt;/li&gt;
+&lt;li&gt;Apache Mesos&lt;/li&gt;
+&lt;li&gt;Google Kubernetes Engine (GKE) [general recommendation]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Infrastructure provisioning
+&lt;ul&gt;
+&lt;li&gt;Terraform [personal recommendation]&lt;/li&gt;
+&lt;li&gt;Pulumi&lt;/li&gt;
+&lt;li&gt;AWS CDK [general recommendation]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CI/CD&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub Actions [general recommendation]&lt;/li&gt;
+&lt;li&gt;Jenkins [general recommendation]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Identity and access management&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Active Directory [general recommendation]&lt;/li&gt;
+&lt;li&gt;Azure Active Directory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Data security &amp;amp; privacy&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Legal compliance [general recommendation]&lt;/li&gt;
+&lt;li&gt;Encryption [general recommendation]&lt;/li&gt;
+&lt;li&gt;Key management [general recommendation]&lt;/li&gt;
+&lt;li&gt;Data governance &amp;amp; integrity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://ww1.sinaimg.cn/large/0083FLjsgy1gpn1eugmgoj31hc186jww.jpg&#34; alt=&#34;https://github.com/datastacktv/data-engineer-roadmap/blob/master/img/extras.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: Data engineers often work closely with Data scientists, Data analysts and Machine Learning engineers. It’s good to have a basic understanding of the tools they use.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Visualise data&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tableau [general recommendation]&lt;/li&gt;
+&lt;li&gt;Looker [personal recommendation]&lt;/li&gt;
+&lt;li&gt;Grafana [general recommendation]&lt;/li&gt;
+&lt;li&gt;Jupyter Notebook [general recommendation]&lt;/li&gt;
+&lt;li&gt;Microsoft Power BI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Machine Learning fundamentals&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Terminology [general recommendation]
+&lt;ul&gt;
+&lt;li&gt;Supervised vs unsupervised learning&lt;/li&gt;
+&lt;li&gt;Classification vs regression&lt;/li&gt;
+&lt;li&gt;Evaluation metrics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;scikit-learn [general recommendation]&lt;/li&gt;
+&lt;li&gt;Tensorflow [personal recommendation]&lt;/li&gt;
+&lt;li&gt;Keras [personal recommendation]&lt;/li&gt;
+&lt;li&gt;PyTorch [general recommendation]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Machine Learning Ops&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tensorflow Extended (TFX) [general recommendation]&lt;/li&gt;
+&lt;li&gt;Kubeflow [personal recommendation]&lt;/li&gt;
+&lt;li&gt;MLflow&lt;/li&gt;
+&lt;li&gt;Amazon SageMaker&lt;/li&gt;
+&lt;li&gt;Google Cloud AI Platform&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note: Keep learning&amp;hellip;&lt;/em&gt;&lt;/p&gt;
 </description>
       
     </item>
@@ -4133,219 +4461,6 @@ while True:
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.pearson.com/us/higher-education/product/Kurose-Computer-Networking-A-Top-Down-Approach-6th-Edition/9780132856201.html?tab=contents&#34;&gt;Computer Networking: A Top-Down Approach, 6th Edition&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://gaia.cs.umass.edu/kurose_ross/wireshark.htm&#34;&gt;&lt;strong&gt;Wireshark Labs&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Computer Networks and the Internet</title>
-      <link>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-1/</link>
-      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-1/</guid>
-      
-        <description>&lt;h2 id=&#34;what-is-the-internet&#34;&gt;What Is the Internet?&lt;/h2&gt;
-&lt;h4 id=&#34;a-nuts-and-bolts-description&#34;&gt;A Nuts-and-Bolts Description&lt;/h4&gt;
-&lt;p&gt;设备：称为&lt;strong&gt;主机（host）&lt;strong&gt;或&lt;/strong&gt;端系统（end system）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;端系统通过**通信链路（communication link）&lt;strong&gt;和&lt;/strong&gt;分组交换机（packet switch）**连接到一起。&lt;/p&gt;
-&lt;p&gt;通信链路的物理媒体包含：电缆、铜线、光纤和无线电频谱。&lt;/p&gt;
-&lt;p&gt;端系统向另一台端系统发送数据时，发送端系统将数据分段，并为每段加上首部字节，形成的信息包称为&lt;strong&gt;分组（packet）&lt;/strong&gt;，分组到目的端系统被装配成初始数据。&lt;/p&gt;
-&lt;p&gt;分组交换机：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;**路由器（router）**通常用于网络核心中&lt;/li&gt;
-&lt;li&gt;**链路层交换机（link-layer swtich）**通常用于接入网中。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;端系统通过**因特网服务提供商（Internet Service Provider, ISP）**接入因特网。每个ISP自身就是一个由多台分组交换机和多段通信链路组成的网络。因特网就是将端系统互联，因此为端系统提供的ISP也必须互联起来。无论是较高层还是较低层ISP网络,它们每个都是独立管理的,运行着IP协议,遵从一定的命名和地址规则。&lt;/p&gt;
-&lt;p&gt;端系统、分组交换机和其他因特网部件都要运行一系列&lt;strong&gt;协议(protocol)&lt;/strong&gt;,这些协议控制因特网中信息的接收和发送。**TCP(Transmission Control Protocol, 传输控制协议)&lt;strong&gt;和&lt;/strong&gt;IP(Intemnet Protocol,网际协议)**是因特网中两个最为重要的协议。IP协议定义了在路由器和端系统之间发送和接收的分组格式。&lt;strong&gt;因特网的主要协议统称为TCP/IP。&lt;/strong&gt;&lt;/p&gt;
-&lt;h4 id=&#34;a-services-description&#34;&gt;A Services Description&lt;/h4&gt;
-&lt;p&gt;涉及多个相互交换数据的端系统的应用程序, 被称为&lt;strong&gt;分布式应用程序(distributed application)&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;与因特网相连的端系统提供了一个&lt;strong&gt;套接字接口（socket interface）&lt;/strong&gt;,该接口规定了运行在一个端系统上的程序请求因特网基础设施向运行在另一个端系统上的特定目的地程序交付数据的方式。&lt;/p&gt;
-&lt;h4 id=&#34;what-is-a-protocol&#34;&gt;What Is a Protocol?&lt;/h4&gt;
-&lt;p&gt;**协议（protocol）**定义了在两个或多个通信实体之间交换的报文的格式和顺序,以及报文发送和/或接收一条报文或其他事件所采取的动作。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;掌握计算机网络领域知识的过程就是理解网络协议的构成、原理和工作方式的过程。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;the-network-edge&#34;&gt;The Network Edge&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;主机 = 端系统&lt;/strong&gt;。主机有时又被进一步划分为两类：&lt;strong&gt;客户（client）&lt;strong&gt;和&lt;/strong&gt;服务器(server)&lt;/strong&gt;。今天, 大部分提供搜索结果、电子邮件、Web页面和视频的服务器都属于&lt;strong&gt;大型数据中心(data center)&lt;/strong&gt;。&lt;/p&gt;
-&lt;h4 id=&#34;access-networks&#34;&gt;Access Networks&lt;/h4&gt;
-&lt;p&gt;接入网是指将端系统物理连接到其**边缘路由器（edge rounter）**的物理链路。边缘路由器是端系统到任何其他远程端系统的路径上的第一台路由器。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;家庭接人:数字用户线（Digital Subscriber Line, DSL）、电缆（Cable）、光纤入户（FTTH）、拨号（很慢）和卫星&lt;/li&gt;
-&lt;li&gt;企业(和家庭)接人:以太网和WiFi，以太网是用局域网（LAN）技术，WIFI是无线LAN。现在家庭通常电缆或DSL可以与无线局域网结合使用&lt;/li&gt;
-&lt;li&gt;广域无线接人:3G和LTE，通过蜂窝网提供商运营的基站发送接收分组。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;physical-media&#34;&gt;Physical Media&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;双绕铜线&lt;/li&gt;
-&lt;li&gt;同轴电缆&lt;/li&gt;
-&lt;li&gt;光纤&lt;/li&gt;
-&lt;li&gt;陆地无线电信道&lt;/li&gt;
-&lt;li&gt;卫星无线电信道&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;the-network-core&#34;&gt;The Network Core&lt;/h2&gt;
-&lt;h4 id=&#34;packet-switching&#34;&gt;Packet Switching&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;在各种网络应用中,端系统彼此交换&lt;strong&gt;报文(message)&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;报文能够包含协议设计者需要的任何东西。&lt;strong&gt;报文可以执行一种控制功能,也可以包含数据&lt;/strong&gt;, 例如电子邮件数据、JPEC图像或MP3音频文件。&lt;/li&gt;
-&lt;li&gt;为了从源端系统向目的端系统发送一个报文, 源将长报文划分为较小的数据块,称之为&lt;strong&gt;分组(packet)&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;在源和目的地之间,每个分组都通过通信链路和**分组交换机(packet switch)**传送。(交换机主要有两类:&lt;strong&gt;路由器(router)&lt;strong&gt;和&lt;/strong&gt;链路层交换机(link-layer switch)&lt;/strong&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&#34;存储转发传输&#34;&gt;存储转发传输&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;多数分组交换机在链路的输人端使用**存储转发传输(store-and-forward transmission)**机制。存储转发传输是指在交换机能够开始向输出链路传输该分组的第一个比特之前,必须接收到整个分组。&lt;/li&gt;
-&lt;li&gt;通过由N条速率均为R的链路组成的路径，有N-1台路由器，从源到目的地发送一个分组，端到端时延是$$N\frac{L}{R}$$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&#34;排队时延和分组丢失&#34;&gt;排队时延和分组丢失&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;每台分组交换机有多条链路与之相连。对于每条相连的链路,该分组交换机具有一个&lt;strong&gt;输出缓存(output buffer,也称为输出队列(output queue))&lt;/strong&gt;,它用于存储路由器准备发往那条链路的分组。该输出缓存在分组交换中起着重要的作用。&lt;/li&gt;
-&lt;li&gt;除了存储转发时延以外,分组还要承受输出缓存的&lt;strong&gt;排队时延(queuing delay)&lt;/strong&gt;。这些时延是变化的,变化的程度取决于网络的拥塞程度。因为缓存空间的大小是有限的,一个到达的分组可能发现该缓存已被其他等待传输的分组完全充满了。在此情况下,将出现&lt;strong&gt;分组丢失(丢包)(packet loss)&lt;/strong&gt;,到达的分组或已经排队的分组之一将被丢弃。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h6 id=&#34;转发表和路由选择协议&#34;&gt;转发表和路由选择协议&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;在因特网中，每个端系统具有一个称为&lt;strong&gt;IP地址&lt;/strong&gt;的地址。&lt;/li&gt;
-&lt;li&gt;每台路由器具有一个&lt;strong&gt;转发表(forwarding table)&lt;/strong&gt;,用于将目的地址（或目的地址的一部分）映射成为输出链路。&lt;/li&gt;
-&lt;li&gt;因特网具有一些特殊的&lt;strong&gt;路由选择协议（routing protocol）&lt;/strong&gt; ，用于自动地设置这些转发表。&lt;/li&gt;
-&lt;li&gt;使用Traceroute程序可以看到分组在因特网中所走的端到端路由。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;circuit-switching&#34;&gt;Circuit Switching&lt;/h4&gt;
-&lt;p&gt;通过网络链路和交换机移动数据有两种基本方法:&lt;strong&gt;电路交换(circuit switching)&lt;strong&gt;和&lt;/strong&gt;分组交换(packet switching)&lt;/strong&gt;。&lt;/p&gt;
-&lt;h4 id=&#34;a-network-of-networks&#34;&gt;A Network of Networks&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;因为接入ISP向全球传输ISP付费,故接人ISP被认为是&lt;strong&gt;客户(customer)&lt;/strong&gt;,而全球传输ISP被认为是&lt;strong&gt;提供商(provider)&lt;/strong&gt;,&lt;/li&gt;
-&lt;li&gt;在任何给定的区域,可能有一个&lt;strong&gt;区域ISP(regional ISP)&lt;/strong&gt;，区域中的接人ISP与之连接。每个区域ISP则与&lt;strong&gt;第一层ISP(tier-1 ISP)连接&lt;/strong&gt;。第一层ISP类似于我们假想的全球传输ISP,尽管它不是在世界上每个城市中都存在,但它确实存在。&lt;/li&gt;
-&lt;li&gt;任何ISP〔(除了第一层ISP)可以选择&lt;strong&gt;多宿(multi-home)&lt;/strong&gt;,即可以与两个或更多提供商ISP连接。例如,一个接人ISP可能与两个区域ISP多宿,既可以与两个区域ISP多宿,也可以与多个第一层ISP多宿。当一个ISP提供商出现故障，能够继续发送和接收分组。&lt;/li&gt;
-&lt;li&gt;位于相同等级结构层次的邻近一对ISP能够&lt;strong&gt;对等(peer)&lt;/strong&gt;, 也就是说,能够直接将它们的网络连到一起,使它们之间的所有流量经直接连接而不是通过上游的中间ISP传输。当两个ISP对等时,通常不进行结算,即任一个ISP不向其对等付费。因特网交换点（Internet Exchange Point, IXP）多个ISP能够在这里共同对等。&lt;/li&gt;
-&lt;li&gt;顶部有&lt;strong&gt;内容提供商网络（content provider network）&lt;/strong&gt;，数据中心绕过较高层ISP，直接与较低层ISP连接。&lt;/li&gt;
-&lt;li&gt;今天的因特网是一个&lt;strong&gt;网络的网络&lt;/strong&gt;，其结构复杂，由十多个第一层ISP和数十万个较低层ISP组成。较低层的ISP与较高层的ISP相连,较高层ISP彼此互联。用户和内容提供商是较低层ISP的客户,较低层ISP是较高层ISP的客户。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic1.zhimg.com/80/v2-aeb1ce8889ea9b88cb57afbe5c49cc6c_1440w.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;delay-loss-and-throughput-in-packet-switched-networks&#34;&gt;Delay, Loss, and Throughput in Packet-Switched Networks&lt;/h2&gt;
-&lt;h4 id=&#34;overview-of-delay-in-packet-switched-networks&#34;&gt;Overview of Delay in Packet-Switched Networks&lt;/h4&gt;
-&lt;p&gt;当分组从一个节点(主机或路由器)沿着这条路径到后继节点(主机或路由器),该分组在沿途的冬个节点经受了几种不同类型的时延。这些时延最为重要的是&lt;strong&gt;节点处理时延(nodalprocessing delay)&lt;/strong&gt;、&lt;strong&gt;排队时延(queuing delay)&lt;/strong&gt;、&lt;strong&gt;传输时延(transmission delay)&lt;strong&gt;和&lt;/strong&gt;传播时延(propagation delay)&lt;/strong&gt;,这些时延总体累加起来是&lt;strong&gt;节点总时延(totalnodal delay)&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic1.zhimg.com/80/v2-5d5e8ce120b48b8ea632f8e6564480f0_1440w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;处理时延&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;检查分组首部和决定将该分组导向何处所需要的时间是&lt;strong&gt;处理时延&lt;/strong&gt;的一部分。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;排队时延&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;在队列中,当分组在链路上等待传输时,它经受&lt;strong&gt;排队时延&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;传输时延&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;用L比特表示该分组的长度,用Rbps(即b/s)表示从路由器A到路由器B的链路传输速率。链路,速率史=10Mbps;对于100Mbps的以太网链路,速率R=100Mbps。&lt;strong&gt;传输时延是L/R&lt;/strong&gt;。这是将所有分组的比特推向链路(即传输,或者说发射)所需要的时间。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;传播时延&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;一旦一个比特被推向链路,该比特需要向路由器B传播。从该链路的起点到路由器B传播所需要的时间是&lt;strong&gt;传播时延&lt;/strong&gt;。该比特以该链路的传播速率传播。该传播速率取决于该链路的物理媒体(即光纤、双绞铜线等),其速率范围是2x10~3x10m/s,这等于或略小于光速。该传播时延等于两台路由器之间的距离除以传播速率。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;传输时延是路由器将分组推出所需要的时间，是分组长度和链路传输速率的函数，而与两台路由器之间的距离无关。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;传播时延是一个比特从一台路由器向另一台路由器传播所需要的时间，是两台路由器之间距离的函数，而与分组长度或链路传播速率无关。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;queuing-delay-and-packet-loss&#34;&gt;Queuing Delay and Packet Loss&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;节点时延的最为复杂和有趣的成分是排队时延。&lt;/li&gt;
-&lt;li&gt;与其他三项时延（即、 和 ）不同的是，排队时延对不同的分组可能是不同的&lt;/li&gt;
-&lt;li&gt;令 $a$ 表示分组到达队列的平均速率（单位：分组/秒，即 $pkt/s$）；$R$是传输速率，即从队列中推出比特的速率（单位 $bps$：，即$b/s$）；假定所以分组都是由$L$比特组成的**，**则比特到达队列的平均速率是$La/R &amp;gt; 1$。假定该队列非常大，因此它基本能容纳无限数量的比特。比率$La/R$被称为**流量强度（traffic intensity）**。&lt;/li&gt;
-&lt;li&gt;如果，则比特到达队列的平均速率超过从该队列传输出去的速率，该队列趋向于无限增加，并且排队时延将趋向无穷大！因此，流量工程的一条金科玉律是：&lt;strong&gt;设计系统时流量强度不能大于1&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;在上述讨论中,我们已经假设队列能够容纳无穷多的分组。在现实中,一条链路前的队列只有有限的容量,尽管排队容量极大地依赖于路由器设计和成本。因为该排队容量是有限的,随着流量强度接近1,排队时延并不真正趋向无穷大。相反,到达的分组将发现一个满的队列。由于没有地方存储这个分组,路由器将&lt;strong&gt;丢弃(drop)&lt;strong&gt;该分组,即该分组将会&lt;/strong&gt;丢失(lost)&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;分组丢失的比例随着流量强度增加而增加&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;end-to-end-delay&#34;&gt;End-to-End Delay&lt;/h4&gt;
-&lt;p&gt;假定在源主机和目的主机之间有台路由器。我们还要假设该网络此时是无拥塞的(因此排队时延是微不足道的),在每台路由器和源主机上的处理时延是$d_{proc}$。,每台路由器和源主机的输出速率是$R$ bps,每条链路的传播时延是$d_{prop}$。节点时延累加起来, 得到端到端时延:$d_{end-end}=N(d_{proc}+d_{trans}+d_{prop})$  式中，其中$L$是分组长度，$d_{trans} = L/R$&lt;/p&gt;
-&lt;h4 id=&#34;throughput-in-computer-networks-计算机网络中的吞吐量&#34;&gt;Throughput in Computer Networks (计算机网络中的吞吐量)&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;考虑从主机A到主机B跨越计算机网络传送一个大文件，在任何时间瞬间的&lt;strong&gt;瞬时吞吐量（instantaneous throughput）&lt;strong&gt;是主机B接收到该文件的&lt;/strong&gt;速率&lt;/strong&gt;（以计）。&lt;/li&gt;
-&lt;li&gt;如果该文件由比特组成，主机B接收到所有F比特用去秒，则文件传送的**平均吞吐量（average throughout）**是&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;protocol-layers-and-their-service-models&#34;&gt;Protocol Layers and Their Service Models&lt;/h2&gt;
-&lt;h4 id=&#34;layered-architecture&#34;&gt;Layered Architecture&lt;/h4&gt;
-&lt;h6 id=&#34;协议分层&#34;&gt;协议分层&lt;/h6&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;协议分层的优缺点&lt;/strong&gt;：&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;优点&lt;/strong&gt;：协议分层具有概念化和结构化的优点。分层提供了一种结构化方式来讨论系统组件。模块化使更新系统组件更为容易。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;缺点&lt;/strong&gt;：分层的一个潜在缺点是一层可能冗余较低层的功能。第二个潜在的缺点 是某层的功能可能需要仅在其他某层才出现的信息（如时间戳值），这违反了层次分离的目标。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;各层的所有协议被称为协议栈(protocol stack)。&lt;/p&gt;
-&lt;p&gt;五层因特网协议栈:&lt;strong&gt;物理层、链路层、网络层、运输层和应用层&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;七层ISO OSI参考模型：&lt;strong&gt;物理层、链路层、网络层、运输层、会话层、表示层和应用层&lt;/strong&gt;。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;因特网协议栈自顶向下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;应用层&lt;/p&gt;
-&lt;p&gt;因特网的应用层包括许多协议，例如HTTP（Web文档请求和传送）、SMTP（电子邮件报文的传输）、FTP（两个端系统之间的文件传送）、DNS（域名系统）等。&lt;/p&gt;
-&lt;p&gt;应用层协议分布在多个端的系统上，一个端系统中的应用程序使用协议与另一个端系统中的应用程序交换信息的分组。应用层的信息分组称为&lt;strong&gt;报文(message)&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;运输层&lt;/p&gt;
-&lt;p&gt;因特网的运输层在应用程序端点之间&lt;strong&gt;传送应用层报文&lt;/strong&gt;。因特网中有两个运输协议，即TCP和UDP，两个都可以运输应用层报文。&lt;/p&gt;
-&lt;p&gt;TCP是面向连接的，这种服务包括了应用层报文向目的地的&lt;strong&gt;确保传递&lt;/strong&gt;和&lt;strong&gt;流量控制&lt;/strong&gt;，TCP也将长报文&lt;strong&gt;划分为短报文&lt;/strong&gt;，并提供&lt;strong&gt;拥塞控制&lt;/strong&gt;机制，因此当网络拥塞时，源地址会抑制其传输速率。&lt;/p&gt;
-&lt;p&gt;UDP协议提供无连接服务，这是一种不提供不必要服务的服务，&lt;strong&gt;没有可靠性，没有流量控制，也没有拥塞控制&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;运输层分组称为&lt;strong&gt;报文段(segment)&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;网络层
-网络层的分组称为 &lt;strong&gt;数据报(datagram)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;因特网的网络层把数据包从一台主机移动到另一台主机。在一台源主机中的因特网运输层协议（TCP或UDP）向网络层&lt;strong&gt;递交运输层报文段和目的地址&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;网络层中包括&lt;strong&gt;IP协议&lt;/strong&gt;，该协议定义了数据包中的各个字段以及端系统和路由器如何作用于这些字段。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;链路层
-因特网的网络层通过源和目的地之间的一系列路由器路由数据报。网络层依靠链路层的服务来将分组从结点(主机或路由器)移动到路径上的下一个结点。在每一个结点，网络层将数据报下，链路层沿着路径将数据报传递给下一个结点，在下一个结点，链路层将数据报上传给网络层。&lt;/p&gt;
-&lt;p&gt;某些协议基于链路层提供可靠传递，从传输结点跨越一条链路到接收结点，这种可靠传输不同于TCP的可靠传输。(从一个端系统到另一个端系统)&lt;/p&gt;
-&lt;p&gt;链路层分组称为 &lt;strong&gt;帧(frame)&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;物理层
-链路层的任务是把整个帧从一个网络元素移动到邻近的网络元素，物理层的任务则是把&lt;strong&gt;该帧中的一个个比特从一个结点移动到下一个结点&lt;/strong&gt;，这些仍是和链路相关的，但是是与链路的实际传输媒体相关的。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;OSI模型：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;表示层&lt;/p&gt;
-&lt;p&gt;表示层的作用是使通信的应用程序能够解释交换数据的含义。这些服务包括数据压缩、数据加密以及数据描述。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;会话层&lt;/p&gt;
-&lt;p&gt;会话层提供了数据交换定界和同步功能，包括了建立检查点和恢复方案的方法。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;因特网缺少了OSI模型中的两层，这两层留给应用程序开发者处理。&lt;/p&gt;
-&lt;h4 id=&#34;encapsulation&#34;&gt;Encapsulation&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://pic3.zhimg.com/80/v2-9a7b7f552162bcb27dd2c4986c03568a_1440w.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;数据从发送端系统的协议栈向下，向上和向下经过中间的链路层交换机和路由器协议栈，进而向上到达接收端系统的协议栈。&lt;/p&gt;
-&lt;p&gt;路由器和链路层交换机并不实现协议栈中的所有层次。链路层交换机实现了链路层和物理层，路由器实现了链路层、物理层和网络层。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;封装（encapsulation）&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;运输层收到&lt;strong&gt;应用层报文(application-layer message)&lt;strong&gt;并附上运输层首部信息，构成了&lt;/strong&gt;运输层报文端（transport-layer segment）&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;网络层增加了如源和目的端系统地址和网络层首部信息，产生&lt;strong&gt;网络层数据报（network-layer datagram）&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;链路层增加链路层首部信息并创建&lt;strong&gt;链路层帧（link-layer frame）&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;在每一层，一个分组都具有两种类型的字段：&lt;strong&gt;首部字段和有效载荷字段（payload field）&lt;/strong&gt;，有效符合通常来自上一层的分组。&lt;/p&gt;
-&lt;h1 id=&#34;reference&#34;&gt;Reference&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.pearson.com/us/higher-education/product/Kurose-Computer-Networking-A-Top-Down-Approach-6th-Edition/9780132856201.html?tab=contents&#34;&gt;Computer Networking: A Top-Down Approach, 6th Edition&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
       

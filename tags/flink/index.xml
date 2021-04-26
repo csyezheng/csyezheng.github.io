@@ -9,11 +9,17 @@
     <lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/flink/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>flink</title>
-      <link>http://www.yezheng.pro/post/specialization/big-data/flink/</link>
+      <link>http://www.yezheng.pro/post/specialization/data-engineering/flink/</link>
       <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.yezheng.pro/post/specialization/big-data/flink/</guid>
-      <description>Apache Flink Web Dashboard</description>
+      <guid>http://www.yezheng.pro/post/specialization/data-engineering/flink/</guid>
+      <description>Reference Apache Flink Documentation
+Apache Flink 1.10 Documentation
+The Flink Ecosystem: A Quick Start to PyFlink
+Apache Flink Web Dashboard
+PyFlink: Introducing Python Support for UDFs in Flink&amp;rsquo;s Table API
+flink-playgrounds
+Stream Compute Service</description>
     </item>
     
   </channel>
