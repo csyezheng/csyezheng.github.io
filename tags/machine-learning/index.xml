@@ -31,7 +31,7 @@
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/top-20-python-libraries/</guid>
-      <description>Core Libraries &amp;amp; Statistics  NumPy SciPy Pandas StatsModels  Visualization Matplotlib Seaborn Plotly Bokeh Pydot  Machine Learning Scikit-learn XGBoost Eli5  Deep Learning TensorFlow PyTorch Keras  Distributed Deep Learning Dist-keras / elephas / spark-deep-learning  Natural Language Processing NLTK SpaCy Gensim  Data Scraping Scrapy  </description>
+      <description>Core Libraries &amp;amp; Statistics NumPy SciPy Pandas StatsModels Visualization Matplotlib Seaborn Plotly Bokeh Pydot Machine Learning Scikit-learn XGBoost Eli5 Deep Learning TensorFlow PyTorch Keras Distributed Deep Learning Dist-keras / elephas / spark-deep-learning Natural Language Processing NLTK SpaCy Gensim Data Scraping Scrapy </description>
     </item>
     
     <item>
@@ -59,8 +59,8 @@
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/multi-label-classification/</guid>
       <description>In the multi-label problem there is no constraint on how many of the classes the instance can be assigned to. Formally, multi-label classification is the problem of finding a model that maps inputs x to binary vectors y (assigning a value of 0 or 1 for each element (label) in y).
-Problem transformation methods   Transformation into binary classification problems
-  binary relevance
+Problem transformation methods Transformation into binary classification problems
+binary relevance
 amounts to independently training one binary classifier for each label.</description>
     </item>
     
@@ -79,15 +79,14 @@ amounts to independently training one binary classifier for each label.</descrip
       <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/scikit-learn/</guid>
-      <description>scikit-learn   sklearn
-  preprocessing
-  MultiLabelBinarizer
+      <description>scikit-learn sklearn
+preprocessing
+MultiLabelBinarizer
 Transforms between iterable of iterables and a multilabel format (binary matrix)
-    utils
-  class_weight
-  compute_class_weight
-Estimate class weights for unbalanced datasets.
-        </description>
+utils
+class_weight
+compute_class_weight
+Estimate class weights for unbalanced datasets.</description>
     </item>
     
     <item>
@@ -96,7 +95,7 @@ Estimate class weights for unbalanced datasets.
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/solution/</guid>
-      <description>FAQ imbalanced data  https://www.tensorflow.org/tutorials/structured_data/imbalanced_data https://stackoverflow.com/questions/43481490/keras-class-weights-class-weight-for-one-hot-encoding https://github.com/jbjorne/TEES/blob/master/Detectors/KerasDetectorBase.py https://towardsdatascience.com/practical-tips-for-class-imbalance-in-binary-classification-6ee29bcdb8a7 https://stackoverflow.com/questions/48485870/multi-label-classification-with-class-weights-in-keras  Class weight degrades Multi Label Classification Performance  https://datascience.stackexchange.com/questions/28040/class-weight-degrades-multi-label-classification-performance  What is the difference between multilabel and multiclass classification?  https://www.quora.com/What-is-the-difference-between-multilabel-and-multiclass-classification https://stats.stackexchange.com/questions/260505/should-i-use-a-categorical-cross-entropy-or-binary-cross-entropy-loss-for-binary  </description>
+      <description>FAQ imbalanced data https://www.tensorflow.org/tutorials/structured_data/imbalanced_data https://stackoverflow.com/questions/43481490/keras-class-weights-class-weight-for-one-hot-encoding https://github.com/jbjorne/TEES/blob/master/Detectors/KerasDetectorBase.py https://towardsdatascience.com/practical-tips-for-class-imbalance-in-binary-classification-6ee29bcdb8a7 https://stackoverflow.com/questions/48485870/multi-label-classification-with-class-weights-in-keras Class weight degrades Multi Label Classification Performance https://datascience.stackexchange.com/questions/28040/class-weight-degrades-multi-label-classification-performance What is the difference between multilabel and multiclass classification? https://www.quora.com/What-is-the-difference-between-multilabel-and-multiclass-classification https://stats.stackexchange.com/questions/260505/should-i-use-a-categorical-cross-entropy-or-binary-cross-entropy-loss-for-binary </description>
     </item>
     
     <item>
@@ -105,7 +104,7 @@ Estimate class weights for unbalanced datasets.
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/</guid>
-      <description>Reference  https://github.com/AnthonyMRios/multi-label-zero-shot Few-Shot and Zero-Shot Multi-Label Learning for Structured Label Spaces Deep Neural Networks for Multi-Label Text Classification https://github.com/YujiaBao/Distributional-Signatures Induction Networks for Few-Shot Text Classification https://github.com/laohur/LearnToCompareText  </description>
+      <description>Reference https://github.com/AnthonyMRios/multi-label-zero-shot Few-Shot and Zero-Shot Multi-Label Learning for Structured Label Spaces Deep Neural Networks for Multi-Label Text Classification https://github.com/YujiaBao/Distributional-Signatures Induction Networks for Few-Shot Text Classification https://github.com/laohur/LearnToCompareText </description>
     </item>
     
     <item>

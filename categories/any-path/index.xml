@@ -35,7 +35,7 @@ DNS service provider Create Cloudflare account Enter your domain name yezheng.</
       
       <guid>http://www.yezheng.pro/post/any-path/hackintosh/</guid>
       <description>Step 0: Preparation You will need a computer running macOS already to follow this guide. If you do not have a Mac you will need to spend some time setting up a virtual machine on your Windows/Linux PC first.
- vmware workstation vmware macos unlocker workstation unlocker: https://github.com/paolo-projects/unlocker.git Download macOS Catalina Image file for VMWare  Step 1: Download macOS Catalina Download Catalina 10.15 from the Mac App Store
+vmware workstation vmware macos unlocker workstation unlocker: https://github.com/paolo-projects/unlocker.git Download macOS Catalina Image file for VMWare Step 1: Download macOS Catalina Download Catalina 10.15 from the Mac App Store
 For machines that need a specific OS release or can&amp;rsquo;t download from the App Store, you can use the gibMacOS utility.</description>
     </item>
     
@@ -74,12 +74,13 @@ sudo pacman -Syy &amp;amp;&amp;amp; sudo pacman -S archlinuxcn-keyring Fonts sud
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/any-path/setup-a-archlinux-windows10-dual-booting-system/</guid>
-      <description>Before   Check the hardware, three disks on my Lenovo ThinkPad P50
-  Samsung SSD 970 EVO Plus 250GB for installing windows
-  Samsung SSD 960 EVO 250GB for installling archlinux
-  WDC WD5000LPLX-0 HHD 500GB for data storage
-    Disable Windows Fast Startup if start from windows
-  Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)</description>
+      <description>Before Check the hardware, three disks on my Lenovo ThinkPad P50
+Samsung SSD 970 EVO Plus 250GB for installing windows
+Samsung SSD 960 EVO 250GB for installling archlinux
+WDC WD5000LPLX-0 HHD 500GB for data storage
+Disable Windows Fast Startup if start from windows
+Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)
+Windows UEFI vs BIOS limitations. (In case where Windows and Linux dual boot from the same disk, it is advisable to follow the method used by Windows, ie.</description>
     </item>
     
     <item>

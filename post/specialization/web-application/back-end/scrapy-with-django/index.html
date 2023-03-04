@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/web-application/back-end/scrapy-with-django/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,12 +63,11 @@
 <meta property="og:description" content="Installing Dependencies (Optional) $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple $ python -m pip install --user virtualenv $ python -m pip install --user virtualenvwrapper $ vim ~/.bashrc export WORKON_HOME=$HOME/.virtualenvs export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv source $HOME/.local/bin/virtualenvwrapper.sh $ source ~/.bashrc $ mkvirtualenv stock-screener pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat Creating a Django Project $ django-admin startproject stock_screener $ cd stock_screener $ mkdir stock_screener/apps/basic_info $ django-admin startapp basic_info stock_screener/apps/basic_info $ mkdir stock_screener/apps/northbound $ django-admin startapp northbound stock_screener/apps/northbound $ mkdir stock_screener/apps/financial_metrics $ django-admin startapp financial_metrics stock_screener/apps/financial_metrics $ mkdir stock_screener/apps/quotes $ django-admin startapp quotes stock_screener/apps/quotes $ mkdir stock_screener/apps/jobs $ django-admin startapp jobs stock_screener/apps/jobs Cannot add backslash suffix when run startapp command." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/web-application/back-end/scrapy-with-django/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-02-12T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-02-12T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2020-02-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-02-12T00:00:00+00:00" />
 <meta itemprop="name" content="Scraping with Scrapy and Django Integration">
-<meta itemprop="description" content="Installing Dependencies (Optional) $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple $ python -m pip install --user virtualenv $ python -m pip install --user virtualenvwrapper $ vim ~/.bashrc export WORKON_HOME=$HOME/.virtualenvs export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv source $HOME/.local/bin/virtualenvwrapper.sh $ source ~/.bashrc $ mkvirtualenv stock-screener pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat Creating a Django Project $ django-admin startproject stock_screener $ cd stock_screener $ mkdir stock_screener/apps/basic_info $ django-admin startapp basic_info stock_screener/apps/basic_info $ mkdir stock_screener/apps/northbound $ django-admin startapp northbound stock_screener/apps/northbound $ mkdir stock_screener/apps/financial_metrics $ django-admin startapp financial_metrics stock_screener/apps/financial_metrics $ mkdir stock_screener/apps/quotes $ django-admin startapp quotes stock_screener/apps/quotes $ mkdir stock_screener/apps/jobs $ django-admin startapp jobs stock_screener/apps/jobs Cannot add backslash suffix when run startapp command."><meta itemprop="datePublished" content="2020-02-12T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-02-12T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Installing Dependencies (Optional) $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple $ python -m pip install --user virtualenv $ python -m pip install --user virtualenvwrapper $ vim ~/.bashrc export WORKON_HOME=$HOME/.virtualenvs export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv source $HOME/.local/bin/virtualenvwrapper.sh $ source ~/.bashrc $ mkvirtualenv stock-screener pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat Creating a Django Project $ django-admin startproject stock_screener $ cd stock_screener $ mkdir stock_screener/apps/basic_info $ django-admin startapp basic_info stock_screener/apps/basic_info $ mkdir stock_screener/apps/northbound $ django-admin startapp northbound stock_screener/apps/northbound $ mkdir stock_screener/apps/financial_metrics $ django-admin startapp financial_metrics stock_screener/apps/financial_metrics $ mkdir stock_screener/apps/quotes $ django-admin startapp quotes stock_screener/apps/quotes $ mkdir stock_screener/apps/jobs $ django-admin startapp jobs stock_screener/apps/jobs Cannot add backslash suffix when run startapp command."><meta itemprop="datePublished" content="2020-02-12T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-02-12T00:00:00+00:00" />
 <meta itemprop="wordCount" content="792">
 <meta itemprop="keywords" content="Django,Scrapy," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Scraping with Scrapy and Django Integration"/>
@@ -345,18 +344,18 @@
     
     <div class="post-content">
       <h2 id="installing-dependencies-optional">Installing Dependencies (Optional)</h2>
-<pre><code>$ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-</code></pre><pre><code>$ python -m pip install --user virtualenv
+<pre tabindex="0"><code>$ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+</code></pre><pre tabindex="0"><code>$ python -m pip install --user virtualenv
 $ python -m pip install --user virtualenvwrapper
-</code></pre><pre><code>$ vim ~/.bashrc
-</code></pre><pre><code>export WORKON_HOME=$HOME/.virtualenvs
+</code></pre><pre tabindex="0"><code>$ vim ~/.bashrc
+</code></pre><pre tabindex="0"><code>export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
 source $HOME/.local/bin/virtualenvwrapper.sh
-</code></pre><pre><code>$ source ~/.bashrc
-</code></pre><pre><code>$ mkvirtualenv stock-screener
-</code></pre><pre><code>pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat
+</code></pre><pre tabindex="0"><code>$ source ~/.bashrc
+</code></pre><pre tabindex="0"><code>$ mkvirtualenv stock-screener
+</code></pre><pre tabindex="0"><code>pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat
 </code></pre><h2 id="creating-a-django-project">Creating a Django Project</h2>
-<pre><code>$ django-admin startproject stock_screener
+<pre tabindex="0"><code>$ django-admin startproject stock_screener
 $ cd stock_screener
 
 $ mkdir stock_screener/apps/basic_info
@@ -374,17 +373,17 @@ $ django-admin startapp quotes stock_screener/apps/quotes
 $ mkdir stock_screener/apps/jobs
 $ django-admin startapp jobs stock_screener/apps/jobs
 </code></pre><p>Cannot add backslash suffix when run startapp command.</p>
-<pre><code>INSTALLED_APPS = [
+<pre tabindex="0"><code>INSTALLED_APPS = [
     ...
-    'rest_framework',
-    'stock_screener.apps.basic_info',
-    'stock_screener.apps.northbound',
-    'stock_screener.apps.financial_metrics',
+    &#39;rest_framework&#39;,
+    &#39;stock_screener.apps.basic_info&#39;,
+    &#39;stock_screener.apps.northbound&#39;,
+    &#39;stock_screener.apps.financial_metrics&#39;,
 ]
-</code></pre><pre><code>$ python manage.py migrate
+</code></pre><pre tabindex="0"><code>$ python manage.py migrate
 $ python manage.py createsuperuser --email admin@example.com --username admin
-</code></pre><pre><code>$ vim stock_screener/apps/basic_info/models.py
-</code></pre><pre><code>from django.db import models
+</code></pre><pre tabindex="0"><code>$ vim stock_screener/apps/basic_info/models.py
+</code></pre><pre tabindex="0"><code>from django.db import models
 
 class StockList(models.Model):
     category = models.CharField(max_length=255)
@@ -396,11 +395,11 @@ class StockList(models.Model):
     main_business = models.TextField()
 
     class Meta:
-        ordering = ['code']
-</code></pre><pre><code>$ python manage.py makemigrations basic_info
+        ordering = [&#39;code&#39;]
+</code></pre><pre tabindex="0"><code>$ python manage.py makemigrations basic_info
 $ python manage.py migrate basic_info
-</code></pre><pre><code>$ vim stock_screener/apps/northbound/models.py
-</code></pre><pre><code>from django.db import models
+</code></pre><pre tabindex="0"><code>$ vim stock_screener/apps/northbound/models.py
+</code></pre><pre tabindex="0"><code>from django.db import models
 
 class NetFlow(models.Model):
     code = models.CharField(max_length=255, primary_key=True)
@@ -419,7 +418,7 @@ class NetFlow(models.Model):
     shares = models.IntegerField()
 
     class Meta:
-        ordering = ['inflow']
+        ordering = [&#39;inflow&#39;]
 
 
 class ShareHolding(models.Model):
@@ -437,35 +436,34 @@ class ShareHolding(models.Model):
     sixty_change = models.FloatField()
 
     class Meta:
-        ordering = ['inflow']
-</code></pre><pre><code>$ python manage.py makemigrations northbound
+        ordering = [&#39;inflow&#39;]
+</code></pre><pre tabindex="0"><code>$ python manage.py makemigrations northbound
 $ python manage.py migrate northbound
-</code></pre><pre><code>$ vim stock_screener/apps/northbound/views.py
-</code></pre><pre><code>
-</code></pre><pre><code>$ vim stock_screener/apps/northbound/urls.py
-</code></pre><pre><code>from django.urls import path
+</code></pre><pre tabindex="0"><code>$ vim stock_screener/apps/northbound/views.py
+</code></pre><pre tabindex="0"><code></code></pre><pre tabindex="0"><code>$ vim stock_screener/apps/northbound/urls.py
+</code></pre><pre tabindex="0"><code>from django.urls import path
 from stock_screener.apps.northbound import views
 
 urlpatterns = [
-    path('netflow/', views.netflow_list),
-    path('netflow_concept/', views.netflow_concept_list),
+    path(&#39;netflow/&#39;, views.netflow_list),
+    path(&#39;netflow_concept/&#39;, views.netflow_concept_list),
 ]
-</code></pre><pre><code>$ vim stock_screener/urls.py
-</code></pre><pre><code>from django.contrib import admin
+</code></pre><pre tabindex="0"><code>$ vim stock_screener/urls.py
+</code></pre><pre tabindex="0"><code>from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    include('', include('northbound.urls')),
+    path(&#39;admin/&#39;, admin.site.urls),
+    include(&#39;&#39;, include(&#39;northbound.urls&#39;)),
 ]
-</code></pre><pre><code>$ vim stock_screener/apps/northbound/admin.py
-</code></pre><pre><code>from stock_screener.apps.northbound.models import NetFlow, NetFlowConcept
+</code></pre><pre tabindex="0"><code>$ vim stock_screener/apps/northbound/admin.py
+</code></pre><pre tabindex="0"><code>from stock_screener.apps.northbound.models import NetFlow, NetFlowConcept
 
 for model in (NetFlow, NetFlowConcept):
     admin.site.register(model)
 </code></pre><h4 id="scrapy-settings-set-up">Scrapy settings set up</h4>
-<pre><code>$ vim stock_screener/settings.py
-</code></pre><pre><code># integrate scrapy with django START
+<pre tabindex="0"><code>$ vim stock_screener/settings.py
+</code></pre><pre tabindex="0"><code># integrate scrapy with django START
 
 import os
 from os.path import abspath, dirname, join
@@ -473,29 +471,29 @@ from sys import path
 
 PROJECT_ROOT = abspath(dirname(__file__))
 root = lambda *x: abspath(join(abspath(PROJECT_ROOT), *x))
-SCRAPER_ROOT = root('apps/scraper')
+SCRAPER_ROOT = root(&#39;apps/scraper&#39;)
 path.append(SCRAPER_ROOT)
 
-os.environ.setdefault('SCRAPY_SETTINGS_MODULE', 'scraper.settings')
+os.environ.setdefault(&#39;SCRAPY_SETTINGS_MODULE&#39;, &#39;scraper.settings&#39;)
 
 # integrate scrapy with django DONE
 </code></pre><h2 id="creating-the-scrapy-project">Creating the Scrapy Project</h2>
-<pre><code>$ cd stock_screener/apps/
+<pre tabindex="0"><code>$ cd stock_screener/apps/
 $ scrapy startproject scraper
 $ cd scraper
 $ scrapy genspider northbound &lt;domain&gt;
 </code></pre><h4 id="django-settings-set-up">Django settings set up</h4>
-<pre><code>$ vim scraper/settings.py
-</code></pre><pre><code># DJANGO INTEGRATION START
+<pre tabindex="0"><code>$ vim scraper/settings.py
+</code></pre><pre tabindex="0"><code># DJANGO INTEGRATION START
 
 import os
 from os.path import abspath, dirname, join
 from sys import path
 
 here = lambda *x: join(abspath(dirname(__file__)), *x)
-PROJECT_ROOT = here('../../../../')     #  directory path of stock_screener
+PROJECT_ROOT = here(&#39;../../../../&#39;)     #  directory path of stock_screener
 path.append(abspath(PROJECT_ROOT))
-os.environ['DJANGO_SETTINGS_MODULE'] = 'stock_screener.settings'
+os.environ[&#39;DJANGO_SETTINGS_MODULE&#39;] = &#39;stock_screener.settings&#39;
 
 # This is required only if Django Version &gt; 1.8
 # # https://docs.djangoproject.com/en/2.2/ref/applications/#troubleshooting
@@ -504,8 +502,8 @@ django.setup()
 
 # DJANGO INTEGRATION DONE
 </code></pre><h3 id="write-scrapy-project">write scrapy project</h3>
-<pre><code>$ vim stock_screener/apps/scraper/scraper/items.py
-</code></pre><pre><code>from scrapy_djangoitem import DjangoItem
+<pre tabindex="0"><code>$ vim stock_screener/apps/scraper/scraper/items.py
+</code></pre><pre tabindex="0"><code>from scrapy_djangoitem import DjangoItem
 from stock_screener.apps.northbound.models import NetFlowStocks, NetFlowConcepts, NetFlowStocksByConcept
 
 class NetFlowStocksItem(DjangoItem):
@@ -518,10 +516,10 @@ class NetFlowConceptsItem(DjangoItem):
 
 class NetFlowStocksByConceptItem(DjangoItem):
     django_model = NetFlowStocksByConcept
-</code></pre><pre><code>$ stock_screener/apps/scraper/scraper/spiders/northbound.py
-</code></pre><pre><code>create a spider here
-</code></pre><pre><code>$ vim stock_screener/apps/scraper/scraper/pipelines.py
-</code></pre><pre><code>class NorthboundPipeline(BasePipeline):
+</code></pre><pre tabindex="0"><code>$ stock_screener/apps/scraper/scraper/spiders/northbound.py
+</code></pre><pre tabindex="0"><code>create a spider here
+</code></pre><pre tabindex="0"><code>$ vim stock_screener/apps/scraper/scraper/pipelines.py
+</code></pre><pre tabindex="0"><code>class NorthboundPipeline(BasePipeline):
 
     def open_spider(self, spider):
         self.items = []
@@ -543,39 +541,39 @@ class NetFlowStocksByConceptItem(DjangoItem):
         except Exception as e:
             spider.logger.error(e)
 </code></pre><h2 id="using-celery-with-django-to-call-scrapy">Using Celery with Django to call Scrapy</h2>
-<pre><code>$ sudo pacman -S docker
+<pre tabindex="0"><code>$ sudo pacman -S docker
 $ systemctl start docker &amp;&amp; systemctl enable docker
-</code></pre><pre><code>$ code /etc/docker/daemon.json
-</code></pre><pre><code>{
-  &quot;storage-driver&quot;: &quot;overlay2&quot;,
-  &quot;registry-mirrors&quot; : [
-    &quot;http://docker.mirrors.ustc.edu.cn&quot;,
-    &quot;http://registry.docker-cn.com&quot;,
-    &quot;http://hub-mirror.c.163.com&quot;,
-    &quot;http://ovfftd6p.mirror.aliyuncs.com&quot;
+</code></pre><pre tabindex="0"><code>$ code /etc/docker/daemon.json
+</code></pre><pre tabindex="0"><code>{
+  &#34;storage-driver&#34;: &#34;overlay2&#34;,
+  &#34;registry-mirrors&#34; : [
+    &#34;http://docker.mirrors.ustc.edu.cn&#34;,
+    &#34;http://registry.docker-cn.com&#34;,
+    &#34;http://hub-mirror.c.163.com&#34;,
+    &#34;http://ovfftd6p.mirror.aliyuncs.com&#34;
   ]
 }
-</code></pre><pre><code>$ sudo docker run -d -p 6379:6379 redis
-</code></pre><pre><code>$ vim stock_screener/settings.py
-</code></pre><pre><code>INSTALLED_APPS = [
+</code></pre><pre tabindex="0"><code>$ sudo docker run -d -p 6379:6379 redis
+</code></pre><pre tabindex="0"><code>$ vim stock_screener/settings.py
+</code></pre><pre tabindex="0"><code>INSTALLED_APPS = [
     ...
-    'django_celery_results',
-    'django_celery_beat',
+    &#39;django_celery_results&#39;,
+    &#39;django_celery_beat&#39;,
     ...
 ]
 
-CELERY_BROKER_URL = os.environ.get('REDIS_URL', 'redis://localhost')
-CELERY_RESULT_BACKEND = 'django-db'
-</code></pre><pre><code>$ python manage.py migrate django_celery_results
+CELERY_BROKER_URL = os.environ.get(&#39;REDIS_URL&#39;, &#39;redis://localhost&#39;)
+CELERY_RESULT_BACKEND = &#39;django-db&#39;
+</code></pre><pre tabindex="0"><code>$ python manage.py migrate django_celery_results
 </code></pre><h4 id="defines-the-celery-instance">defines the Celery instance</h4>
-<pre><code>$ vim stock_screener/celery.py
-</code></pre><pre><code>from __future__ import absolute_import, unicode_literals
+<pre tabindex="0"><code>$ vim stock_screener/celery.py
+</code></pre><pre tabindex="0"><code>from __future__ import absolute_import, unicode_literals
 import os
 from celery import Celery
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'stock_screener.settings')
-app = Celery('stock_screener')
-app.config_from_object('django.conf:settings', namespace='CELERY')
+os.environ.setdefault(&#39;DJANGO_SETTINGS_MODULE&#39;, &#39;stock_screener.settings&#39;)
+app = Celery(&#39;stock_screener&#39;)
+app.config_from_object(&#39;django.conf:settings&#39;, namespace=&#39;CELERY&#39;)
 
 
 # Solve Django + Celery + Scrapy twisted reactor(ReactorNotRestartable) errors.
@@ -588,47 +586,47 @@ app.autodiscover_tasks()
 
 @app.task(bind=True)
 def debug_task(self):
-    print('Request: {0!r}'.format(self.request))
-</code></pre><pre><code>$ vim stock_screener/__init__.py
-</code></pre><pre><code>from .celery import app as celery_app
+    print(&#39;Request: {0!r}&#39;.format(self.request))
+</code></pre><pre tabindex="0"><code>$ vim stock_screener/__init__.py
+</code></pre><pre tabindex="0"><code>from .celery import app as celery_app
 
-__all__ = ('celery_app',)
+__all__ = (&#39;celery_app&#39;,)
 </code></pre><h4 id="create-tasks">create tasks</h4>
-<pre><code>$ vim stock_screener/apps/jobs/tasks.py
-</code></pre><pre><code>@shared_task
+<pre tabindex="0"><code>$ vim stock_screener/apps/jobs/tasks.py
+</code></pre><pre tabindex="0"><code>@shared_task
 def scrape_task(spider_name):
-    &quot;&quot;&quot;Celery task to scrape website with Scrapy.
+    &#34;&#34;&#34;Celery task to scrape website with Scrapy.
     http://doc.scrapy.org/en/latest/topics/practices.html#run-scrapy-from-a-script
-    &quot;&quot;&quot;
+    &#34;&#34;&#34;
     configure_logging()
     s = get_project_settings()
-    s.update({'LOG_FILE': 'scrapy.log'})
+    s.update({&#39;LOG_FILE&#39;: &#39;scrapy.log&#39;})
     process = CrawlerProcess(get_project_settings())
     process.crawl(spider_name)
     process.start()
-</code></pre><pre><code>$ vim stock_screener/apps/jobs/views.py
-</code></pre><pre><code>@csrf_exempt
-@api_view(['POST'])
+</code></pre><pre tabindex="0"><code>$ vim stock_screener/apps/jobs/views.py
+</code></pre><pre tabindex="0"><code>@csrf_exempt
+@api_view([&#39;POST&#39;])
 def scrape_job(request):
-    &quot;&quot;&quot;
+    &#34;&#34;&#34;
     Retrieve a scrapy job status, or or create a new scrapy job.
-    &quot;&quot;&quot;
-    spider_name = request.data.get('spider_name')
+    &#34;&#34;&#34;
+    spider_name = request.data.get(&#39;spider_name&#39;)
     if spider_name in spider_names:
         res = scrape_task.delay(spider_name)
-        return JsonResponse({'task_id': res.task_id, 'status': 'started'})
+        return JsonResponse({&#39;task_id&#39;: res.task_id, &#39;status&#39;: &#39;started&#39;})
     else:
-        return JsonResponse({'task_id': None, 'status': 'no found'})
+        return JsonResponse({&#39;task_id&#39;: None, &#39;status&#39;: &#39;no found&#39;})
 </code></pre><h4 id="starting-the-worker-process">starting the worker process</h4>
-<pre><code>celery -A stock_screener worker -l info
-</code></pre><pre><code>$ celery -A stock_screener beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+<pre tabindex="0"><code>celery -A stock_screener worker -l info
+</code></pre><pre tabindex="0"><code>$ celery -A stock_screener beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
 </code></pre><h4 id="test">test</h4>
-<pre><code>$ python manage.py runserver 0.0.0.0:8000
-</code></pre><pre><code>curl -X POST \
+<pre tabindex="0"><code>$ python manage.py runserver 0.0.0.0:8000
+</code></pre><pre tabindex="0"><code>curl -X POST \
   http://localhost:8000/jobs/scrape_job/ \
-  -H 'content-type: application/json' \
-  -d '{&quot;spider_name&quot;: &quot;northbound&quot;}'
-</code></pre><pre><code>http://localhost:8000/admin/
+  -H &#39;content-type: application/json&#39; \
+  -d &#39;{&#34;spider_name&#34;: &#34;northbound&#34;}&#39;
+</code></pre><pre tabindex="0"><code>http://localhost:8000/admin/
 </code></pre><h2 id="reference">Reference</h2>
 <ol>
 <li>
@@ -817,7 +815,7 @@ def scrape_job(request):
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

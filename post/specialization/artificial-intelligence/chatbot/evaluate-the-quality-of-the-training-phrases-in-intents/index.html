@@ -33,7 +33,7 @@ The approach you take is to generate semantic embeddings of the training phrases
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/" />
@@ -54,7 +54,7 @@ The approach you take is to generate semantic embeddings of the training phrases
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -65,13 +65,12 @@ The approach you take is to generate semantic embeddings of the training phrases
 The approach you take is to generate semantic embeddings of the training phrases by using the TensorFlow Hub (tf.Hub) Universal Sentence Encoder module. You then compute cohesion and separation measurements based on the similarity between embeddings within the same intents and different intents." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/evaluate-the-quality-of-the-training-phrases-in-intents/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-12-06T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-12-06T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2020-12-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-06T00:00:00+00:00" />
 <meta itemprop="name" content="evaluate the quality of the training phrases in intents">
 <meta itemprop="description" content="This tutorial shows you how to analyze and evaluate the quality of the training phrases supplied to your Dialogflow agent&rsquo;s intents. The purpose of this analysis is to avoid confusing the agent with phrases irrelevant to the intents supplied to, or more relevant to, other intents.
-The approach you take is to generate semantic embeddings of the training phrases by using the TensorFlow Hub (tf.Hub) Universal Sentence Encoder module. You then compute cohesion and separation measurements based on the similarity between embeddings within the same intents and different intents."><meta itemprop="datePublished" content="2020-12-06T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-12-06T00:00:00&#43;00:00" />
+The approach you take is to generate semantic embeddings of the training phrases by using the TensorFlow Hub (tf.Hub) Universal Sentence Encoder module. You then compute cohesion and separation measurements based on the similarity between embeddings within the same intents and different intents."><meta itemprop="datePublished" content="2020-12-06T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-12-06T00:00:00+00:00" />
 <meta itemprop="wordCount" content="2990">
 <meta itemprop="keywords" content="chatbot,deep learning,Natural Language Processing," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="evaluate the quality of the training phrases in intents"/>
@@ -485,7 +484,7 @@ The approach you take is to generate semantic embeddings of the training phrases
 </li>
 <li>
 <p>In Cloud Shell, install the Python libraries needed for the rest of the tutorial, before importing the required libraries and modules.</p>
-<pre><code>!pip install --quiet --upgrade tensorflow dialogflow scipy tensorflow-hub seaborn
+<pre tabindex="0"><code>!pip install --quiet --upgrade tensorflow dialogflow scipy tensorflow-hub seaborn
 </code></pre></li>
 <li>
 <p>Set your Google Cloud <code>PROJECT_ID</code> and the <code>SERVICE_ACCOUNT_EMAIL</code> that you created in the <a href="https://cloud.google.com/solutions/assessing-the-quality-of-training-phrases-in-dialogflow-intents#before-you-begin">Before you begin</a> section.</p>
@@ -493,7 +492,7 @@ The approach you take is to generate semantic embeddings of the training phrases
 </li>
 <li>
 <p>Authenticate your session to create a key for your service account:</p>
-<pre><code>auth.authenticate_user()
+<pre tabindex="0"><code>auth.authenticate_user()
 !gcloud config set project {PROJECT_ID}
 !gcloud iam service-accounts keys create sa-key.json \
     --iam-account={SERVICE_ACCOUNT_EMAIL} --project={PROJECT_ID}
@@ -512,7 +511,7 @@ The approach you take is to generate semantic embeddings of the training phrases
 <ol>
 <li>
 <p>Download the zip file of the imported agent:</p>
-<pre><code>gsutil cp gs://dialogflow-intent-health-check/intent-quality-demo.zip .
+<pre tabindex="0"><code>gsutil cp gs://dialogflow-intent-health-check/intent-quality-demo.zip .
 </code></pre></li>
 <li>
 <p>Go to <a href="https://dialogflow.com/">https://dialogflow.com/</a>.</p>
@@ -562,7 +561,7 @@ The approach you take is to generate semantic embeddings of the training phrases
 <p>The sections that follow describe what the code in the notebook does when you run it.</p>
 <h3 id="fetching-your-intents">Fetching your intents</h3>
 <p>The following code fetches intents and their training phrases from the Dialogflow agent using the <code>fetch_intents_training_phrases</code> method. This method returns a dictionary, where the keys are the intents named in your Dialogflow agent, and each value is a list of the training phrases in each entity. In the code, <code>project</code> references the project to which your agent belongs, and <code>service_account_file</code> references the file that you created earlier.</p>
-<pre><code>def get_intents(service_account_file, project):
+<pre tabindex="0"><code>def get_intents(service_account_file, project):
 
     dialogflow_entity_client =  dialogflow.EntityTypesClient.from_service_account_file(service_account_file)
     parent = dialogflow_entity_client.project_agent_path(project)
@@ -590,28 +589,28 @@ The approach you take is to generate semantic embeddings of the training phrases
         for training_phrase in intent.training_phrases:
             parts = [entities_name_to_value[part.alias] if part.entity_type else part.text
                 for part in training_phrase.parts]
-            intent_to_training_phrases[intent.display_name].append(&quot;&quot;.join(parts))
+            intent_to_training_phrases[intent.display_name].append(&#34;&#34;.join(parts))
         # Remove intents with no training phrases
         if not intent_to_training_phrases[intent.display_name]:
             del intent_to_training_phrases[intent.display_name]
     return intent_to_training_phrases
  
 </code></pre><p>The following code verifies the retrieved intents:</p>
-<pre><code>intent_training_phrases = fetch_intents_training_phrases(&quot;sa-key.json&quot;, project_id)
+<pre tabindex="0"><code>intent_training_phrases = fetch_intents_training_phrases(&#34;sa-key.json&#34;, project_id)
 for intent in intent_training_phrases:
-    print(&quot;{}:{}&quot;.format(intent, len(intent_training_phrases[intent])))
+    print(&#34;{}:{}&#34;.format(intent, len(intent_training_phrases[intent])))
 </code></pre><p>The <code>fetch_intents_training_phrases</code> method returns the following listing. This code snippet shows the intents in the demo <code>intents-healthcheck</code> agent, followed by the count of the training phrases available in each intent.</p>
-<pre><code>start_conversation:4
+<pre tabindex="0"><code>start_conversation:4
 close_conversation:5
 get_internal_contacts:17
 request_help:7
 get_external_contacts:6
 </code></pre><h3 id="generating-embeddings-for-the-training-phrases">Generating embeddings for the training phrases</h3>
 <p>The following code downloads the <code>tf.Hub</code> Universal Sentence Encoder pre-trained module:</p>
-<pre><code>embed_module = hub.Module(&quot;https://tfhub.dev/google/universal-sentence-encoder/2&quot;)
+<pre tabindex="0"><code>embed_module = hub.Module(&#34;https://tfhub.dev/google/universal-sentence-encoder/2&#34;)
 </code></pre><p>After the first use, the module is cached locally.</p>
 <p>The following code implements a method that accepts a list of sentences and returns a list of embeddings based on the <code>tf.Hub</code> module:</p>
-<pre><code>def make_embeddings_fn():
+<pre tabindex="0"><code>def make_embeddings_fn():
     placeholder = tf.placeholder(dtype=tf.string)
     embed = embed_module(placeholder)
     session = tf.Session()
@@ -625,9 +624,9 @@ get_external_contacts:6
 generate_embeddings = make_embeddings_fn()
 </code></pre><p>This method ensures that the <code>tf.Session</code> is created and that the embedding module is loaded only once, not every time the method is called.</p>
 <p>The following code generates embeddings for the training phrases in the intents:</p>
-<pre><code>{
+<pre tabindex="0"><code>{
     intent: {
-        training_phrase': [embedding_array]
+        training_phrase&#39;: [embedding_array]
     }
 }
 
@@ -637,19 +636,19 @@ for intent_name, training_phrases_list in intent_training_phrases.items():
     training_phrases_with_embeddings[intent_name] = dict(zip(training_phrases_list, computed_embeddings))
 </code></pre><p>This code snippet creates the <code>training_phrases_with_embeddings</code> nested dictionary.</p>
 <p>The following code verifies the generated embeddings:</p>
-<pre><code>training_phrases_with_embeddings = defaultdict(list)
+<pre tabindex="0"><code>training_phrases_with_embeddings = defaultdict(list)
 for intent_name, training_phrases_list in intent_training_phrases.items():
     computed_embeddings = generate_embeddings(training_phrases_list)
     training_phrases_with_embeddings[intent_name] = dict(zip(training_phrases_list, computed_embeddings))
  
 </code></pre><p>The following code snippet shows each training phrase in the <code>start_conversation</code> intent, along with the first five elements of the embedding vector of each phrase. The Universal Sentence Encoder generates a 512-dimension embedding vector for each training phrase.</p>
-<pre><code>Ciao!:[-0.03649221  0.02498418 -0.03456857  0.02827227  0.00471277]
+<pre tabindex="0"><code>Ciao!:[-0.03649221  0.02498418 -0.03456857  0.02827227  0.00471277]
 Howdy!:[-0.02732556 -0.00821852 -0.00794602  0.06356855 -0.03726532]
 Hello!:[-0.0255452   0.00690543 -0.00611844  0.05633081 -0.0142823 ]
 Hi!:[-0.03227544 -0.00985429 -0.01329378  0.06012927 -0.03646606]
 </code></pre><h3 id="visualizing-embeddings-in-two-dimensional-space">Visualizing embeddings in two-dimensional space</h3>
 <p>The following code reduces the dimensionality of the embeddings from 512 to 2 by using <a href="https://en.wikipedia.org/wiki/Principal_component_analysis">Principal Component Analysis</a> to compute the principal components:</p>
-<pre><code>from sklearn.decomposition import PCA
+<pre tabindex="0"><code>from sklearn.decomposition import PCA
 embedding_vectors = None
 
 for intent in training_phrases_with_embeddings:
@@ -663,7 +662,7 @@ pca = PCA(n_components=3)
 pca.fit(embedding_vectors)
 </code></pre><p>This code snippet uses the <code>PCA</code> class in <code>sklearn</code> to generate a 2D representation of the training phrases embeddings.</p>
 <p>The following code generates a visualization of the phrase embeddings with the reduced dimensionality:</p>
-<pre><code>import matplotlib.pyplot as plt
+<pre tabindex="0"><code>import matplotlib.pyplot as plt
 
 fig = plt.figure(figsize=(15,10))
 ax = fig.add_subplot(111)
@@ -676,7 +675,7 @@ for color, intent in enumerate(training_phrases_with_embeddings):
     points = pca.transform(embeddings)
     xs = points[:,0]
     ys = points[:,1]
-    ax.scatter(xs, ys, marker='o', s=100, c=&quot;C&quot;+str(color))
+    ax.scatter(xs, ys, marker=&#39;o&#39;, s=100, c=&#34;C&#34;+str(color))
     for i, phrase in enumerate(phrases):
         ax.annotate(phrase, (xs[i], ys[i]))
     legend.append(intent)
@@ -686,7 +685,7 @@ plt.show()
 </code></pre><p>The following figure shows the resulting visualization: <img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-visualize-embeddings.png" alt="Visualizing the phrase embeddings with the reduced dimensionality"></p>
 <h3 id="computing-pairwise-similarity-between-phrases">Computing pairwise similarity between phrases</h3>
 <p>The following code computes the pairwise cosine similarity for the training phrases embeddings, using <code>sklearn.metrics.pairwise.cosine_similarity</code>. The code creates a Dataframe, <code>similarity_df</code>, with the pairwise similarity values.</p>
-<pre><code>from sklearn.metrics.pairwise import cosine_similarity
+<pre tabindex="0"><code>from sklearn.metrics.pairwise import cosine_similarity
 
 flatten = []
 for intent in training_phrases_with_embeddings:
@@ -707,28 +706,28 @@ for i in range(len(flatten)):
         data.append(record)
 
 similarity_df = pd.DataFrame(data,
-    columns=[&quot;Intent A&quot;, &quot;Phrase A&quot;, &quot;Intent B&quot;, &quot;Phrase B&quot;, &quot;Similarity&quot;])
+    columns=[&#34;Intent A&#34;, &#34;Phrase A&#34;, &#34;Intent B&#34;, &#34;Phrase B&#34;, &#34;Similarity&#34;])
 </code></pre><p>The following code displays sample similarity records:</p>
-<pre><code>different_intent = similarity_df['Intent A'] != similarity_df['Intent B']
-display(similarity_df[different_intent].sort_values('Similarity',
+<pre tabindex="0"><code>different_intent = similarity_df[&#39;Intent A&#39;] != similarity_df[&#39;Intent B&#39;]
+display(similarity_df[different_intent].sort_values(&#39;Similarity&#39;,
 ascending=False).head(5))
 </code></pre><p>The following code snippet shows the most similar training phrases that don&rsquo;t belong to the same intent:</p>
-<p><img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-similar-phrases.png" alt="The most similar training phrases that don&rsquo;t belong to the same intent"></p>
+<p><img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-similar-phrases.png" alt="The most similar training phrases that don&amp;rsquo;t belong to the same intent"></p>
 <p>Phrases in different intents that have high similarity value can be confusing to the Dialogflow agent, and could lead to directing the user input to the wrong intent.</p>
 <h3 id="measuring-cohesion-and-separation-of-intents">Measuring cohesion and separation of intents</h3>
 <p>The following code computes a cohesion value for each intent, as described in the <a href="https://cloud.google.com/solutions/assessing-the-quality-of-training-phrases-in-dialogflow-intents#approach">Approach section</a>.</p>
-<pre><code>same_intent = similarity_df['Intent A'] == similarity_df['Intent B']
-cohesion_df = pd.DataFrame(similarity_df[different_intent].groupby('Intent A', as_index=False)['Similarity'].mean())
-cohesion_df.columns = ['Intent', 'Cohesion']
+<pre tabindex="0"><code>same_intent = similarity_df[&#39;Intent A&#39;] == similarity_df[&#39;Intent B&#39;]
+cohesion_df = pd.DataFrame(similarity_df[different_intent].groupby(&#39;Intent A&#39;, as_index=False)[&#39;Similarity&#39;].mean())
+cohesion_df.columns = [&#39;Intent&#39;, &#39;Cohesion&#39;]
 display(cohesion_df)
 </code></pre><p>The result is a cohesion value for each intent:</p>
 <p><img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-cohesion-values.png" alt="Computing a cohesion value for each intent"></p>
 <p>The following code computes the pairwise separation between intents, as described in the <a href="https://cloud.google.com/solutions/assessing-the-quality-of-training-phrases-in-dialogflow-intents#approach">Approach section</a>.</p>
-<pre><code>different_intent = similarity_df['Intent A'] != similarity_df['Intent B']
-separation_df = pd.DataFrame(similarity_df[different_intent].groupby(['Intent A', 'Intent B'], as_index=False)['Similarity'].mean())
-separation_df['Separation'] = 1 - separation_df['Similarity']
-del separation_df['Similarity']
-display(separation_df.sort_values('Separation'))
+<pre tabindex="0"><code>different_intent = similarity_df[&#39;Intent A&#39;] != similarity_df[&#39;Intent B&#39;]
+separation_df = pd.DataFrame(similarity_df[different_intent].groupby([&#39;Intent A&#39;, &#39;Intent B&#39;], as_index=False)[&#39;Similarity&#39;].mean())
+separation_df[&#39;Separation&#39;] = 1 - separation_df[&#39;Similarity&#39;]
+del separation_df[&#39;Similarity&#39;]
+display(separation_df.sort_values(&#39;Separation&#39;))
 </code></pre><p>The result is the pairwise separation between intents:</p>
 <p><img src="https://cloud.google.com/solutions/images/assessing-quality-of-training-phrases-pairwise-separation.png" alt="Computing the pairwise separation between intents"></p>
 <h2 id="further-improvements">Further improvements</h2>
@@ -938,7 +937,7 @@ display(separation_df.sort_values('Separation'))
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

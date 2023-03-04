@@ -23,12 +23,13 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="Before   Check the hardware, three disks on my Lenovo ThinkPad P50
-  Samsung SSD 970 EVO Plus 250GB for installing windows
-  Samsung SSD 960 EVO 250GB for installling archlinux
-  WDC WD5000LPLX-0 HHD 500GB for data storage
-    Disable Windows Fast Startup if start from windows
-  Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)" />
+  <meta name="description" content="Before Check the hardware, three disks on my Lenovo ThinkPad P50
+Samsung SSD 970 EVO Plus 250GB for installing windows
+Samsung SSD 960 EVO 250GB for installling archlinux
+WDC WD5000LPLX-0 HHD 500GB for data storage
+Disable Windows Fast Startup if start from windows
+Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)
+Windows UEFI vs BIOS limitations. (In case where Windows and Linux dual boot from the same disk, it is advisable to follow the method used by Windows, ie." />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -37,7 +38,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/any-path/setup-a-archlinux-windows10-dual-booting-system/" />
@@ -58,41 +59,43 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
 
 
 <meta property="og:title" content="Setup a Archlinux / Windows10 dual booting system" />
-<meta property="og:description" content="Before   Check the hardware, three disks on my Lenovo ThinkPad P50
-  Samsung SSD 970 EVO Plus 250GB for installing windows
-  Samsung SSD 960 EVO 250GB for installling archlinux
-  WDC WD5000LPLX-0 HHD 500GB for data storage
-    Disable Windows Fast Startup if start from windows
-  Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)" />
+<meta property="og:description" content="Before Check the hardware, three disks on my Lenovo ThinkPad P50
+Samsung SSD 970 EVO Plus 250GB for installing windows
+Samsung SSD 960 EVO 250GB for installling archlinux
+WDC WD5000LPLX-0 HHD 500GB for data storage
+Disable Windows Fast Startup if start from windows
+Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)
+Windows UEFI vs BIOS limitations. (In case where Windows and Linux dual boot from the same disk, it is advisable to follow the method used by Windows, ie." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/any-path/setup-a-archlinux-windows10-dual-booting-system/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2017-09-25T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2017-09-25T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2017-09-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-09-25T00:00:00+00:00" />
 <meta itemprop="name" content="Setup a Archlinux / Windows10 dual booting system">
-<meta itemprop="description" content="Before   Check the hardware, three disks on my Lenovo ThinkPad P50
-  Samsung SSD 970 EVO Plus 250GB for installing windows
-  Samsung SSD 960 EVO 250GB for installling archlinux
-  WDC WD5000LPLX-0 HHD 500GB for data storage
-    Disable Windows Fast Startup if start from windows
-  Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)"><meta itemprop="datePublished" content="2017-09-25T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2017-09-25T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Before Check the hardware, three disks on my Lenovo ThinkPad P50
+Samsung SSD 970 EVO Plus 250GB for installing windows
+Samsung SSD 960 EVO 250GB for installling archlinux
+WDC WD5000LPLX-0 HHD 500GB for data storage
+Disable Windows Fast Startup if start from windows
+Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)
+Windows UEFI vs BIOS limitations. (In case where Windows and Linux dual boot from the same disk, it is advisable to follow the method used by Windows, ie."><meta itemprop="datePublished" content="2017-09-25T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2017-09-25T00:00:00+00:00" />
 <meta itemprop="wordCount" content="1415">
 <meta itemprop="keywords" content="archlinux,linux,installation," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Setup a Archlinux / Windows10 dual booting system"/>
-<meta name="twitter:description" content="Before   Check the hardware, three disks on my Lenovo ThinkPad P50
-  Samsung SSD 970 EVO Plus 250GB for installing windows
-  Samsung SSD 960 EVO 250GB for installling archlinux
-  WDC WD5000LPLX-0 HHD 500GB for data storage
-    Disable Windows Fast Startup if start from windows
-  Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)"/>
+<meta name="twitter:description" content="Before Check the hardware, three disks on my Lenovo ThinkPad P50
+Samsung SSD 970 EVO Plus 250GB for installing windows
+Samsung SSD 960 EVO 250GB for installling archlinux
+WDC WD5000LPLX-0 HHD 500GB for data storage
+Disable Windows Fast Startup if start from windows
+Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)
+Windows UEFI vs BIOS limitations. (In case where Windows and Linux dual boot from the same disk, it is advisable to follow the method used by Windows, ie."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -419,19 +422,19 @@
 <p>When the Arch menu appears, select <em>Boot Arch Linux</em> and press <code>Enter</code> to enter the installation environment.</p>
 <h3 id="set-the-keyboard-layout-and-console-fonts">Set the keyboard layout and Console fonts</h3>
 <p>If you have the 4K display, console fonts will be extremely small.</p>
-<pre><code># setfont sun12x22
+<pre tabindex="0"><code># setfont sun12x22
 </code></pre><h3 id="verify-the-boot-mode">Verify the boot mode</h3>
-<pre><code># ls /sys/firmware/efi/efivars
+<pre tabindex="0"><code># ls /sys/firmware/efi/efivars
 </code></pre><h3 id="connect-to-the-internet">Connect to the internet</h3>
-<pre><code># wifi-menu
+<pre tabindex="0"><code># wifi-menu
 # ping archlinux.org
 </code></pre><h3 id="update-the-system-clock">Update the system clock</h3>
-<pre><code># timedatectl set-ntp true
+<pre tabindex="0"><code># timedatectl set-ntp true
 </code></pre><h3 id="partition-the-disks">Partition the disks</h3>
 <p>When recognized by the live system, disks are assigned to a block device such as <code>/dev/sda</code> or <code>/dev/nvme1n1</code>.</p>
-<pre><code># fdisk -l
+<pre tabindex="0"><code># fdisk -l
 </code></pre><p>Results ending in <code>rom</code>, <code>loop</code> or <code>airoot</code> may be ignored.</p>
-<pre><code>Disk /dev/nvme1n1: 232.91 GiB
+<pre tabindex="0"><code>Disk /dev/nvme1n1: 232.91 GiB
 Disk model: Samsung SSD 960 EVO 250GB
 
 Disk /dev/nvme0n1: 232.91 GiB
@@ -444,7 +447,7 @@ Disk model: WDC WD5000LPLX-0
 <p>On average desktop machines with up to 512 MiB RAM, the 2× rule is usually adequate; if a sufficient amount of RAM (more than 1024 MiB) is available, it may be possible to have a smaller swap partition.</p>
 <p>To use hibernation (a.k.a suspend to disk) it is advised to create the swap partition at the size of RAM.</p>
 <h4 id="create-a-partition-table-and-partitions">Create a partition table and partitions</h4>
-<pre><code># gdisk /dev/nvme1n1
+<pre tabindex="0"><code># gdisk /dev/nvme1n1
 </code></pre><h6 id="create-new-table">Create new table</h6>
 <p>To create a new GUID Partition Table and clear all current partition data, type <code>o</code> at the prompt. Skip this step if the table you require has already been created.</p>
 <h6 id="create-partitions">Create partitions</h6>
@@ -455,7 +458,7 @@ Disk model: WDC WD5000LPLX-0
 <p>relative terms by preceding the size with <code>+size</code> or <code>-size</code>. E.g. <code>+2G</code> to specify a point 2 GiB after the default start sector, or <code>-200M</code> to specify a point 200 MiB before the last available sector.</p>
 <h6 id="partition-type">Partition type</h6>
 <p>The default, <code>Linux filesystem</code> (GUID <code>0FC63DAF-8483-4772-8E79-3D69D8477DE4</code>, gdisk&rsquo;s internal code <code>8300</code>), should be fine for most use cases.</p>
-<pre><code>o (new partition table)
+<pre tabindex="0"><code>o (new partition table)
 y (confirm)
 
 Command (? for help): n
@@ -463,37 +466,37 @@ Partition number (1-128, default 1):
 First sector:
 Last sector or {+-}size{KMGTP}: +512M
 Hex code or GUID (L to show codes, Enter = 8300): ef00
-Changed type of partition to 'EFI System'
+Changed type of partition to &#39;EFI System&#39;
 
 Command (? for help): n
 Partition number (2-128, default 2): 
 First sector:
 Last sector or {+-}size{KMGTP}: +8G
 Hex code or GUID (L to show codes, Enter = 8300): 8200
-Changed type of partition to 'Linux swap'
+Changed type of partition to &#39;Linux swap&#39;
 
 Command (? for help): n
 Partition number (3-128, default 3): 
 First sector:
 Last sector:
 Hex code or GUID (L to show codes, Enter = 8300): 8300
-Changed type of partition to 'Linux filesystem'
+Changed type of partition to &#39;Linux filesystem&#39;
 
 Command (? for help): w
 Do you want to proceed? (Y/N): y
-</code></pre><pre><code>Device            Start       End   Sectors   Size Type
+</code></pre><pre tabindex="0"><code>Device            Start       End   Sectors   Size Type
 /dev/nvme1n1p1     2048   1050623   1048576   512M EFI System
 /dev/nvme1n1p2  1050624  17827839  16777216     8G Linux swap
 /dev/nvme1n1p3 17827840 488397134 470569295 224.4G Linux filesystem
 </code></pre><h3 id="format-the-partitions">Format the partitions</h3>
 <p>an <code>EFI system partition</code> must contain a <code>FAT32</code> file system</p>
 <p><strong>Note:</strong> <code>mkfs.vfat</code> is a symlink to <code>mkfs.fat</code>, they are the same utility.</p>
-<pre><code># mkfs.fat -F32 /dev/nvme1n1p1
+<pre tabindex="0"><code># mkfs.fat -F32 /dev/nvme1n1p1
 </code></pre><p>If you created a partition for swap, initialize it with <code>mkswap</code>:</p>
-<pre><code># mkswap /dev/nvme1n1p2
+<pre tabindex="0"><code># mkswap /dev/nvme1n1p2
 # swapon /dev/nvme1n1p2
 </code></pre><p>the root partition will contain the <code>ext4</code> file system</p>
-<pre><code># mkfs.ext4 /dev/nvme1n1p3
+<pre tabindex="0"><code># mkfs.ext4 /dev/nvme1n1p3
 </code></pre><h3 id="mount-the-file-systems">Mount the file systems</h3>
 <p>The simplest scenarios for mounting EFI system partition are:</p>
 <ul>
@@ -502,84 +505,84 @@ Do you want to proceed? (Y/N): y
 </ul>
 <p>Tip: <code>/efi</code> is a replacement for the previously popular (and possibly still used by other Linux distributions) ESP mountpoint <code>/boot/efi</code>.</p>
 <p>Mount the file system on the root partition to <code>/mnt</code>:</p>
-<pre><code># mount  /dev/nvme1n1p3  /mnt
-</code></pre><pre><code># mkdir -p /mnt/efi 
+<pre tabindex="0"><code># mount  /dev/nvme1n1p3  /mnt
+</code></pre><pre tabindex="0"><code># mkdir -p /mnt/efi 
 # mount /dev/nvme1n1p1 /mnt/efi
-</code></pre><pre><code># mkdir -p /mnt/data
+</code></pre><pre tabindex="0"><code># mkdir -p /mnt/data
 # mount /dev/sda1 /mnt/data
 </code></pre><h3 id="select-the-mirrors">Select the mirrors</h3>
-<pre><code># vim /etc/pacman.d/mirrorlist
+<pre tabindex="0"><code># vim /etc/pacman.d/mirrorlist
 </code></pre><p>The higher a mirror is placed in the list, the more priority it is given when downloading a package. You may want to edit the file accordingly, and move the geographically closest mirrors to the top of the list, although other criteria should be taken into account.</p>
 <p>This file will later be copied to the new system by <em>pacstrap</em>, so it is worth getting right.</p>
 <h3 id="install-essential-packages">Install essential packages</h3>
-<pre><code># pacstrap /mnt base base-devel linux-lts linux-lts-headers linux-firmware gvim dhcpcd networkmanager man-db man-pages
+<pre tabindex="0"><code># pacstrap /mnt base base-devel linux-lts linux-lts-headers linux-firmware gvim dhcpcd networkmanager man-db man-pages
 </code></pre><h3 id="configure-the-linux-system">Configure the Linux system</h3>
 <h4 id="fstab">Fstab</h4>
 <p>Generate an fstab file:</p>
-<pre><code># genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+<pre tabindex="0"><code># genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
 </code></pre><p>Check the resulting <code>/mnt/etc/fstab</code> file, and edit it in case of errors.</p>
-<pre><code># cat /mnt/etc/fstab
+<pre tabindex="0"><code># cat /mnt/etc/fstab
 </code></pre><h4 id="chroot">Chroot</h4>
 <p>Change root into the new system:</p>
-<pre><code># arch-chroot /mnt
+<pre tabindex="0"><code># arch-chroot /mnt
 </code></pre><h4 id="time-zone">Time zone</h4>
-<pre><code># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+<pre tabindex="0"><code># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 # hwclock --systohc
 </code></pre><h4 id="localization">Localization</h4>
 <p>Uncomment <code>en_US.UTF-8 UTF-8</code> and <code>zh_CN.UTF-8 UTF-8</code> locales in <code>/etc/locale.gen</code>, and generate them with:</p>
-<pre><code># locale-gen
+<pre tabindex="0"><code># locale-gen
 </code></pre><p>Create the <code>locale.conf</code> file, and set the <code>LANG</code> variable accordingly:</p>
-<pre><code># vim /etc/locale.conf
-</code></pre><pre><code>LANG=en_US.UTF-8
+<pre tabindex="0"><code># vim /etc/locale.conf
+</code></pre><pre tabindex="0"><code>LANG=en_US.UTF-8
 </code></pre><p>If you set the keyboard layout, make the changes persistent in <code>vconsole.conf</code>:</p>
-<pre><code># vim /etc/vconsole.conf
-</code></pre><pre><code>Font=sun12x22
+<pre tabindex="0"><code># vim /etc/vconsole.conf
+</code></pre><pre tabindex="0"><code>Font=sun12x22
 </code></pre><h4 id="network-configuration">Network configuration</h4>
 <p>Create the <code>hostname</code> file:</p>
-<pre><code># vim /etc/hostname
-</code></pre><pre><code>myhostname
+<pre tabindex="0"><code># vim /etc/hostname
+</code></pre><pre tabindex="0"><code>myhostname
 </code></pre><p>Add matching entries to hosts:</p>
-<pre><code># vim /etc/hosts
-</code></pre><pre><code>127.0.0.1	localhost
+<pre tabindex="0"><code># vim /etc/hosts
+</code></pre><pre tabindex="0"><code>127.0.0.1	localhost
 ::1		localhost
 127.0.1.1	myhostname.localdomain	myhostname
 
 104.18.57.236 free-ss.site
 </code></pre><p>If the system has a permanent IP address, it should be used instead of <code>127.0.1.1</code>.</p>
-<pre><code># pacman -S vim iputils networkmanager
-</code></pre><pre><code># systemctl enable NetworkManager
+<pre tabindex="0"><code># pacman -S vim iputils networkmanager
+</code></pre><pre tabindex="0"><code># systemctl enable NetworkManager
 # systemctl enable dhcpcd
 </code></pre><h4 id="root-password">Root password</h4>
 <p>Set the root password:</p>
-<pre><code># passwd
+<pre tabindex="0"><code># passwd
 </code></pre><p><code>#</code> Represents executing commands as Root users, <code>$</code> Represents executing commands as ordinary users</p>
 <h6 id="add-a-new-user">Add a new user</h6>
-<pre><code># useradd -m username
+<pre tabindex="0"><code># useradd -m username
 # passwd username
 </code></pre><h6 id="install-sudo">Install sudo</h6>
-<pre><code># pacman -S sudo
+<pre tabindex="0"><code># pacman -S sudo
 # vim /etc/sudoers
-</code></pre><pre><code>username  ALL=(ALL) ALL
+</code></pre><pre tabindex="0"><code>username  ALL=(ALL) ALL
 </code></pre><h4 id="boot-loader-for-uefi-systems">Boot loader for UEFI systems</h4>
 <h6 id="detecting-other-operating-systems">Detecting other operating systems</h6>
 <p>To have <em><code>grub-mkconfig</code></em> search for other installed systems and automatically add them to the menu, install the <code>os-prober</code>  and <code>ntfs-3g</code> package and <code>mount</code> the partitions that contain the other systems. Then re-run <em><code>grub-mkconfig</code></em>.</p>
-<pre><code># pacman -S os-prober ntfs-3g
+<pre tabindex="0"><code># pacman -S os-prober ntfs-3g
 </code></pre><h6 id="microcode-updates">microcode updates</h6>
 <p>Choose and install a Linux-capable boot loader. If you have an Intel or AMD CPU, enable <code>microcode</code> updates in addition.</p>
-<pre><code># pacman -S intel-ucode
+<pre tabindex="0"><code># pacman -S intel-ucode
 </code></pre><h6 id="install-a-linux-capable-boot-loader">install a Linux-capable boot loader</h6>
-<pre><code># pacman -S grub efibootmgr
+<pre tabindex="0"><code># pacman -S grub efibootmgr
 </code></pre><p>EFI directory  must be EPS mount point.</p>
 <p>Choose a bootloader identifier, here named <code>GRUB</code>. A directory of that name will be created in <code>/efi/EFI/</code> to store the EFI binary and this is the name that will appear in the UEFI boot menu to identify the GRUB boot entry.</p>
 <p>Execute the following command to install the GRUB EFI application <code>grubx64.efi</code> to <code>/efi/EFI/GRUB/</code> and install its modules to <code>/boot/grub/x86_64-efi/</code>.</p>
-<pre><code># grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=grub
-</code></pre><pre><code># grub-mkconfig -o /boot/grub/grub.cfg
+<pre tabindex="0"><code># grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=grub
+</code></pre><pre tabindex="0"><code># grub-mkconfig -o /boot/grub/grub.cfg
 </code></pre><h3 id="check">Check</h3>
-<pre><code>vim /boot/grub/grub.cfg
+<pre tabindex="0"><code>vim /boot/grub/grub.cfg
 </code></pre><p>checks it for syntax errors, and entry point in <code>menuentry</code> menu.</p>
 <h3 id="reboot">Reboot</h3>
 <p>Exit the chroot environment by typing <code>exit</code> or pressing <code>Ctrl+d</code>.</p>
-<pre><code>umount -R /mnt/efi
+<pre tabindex="0"><code>umount -R /mnt/efi
 </code></pre><p>Optionally manually unmount all the partitions with <code>umount -R /mnt</code>: this allows noticing any &ldquo;busy&rdquo; partitions, and finding the cause with fuser.</p>
 <p>Finally, restart the machine by typing <code>reboot</code>: any partitions still mounted will be automatically unmounted by <em>systemd</em>. Remember to remove the installation media and then login into the new system with the root account.</p>
 <h2 id="references">References</h2>
@@ -755,7 +758,7 @@ Do you want to proceed? (Y/N): y
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

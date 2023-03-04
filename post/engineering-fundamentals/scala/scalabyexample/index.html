@@ -24,7 +24,7 @@
 
 <meta name="author" content="Ye Zheng" />
   <meta name="description" content="Introduction Scala smoothly integrates object-oriented and functional programming.
- Abstract types and mixin composition unify concepts from object and module systems. Pattern matching over class hierarchies uniﬁes functional and object-oriented data access. It greatly simpliﬁes the processing of XML trees. A ﬂexible syntax and type system enables the construction of advanced libraries and new domain speciﬁc languages.  Starting with simple expressions and functions, and working up through objects and classes, lists and streams, mutable state, pattern matching to more complete examples that show interesting programming techniques." />
+Abstract types and mixin composition unify concepts from object and module systems. Pattern matching over class hierarchies uniﬁes functional and object-oriented data access. It greatly simpliﬁes the processing of XML trees. A ﬂexible syntax and type system enables the construction of advanced libraries and new domain speciﬁc languages. Starting with simple expressions and functions, and working up through objects and classes, lists and streams, mutable state, pattern matching to more complete examples that show interesting programming techniques." />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/engineering-fundamentals/scala/scalabyexample/" />
@@ -54,7 +54,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,21 +62,20 @@
 
 <meta property="og:title" content="Scala By Example" />
 <meta property="og:description" content="Introduction Scala smoothly integrates object-oriented and functional programming.
- Abstract types and mixin composition unify concepts from object and module systems. Pattern matching over class hierarchies uniﬁes functional and object-oriented data access. It greatly simpliﬁes the processing of XML trees. A ﬂexible syntax and type system enables the construction of advanced libraries and new domain speciﬁc languages.  Starting with simple expressions and functions, and working up through objects and classes, lists and streams, mutable state, pattern matching to more complete examples that show interesting programming techniques." />
+Abstract types and mixin composition unify concepts from object and module systems. Pattern matching over class hierarchies uniﬁes functional and object-oriented data access. It greatly simpliﬁes the processing of XML trees. A ﬂexible syntax and type system enables the construction of advanced libraries and new domain speciﬁc languages. Starting with simple expressions and functions, and working up through objects and classes, lists and streams, mutable state, pattern matching to more complete examples that show interesting programming techniques." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/engineering-fundamentals/scala/scalabyexample/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-03-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2019-03-01T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2019-03-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-03-01T00:00:00+00:00" />
 <meta itemprop="name" content="Scala By Example">
 <meta itemprop="description" content="Introduction Scala smoothly integrates object-oriented and functional programming.
- Abstract types and mixin composition unify concepts from object and module systems. Pattern matching over class hierarchies uniﬁes functional and object-oriented data access. It greatly simpliﬁes the processing of XML trees. A ﬂexible syntax and type system enables the construction of advanced libraries and new domain speciﬁc languages.  Starting with simple expressions and functions, and working up through objects and classes, lists and streams, mutable state, pattern matching to more complete examples that show interesting programming techniques."><meta itemprop="datePublished" content="2019-03-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-03-01T00:00:00&#43;00:00" />
+Abstract types and mixin composition unify concepts from object and module systems. Pattern matching over class hierarchies uniﬁes functional and object-oriented data access. It greatly simpliﬁes the processing of XML trees. A ﬂexible syntax and type system enables the construction of advanced libraries and new domain speciﬁc languages. Starting with simple expressions and functions, and working up through objects and classes, lists and streams, mutable state, pattern matching to more complete examples that show interesting programming techniques."><meta itemprop="datePublished" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-03-01T00:00:00+00:00" />
 <meta itemprop="wordCount" content="33542">
 <meta itemprop="keywords" content="Scala," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Scala By Example"/>
 <meta name="twitter:description" content="Introduction Scala smoothly integrates object-oriented and functional programming.
- Abstract types and mixin composition unify concepts from object and module systems. Pattern matching over class hierarchies uniﬁes functional and object-oriented data access. It greatly simpliﬁes the processing of XML trees. A ﬂexible syntax and type system enables the construction of advanced libraries and new domain speciﬁc languages.  Starting with simple expressions and functions, and working up through objects and classes, lists and streams, mutable state, pattern matching to more complete examples that show interesting programming techniques."/>
+Abstract types and mixin composition unify concepts from object and module systems. Pattern matching over class hierarchies uniﬁes functional and object-oriented data access. It greatly simpliﬁes the processing of XML trees. A ﬂexible syntax and type system enables the construction of advanced libraries and new domain speciﬁc languages. Starting with simple expressions and functions, and working up through objects and classes, lists and streams, mutable state, pattern matching to more complete examples that show interesting programming techniques."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -430,7 +429,7 @@
 <p>Starting with simple expressions and functions, and working up through objects and classes, lists and streams, mutable state, pattern matching to more complete examples that show interesting programming techniques.</p>
 <h2 id="a-first-example">A First Example</h2>
 <p><code>Quicksort</code> in Scala.</p>
-<pre><code>def sort(xs: Array[Int]) {
+<pre tabindex="0"><code>def sort(xs: Array[Int]) {
     def swap(i: Int, j: Int) {
         val t = xs(i); xs(i) = xs(j); xs(j) = t
     }
@@ -459,7 +458,7 @@
 </ul>
 <p>In fact it is possible to write programs in a conventional imperative or object-oriented style. <strong>This is important</strong> because it is one of the things that makes it easy to combine Scala components with components written in mainstream languages such as Java, C# or Visual Basic.</p>
 <p>However, it is also possible to write programs in a style which looks completely different. Here is <code>Quicksort</code> again, this time written in functional style.</p>
-<pre><code>def sort(xs: Array[Int]): Array[Int] = {
+<pre tabindex="0"><code>def sort(xs: Array[Int]): Array[Int] = {
     if (xs.length &lt;= 1) xs
     else {
         val pivot = xs(xs.length / 2)
@@ -472,18 +471,18 @@
 </code></pre><p>Both the imperative and the functional implementation have the same asymptotic complexity – <code>O(Nlog(N))</code> in the average case and <code>O(N2)</code> in the worst case. But where the imperative implementation operates in place by modifying the argument array, the functional implementation returns a new sorted array and leaves the argument array unchanged. The functional implementation thus requires more transient memory than the imperative one.</p>
 <p>All of the operations used in the example are simple library methods of a sequence class <strong>Seq[T]</strong> which is part of the standard Scala library, and which itself is implemented in Scala. Because arrays are instances of Seq all sequence methods are available for them.</p>
 <p>In particular, there is the method <strong>filter</strong> which takes as argument a <strong>predicate function</strong>. This predicate function must map array elements to boolean values. The result of filter is an array consisting of all the elements of the original array for which the given predicate function is true. The filter method of an object of type Array[T] thus has the signature.</p>
-<pre><code>def filter(p: T =&gt; Boolean): Array[T]
+<pre tabindex="0"><code>def filter(p: T =&gt; Boolean): Array[T]
 </code></pre><p>Here, <strong>T =&gt; Boolean</strong> is the type of functions that take an element of type t and return a Boolean. Functions like filter that take another function as argument or return one as result are called <strong>higher-order</strong> functions.</p>
 <p>Scala does not distinguish between identiﬁers and operator names. An identiﬁer can be either a sequence of letters and digits which begins with a letter, or it can be a sequence of special characters, such as “+”, “*”, or “:”. Any identiﬁer can be used as an inﬁx operator in Scala. The binary operation <strong><code>E op E</code></strong> is always interpreted as the method call <strong><code>E.op(E)</code></strong>. This holds also for binary inﬁx operators which start with a letter. Hence, the expression <code>xs filter (pivot &gt;)</code> is equivalent to the method call <code>xs.filter(pivot &gt;)</code>.</p>
 <p>In the <code>quicksort</code> program, filter is applied three times to an <strong>anonymous</strong> <strong>function</strong> argument. The ﬁrst argument, <strong><code>pivot &gt;</code></strong>, represents a function that takes an argument x and returns the value pivot &gt; x. This is an example of a <strong>partially applied function</strong>. Another, equivalent way to write this function which makes the missing argument explicit is <strong><code>x =&gt; pivot &gt; x</code></strong>. The function is <strong>anonymous</strong>, i.e. it is not deﬁned with a name. The type of the x parameter is omitted because a Scala compiler can infer it automatically from the context where the function is used.</p>
 <p>For instance, “standard” binary operators such as +, -, or &lt; are not treated in any special way. Like append, they are methods of their left operand. Consequently, the expression <code>i + 1</code> is regarded as the invocation <code>i.+(1)</code> of the + method of the integer value x. Of course, a compiler is free (if it is moderately smart, even expected) to recognize the special case of calling the + method over integer arguments and to generate efﬁcient inline code for it.</p>
 <p>For efﬁciency and better error diagnostics the <strong>while</strong> loop is a primitive construct in Scala. But in principle, it could have just as well been a predeﬁned function. Here is a possible implementation of it:</p>
-<pre><code>def While (p: =&gt; Boolean) (s: =&gt; Unit) {
+<pre tabindex="0"><code>def While (p: =&gt; Boolean) (s: =&gt; Unit) {
     if (p) { s ; While(p)(s) }
 }
 </code></pre><p>The While function takes as ﬁrst parameter a test function, which takes no parameters and yields a boolean value. As second parameter it takes a command function which also takes no parameters and yields a result of type <strong>Unit</strong>. While invokes the command function as long as the test function yields true.</p>
 <p>Scala’s <strong>Unit</strong> type roughly corresponds to void in Java; it is used whenever a function does not return an interesting result. In fact, because Scala is an <strong>expression-oriented</strong> language, every function returns some result. If no explicit return expression is given, the value (), which is pronounced “unit”, is assumed. This value is of type Unit. Unit-returning functions are also called <strong>procedures</strong>. Here’s a more“expression-oriented” formulation of the swap function in the ﬁrst implementation of <code>quicksort</code>, which makes this explicit:</p>
-<pre><code>def swap(i: Int, j: Int) {
+<pre tabindex="0"><code>def swap(i: Int, j: Int) {
     val t = xs(i); xs(i) = xs(j); xs(j) = t
     ()
 }
@@ -499,7 +498,7 @@ For each base class, there are a number of <strong>case classes</strong> which d
 <li>the date when the auction is to be closed.</li>
 </ul>
 <p>The behavior of the actor is deﬁned by its act method. That method repeatedly</p>
-<pre><code># Message Classes for an Auction Service
+<pre tabindex="0"><code># Message Classes for an Auction Service
 
 import scala.actors.Actor
 
@@ -523,7 +522,7 @@ case object AuctionOver                     extends AuctionReply
 <li>Reply messages are sent using syntax of the form <code>destination ! SomeMessage</code>. ! is used here as a binary operator with an actor and a message as arguments. This is equivalent in Scala to the method call <code>destination.!(SomeMessage)</code>, i.e. the invocation of the <code>!</code> method of the destination actor with the given message as parameter.</li>
 </ul>
 <p>The preceding discussion gave a ﬂavor of distributed programming in Scala. It might seem that Scala has a rich set of language constructs that support actor processes, message sending and receiving, programming with timeouts, etc. In fact, the</p>
-<pre><code>// Implementation of an Auction Service
+<pre tabindex="0"><code>// Implementation of an Auction Service
 
 class Auction(seller: Actor, minBid: Int, closing: Date) extends Actor {
     val timeToShutdown = 36000000 //msec
@@ -563,7 +562,7 @@ class Auction(seller: Actor, minBid: Int, closing: Date) extends Actor {
 <h2 id="expressions-and-simple-functions">Expressions and Simple Functions</h2>
 <h3 id="41-expressions-and-simple-functions">4.1 Expressions And Simple Functions</h3>
 <p>A Scala system comes with an <strong>interpreter</strong>. For example:</p>
-<pre><code>scala&gt; &quot;hello&quot; + &quot; world!&quot;
+<pre tabindex="0"><code>scala&gt; &#34;hello&#34; + &#34; world!&#34;
 unnamed2: java.lang.String = hello world!
 
 scala&gt; def scale = 5
@@ -591,7 +590,7 @@ unnamed4: Double = 62.83185307179586
 <p>A name deﬁned by <strong>def</strong> is evaluated by replacing the name by the (<strong>unevaluated</strong>) deﬁnition’s right hand side. A name deﬁned by <strong>val</strong> is evaluated by replacing the name by the <strong>value</strong> of the deﬁnitions’s right-hand side. The evaluation process stops once we have reached a value. A value is some data item such as a string, a number,an array, or a list. The process of stepwise simpliﬁcation of expressions to values is called <strong>reduction</strong>.</p>
 <h3 id="42-parameters">4.2 Parameters</h3>
 <p>Using def, one can also deﬁne functions with parameters. For example:</p>
-<pre><code>scala&gt; def square(x: Double) = x * x
+<pre tabindex="0"><code>scala&gt; def square(x: Double) = x * x
 square: (Double)Double
 
 scala&gt; square(2)
@@ -610,7 +609,7 @@ scala&gt; sumOfSquares(3, 2 + 2)
 unnamed3: Double = 25.0
 </code></pre><p>Every parameter comes with a type, which is indicated following the parameter name and a colon. At the present time, we only need basic numeric types such as the type <code>scala.Double</code> of double precision numbers. Scala deﬁnes <strong>type aliases</strong> for some standard types, so we can write numeric types as in Java. For instance double is a type alias of scala.Double and int is a type alias for scala.Int.
 Functions with parameters are evaluated analogously to operators in expressions. First, the arguments of the function are evaluated (in left-to-right order). Then, the function application is replaced by the function’s right hand side, and at the same time all formal parameters of the function are replaced by their corresponding actual arguments.</p>
-<pre><code>Example 4.2.1
+<pre tabindex="0"><code>Example 4.2.1
 
   sumOfSquares(3, 2+2)
 → sumOfSquares(3, 4)
@@ -621,7 +620,7 @@ Functions with parameters are evaluated analogously to operators in expressions.
 → 9 + 16
 → 25
 </code></pre><p>The example shows that the interpreter reduces function arguments to values before rewriting the function application. One could instead have chosen to apply the function to unreduced arguments. This would have yielded the following reduction</p>
-<pre><code>  sumOfSquares(3, 2+2)
+<pre tabindex="0"><code>  sumOfSquares(3, 2+2)
 → square(3) + square(2+2)
 → 3 * 3 + square(2+2)
 → 9 + square(2+2)
@@ -632,17 +631,17 @@ Functions with parameters are evaluated analogously to operators in expressions.
 → 25
 </code></pre><p>The second evaluation order is known as <strong>call-by-name</strong>, whereas the ﬁrst one is known as <strong>call-by-value</strong>. For expressions that use only pure functions and that therefore can be reduced with the substitution model, both schemes yield the same ﬁnal values.</p>
 <p><strong>Call-by-value</strong> has the advantage that it avoids repeated evaluation of arguments. Call-by-name has the advantage that it avoids evaluation of arguments when the parameter is not used at all by the function. Call-by-value is usually more efﬁcient than call-by-name, but a call-by-value evaluation might loop where a call-by-name evaluation would terminate. Consider:</p>
-<pre><code>scala&gt; def loop: Int = loop
+<pre tabindex="0"><code>scala&gt; def loop: Int = loop
 loop: Int
 
 scala&gt; def first(x: Int, y: Int) = x
 first: (Int,Int)Int
 </code></pre><p>Then first(1, loop) reduces with call-by-name to 1, whereas the same term reduces with call-by-value repeatedly to itself, hence evaluation does not terminate.first(1, loop)</p>
-<pre><code>→ first(1, loop)
+<pre tabindex="0"><code>→ first(1, loop)
 → first(1, loop)
 → ...
 </code></pre><p><strong>Scala uses call-by-value by default, but it switches to call-by-name evaluation if the parameter type is preceded by =&gt;.</strong></p>
-<pre><code>Example 4.2.2
+<pre tabindex="0"><code>Example 4.2.2
 
 scala&gt; def constOne(x: Int, y: =&gt; Int) = 1
 constOne: (Int,=&gt; Int)Int
@@ -653,7 +652,7 @@ unnamed0: Int = 1
 scala&gt; constOne(loop, 2)    // gives an infinite loop.
 ^C                        // stops execution with Ctrl-C
 </code></pre><h3 id="43-conditional-expressions">4.3 Conditional Expressions</h3>
-<pre><code>/* Example 4.3.1 */
+<pre tabindex="0"><code>/* Example 4.3.1 */
 scala&gt; def abs(x: Double) = if (x &gt;= 0) x else -x
 abs: (Double)Double
 </code></pre><p>Scala’s boolean expressions are similar to Java’s; they are formed from the constants <strong>true</strong> and <strong>false</strong>, comparison operators, boolean negation <strong><code>!</code></strong> and the boolean operators <strong><code>&amp;&amp;</code></strong> and <strong><code>||</code></strong>.</p>
@@ -661,30 +660,30 @@ abs: (Double)Double
 <p>The task is to write a function</p>
 <p>def sqrt(x: Double): Double = &hellip;</p>
 <p>which computes the square root of x. A common way to compute square roots is by <strong>Newton’s method</strong> of successive approximations. One starts with an initial guess y (say: y = 1). One then repeatedly improves the current guess y by taking the average of y and x/y. As an example, the next three columns indicate the <strong>guess</strong> y, the <strong>quotient</strong> x/y, and their <strong>average</strong> for the ﬁrst approximations of  sqrt(2)</p>
-<pre><code>1                         2/1 = 2                            1.5
+<pre tabindex="0"><code>1                         2/1 = 2                            1.5
 1.5                       2/1.5 = 1.3333                     1.4167
 1.4167                    2/1.4167 = 1.4118                  1.4142
 1.4142                    ...                                ...
 
 y                         x/y                                (y + x/y)/2
 </code></pre><p>We ﬁrst deﬁne a function for iterating from a guess to the result:</p>
-<pre><code>def sqrtIter(guess: Double, x: Double): Double =
+<pre tabindex="0"><code>def sqrtIter(guess: Double, x: Double): Double =
     if (isGoodEnough(guess, x)) guess
     else sqrtIter(improve(guess, x), x)
 </code></pre><p>Note that <code>sqrtIter</code> calls itself recursively. Loops in imperative programs can always be modeled by recursion in functional programs.</p>
 <p><strong>The return types are mandatory for recursive functions.</strong> For anon-recursive function, the return type is optional; if it is missing the type checker will compute it from the type of the function’s right-hand side. However, even for non-recursive functions <strong>it is often a good idea to include a return type</strong> for better documentation.</p>
 <p>As a second step, we deﬁne the two functions called by <code>sqrtIter</code>: a function to improve the guess and a termination test <code>isGoodEnough</code>. Here is their deﬁnition.</p>
-<pre><code>def improve(guess: Double, x: Double) =
+<pre tabindex="0"><code>def improve(guess: Double, x: Double) =
     (guess + x / guess) / 2
 
 def isGoodEnough(guess: Double, x: Double) =
     abs(square(guess) - x) &lt;= math.ulp(x)
 </code></pre><p>Finally, the <code>sqrt</code> function itself is deﬁned by an application of <code>sqrtIter</code>.</p>
-<pre><code>def sqrt(x: Double) = sqrtIter(1.0, x)
+<pre tabindex="0"><code>def sqrt(x: Double) = sqrtIter(1.0, x)
 </code></pre><h3 id="45-nested-functions">4.5 Nested Functions</h3>
 <p><strong>The functional programming style encourages the construction of many small helper functions.</strong> In the last example, the implementation of sqrt made use of the helper functions <code>sqrtIter</code>, <code>improve</code> and <code>isGoodEnough</code>. The names of these functions are relevant only for the implementation of sqrt. We normally do not want users of sqrt to access these functions directly.</p>
 <p>We can enforce this (and <strong>avoid name-space pollution</strong>) by including the helper functions within the calling function itself:</p>
-<pre><code>def sqrt(x: Double) = {
+<pre tabindex="0"><code>def sqrt(x: Double) = {
 	def sqrtIter(guess: Double, x: Double): Double =
 		if (isGoodEnough(guess, x)) guess
 		else sqrtIter(improve(guess, x), x)
@@ -707,7 +706,7 @@ def isGoodEnough(guess: Double, x: Double) =
 </li>
 </ol>
 <p>Therefore, the following are all legal:</p>
-<pre><code>def f(x: Int) = x + 1;
+<pre tabindex="0"><code>def f(x: Int) = x + 1;
 f(1) + f(2)
 
 def g1(x: Int) = x + 1
@@ -726,7 +725,7 @@ def h2(x: Int) = (
 )
 h2(1) / h2(2)
 </code></pre><p>Scala uses <strong>the usual block-structured scoping rules. A name deﬁned in some outer block is visible also in some inner block,</strong> provided it is not redeﬁned there. This rule permits us to simplify our sqrt example. We need not pass x around as an additional parameter of the nested functions, since it is always visible in them as a parameter of the outer function sqrt. Here is the simpliﬁed code:</p>
-<pre><code>def sqrt(x: Double) = {
+<pre tabindex="0"><code>def sqrt(x: Double) = {
 	def sqrtIter(guess: Double): Double =
 		if (isGoodEnough(guess)) guess
 		else sqrtIter(improve(guess))
@@ -738,9 +737,9 @@ h2(1) / h2(2)
 }
 </code></pre><h3 id="46-tail-recursion">4.6 Tail Recursion</h3>
 <p>Consider the following function to compute the greatest common divisor of two given numbers.</p>
-<pre><code>def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
+<pre tabindex="0"><code>def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
 </code></pre><p>Using our substitution model of function evaluation, <code>gcd(14, 21)</code> evaluates as follows:</p>
-<pre><code>    gcd(14, 21)
+<pre tabindex="0"><code>    gcd(14, 21)
 →   if (21 == 0) 14 else gcd(21, 14 % 21)
 →   if (false) 14 else gcd(21, 14 % 21)
 →   gcd(21, 14 % 21)
@@ -754,9 +753,9 @@ h2(1) / h2(2)
 →   if (0 == 0) 7 else gcd(0, 7 % 0)
 → → 7
 </code></pre><p>Contrast this with the evaluation of another recursive function, factorial:</p>
-<pre><code>def factorial(n: Int): Int = if (n == 0) 1 else n * factorial(n - 1)
+<pre tabindex="0"><code>def factorial(n: Int): Int = if (n == 0) 1 else n * factorial(n - 1)
 </code></pre><p>The application factorial(5) rewrites as follows:</p>
-<pre><code>        factorial(5)
+<pre tabindex="0"><code>        factorial(5)
 →       if (5 == 0) 1 else 5 * factorial(5 - 1)
 →       5 * factorial(5 - 1)
 →       5 * factorial(4)
@@ -771,7 +770,7 @@ h2(1) / h2(2)
 <p>By contrast, the recursive call in factorial is <strong>followed by a multiplication</strong>. Hence, <strong>a new stack frame is allocated</strong> for the recursive instance of factorial, and is deallocated after that instance has ﬁnished. The given formulation of the factorial function is <strong>not tail-recursive</strong>; it <strong>needs space proportional to its input parameter for its execution.</strong></p>
 <p>More generally, if the last action of a function is a call to another (possibly the same) function, only a single stack frame is needed for both functions. Such calls are called “<strong>tail calls</strong>”. In principle, tail calls can always re-use the stack frame of the calling function. However, some run-time environments (such as the Java VM) lack the primitives to make stack frame re-use for tail calls efﬁcient. A production quality Scala implementation is therefore only required to re-use the stack frame of a directly tail-recursive function whose last action is a call to itself. Other tail calls might be optimized also, but one should not rely on this across implementations.</p>
 <p>Design a tail-recursive version of factorial.</p>
-<pre><code>import annotation.tailrec
+<pre tabindex="0"><code>import annotation.tailrec
 
 def factorial(n: Int): Int = {
 	assert(n &gt;= 0)
@@ -787,87 +786,86 @@ def factorial(n: Int): Int = {
 <ol>
 <li>Write a function to sum all integers between two given numbers a and b:</li>
 </ol>
-<pre><code>def sumInts(a: Int, b: Int): Int =
+<pre tabindex="0"><code>def sumInts(a: Int, b: Int): Int =
 	if (a &gt; b) 0 else a + sumInts(a + 1, b)
 </code></pre><ol start="2">
 <li>Write a function to sum the squares of all integers between two given numbers a and b:</li>
 </ol>
-<pre><code>def square(x: Int): Int = x * x
+<pre tabindex="0"><code>def square(x: Int): Int = x * x
 def sumSquares(a: Int, b: Int): Int =
 	if (a &gt; b) 0 else square(a) + sumSquares(a + 1, b)
 </code></pre><ol start="3">
 <li>Write a function to sum the powers $2^n$ of all integers n between two given numbers a and b:</li>
 </ol>
-<pre><code>def powerOfTwo(x: Int): Int = if (x == 0) 1 else 2 * powerOfTwo(x - 1)def sumPowersOfTwo(a: Int, b: Int): Int =
+<pre tabindex="0"><code>def powerOfTwo(x: Int): Int = if (x == 0) 1 else 2 * powerOfTwo(x - 1)def sumPowersOfTwo(a: Int, b: Int): Int =
 	if (a &gt; b) 0 else powerOfTwo(a) + sumPowersOfTwo(a + 1, b)
-
 </code></pre><p>These functions are all instances of $\sum_a^b f (n)$ for different values of $f$. We can factor out the common pattern by deﬁning a function sum:</p>
-<pre><code>def sum(f: Int =&gt; Int, a: Int, b: Int): Int =
+<pre tabindex="0"><code>def sum(f: Int =&gt; Int, a: Int, b: Int): Int =
 	if (a &gt; b) 0 else f(a) + sum(f, a + 1, b)
 </code></pre><p>The type <code>Int =&gt; Int</code> is the type of functions that take arguments of type Int and return results of type Int. So sum is a function which takes another function as a parameter. In other words, sum is a higher-order function.</p>
 <p>Using sum, we can formulate the three summing functions as follows.</p>
-<pre><code>def sumInts(a: Int, b: Int): Int = sum(id, a, b)
+<pre tabindex="0"><code>def sumInts(a: Int, b: Int): Int = sum(id, a, b)
 def sumSquares(a: Int, b: Int): Int = sum(square, a, b)
 def sumPowersOfTwo(a: Int, b: Int): Int = sum(powerOfTwo, a, b)
 </code></pre><p>where</p>
-<pre><code>def id(x: Int): Int = x
+<pre tabindex="0"><code>def id(x: Int): Int = x
 def square(x: Int): Int = x * x
 def powerOfTwo(x: Int): Int = if (x == 0) 1 else 2 * powerOfTwo(x - 1)
 </code></pre><h3 id="51-anonymous-functions">5.1 Anonymous Functions</h3>
 <p>Parameterization by functions tends to create many small functions. Instead of using named function deﬁnitions for these small argument functions, we can formulate them in a shorter way as <strong>anonymous functions</strong>. As an example consider the anonymous square function:</p>
-<pre><code>(x: Int) =&gt; x * x
+<pre tabindex="0"><code>(x: Int) =&gt; x * x
 </code></pre><p>The part before the arrow <strong><code>=&gt;</code></strong> are the parameters of the function, whereas the part following the <strong><code>=&gt;</code></strong> is its body. For instance, here is an anonymous function which multiples its two arguments.</p>
-<pre><code>(x: Int, y: Int) =&gt; x * y
+<pre tabindex="0"><code>(x: Int, y: Int) =&gt; x * y
 </code></pre><p>Using anonymous functions, we can reformulate the ﬁrst two summation functions without named auxiliary functions:</p>
-<pre><code>def sumInts(a: Int, b: Int): Int = sum((x: Int) =&gt; x, a, b)
+<pre tabindex="0"><code>def sumInts(a: Int, b: Int): Int = sum((x: Int) =&gt; x, a, b)
 def sumSquares(a: Int, b: Int): Int = sum((x: Int) =&gt; x * x, a, b)
 </code></pre><p>Often, the Scala compiler can deduce the parameter type(s) from the context of the anonymous function in which case they can be omitted. For instance, in the case of <code>sumInts</code> or <code>sumSquares</code>, one knows from the type of sum that the ﬁrst parameter must be a function of type Int =&gt; Int. Hence, <strong>the parameter type Int is redundant and may be omitted.</strong> If there is a single parameter without a type, we may also omit the parentheses around it:</p>
-<pre><code>def sumInts(a: Int, b: Int): Int = sum(x =&gt; x, a, b)
+<pre tabindex="0"><code>def sumInts(a: Int, b: Int): Int = sum(x =&gt; x, a, b)
 def sumSquares(a: Int, b: Int): Int = sum(x =&gt; x * x, a, b)
 </code></pre><p>Anonymous functions are not essential language elements of Scala, as they can always be expressed in terms of named functions. We also say, anonymous functions are “syntactic sugar”.</p>
 <h3 id="52-currying">5.2 Currying</h3>
 <p>The latest formulation of the summing functions is already quite compact. But we can do even better. Note that a and b appear as parameters and arguments of every function but they do not seem to take part in interesting combinations. Is there a way to get rid of them? Let’s try to rewrite sum so that it does not take the bounds a and b as parameters:</p>
-<pre><code>def sum(f: Int =&gt; Int): (Int, Int) =&gt; Int = {
+<pre tabindex="0"><code>def sum(f: Int =&gt; Int): (Int, Int) =&gt; Int = {
     def sumF(a: Int, b: Int): Int =
         if (a &gt; b) 0 else f(a) + sumF(a + 1, b)
     sumF
 }
 </code></pre><p>In this formulation, sum is a function which returns another function, namely the specialized summing function <code>sumF</code>. This latter function does all the work; it takes the bounds a and b as parameters, applies sum’s function parameter f to all integers between them, and sums up the results. Using this new formulation of sum, we can now deﬁne:</p>
-<pre><code>def sumInts = sum(x =&gt; x)
+<pre tabindex="0"><code>def sumInts = sum(x =&gt; x)
 def sumSquares = sum(x =&gt; x * x)
 def sumPowersOfTwo = sum(powerOfTwo)
 </code></pre><p>Or, equivalently, with value deﬁnitions:</p>
-<pre><code>val sumInts = sum(x =&gt; x)
+<pre tabindex="0"><code>val sumInts = sum(x =&gt; x)
 val sumSquares = sum(x =&gt; x * x)
 val sumPowersOfTwo = sum(powerOfTwo)
 </code></pre><p><code>sumInts</code>, <code>sumSquares</code>, and <code>sumPowersOfTwo</code> can be applied like any other function.For instance,</p>
-<pre><code>scala&gt; sumSquares(1, 10) + sumPowersOfTwo(10, 20)
+<pre tabindex="0"><code>scala&gt; sumSquares(1, 10) + sumPowersOfTwo(10, 20)
 unnamed0: Int = 2096513
 </code></pre><p>How are function-returning functions applied? As an example, in the expression</p>
-<pre><code>sum(x =&gt; x * x)(1, 10) ,
+<pre tabindex="0"><code>sum(x =&gt; x * x)(1, 10) ,
 </code></pre><p>the function sum is applied to the squaring function <code>(x =&gt; x * x)</code>. The resulting function is then applied to the second argument list, (1, 10).</p>
 <p>This notation is possible because function application associates to the left. That is, if <code>args1</code> and <code>args2</code> are argument lists, then</p>
 <p><code>f(args1)(args2)</code> is equivalent to <code>(f(args1))(args2)</code></p>
 <p>In our example, <code>sum(x =&gt; x * x)(1, 10)</code> is equivalent to the following expression: <code>(sum(x =&gt; x * x))(1, 10)</code>.</p>
 <p><strong>The style of function-returning functions is so useful that Scala has special syntax for it.</strong> For instance, the next deﬁnition of sum is equivalent to the previous one, but is shorter:</p>
-<pre><code>def sum(f: Int =&gt; Int)(a: Int, b: Int): Int =
+<pre tabindex="0"><code>def sum(f: Int =&gt; Int)(a: Int, b: Int): Int =
 	if (a &gt; b) 0 else f(a) + sum(f)(a + 1, b)
 </code></pre><p>Generally, a curried function deﬁnition</p>
-<pre><code>def f (args_1) ... (args_n) = E
+<pre tabindex="0"><code>def f (args_1) ... (args_n) = E
 </code></pre><p>where n &gt; 1 expands to</p>
-<pre><code>def f (args_1) ... (args_{n−1}) = { def g (args_n) = E ; g }
+<pre tabindex="0"><code>def f (args_1) ... (args_{n−1}) = { def g (args_n) = E ; g }
 </code></pre><p>where g is a fresh identiﬁer. Or, shorter, using an anonymous function:</p>
-<pre><code>def f (args_1) ... (args_{n−1}) = ( args_n ) =&gt; E .
+<pre tabindex="0"><code>def f (args_1) ... (args_{n−1}) = ( args_n ) =&gt; E .
 </code></pre><p>Performing this step n times yields that</p>
-<pre><code>def f (args_1) ... (args_n) = E
+<pre tabindex="0"><code>def f (args_1) ... (args_n) = E
 </code></pre><p>is equivalent to</p>
-<pre><code>def f = (args_1) =&gt; ... =&gt; (args_n) =&gt; E .
+<pre tabindex="0"><code>def f = (args_1) =&gt; ... =&gt; (args_n) =&gt; E .
 </code></pre><p>Or, equivalently, using a value deﬁnition:</p>
-<pre><code>val f = (args_1) =&gt; ... =&gt; (args_n) =&gt; E .
+<pre tabindex="0"><code>val f = (args_1) =&gt; ... =&gt; (args_n) =&gt; E .
 </code></pre><p>This style of function deﬁnition and application is called currying after its promoter, Haskell B. Curry, a logician of the 20th century, even though the idea goes back further to Moses Schönﬁnkel and Gottlob Frege. The type of a function-returning function is expressed analogously to its parameter list. Taking the last formulation of sum as an example, the type of sum is <code>(Int =&gt; Int) =&gt; (Int, Int) =&gt; Int</code>. This is possible because function types associate to the right. I.e.</p>
 <p><code>T1 =&gt; T2 =&gt; T3</code>   is equivalent to   <code>T1 =&gt; (T2 =&gt; T3)</code></p>
 <p><strong>Exercise 5.2.1 1</strong>. The sum function uses a linear recursion. Can you write a tail-recursive one by ﬁlling in the ??’s?</p>
-<pre><code>def sum(f: Int =&gt; Int)(a: Int, b: Int): Int = {
+<pre tabindex="0"><code>def sum(f: Int =&gt; Int)(a: Int, b: Int): Int = {
     def iter(a: Int, result: Int): Int = {
         if (a &gt; b) result
         else iter(a + 1, result + f(a))
@@ -875,7 +873,7 @@ unnamed0: Int = 2096513
     iter(a, 0)
 }
 </code></pre><p><strong>Exercise 5.2.2</strong> Write a function product that computes the product of the values of functions at points over a given range.</p>
-<pre><code>def product(f: Int =&gt; Int)(a: Int, b: Int): Int = {
+<pre tabindex="0"><code>def product(f: Int =&gt; Int)(a: Int, b: Int): Int = {
     def iter(a: Int, result: Int): Int = {
         if (a &gt; b) result
         else iter(a + 1, result * f(a))
@@ -883,9 +881,9 @@ unnamed0: Int = 2096513
     iter(a, 1)
 }
 </code></pre><p><strong>Exercise 5.2.3</strong> Write factorial in terms of product.</p>
-<pre><code>def factorial(n: Int): Int = product(x =&gt; x)(1, n)
+<pre tabindex="0"><code>def factorial(n: Int): Int = product(x =&gt; x)(1, n)
 </code></pre><p><strong>Exercise 5.2.4</strong> Can you write an even more general function which generalizes both sum and product?</p>
-<pre><code>def exp(op: (Int, Int) =&gt; Int)(f: Int =&gt; Int)(a: Int, b: Int, init: Int): Int = {
+<pre tabindex="0"><code>def exp(op: (Int, Int) =&gt; Int)(f: Int =&gt; Int)(a: Int, b: Int, init: Int): Int = {
     def iter(a: Int, result: Int): Int = {
         if (a &gt; b) result
         else iter(a + 1, op(result, f(a)))
@@ -894,11 +892,11 @@ unnamed0: Int = 2096513
 }
 </code></pre><h3 id="53-example-finding-fixed-points-of-functions">5.3 Example: Finding Fixed Points of Functions</h3>
 <p>A number x is called a <strong>ﬁxed point</strong> of a function f if</p>
-<pre><code>f(x) = x .
+<pre tabindex="0"><code>f(x) = x .
 </code></pre><p>For some functions <code>f</code> we can locate the ﬁxed point by beginning with an initial guess and <strong>then applying <code>f</code> repeatedly</strong>, until the value does not change anymore (or the change is within a small tolerance). This is possible if the sequence</p>
-<pre><code>x, f(x), f(f(x)), f(f(f(x))), ...
+<pre tabindex="0"><code>x, f(x), f(f(x)), f(f(f(x))), ...
 </code></pre><p><strong>converges to ﬁxed point of f</strong> . This idea is captured in the following “<strong>ﬁxed-point ﬁnding function</strong>”:</p>
-<pre><code>val tolerance = 0.0001
+<pre tabindex="0"><code>val tolerance = 0.0001
 def isCloseEnough(x: Double, y: Double) = abs((x - y) / x) &lt; tolerance
 def fixedPoint(f: Double =&gt; Double)(firstGuess: Double) = {
     def iterate(guess: Double): Double = {
@@ -909,12 +907,12 @@ def fixedPoint(f: Double =&gt; Double)(firstGuess: Double) = {
     iterate(firstGuess)
 }
 </code></pre><p>We now apply this idea in a reformulation of the square root function. Let’s start with a speciﬁcation of sqrt:</p>
-<pre><code>sqrt(x) = the y such that y * y = x
+<pre tabindex="0"><code>sqrt(x) = the y such that y * y = x
         = the y such that y = x / y
 </code></pre><p>Hence, sqrt(x) is a ﬁxed point of the function y =&gt; x / y. This suggests that sqrt(x) can be computed by ﬁxed point iteration:</p>
-<pre><code>def sqrt(x: double) = fixedPoint(y =&gt; x / y)(1.0)
+<pre tabindex="0"><code>def sqrt(x: double) = fixedPoint(y =&gt; x / y)(1.0)
 </code></pre><p>But if we try this, we ﬁnd that the computation does not converge. Let’s instrument the ﬁxed point function <strong>with a print statement which keeps track of the current guess value</strong>:</p>
-<pre><code>def fixedPoint(f: Double =&gt; Double)(firstGuess: Double) = {
+<pre tabindex="0"><code>def fixedPoint(f: Double =&gt; Double)(firstGuess: Double) = {
 	def iterate(guess: Double): Double = {
 		val next = f(guess)
 		println(next)
@@ -924,14 +922,14 @@ def fixedPoint(f: Double =&gt; Double)(firstGuess: Double) = {
 	iterate(firstGuess)
 }
 </code></pre><p>Then, sqrt(2) yields:</p>
-<pre><code>2.0
+<pre tabindex="0"><code>2.0
 1.0
 2.0
 1.0
 2.0
 ...
 </code></pre><p>One way to control such oscillations is to prevent the guess from changing too much. This can be achieved by averaging successive values of the original sequence:</p>
-<pre><code>scala&gt; def sqrt(x: Double) = fixedPoint(y =&gt; (y + x/y) / 2)(1.0)
+<pre tabindex="0"><code>scala&gt; def sqrt(x: Double) = fixedPoint(y =&gt; (y + x/y) / 2)(1.0)
 sqrt: (Double)Double
 
 scala&gt; sqrt(2.0)
@@ -942,12 +940,12 @@ scala&gt; sqrt(2.0)
 1.4142135623746899
 </code></pre><p>In fact, expanding the <code>fixedPoint</code> function yields exactly our previous deﬁnition of ﬁxed point from Section 4.4. The previous examples showed that <strong>the expressive power of a language is considerably enhanced if functions can be passed as arguments.</strong> The next example shows that <strong>functions which return functions can also be very useful.</strong></p>
 <p>Consider again ﬁxed point iterations. We started with the observation that a ﬁxed point of the function <code>y =&gt; x / y</code>. Then we made the iteration converge by averaging successive values. <strong>This technique of average damping is so general that it can be wrapped in another function</strong>.</p>
-<pre><code>def averageDamp(f: Double =&gt; Double)(x: Double) = (x + f(x)) / 2
+<pre tabindex="0"><code>def averageDamp(f: Double =&gt; Double)(x: Double) = (x + f(x)) / 2
 </code></pre><p>Using <code>averageDamp</code>, we can reformulate the square root function as follows.</p>
-<pre><code>def sqrt(x: Double) = fixedPoint(averageDamp(y =&gt; x/y))(1.0)
+<pre tabindex="0"><code>def sqrt(x: Double) = fixedPoint(averageDamp(y =&gt; x/y))(1.0)
 </code></pre><p>This expresses the elements of the algorithm as clearly as possible.</p>
 <p><strong>Exercise 5.3.1</strong> Write a function for cube roots using <code>fixedPoint</code> and <code>averageDamp</code>.</p>
-<pre><code>def cube(x: Double) = 
+<pre tabindex="0"><code>def cube(x: Double) = 
     fixedPoint(averageDamp(y =&gt; (x / (y * y) + 2 * y) / 3))(1.0)
 </code></pre><h3 id="54-summary">5.4 Summary</h3>
 <p>We have seen in the previous chapter that functions are essential abstractions, because they permit us to introduce general methods of computing as explicit, named elements in our programming language. The present chapter has shown that these abstractions can be combined by higher-order functions to create further abstractions. <strong>As programmers, we should look out for opportunities to abstract and to reuse.</strong> The highest possible level of <strong>abstraction is not always the best</strong>, but it is important to know abstraction techniques, so that one can <strong>use abstractions where appropriate.</strong></p>
@@ -974,7 +972,7 @@ scala&gt; sqrt(2.0)
 </li>
 </ul>
 <p><strong>Lexemes</strong>:</p>
-<pre><code>ident   = letter {letter | digit}
+<pre tabindex="0"><code>ident   = letter {letter | digit}
         | operator { operator }
         | ident ’_’ ident
 literal = “as in Java”
@@ -983,10 +981,10 @@ literal = “as in Java”
 <p><code>   x     Room10a     +     --     foldl_:     +_vector</code></p>
 <p>It follows from this rule that subsequent operator-identiﬁers need to be <strong>separated by whitespace</strong>. For instance, the input <code>x+-y</code> is parsed as the three token sequence <code>x</code>, <code>+-</code>, <code>y.</code> If we want to express the sum of x with the negated value of y, we need to add at least one space, e.g. <code>x+ -y</code>.</p>
 <p>The <strong><code>$</code></strong> character is reserved for compiler-generated identiﬁers; it should not be used in source programs. The following are reserved words, they may not be used as identiﬁers:</p>
-<pre><code>abstract case catch class def do else extends false final finally for if implicit import match new null object override package private protected requires return sealed super this throw trait try true type val var while with yield
+<pre tabindex="0"><code>abstract case catch class def do else extends false final finally for if implicit import match new null object override package private protected requires return sealed super this throw trait try true type val var while with yield
 _   :   =   =&gt;   &lt;-   &lt;:   &lt;%   &gt;:     #    @ 
 </code></pre><p><strong>Types:</strong></p>
-<pre><code>Type         = SimpleType | FunctionType
+<pre tabindex="0"><code>Type         = SimpleType | FunctionType
 FunctionType = SimpleType ’=&gt;’ Type | ’(’ [Types] ’)’ ’=&gt;’ Type
 SimpleType   = Byte | Short | Char | Int | Long | Float | Double | Boolean | Unit | String
 Types        = Type {‘,’ Type}
@@ -1009,7 +1007,7 @@ Types        = Type {‘,’ Type}
 <strong>Expressions:</strong></p>
 </li>
 </ul>
-<pre><code>Expr  = InfixExpr | FunctionExpr | if ’(’ Expr ’)’ Expr else Expr
+<pre tabindex="0"><code>Expr  = InfixExpr | FunctionExpr | if ’(’ Expr ’)’ Expr else Expr
 InfixExpr  = PrefixExpr | InfixExpr Operator InfixExpr
 Operator  = ident
 PrefixExpr  = [’+’ | ’-’ | ’!’ | ’~’ ] SimpleExpr
@@ -1030,7 +1028,7 @@ Block  = ’{’ {Def ’;’} Expr ’}’
 <li>anonymous functions, such as <code>x =&gt; x + 1</code> or <code>(x: Int, y: Int) =&gt; x + y</code>.</li>
 </ul>
 <p><strong>Deﬁnitions:</strong></p>
-<pre><code>Def        = FunDef | ValDef
+<pre tabindex="0"><code>Def        = FunDef | ValDef
 FunDef     = ’def’ ident {’(’ [Parameters] ’)’} [’:’ Type] ’=’ Expr
 ValDef     = ’val’ ident [’:’ Type] ’=’ Expr
 Parameters = Parameter {’,’ Parameter}
@@ -1042,7 +1040,7 @@ Parameter  = ident ’:’ [’=&gt;’] Type
 </ul>
 <h2 id="classes-and-objects">Classes and Objects</h2>
 <p>Scala does not have a built-in type of rational numbers, but it is easy to deﬁne one, using a class. Here’s a possible implementation.</p>
-<pre><code>class Rational(n: Int, d: Int) {
+<pre tabindex="0"><code>class Rational(n: Int, d: Int) {
 	private def gcd(x: Int, y: Int): Int = {
 		if (x == 0) y
 		else if (x &lt; 0) gcd(-x, y)
@@ -1067,34 +1065,33 @@ Parameter  = ident ’:’ [’=&gt;’] Type
 </code></pre><p>This deﬁnes Rational as a class which takes two constructor arguments n and d, containing the number’s numerator and denominator parts. The class provides ﬁelds which return these parts as well as methods for arithmetic over rational numbers. Each arithmetic method takes as parameter the right operand of the operation. The left operand of the operation is always the rational number of which the method is a member.</p>
 <p>Private members. The implementation of rational numbers deﬁnes a private method gcd which computes the greatest common denominator of two integers, as well as a private ﬁeld g which contains the gcd of the constructor arguments. These members are inaccessible outside class Rational. They are used in the implementation of the class to eliminate common factors in the constructor arguments in order to ensure that numerator and denominator are always in normalized form.</p>
 <p>Creating and Accessing Objects. As an example of how rational numbers can be used, here’s a program that prints the sum of all numbers 1/i where i ranges from 1 to 10.</p>
-<pre><code>var i = 1
+<pre tabindex="0"><code>var i = 1
 var x = new Rational(0, 1)
 while (i &lt;= 10) {
 	x += new Rational(1, i)
 	i += 1
 }
-println(&quot;&quot; + x.numer + &quot;/&quot; + x.denom)
+println(&#34;&#34; + x.numer + &#34;/&#34; + x.denom)
 </code></pre><p>The + takes as left operand a string and as right operand a value of arbitrary type. It returns the result of converting its right operand to a string and appending it to its left operand.</p>
 <p>Inheritance and Overriding. Every class in Scala has a superclass which it ex-tends.</p>
 <p>If a class does not mention a superclass in its deﬁnition, the root type scala.AnyRef is implicitly assumed (for Java implementations, this type is an alias for java.lang.Object. For instance, class Rational could equivalently be deﬁned as</p>
-<pre><code>class Rational(n: Int, d: Int) extends AnyRef {
+<pre tabindex="0"><code>class Rational(n: Int, d: Int) extends AnyRef {
 ... // as before
 }
 </code></pre><p>A class inherits all members from its superclass. It may also redeﬁne (or: override)some inherited members. For instance, class java.lang.Object deﬁnes a method to String which returns a representation of the object as a string:</p>
-<pre><code>class Object {
+<pre tabindex="0"><code>class Object {
     ...
     def toString: String = ...
 }
-
 </code></pre><p>The implementation of toString in Object forms a string consisting of the object’s class name and a number. It makes sense to redeﬁne this method for objects that are rational numbers:</p>
-<pre><code>class Rational(n: Int, d: Int) extends AnyRef {
+<pre tabindex="0"><code>class Rational(n: Int, d: Int) extends AnyRef {
     ... // as before
-    override def toString = &quot;&quot; + numer + &quot;/&quot; + denom
+    override def toString = &#34;&#34; + numer + &#34;/&#34; + denom
 }
 </code></pre><p>Note that, unlike in Java, redeﬁning deﬁnitions need to be preceded by an override modiﬁer. If class A extends class B, then objects of type A may be used wherever objects of type B are expected. We say in this case that type A conforms to type B. For instance, Rational conforms to AnyRef, so it is legal to assign a Rational value to a variable of type AnyRef:</p>
-<pre><code>var x: AnyRef = new Rational(1, 2)
+<pre tabindex="0"><code>var x: AnyRef = new Rational(1, 2)
 </code></pre><p>Parameterless Methods. Unlike in Java, methods in Scala do not necessarily take a parameter list. An example is the square method below. This method is invoked by simply mentioning its name.</p>
-<pre><code>class Rational(n: Int, d: Int) extends AnyRef {
+<pre tabindex="0"><code>class Rational(n: Int, d: Int) extends AnyRef {
     ... // as before
     def square = new Rational(numernumer, denomdenom)
 }
@@ -1103,19 +1100,19 @@ println(r.square)
 // prints‘‘9/16’’*
 </code></pre><p>That is, parameterless methods are accessed just as value ﬁelds such as numer are. The difference between values and parameterless methods lies in their deﬁnition. The right-hand side of a value is evaluated when the object is created, and the value does not change afterwards. A right-hand side of a parameterless method, on the other hand, is evaluated each time the method is called. The uniform access of ﬁelds and parameterless methods gives increased ﬂexibility for the implementer of a class. Often, a ﬁeld in one version of a class becomes a computed value in the next version. Uniform access ensures that clients do not have to be rewritten because of that change.</p>
 <p><strong>Abstract Classes.</strong> Consider the task of writing a class for sets of integer numbers with two operations, incl and contains. (s incl x) should return a new set which contains the element x together with all the elements of set s. (s contains x) should return true if the set s contains the element x, and should return false oth- erwise. The interface of such sets is given by:</p>
-<pre><code>Classes and Objectsabstract class IntSet {
+<pre tabindex="0"><code>Classes and Objectsabstract class IntSet {
     def incl(x: Int): IntSet
     def contains(x: Int): Boolean
 }
 </code></pre><p>IntSet is labeled as an abstract class. This has two consequences. First, abstract classes may have deferred members which are declared but which do not have an implementation. In our case, both incl and contains are such members. Second,because an abstract class might have unimplemented members, no objects of thatclass may be created using new. By contrast, an abstract class may be used as a base class of some other class, which implements the deferred members.</p>
 <p><strong>Traits.</strong>  Instead of abstract class one also often uses the keyword trait in Scala.Traits are abstract classes that are meant to be added to some other class. This might be because a trait adds some methods or ﬁelds to an unknown parent class.For instance, a trait Bordered might be used to add a border to a various graphical components. Another usage scenario is where the trait collects signatures of some functionality provided by different classes, much in the way a Java interface would work.</p>
 <p>Since IntSet falls in this category, one can alternatively deﬁne it as a trait:</p>
-<pre><code>trait IntSet {
+<pre tabindex="0"><code>trait IntSet {
     def incl(x: Int): IntSet
     def contains(x: Int): Boolean
 }
 </code></pre><p><strong>Implementing Abstract Classes.</strong> Let’s say, we plan to implement sets as binary trees. There are two possible forms of trees. A tree for the empty set, and a tree consisting of an integer and two subtrees. Here are their implementations.</p>
-<pre><code>class EmptySet extends IntSet {
+<pre tabindex="0"><code>class EmptySet extends IntSet {
     def contains(x: Int): Boolean = false
     def incl(x: Int): IntSet = new NonEmptySet(x, new EmptySet, new EmptySet)
 }
@@ -1136,11 +1133,11 @@ def excl(x: Int)</p>
 <p>to return the given set without the element x. To accomplish this, it is useful to also implement a test method for sets.
 def isEmpty: Boolean</p>
 <p><strong>Dynamic Binding.</strong> Object-oriented languages (Scala included) use dynamic dis- patch for method invocations. That is, the code invoked for a method call depends on the run-time type of the object which contains the method. For example, con- sider the expression s contains 7 where s is a value of declared type s: IntSet. Which code for contains is executed depends on the type of value of s at run-time. If it is an EmptySet value, it is the implementation of contains in class EmptySet that is executed, and analogously for NonEmptySet values. This behavior is a direct consequence of our substitution model of evaluation. For instance,</p>
-<pre><code>   (new EmptySet).contains(7)
+<pre tabindex="0"><code>   (new EmptySet).contains(7)
 -&gt;      (by replacing contains by its body in class EmptySet)
    false
 </code></pre><p>Or,</p>
-<pre><code>   new NonEmptySet(7, new EmptySet, new EmptySet).contains(1)
+<pre tabindex="0"><code>   new NonEmptySet(7, new EmptySet, new EmptySet).contains(1)
 -&gt;      (by replacing contains by its body in class NonEmptySet)
    if (1 &lt; 7) new EmptySet contains 1
    else if (1 &gt; 7) new EmptySet contains 1
@@ -1151,9 +1148,9 @@ def isEmpty: Boolean</p>
    false .
 </code></pre><p>Dynamic method dispatch is analogous to higher-order function calls. In both cases, the identity of code to be executed is known only at run-time. This similarity is not just superﬁcial. Indeed, Scala represents every function value as an object(see Section 8.6).</p>
 <p><strong>Objects.</strong> In the previous implementation of integer sets, empty sets were ex-pressed with new EmptySet; so a new object was created every time an empty setvalue was required. We could have avoided unnecessary object creations by deﬁn-ing a value empty once and then using this value instead of every occurrence ofnew EmptySet. For example:</p>
-<pre><code>val EmptySetVal = new EmptySet
+<pre tabindex="0"><code>val EmptySetVal = new EmptySet
 </code></pre><p>One problem with this approach is that a value deﬁnition such as the one above isnot a legal top-level deﬁnition in Scala; it has to be part of another class or object.Also, the deﬁnition of class EmptySet now seems a bit of an overkill – why deﬁnea class of objects, if we are only interested in a single object of this class? A moredirect approach is to use an object deﬁnition. Here is a more streamlined alternativedeﬁnition of the empty set:</p>
-<pre><code>object EmptySet extends IntSet {
+<pre tabindex="0"><code>object EmptySet extends IntSet {
     def contains(x: Int): Boolean = false
     def incl(x: Int): IntSet = new NonEmptySet(x, EmptySet, EmptySet)
 }
@@ -1168,7 +1165,7 @@ def isEmpty: Boolean</p>
 </ul>
 <p>For efﬁciency, the compiler usually represents values of type scala.Int by 32 bit integers, values of type scala.Boolean by Java’s booleans, etc. But it converts these specialized representations to objects when required, for instance when a primitive Int value is passed to a function with a parameter of type AnyRef. Hence, the special representation of primitive values is just an optimization, it does not change the meaning of a program.</p>
 <p>Here is a speciﬁcation of class Boolean.</p>
-<pre><code>package scala
+<pre tabindex="0"><code>package scala
 	abstract class Boolean {
 	def &amp;&amp; (x: =&gt; Boolean): Boolean
 	def || (x: =&gt; Boolean): Boolean
@@ -1182,7 +1179,7 @@ def isEmpty: Boolean</p>
 	def &gt;= (x: Boolean)  : Boolean
 }
 </code></pre><p>Booleans can be deﬁned using only classes and objects, without reference to a built- in type of booleans or numbers. A possible implementation of class Boolean is given below. This is not the actual implementation in the standard Scala library. For efﬁciency reasons the standard implementation uses built-in booleans.</p>
-<pre><code>package scala
+<pre tabindex="0"><code>package scala
 abstract class Boolean {
 	def ifThenElse(thenpart: =&gt; Boolean, elsepart: =&gt; Boolean)
 	def &amp;&amp; (x: =&gt; Boolean): Boolean = ifThenElse(x, false)
@@ -1209,7 +1206,7 @@ case object False extends Boolean {
 	def ifThenElse(t: =&gt; Boolean, e: =&gt; Boolean) = e
 }
 </code></pre><p>Here is a partial speciﬁcation of class Int.</p>
-<pre><code>package scala
+<pre tabindex="0"><code>package scala
 abstract class Int extends AnyVal {
 	def toLong: Long
 	def toFloat: Float
@@ -1229,7 +1226,7 @@ abstract class Int extends AnyVal {
 	def == (that: Long): Boolean   // analogous for !=, &lt;, &gt;, &lt;=, &gt;=
 }
 </code></pre><p>Class Int can in principle also be implemented using just objects and classes, with-out reference to a built in type of integers. To see how, we consider a slightly simpler problem, namely how to implement a type Nat of natural (i.e. non-negative) numbers. Here is the deﬁnition of an abstract class Nat:</p>
-<pre><code>abstract class Nat {
+<pre tabindex="0"><code>abstract class Nat {
 	def isZero: Boolean
 	def predecessor: Nat
 	def successor: Nat
@@ -1238,16 +1235,16 @@ abstract class Int extends AnyVal {
 }
 </code></pre><p>To implement the operations of class Nat, we deﬁne a sub-object Zero and a sub- class Succ (for successor). Each number N is represented as N applications of the Succ constructor to Zero:</p>
 <p>The implementation of the Zero object is straightforward:</p>
-<pre><code>object Zero extends Nat {
+<pre tabindex="0"><code>object Zero extends Nat {
 	def isZero: Boolean = true
-	def predecessor: Nat = error(&quot;negative number&quot;)
+	def predecessor: Nat = error(&#34;negative number&#34;)
 	def successor: Nat = new Succ(Zero)
 	def + (that: Nat): Nat = that
 	def - (that: Nat): Nat = if (that.isZero) Zero
-	                  else error(&quot;negative number&quot;)
+	                  else error(&#34;negative number&#34;)
 }
 </code></pre><p>The implementation of the predecessor and subtraction functions on Zero throws an Error exception, which aborts the program with the given error message. Here is the implementation of the successor class:</p>
-<pre><code>class Succ(x: Nat) extends Nat {
+<pre tabindex="0"><code>class Succ(x: Nat) extends Nat {
 	def isZero: Boolean = false
 	def predecessor: Nat = x
 	def successor: Nat = new Succ(this)
@@ -1257,22 +1254,22 @@ abstract class Int extends AnyVal {
 }
 </code></pre><p>Note the implementation of method successor. To create the successor of a num- ber, we need to pass the object itself as an argument to the Succ constructor. The object itself is referenced by the reserved name this. The implementations of + and - each contain a recursive call with the constructor argument as receiver. The recursion will terminate once the receiver is the Zero object (which is guaranteed to happen eventually because of the way numbers are formed).</p>
 <p><strong>Exercise 6.0.3</strong> Write an implementation Integer of integer numbers The imple- mentation should support all operations of class Nat while adding two methods</p>
-<pre><code>def isPositive: Boolean
+<pre tabindex="0"><code>def isPositive: Boolean
 def negate: Integer
 </code></pre><p>The ﬁrst method should return true if the number is positive. The second method should negate the number. Do not use any of Scala’s standard numeric classes inyour implementation. (Hint: There are two possible ways to implement Integer.One can either make use the existing implementation of Nat, representing an inte-ger as a natural number and a sign. Or one can generalize the given implementation of Nat to Integer, using the three subclasses Zero for 0, Succ for positive numbers and Pred for negative numbers.)</p>
 <p><strong>Language Elements Introduced In This Chapter</strong></p>
 <p>Types:</p>
-<pre><code>Type      = ... | ident
+<pre tabindex="0"><code>Type      = ... | ident
 </code></pre><p>Types can now be arbitrary identiﬁers which represent classes.</p>
 <p><strong>Expressions:</strong></p>
-<pre><code>Expr = ... | Expr ’.’ ident | ’new’ Expr | ’this’
+<pre tabindex="0"><code>Expr = ... | Expr ’.’ ident | ’new’ Expr | ’this’
 </code></pre><p>An expression can now be an object creation, or a selection E.m of a member m froman object-valued expression E, or it can be the reserved name <strong>this</strong>.</p>
 <p><strong>Deﬁnitions and Declarations:</strong></p>
-<pre><code>Def = FunDef | ValDef | ClassDef | TraitDef | ObjectDef
+<pre tabindex="0"><code>Def = FunDef | ValDef | ClassDef | TraitDef | ObjectDef
 ClassDef = [’abstract’] ’class’ ident [’(’ [Parameters] ’)’]
-           [’extends’ Expr] ['{' {TemplateDef} '}']
-TraitDef = ’trait’ ident [’extends’ Expr] ['{' {TemplateDef} '}']
-ObjectDef = ’object’ ident [’extends’ Expr] ['{' {ObjectDef} '}']
+           [’extends’ Expr] [&#39;{&#39; {TemplateDef} &#39;}&#39;]
+TraitDef = ’trait’ ident [’extends’ Expr] [&#39;{&#39; {TemplateDef} &#39;}&#39;]
+ObjectDef = ’object’ ident [’extends’ Expr] [&#39;{&#39; {ObjectDef} &#39;}&#39;]
 TemplateDef = [Modifier] (Def | Dcl)
 ObjectDef = [Modifier] Def
 Modifier = ’private’ | ’override’
@@ -1280,17 +1277,16 @@ Dcl = FunDcl | ValDcl
 FunDcl = ’def’ ident {’(’ [Parameters] ’)’} ’:’ Type
 ValDcl = ’val’ ident ’:’ Type
 </code></pre><p>A deﬁnition can now be a class, trait or object deﬁnition such as</p>
-<pre><code>class C(params) extends B { defs }
+<pre tabindex="0"><code>class C(params) extends B { defs }
 trait T extends B { defs }
 object O extends B { defs }
-
 </code></pre><p>The deﬁnitions defs in a class, trait or object may be preceded by modiﬁers <strong>private</strong> or <strong>override</strong>.</p>
 <p>Abstract classes and traits may also contain declarations. These introduce <strong>deferred</strong> functions or values with their types, but do not give an implementation. Deferred members have to be implemented in subclasses before objects of an abstract class- or trait can be created.</p>
 <h2 id="case-classes-and-pattern-matching">Case Classes and Pattern Matching</h2>
 <p>Say, we want to write an interpreter for arithmetic expressions. To keep things sim- ple initially, we restrict ourselves to just numbers and + operations. Such expres- sions can be represented as a class hierarchy, with an abstract base class Expr as the root, and two subclasses Number and Sum. Then, an expression 1 + (3 + 7) would be represented as</p>
-<pre><code>new Sum(new Number(1), new Sum(new Number(3), new Number(7)))
+<pre tabindex="0"><code>new Sum(new Number(1), new Sum(new Number(3), new Number(7)))
 </code></pre><p>Now, an evaluator of an expression like this needs to know of what form it is (either Sum or Number) and also needs to access the components of the expression. The following implementation provides all necessary methods.</p>
-<pre><code>abstract class Expr {
+<pre tabindex="0"><code>abstract class Expr {
 	def isNumber: Boolean
 	def isSum: Boolean
 	def numValue: Int
@@ -1301,26 +1297,25 @@ class Number(n: Int) extends Expr {
 	def isNumber: Boolean = true
 	def isSum: Boolean = false
 	def numValue: Int = n
-	def leftOp: Expr = error(&quot;Number.leftOp&quot;)
-	def rightOp: Expr = error(&quot;Number.rightOp&quot;)
+	def leftOp: Expr = error(&#34;Number.leftOp&#34;)
+	def rightOp: Expr = error(&#34;Number.rightOp&#34;)
 }
 class Sum(e1: Expr, e2: Expr) extends Expr {
 	def isNumber: Boolean = false
 	def isSum: Boolean = true
-	def numValue: Int = error(&quot;Sum.numValue&quot;)
+	def numValue: Int = error(&#34;Sum.numValue&#34;)
 	def leftOp: Expr = e1
 	def rightOp: Expr = e2
 }
-
 </code></pre><p>With these classiﬁcation and access methods, writing an evaluator function is simple:</p>
-<pre><code>def eval(e: Expr): Int = {
+<pre tabindex="0"><code>def eval(e: Expr): Int = {
     if (e.isNumber) e.numValue
     else if (e.isSum) eval(e.leftOp) + eval(e.rightOp)
-    else error(&quot;unrecognized expression kind&quot;)
+    else error(&#34;unrecognized expression kind&#34;)
 }
 </code></pre><p>However, deﬁning all these methods in classes Sum and Number is rather tedious.Furthermore, the problem becomes worse when we want to add new forms of expressions. For instance, consider adding a new expression form Prod for products.Not only do we have to implement a new class Prod, with all previous classiﬁcation and access methods; we also have to introduce a new abstract method isProduct in class Expr and implement that method in subclasses Number, Sum, and Prod. Havingto modify existing code when a system grows is always problematic, since it introduces versioning and maintenance problems.</p>
 <p>The promise of object-oriented programming is that such modiﬁcations should beunnecessary, because they can be avoided by re-using existing, unmodiﬁed codethrough inheritance. Indeed, a more object-oriented decomposition of our prob-lem solves the problem. The idea is to make the “high-level” operation eval amethod of each expression class, instead of implementing it as a function outsidethe expression class hierarchy, as we have done before. Because eval is now a mem-ber of all expression nodes, all classiﬁcation and access methods become superﬂu-ous, and the implementation is simpliﬁed considerably:</p>
-<pre><code>abstract class Expr {
+<pre tabindex="0"><code>abstract class Expr {
 	def eval: Int
 }
 class Number(n: Int) extends Expr {
@@ -1330,23 +1325,22 @@ class Sum(e1: Expr, e2: Expr) extends Expr {
 	def eval: Int = e1.eval + e2.eval
 }
 </code></pre><p>Furthermore, adding a new Prod class does not entail any changes to existing code:</p>
-<pre><code>class Prod(e1: Expr, e2: Expr) extends Expr {
+<pre tabindex="0"><code>class Prod(e1: Expr, e2: Expr) extends Expr {
 	def eval: Int = e1.eval * e2.eval
 }
 </code></pre><p>The conclusion we can draw from this example is that object-oriented decomposition is the technique of choice for constructing systems that should be extensible with new types of data. But there is also another possible way we might want to ex- tend the expression example. We might want to add new operations on expressions. For instance, we might want to add an operation that pretty-prints an expression tree to standard output. If we have deﬁned all classiﬁcation and access methods, such an operation can easily be written as an external function. Here is an example:</p>
-<pre><code>def print(e: Expr) {
+<pre tabindex="0"><code>def print(e: Expr) {
 	if (e.isNumber) Console.print(e.numValue)
 	else if (e.isSum) {
-		Console.print(&quot;(&quot;)
+		Console.print(&#34;(&#34;)
 		print(e.leftOp)
-		Console.print(&quot;+&quot;)
+		Console.print(&#34;+&#34;)
 		print(e.rightOp)
-		Console.print(&quot;)&quot;)
-	} else error(&quot;unrecognized expression kind&quot;)
+		Console.print(&#34;)&#34;)
+	} else error(&#34;unrecognized expression kind&#34;)
 }
-
 </code></pre><p>However, if we had opted for an object-oriented decomposition of expressions, we would need to add a new print procedure to each class:</p>
-<pre><code>abstract class Expr {
+<pre tabindex="0"><code>abstract class Expr {
 	def eval: Int
 		def print
 }
@@ -1357,11 +1351,11 @@ class Number(n: Int) extends Expr {
 class Sum(e1: Expr, e2: Expr) extends Expr {
 	def eval: Int = e1.eval + e2.eval
 	def print {
-		Console.print(&quot;(&quot;)
+		Console.print(&#34;(&#34;)
 		print(e1)
-		Console.print(&quot;+&quot;)
+		Console.print(&#34;+&#34;)
 		print(e2)
-		Console.print(&quot;)&quot;)
+		Console.print(&#34;)&#34;)
 	}
 }
 </code></pre><p>Hence, classical object-oriented decomposition requires modiﬁcation of all existing classes when a system is extended with new operations.</p>
@@ -1369,28 +1363,28 @@ class Sum(e1: Expr, e2: Expr) extends Expr {
 <p>Taking a closer look, one observes that the only purpose of the classiﬁcation andaccess functions is to reverse the data construction process. They let us determine,ﬁrst, which sub-class of an abstract base class was used and, second, what were theconstructor arguments. Since this situation is quite common, Scala has a way toautomate it with case classes.</p>
 <h3 id="71-case-classes-and-case-objects">7.1 Case Classes and Case Objects</h3>
 <p>Case classes and case objects are deﬁned like a normal classes or objects, except thatthe deﬁnition is preﬁxed with the modiﬁer case. For instance, the deﬁnitions</p>
-<pre><code>abstract class Expr
+<pre tabindex="0"><code>abstract class Expr
 case class Number(n: Int) extends Expr
 case class Sum(e1: Expr, e2: Expr) extends Expr
 </code></pre><p>introduce Number and Sum as case classes. The case modiﬁer in front of a class orobject deﬁnition has the following effects.</p>
 <ol>
 <li>
 <p>Case classes implicitly come with a constructor function, with the same nameas the class. In our example, the two functions</p>
-<pre><code>def Number(n: Int) = new Number(n)
+<pre tabindex="0"><code>def Number(n: Int) = new Number(n)
 def Sum(e1: Expr, e2: Expr) = new Sum(e1, e2)
 </code></pre><p>would be added. Hence, one can now construct expression trees a bit more concisely, as in</p>
-<pre><code>Sum(Sum(Number(1), Number(2)), Number(3))
+<pre tabindex="0"><code>Sum(Sum(Number(1), Number(2)), Number(3))
 </code></pre></li>
 <li>
 <p>Case classes and case objects implicitly come with implementations of methods toString, equals and hashCode, which override the methods with the same name in class AnyRef. The implementation of these methods takes in each case the structure of a member of a case class into account. The <code>toString</code> method represents an expression tree the way it was constructed.So,</p>
-<pre><code>Sum(Number(1), Number(2)) == Sum(Number(1), Number(2))
+<pre tabindex="0"><code>Sum(Number(1), Number(2)) == Sum(Number(1), Number(2))
 </code></pre><p>will yield true. If Sum or Number were not case classes, the same expression would be false, since the standard implementation of equals in class AnyRef always treats objects created by different constructor calls as being differ- ent. The hashCode method follows the same principle as other two meth- ods. It computes a hash code from the case class constructor name and the hash codes of the constructor arguments, instead of from the object’s address, which is what the as the default implementation of hashCode does.</p>
 </li>
 <li>
 <p>Case classes implicitly come with nullary accessor methods which retrieve the constructor arguments. In our example, Number would obtain an accessor method</p>
-<pre><code>def n: Int
+<pre tabindex="0"><code>def n: Int
 </code></pre><p>which returns the constructor parameter n, whereas Sum would obtain two accessor methods</p>
-<pre><code>def e1: Expr, e2: Expr
+<pre tabindex="0"><code>def e1: Expr, e2: Expr
 </code></pre><p>Hence, if for a value s of type Sum, say, one can now write s.e1, to access the left operand. However, for a value e of type Expr, the term e.e1 would be illegal since e1 is deﬁned in Sum; it is not a member of the base class Expr. So, how do we determine the constructor and access constructor arguments for values whose static type is the base class Expr? This is solved by the fourth and ﬁnal particularity of case classes.</p>
 </li>
 <li>
@@ -1399,7 +1393,7 @@ def Sum(e1: Expr, e2: Expr) = new Sum(e1, e2)
 </ol>
 <h3 id="72-pattern-matching">7.2 Pattern Matching</h3>
 <p>Pattern matching is a generalization of C or Java’s switch statement to class hier- archies. Instead of a switch statement, there is a standard method match, which is deﬁned in Scala’s root class Any, and therefore is available for all objects. The match method takes as argument a number of cases. For instance, here is an implementation of eval using pattern matching.</p>
-<pre><code>def eval(e: Expr): Int = e match {
+<pre tabindex="0"><code>def eval(e: Expr): Int = e match {
 	case Number(n) =&gt; n
 	case Sum(l, r) =&gt; eval(l) + eval(r)
 }
@@ -1413,7 +1407,7 @@ def Sum(e1: Expr, e2: Expr) = new Sum(e1, e2)
 </ul>
 <p>Pattern variables always start with a lower-case letter, so that they can be distinguished from constant identiﬁers, which start with an upper case letter. Each variable name may occur only once in a pattern. For instance, Sum(x, x) would be illegal as a pattern, since the pattern variable x occurs twice in it.</p>
 <p><strong>Meaning of Pattern Matching.</strong> A pattern matching expression</p>
-<pre><code>e match { case p1 =&gt; e1 ... case pn =&gt; en }
+<pre tabindex="0"><code>e match { case p1 =&gt; e1 ... case pn =&gt; en }
 </code></pre><p>matches the patterns p1, &hellip;, pn in the order they are written against the selectorvalue e.</p>
 <ul>
 <li>
@@ -1431,7 +1425,7 @@ def Sum(e1: Expr, e2: Expr) = new Sum(e1, e2)
 </ul>
 <p>The pattern matching expression rewrites to the right-hand-side of the ﬁrst case whose pattern matches the selector value. References to pattern variables are re- placed by corresponding constructor arguments. If none of the patterns matches, the pattern matching expression is aborted with a MatchError exception.</p>
 <p><strong>Example 7.2.1</strong> Our substitution model of program evaluation extends quite naturally to pattern matching, For instance, here is how eval applied to a simple expression is re-written:</p>
-<pre><code>    eval(Sum(Number(1), Number(2)))
+<pre tabindex="0"><code>    eval(Sum(Number(1), Number(2)))
 
 -&gt;           (by rewriting the application)
     Sum(Number(1), Number(2)) match {
@@ -1449,31 +1443,31 @@ def Sum(e1: Expr, e2: Expr) = new Sum(e1, e2)
      1 + eval(Number(2))
 -&gt;∗  1 + 2 -&gt; 3
 </code></pre><p><strong>Pattern Matching and Methods.</strong> In the previous example, we have used pattern matching in a function which was deﬁned outside the class hierarchy over which it matches. Of course, it is also possible to deﬁne a pattern matching function in that class hierarchy itself. For instance, we could have deﬁned eval is a method of the base class Expr, and still have used pattern matching in its implementation:</p>
-<pre><code>abstract class Expr {
+<pre tabindex="0"><code>abstract class Expr {
 	def eval: Int = this match {
 		case Number(n) =&gt; n
 		case Sum(e1, e2) =&gt; e1.eval + e2.eval
 	}
 }
 </code></pre><p>Exercise 7.2.2 Consider the following deﬁnitions representing trees of integers.These deﬁnitions can be seen as an alternative representation of IntSet:</p>
-<pre><code>abstract class IntTree
+<pre tabindex="0"><code>abstract class IntTree
 case object EmptyTree extends IntTree
 case class Node(elem: Int, left: IntTree, right: IntTree) extends IntTree
 </code></pre><p>Complete the following implementations of function contains and insert forIntTree’s.</p>
-<pre><code>def contains(t: IntTree, v: Int): Boolean = t match { ...
+<pre tabindex="0"><code>def contains(t: IntTree, v: Int): Boolean = t match { ...
 	...
 }
 def insert(t: IntTree, v: Int): IntTree = t match { ...
 	...
 }
 </code></pre><p><strong>Pattern Matching Anonymous Functions.</strong> So far, case-expressions always ap-peared in conjunction with a match operation. But it is also possible to use case-expressions by themselves. A block of case-expressions such as</p>
-<pre><code>{ case P1 =&gt; E1 ... case Pn =&gt; En }
+<pre tabindex="0"><code>{ case P1 =&gt; E1 ... case Pn =&gt; En }
 </code></pre><p>is seen by itself as a function which matches its arguments against the patternsP1, &hellip;, Pn, and produces the result of one of E1, &hellip;, En. (If no pattern matches, thefunction would throw a MatchError exception instead). In other words, the expres-sion above is seen as a shorthand for the anonymous function</p>
-<pre><code>(x =&gt; x match { case P1 =&gt; E1 ... case Pn =&gt; En })
+<pre tabindex="0"><code>(x =&gt; x match { case P1 =&gt; E1 ... case Pn =&gt; En })
 </code></pre><p>where x is a fresh variable which is not used otherwise in the expression.</p>
 <h2 id="generic-types-and-methods">Generic Types and Methods</h2>
 <p>Classes in Scala can have type parameters. We demonstrate the use of type parame- ters with functional stacks as an example. Say, we want to write a data type of stacks of integers, with methods push, top, pop, and isEmpty. This is achieved by the fol- lowing class hierarchy:</p>
-<pre><code>abstract class IntStack {
+<pre tabindex="0"><code>abstract class IntStack {
 	def push(x: Int): IntStack = new IntNonEmptyStack(x, this)
 	def isEmpty: Boolean
 	def top: Int
@@ -1481,8 +1475,8 @@ def insert(t: IntTree, v: Int): IntTree = t match { ...
 }
 class IntEmptyStack extends IntStack {
 	def isEmpty = true
-	def top = error(&quot;EmptyStack.top&quot;)
-	def pop = error(&quot;EmptyStack.pop&quot;)
+	def top = error(&#34;EmptyStack.top&#34;)
+	def pop = error(&#34;EmptyStack.pop&#34;)
 }
 class IntNonEmptyStack(elem: Int, rest: IntStack) extends IntStack {
 	def isEmpty = false
@@ -1490,7 +1484,7 @@ class IntNonEmptyStack(elem: Int, rest: IntStack) extends IntStack {
 	def pop = rest
 }
 </code></pre><p>Of course, it would also make sense to deﬁne an abstraction for a stack of Strings. To do that, one could take the existing abstraction for <code>IntStack</code>, rename it to <code>StringStack</code> and at the same time rename all occurrences of type Int to String. A better way, which does not entail code duplication, is to parameterize the stack deﬁnitions with the element type. Parameterization lets us generalize from a speciﬁc instance of a problem to a more general one. So far, we have used parameterization only for values, but it is available also for types. To arrive at a generic version of Stack, we equip it with a type parameter.</p>
-<pre><code>abstract class Stack[A] {
+<pre tabindex="0"><code>abstract class Stack[A] {
 	def push(x: A): Stack[A] = new NonEmptyStackA
 	def isEmpty: Boolean
 	def top: A
@@ -1498,8 +1492,8 @@ class IntNonEmptyStack(elem: Int, rest: IntStack) extends IntStack {
 }
 class EmptyStack[A] extends Stack[A] {
 	def isEmpty = true
-	def top = error(&quot;EmptyStack.top&quot;)
-	def pop = error(&quot;EmptyStack.pop&quot;)
+	def top = error(&#34;EmptyStack.top&#34;)
+	def pop = error(&#34;EmptyStack.pop&#34;)
 }
 class NonEmptyStackA extends Stack[A] {
 	def isEmpty = false
@@ -1507,32 +1501,32 @@ class NonEmptyStackA extends Stack[A] {
 	def pop = rest
 }
 </code></pre><p>In the deﬁnitions above, ‘A’ is a type parameter of class Stack and its subclasses.Type parameters are arbitrary names; they are enclosed in brackets instead of parentheses, so that they can be easily distinguished from value parameters. Here is an example how the generic classes are used:</p>
-<pre><code>val x = new EmptyStack[Int]
+<pre tabindex="0"><code>val x = new EmptyStack[Int]
 val y = x.push(1).push(2)
 println(y.pop.top)
 </code></pre><p>The ﬁrst line creates a new empty stack of Int’s. Note the actual type argument[Int] which replaces the formal type parameter A.
 It is also possible to parameterize methods with types. As an example, here is ageneric method which determines whether one stack is a preﬁx of another.</p>
-<pre><code>def isPrefixA: Boolean = {
+<pre tabindex="0"><code>def isPrefixA: Boolean = {
 	p.isEmpty ||
 	p.top == s.top &amp;&amp; isPrefixA
 }
 </code></pre><p>The method parameters are called polymorphic. Generic methods are also called <strong>polymorphic</strong>. The term comes from the Greek, where it means “having many forms”.To apply a polymorphic method such as isPrefix, we pass type parameters as wellas value parameters to it. For instance,</p>
-<pre><code>val s1 = new EmptyStack[String].push(&quot;abc&quot;)
-val s2 = new EmptyStack[String].push(&quot;abx&quot;).push(s1.top)
+<pre tabindex="0"><code>val s1 = new EmptyStack[String].push(&#34;abc&#34;)
+val s2 = new EmptyStack[String].push(&#34;abx&#34;).push(s1.top)
 println(isPrefixString)
 </code></pre><p><strong>Local Type Inference.</strong> Passing type parameters such as [Int] or [String] all the time can become tedious in applications where generic functions are used a lot. Quite often, the information in a type parameter is redundant, because the correct parameter type can also be determined by inspecting the function’s value parame- ters or expected result type. Taking the expression isPrefixString as an example, we know that its value parameters are both of type Stack[String], so we can deduce that the type parameter must be String. Scala has a fairly powerful type inferencer which allows one to omit type parameters to polymorphic functions and constructors in situations like these. In the example above, one could have writ- ten isPrefix(s1, s2) and the missing type argument [String] would have been inserted by the type inferencer.</p>
 <h3 id="81-type-parameter-bounds">8.1 Type Parameter Bounds</h3>
 <p>Now that we know how to make classes generic it is natural to generalize some of the earlier classes we have written. For instance class IntSet could be generalized to sets with arbitrary element types. Let’s try. The abstract class for generic sets is easily written.</p>
-<pre><code>abstract class Set[A] {
+<pre tabindex="0"><code>abstract class Set[A] {
 	def incl(x: A): Set[A]
 	def contains(x: A): Boolean
 }
 </code></pre><p>However, if we still want to implement sets as binary search trees, we encounter a problem. The contains and incl methods both compare elements using methods &lt; and &gt;. For IntSet this was OK, since type Int has these two methods. But for an arbitrary type parameter a, we cannot guarantee this. Therefore, the previous implementation of, say, contains would generate a compiler error.</p>
-<pre><code>def contains(x: Int): Boolean =
+<pre tabindex="0"><code>def contains(x: Int): Boolean =
 	if (x &lt; elem) left contains x
 		^ &lt; not a member of type A.
 </code></pre><p>One way to solve the problem is to restrict the legal types that can be substituted for type A to only those types that contain methods &lt; and &gt; of the correct types. There is a trait Ordered[A] in the standard class library Scala which represents values which are comparable (via &lt; and &gt;) to values of type A. This trait is deﬁned as follows:</p>
-<pre><code>/** A class for totally ordered data. */
+<pre tabindex="0"><code>/** A class for totally ordered data. */
 trait Ordered[A] {
    /** Result of comparing ‘this’ with operand ‘that’.
 	* returns ‘x’ where
@@ -1548,13 +1542,13 @@ trait Ordered[A] {
 	def compareTo(that: A): Int = compare(that)
 }
 </code></pre><p>We can enforce the comparability of a type by demanding that the type is a subtype of Ordered. This is done by giving an upper bound to the type parameter of Set:</p>
-<pre><code>trait Set[A &lt;: Ordered[A]] {
+<pre tabindex="0"><code>trait Set[A &lt;: Ordered[A]] {
     def incl(x: A): Set[A]
     def contains(x: A): Boolean
 }
 </code></pre><p>The parameter declaration A &lt;: Ordered[A] introduces A as a type parameter which must be a subtype of Ordered[A], i.e. its values must be comparable to values of the same type.</p>
 <p>With this restriction, we can now implement the rest of the generic set abstraction as we did in the case of IntSets before.</p>
-<pre><code>class EmptySet[A &lt;: Ordered[A]] extends Set[A] {
+<pre tabindex="0"><code>class EmptySet[A &lt;: Ordered[A]] extends Set[A] {
 	def contains(x: A): Boolean = false
 	def incl(x: A): Set[A] = new NonEmptySet(x, new EmptySet[A], new EmptySet[A])}
 class NonEmptySet[A &lt;: Ordered[A]]
@@ -1569,21 +1563,21 @@ class NonEmptySet[A &lt;: Ordered[A]]
 		else this
 }
 </code></pre><p>Note that we have left out in the object creations <code>new NonEmptySet(...)</code>. In the same way as for polymorphic methods, missing type arguments in constructor calls are inferred from value arguments and/or the ex-the type argument pected result type. Here is an example that uses the generic set abstraction. Let’s ﬁrst create a subclass of Ordered, like this:</p>
-<pre><code>case class Num(value: Double) extends Ordered[Num] {
+<pre tabindex="0"><code>case class Num(value: Double) extends Ordered[Num] {
 	def compare(that: Num): Int =
 		if (this.value &lt; that.value) -1
 		else if (this.value &gt; that.value) 1
 		else 0
 }
 </code></pre><p>Then:</p>
-<pre><code>val s = new EmptySet[Num].incl(Num(1.0)).incl(Num(2.0))
+<pre tabindex="0"><code>val s = new EmptySet[Num].incl(Num(1.0)).incl(Num(2.0))
 s.contains(Num(1.5))
 </code></pre><p>This is OK, as type Num implements the trait Ordered[Num]. However, the following example is in error.</p>
-<pre><code>val s = new EmptySet[java.io.File]
+<pre tabindex="0"><code>val s = new EmptySet[java.io.File]
                     ^ java.io.File does not conform to type
                     parameter bound Ordered[java.io.File].
 </code></pre><p>One probem with type parameter bounds is that they require forethought: if we had not declared Num a subclass of Ordered, we would not have been able to use Num elements in sets. By the same token, types inherited from Java, such as Int, Double, or String are not subclasses of Ordered, so values of these types cannot be used as set elements. A more ﬂexible design, which admits elements of these types, uses view bounds in- stead of the plain type bounds we have seen so far. The only change this entails in the example above is in the type parameters:</p>
-<pre><code>trait Set[A &lt;% Ordered[A]] ...
+<pre tabindex="0"><code>trait Set[A &lt;% Ordered[A]] ...
 class EmptySet[A &lt;% Ordered[A]] ...
 class NonEmptySet[A &lt;% Ordered[A]] ...
 </code></pre><p>View bounds &lt;% are weaker than plain bounds &lt;:: A view bounded type parameter clause [A &lt;% T] only speciﬁes that the bounded type A must be convertible to the bound type T, using an implicit conversion.</p>
@@ -1591,16 +1585,16 @@ class NonEmptySet[A &lt;% Ordered[A]] ...
 <h3 id="82-variance-annotations">8.2 Variance Annotations</h3>
 <p>The combination of type parameters and subtyping poses some interesting ques-tions. For instance, should Stack[String] be a subtype of Stack[AnyRef]? Intu-itively, this seems OK, since a stack of Strings is a special case of a stack of AnyRefs.More generally, if T is a subtype of type S then Stack[T] should be a subtype ofStack[S]. This property is called co-variant subtyping.</p>
 <p>In Scala, generic types have by default non-variant subtyping. That is, with Stackdeﬁned as above, stacks with different element types would never be in a subtyperelation. However, we can enforce co-variant subtyping of stacks by changing the ﬁrst line of the deﬁnition of class Stack as follows.</p>
-<pre><code>class Stack[+A] {
+<pre tabindex="0"><code>class Stack[+A] {
 </code></pre><p>Preﬁxing a formal type parameter with a + indicates that subtyping is covariant inthat parameter. Besides +, there is also a preﬁx - which indicates contra-variantsubtyping. If Stack was deﬁned class Stack[-A] &hellip;, then T a subtype of type Swould imply that Stack[S] is a subtype of Stack[T] (which in the case of stackswould be rather surprising!).</p>
 <p>In a purely functional world, all types could be co-variant. However, the situationchanges once we introduce mutable data. Consider the case of arrays in Java or.NET. Such arrays are represented in Scala by a generic class Array. Here is a partialdeﬁnition of this class.</p>
-<pre><code>class Array[A] {
+<pre tabindex="0"><code>class Array[A] {
 	def apply(index: Int): A
 	def update(index: Int, elem: A)
 }
 </code></pre><p>The class above deﬁnes the way Scala arrays are seen from Scala user programs. The Scala compiler will map this abstraction to the underlying arrays of the host system in most cases where this possible.</p>
 <p>In Java, arrays are indeed covariant; that is, for reference types T and S, if T is a sub-type of S, then also Array[T] is a subtype of Array[S]. This might seem natural butleads to safety problems that require special runtime checks. Here is an example:</p>
-<pre><code>val x = new ArrayString
+<pre tabindex="0"><code>val x = new ArrayString
 val y: Array[Any] = x
 y(0) = new Rational(1, 2) // this is syntactic sugar for
 // y.update(0, new Rational(1, 2))
@@ -1608,14 +1602,14 @@ y(0) = new Rational(1, 2) // this is syntactic sugar for
 <p>Java solves this problem by introducing a run-time check in the third line which tests whether the stored element is compatible with the element type with which the array was created. We have seen in the example that this element type is not necessarily the static element type of the array being updated. If the test fails, an ArrayStoreException is raised.</p>
 <p>Scala solves this problem instead statically, by disallowing the second line at compile-time, because arrays in Scala have non-variant subtyping. This raises the question how a Scala compiler veriﬁes that variance annotations are correct. If we had simply declared arrays co-variant, how would the potential problem have been detected?</p>
 <p>Scala uses a conservative approximation to verify soundness of variance annota- tions. A covariant type parameter of a class may only appear in co-variant posi- tions inside the class. Among the co-variant positions are the types of values in the class, the result types of methods in the class, and type arguments to other covariant types. Not co-variant are types of formal method parameters. Hence, the following class deﬁnition would have been rejected</p>
-<pre><code>class Array[+A] {
+<pre tabindex="0"><code>class Array[+A] {
 	def apply(index: Int): A
 	def update(index: Int, elem: A)
 	                             ^ covariant type parameter A
 	                             appears in contravariant position.
 }
 </code></pre><p>So far, so good. Intuitively, the compiler was correct in rejecting the update procedure in a co-variant class because update potentially changes state, and therefore undermines the soundness of co-variant subtyping. However, there are also methods which do not mutate state, but where a type pa- rameter still appears contra-variantly. An example is push in type Stack. Again the Scala compiler will reject the deﬁnition of this method for co-variant stacks.</p>
-<pre><code>class Stack[+A] {
+<pre tabindex="0"><code>class Stack[+A] {
 	def push(x: A): Stack[A] =
                 ^ covariant type parameter A
                 appears in contravariant position.
@@ -1623,22 +1617,22 @@ y(0) = new Rational(1, 2) // this is syntactic sugar for
 <h3 id="83-lower-bounds">8.3 Lower Bounds</h3>
 <p>We have seen upper bounds for type parameters. In a type parameter declarationsuch as T &lt;: U, the type parameter T is restricted to range only over subtypes of typeU. Symmetrical to this are lower bounds in Scala. In a type parameter declarationT &gt;: S, the type parameter T is restricted to range only over supertypes of type S.(One can also combine lower and upper bounds, as in T &gt;: S &lt;: U.)</p>
 <p>Using lower bounds, we can generalize the push method in Stack as follows.</p>
-<pre><code>class Stack[+A] {
+<pre tabindex="0"><code>class Stack[+A] {
 	def pushB &gt;: A: Stack[B] = new NonEmptyStack(x, this)
 </code></pre><p>Technically, this solves our variance problem since now the type parameter A ap-pears no longer as a parameter type of method push. Instead, it appears as lowerbound for another type parameter of a method, which is classiﬁed as a co-variantposition. Hence, the Scala compiler accepts the new deﬁnition of push.</p>
 <p>In fact, we have not only solved the technical variance problem but also have gen-eralized the deﬁnition of push. Before, we were required to push only elements withtypes that conform to the declared element type of the stack. Now, we can push alsoelements of a supertype of this type, but the type of the returned stack will changeaccordingly. For instance, we can now push an AnyRef onto a stack of Strings, butthe resulting stack will be a stack of AnyRefs instead of a stack of Strings!</p>
 <p>In summary, one should not hesitate to add variance annotations to your data struc-tures, as this yields rich natural subtyping relationships. The compiler will detectpotential soundness problems. Even if the compiler’s approximation is too conser-vative, as in the case of method push of class Stack, this will often suggest a usefulgeneralization of the contested method.</p>
 <h3 id="84-least-types">8.4 Least Types</h3>
 <p>Scala does not allow one to parameterize objects with types. That’s why we originally deﬁned a generic class EmptyStack[A], even though a single value denoting empty stacks of arbitrary type would do. For co-variant stacks, however, one canuse the following idiom:</p>
-<pre><code>object EmptyStack extends Stack[Nothing] { ... }
+<pre tabindex="0"><code>object EmptyStack extends Stack[Nothing] { ... }
 </code></pre><p>The bottom type Nothing contains no value, so the type Stack[Nothing] expresses the fact that an EmptyStack contains no elements. Furthermore, Nothing is a sub-type of all other types. Hence, for co-variant stacks, Stack[Nothing] is a subtype ofStack[T], for any other type T. This makes it possible to use a single empty stackobject in user code. For instance:</p>
-<pre><code>val s = EmptyStack.push(&quot;abc&quot;).push(new AnyRef())
+<pre tabindex="0"><code>val s = EmptyStack.push(&#34;abc&#34;).push(new AnyRef())
 </code></pre><p>Let’s analyze the type assignment for this expression in detail. The EmptyStack ob- ject is of type Stack[Nothing], which has a method</p>
-<pre><code>pushB &gt;: Nothing: Stack[B] .
+<pre tabindex="0"><code>pushB &gt;: Nothing: Stack[B] .
 </code></pre><p>Local type inference will determine that the type parameter B should be instanti- ated to String in the application EmptyStack.push(&ldquo;abc&rdquo;). The result type of that application is hence Stack[String], which in turn has a method</p>
-<pre><code class="language-\" data-lang="\">pushB &gt;: String: Stack[B] .
+<pre tabindex="0"><code class="language-\" data-lang="\">pushB &gt;: String: Stack[B] .
 </code></pre><p>The ﬁnal part of the value deﬁnition above is the application of this method to new AnyRef(). Local type inference will determine that the type parameter b should this time be instantiated to AnyRef, with result type Stack[AnyRef]. Hence, the type assigned to value s is Stack[AnyRef]. Besides Nothing, which is a subtype of every other type, there is also the type Null, which is a subtype of scala.AnyRef, and every class derived from it. The null lit- eral in Scala is the only value of that type. This makes null compatible with every reference type, but not with a value type such as Int. We conclude this section with the complete improved deﬁnition of stacks. Stacks have now co-variant subtyping, the push method has been generalized, and the empty stack is represented by a single object.</p>
-<pre><code>abstract class Stack[+A] {
+<pre tabindex="0"><code>abstract class Stack[+A] {
 	def pushB &gt;: A: Stack[B] = new NonEmptyStack(x, this)
 	def isEmpty: Boolean
 	def top: A
@@ -1646,8 +1640,8 @@ y(0) = new Rational(1, 2) // this is syntactic sugar for
 }
 object EmptyStack extends Stack[Nothing] {
 	def isEmpty = true
-	def top = error(&quot;EmptyStack.top&quot;)
-	def pop = error(&quot;EmptyStack.pop&quot;)
+	def top = error(&#34;EmptyStack.top&#34;)
+	def pop = error(&#34;EmptyStack.pop&#34;)
 }
 class NonEmptyStack+A extends Stack[A] {
 	def isEmpty = false
@@ -1657,52 +1651,50 @@ class NonEmptyStack+A extends Stack[A] {
 </code></pre><p>Many classes in the Scala library are generic. We now present two commonly used families of generic classes, tuples and functions. The discussion of another common class, lists, is deferred to the next chapter.</p>
 <h3 id="85-tuples">8.5 Tuples</h3>
 <p>Generic Types and MethodsSometimes, a function needs to return more than one result. For instance, take thefunction divmod which returns the integer quotient and rest of two given integerarguments. Of course, one can deﬁne a class to hold the two results of divmod, as in:</p>
-<pre><code>case class TwoInts(first: Int, second: Int)
+<pre tabindex="0"><code>case class TwoInts(first: Int, second: Int)
 def divmod(x: Int, y: Int): TwoInts = new TwoInts(x / y, x % y)
 </code></pre><p>However, having to deﬁne a new class for every possible pair of result types is verytedious. In Scala one can use instead a generic class Tuple2, which is deﬁned asfollows:</p>
-<pre><code>package scala
+<pre tabindex="0"><code>package scala
 case class Tuple2[A, B](_1: A, _2: B)
 </code></pre><p>With Tuple2, the divmod method can be written as follows.</p>
-<pre><code>def divmod(x: Int, y: Int) = new Tuple2[Int, Int](x / y, x % y)
+<pre tabindex="0"><code>def divmod(x: Int, y: Int) = new Tuple2[Int, Int](x / y, x % y)
 </code></pre><p>As usual, type parameters to constructors can be omitted if they are deducible fromvalue arguments. There exist also tuple classes for every other number of elements(the current Scala implementation limits this to tuples of some reasonable numberof elements).</p>
 <p>How are elements of tuples accessed? Since tuples are case classes, there are twopossibilities. One can either access a tuple’s ﬁelds using the names of the construc-tor parameters _i , as in the following example:</p>
-<pre><code>val xy = divmod(x, y)
-println(&quot;quotient: &quot; + xy.1 + &quot;, rest: &quot; + xy.2)
+<pre tabindex="0"><code>val xy = divmod(x, y)
+println(&#34;quotient: &#34; + xy.1 + &#34;, rest: &#34; + xy.2)
 </code></pre><p>Or one uses pattern matching on tuples, as in the following example:</p>
-<pre><code>divmod(x, y) match {
+<pre tabindex="0"><code>divmod(x, y) match {
     case Tuple2(n, d) =&gt;
-    	println(&quot;quotient: &quot; + n + &quot;, rest: &quot; + d)
+    	println(&#34;quotient: &#34; + n + &#34;, rest: &#34; + d)
 }
-
 </code></pre><p>Note that type parameters are never used in patterns; it would have been illegal towrite <code>case Tuple2[Int, Int](n, d)</code>.</p>
 <p>Tuples are so convenient that Scala deﬁnes special syntax for them. To form atuple with n elements x1, &hellip;, xn one can write (x1, &hellip;, xn). This is equivalent toTuplen(x1, &hellip;, xn). The (&hellip;) syntax works equivalently for types and for patterns.With that tuple syntax, the divmod example is written as follows:</p>
-<pre><code>def divmod(x: Int, y: Int): (Int, Int) = (x / y, x % y)
+<pre tabindex="0"><code>def divmod(x: Int, y: Int): (Int, Int) = (x / y, x % y)
 
 divmod(x, y) match {
-	case (n, d) =&gt; println(&quot;quotient: &quot; + n + &quot;, rest: &quot; + d)
+	case (n, d) =&gt; println(&#34;quotient: &#34; + n + &#34;, rest: &#34; + d)
 }
-
 </code></pre><h3 id="86-functions">8.6 Functions</h3>
 <p>Scala is a functional language in that functions are ﬁrst-class values. Scala is also an object-oriented language in that every value is an object. It follows that functions are objects in Scala. For instance, a function from type String to type Int is represented as an instance of the trait Function1[String, Int]. The Function1 trait is deﬁned as follows.</p>
-<pre><code>package scala
+<pre tabindex="0"><code>package scala
 trait Function1[-A, +B] {
     def apply(x: A): B
 }
 </code></pre><p>Besides Function1, there are also deﬁnitions of for functions of all other arities (the current implementation implements this only up to a reasonable limit). That is, there is one deﬁnition for each possible number of function parameters. Scala’s function type syntax (T1, &hellip;, Tn) =&gt; S is simply an abbreviation for the parame- terized type Functionn[T1, &hellip;, Tn,S] . Scala uses the same syntax f (x) for function application, no matter whether f is a method or a function object. This is made possible by the following convention: A function application f (x) where f is an object (as opposed to a method) is taken to be a shorthand for f .apply(x). Hence, the apply method of a function type is inserted automatically where this is necessary. That’s also why we deﬁned array subscripting in Section 8.2 by an apply method. For any array a, the subscript operation a(i) is taken to be a shorthand for a.apply(i). Functions are an example where a contra-variant type parameter declaration is use- ful. For example, consider the following code:</p>
-<pre><code>val f: (AnyRef =&gt; Int) = x =&gt; x.hashCode()
+<pre tabindex="0"><code>val f: (AnyRef =&gt; Int) = x =&gt; x.hashCode()
 val g: (String =&gt; Int) = f
-g(&quot;abc&quot;)
-</code></pre><p>It’s sound to bind the value g of type String =&gt; Int to f, which is of type AnyRef =&gt; Int. Indeed, all one can do with function of type String =&gt; Int is pass it a string in order to obtain an integer. Clearly, the same works for function f: If we pass it a string (or any other object), we obtain an integer. This demonstrates that function subtyping is contra-variant in its argument type whereas it is covariant in its result type. In short, S ⇒ T is a subtype of $S^{'}$ ⇒ $T^{'}$ , provided $S^{'}$  is a subtype of S and T is a subtype of $T^{'}$.</p>
+g(&#34;abc&#34;)
+</code></pre><p>It’s sound to bind the value g of type String =&gt; Int to f, which is of type AnyRef =&gt; Int. Indeed, all one can do with function of type String =&gt; Int is pass it a string in order to obtain an integer. Clearly, the same works for function f: If we pass it a string (or any other object), we obtain an integer. This demonstrates that function subtyping is contra-variant in its argument type whereas it is covariant in its result type. In short, S ⇒ T is a subtype of $S^{&rsquo;}$ ⇒ $T^{&rsquo;}$ , provided $S^{&rsquo;}$  is a subtype of S and T is a subtype of $T^{&rsquo;}$.</p>
 <p><strong>Example 8.6.1</strong> Consider the Scala code</p>
-<pre><code>val plus1: (Int =&gt; Int) = (x: Int) =&gt; x + 1
+<pre tabindex="0"><code>val plus1: (Int =&gt; Int) = (x: Int) =&gt; x + 1
 plus1(2)
 </code></pre><p>This is expanded into the following object code.</p>
-<pre><code>val plus1: Function1[Int, Int] = new Function1[Int, Int] {
+<pre tabindex="0"><code>val plus1: Function1[Int, Int] = new Function1[Int, Int] {
 	def apply(x: Int): Int = x + 1
 }
 plus1.apply(2)
 </code></pre><p>Here, the object creation new Function1[Int, Int]{ &hellip; } represents an instanceof an anonymous class. It combines the creation of a new Function1 object with an implementation of the apply method (which is abstract in Function1). Equivalently,but more verbosely, one could have used a local class:</p>
-<pre><code>val plus1: Function1[Int, Int] = {
+<pre tabindex="0"><code>val plus1: Function1[Int, Int] = {
 	class Local extends Function1[Int, Int] {
 		def apply(x: Int): Int = x + 1
 	}
@@ -2571,7 +2563,7 @@ plus1.apply(2)
 </ul>
 <p>val books: List[Book] = List(</p>
 <p>Book(&ldquo;Structure and Interpretation of Computer Programs&rdquo;,</p>
-<p>List(&ldquo;Abelson, Harold&rdquo;, &ldquo;Sussman, Gerald J.&quot;)),</p>
+<p>List(&ldquo;Abelson, Harold&rdquo;, &ldquo;Sussman, Gerald J.&rdquo;)),</p>
 <p>Book(&ldquo;Principles of Compiler Design&rdquo;,</p>
 <p>List(&ldquo;Aho, Alfred&rdquo;, &ldquo;Ullman, Jeffrey&rdquo;)),</p>
 <p>Book(&ldquo;Programming in Modula-2&rdquo;,</p>
@@ -3625,7 +3617,7 @@ plus1.apply(2)
 <p>Another use of lazy values is to resolve the initialization order of applications com-posed of several modules. Before lazy values were introduced, the same effect wasachieved by using object deﬁnitions. As a second example, we consider a compilercomposed of several modules. We look ﬁrst at a simple symbol table that deﬁnes aclass for symbols and two predeﬁned functions.</p>
 <p>class Symbols(val compiler: Compiler) {</p>
 <p>import compiler.types._</p>
-<p>val Add = new Symbol(&quot;+&rdquo;, FunType(List(IntType, IntType), IntType))</p>
+<p>val Add = new Symbol(&quot;+&quot;, FunType(List(IntType, IntType), IntType))</p>
 <p>val Sub = new Symbol(&quot;-&quot;, FunType(List(IntType, IntType), IntType))</p>
 <p>class Symbol(name: String, tpe: Type) {</p>
 <p>override def toString = name + &ldquo;: &quot; + tpe</p>
@@ -3894,7 +3886,7 @@ plus1.apply(2)
 <p>}</p>
 <p>Hindley/Milner Type Inferencecase class Tycon(k: String, ts: List[Type]) extends Type {</p>
 <p>override def toString =</p>
-<p>k + (if (ts.isEmpty) &quot;&rdquo; else ts.mkString(&quot;[&quot;, &ldquo;,&rdquo;, &ldquo;]&quot;))</p>
+<p>k + (if (ts.isEmpty) &quot;&rdquo; else ts.mkString(&quot;[&quot;, &ldquo;,&rdquo;, &ldquo;]&rdquo;))</p>
 <p>}</p>
 <p>There are three type constructors: Tyvar for type variables, Arrow for function typesand Tycon for type constructors such as Boolean or List. Type constructors have ascomponent a list of their type parameters. This list is empty for type constants suchas Boolean. Again, the type constructors implement the toString method in orderto display types legibly.</p>
 <p>Note that Type is a sealed class. This means that no subclasses or data constructorsthat extend Type can be formed outside the sequence of deﬁnitions in which Type isdeﬁned. This makes Type a closed algebraic data type with exactly three alternatives.By contrast, type Term is an open algebraic type for which further alternatives can bedeﬁned.</p>
@@ -4995,7 +4987,7 @@ plus1.apply(2)
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

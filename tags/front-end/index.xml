@@ -22,7 +22,17 @@
       <pubDate>Wed, 21 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/front-end/angular/</guid>
-      <description>QuickStart Step 1. Set up the Development Environment $ yaourt -S nodejs npm $ npm install -g @angular/cli Step 2. Create a new project $ ng new my-app Step 3: Serve the application $ cd my-app $ ng serve --open Step 4: Edit your first Angular component # ./src/app/app.component.ts export class AppComponent { title = &#39;My First Angular App!&#39;; } # ./src/app/app.component.css h1 { color: #369; font-family: Arial, Helvetica, sans-serif; font-size: 250%; } Project file review my-app e2e # end-to-end tests src app.</description>
+      <description>QuickStart Step 1. Set up the Development Environment $ yaourt -S nodejs npm $ npm install -g @angular/cli Step 2. Create a new project $ ng new my-app Step 3: Serve the application $ cd my-app $ ng serve --open Step 4: Edit your first Angular component # ./src/app/app.component.ts export class AppComponent { title = &amp;#39;My First Angular App!&amp;#39;; } # ./src/app/app.component.css h1 { color: #369; font-family: Arial, Helvetica, sans-serif; font-size: 250%; } Project file review my-app e2e # end-to-end tests src app.</description>
+    </item>
+    
+    <item>
+      <title>React Tutorial</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/front-end/react/</link>
+      <pubDate>Wed, 21 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/front-end/react/</guid>
+      <description>Node.js Installation $ sudo pacman -S nodejs Managing packages with npm
+$ npm install packageName # installs the package in the current directory under node_modules $ npm -g install packageName # installs the package under /usr/lib/node_modules/npm $ npm update packageName $ npm update -g packageName $ npm uninstall packageName $ npm -g uninstall packageName $ npm list --depth=0 $ npm -g list $ npm outdated $ npm audit fix --force # To address all issues (including breaking changes) $ npm start # Starts the development server.</description>
     </item>
     
     <item>
@@ -31,7 +41,7 @@
       <pubDate>Wed, 17 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/front-end/jquery/</guid>
-      <description>jQuery Get Started Downloading jQuery &amp;lt;head&amp;gt; &amp;lt;script src=&amp;quot;jquery-3.3.1.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; jQuery CDN &amp;lt;head&amp;gt; &amp;lt;script src=&amp;quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;head&amp;gt; &amp;lt;script src=&amp;quot;https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; jQuery Syntax Basic syntax is: $(selector).action() // Examples: $(this).hide() // hides the current element. $(&amp;quot;p&amp;quot;).hide() // hides all &amp;lt;p&amp;gt; elements. $(&amp;quot;.test&amp;quot;).hide() // hides all elements with class=&amp;quot;test&amp;quot;. $(&amp;quot;#test&amp;quot;).hide() // hides the element with id=&amp;quot;test&amp;quot;. $(document).ready(function(){ // all jQuery methods inside a document ready event to prevent // any jQuery code from</description>
+      <description>jQuery Get Started Downloading jQuery &amp;lt;head&amp;gt; &amp;lt;script src=&amp;#34;jquery-3.3.1.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; jQuery CDN &amp;lt;head&amp;gt; &amp;lt;script src=&amp;#34;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;head&amp;gt; &amp;lt;script src=&amp;#34;https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; jQuery Syntax Basic syntax is: $(selector).action() // Examples: $(this).hide() // hides the current element. $(&amp;#34;p&amp;#34;).hide() // hides all &amp;lt;p&amp;gt; elements. $(&amp;#34;.test&amp;#34;).hide() // hides all elements with class=&amp;#34;test&amp;#34;. $(&amp;#34;#test&amp;#34;).hide() // hides the element with id=&amp;#34;test&amp;#34;. $(document).ready(function(){ // all jQuery methods inside a document ready event to prevent // any jQuery code from</description>
     </item>
     
     <item>

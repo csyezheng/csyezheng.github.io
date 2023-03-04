@@ -31,7 +31,7 @@
       <pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/oauth2/</guid>
-      <description>Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... &#39;provider&#39;, &#39;provider.oauth2&#39;, ) # urls.py url(r&#39;^oauth2/&#39;, include(&#39;provider.oauth2.urls&#39;, namespace = &#39;oauth2&#39;)), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ?   Create a client entry in your database
+      <description>Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... &amp;#39;provider&amp;#39;, &amp;#39;provider.oauth2&amp;#39;, ) # urls.py url(r&amp;#39;^oauth2/&amp;#39;, include(&amp;#39;provider.oauth2.urls&amp;#39;, namespace = &amp;#39;oauth2&amp;#39;)), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ? Create a client entry in your database
 To find out which type of client you need to create, read Section 2.1.
 To create a new entry simply use the Django admin panel.</description>
     </item>
@@ -46,16 +46,18 @@ To create a new entry simply use the Django admin panel.</description>
 Query String Parameters: next: /api/v1/courses/
 Request Method: GET
 Status Code: 302 Found
-  Request URL: http://localhost:18381/login/edx-oidc/?next=/api/v1/courses/
+Request URL: http://localhost:18381/login/edx-oidc/?next=/api/v1/courses/
 Query String Parameters: next: /api/v1/courses/
 Request Method: GET
 Status Code: 302 Found
-  Request URL: http://localhost:18000/oauth2/authorize/?redirect_uri=http://localhost:18381/complete/edx-oidc/&amp;amp;client_id=discovery-key&amp;amp;scope=openid+profile+email+permissions&amp;amp;response_type=code&amp;amp;state=W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x
+Request URL: http://localhost:18000/oauth2/authorize/?redirect_uri=http://localhost:18381/complete/edx-oidc/&amp;amp;client_id=discovery-key&amp;amp;scope=openid+profile+email+permissions&amp;amp;response_type=code&amp;amp;state=W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x
 Query String Parameters:
- redirect_uri: http://localhost:18381/complete/edx-oidc/ client_id: discovery-key scope: openid profile email permissions response_type: code state: W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x  Request Method: GET
+redirect_uri: http://localhost:18381/complete/edx-oidc/ client_id: discovery-key scope: openid profile email permissions response_type: code state: W7KfXvcIA9Zg2DRRIWADlGDIY86gTt4x Request Method: GET
 Status Code: 302 Found
-  Request URL: http://localhost:18000/oauth2/authorize/confirm
-Request Method: GET</description>
+Request URL: http://localhost:18000/oauth2/authorize/confirm
+Request Method: GET
+Status Code: 302 Found
+Request URL: http://localhost:18000/login?next=/oauth2/authorize/confirm</description>
     </item>
     
     <item>
@@ -75,9 +77,9 @@ Extend the HomePage model # home/models.py from django.db import models from wag
       <pubDate>Mon, 22 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/django/</guid>
-      <description>First steps  Requests and responses Models and the admin site Views and templates Forms and generic views Testing Static files Customizing the admin site  Advanced Tutorials: How to write reusable apps | Writing your first patch for Django
+      <description>First steps Requests and responses Models and the admin site Views and templates Forms and generic views Testing Static files Customizing the admin site Advanced Tutorials: How to write reusable apps | Writing your first patch for Django
 The model layer Models Generally, each model maps to a single database table.
-from django.db import models class Person(models.Model): name = models.CharField(max_length=30)  The name of the table, myapp_person, is automatically derived from the name of the app and the model class.</description>
+from django.db import models class Person(models.Model): name = models.CharField(max_length=30) The name of the table, myapp_person, is automatically derived from the name of the app and the model class.</description>
     </item>
     
   </channel>

@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="MySQL Shell Guide Connecting to and Disconnecting from the Server shell&amp;gt; mysql -h host -u user -p mysql&amp;gt; QUIT User Account Management Adding User Accounts shell&amp;gt; mysql --user=root --password mysql shell&amp;gt; mysql --u root -p mysql mysql&amp;gt; CREATE USER &#39;custom&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;localhost&#39; -&amp;gt; WITH GRANT OPTION; mysql&amp;gt; CREATE USER &#39;custom&#39;@&#39;%&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;%&#39; -&amp;gt; WITH GRANT OPTION; mysql&amp;gt; CREATE USER &#39;admin&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&amp;gt; GRANT RELOAD,PROCESS ON *." />
+  <meta name="description" content="MySQL Shell Guide Connecting to and Disconnecting from the Server shell&amp;gt; mysql -h host -u user -p mysql&amp;gt; QUIT User Account Management Adding User Accounts shell&amp;gt; mysql --user=root --password mysql shell&amp;gt; mysql --u root -p mysql mysql&amp;gt; CREATE USER &amp;#39;custom&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;password&amp;#39;; mysql&amp;gt; GRANT ALL PRIVILEGES ON *.* TO &amp;#39;finley&amp;#39;@&amp;#39;localhost&amp;#39; -&amp;gt; WITH GRANT OPTION; mysql&amp;gt; CREATE USER &amp;#39;custom&amp;#39;@&amp;#39;%&amp;#39; IDENTIFIED BY &amp;#39;password&amp;#39;; mysql&amp;gt; GRANT ALL PRIVILEGES ON *.* TO &amp;#39;finley&amp;#39;@&amp;#39;%&amp;#39; -&amp;gt; WITH GRANT OPTION; mysql&amp;gt; CREATE USER &amp;#39;admin&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;password&amp;#39;; mysql&amp;gt; GRANT RELOAD,PROCESS ON *." />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/web-application/back-end/mysql/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,12 +63,11 @@
 <meta property="og:description" content="MySQL Shell Guide Connecting to and Disconnecting from the Server shell&gt; mysql -h host -u user -p mysql&gt; QUIT User Account Management Adding User Accounts shell&gt; mysql --user=root --password mysql shell&gt; mysql --u root -p mysql mysql&gt; CREATE USER &#39;custom&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;localhost&#39; -&gt; WITH GRANT OPTION; mysql&gt; CREATE USER &#39;custom&#39;@&#39;%&#39; IDENTIFIED BY &#39;password&#39;; mysql&gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;%&#39; -&gt; WITH GRANT OPTION; mysql&gt; CREATE USER &#39;admin&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&gt; GRANT RELOAD,PROCESS ON *." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/web-application/back-end/mysql/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2018-08-26T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2018-08-26T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2018-08-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-08-26T00:00:00+00:00" />
 <meta itemprop="name" content="MySQL">
-<meta itemprop="description" content="MySQL Shell Guide Connecting to and Disconnecting from the Server shell&gt; mysql -h host -u user -p mysql&gt; QUIT User Account Management Adding User Accounts shell&gt; mysql --user=root --password mysql shell&gt; mysql --u root -p mysql mysql&gt; CREATE USER &#39;custom&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;localhost&#39; -&gt; WITH GRANT OPTION; mysql&gt; CREATE USER &#39;custom&#39;@&#39;%&#39; IDENTIFIED BY &#39;password&#39;; mysql&gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;%&#39; -&gt; WITH GRANT OPTION; mysql&gt; CREATE USER &#39;admin&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&gt; GRANT RELOAD,PROCESS ON *."><meta itemprop="datePublished" content="2018-08-26T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-08-26T00:00:00&#43;00:00" />
+<meta itemprop="description" content="MySQL Shell Guide Connecting to and Disconnecting from the Server shell&gt; mysql -h host -u user -p mysql&gt; QUIT User Account Management Adding User Accounts shell&gt; mysql --user=root --password mysql shell&gt; mysql --u root -p mysql mysql&gt; CREATE USER &#39;custom&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;localhost&#39; -&gt; WITH GRANT OPTION; mysql&gt; CREATE USER &#39;custom&#39;@&#39;%&#39; IDENTIFIED BY &#39;password&#39;; mysql&gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;%&#39; -&gt; WITH GRANT OPTION; mysql&gt; CREATE USER &#39;admin&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;; mysql&gt; GRANT RELOAD,PROCESS ON *."><meta itemprop="datePublished" content="2018-08-26T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-08-26T00:00:00+00:00" />
 <meta itemprop="wordCount" content="1010">
 <meta itemprop="keywords" content="mySQL,database," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="MySQL"/>
@@ -348,43 +347,43 @@
     <div class="post-content">
       <h2 id="mysql-shell-guide">MySQL Shell Guide</h2>
 <h3 id="connecting-to-and-disconnecting-from-the-server">Connecting to and Disconnecting from the Server</h3>
-<pre><code>shell&gt; mysql -h host -u user -p
-</code></pre><pre><code>mysql&gt; QUIT
+<pre tabindex="0"><code>shell&gt; mysql -h host -u user -p
+</code></pre><pre tabindex="0"><code>mysql&gt; QUIT
 </code></pre><h3 id="user-account-management">User Account Management</h3>
 <h4 id="adding-user-accounts">Adding User Accounts</h4>
-<pre><code>shell&gt; mysql --user=root --password mysql
+<pre tabindex="0"><code>shell&gt; mysql --user=root --password mysql
 shell&gt; mysql --u root -p mysql
-</code></pre><pre><code>mysql&gt; CREATE USER 'custom'@'localhost' IDENTIFIED BY 'password';
-mysql&gt; GRANT ALL PRIVILEGES ON *.* TO 'finley'@'localhost'
+</code></pre><pre tabindex="0"><code>mysql&gt; CREATE USER &#39;custom&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;;
+mysql&gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;localhost&#39;
     -&gt;     WITH GRANT OPTION;
-mysql&gt; CREATE USER 'custom'@'%' IDENTIFIED BY 'password';
-mysql&gt; GRANT ALL PRIVILEGES ON *.* TO 'finley'@'%'
+mysql&gt; CREATE USER &#39;custom&#39;@&#39;%&#39; IDENTIFIED BY &#39;password&#39;;
+mysql&gt; GRANT ALL PRIVILEGES ON *.* TO &#39;finley&#39;@&#39;%&#39;
     -&gt;     WITH GRANT OPTION;
-mysql&gt; CREATE USER 'admin'@'localhost' IDENTIFIED BY 'password';
-mysql&gt; GRANT RELOAD,PROCESS ON *.* TO 'admin'@'localhost';
-mysql&gt; CREATE USER 'dummy'@'localhost';
+mysql&gt; CREATE USER &#39;admin&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;;
+mysql&gt; GRANT RELOAD,PROCESS ON *.* TO &#39;admin&#39;@&#39;localhost&#39;;
+mysql&gt; CREATE USER &#39;dummy&#39;@&#39;localhost&#39;;
 </code></pre><ul>
 <li>Two accounts have a user name of <code>custom</code>. Both are superuser accounts with full privileges to do anything. The <code>'custom'@'localhost'</code> account can be used only when connecting from the local host. The <code>'custom'@'%'</code> account uses the <code>'%'</code> wildcard for the host part, so it can be used to connect from any host.</li>
 <li>The <code>'admin'@'localhost'</code>account can be used only by <code>admin</code> to connect from the local host. It is granted the <code>RELOAD</code> and <code>PROCESS</code> administrative privileges. These privileges enable the admin user to execute the <code>mysqladmin reload</code>, <code>mysqladmin refresh</code>, and <code>mysqladmin flush-xxx </code> commands, as well as <code>mysqladmin processlist</code> . No privileges are granted for accessing any databases.</li>
 <li>The <code>'dummy'@'localhost'</code> account has no password (which is insecure and not recommended).</li>
 </ul>
 <h4 id="removing-user-accounts">Removing User Accounts</h4>
-<pre><code>mysql&gt; DROP USER 'jeffrey'@'localhost';
+<pre tabindex="0"><code>mysql&gt; DROP USER &#39;jeffrey&#39;@&#39;localhost&#39;;
 </code></pre><h4 id="assigning-account-passwords">Assigning Account Passwords</h4>
-<pre><code>SET PASSWORD FOR 'jeffrey'@'localhost' = PASSWORD('password');
-</code></pre><pre><code>GRANT USAGE ON *.* TO 'jeffrey'@'localhost' IDENTIFIED BY 'password';
-</code></pre><pre><code># the client host from which you connect in the Host column.
-mysqladmin -u user_name -h host_name password &quot;password&quot;
+<pre tabindex="0"><code>SET PASSWORD FOR &#39;jeffrey&#39;@&#39;localhost&#39; = PASSWORD(&#39;password&#39;);
+</code></pre><pre tabindex="0"><code>GRANT USAGE ON *.* TO &#39;jeffrey&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password&#39;;
+</code></pre><pre tabindex="0"><code># the client host from which you connect in the Host column.
+mysqladmin -u user_name -h host_name password &#34;password&#34;
 </code></pre><h3 id="mysql-shell-code-execution">MySQl Shell Code Execution</h3>
-<pre><code>shell&gt; echo &quot;show databases;&quot; | mysqlsh --sql --uri root@198.51.100.141:33060
+<pre tabindex="0"><code>shell&gt; echo &#34;show databases;&#34; | mysqlsh --sql --uri root@198.51.100.141:33060
 </code></pre><h4 id="active-language">Active Language</h4>
-<pre><code>shell&gt; mysqlsh -h host -u user -p --sql &lt; code.sql &gt; mysql.out
+<pre tabindex="0"><code>shell&gt; mysqlsh -h host -u user -p --sql &lt; code.sql &gt; mysql.out
 shell&gt; mysqlsh -h host -u user -p &lt; code.js &gt; mysql.out
 shell&gt; mysqlsh -h host -u user -p --py &lt; code.py &gt; mysql.out
 </code></pre><h4 id="multiple-line-support">Multiple-line Support</h4>
 <p>When in Python or JavaScript mode, multiple-line mode is automatically enabled.</p>
 <p>In SQL mode multiple line mode starts when the command <code>\</code> is issued.</p>
-<pre><code>mysql-sql&gt; \
+<pre tabindex="0"><code>mysql-sql&gt; \
 ... create procedure get_actors()
 ... begin
 ...   select first_name from sakila.actor;
@@ -479,7 +478,7 @@ mysql-sql&gt;
 </tbody>
 </table>
 <h4 id="example">Example</h4>
-<pre><code>\help connect
+<pre tabindex="0"><code>\help connect
 \connect root@localhost:3306
 ;;Use the --mysqlx(-mx) option to create a session using the X Protocol 
 \connect --mysqlx root@localhost:33060 
@@ -492,82 +491,82 @@ mysql-sql&gt;
 \history clear
 \rehash
 </code></pre><h2 id="queries">Queries</h2>
-<pre><code>mysql&gt; SELECT VERSION(), CURRENT_DATE; SELECT NOW();
+<pre tabindex="0"><code>mysql&gt; SELECT VERSION(), CURRENT_DATE; SELECT NOW();
 mysql&gt; CREATE DATABASE menagerie;
 mysql&gt; USE menagerie
 mysql&gt; SHOW TABLES;
 mysql&gt; CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20),
     -&gt; species VARCHAR(20), sex CHAR(1), birth DATE, death DATE);
 mysql&gt; DESCRIBE pet;
-</code></pre><pre><code>mysql&gt; INSERT INTO pet
-    -&gt; VALUES ('Puffball','Diane','hamster','f','1999-03-30',NULL);
-</code></pre><pre><code>mysql&gt; DELETE FROM table_name;
-</code></pre><pre><code>mysql&gt; UPDATE pet SET birth = '1989-08-31' WHERE name = 'Bowser' OR species = 'bird';
-</code></pre><pre><code>mysql&gt; SELECT * FROM pet WHERE name = 'Bowser' AND birth &gt;= '1998-1-1';
-</code></pre><pre><code>mysql&gt; SELECT DISTINCT owner FROM pet;
-</code></pre><pre><code>mysql&gt; SELECT name, species, birth FROM pet
+</code></pre><pre tabindex="0"><code>mysql&gt; INSERT INTO pet
+    -&gt; VALUES (&#39;Puffball&#39;,&#39;Diane&#39;,&#39;hamster&#39;,&#39;f&#39;,&#39;1999-03-30&#39;,NULL);
+</code></pre><pre tabindex="0"><code>mysql&gt; DELETE FROM table_name;
+</code></pre><pre tabindex="0"><code>mysql&gt; UPDATE pet SET birth = &#39;1989-08-31&#39; WHERE name = &#39;Bowser&#39; OR species = &#39;bird&#39;;
+</code></pre><pre tabindex="0"><code>mysql&gt; SELECT * FROM pet WHERE name = &#39;Bowser&#39; AND birth &gt;= &#39;1998-1-1&#39;;
+</code></pre><pre tabindex="0"><code>mysql&gt; SELECT DISTINCT owner FROM pet;
+</code></pre><pre tabindex="0"><code>mysql&gt; SELECT name, species, birth FROM pet
     -&gt; ORDER BY species, birth DESC;
 </code></pre><h4 id="maximum">Maximum</h4>
-<pre><code>SELECT MAX(article) AS article FROM shop;
-</code></pre><pre><code>SELECT article, MAX(price) AS price
+<pre tabindex="0"><code>SELECT MAX(article) AS article FROM shop;
+</code></pre><pre tabindex="0"><code>SELECT article, MAX(price) AS price
 FROM   shop
 GROUP BY article;
 </code></pre><h4 id="date-calculations">Date Calculations</h4>
-<pre><code># TIMESTAMPDIFF(unit,datetime_expr1,datetime_expr2)
+<pre tabindex="0"><code># TIMESTAMPDIFF(unit,datetime_expr1,datetime_expr2)
 mysql&gt; SELECT name, birth, CURDATE(),
     -&gt; TIMESTAMPDIFF(YEAR,birth,CURDATE()) AS age
     -&gt; FROM pet WHERE death IS NOT NULL ORDER BY age;
-</code></pre><pre><code># YEAR(date), MONTH(date), DAYOFMONTH(date)
+</code></pre><pre tabindex="0"><code># YEAR(date), MONTH(date), DAYOFMONTH(date)
 mysql&gt; SELECT name, birth FROM pet WHERE MONTH(birth) = 5;
-</code></pre><pre><code># DATE_ADD(date,INTERVAL expr unit), DATE_SUB(date,INTERVAL expr unit)
+</code></pre><pre tabindex="0"><code># DATE_ADD(date,INTERVAL expr unit), DATE_SUB(date,INTERVAL expr unit)
 mysql&gt; SELECT name, birth FROM pet
     -&gt; WHERE MONTH(birth) = MONTH(DATE_ADD(CURDATE(),INTERVAL 1 MONTH));
-</code></pre><pre><code># MOD(N,M) is N % M
+</code></pre><pre tabindex="0"><code># MOD(N,M) is N % M
 mysql&gt; SELECT name, birth FROM pet
     -&gt; WHERE MONTH(birth) = MOD(MONTH(CURDATE()), 12) + 1;
 </code></pre><h4 id="null-values">NULL Values</h4>
-<pre><code>mysql&gt; SELECT 1 IS NOT NULL, '' IS NOT NULL;
+<pre tabindex="0"><code>mysql&gt; SELECT 1 IS NOT NULL, &#39;&#39; IS NOT NULL;
 </code></pre><p>When doing an <code>ORDER BY</code>, <code>NULL</code> values are presented first if you do <code>ORDER BY ... ASC</code> and last if you do <code>ORDER BY ... DESC</code>.</p>
 <h4 id="pattern-matching">Pattern Matching</h4>
 <h4 id="counting-rows">Counting Rows</h4>
-<pre><code>SELECT owner, COUNT(*) FROM pet GROUP BY owner;
+<pre tabindex="0"><code>SELECT owner, COUNT(*) FROM pet GROUP BY owner;
 mysql&gt; SELECT species, sex, COUNT(*) FROM pet
-    -&gt; WHERE species = 'dog' OR species = 'cat'
+    -&gt; WHERE species = &#39;dog&#39; OR species = &#39;cat&#39;
     -&gt; GROUP BY species, sex;
 </code></pre><h4 id="using-more-than-one-table">Using More Than one Table</h4>
-<pre><code>mysql&gt; SELECT pet.name,
+<pre tabindex="0"><code>mysql&gt; SELECT pet.name,
     -&gt; TIMESTAMPDIFF(YEAR,birth,date) AS age,
     -&gt; remark
     -&gt; FROM pet INNER JOIN event
     -&gt;   ON pet.name = event.name
-    -&gt; WHERE event.type = 'litter';
-</code></pre><pre><code>mysql&gt; SELECT p1.name, p1.sex, p2.name, p2.sex, p1.species
+    -&gt; WHERE event.type = &#39;litter&#39;;
+</code></pre><pre tabindex="0"><code>mysql&gt; SELECT p1.name, p1.sex, p2.name, p2.sex, p1.species
     -&gt; FROM pet AS p1 INNER JOIN pet AS p2
-    -&gt;   ON p1.species = p2.species AND p1.sex = 'f' AND p2.sex = 'm';
-</code></pre><pre><code>SELECT s1.article, s1.dealer, s1.price
+    -&gt;   ON p1.species = p2.species AND p1.sex = &#39;f&#39; AND p2.sex = &#39;m&#39;;
+</code></pre><pre tabindex="0"><code>SELECT s1.article, s1.dealer, s1.price
 FROM shop s1
 LEFT JOIN shop s2 ON s1.price &lt; s2.price
 WHERE s2.article IS NULL;
 </code></pre><h2 id="loading-data-into-a-table">Loading Data into a Table</h2>
-<pre><code>mysql&gt; LOAD DATA LOCAL INFILE '/path/pet.txt' INTO TABLE pet;
+<pre tabindex="0"><code>mysql&gt; LOAD DATA LOCAL INFILE &#39;/path/pet.txt&#39; INTO TABLE pet;
 # File on Windows with an editor that uses \r\n as a line terminator
-mysql&gt; LOAD DATA LOCAL INFILE '/path/pet.txt' INTO TABLE pet
-    -&gt; LINES TERMINATED BY '\r\n';
+mysql&gt; LOAD DATA LOCAL INFILE &#39;/path/pet.txt&#39; INTO TABLE pet
+    -&gt; LINES TERMINATED BY &#39;\r\n&#39;;
 </code></pre><h3 id="searching-on-two-keys">Searching on Two Keys</h3>
-<pre><code>SELECT field1_index, field2_index FROM test_table
-WHERE field1_index = '1' OR  field2_index = '1'
-</code></pre><pre><code>SELECT field1_index, field2_index
-    FROM test_table WHERE field1_index = '1'
+<pre tabindex="0"><code>SELECT field1_index, field2_index FROM test_table
+WHERE field1_index = &#39;1&#39; OR  field2_index = &#39;1&#39;
+</code></pre><pre tabindex="0"><code>SELECT field1_index, field2_index
+    FROM test_table WHERE field1_index = &#39;1&#39;
 UNION
 SELECT field1_index, field2_index
-    FROM test_table WHERE field2_index = '1';
+    FROM test_table WHERE field2_index = &#39;1&#39;;
 </code></pre><h3 id="subquery">subquery</h3>
-<pre><code>SELECT article, dealer, price
+<pre tabindex="0"><code>SELECT article, dealer, price
 FROM   shop s1
 WHERE  price=(SELECT MAX(s2.price)
               FROM shop s2
               WHERE s1.article = s2.article);
-</code></pre><pre><code>SELECT s1.article, dealer, s1.price
+</code></pre><pre tabindex="0"><code>SELECT s1.article, dealer, s1.price
 FROM shop s1
 JOIN (
   SELECT article, MAX(price) AS price
@@ -575,7 +574,7 @@ JOIN (
   GROUP BY article) AS s2
   ON s1.article = s2.article AND s1.price = s2.price;
 </code></pre><h3 id="left-join">LEFT JOIN</h3>
-<pre><code>SELECT s1.article, s1.dealer, s1.price
+<pre tabindex="0"><code>SELECT s1.article, s1.dealer, s1.price
 FROM shop s1
 LEFT JOIN shop s2 ON s1.article = s2.article AND s1.price &lt; s2.price
 WHERE s2.article IS NULL;
@@ -746,7 +745,7 @@ WHERE s2.article IS NULL;
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

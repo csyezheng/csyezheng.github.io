@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,12 +63,11 @@
 <meta property="og:description" content="Background theory for recommendations the background theory for matrix factorization-based collaborative filtering as applied to recommendation systems. Collaborative filtering for recommendation systems Collaborative filtering relies only on observed user behavior to make recommendations—no profile data or content access is necessary. The basic assumption is that similar user behavior reflects similar fundamental preferences, allowing" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/building-a-recommendation-system-in-tensorflow/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-12-05T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-12-05T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2020-12-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-05T00:00:00+00:00" />
 <meta itemprop="name" content="Building a Recommendation System in TensorFlow">
-<meta itemprop="description" content="Background theory for recommendations the background theory for matrix factorization-based collaborative filtering as applied to recommendation systems. Collaborative filtering for recommendation systems Collaborative filtering relies only on observed user behavior to make recommendations—no profile data or content access is necessary. The basic assumption is that similar user behavior reflects similar fundamental preferences, allowing"><meta itemprop="datePublished" content="2020-12-05T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-12-05T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Background theory for recommendations the background theory for matrix factorization-based collaborative filtering as applied to recommendation systems. Collaborative filtering for recommendation systems Collaborative filtering relies only on observed user behavior to make recommendations—no profile data or content access is necessary. The basic assumption is that similar user behavior reflects similar fundamental preferences, allowing"><meta itemprop="datePublished" content="2020-12-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-12-05T00:00:00+00:00" />
 <meta itemprop="wordCount" content="1829">
 <meta itemprop="keywords" content="recommendation,recommendation-system,tensorflow," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Building a Recommendation System in TensorFlow"/>
@@ -361,7 +360,7 @@
 <p>Intuitively, it&rsquo;s easy to see that these hypothetical latent factors actually exist. In the case of movies, it&rsquo;s clear that many users prefer certain genres, actors, or directors.  Much of the power of the matrix factorization approach to collaborative filtering derives from the fact that it&rsquo;s not necessary to know the number of  hypothetical latent factors that might comprise the entirety of a given user&rsquo;s preferences. It&rsquo;s <strong>simply assumed there are an arbitrary number of hypothetical latent factors</strong>.</p>
 <h4 id="transforming-the-matrix-to-represent-latent-factors">Transforming the matrix to represent latent factors</h4>
 <p>To translate the existence of latent factors into the matrix of ratings, you do this: for a set of users $U$ of size $u$ and items $I$ of size $i$, you <strong>pick an arbitrary number $k$ of latent factors</strong> and <strong>factorize</strong> the large matrix $R$ into two much smaller matrices $X$ (the &ldquo;row factor&rdquo;) and $Y$ (the &ldquo;column factor&rdquo;). Matrix $X$ has dimension $u × k$, and $Y$ has dimension $k × i$.</p>
-<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <p>In linear algebra this is called a <strong>low-rank approximation</strong>. Every user is represented by a vector in this $k$-dimensional space, and each row $x_u$ in $X$ corresponds to the strength of the user&rsquo;s preferences for these $k$ factors. Similarly, every item represented by a vector in this $k$-dimensional space has a column $y_i$ in $Y$ corresponding to the item&rsquo;s expression of the same $k$ factors.</p>
 <p>To calculate the predicted rating of user <em>u</em> for item <em>i</em>, you take the dot product of the two vectors:
 $$
@@ -371,11 +370,11 @@ You can define a loss function measuring the accuracy of the approximation in th
 $$
 L=\sum_{u,i}(r_{ui}−x_u^T⋅y_i)^2
 $$
-It&rsquo;s common practice to add **regularization terms** to this loss function to help prevent **overfitting**. Adding **L2 regularization terms** for both row and column factors gives the following:
+It&rsquo;s common practice to add <strong>regularization terms</strong> to this loss function to help prevent <strong>overfitting</strong>. Adding <strong>L2 regularization terms</strong> for both row and column factors gives the following:
 $$
 L=\sum_{u,i}(r_{ui}−x_u^T⋅y_i)^2 + \lambda\sum_{u}||x_u||^2 + \lambda\sum_{i}||y_i||^2
 $$
-Here, $λ$ is a **regularization constant**, one of the model’s hyperparameters.</p>
+Here, $λ$ is a <strong>regularization constant</strong>, one of the model’s hyperparameters.</p>
 <h3 id="the-wals-method-of-matrix-factorization">The WALS method of matrix factorization</h3>
 <h4 id="alternating-least-squares-method-交替最小二乘法">Alternating least squares method (交替最小二乘法)</h4>
 <p>The alternating least squares method of matrix factorization is an <strong>iterative</strong> method for determining the <strong>optimal factors</strong> $X$ and $Y$ that best approximate $R$. In each iteration, <strong>one of</strong> the row or column factors <strong>is held fixed</strong> and <strong>the other is computed</strong> by minimizing the loss function with respect to the other factor.</p>
@@ -441,11 +440,11 @@ $$</p>
 </ul>
 <h2 id="create-the-model">Create the Model</h2>
 <h3 id="create-docker-image-environment">Create Docker image environment</h3>
-<pre><code>docker pull tensorflow/tensorflow:1.15.4-py3-jupyter
-</code></pre><pre><code>git clone https://github.com/GoogleCloudPlatform/tensorflow-recommendation-wals
+<pre tabindex="0"><code>docker pull tensorflow/tensorflow:1.15.4-py3-jupyter
+</code></pre><pre tabindex="0"><code>git clone https://github.com/GoogleCloudPlatform/tensorflow-recommendation-wals
 cd tensorflow-recommendation-wals
-</code></pre><pre><code>vim Dockerfile
-</code></pre><pre><code># Use an official tensorflow runtime as a parent image
+</code></pre><pre tabindex="0"><code>vim Dockerfile
+</code></pre><pre tabindex="0"><code># Use an official tensorflow runtime as a parent image
 FROM tensorflow/tensorflow:1.15.4-py3-jupyter
 
 # Set the working directory to /app
@@ -455,7 +454,7 @@ WORKDIR /app
 ADD requirements.txt /app
 
 # Change mirrors and install vim
-RUN sed -i &quot;s@http://archive.ubuntu.com@http://mirrors.tuna.tsinghua.edu.cn@g&quot; /etc/apt/sources.list &amp;&amp; sed -i &quot;s@http://security.ubuntu.com@http://mirrors.tuna.tsinghua.edu.cn@g&quot; /etc/apt/sources.list &amp;&amp; rm -Rf /var/lib/apt/lists/* &amp;&amp; apt-get update &amp;&amp; apt-get install -y vim
+RUN sed -i &#34;s@http://archive.ubuntu.com@http://mirrors.tuna.tsinghua.edu.cn@g&#34; /etc/apt/sources.list &amp;&amp; sed -i &#34;s@http://security.ubuntu.com@http://mirrors.tuna.tsinghua.edu.cn@g&#34; /etc/apt/sources.list &amp;&amp; rm -Rf /var/lib/apt/lists/* &amp;&amp; apt-get update &amp;&amp; apt-get install -y vim
 
 # Upgrading pip
 RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
@@ -468,37 +467,37 @@ RUN pip install -r requirements.txt
 
 # Make port 8888 available to the world outside this container
 EXPOSE 8888
-</code></pre><pre><code>docker build -t tfrec:latest --no-cache --network=host .
+</code></pre><pre tabindex="0"><code>docker build -t tfrec:latest --no-cache --network=host .
 docker image ls
 </code></pre><h3 id="download-the-movielens-dataset">Download the <code>MovieLens</code> dataset</h3>
-<pre><code>curl -O 'http://files.grouplens.org/datasets/movielens/ml-100k.zip'
+<pre tabindex="0"><code>curl -O &#39;http://files.grouplens.org/datasets/movielens/ml-100k.zip&#39;
 umzip ml-100k.zip
 mkdir /data/datasets/ml-100k
 cp ml-100k/u.data /data/datasets/ml-100k/
 rm -r ml-100k ml-100k.zip
 </code></pre><h3 id="run-jupyter-notebook">Run Jupyter notebook</h3>
-<pre><code>docker run -it --rm -v $PWD:/app -v /data/datasets/ml-100k:/datasets -w /app -p 8888:8888 tfrec:latest bash
-</code></pre><pre><code>jupyter notebook --ip 0.0.0.0 --no-browser --allow-root ./notebooks/Part1.ipynb
+<pre tabindex="0"><code>docker run -it --rm -v $PWD:/app -v /data/datasets/ml-100k:/datasets -w /app -p 8888:8888 tfrec:latest bash
+</code></pre><pre tabindex="0"><code>jupyter notebook --ip 0.0.0.0 --no-browser --allow-root ./notebooks/Part1.ipynb
 </code></pre><h3 id="train-and-tune-the-model">Train and tune the model</h3>
-<pre><code>cd wals_ml_engine
-</code></pre><pre><code>docker run -it --rm -v $PWD:/app -v /data/datasets/ml-100k:/datasets -w /app tfrec:latest python -m trainer.task --job-dir=/app --train-file=/datasets/u.data --data-type=ratings --delimiter='\t'
+<pre tabindex="0"><code>cd wals_ml_engine
+</code></pre><pre tabindex="0"><code>docker run -it --rm -v $PWD:/app -v /data/datasets/ml-100k:/datasets -w /app tfrec:latest python -m trainer.task --job-dir=/app --train-file=/datasets/u.data --data-type=ratings --delimiter=&#39;\t&#39;
 </code></pre><p>Install miniconda</p>
-<pre><code>$ yay -S miniconda3
-$ echo &quot;export PATH=/opt/miniconda3/bin/:$PATH&quot; &gt;&gt; ~/.bashrc
-$ echo &quot;[ -f /opt/miniconda3/etc/profile.d/conda.sh ] &amp;&amp; source /opt/miniconda3/etc/profile.d/conda.sh&quot; &gt;&gt; ~/.bashrc
+<pre tabindex="0"><code>$ yay -S miniconda3
+$ echo &#34;export PATH=/opt/miniconda3/bin/:$PATH&#34; &gt;&gt; ~/.bashrc
+$ echo &#34;[ -f /opt/miniconda3/etc/profile.d/conda.sh ] &amp;&amp; source /opt/miniconda3/etc/profile.d/conda.sh&#34; &gt;&gt; ~/.bashrc
 $ source ~/.bashrc
 </code></pre><p>Install the Python packages and TensorFlow.</p>
-<pre><code>$ conda create -y -n tfrec                     # -y:  Do not ask for confirmation, -n: Name of environment.
+<pre tabindex="0"><code>$ conda create -y -n tfrec                     # -y:  Do not ask for confirmation, -n: Name of environment.
 $ conda install -y -n tfrec --file conda.txt   # --file FILE: Read package versions from the given file
 $ source activate tfrec
-</code></pre><pre><code>$ conda deactivate
+</code></pre><pre tabindex="0"><code>$ conda deactivate
 $ conda remove -n tfrec --all
 $ conda create -y -n tfrec python=3.7          # with a specific version of Python
 $ pip install -r requirements.txt
 $ pip install tensorflow==1.15
 </code></pre><h2 id="api-and-predict">API and Predict</h2>
 <p>ensure that the application bind to <code>0.0.0.0</code> and not <code>127.0.0.1</code></p>
-<pre><code>docker run -it --rm -v $PWD:/app -v /data/datasets/ml-100k:/datasets -w /app tfrec:latest python -m trainer.task --job-dir=/app --train-file=/datasets/u.data --data-type=ratings --delimiter='\t'
+<pre tabindex="0"><code>docker run -it --rm -v $PWD:/app -v /data/datasets/ml-100k:/datasets -w /app tfrec:latest python -m trainer.task --job-dir=/app --train-file=/datasets/u.data --data-type=ratings --delimiter=&#39;\t&#39;
 </code></pre><h2 id="deploy-the-recommendation-system">Deploy the Recommendation System</h2>
 <h2 id="reference">Reference</h2>
 <ol>
@@ -703,7 +702,7 @@ $ pip install tensorflow==1.15
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

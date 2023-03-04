@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,6 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -214,7 +213,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -295,6 +294,40 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/specialization/web-application/saas/flask/">SaaS with Flask</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-11-18" class="post-time">
+        2020-11-18
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+       https://github.com/nickjj/build-a-saas-app-with-flask 
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/web-application/saas/flask/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/specialization/web-application/spring/config/">Spring Config</a>
     </h1>
     
@@ -315,7 +348,7 @@
   <div class="post-content">
     
     <div class="post-summary">
-      application.properties import org.springframework.beans.factory.annotation.Value; import com.alibaba.fastjson.JSONObject; import org.apache.http.entity.ContentType; class MessageRestController { @Value(&quot;${restService_url: default_url}&quot;) private String url; @RequestMapping(&quot;/message&quot;) String getMessage() { CloseableHttpClient httpClient = HttpClients.createDefault(); String body; if (param instanceof String) { body = (String) param; } else { body = JSONObject.toJSONString(param); } try { // 创建Http Post请求 HttpPost httpPost = new HttpPost(url); // 添加http headers if
+      application.properties import org.springframework.beans.factory.annotation.Value; import com.alibaba.fastjson.JSONObject; import org.apache.http.entity.ContentType; class MessageRestController { @Value(&#34;${restService_url: default_url}&#34;) private String url; @RequestMapping(&#34;/message&#34;) String getMessage() { CloseableHttpClient httpClient = HttpClients.createDefault(); String body; if (param instanceof String) { body = (String) param; } else { body = JSONObject.toJSONString(param); } try { // 创建Http Post请求 HttpPost httpPost = new HttpPost(url); // 添加http headers if
     </div>
     <div class="read-more">
       <a href="/post/specialization/web-application/spring/config/" class="read-more-link">Read more</a>
@@ -349,46 +382,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      applicationContext.xml &lt;context:component-scan base-package=&quot;org.example&quot;/&gt; Classpath scanning and managed components
-&lt;bean id=&quot;txManager&quot; class=&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt; &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt; &lt;/bean&gt; &lt;tx:annotation-driven transaction-manager=&quot;txManager&quot;/&gt; &lt;tx:advice id=&quot;txAdvice&quot; transaction-manager=&quot;txManager&quot;&gt; &lt;tx:attributes&gt; &lt;tx:method name=&quot;create*&quot; propagation=&quot;REQUIRED&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot; /&gt; &lt;tx:method name=&quot;delete*&quot; propagation=&quot;REQUIRED&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot; /&gt; &lt;tx:method name=&quot;update*&quot; propagation=&quot;REQUIRED&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot; /&gt; &lt;tx:method name=&quot;get*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; timeout=&quot;300&quot; /&gt; &lt;tx:method name=&quot;*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; timeout=&quot;300&quot; rollback-for=&quot;java.lang.Exception&quot;/&gt; &lt;/tx:attributes&gt; &lt;/tx:advice&gt; &lt;aop:config&gt; &lt;aop:pointcut id=&quot;txPointcut&quot; expression=&quot;execution(* com.mico.emptyspring.service.*ServiceA.*(..))&quot; /&gt; &lt;aop:advisor pointcut-ref=&quot;txPointcut&quot; advice-ref=&quot;txAdvice&quot; /&gt; &lt;/aop:config&gt; Transaction Management
-&lt;bean id=&quot;sqlSessionFactory&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&gt; &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt; &lt;property name=&quot;configuration&quot;&gt; &lt;bean class=&quot;org.
+      applicationContext.xml &lt;context:component-scan base-package=&#34;org.example&#34;/&gt; Classpath scanning and managed components
+&lt;bean id=&#34;txManager&#34; class=&#34;org.springframework.jdbc.datasource.DataSourceTransactionManager&#34;&gt; &lt;property name=&#34;dataSource&#34; ref=&#34;dataSource&#34;/&gt; &lt;/bean&gt; &lt;tx:annotation-driven transaction-manager=&#34;txManager&#34;/&gt; &lt;tx:advice id=&#34;txAdvice&#34; transaction-manager=&#34;txManager&#34;&gt; &lt;tx:attributes&gt; &lt;tx:method name=&#34;create*&#34; propagation=&#34;REQUIRED&#34; timeout=&#34;300&#34; rollback-for=&#34;java.lang.Exception&#34; /&gt; &lt;tx:method name=&#34;delete*&#34; propagation=&#34;REQUIRED&#34; timeout=&#34;300&#34; rollback-for=&#34;java.lang.Exception&#34; /&gt; &lt;tx:method name=&#34;update*&#34; propagation=&#34;REQUIRED&#34; timeout=&#34;300&#34; rollback-for=&#34;java.lang.Exception&#34; /&gt; &lt;tx:method name=&#34;get*&#34; propagation=&#34;REQUIRED&#34; read-only=&#34;true&#34; timeout=&#34;300&#34; /&gt; &lt;tx:method name=&#34;*&#34; propagation=&#34;REQUIRED&#34; read-only=&#34;true&#34; timeout=&#34;300&#34; rollback-for=&#34;java.lang.Exception&#34;/&gt; &lt;/tx:attributes&gt; &lt;/tx:advice&gt; &lt;aop:config&gt; &lt;aop:pointcut id=&#34;txPointcut&#34; expression=&#34;execution(* com.mico.emptyspring.service.*ServiceA.*(..))&#34; /&gt; &lt;aop:advisor pointcut-ref=&#34;txPointcut&#34; advice-ref=&#34;txAdvice&#34; /&gt; &lt;/aop:config&gt; Transaction Management
+&lt;bean id=&#34;sqlSessionFactory&#34; class=&#34;org.mybatis.spring.SqlSessionFactoryBean&#34;&gt; &lt;property name=&#34;dataSource&#34; ref=&#34;dataSource&#34; /&gt; &lt;property name=&#34;configuration&#34;&gt; &lt;bean class=&#34;org.
     </div>
     <div class="read-more">
       <a href="/post/specialization/web-application/spring/mybatis/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/web-application/spring/practice/">Spring Practice</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-11-18" class="post-time">
-        2020-11-18
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      vo  package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } }  dao  import org.
-    </div>
-    <div class="read-more">
-      <a href="/post/specialization/web-application/spring/practice/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2323,6 +2322,90 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/30/">»</a></li>
@@ -2330,7 +2413,7 @@
 
       
       
-      <li><a href="/page/85/">»»</a></li>
+      <li><a href="/page/89/">»»</a></li>
       
 
       </ul>
@@ -2418,7 +2501,7 @@
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,6 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -214,7 +213,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -295,7 +294,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/package_download/">package_download</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/debugging-with-delve/">Delve Documentation</a>
     </h1>
     
     <div class="post-meta">
@@ -315,10 +314,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      gopm get -g -v golang.org/x/sys 
+      Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &#34;$_&#34; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &#34;fmt&#34; &#34;log&#34; &#34;net/http&#34; &#34;os&#34; ) const port = &#34;8000&#34; func main() { http.HandleFunc(&#34;/hi&#34;, hi) fmt.Println(&#34;runing on port: &#34; + port) log.Fatal(http.ListenAndServe(&#34;:&#34; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &#34;HostName: %s&#34;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/package_download/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/debugging-with-delve/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -329,7 +328,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/photoprism/">photoprism</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/generate-model-structs-from-database/">generate-model-structs-from-database</a>
     </h1>
     
     <div class="post-meta">
@@ -349,13 +348,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Step 1: Clone this project:
-git clone https://github.com/photoprism/photoprism.git Step 2: Start Docker containers:
-cd photoprism sudo docker-compose up Step 3: Open a new terminal to the photoprism container:
-sudo docker-compose exec photoprism bash 
+      Generate gorm model structs from database
+https://github.com/smallnest/gen
+https://github.com/wantedly/pq2gorm
+https://github.com/go-xorm/cmd
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/photoprism/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/generate-model-structs-from-database/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -366,7 +365,7 @@ sudo docker-compose exec photoprism bash
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/python/python-interview/">Python</a>
+      <a class="post-link" href="/post/engineering-fundamentals/scala/getting-started/">Getting Started with Scala</a>
     </h1>
     
     <div class="post-meta">
@@ -386,10 +385,11 @@ sudo docker-compose exec photoprism bash
   <div class="post-content">
     
     <div class="post-summary">
-      urllib和urllib2的区别 这个面试官确实问过,当时答的urllib2可以Post而urllib不可以. urllib提供urlenco
+      Create A Scala Project With sbt In The Command Line Installation Java 8 JDK javac -version install sbt
+Create a project $ mkdir practice &amp;&amp; cd practice $ sbt new scala/hello-world.g8 # pull template from GitHub - hello-world - project (sbt uses this to install manage plugins and dependencies) - build.properties - src - main - scala (All of your scala code goes here) -Main.scala (Entry point of program) build.sbt (sbt&#39;s build definition file) $ cd hello-world $ sbt # open sbt console $ ~run # ~ causes sbt to re-run on every file save modify the src/main/scala/Main.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/python/python-interview/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/scala/getting-started/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2324,6 +2324,90 @@ sudo docker-compose exec photoprism bash
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/67/">»</a></li>
@@ -2331,7 +2415,7 @@ sudo docker-compose exec photoprism bash
 
       
       
-      <li><a href="/page/85/">»»</a></li>
+      <li><a href="/page/89/">»»</a></li>
       
 
       </ul>
@@ -2419,7 +2503,7 @@ sudo docker-compose exec photoprism bash
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

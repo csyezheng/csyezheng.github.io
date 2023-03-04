@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="The Python Standard Library 1. Introduction 2. Built-in Functions      Built-in Functions       abs(x) dict(**kwarg) help([object]) min(iterable, *[, key, default]) setattr(object, name, value)   all(iterable) dir([object]) hex(x) next(iterator[, default]) slice([start,] stop[, step])   any(iterable) divmod(a, b) id(object) object() sorted(iterable, key=func, reverse=False)   ascii(object) enumerate(iterable, start=0) input([prompt]) oct(int) @staticmethod   bin(int) eval(expression, globals=None, locals=None) int(x, base=10) open(file, mode=&amp;lsquo;r&amp;rsquo;,&amp;hellip;) str(object=&#39;&#39;)   bool([x]) exec(object[, globals[, locals]]) isinstance(object, classinfo) ord(char) sum(iterable[, start])   bytearray(s) filter(function, iterable) issubclass(class, classinfo) pow(x, y[, z]) super([type[, object-or-type]])   bytes(source) float([x]) iter(object[, sentinel]) print() tuple([iterable])   callable(object) format(value[, format_spec]) len(s) @property type(object)   chr(int) frozenset([iterable]) list([iterable]) range([start], stop[, step]) vars([object])   @classmethod getattr(object, name[, default]) locals() repr(object) zip(*iterables)   compile() globals() map(function, iterable, &amp;hellip;) reversed(seq) _import_()   complex([real[, imag]]) hasattr(object, name) max(iterable, *[, key, default]) round(number[, ndigits])    delattr(object, name) hash(object) memoryview(bytes_obj) set([iterable])       @classmethod" />
+  <meta name="description" content="The Python Standard Library 1. Introduction 2. Built-in Functions Built-in Functions abs(x) dict(**kwarg) help([object]) min(iterable, *[, key, default]) setattr(object, name, value) all(iterable) dir([object]) hex(x) next(iterator[, default]) slice([start,] stop[, step]) any(iterable) divmod(a, b) id(object) object() sorted(iterable, key=func, reverse=False) ascii(object) enumerate(iterable, start=0) input([prompt]) oct(int) @staticmethod bin(int) eval(expression, globals=None, locals=None) int(x, base=10) open(file, mode=&amp;lsquo;r&amp;rsquo;,&amp;hellip;) str(object=&amp;rsquo;&amp;rsquo;) bool([x]) exec(object[, globals[, locals]]) isinstance(object, classinfo) ord(char) sum(iterable[, start]) bytearray(s) filter(function, iterable) issubclass(class, classinfo) pow(x, y[, z]) super([type[, object-or-type]]) bytes(source) float([x]) iter(object[, sentinel]) print() tuple([iterable]) callable(object) format(value[, format_spec]) len(s) @property type(object) chr(int) frozenset([iterable]) list([iterable]) range([start], stop[, step]) vars([object]) @classmethod getattr(object, name[, default]) locals() repr(object) zip(*iterables) compile() globals() map(function, iterable, &amp;hellip;) reversed(seq) _import_() complex([real[, imag]]) hasattr(object, name) max(iterable, *[, key, default]) round(number[, ndigits]) delattr(object, name) hash(object) memoryview(bytes_obj) set([iterable]) @classmethod" />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/engineering-fundamentals/python/standard-library-by-example/" />
@@ -53,26 +53,25 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
 
 
 <meta property="og:title" content="The Python Standard Library" />
-<meta property="og:description" content="The Python Standard Library 1. Introduction 2. Built-in Functions      Built-in Functions       abs(x) dict(**kwarg) help([object]) min(iterable, *[, key, default]) setattr(object, name, value)   all(iterable) dir([object]) hex(x) next(iterator[, default]) slice([start,] stop[, step])   any(iterable) divmod(a, b) id(object) object() sorted(iterable, key=func, reverse=False)   ascii(object) enumerate(iterable, start=0) input([prompt]) oct(int) @staticmethod   bin(int) eval(expression, globals=None, locals=None) int(x, base=10) open(file, mode=&lsquo;r&rsquo;,&hellip;) str(object=&#39;&#39;)   bool([x]) exec(object[, globals[, locals]]) isinstance(object, classinfo) ord(char) sum(iterable[, start])   bytearray(s) filter(function, iterable) issubclass(class, classinfo) pow(x, y[, z]) super([type[, object-or-type]])   bytes(source) float([x]) iter(object[, sentinel]) print() tuple([iterable])   callable(object) format(value[, format_spec]) len(s) @property type(object)   chr(int) frozenset([iterable]) list([iterable]) range([start], stop[, step]) vars([object])   @classmethod getattr(object, name[, default]) locals() repr(object) zip(*iterables)   compile() globals() map(function, iterable, &hellip;) reversed(seq) _import_()   complex([real[, imag]]) hasattr(object, name) max(iterable, *[, key, default]) round(number[, ndigits])    delattr(object, name) hash(object) memoryview(bytes_obj) set([iterable])       @classmethod" />
+<meta property="og:description" content="The Python Standard Library 1. Introduction 2. Built-in Functions Built-in Functions abs(x) dict(**kwarg) help([object]) min(iterable, *[, key, default]) setattr(object, name, value) all(iterable) dir([object]) hex(x) next(iterator[, default]) slice([start,] stop[, step]) any(iterable) divmod(a, b) id(object) object() sorted(iterable, key=func, reverse=False) ascii(object) enumerate(iterable, start=0) input([prompt]) oct(int) @staticmethod bin(int) eval(expression, globals=None, locals=None) int(x, base=10) open(file, mode=&lsquo;r&rsquo;,&hellip;) str(object=&rsquo;&rsquo;) bool([x]) exec(object[, globals[, locals]]) isinstance(object, classinfo) ord(char) sum(iterable[, start]) bytearray(s) filter(function, iterable) issubclass(class, classinfo) pow(x, y[, z]) super([type[, object-or-type]]) bytes(source) float([x]) iter(object[, sentinel]) print() tuple([iterable]) callable(object) format(value[, format_spec]) len(s) @property type(object) chr(int) frozenset([iterable]) list([iterable]) range([start], stop[, step]) vars([object]) @classmethod getattr(object, name[, default]) locals() repr(object) zip(*iterables) compile() globals() map(function, iterable, &hellip;) reversed(seq) _import_() complex([real[, imag]]) hasattr(object, name) max(iterable, *[, key, default]) round(number[, ndigits]) delattr(object, name) hash(object) memoryview(bytes_obj) set([iterable]) @classmethod" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/engineering-fundamentals/python/standard-library-by-example/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-03-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2019-03-01T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2019-03-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-03-01T00:00:00+00:00" />
 <meta itemprop="name" content="The Python Standard Library">
-<meta itemprop="description" content="The Python Standard Library 1. Introduction 2. Built-in Functions      Built-in Functions       abs(x) dict(**kwarg) help([object]) min(iterable, *[, key, default]) setattr(object, name, value)   all(iterable) dir([object]) hex(x) next(iterator[, default]) slice([start,] stop[, step])   any(iterable) divmod(a, b) id(object) object() sorted(iterable, key=func, reverse=False)   ascii(object) enumerate(iterable, start=0) input([prompt]) oct(int) @staticmethod   bin(int) eval(expression, globals=None, locals=None) int(x, base=10) open(file, mode=&lsquo;r&rsquo;,&hellip;) str(object=&#39;&#39;)   bool([x]) exec(object[, globals[, locals]]) isinstance(object, classinfo) ord(char) sum(iterable[, start])   bytearray(s) filter(function, iterable) issubclass(class, classinfo) pow(x, y[, z]) super([type[, object-or-type]])   bytes(source) float([x]) iter(object[, sentinel]) print() tuple([iterable])   callable(object) format(value[, format_spec]) len(s) @property type(object)   chr(int) frozenset([iterable]) list([iterable]) range([start], stop[, step]) vars([object])   @classmethod getattr(object, name[, default]) locals() repr(object) zip(*iterables)   compile() globals() map(function, iterable, &hellip;) reversed(seq) _import_()   complex([real[, imag]]) hasattr(object, name) max(iterable, *[, key, default]) round(number[, ndigits])    delattr(object, name) hash(object) memoryview(bytes_obj) set([iterable])       @classmethod"><meta itemprop="datePublished" content="2019-03-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-03-01T00:00:00&#43;00:00" />
+<meta itemprop="description" content="The Python Standard Library 1. Introduction 2. Built-in Functions Built-in Functions abs(x) dict(**kwarg) help([object]) min(iterable, *[, key, default]) setattr(object, name, value) all(iterable) dir([object]) hex(x) next(iterator[, default]) slice([start,] stop[, step]) any(iterable) divmod(a, b) id(object) object() sorted(iterable, key=func, reverse=False) ascii(object) enumerate(iterable, start=0) input([prompt]) oct(int) @staticmethod bin(int) eval(expression, globals=None, locals=None) int(x, base=10) open(file, mode=&lsquo;r&rsquo;,&hellip;) str(object=&rsquo;&rsquo;) bool([x]) exec(object[, globals[, locals]]) isinstance(object, classinfo) ord(char) sum(iterable[, start]) bytearray(s) filter(function, iterable) issubclass(class, classinfo) pow(x, y[, z]) super([type[, object-or-type]]) bytes(source) float([x]) iter(object[, sentinel]) print() tuple([iterable]) callable(object) format(value[, format_spec]) len(s) @property type(object) chr(int) frozenset([iterable]) list([iterable]) range([start], stop[, step]) vars([object]) @classmethod getattr(object, name[, default]) locals() repr(object) zip(*iterables) compile() globals() map(function, iterable, &hellip;) reversed(seq) _import_() complex([real[, imag]]) hasattr(object, name) max(iterable, *[, key, default]) round(number[, ndigits]) delattr(object, name) hash(object) memoryview(bytes_obj) set([iterable]) @classmethod"><meta itemprop="datePublished" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-03-01T00:00:00+00:00" />
 <meta itemprop="wordCount" content="12174">
 <meta itemprop="keywords" content="Python," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The Python Standard Library"/>
-<meta name="twitter:description" content="The Python Standard Library 1. Introduction 2. Built-in Functions      Built-in Functions       abs(x) dict(**kwarg) help([object]) min(iterable, *[, key, default]) setattr(object, name, value)   all(iterable) dir([object]) hex(x) next(iterator[, default]) slice([start,] stop[, step])   any(iterable) divmod(a, b) id(object) object() sorted(iterable, key=func, reverse=False)   ascii(object) enumerate(iterable, start=0) input([prompt]) oct(int) @staticmethod   bin(int) eval(expression, globals=None, locals=None) int(x, base=10) open(file, mode=&lsquo;r&rsquo;,&hellip;) str(object=&#39;&#39;)   bool([x]) exec(object[, globals[, locals]]) isinstance(object, classinfo) ord(char) sum(iterable[, start])   bytearray(s) filter(function, iterable) issubclass(class, classinfo) pow(x, y[, z]) super([type[, object-or-type]])   bytes(source) float([x]) iter(object[, sentinel]) print() tuple([iterable])   callable(object) format(value[, format_spec]) len(s) @property type(object)   chr(int) frozenset([iterable]) list([iterable]) range([start], stop[, step]) vars([object])   @classmethod getattr(object, name[, default]) locals() repr(object) zip(*iterables)   compile() globals() map(function, iterable, &hellip;) reversed(seq) _import_()   complex([real[, imag]]) hasattr(object, name) max(iterable, *[, key, default]) round(number[, ndigits])    delattr(object, name) hash(object) memoryview(bytes_obj) set([iterable])       @classmethod"/>
+<meta name="twitter:description" content="The Python Standard Library 1. Introduction 2. Built-in Functions Built-in Functions abs(x) dict(**kwarg) help([object]) min(iterable, *[, key, default]) setattr(object, name, value) all(iterable) dir([object]) hex(x) next(iterator[, default]) slice([start,] stop[, step]) any(iterable) divmod(a, b) id(object) object() sorted(iterable, key=func, reverse=False) ascii(object) enumerate(iterable, start=0) input([prompt]) oct(int) @staticmethod bin(int) eval(expression, globals=None, locals=None) int(x, base=10) open(file, mode=&lsquo;r&rsquo;,&hellip;) str(object=&rsquo;&rsquo;) bool([x]) exec(object[, globals[, locals]]) isinstance(object, classinfo) ord(char) sum(iterable[, start]) bytearray(s) filter(function, iterable) issubclass(class, classinfo) pow(x, y[, z]) super([type[, object-or-type]]) bytes(source) float([x]) iter(object[, sentinel]) print() tuple([iterable]) callable(object) format(value[, format_spec]) len(s) @property type(object) chr(int) frozenset([iterable]) list([iterable]) range([start], stop[, step]) vars([object]) @classmethod getattr(object, name[, default]) locals() repr(object) zip(*iterables) compile() globals() map(function, iterable, &hellip;) reversed(seq) _import_() complex([real[, imag]]) hasattr(object, name) max(iterable, *[, key, default]) round(number[, ndigits]) delattr(object, name) hash(object) memoryview(bytes_obj) set([iterable]) @classmethod"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -778,7 +777,7 @@
 <td>eval(expression, globals=None, locals=None)</td>
 <td>int(x, base=10)</td>
 <td>open(file, mode=&lsquo;r&rsquo;,&hellip;)</td>
-<td>str(object='')</td>
+<td>str(object=&rsquo;&rsquo;)</td>
 </tr>
 <tr>
 <td>bool([x])</td>
@@ -849,7 +848,7 @@
 <li>
 <p><code>@classmethod</code></p>
 <p>A class method receives the class as implicit first argument, just like an instance method receives the instance.</p>
-<pre><code>class C:
+<pre tabindex="0"><code>class C:
     @classmethod
     def f(cls, arg1, arg2, ...): ...
 </code></pre><p>It can be called either on the class (such as <code>C.f()</code>) or on an instance (such as <code>C().f()</code>). The instance is ignored except for its class. If a class method is called for a derived class, the derived class object is passed as the implied first argument.</p>
@@ -863,8 +862,8 @@
 <p>Return an iterator object.</p>
 <p>Without a second argument, object must be a collection object which supports the iteration protocol (the <strong>iter</strong>() method), or it must support the sequence protocol (the <strong>getitem</strong>() method with integer arguments starting at 0).</p>
 <p>If the second argument, sentinel, is given, then object must be a callable object. The  iterator created in this case will call object with no arguments for each call to its next() method; if the value returned is equal to sentinel, StopIteration will be raised, otherwise the value will be returned.</p>
-<pre><code>with open('mydata.txt') as fp:
-    for line in iter(fp.readline, ''):
+<pre tabindex="0"><code>with open(&#39;mydata.txt&#39;) as fp:
+    for line in iter(fp.readline, &#39;&#39;):
         process_line(line)
 </code></pre></li>
 <li>
@@ -886,32 +885,31 @@
 <li>
 <p><code>class property(fget=None, fset=None, fdel=None, doc=None)</code></p>
 <p>Return a property attribute. A property object has getter, setter, and deleter methods usable as decorators</p>
-<pre><code>class C:
+<pre tabindex="0"><code>class C:
     def __init__(self):
         self._x = None
-  
+
     @property
     def x(self):
-        &quot;&quot;&quot;I'm the 'x' property.&quot;&quot;&quot;
+        &#34;&#34;&#34;I&#39;m the &#39;x&#39; property.&#34;&#34;&#34;
         return self._x
-  
+
     @x.setter
     def x(self, value):
         self._x = value
-  
+
     @x.deleter
     def x(self):
         del self._x
 </code></pre></li>
 <li>
 <p><code>sorted(iterable, *, key=None, reverse=False)</code></p>
-<pre><code>&gt;&gt;&gt; sorted(&quot;This is a test string from Andrew&quot;.split(), key=str.lower)
+<pre tabindex="0"><code>&gt;&gt;&gt; sorted(&#34;This is a test string from Andrew&#34;.split(), key=str.lower)
 &gt;&gt;&gt; sorted(student_objects, key=lambda student: student.age)   # sort by age
-</code></pre><pre><code>&gt;&gt;&gt; from operator import itemgetter, attrgetter
+</code></pre><pre tabindex="0"><code>&gt;&gt;&gt; from operator import itemgetter, attrgetter
 &gt;&gt;&gt; sorted(student_tuples, key=itemgetter(2), reverse=True)
-&gt;&gt;&gt; sorted(student_objects, key=attrgetter('age'), reverse=True)
-  
-</code></pre><pre><code>&gt;&gt;&gt; from functools import cmp_to_key
+&gt;&gt;&gt; sorted(student_objects, key=attrgetter(&#39;age&#39;), reverse=True)
+</code></pre><pre tabindex="0"><code>&gt;&gt;&gt; from functools import cmp_to_key
 &gt;&gt;&gt; def reverse_numeric(x, y):
 ...     return y - x
 &gt;&gt;&gt; sorted([5, 2, 4, 1, 3], key=cmp_to_key(reverse_numeric))
@@ -919,7 +917,7 @@
 <li>
 <p><code>@staticmethod</code></p>
 <p>A static method does not receive an implicit first  argument.</p>
-<pre><code>class C:
+<pre tabindex="0"><code>class C:
     @staticmethod
     def f(arg1, arg2, ...): ...
 </code></pre><p>It can be called either on the class (such as C.f()) or on an instance (such as C().f()). The instance is ignored except for its class.</p>
@@ -927,7 +925,7 @@
 </li>
 <li>
 <p><code>sum(iterable[, start])</code></p>
-<p>The <em>iterable</em>’s items are normally numbers. Fast way to concatenate a sequence of strings is by calling &lsquo;'.join(sequence). To add floating point values with extended precision using <code>math.fsum()</code>. To concatenate a series of iterables, consider using <code>itertools.chain()</code>.</p>
+<p>The <em>iterable</em>’s items are normally numbers. Fast way to concatenate a sequence of strings is by calling &lsquo;&rsquo;.join(sequence). To add floating point values with extended precision using <code>math.fsum()</code>. To concatenate a series of iterables, consider using <code>itertools.chain()</code>.</p>
 </li>
 <li>
 <p><code>super([type[, object-or-type]])</code></p>
@@ -941,12 +939,12 @@
 </li>
 <li>
 <p><code>vars([object])</code></p>
-<p>Return the _<em>dict</em>_ attribute for a module, class, instance, or any other object with a __dict__ attribute.</p>
+<p>Return the _<em>dict</em>_ attribute for a module, class, instance, or any other object with a _<em>dict</em>_ attribute.</p>
 </li>
 <li>
 <p><code>zip(*iterables)</code></p>
 <p><code>zip()</code> in conjunction with the <code>*</code> operator can be used to unzip a list:</p>
-<pre><code>&gt;&gt;&gt; x = [1, 2, 3]
+<pre tabindex="0"><code>&gt;&gt;&gt; x = [1, 2, 3]
 &gt;&gt;&gt; y = [4, 5, 6]
 &gt;&gt;&gt; zipped = zip(x, y)
 &gt;&gt;&gt; list(zipped)
@@ -1023,13 +1021,13 @@ True
 <h4 id="461-common-sequence-operations">4.6.1. Common Sequence Operations</h4>
 <p><code>x in s</code>  <code>x not in s</code>  <code>s + t</code>  <code>s * n</code> or <code>n * s</code>  <code>s[i]</code>  <code>s[i:j]</code>  <code>s[i:j:k]</code>  <code>len(s)</code>  <code>min(s)</code>    <code>max(s)</code>  <code>s.index(x[, i[, j]])</code>  <code>s.count(x)</code></p>
 <p>Note that items in the sequence <em>s</em> are not copied; they are referenced multiple times.</p>
-<pre><code>&gt;&gt;&gt; lists = [[]] * 3
+<pre tabindex="0"><code>&gt;&gt;&gt; lists = [[]] * 3
 &gt;&gt;&gt; lists
 [[], [], []]
 &gt;&gt;&gt; lists[0].append(3)
 &gt;&gt;&gt; lists
 [[3], [3], [3]]
-</code></pre><pre><code>&gt;&gt;&gt; lists = [[] for i in range(3)]
+</code></pre><pre tabindex="0"><code>&gt;&gt;&gt; lists = [[] for i in range(3)]
 &gt;&gt;&gt; lists[0].append(3)
 &gt;&gt;&gt; lists[1].append(5)
 &gt;&gt;&gt; lists[2].append(7)
@@ -1076,14 +1074,14 @@ True
 </li>
 <li>
 <p><code>str.center(width[, fillchar])</code></p>
-<pre><code>&gt;&gt;&gt; a = 'test'
-&gt;&gt;&gt; a.center(10, '*')
-'***test***'
+<pre tabindex="0"><code>&gt;&gt;&gt; a = &#39;test&#39;
+&gt;&gt;&gt; a.center(10, &#39;*&#39;)
+&#39;***test***&#39;
 </code></pre></li>
 <li>
 <p><code>str.count(sub[, start[, end]])</code></p>
-<pre><code>&gt;&gt;&gt; a = 'test tree and flower'
-&gt;&gt;&gt; str.count('e', 4, 10)
+<pre tabindex="0"><code>&gt;&gt;&gt; a = &#39;test tree and flower&#39;
+&gt;&gt;&gt; str.count(&#39;e&#39;, 4, 10)
 2
 </code></pre></li>
 <li>
@@ -1094,10 +1092,10 @@ True
 </li>
 <li>
 <p><code>str.expandtabs(tabsize=8)</code></p>
-<pre><code>&gt;&gt;&gt; '01\t012\t0123\t01234'.expandtabs()
-'01      012     0123    01234'
-&gt;&gt;&gt; '01\t012\t0123\t01234'.expandtabs(4)
-'01  012 0123    01234'
+<pre tabindex="0"><code>&gt;&gt;&gt; &#39;01\t012\t0123\t01234&#39;.expandtabs()
+&#39;01      012     0123    01234&#39;
+&gt;&gt;&gt; &#39;01\t012\t0123\t01234&#39;.expandtabs(4)
+&#39;01  012 0123    01234&#39;
 </code></pre></li>
 <li>
 <p><code>str.find(sub[, start[, end]])</code></p>
@@ -1105,8 +1103,8 @@ True
 </li>
 <li>
 <p><code>str.format(*args, **kwargs)</code></p>
-<pre><code>&gt;&gt;&gt; &quot;The sum of 1 + 2 is {0}&quot;.format(1+2)
-'The sum of 1 + 2 is 3'
+<pre tabindex="0"><code>&gt;&gt;&gt; &#34;The sum of 1 + 2 is {0}&#34;.format(1+2)
+&#39;The sum of 1 + 2 is 3&#39;
 </code></pre></li>
 <li>
 <p><code>str.format_map(mapping)</code></p>
@@ -1153,7 +1151,7 @@ True
 </li>
 <li>
 <p><code>str.istitle()</code></p>
-<pre><code>&gt;&gt;&gt; 'This Is Title'.istitle()
+<pre tabindex="0"><code>&gt;&gt;&gt; &#39;This Is Title&#39;.istitle()
 True
 </code></pre></li>
 <li>
@@ -1165,8 +1163,8 @@ True
 </li>
 <li>
 <p><code>str.ljust(width[, fillchar])</code></p>
-<pre><code>&gt;&gt;&gt; &quot;this is a string&quot;.ljust(30, '0')
-'this is a string00000000000000'
+<pre tabindex="0"><code>&gt;&gt;&gt; &#34;this is a string&#34;.ljust(30, &#39;0&#39;)
+&#39;this is a string00000000000000&#39;
 </code></pre><p>The original string is returned if <em>width</em> is less than or equal to <code>len(s)</code>.</p>
 </li>
 <li>
@@ -1174,17 +1172,17 @@ True
 </li>
 <li>
 <p><code>str.lstrip([chars])</code></p>
-<pre><code>&gt;&gt;&gt; '   spacious   '.lstrip()
-'spacious   '
-&gt;&gt;&gt; 'www.example.com'.lstrip('cmowz.')
-'example.com'
+<pre tabindex="0"><code>&gt;&gt;&gt; &#39;   spacious   &#39;.lstrip()
+&#39;spacious   &#39;
+&gt;&gt;&gt; &#39;www.example.com&#39;.lstrip(&#39;cmowz.&#39;)
+&#39;example.com&#39;
 </code></pre></li>
 <li>
 <p><em>static</em> <code>str.maketrans(x[, y[, z]])</code></p>
-<pre><code>&gt;&gt;&gt; transtable = str.maketrans('aeiou', '12345')
-&gt;&gt;&gt; origin = 'this is a string example.'
+<pre tabindex="0"><code>&gt;&gt;&gt; transtable = str.maketrans(&#39;aeiou&#39;, &#39;12345&#39;)
+&gt;&gt;&gt; origin = &#39;this is a string example.&#39;
 &gt;&gt;&gt; origin.translate(transtable)
-'th3s 3s 1 str3ng 2x1mpl2.'
+&#39;th3s 3s 1 str3ng 2x1mpl2.&#39;
 </code></pre></li>
 <li>
 <p><code>str.partition(sep)</code></p>
@@ -1204,8 +1202,8 @@ True
 </li>
 <li>
 <p><code>str.rjust(width[, fillchar])</code></p>
-<pre><code>&gt;&gt;&gt; &quot;this is a string&quot;.rjust(30, '0')
-'00000000000000this is a string'
+<pre tabindex="0"><code>&gt;&gt;&gt; &#34;this is a string&#34;.rjust(30, &#39;0&#39;)
+&#39;00000000000000this is a string&#39;
 </code></pre><p>The original string is returned if <em>width</em> is less than or equal to <code>len(s)</code>.</p>
 </li>
 <li>
@@ -1217,64 +1215,64 @@ True
 </li>
 <li>
 <p><code>str.rstrip([chars])</code></p>
-<pre><code>&gt;&gt;&gt; '   spacious   '.rstrip()
-'   spacious'
-&gt;&gt;&gt; 'mississippi'.rstrip('ipz')
-'mississ'
+<pre tabindex="0"><code>&gt;&gt;&gt; &#39;   spacious   &#39;.rstrip()
+&#39;   spacious&#39;
+&gt;&gt;&gt; &#39;mississippi&#39;.rstrip(&#39;ipz&#39;)
+&#39;mississ&#39;
 </code></pre></li>
 <li>
 <p><code>str.split(sep=None, maxsplit=-1)</code></p>
-<pre><code>&gt;&gt;&gt; '1,2,3'.split(',')
-['1', '2', '3']
-&gt;&gt;&gt; '1,2,3'.split(',', maxsplit=1)
-['1', '2,3']
-&gt;&gt;&gt; '1,2,,3,'.split(',')
-['1', '2', '', '3', '']
-&gt;&gt;&gt; '   1   2   3   '.split()
-['1', '2', '3']
+<pre tabindex="0"><code>&gt;&gt;&gt; &#39;1,2,3&#39;.split(&#39;,&#39;)
+[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]
+&gt;&gt;&gt; &#39;1,2,3&#39;.split(&#39;,&#39;, maxsplit=1)
+[&#39;1&#39;, &#39;2,3&#39;]
+&gt;&gt;&gt; &#39;1,2,,3,&#39;.split(&#39;,&#39;)
+[&#39;1&#39;, &#39;2&#39;, &#39;&#39;, &#39;3&#39;, &#39;&#39;]
+&gt;&gt;&gt; &#39;   1   2   3   &#39;.split()
+[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]
 </code></pre></li>
 <li>
 <p><code>str.splitlines([keepends])</code></p>
-<pre><code>&gt;&gt;&gt; 'ab c\n\nde fg\rkl\r\n'.splitlines()
-['ab c', '', 'de fg', 'kl']
-&gt;&gt;&gt; 'ab c\n\nde fg\rkl\r\n'.splitlines(keepends=True)
-['ab c\n', '\n', 'de fg\r', 'kl\r\n']
+<pre tabindex="0"><code>&gt;&gt;&gt; &#39;ab c\n\nde fg\rkl\r\n&#39;.splitlines()
+[&#39;ab c&#39;, &#39;&#39;, &#39;de fg&#39;, &#39;kl&#39;]
+&gt;&gt;&gt; &#39;ab c\n\nde fg\rkl\r\n&#39;.splitlines(keepends=True)
+[&#39;ab c\n&#39;, &#39;\n&#39;, &#39;de fg\r&#39;, &#39;kl\r\n&#39;]
 </code></pre></li>
 <li>
 <p><code>str.startswith(prefix[, start[, end]])</code></p>
 </li>
 <li>
 <p><code>str.strip([chars])</code></p>
-<pre><code>&gt;&gt;&gt; '   spacious   '.strip()
-'spacious'
-&gt;&gt;&gt; 'www.example.com'.strip('cmowz.')
-'example'
+<pre tabindex="0"><code>&gt;&gt;&gt; &#39;   spacious   &#39;.strip()
+&#39;spacious&#39;
+&gt;&gt;&gt; &#39;www.example.com&#39;.strip(&#39;cmowz.&#39;)
+&#39;example&#39;
 </code></pre></li>
 <li>
 <p><code>str.swapcase()</code></p>
-<pre><code>&gt;&gt;&gt; 'tEsT'.swapcase()
-'TeSt'
+<pre tabindex="0"><code>&gt;&gt;&gt; &#39;tEsT&#39;.swapcase()
+&#39;TeSt&#39;
 </code></pre></li>
 <li>
 <p><code>str.title()</code></p>
-<pre><code>&gt;&gt;&gt; &quot;they're bill's friends from the UK&quot;.title()
-&quot;They'Re Bill'S Friends From The Uk&quot;
-</code></pre><pre><code>&gt;&gt;&gt; import re
+<pre tabindex="0"><code>&gt;&gt;&gt; &#34;they&#39;re bill&#39;s friends from the UK&#34;.title()
+&#34;They&#39;Re Bill&#39;S Friends From The Uk&#34;
+</code></pre><pre tabindex="0"><code>&gt;&gt;&gt; import re
 &gt;&gt;&gt; def titlecase(s):
-...     return re.sub(r&quot;[A-Za-z]+('[A-Za-z]+)?&quot;,
+...     return re.sub(r&#34;[A-Za-z]+(&#39;[A-Za-z]+)?&#34;,
 ...                   lambda mo: mo.group(0)[0].upper() +
 ...                              mo.group(0)[1:].lower(),
 ...                   s)
 ...
-&gt;&gt;&gt; titlecase(&quot;they're bill's friends.&quot;)
-&quot;They're Bill's Friends.&quot;
+&gt;&gt;&gt; titlecase(&#34;they&#39;re bill&#39;s friends.&#34;)
+&#34;They&#39;re Bill&#39;s Friends.&#34;
 </code></pre></li>
 <li>
 <p><code>str.translate(table)</code></p>
-<pre><code>&gt;&gt;&gt; transtable = str.maketrans('aeiou', '12345')
-&gt;&gt;&gt; origin = 'this is a string example.'
+<pre tabindex="0"><code>&gt;&gt;&gt; transtable = str.maketrans(&#39;aeiou&#39;, &#39;12345&#39;)
+&gt;&gt;&gt; origin = &#39;this is a string example.&#39;
 &gt;&gt;&gt; origin.translate(transtable)
-'th3s 3s 1 str3ng 2x1mpl2.'
+&#39;th3s 3s 1 str3ng 2x1mpl2.&#39;
 </code></pre></li>
 <li>
 <p><code>str.upper()</code></p>
@@ -1282,10 +1280,10 @@ True
 <li>
 <p><code>str.``zfill</code>(<em>width</em>)</p>
 <p>Return a copy of the string left filled with ASCII <code>'0'</code> digits to make a string of length <em>width</em>. A leading sign prefix (<code>'+'</code>/<code>'-'</code>) is handled by inserting the padding <em>after</em> the sign character rather than before. The original string is returned if <em>width</em> is less than or equal to <code>len(s)</code>.</p>
-<pre><code>&gt;&gt;&gt; &quot;42&quot;.zfill(5)
-'00042'
-&gt;&gt;&gt; &quot;-42&quot;.zfill(5)
-'-0042'
+<pre tabindex="0"><code>&gt;&gt;&gt; &#34;42&#34;.zfill(5)
+&#39;00042&#39;
+&gt;&gt;&gt; &#34;-42&#34;.zfill(5)
+&#39;-0042&#39;
 </code></pre></li>
 </ul>
 <h4 id="472-printf-style-string-formatting">4.7.2. <code>printf</code>-style String Formatting</h4>
@@ -1296,27 +1294,27 @@ True
 <p>Bytes objects are immutable sequences of single bytes. </p>
 <p><code>class bytes([source[, encoding[, errors]]])</code></p>
 <p><code>b'still allows embedded &quot;double&quot; quotes'</code></p>
-<pre><code>&gt;&gt;&gt; bytes.fromhex('2Ef0 F1f2  ')
-b'.\xf0\xf1\xf2'
-&gt;&gt;&gt; b'\xf0\xf1\xf2'.hex()
-'f0f1f2'
+<pre tabindex="0"><code>&gt;&gt;&gt; bytes.fromhex(&#39;2Ef0 F1f2  &#39;)
+b&#39;.\xf0\xf1\xf2&#39;
+&gt;&gt;&gt; b&#39;\xf0\xf1\xf2&#39;.hex()
+&#39;f0f1f2&#39;
 </code></pre><p>Since bytes objects are sequences of integers (akin to a tuple), for a bytes object <em>b</em>, <code>b[0]</code> will be an integer, while <code>b[0:1]</code> will be a bytes object of length 1. (This contrasts with text strings, where both indexing and slicing will produce a string of length 1)</p>
 <p>The representation of bytes objects uses the literal format (<code>b'...'</code>) since it is often more useful than e.g. <code>bytes([46, 46, 46])</code>. You can always convert a bytes object into a list of integers using list(b).</p>
 <h4 id="482-bytearray-objects">4.8.2. Bytearray Objects</h4>
 <p><code>bytearray</code> objects are a mutable counterpart to bytes objects.</p>
 <p><code>class bytearray([source[, encoding[, errors]]])</code></p>
-<pre><code>&gt;&gt;&gt; bytearray.fromhex('2Ef0 F1f2  ')
-bytearray(b'.\xf0\xf1\xf2')
-&gt;&gt;&gt; bytearray(b'\xf0\xf1\xf2').hex()
-'f0f1f2'
+<pre tabindex="0"><code>&gt;&gt;&gt; bytearray.fromhex(&#39;2Ef0 F1f2  &#39;)
+bytearray(b&#39;.\xf0\xf1\xf2&#39;)
+&gt;&gt;&gt; bytearray(b&#39;\xf0\xf1\xf2&#39;).hex()
+&#39;f0f1f2&#39;
 </code></pre><p>Since bytearray objects are sequences of integers (akin to a list), for a bytearray object <em>b</em>, <code>b[0]</code> will be an integer, while <code>b[0:1]</code> will be a bytearray object of length 1. (This contrasts with text strings, where both indexing and slicing will produce a string of length 1)</p>
 <p>The representation of bytearray objects uses the bytes literal format (<code>bytearray(b'...')</code>) since it is often more useful than e.g. <code>bytearray([46,46, 46])</code>. You can always convert a bytearray object into a list of integers using list(b).</p>
 <h4 id="483-bytes-and-bytearray-operations">4.8.3. Bytes and Bytearray Operations</h4>
 <p>Both bytes and <code>bytearray</code> objects support the common sequence operations.</p>
-<pre><code>a = &quot;abc&quot;
-b = a.replace(&quot;a&quot;, &quot;f&quot;)
-a = b&quot;abc&quot;
-b = a.replace(b&quot;a&quot;, b&quot;f&quot;)
+<pre tabindex="0"><code>a = &#34;abc&#34;
+b = a.replace(&#34;a&#34;, &#34;f&#34;)
+a = b&#34;abc&#34;
+b = a.replace(b&#34;a&#34;, b&#34;f&#34;)
 </code></pre><ul>
 <li>
 <p><code>bytes.count(sub[, start[, end]])</code></p>
@@ -1362,8 +1360,8 @@ b = a.replace(b&quot;a&quot;, b&quot;f&quot;)
 <p><code>bytearray.join(iterable)</code></p>
 </li>
 </ul>
-<pre><code>&gt;&gt;&gt; b' '.join([b'this', b'is', b'an', b'example'])
-b'this is an example'
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39; &#39;.join([b&#39;this&#39;, b&#39;is&#39;, b&#39;an&#39;, b&#39;example&#39;])
+b&#39;this is an example&#39;
 </code></pre><ul>
 <li>
 <p><code>static bytes.maketrans(from, to)</code></p>
@@ -1372,9 +1370,9 @@ b'this is an example'
 <p><code>static bytearray.maketrans(from, to)</code></p>
 </li>
 </ul>
-<pre><code>&gt;&gt;&gt; trans_table = bytes.maketrans(b'abcd', b'efgh')
-&gt;&gt;&gt; b'abxxcd'.translate(trans_table)
-b'efxxgh'
+<pre tabindex="0"><code>&gt;&gt;&gt; trans_table = bytes.maketrans(b&#39;abcd&#39;, b&#39;efgh&#39;)
+&gt;&gt;&gt; b&#39;abxxcd&#39;.translate(trans_table)
+b&#39;efxxgh&#39;
 </code></pre><ul>
 <li>
 <p><code>bytes.partition(sep)</code></p>
@@ -1383,10 +1381,10 @@ b'efxxgh'
 <p><code>bytearray.partition(sep)</code></p>
 </li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'This is an example'.partition(b'an')
-(b'This is ', b'an', b' example')
-&gt;&gt;&gt; b'This is an example'.partition(b'test')
-(b'This is an example', b'', b'')
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;This is an example&#39;.partition(b&#39;an&#39;)
+(b&#39;This is &#39;, b&#39;an&#39;, b&#39; example&#39;)
+&gt;&gt;&gt; b&#39;This is an example&#39;.partition(b&#39;test&#39;)
+(b&#39;This is an example&#39;, b&#39;&#39;, b&#39;&#39;)
 </code></pre><ul>
 <li>
 <p><code>bytes.replace(old, new[, count])</code></p>
@@ -1430,205 +1428,205 @@ b'efxxgh'
 </li>
 </ul>
 <p>Return a copy of the bytes or bytearray object where all bytes occurring in the optional argument delete are removed, and the remaining bytes have been mapped through the given translation table, which must be a bytes object of length 256.</p>
-<pre><code>&gt;&gt;&gt; b'read this short text'.translate(None, b'aeiou')
-b'rd ths shrt txt'
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;read this short text&#39;.translate(None, b&#39;aeiou&#39;)
+b&#39;rd ths shrt txt&#39;
 </code></pre><p>The following methods on bytes and bytearray objects have default behaviours that assume the use of ASCII compatible binary formats, but can still be used with arbitrary binary data by passing appropriate arguments. <strong>Note that all of the bytearray methods in this section do not operate in place, and instead produce new objects.</strong></p>
 <ul>
 <li><code>bytes.center(width[, fillbyte])</code></li>
 <li><code>bytearray.center(width[, fillbyte])</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'read this short text'.translate(None, b'aeiou')
-b'rd ths shrt txt'
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;read this short text&#39;.translate(None, b&#39;aeiou&#39;)
+b&#39;rd ths shrt txt&#39;
 </code></pre><p>The original sequence is returned if width is less than or equal to len(s).</p>
 <ul>
 <li><code>bytes.ljust(width[, fillbyte])</code></li>
 <li><code>bytearray.ljust(width[, fillbyte])</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'test'.ljust(10, b' ')
-b'test      '
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;test&#39;.ljust(10, b&#39; &#39;)
+b&#39;test      &#39;
 </code></pre><p>For bytes objects, the original sequence is returned if width is less than or equal to len(s).</p>
 <ul>
 <li><code>bytes.lstrip([chars])</code></li>
 <li><code>bytearray.lstrip([chars])</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'www.example.com'.lstrip(b'cmowz.')
-b'example.com'
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;www.example.com&#39;.lstrip(b&#39;cmowz.&#39;)
+b&#39;example.com&#39;
 </code></pre><p>If omitted or None, the chars argument defaults to removing ASCII whitespace.</p>
 <ul>
 <li><code>bytes.rjust(width[, fillbyte])</code></li>
 <li><code>bytearray.rjust(width[, fillbyte])</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'test'.rjust(10, b' ')
-b'      test'
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;test&#39;.rjust(10, b&#39; &#39;)
+b&#39;      test&#39;
 </code></pre><ul>
 <li><code>bytes.rsplit(sep=None, maxsplit=-1)</code></li>
 <li><code>bytearray.rsplit(sep=None, maxsplit=-1)</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'example'.rsplit(b'e', maxsplit=1)
-[b'exampl', b'']
-&gt;&gt;&gt; b'example'.rsplit(b'a')
-[b'ex', b'mple']
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;example&#39;.rsplit(b&#39;e&#39;, maxsplit=1)
+[b&#39;exampl&#39;, b&#39;&#39;]
+&gt;&gt;&gt; b&#39;example&#39;.rsplit(b&#39;a&#39;)
+[b&#39;ex&#39;, b&#39;mple&#39;]
 </code></pre><ul>
 <li><code>bytes.rstrip([chars])</code></li>
 <li><code>bytearray.rstrip([chars])</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'   spacious   '.rstrip()
-b'   spacious'
-&gt;&gt;&gt; b'mississippi'.rstrip(b'ipz')
-b'mississ'
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;   spacious   &#39;.rstrip()
+b&#39;   spacious&#39;
+&gt;&gt;&gt; b&#39;mississippi&#39;.rstrip(b&#39;ipz&#39;)
+b&#39;mississ&#39;
 </code></pre><p>If omitted or None, the chars argument defaults to removing ASCII whitespace.</p>
 <ul>
 <li><code>bytes.split(sep=None, maxsplit=-1)</code></li>
 <li><code>bytearray.split(sep=None, maxsplit=-1)</code></li>
 </ul>
 <p>If <em>sep</em> is given, consecutive delimiters are not grouped together and are deemed to delimit empty subsequences.</p>
-<pre><code>&gt;&gt;&gt; b'1,2,3'.split(b',')
-[b'1', b'2', b'3']
-&gt;&gt;&gt; b'1,2,3'.split(b',', maxsplit=1)
-[b'1', b'2,3']
-&gt;&gt;&gt; b'1,2,,3,'.split(b',')
-[b'1', b'2', b'', b'3', b'']
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;1,2,3&#39;.split(b&#39;,&#39;)
+[b&#39;1&#39;, b&#39;2&#39;, b&#39;3&#39;]
+&gt;&gt;&gt; b&#39;1,2,3&#39;.split(b&#39;,&#39;, maxsplit=1)
+[b&#39;1&#39;, b&#39;2,3&#39;]
+&gt;&gt;&gt; b&#39;1,2,,3,&#39;.split(b&#39;,&#39;)
+[b&#39;1&#39;, b&#39;2&#39;, b&#39;&#39;, b&#39;3&#39;, b&#39;&#39;]
 </code></pre><p>If <em>sep</em> is not specified or is <code>None</code>, runs of consecutive ASCII whitespace are regarded as a single separator</p>
-<pre><code>&gt;&gt;&gt; b'   1   2   3   '.split()
-[b'1', b'2', b'3']
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;   1   2   3   &#39;.split()
+[b&#39;1&#39;, b&#39;2&#39;, b&#39;3&#39;]
 </code></pre><ul>
 <li><code>bytes.strip([chars])</code></li>
 <li><code>bytearray.strip([chars])</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'   spacious   '.strip()
-b'spacious'
-&gt;&gt;&gt; b'www.example.com'.strip(b'cmowz.')
-b'example'
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;   spacious   &#39;.strip()
+b&#39;spacious&#39;
+&gt;&gt;&gt; b&#39;www.example.com&#39;.strip(b&#39;cmowz.&#39;)
+b&#39;example&#39;
 </code></pre><ul>
 <li><code>bytes.capitalize()</code></li>
 <li><code>bytearray.capitalize()</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'   spacious   '.strip()
-b'spacious'
-&gt;&gt;&gt; b'www.example.com'.strip(b'cmowz.')
-b'example'
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;   spacious   &#39;.strip()
+b&#39;spacious&#39;
+&gt;&gt;&gt; b&#39;www.example.com&#39;.strip(b&#39;cmowz.&#39;)
+b&#39;example&#39;
 </code></pre><ul>
 <li><code>bytes.expandtabs(tabsize=8)</code></li>
 <li><code>bytearray.expandtabs(tabsize=8)</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'ABCabc1'.isalnum()
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;ABCabc1&#39;.isalnum()
 True
-&gt;&gt;&gt; b'ABC abc1'.isalnum()
+&gt;&gt;&gt; b&#39;ABC abc1&#39;.isalnum()
 False
 </code></pre><ul>
 <li><code>bytes.isalnum()</code></li>
 <li><code>bytearray.isalnum()</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'ABCabc1'.isalnum()
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;ABCabc1&#39;.isalnum()
 True
-&gt;&gt;&gt; b'ABC abc1'.isalnum()
+&gt;&gt;&gt; b&#39;ABC abc1&#39;.isalnum()
 False
 </code></pre><ul>
 <li><code>bytes.isalpha()</code></li>
 <li><code>bytearray.isalpha()</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'ABCabc'.isalpha()
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;ABCabc&#39;.isalpha()
 True
-&gt;&gt;&gt; b'ABCabc1'.isalpha()
+&gt;&gt;&gt; b&#39;ABCabc1&#39;.isalpha()
 False
 </code></pre><ul>
 <li><code>bytes.isdigit()</code></li>
 <li><code>bytearray.isdigit()</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'1234'.isdigit()
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;1234&#39;.isdigit()
 True
-&gt;&gt;&gt; b'1.23'.isdigit()
+&gt;&gt;&gt; b&#39;1.23&#39;.isdigit()
 False
 </code></pre><ul>
 <li><code>bytes.islower()</code></li>
 <li><code>bytearray.islower()</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'hello world'.islower()
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;hello world&#39;.islower()
 True
-&gt;&gt;&gt; b'Hello world'.islower()
+&gt;&gt;&gt; b&#39;Hello world&#39;.islower()
 False
 </code></pre><ul>
 <li><code>bytes.isspace()</code></li>
 <li><code>bytearray.isspace()</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'Hello World!'.isspace()
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;Hello World!&#39;.isspace()
 False
 # space, tab, newline, carriage return, vertical tab, form feed
-&gt;&gt;&gt; b' \t\n\r\x0b\f'.isspace()
+&gt;&gt;&gt; b&#39; \t\n\r\x0b\f&#39;.isspace()
 True
 </code></pre><ul>
 <li><code>bytes.istitle()</code></li>
 <li><code>bytearray.istitle()</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'Hello World'.istitle()
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;Hello World&#39;.istitle()
 True
-&gt;&gt;&gt; b'Hello world'.istitle()
+&gt;&gt;&gt; b&#39;Hello world&#39;.istitle()
 False
 </code></pre><ul>
 <li><code>bytes.isupper()</code></li>
 <li><code>bytearray.isupper()</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'HELLO WORLD'.isupper()
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;HELLO WORLD&#39;.isupper()
 True
-&gt;&gt;&gt; b'Hello world'.isupper()
+&gt;&gt;&gt; b&#39;Hello world&#39;.isupper()
 False
 </code></pre><ul>
 <li><code>bytes.lower()</code></li>
 <li><code>bytearray.lower()</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'Hello World'.lower()
-b'hello world'
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;Hello World&#39;.lower()
+b&#39;hello world&#39;
 </code></pre><ul>
 <li><code>bytes.splitlines(keepends=False)</code></li>
 <li><code>bytearray.splitlines(keepends=False)</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'ab c\n\nde fg\rkl\r\n'.splitlines()
-[b'ab c', b'', b'de fg', b'kl']
-&gt;&gt;&gt; b'ab c\n\nde fg\rkl\r\n'.splitlines(keepends=True)
-[b'ab c\n', b'\n', b'de fg\r', b'kl\r\n']
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;ab c\n\nde fg\rkl\r\n&#39;.splitlines()
+[b&#39;ab c&#39;, b&#39;&#39;, b&#39;de fg&#39;, b&#39;kl&#39;]
+&gt;&gt;&gt; b&#39;ab c\n\nde fg\rkl\r\n&#39;.splitlines(keepends=True)
+[b&#39;ab c\n&#39;, b&#39;\n&#39;, b&#39;de fg\r&#39;, b&#39;kl\r\n&#39;]
 </code></pre><p>Unlike <code>split()</code> when a delimiter string <em>sep</em> is given, this method returns an empty list for the empty string, and a terminal line break does not result in an extra line:</p>
-<pre><code>&gt;&gt;&gt; b&quot;&quot;.split(b'\n'), b&quot;Two lines\n&quot;.split(b'\n')
-([b''], [b'Two lines', b''])
-&gt;&gt;&gt; b&quot;&quot;.splitlines(), b&quot;One line\n&quot;.splitlines()
-([], [b'One line'])
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#34;&#34;.split(b&#39;\n&#39;), b&#34;Two lines\n&#34;.split(b&#39;\n&#39;)
+([b&#39;&#39;], [b&#39;Two lines&#39;, b&#39;&#39;])
+&gt;&gt;&gt; b&#34;&#34;.splitlines(), b&#34;One line\n&#34;.splitlines()
+([], [b&#39;One line&#39;])
 </code></pre><ul>
 <li><code>bytes.swapcase()</code></li>
 <li><code>bytearray.swapcase()</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'Hello World'.swapcase()
-b'hELLO wORLD'
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;Hello World&#39;.swapcase()
+b&#39;hELLO wORLD&#39;
 </code></pre><ul>
 <li><code>bytes.title()</code></li>
 <li><code>bytearray.title()</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'Hello world'.title()
-b'Hello World'
-</code></pre><pre><code>&gt;&gt;&gt; b&quot;they're bill's friends from the UK&quot;.title()
-b&quot;They'Re Bill'S Friends From The Uk&quot;
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;Hello world&#39;.title()
+b&#39;Hello World&#39;
+</code></pre><pre tabindex="0"><code>&gt;&gt;&gt; b&#34;they&#39;re bill&#39;s friends from the UK&#34;.title()
+b&#34;They&#39;Re Bill&#39;S Friends From The Uk&#34;
 </code></pre><p>A workaround for apostrophes can be constructed using regular expressions:</p>
-<pre><code>&gt;&gt;&gt; import re
+<pre tabindex="0"><code>&gt;&gt;&gt; import re
 &gt;&gt;&gt; def titlecase(s):
-...     return re.sub(rb&quot;[A-Za-z]+('[A-Za-z]+)?&quot;,
+...     return re.sub(rb&#34;[A-Za-z]+(&#39;[A-Za-z]+)?&#34;,
 ...                   lambda mo: mo.group(0)[0:1].upper() +
 ...                              mo.group(0)[1:].lower(),
 ...                   s)
 ...
-&gt;&gt;&gt; titlecase(b&quot;they're bill's friends.&quot;)
-b&quot;They're Bill's Friends.&quot;
+&gt;&gt;&gt; titlecase(b&#34;they&#39;re bill&#39;s friends.&#34;)
+b&#34;They&#39;re Bill&#39;s Friends.&#34;
 </code></pre><ul>
 <li><code>bytes.upper()</code></li>
 <li><code>bytearray.upper()</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b'Hello World'.upper()
-b'HELLO WORLD'
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#39;Hello World&#39;.upper()
+b&#39;HELLO WORLD&#39;
 </code></pre><ul>
 <li><code>bytes.zfill(width)</code></li>
 <li><code>bytearray.zfill(width)</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; b&quot;42&quot;.zfill(5)
-b'00042'
-&gt;&gt;&gt; b&quot;-42&quot;.zfill(5)
-b'-0042'
+<pre tabindex="0"><code>&gt;&gt;&gt; b&#34;42&#34;.zfill(5)
+b&#39;00042&#39;
+&gt;&gt;&gt; b&#34;-42&#34;.zfill(5)
+b&#39;-0042&#39;
 </code></pre><h3 id="49-set-types---set-frozenset">4.9. Set Types —  set, frozenset</h3>
 <p>Common uses include membership testing, removing duplicates from a sequence, and computing mathematical operations such as intersection, union, difference, and symmetric difference.</p>
 <p>Being an unordered collection, sets do not support indexing, slicing, or other sequence-like behavior.</p>
@@ -1756,11 +1754,11 @@ b'-0042'
 <p><code>class dict(**kwarg)</code>
 <code>class dict(mapping, **kwarg)</code>
 <code>class dict(iterable, **kwarg)</code></p>
-<pre><code>&gt;&gt;&gt; a = dict(one=1, two=2, three=3)
-&gt;&gt;&gt; b = {'one': 1, 'two': 2, 'three': 3}
-&gt;&gt;&gt; c = dict(zip(['one', 'two', 'three'], [1, 2, 3]))
-&gt;&gt;&gt; d = dict([('two', 2), ('one', 1), ('three', 3)])
-&gt;&gt;&gt; e = dict({'three': 3, 'one': 1, 'two': 2})
+<pre tabindex="0"><code>&gt;&gt;&gt; a = dict(one=1, two=2, three=3)
+&gt;&gt;&gt; b = {&#39;one&#39;: 1, &#39;two&#39;: 2, &#39;three&#39;: 3}
+&gt;&gt;&gt; c = dict(zip([&#39;one&#39;, &#39;two&#39;, &#39;three&#39;], [1, 2, 3]))
+&gt;&gt;&gt; d = dict([(&#39;two&#39;, 2), (&#39;one&#39;, 1), (&#39;three&#39;, 3)])
+&gt;&gt;&gt; e = dict({&#39;three&#39;: 3, &#39;one&#39;: 1, &#39;two&#39;: 2})
 &gt;&gt;&gt; a == b == c == d == e
 True
 </code></pre><ul>
@@ -1867,7 +1865,7 @@ True
 </ul>
 <h3 id="53-warnings">5.3. Warnings</h3>
 <h3 id="54-exception--hierarchy">5.4. Exception  hierarchy</h3>
-<pre><code>BaseException
+<pre tabindex="0"><code>BaseException
  +-- SystemExit
  +-- KeyboardInterrupt
  +-- GeneratorExit
@@ -1965,82 +1963,82 @@ True
 </ul>
 <h4 id="6132-format-examples">6.1.3.2. Format examples</h4>
 <p>Accessing arguments by position:</p>
-<pre><code>&gt;&gt;&gt; '{0}, {1}, {2}'.format('a', 'b', 'c')
-'a, b, c'
-&gt;&gt;&gt; '{}, {}, {}'.format('a', 'b', 'c')  
-'a, b, c'
-&gt;&gt;&gt; '{2}, {1}, {0}'.format('a', 'b', 'c')
-'c, b, a'
-&gt;&gt;&gt; '{2}, {1}, {0}'.format(*'abc')      # unpacking argument sequence
-'c, b, a'
-&gt;&gt;&gt; '{0}{1}{0}'.format('abra', 'cad')   # arguments' indices can be repeated
-'abracadabra'
+<pre tabindex="0"><code>&gt;&gt;&gt; &#39;{0}, {1}, {2}&#39;.format(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;)
+&#39;a, b, c&#39;
+&gt;&gt;&gt; &#39;{}, {}, {}&#39;.format(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;)  
+&#39;a, b, c&#39;
+&gt;&gt;&gt; &#39;{2}, {1}, {0}&#39;.format(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;)
+&#39;c, b, a&#39;
+&gt;&gt;&gt; &#39;{2}, {1}, {0}&#39;.format(*&#39;abc&#39;)      # unpacking argument sequence
+&#39;c, b, a&#39;
+&gt;&gt;&gt; &#39;{0}{1}{0}&#39;.format(&#39;abra&#39;, &#39;cad&#39;)   # arguments&#39; indices can be repeated
+&#39;abracadabra&#39;
 </code></pre><p>Accessing arguments by name:</p>
-<pre><code>&gt;&gt;&gt; 'Coordinates: {latitude}, {longitude}'.format(latitude='37.24N', longitude='-115.81W')
-'Coordinates: 37.24N, -115.81W'
-&gt;&gt;&gt; coord = {'latitude': '37.24N', 'longitude': '-115.81W'}
-&gt;&gt;&gt; 'Coordinates: {latitude}, {longitude}'.format(**coord)
-'Coordinates: 37.24N, -115.81W'
+<pre tabindex="0"><code>&gt;&gt;&gt; &#39;Coordinates: {latitude}, {longitude}&#39;.format(latitude=&#39;37.24N&#39;, longitude=&#39;-115.81W&#39;)
+&#39;Coordinates: 37.24N, -115.81W&#39;
+&gt;&gt;&gt; coord = {&#39;latitude&#39;: &#39;37.24N&#39;, &#39;longitude&#39;: &#39;-115.81W&#39;}
+&gt;&gt;&gt; &#39;Coordinates: {latitude}, {longitude}&#39;.format(**coord)
+&#39;Coordinates: 37.24N, -115.81W&#39;
 </code></pre><p>Accessing arguments’ attributes:</p>
-<pre><code>&gt;&gt;&gt; class Point:
+<pre tabindex="0"><code>&gt;&gt;&gt; class Point:
 ...     def __init__(self, x, y):
 ...         self.x, self.y = x, y
 ...     def __str__(self):
-...         return 'Point({self.x}, {self.y})'.format(self=self)
+...         return &#39;Point({self.x}, {self.y})&#39;.format(self=self)
 </code></pre><p>Accessing arguments’ items:</p>
-<pre><code>&gt;&gt;&gt; coord = (3, 5)
-&gt;&gt;&gt; 'X: {0[0]};  Y: {0[1]}'.format(coord)
-'X: 3;  Y: 5'
+<pre tabindex="0"><code>&gt;&gt;&gt; coord = (3, 5)
+&gt;&gt;&gt; &#39;X: {0[0]};  Y: {0[1]}&#39;.format(coord)
+&#39;X: 3;  Y: 5&#39;
 </code></pre><p>Replacing <code>%s</code> and <code>%r</code>:</p>
-<pre><code>&gt;&gt;&gt; &quot;repr() shows quotes: {!r}; str() doesn't: {!s}&quot;.format('test1', 'test2')
-&quot;repr() shows quotes: 'test1'; str() doesn't: test2&quot;
+<pre tabindex="0"><code>&gt;&gt;&gt; &#34;repr() shows quotes: {!r}; str() doesn&#39;t: {!s}&#34;.format(&#39;test1&#39;, &#39;test2&#39;)
+&#34;repr() shows quotes: &#39;test1&#39;; str() doesn&#39;t: test2&#34;
 </code></pre><p>Aligning the text and specifying a width:</p>
-<pre><code>&gt;&gt;&gt; '{:&lt;30}'.format('left aligned')
-'left aligned                  '
-&gt;&gt;&gt; '{:&gt;30}'.format('right aligned')
-'                 right aligned'
-&gt;&gt;&gt; '{:^30}'.format('centered')
-'           centered           '
-&gt;&gt;&gt; '{:*^30}'.format('centered')  # use '*' as a fill char
-'***********centered***********'
+<pre tabindex="0"><code>&gt;&gt;&gt; &#39;{:&lt;30}&#39;.format(&#39;left aligned&#39;)
+&#39;left aligned                  &#39;
+&gt;&gt;&gt; &#39;{:&gt;30}&#39;.format(&#39;right aligned&#39;)
+&#39;                 right aligned&#39;
+&gt;&gt;&gt; &#39;{:^30}&#39;.format(&#39;centered&#39;)
+&#39;           centered           &#39;
+&gt;&gt;&gt; &#39;{:*^30}&#39;.format(&#39;centered&#39;)  # use &#39;*&#39; as a fill char
+&#39;***********centered***********&#39;
 </code></pre><p>Replacing <code>%+f</code>, <code>%-f</code>, and <code>% f</code> and specifying a sign:</p>
-<pre><code>&gt;&gt;&gt; '{:+f}; {:+f}'.format(3.14, -3.14)  # show it always
-'+3.140000; -3.140000'
-&gt;&gt;&gt; '{: f}; {: f}'.format(3.14, -3.14)  # show a space for positive numbers
-' 3.140000; -3.140000'
-&gt;&gt;&gt; '{:-f}; {:-f}'.format(3.14, -3.14)  # show only the minus -- same as '{:f}; {:f}'
-'3.140000; -3.140000'
+<pre tabindex="0"><code>&gt;&gt;&gt; &#39;{:+f}; {:+f}&#39;.format(3.14, -3.14)  # show it always
+&#39;+3.140000; -3.140000&#39;
+&gt;&gt;&gt; &#39;{: f}; {: f}&#39;.format(3.14, -3.14)  # show a space for positive numbers
+&#39; 3.140000; -3.140000&#39;
+&gt;&gt;&gt; &#39;{:-f}; {:-f}&#39;.format(3.14, -3.14)  # show only the minus -- same as &#39;{:f}; {:f}&#39;
+&#39;3.140000; -3.140000&#39;
 </code></pre><p>Using the comma as a thousands separator:</p>
-<pre><code>&gt;&gt;&gt; '{:,}'.format(1234567890)
-'1,234,567,890'
+<pre tabindex="0"><code>&gt;&gt;&gt; &#39;{:,}&#39;.format(1234567890)
+&#39;1,234,567,890&#39;
 </code></pre><p>Expressing a percentage:</p>
-<pre><code>&gt;&gt;&gt; points = 19
+<pre tabindex="0"><code>&gt;&gt;&gt; points = 19
 &gt;&gt;&gt; total = 22
-&gt;&gt;&gt; 'Correct answers: {:.2%}'.format(points/total)
-'Correct answers: 86.36%'
+&gt;&gt;&gt; &#39;Correct answers: {:.2%}&#39;.format(points/total)
+&#39;Correct answers: 86.36%&#39;
 </code></pre><p>Using type-specific formatting:</p>
-<pre><code>&gt;&gt;&gt; import datetime
+<pre tabindex="0"><code>&gt;&gt;&gt; import datetime
 &gt;&gt;&gt; d = datetime.datetime(2010, 7, 4, 12, 15, 58)
-&gt;&gt;&gt; '{:%Y-%m-%d %H:%M:%S}'.format(d)
-'2010-07-04 12:15:58'
+&gt;&gt;&gt; &#39;{:%Y-%m-%d %H:%M:%S}&#39;.format(d)
+&#39;2010-07-04 12:15:58&#39;
 </code></pre><p>Nesting arguments and more complex examples:</p>
-<pre><code>&gt;&gt;&gt; for align, text in zip('&lt;^&gt;', ['left', 'center', 'right']):
-...     '{0:{fill}{align}16}'.format(text, fill=align, align=align)
+<pre tabindex="0"><code>&gt;&gt;&gt; for align, text in zip(&#39;&lt;^&gt;&#39;, [&#39;left&#39;, &#39;center&#39;, &#39;right&#39;]):
+...     &#39;{0:{fill}{align}16}&#39;.format(text, fill=align, align=align)
 ...
-'left&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;'
-'^^^^^center^^^^^'
-'&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;right'
+&#39;left&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&#39;
+&#39;^^^^^center^^^^^&#39;
+&#39;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;right&#39;
 &gt;&gt;&gt;
 &gt;&gt;&gt; octets = [192, 168, 0, 1]
-&gt;&gt;&gt; '{:02X}{:02X}{:02X}{:02X}'.format(*octets)
-'C0A80001'
+&gt;&gt;&gt; &#39;{:02X}{:02X}{:02X}{:02X}&#39;.format(*octets)
+&#39;C0A80001&#39;
 &gt;&gt;&gt; int(_, 16)
 3232235521
 &gt;&gt;&gt;
 &gt;&gt;&gt; width = 5
 &gt;&gt;&gt; for num in range(5,12): 
-...     for base in 'dXob':
-...         print('{0:{width}{base}}'.format(num, base=base, width=width), end=' ')
+...     for base in &#39;dXob&#39;:
+...         print(&#39;{0:{width}{base}}&#39;.format(num, base=base, width=width), end=&#39; &#39;)
 ...     print()
 ...
     5     5     5   101
@@ -2051,24 +2049,24 @@ True
    10     A    12  1010
    11     B    13  1011
 </code></pre><h4 id="614-template-strings">6.1.4. Template strings</h4>
-<pre><code>&gt;&gt;&gt; from string import Template
-&gt;&gt;&gt; s = Template('$who likes $what')
-&gt;&gt;&gt; s.substitute(who='tim', what='kung pao')
-'tim likes kung pao'
+<pre tabindex="0"><code>&gt;&gt;&gt; from string import Template
+&gt;&gt;&gt; s = Template(&#39;$who likes $what&#39;)
+&gt;&gt;&gt; s.substitute(who=&#39;tim&#39;, what=&#39;kung pao&#39;)
+&#39;tim likes kung pao&#39;
 
 # $$ is an escape; it is replaced with a single $.
-&gt;&gt;&gt; d = dict(who='tim')
-&gt;&gt;&gt; Template('Give $who $100').substitute(d)
+&gt;&gt;&gt; d = dict(who=&#39;tim&#39;)
+&gt;&gt;&gt; Template(&#39;Give $who $100&#39;).substitute(d)
 Traceback (most recent call last):
 ...
 ValueError: Invalid placeholder in string: line 1, col 11
 
-&gt;&gt;&gt; Template('$who likes $what').substitute(d)
+&gt;&gt;&gt; Template(&#39;$who likes $what&#39;).substitute(d)
 Traceback (most recent call last):
 ...
-KeyError: 'what'
-&gt;&gt;&gt; Template('$who likes $what').safe_substitute(d)
-'tim likes $what'
+KeyError: &#39;what&#39;
+&gt;&gt;&gt; Template(&#39;$who likes $what&#39;).safe_substitute(d)
+&#39;tim likes $what&#39;
 </code></pre><h3 id="62-re--regular--expression-operations">6.2. re — Regular  expression operations</h3>
 <p>The solution is to use Python’s raw string notation for regular expression patterns; backslashes are not handled in any special way in a string literal prefixed with <code>'r'</code>.  It’s highly recommended that you use raw strings for all but the simplest expressions.</p>
 <h4 id="621-regular-expression-syntax">6.2.1. Regular Expression Syntax</h4>
@@ -2234,10 +2232,10 @@ KeyError: 'what'
 <ul>
 <li>
 <p><code>re.compile(pattern, flags=0)</code></p>
-<pre><code>prog = re.compile(pattern)
+<pre tabindex="0"><code>prog = re.compile(pattern)
 result = prog.match(string)
 </code></pre><p>is equivalent to</p>
-<pre><code>result = re.match(pattern, string)
+<pre tabindex="0"><code>result = re.match(pattern, string)
 </code></pre></li>
 <li>
 <p><code>re.A</code></p>
@@ -2279,28 +2277,28 @@ result = prog.match(string)
 </li>
 <li>
 <p><code>re.VERBOSE</code></p>
-<pre><code>a = re.compile(r&quot;&quot;&quot;\d +  # the integral part
+<pre tabindex="0"><code>a = re.compile(r&#34;&#34;&#34;\d +  # the integral part
                    \.    # the decimal point
-                   \d *  # some fractional digits&quot;&quot;&quot;, re.X)
+                   \d *  # some fractional digits&#34;&#34;&#34;, re.X)
 </code></pre><p>equal to</p>
-<pre><code>b = re.compile(r&quot;\d+\.\d*&quot;)
+<pre tabindex="0"><code>b = re.compile(r&#34;\d+\.\d*&#34;)
 </code></pre></li>
 <li>
 <p><code>re.search(pattern, string, flags=0)</code></p>
 <p>Looking for the first location where the regular expression pattern produces a match, and return a corresponding <strong>match object</strong>. Return <strong>None</strong> if no position in the string matches the pattern.</p>
 <p>Regular expressions beginning with <code>'^'</code> can be used with <code>search()</code> to restrict the match at the beginning of the string:</p>
-<pre><code>&gt;&gt;&gt; re.match(&quot;c&quot;, &quot;abcdef&quot;)    # No match
-&gt;&gt;&gt; re.search(&quot;^c&quot;, &quot;abcdef&quot;)  # No match
-&gt;&gt;&gt; re.search(&quot;^a&quot;, &quot;abcdef&quot;)  # Match
-&lt;_sre.SRE_Match object; span=(0, 1), match='a'&gt;
+<pre tabindex="0"><code>&gt;&gt;&gt; re.match(&#34;c&#34;, &#34;abcdef&#34;)    # No match
+&gt;&gt;&gt; re.search(&#34;^c&#34;, &#34;abcdef&#34;)  # No match
+&gt;&gt;&gt; re.search(&#34;^a&#34;, &#34;abcdef&#34;)  # Match
+&lt;_sre.SRE_Match object; span=(0, 1), match=&#39;a&#39;&gt;
 </code></pre></li>
 <li>
 <p><code>re.match(pattern, string, flags=0)</code></p>
 <p>Return a corresponding <strong>match object</strong> or <strong>None</strong>. <code>re.match()</code> checks for a match only at the <strong>beginning</strong> of the string,</p>
 <p>If you want to locate a match anywhere in string, use <code>search()</code> instead.</p>
-<pre><code>&gt;&gt;&gt; re.match(&quot;c&quot;, &quot;abcdef&quot;)    # No match
-&gt;&gt;&gt; re.search(&quot;c&quot;, &quot;abcdef&quot;)   # Match
-&lt;_sre.SRE_Match object; span=(2, 3), match='c'&gt;
+<pre tabindex="0"><code>&gt;&gt;&gt; re.match(&#34;c&#34;, &#34;abcdef&#34;)    # No match
+&gt;&gt;&gt; re.search(&#34;c&#34;, &#34;abcdef&#34;)   # Match
+&lt;_sre.SRE_Match object; span=(2, 3), match=&#39;c&#39;&gt;
 </code></pre></li>
 <li>
 <p><code>re.fullmatch(pattern, string, flags=0)</code></p>
@@ -2309,31 +2307,31 @@ result = prog.match(string)
 <li>
 <p><code>re.split(pattern, string, maxsplit=0, flags=0)</code></p>
 <p>If capturing parentheses are used in <em>pattern</em>, then the text of all groups in the pattern are also returned as part of the resulting list.</p>
-<pre><code>&gt;&gt;&gt; re.split(r'\W+', 'Words, words, words.')
-['Words', 'words', 'words', '']
-&gt;&gt;&gt; re.split(r'(\W+)', 'Words, words, words.')
-['Words', ', ', 'words', ', ', 'words', '.', '']
-&gt;&gt;&gt; re.split(r'\W+', 'Words, words, words.', 1)
-['Words', 'words, words.']
-&gt;&gt;&gt; re.split('[a-f]+', '0a3B9', flags=re.IGNORECASE)
-['0', '3', '9']
+<pre tabindex="0"><code>&gt;&gt;&gt; re.split(r&#39;\W+&#39;, &#39;Words, words, words.&#39;)
+[&#39;Words&#39;, &#39;words&#39;, &#39;words&#39;, &#39;&#39;]
+&gt;&gt;&gt; re.split(r&#39;(\W+)&#39;, &#39;Words, words, words.&#39;)
+[&#39;Words&#39;, &#39;, &#39;, &#39;words&#39;, &#39;, &#39;, &#39;words&#39;, &#39;.&#39;, &#39;&#39;]
+&gt;&gt;&gt; re.split(r&#39;\W+&#39;, &#39;Words, words, words.&#39;, 1)
+[&#39;Words&#39;, &#39;words, words.&#39;]
+&gt;&gt;&gt; re.split(&#39;[a-f]+&#39;, &#39;0a3B9&#39;, flags=re.IGNORECASE)
+[&#39;0&#39;, &#39;3&#39;, &#39;9&#39;]
 </code></pre><p>If there are capturing groups in the separator and it matches at the start of the string, the result will start with an empty string. The same holds for the end of the string:</p>
-<pre><code>&gt;&gt;&gt; re.split(r'(\W+)', '...words, words...')
-['', '...', 'words', ', ', 'words', '...', '']
+<pre tabindex="0"><code>&gt;&gt;&gt; re.split(r&#39;(\W+)&#39;, &#39;...words, words...&#39;)
+[&#39;&#39;, &#39;...&#39;, &#39;words&#39;, &#39;, &#39;, &#39;words&#39;, &#39;...&#39;, &#39;&#39;]
 </code></pre></li>
 <li>
 <p><code>re.findall(pattern, string, flags=0)</code></p>
 <p>Return all non-overlapping matches of <em>pattern</em> in <em>string</em>, as a list of strings. The <em>string</em> is scanned left-to-right, and matches are returned in the order found. If one or more groups are present in the pattern, return a list of groups; this will be a list of tuples if the pattern has more than one group.</p>
-<pre><code>&gt;&gt;&gt; text = &quot;He was carefully disguised but captured quickly by police.&quot;
-&gt;&gt;&gt; re.findall(r&quot;\w+ly&quot;, text)
-['carefully', 'quickly']
+<pre tabindex="0"><code>&gt;&gt;&gt; text = &#34;He was carefully disguised but captured quickly by police.&#34;
+&gt;&gt;&gt; re.findall(r&#34;\w+ly&#34;, text)
+[&#39;carefully&#39;, &#39;quickly&#39;]
 </code></pre></li>
 <li>
 <p><code>re.finditer(pattern, string, flags=0)</code></p>
 <p>Return an iterator yielding match objects.</p>
-<pre><code>&gt;&gt;&gt; text = &quot;He was carefully disguised but captured quickly by police.&quot;
-&gt;&gt;&gt; for m in re.finditer(r&quot;\w+ly&quot;, text):
-...     print('%02d-%02d: %s' % (m.start(), m.end(), m.group(0)))
+<pre tabindex="0"><code>&gt;&gt;&gt; text = &#34;He was carefully disguised but captured quickly by police.&#34;
+&gt;&gt;&gt; for m in re.finditer(r&#34;\w+ly&#34;, text):
+...     print(&#39;%02d-%02d: %s&#39; % (m.start(), m.end(), m.group(0)))
 07-16: carefully
 40-47: quickly
 </code></pre></li>
@@ -2341,13 +2339,13 @@ result = prog.match(string)
 <p><code>re.sub(pattern, repl, string, count=0, flags=0)</code></p>
 <p>Return the string obtained by replacing the leftmost non-overlapping occurrences of <em>pattern</em> in <em>string</em> by the replacement <em>repl</em>.</p>
 <p><em>repl</em> can be a string or a function.</p>
-<pre><code>&gt;&gt;&gt; def dashrepl(matchobj):
-...     if matchobj.group(0) == '-': return ' '
-...     else: return '-'
-&gt;&gt;&gt; re.sub('-{1,2}', dashrepl, 'pro----gram-files')
-'pro--gram files'
-&gt;&gt;&gt; re.sub(r'\sAND\s', ' &amp; ', 'Baked Beans And Spam', flags=re.IGNORECASE)
-'Baked Beans &amp; Spam'
+<pre tabindex="0"><code>&gt;&gt;&gt; def dashrepl(matchobj):
+...     if matchobj.group(0) == &#39;-&#39;: return &#39; &#39;
+...     else: return &#39;-&#39;
+&gt;&gt;&gt; re.sub(&#39;-{1,2}&#39;, dashrepl, &#39;pro----gram-files&#39;)
+&#39;pro--gram files&#39;
+&gt;&gt;&gt; re.sub(r&#39;\sAND\s&#39;, &#39; &amp; &#39;, &#39;Baked Beans And Spam&#39;, flags=re.IGNORECASE)
+&#39;Baked Beans &amp; Spam&#39;
 </code></pre></li>
 <li>
 <p><code>re.subn(pattern, repl, string, count=0, flags=0)</code></p>
@@ -2356,7 +2354,7 @@ result = prog.match(string)
 <li>
 <p><code>re.escape(pattern)</code></p>
 <p>Escape all the characters in <em>pattern</em> except ASCII letters, numbers and <code>'_'</code>. </p>
-<pre><code>&gt;&gt;&gt; print(re.escape('python.exe'))
+<pre tabindex="0"><code>&gt;&gt;&gt; print(re.escape(&#39;python.exe&#39;))
 python\.exe
 </code></pre></li>
 <li>
@@ -2368,26 +2366,26 @@ python\.exe
 <ul>
 <li>
 <p><code>regex.search(string[, pos[, endpos]])</code></p>
-<pre><code>&gt;&gt;&gt; pattern = re.compile(&quot;d&quot;)
-&gt;&gt;&gt; pattern.search(&quot;dog&quot;)     # Match at index 0
-&lt;_sre.SRE_Match object; span=(0, 1), match='d'&gt;
-&gt;&gt;&gt; pattern.search(&quot;dog&quot;, 1)  # No match; search doesn't include the &quot;d&quot;
+<pre tabindex="0"><code>&gt;&gt;&gt; pattern = re.compile(&#34;d&#34;)
+&gt;&gt;&gt; pattern.search(&#34;dog&#34;)     # Match at index 0
+&lt;_sre.SRE_Match object; span=(0, 1), match=&#39;d&#39;&gt;
+&gt;&gt;&gt; pattern.search(&#34;dog&#34;, 1)  # No match; search doesn&#39;t include the &#34;d&#34;
 </code></pre></li>
 <li>
 <p><code>regex.match(string[, pos[, endpos]])</code></p>
 <p>If zero or more characters at the <strong>beginning</strong> of string match this regular expression, return a corresponding match object.</p>
-<pre><code>&gt;&gt;&gt; pattern = re.compile(&quot;o&quot;)
-&gt;&gt;&gt; pattern.match(&quot;dog&quot;)      # No match as &quot;o&quot; is not at the start of &quot;dog&quot;.
-&gt;&gt;&gt; pattern.match(&quot;dog&quot;, 1)   # Match as &quot;o&quot; is the 2nd character of &quot;dog&quot;.
-&lt;_sre.SRE_Match object; span=(1, 2), match='o'&gt;
+<pre tabindex="0"><code>&gt;&gt;&gt; pattern = re.compile(&#34;o&#34;)
+&gt;&gt;&gt; pattern.match(&#34;dog&#34;)      # No match as &#34;o&#34; is not at the start of &#34;dog&#34;.
+&gt;&gt;&gt; pattern.match(&#34;dog&#34;, 1)   # Match as &#34;o&#34; is the 2nd character of &#34;dog&#34;.
+&lt;_sre.SRE_Match object; span=(1, 2), match=&#39;o&#39;&gt;
 </code></pre></li>
 <li>
 <p><code>regex.fullmatch(string[, pos[, endpos]])</code></p>
-<pre><code>&gt;&gt;&gt; pattern = re.compile(&quot;o[gh]&quot;)
-&gt;&gt;&gt; pattern.fullmatch(&quot;dog&quot;)      # No match as &quot;o&quot; is not at the start of &quot;dog&quot;.
-&gt;&gt;&gt; pattern.fullmatch(&quot;ogre&quot;)     # No match as not the full string matches.
-&gt;&gt;&gt; pattern.fullmatch(&quot;doggie&quot;, 1, 3)   # Matches within given limits.
-&lt;_sre.SRE_Match object; span=(1, 3), match='og'&gt;
+<pre tabindex="0"><code>&gt;&gt;&gt; pattern = re.compile(&#34;o[gh]&#34;)
+&gt;&gt;&gt; pattern.fullmatch(&#34;dog&#34;)      # No match as &#34;o&#34; is not at the start of &#34;dog&#34;.
+&gt;&gt;&gt; pattern.fullmatch(&#34;ogre&#34;)     # No match as not the full string matches.
+&gt;&gt;&gt; pattern.fullmatch(&#34;doggie&#34;, 1, 3)   # Matches within given limits.
+&lt;_sre.SRE_Match object; span=(1, 3), match=&#39;og&#39;&gt;
 </code></pre></li>
 <li>
 <p><code>regex.split(string, maxsplit=0)</code></p>
@@ -2418,7 +2416,7 @@ python\.exe
 </li>
 </ul>
 <h4 id="624-match-objects">6.2.4. Match Objects</h4>
-<pre><code>match = re.search(pattern, string)
+<pre tabindex="0"><code>match = re.search(pattern, string)
 if match:
     process(match)
 </code></pre><ul>
@@ -2426,26 +2424,26 @@ if match:
 <p><code>match.expand(template)</code></p>
 <p>Return the string obtained by doing backslash substitution on the template string template.</p>
 <p>numeric backreferences (<code>\1</code>, <code>\2</code>) and named backreferences (<code>\g&lt;1&gt;</code>, <code>\g&lt;name&gt;</code>) are replaced by the contents of the corresponding group.</p>
-<pre><code>&gt;&gt;&gt; m = re.search(r'(e)x(a)', 'example')
-&gt;&gt;&gt; m.expand(r'\1'), m.expand(r'\g&lt;2&gt;')
-('e', 'a')
+<pre tabindex="0"><code>&gt;&gt;&gt; m = re.search(r&#39;(e)x(a)&#39;, &#39;example&#39;)
+&gt;&gt;&gt; m.expand(r&#39;\1&#39;), m.expand(r&#39;\g&lt;2&gt;&#39;)
+(&#39;e&#39;, &#39;a&#39;)
 </code></pre></li>
 <li>
 <p><code>match.group([group1, ...])</code></p>
-<pre><code>&gt;&gt;&gt; m = re.match(r&quot;(\w+) (\w+)&quot;, &quot;Isaac Newton, physicist&quot;)
+<pre tabindex="0"><code>&gt;&gt;&gt; m = re.match(r&#34;(\w+) (\w+)&#34;, &#34;Isaac Newton, physicist&#34;)
 &gt;&gt;&gt; m.group(0)       # The entire match
-'Isaac Newton'
+&#39;Isaac Newton&#39;
 &gt;&gt;&gt; m.group(1)       # The first parenthesized subgroup.
-'Isaac'
+&#39;Isaac&#39;
 &gt;&gt;&gt; m.group(2)       # The second parenthesized subgroup.
-'Newton'
+&#39;Newton&#39;
 &gt;&gt;&gt; m.group(1, 2)    # Multiple arguments give us a tuple.
-('Isaac', 'Newton')
-</code></pre><pre><code>&gt;&gt;&gt; m = re.match(r&quot;(?P&lt;first_name&gt;\w+) (?P&lt;last_name&gt;\w+)&quot;, &quot;Malcolm Reynolds&quot;)
-&gt;&gt;&gt; m.group('first_name')
-'Malcolm'
-&gt;&gt;&gt; m.group('last_name')
-'Reynolds'
+(&#39;Isaac&#39;, &#39;Newton&#39;)
+</code></pre><pre tabindex="0"><code>&gt;&gt;&gt; m = re.match(r&#34;(?P&lt;first_name&gt;\w+) (?P&lt;last_name&gt;\w+)&#34;, &#34;Malcolm Reynolds&#34;)
+&gt;&gt;&gt; m.group(&#39;first_name&#39;)
+&#39;Malcolm&#39;
+&gt;&gt;&gt; m.group(&#39;last_name&#39;)
+&#39;Reynolds&#39;
 </code></pre><p>If a group matches multiple times, only the last match is accessible:</p>
 </li>
 <li>
@@ -2454,15 +2452,15 @@ if match:
 <li>
 <p><code>match.groups(default=None)</code></p>
 <p>Return a tuple containing all the subgroups of the match, <strong>from 1 up to</strong> however many groups are in the pattern. </p>
-<pre><code>&gt;&gt;&gt; m = re.match(r&quot;(\d+)\.(\d+)&quot;, &quot;24.1632&quot;)
+<pre tabindex="0"><code>&gt;&gt;&gt; m = re.match(r&#34;(\d+)\.(\d+)&#34;, &#34;24.1632&#34;)
 &gt;&gt;&gt; m.groups()
-('24', '1632')
+(&#39;24&#39;, &#39;1632&#39;)
 </code></pre></li>
 <li>
 <p><code>match.groupdict(default=None)</code></p>
-<pre><code>&gt;&gt;&gt; m = re.match(r&quot;(?P&lt;first_name&gt;\w+) (?P&lt;last_name&gt;\w+)&quot;, &quot;Malcolm Reynolds&quot;)
+<pre tabindex="0"><code>&gt;&gt;&gt; m = re.match(r&#34;(?P&lt;first_name&gt;\w+) (?P&lt;last_name&gt;\w+)&#34;, &#34;Malcolm Reynolds&#34;)
 &gt;&gt;&gt; m.groupdict()
-{'first_name': 'Malcolm', 'last_name': 'Reynolds'}
+{&#39;first_name&#39;: &#39;Malcolm&#39;, &#39;last_name&#39;: &#39;Reynolds&#39;}
 </code></pre></li>
 <li>
 <p><code>match.start([group])</code></p>
@@ -2494,14 +2492,14 @@ if match:
 </ul>
 <h4 id="6258-raw-string-notation">6.2.5.8. Raw String Notation</h4>
 <p>Raw string notation (<code>r&quot;text&quot;</code>) keeps regular expressions sane. Without it, every backslash (<code>'\'</code>) in a regular expression would have to be prefixed with another one to escape it.</p>
-<pre><code>&gt;&gt;&gt; re.match(r&quot;\W(.)\1\W&quot;, &quot; ff &quot;)
-&lt;_sre.SRE_Match object; span=(0, 4), match=' ff '&gt;
-&gt;&gt;&gt; re.match(&quot;\\W(.)\\1\\W&quot;, &quot; ff &quot;)
-&lt;_sre.SRE_Match object; span=(0, 4), match=' ff '&gt;
-</code></pre><pre><code>&gt;&gt;&gt; re.match(r&quot;\\&quot;, r&quot;\\&quot;)
-&lt;_sre.SRE_Match object; span=(0, 1), match='\\'&gt;
-&gt;&gt;&gt; re.match(&quot;\\\\&quot;, r&quot;\\&quot;)
-&lt;_sre.SRE_Match object; span=(0, 1), match='\\'&gt;
+<pre tabindex="0"><code>&gt;&gt;&gt; re.match(r&#34;\W(.)\1\W&#34;, &#34; ff &#34;)
+&lt;_sre.SRE_Match object; span=(0, 4), match=&#39; ff &#39;&gt;
+&gt;&gt;&gt; re.match(&#34;\\W(.)\\1\\W&#34;, &#34; ff &#34;)
+&lt;_sre.SRE_Match object; span=(0, 4), match=&#39; ff &#39;&gt;
+</code></pre><pre tabindex="0"><code>&gt;&gt;&gt; re.match(r&#34;\\&#34;, r&#34;\\&#34;)
+&lt;_sre.SRE_Match object; span=(0, 1), match=&#39;\\&#39;&gt;
+&gt;&gt;&gt; re.match(&#34;\\\\&#34;, r&#34;\\&#34;)
+&lt;_sre.SRE_Match object; span=(0, 1), match=&#39;\\&#39;&gt;
 </code></pre><h3 id="63-difflib---helpers-for-computing-deltas">6.3. difflib —  Helpers for computing deltas</h3>
 <h3 id="64-textwrap---text-wrapping-and-filling">6.4. textwrap —  Text wrapping and filling</h3>
 <h3 id="65-unicodedata---unicode-database">6.5. unicodedata —  Unicode Database</h3>
@@ -2590,12 +2588,12 @@ if match:
 <li>
 <p><code>date.isocalendar()</code></p>
 <p>Return a 3-tuple, (ISO year, ISO week number, ISO weekday).</p>
-<pre><code>date(2003, 12, 29).isocalendar() == (2004, 1, 1)
+<pre tabindex="0"><code>date(2003, 12, 29).isocalendar() == (2004, 1, 1)
 date(2004, 1, 4).isocalendar() == (2004, 1, 7)
 </code></pre></li>
 <li>
 <p><code>date.isoformat()</code></p>
-<pre><code>date(2002, 12, 4).isoformat() == '2002-12-04'
+<pre tabindex="0"><code>date(2002, 12, 4).isoformat() == &#39;2002-12-04&#39;
 </code></pre></li>
 <li>
 <p><code>date.__str__()</code></p>
@@ -2603,8 +2601,8 @@ date(2004, 1, 4).isocalendar() == (2004, 1, 7)
 </li>
 <li>
 <p><code>date.ctime()</code></p>
-<pre><code>date(2002, 12, 4).ctime() == 'Wed Dec 4 00:00:00 2002'
-</code></pre><pre><code>d.ctime() == time.ctime(time.mktime(d.timetuple()))
+<pre tabindex="0"><code>date(2002, 12, 4).ctime() == &#39;Wed Dec 4 00:00:00 2002&#39;
+</code></pre><pre tabindex="0"><code>d.ctime() == time.ctime(time.mktime(d.timetuple()))
 </code></pre></li>
 <li>
 <p><code>date.strftime(format)</code></p>
@@ -2613,7 +2611,7 @@ date(2004, 1, 4).isocalendar() == (2004, 1, 7)
 <p><code>date.__format__(format)</code></p>
 </li>
 </ul>
-<pre><code>&gt;&gt;&gt; import time
+<pre tabindex="0"><code>&gt;&gt;&gt; import time
 &gt;&gt;&gt; from datetime import date
 &gt;&gt;&gt; today = date.today()
 &gt;&gt;&gt; today
@@ -2628,7 +2626,7 @@ datetime.date(2008, 6, 24)
 &gt;&gt;&gt; time_to_birthday = abs(my_birthday - today)
 &gt;&gt;&gt; time_to_birthday.days
 202
-</code></pre><pre><code>&gt;&gt;&gt; from datetime import date
+</code></pre><pre tabindex="0"><code>&gt;&gt;&gt; from datetime import date
 &gt;&gt;&gt; d = date.fromordinal(730920) # 730920th day after 1. 1. 0001
 &gt;&gt;&gt; d
 datetime.date(2002, 3, 11)
@@ -2651,13 +2649,13 @@ datetime.date(2002, 3, 11)
 11                  # ISO week number
 1                   # ISO day number ( 1 = Monday )
 &gt;&gt;&gt; d.isoformat()
-'2002-03-11'
-&gt;&gt;&gt; d.strftime(&quot;%d/%m/%y&quot;)
-'11/03/02'
-&gt;&gt;&gt; d.strftime(&quot;%A %d. %B %Y&quot;)
-'Monday 11. March 2002'
-&gt;&gt;&gt; 'The {1} is {0:%d}, the {2} is {0:%B}.'.format(d, &quot;day&quot;, &quot;month&quot;)
-'The day is 11, the month is March.'
+&#39;2002-03-11&#39;
+&gt;&gt;&gt; d.strftime(&#34;%d/%m/%y&#34;)
+&#39;11/03/02&#39;
+&gt;&gt;&gt; d.strftime(&#34;%A %d. %B %Y&#34;)
+&#39;Monday 11. March 2002&#39;
+&gt;&gt;&gt; &#39;The {1} is {0:%d}, the {2} is {0:%B}.&#39;.format(d, &#34;day&#34;, &#34;month&#34;)
+&#39;The day is 11, the month is March.&#39;
 </code></pre><h4 id="814-datetime-objects">8.1.4. datetime Objects</h4>
 <p>Constructor:</p>
 <ul>
@@ -2669,12 +2667,12 @@ datetime.date(2002, 3, 11)
 </li>
 <li>
 <p><code>classmethod datetime.now(tz=None)</code></p>
-<pre><code>&gt;&gt;&gt; datetime.now()   
+<pre tabindex="0"><code>&gt;&gt;&gt; datetime.now()   
 datetime.datetime(2007, 12, 6, 16, 29, 43, 79043)   # GMT +1
 </code></pre></li>
 <li>
 <p><code>classmethod datetime.utcnow()</code></p>
-<pre><code>&gt;&gt;&gt; datetime.utcnow()   
+<pre tabindex="0"><code>&gt;&gt;&gt; datetime.utcnow()   
 datetime.datetime(2007, 12, 6, 15, 29, 43, 79060)
 </code></pre></li>
 <li>
@@ -2688,7 +2686,7 @@ datetime.datetime(2007, 12, 6, 15, 29, 43, 79060)
 </li>
 <li>
 <p><code>classmethod datetime.combine(date, time, tzinfo=self.tzinfo)</code></p>
-<pre><code>&gt;&gt;&gt; from datetime import datetime, date, time
+<pre tabindex="0"><code>&gt;&gt;&gt; from datetime import datetime, date, time
 &gt;&gt;&gt; d = date(2005, 7, 14)
 &gt;&gt;&gt; t = time(12, 30)
 &gt;&gt;&gt; datetime.combine(d, t)
@@ -2696,7 +2694,7 @@ datetime.datetime(2005, 7, 14, 12, 30)
 </code></pre></li>
 <li>
 <p><code>classmethod datetime.strptime(date_string, format)</code></p>
-<pre><code>&gt;&gt;&gt; dt = datetime.strptime(&quot;21/11/06 16:30&quot;, &quot;%d/%m/%y %H:%M&quot;)
+<pre tabindex="0"><code>&gt;&gt;&gt; dt = datetime.strptime(&#34;21/11/06 16:30&#34;, &#34;%d/%m/%y %H:%M&#34;)
 &gt;&gt;&gt; dt
 datetime.datetime(2006, 11, 21, 16, 30)
 </code></pre></li>
@@ -2741,7 +2739,7 @@ datetime.datetime(2006, 11, 21, 16, 30)
 </li>
 <li>
 <p><code>datetime.timetuple()</code></p>
-<pre><code>&gt;&gt;&gt; tt = dt.timetuple()
+<pre tabindex="0"><code>&gt;&gt;&gt; tt = dt.timetuple()
 &gt;&gt;&gt; for it in tt:   
 ...     print(it)
 ...
@@ -2772,7 +2770,7 @@ datetime.datetime(2006, 11, 21, 16, 30)
 </li>
 <li>
 <p><code>datetime.isocalendar()</code></p>
-<pre><code>&gt;&gt;&gt; ic = dt.isocalendar()
+<pre tabindex="0"><code>&gt;&gt;&gt; ic = dt.isocalendar()
 &gt;&gt;&gt; for it in ic:   
 ...     print(it)
 ...
@@ -2791,16 +2789,16 @@ datetime.datetime(2006, 11, 21, 16, 30)
 </li>
 <li>
 <p><code>datetime.strftime(format)</code></p>
-<pre><code>&gt;&gt;&gt; dt.strftime(&quot;%A, %d. %B %Y %I:%M%p&quot;)
-'Tuesday, 21. November 2006 04:30PM'
+<pre tabindex="0"><code>&gt;&gt;&gt; dt.strftime(&#34;%A, %d. %B %Y %I:%M%p&#34;)
+&#39;Tuesday, 21. November 2006 04:30PM&#39;
 </code></pre></li>
 <li>
 <p><code>datetime.__format__(format)</code></p>
-<pre><code>&gt;&gt;&gt; 'The {1} is {0:%d}, the {2} is {0:%B}, the {3} is {0:%I:%M%p}.'.format(dt, &quot;day&quot;, &quot;month&quot;, &quot;time&quot;)
-'The day is 21, the month is November, the time is 04:30PM.'
+<pre tabindex="0"><code>&gt;&gt;&gt; &#39;The {1} is {0:%d}, the {2} is {0:%B}, the {3} is {0:%I:%M%p}.&#39;.format(dt, &#34;day&#34;, &#34;month&#34;, &#34;time&#34;)
+&#39;The day is 21, the month is November, the time is 04:30PM.&#39;
 </code></pre></li>
 </ul>
-<pre><code>&gt;&gt;&gt; from datetime import timedelta, datetime, tzinfo
+<pre tabindex="0"><code>&gt;&gt;&gt; from datetime import timedelta, datetime, tzinfo
 &gt;&gt;&gt; class GMT1(tzinfo):
 ...     def utcoffset(self, dt):
 ...         return timedelta(hours=1) + self.dst(dt)
@@ -2815,7 +2813,7 @@ datetime.datetime(2006, 11, 21, 16, 30)
 ...         else:
 ...             return timedelta(0)
 ...     def tzname(self,dt):
-...          return &quot;GMT +1&quot;
+...          return &#34;GMT +1&#34;
 ...
 &gt;&gt;&gt; class GMT2(tzinfo):
 ...     def utcoffset(self, dt):
@@ -2830,7 +2828,7 @@ datetime.datetime(2006, 11, 21, 16, 30)
 ...         else:
 ...             return timedelta(0)
 ...     def tzname(self,dt):
-...         return &quot;GMT +2&quot;
+...         return &#34;GMT +2&#34;
 ...
 &gt;&gt;&gt; gmt1 = GMT1()
 &gt;&gt;&gt; # Daylight Saving Time
@@ -2853,29 +2851,29 @@ datetime.datetime(2006, 6, 14, 13, 0, tzinfo=&lt;GMT1 object at 0x...&gt;)
 &gt;&gt;&gt; dt2.utctimetuple() == dt3.utctimetuple()
 True
 </code></pre><h4 id="815-time-objects">8.1.5. time Objects</h4>
-<pre><code>&gt;&gt;&gt; from datetime import time, tzinfo, timedelta
+<pre tabindex="0"><code>&gt;&gt;&gt; from datetime import time, tzinfo, timedelta
 &gt;&gt;&gt; class GMT1(tzinfo):
 ...     def utcoffset(self, dt):
 ...         return timedelta(hours=1)
 ...     def dst(self, dt):
 ...         return timedelta(0)
 ...     def tzname(self,dt):
-...         return &quot;Europe/Prague&quot;
+...         return &#34;Europe/Prague&#34;
 ...
 &gt;&gt;&gt; t = time(12, 10, 30, tzinfo=GMT1())
 &gt;&gt;&gt; t                               
 datetime.time(12, 10, 30, tzinfo=&lt;GMT1 object at 0x...&gt;)
 &gt;&gt;&gt; gmt = GMT1()
 &gt;&gt;&gt; t.isoformat()
-'12:10:30+01:00'
+&#39;12:10:30+01:00&#39;
 &gt;&gt;&gt; t.dst()
 datetime.timedelta(0)
 &gt;&gt;&gt; t.tzname()
-'Europe/Prague'
-&gt;&gt;&gt; t.strftime(&quot;%H:%M:%S %Z&quot;)
-'12:10:30 Europe/Prague'
-&gt;&gt;&gt; 'The {} is {:%H:%M}.'.format(&quot;time&quot;, t)
-'The time is 12:10.'
+&#39;Europe/Prague&#39;
+&gt;&gt;&gt; t.strftime(&#34;%H:%M:%S %Z&#34;)
+&#39;12:10:30 Europe/Prague&#39;
+&gt;&gt;&gt; &#39;The {} is {:%H:%M}.&#39;.format(&#34;time&#34;, t)
+&#39;The time is 12:10.&#39;
 </code></pre><h4 id="816-tzinfo-objects">8.1.6. tzinfo Objects</h4>
 <h4 id="817-timezone-objects">8.1.7. timezone Objects</h4>
 <h4 id="818-strftime-and-strptime-behavior">8.1.8. strftime() and strptime() Behavior</h4>
@@ -3015,31 +3013,31 @@ datetime.timedelta(0)
 <h4 id="831-chainmap-objects">8.3.1. ChainMap objects</h4>
 <p><code>class collections.ChainMap(*maps)</code></p>
 <p>A <code>ChainMap</code> groups multiple dicts or other mappings together to create a single, updateable view. The underlying mappings are stored in a list.</p>
-<pre><code>import builtins
+<pre tabindex="0"><code>import builtins
 pylookup = ChainMap(locals(), globals(), vars(builtins))
-</code></pre><pre><code>import os, argparse
+</code></pre><pre tabindex="0"><code>import os, argparse
 
-defaults = {'color': 'red', 'user': 'guest'}
+defaults = {&#39;color&#39;: &#39;red&#39;, &#39;user&#39;: &#39;guest&#39;}
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-u', '--user')
-parser.add_argument('-c', '--color')
+parser.add_argument(&#39;-u&#39;, &#39;--user&#39;)
+parser.add_argument(&#39;-c&#39;, &#39;--color&#39;)
 namespace = parser.parse_args()
 command_line_args = {k:v for k, v in vars(namespace).items() if v}
 
 combined = ChainMap(command_line_args, os.environ, defaults)
-print(combined['color'])
-print(combined['user'])
-</code></pre><pre><code>c = ChainMap()        # Create root context
+print(combined[&#39;color&#39;])
+print(combined[&#39;user&#39;])
+</code></pre><pre tabindex="0"><code>c = ChainMap()        # Create root context
 d = c.new_child()     # Create nested child context
 e = c.new_child()     # Child of c, independent from d
-e.maps[0]             # Current context dictionary -- like Python's locals()
-e.maps[-1]            # Root context -- like Python's globals()
-e.parents             # Enclosing context chain -- like Python's nonlocals
+e.maps[0]             # Current context dictionary -- like Python&#39;s locals()
+e.maps[-1]            # Root context -- like Python&#39;s globals()
+e.parents             # Enclosing context chain -- like Python&#39;s nonlocals
 
-d['x']                # Get first key in the chain of contexts
-d['x'] = 1            # Set value in current context
-del d['x']            # Delete from current context
+d[&#39;x&#39;]                # Get first key in the chain of contexts
+d[&#39;x&#39;] = 1            # Set value in current context
+del d[&#39;x&#39;]            # Delete from current context
 list(d)               # All nested values
 k in d                # Check all nested values
 len(d)                # Number of nested values
@@ -3047,27 +3045,27 @@ d.items()             # All nested items
 dict(d)               # Flatten into a regular dictionary
 </code></pre><p>The <code>ChainMap</code> class only makes updates (writes and deletions) to the first mapping in the chain while lookups will search the full chain.</p>
 <h4 id="832-counter-objects">8.3.2. Counter objects</h4>
-<pre><code>&gt;&gt;&gt; c = Counter()                           # a new, empty counter
-&gt;&gt;&gt; c = Counter('gallahad')                 # a new counter from an iterable
-&gt;&gt;&gt; c = Counter({'red': 4, 'blue': 2})      # a new counter from a mapping
+<pre tabindex="0"><code>&gt;&gt;&gt; c = Counter()                           # a new, empty counter
+&gt;&gt;&gt; c = Counter(&#39;gallahad&#39;)                 # a new counter from an iterable
+&gt;&gt;&gt; c = Counter({&#39;red&#39;: 4, &#39;blue&#39;: 2})      # a new counter from a mapping
 &gt;&gt;&gt; c = Counter(cats=4, dogs=8)             # a new counter from keyword args
 </code></pre><p>Counter objects return a zero count for missing items instead of raising a KeyError</p>
-<pre><code>&gt;&gt;&gt; c['sausage'] = 0                        # counter entry with a zero count
-&gt;&gt;&gt; del c['sausage']                        # del actually removes the entry
-</code></pre><pre><code>&gt;&gt;&gt; c = Counter(a=4, b=2, c=0, d=-2)
+<pre tabindex="0"><code>&gt;&gt;&gt; c[&#39;sausage&#39;] = 0                        # counter entry with a zero count
+&gt;&gt;&gt; del c[&#39;sausage&#39;]                        # del actually removes the entry
+</code></pre><pre tabindex="0"><code>&gt;&gt;&gt; c = Counter(a=4, b=2, c=0, d=-2)
 &gt;&gt;&gt; sorted(c.elements())
-['a', 'a', 'a', 'a', 'b', 'b']
-&gt;&gt;&gt; Counter('abracadabra').most_common(3)  
-[('a', 5), ('r', 2), ('b', 2)]
+[&#39;a&#39;, &#39;a&#39;, &#39;a&#39;, &#39;a&#39;, &#39;b&#39;, &#39;b&#39;]
+&gt;&gt;&gt; Counter(&#39;abracadabra&#39;).most_common(3)  
+[(&#39;a&#39;, 5), (&#39;r&#39;, 2), (&#39;b&#39;, 2)]
 &gt;&gt;&gt; c = Counter(a=4, b=2, c=0, d=-2)
 &gt;&gt;&gt; d = Counter(a=1, b=2, c=3, d=4)
 &gt;&gt;&gt; c.subtract(d)
 &gt;&gt;&gt; c
-Counter({'a': 3, 'b': 0, 'c': -3, 'd': -6})
+Counter({&#39;a&#39;: 3, &#39;b&#39;: 0, &#39;c&#39;: -3, &#39;d&#39;: -6})
 &gt;&gt;&gt; c.update(d)
 &gt;&gt;&gt; c
-Counter({'a': 4, 'b': 2, 'c': 0, 'd': -2})
-</code></pre><pre><code>sum(c.values())                 # total of all counts
+Counter({&#39;a&#39;: 4, &#39;b&#39;: 2, &#39;c&#39;: 0, &#39;d&#39;: -2})
+</code></pre><pre tabindex="0"><code>sum(c.values())                 # total of all counts
 c.clear()                       # reset all counts
 list(c)                         # list unique elements
 set(c)                          # convert to a set
@@ -3081,17 +3079,17 @@ c.most_common()[:-n-1:-1]       # n least common elements
 <ul>
 <li><code>append(x)</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; from collections import deque
-&gt;&gt;&gt; d = deque('ghi')                 # make a new deque with three items
-&gt;&gt;&gt; d.append('j')                    # add a new entry to the right side
+<pre tabindex="0"><code>&gt;&gt;&gt; from collections import deque
+&gt;&gt;&gt; d = deque(&#39;ghi&#39;)                 # make a new deque with three items
+&gt;&gt;&gt; d.append(&#39;j&#39;)                    # add a new entry to the right side
 </code></pre><ul>
 <li><code>appendleft(x)</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; d.appendleft('f')                # add a new entry to the left side
+<pre tabindex="0"><code>&gt;&gt;&gt; d.appendleft(&#39;f&#39;)                # add a new entry to the left side
 </code></pre><ul>
 <li><code>clear()</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; d.clear()                        # empty the deque
+<pre tabindex="0"><code>&gt;&gt;&gt; d.clear()                        # empty the deque
 </code></pre><ul>
 <li>
 <p><code>copy()</code></p>
@@ -3103,60 +3101,60 @@ c.most_common()[:-n-1:-1]       # n least common elements
 <p><code>extend(iterable)</code></p>
 </li>
 </ul>
-<pre><code>&gt;&gt;&gt; d.extend('jkl')                  # add multiple elements at once
+<pre tabindex="0"><code>&gt;&gt;&gt; d.extend(&#39;jkl&#39;)                  # add multiple elements at once
 &gt;&gt;&gt; d
-deque(['j', 'k', 'l'])
+deque([&#39;j&#39;, &#39;k&#39;, &#39;l&#39;])
 </code></pre><ul>
 <li><code>extendleft(iterable)</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; d.extendleft('abc')              # extendleft() reverses the input order
+<pre tabindex="0"><code>&gt;&gt;&gt; d.extendleft(&#39;abc&#39;)              # extendleft() reverses the input order
 &gt;&gt;&gt; d
-deque(['c', 'b', 'a', 'j', 'k', 'l'])
+deque([&#39;c&#39;, &#39;b&#39;, &#39;a&#39;, &#39;j&#39;, &#39;k&#39;, &#39;l&#39;])
 </code></pre><ul>
 <li><code>index(x[, start[, stop]])</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; d[0]                             # peek at leftmost item
-'c'
+<pre tabindex="0"><code>&gt;&gt;&gt; d[0]                             # peek at leftmost item
+&#39;c&#39;
 &gt;&gt;&gt; d[-1]                            # peek at rightmost item
-'l'
+&#39;l&#39;
 </code></pre><ul>
 <li><code>insert(i, x)</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; d.insert(0, 'd')
+<pre tabindex="0"><code>&gt;&gt;&gt; d.insert(0, &#39;d&#39;)
 &gt;&gt;&gt; d
-deque(['d', 'c', 'b', 'a', 'j', 'k', 'l'])
+deque([&#39;d&#39;, &#39;c&#39;, &#39;b&#39;, &#39;a&#39;, &#39;j&#39;, &#39;k&#39;, &#39;l&#39;])
 </code></pre><ul>
 <li><code>pop()</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; d.pop()                          # return and remove the rightmost item or raises an IndexError
-'l'
+<pre tabindex="0"><code>&gt;&gt;&gt; d.pop()                          # return and remove the rightmost item or raises an IndexError
+&#39;l&#39;
 </code></pre><ul>
 <li><code>popleft()</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; d.popleft()                      # return and remove the leftmost item or raises an IndexError
-'d'
+<pre tabindex="0"><code>&gt;&gt;&gt; d.popleft()                      # return and remove the leftmost item or raises an IndexError
+&#39;d&#39;
 </code></pre><ul>
 <li><code>remove(value)</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; d.remove('c')
+<pre tabindex="0"><code>&gt;&gt;&gt; d.remove(&#39;c&#39;)
 &gt;&gt;&gt; d
-deque(['b', 'a', 'j', 'k'])
+deque([&#39;b&#39;, &#39;a&#39;, &#39;j&#39;, &#39;k&#39;])
 </code></pre><ul>
 <li><code>reverse()</code></li>
 </ul>
-<pre><code>&gt;&gt;&gt; list(reversed(d))                # list the contents of a deque in reverse in-place and then return None.
-['k', 'j', 'a', 'b']
+<pre tabindex="0"><code>&gt;&gt;&gt; list(reversed(d))                # list the contents of a deque in reverse in-place and then return None.
+[&#39;k&#39;, &#39;j&#39;, &#39;a&#39;, &#39;b&#39;]
 </code></pre><ul>
 <li><code>rotate(n=1)</code></li>
 </ul>
 <p>Rotate the deque n steps to the right. If n is negative, rotate to the left.</p>
 <p>When the deque is not empty, rotating one step to the right is equivalent to <code>d.appendleft(d.pop()),</code> and rotating one step to the left is equivalent to <code>d.append(d.popleft())</code>.</p>
-<pre><code>&gt;&gt;&gt; d.rotate(1)                      # right rotation
+<pre tabindex="0"><code>&gt;&gt;&gt; d.rotate(1)                      # right rotation
 &gt;&gt;&gt; d
-deque(['k', 'b', 'a', 'j'])
+deque([&#39;k&#39;, &#39;b&#39;, &#39;a&#39;, &#39;j&#39;])
 &gt;&gt;&gt; d.rotate(-1)                     # left rotation
 &gt;&gt;&gt; d
-deque(['b', 'a', 'j', 'k'])
+deque([&#39;b&#39;, &#39;a&#39;, &#39;j&#39;, &#39;k&#39;])
 </code></pre><p>Deque objects also provide one read-only attribute:</p>
 <ul>
 <li><code>maxlen</code></li>
@@ -3166,43 +3164,43 @@ deque(['b', 'a', 'j', 'k'])
 <li><code>class collections.defaultdict([default_factory[, ...]])</code></li>
 </ul>
 <p>Using <code>list</code> as the default_factory, it is easy to group a sequence of key-value pairs into a dictionary of lists:</p>
-<pre><code>&gt;&gt;&gt; s = [('yellow', 1), ('blue', 2), ('yellow', 3), ('blue', 4), ('red', 1)]
+<pre tabindex="0"><code>&gt;&gt;&gt; s = [(&#39;yellow&#39;, 1), (&#39;blue&#39;, 2), (&#39;yellow&#39;, 3), (&#39;blue&#39;, 4), (&#39;red&#39;, 1)]
 &gt;&gt;&gt; d = defaultdict(list)
 &gt;&gt;&gt; for k, v in s:
 ...     d[k].append(v)
 ...
 &gt;&gt;&gt; sorted(d.items())
-[('blue', [2, 4]), ('red', [1]), ('yellow', [1, 3])]
+[(&#39;blue&#39;, [2, 4]), (&#39;red&#39;, [1]), (&#39;yellow&#39;, [1, 3])]
 </code></pre><p>Setting the default_factory to <code>int</code> makes the defaultdict useful for counting (like a bag or multiset in other languages):</p>
-<pre><code>&gt;&gt;&gt; s = 'mississippi'
+<pre tabindex="0"><code>&gt;&gt;&gt; s = &#39;mississippi&#39;
 &gt;&gt;&gt; d = defaultdict(int)
 &gt;&gt;&gt; for k in s:
 ...     d[k] += 1
 ...
 &gt;&gt;&gt; sorted(d.items())
-[('i', 4), ('m', 1), ('p', 2), ('s', 4)]
+[(&#39;i&#39;, 4), (&#39;m&#39;, 1), (&#39;p&#39;, 2), (&#39;s&#39;, 4)]
 </code></pre><p>A faster and more flexible way to create constant functions is to use a lambda function which can supply any constant value</p>
-<pre><code>&gt;&gt;&gt; def constant_factory(value):
+<pre tabindex="0"><code>&gt;&gt;&gt; def constant_factory(value):
 ...     return lambda: value
-&gt;&gt;&gt; d = defaultdict(constant_factory('&lt;missing&gt;'))
-&gt;&gt;&gt; d.update(name='John', action='ran')
-&gt;&gt;&gt; '%(name)s %(action)s to %(object)s' % d
-'John ran to &lt;missing&gt;'
+&gt;&gt;&gt; d = defaultdict(constant_factory(&#39;&lt;missing&gt;&#39;))
+&gt;&gt;&gt; d.update(name=&#39;John&#39;, action=&#39;ran&#39;)
+&gt;&gt;&gt; &#39;%(name)s %(action)s to %(object)s&#39; % d
+&#39;John ran to &lt;missing&gt;&#39;
 </code></pre><p>Setting the default_factory to <code>set</code> makes the <code>defaultdict</code> useful for building a dictionary of sets:</p>
-<pre><code>&gt;&gt;&gt; s = [('red', 1), ('blue', 2), ('red', 3), ('blue', 4), ('red', 1), ('blue', 4)]
+<pre tabindex="0"><code>&gt;&gt;&gt; s = [(&#39;red&#39;, 1), (&#39;blue&#39;, 2), (&#39;red&#39;, 3), (&#39;blue&#39;, 4), (&#39;red&#39;, 1), (&#39;blue&#39;, 4)]
 &gt;&gt;&gt; d = defaultdict(set)
 &gt;&gt;&gt; for k, v in s:
 ...     d[k].add(v)
 ...
 &gt;&gt;&gt; sorted(d.items())
-[('blue', {2, 4}), ('red', {1, 3})]
+[(&#39;blue&#39;, {2, 4}), (&#39;red&#39;, {1, 3})]
 </code></pre><h4 id="835-namedtuple-factory-function-for-tuples-with-named-fields">8.3.5. namedtuple() Factory Function for Tuples with Named Fields</h4>
 <ul>
 <li><code>collections.namedtuple(typename, field_names, *, verbose=False, rename=False, module=None)</code></li>
 </ul>
 <p>Named tuples assign meaning to each position in a tuple and allow for more readable, self-documenting code.</p>
-<pre><code>&gt;&gt;&gt; # Basic example
-&gt;&gt;&gt; Point = namedtuple('Point', ['x', 'y'])
+<pre tabindex="0"><code>&gt;&gt;&gt; # Basic example
+&gt;&gt;&gt; Point = namedtuple(&#39;Point&#39;, [&#39;x&#39;, &#39;y&#39;])
 &gt;&gt;&gt; p = Point(11, y=22)     # instantiate with positional or keyword arguments
 &gt;&gt;&gt; p[0] + p[1]             # indexable like the plain tuple (11, 22)
 33
@@ -3214,46 +3212,46 @@ deque(['b', 'a', 'j', 'k'])
 &gt;&gt;&gt; p                       # readable __repr__ with a name=value style
 Point(x=11, y=22)
 </code></pre><p>Named tuples are especially useful for assigning field names to result tuples returned by the <code>csv</code> or <code>sqlite3</code> modules:</p>
-<pre><code>EmployeeRecord = namedtuple('EmployeeRecord', 'name, age, title, department, paygrade')
+<pre tabindex="0"><code>EmployeeRecord = namedtuple(&#39;EmployeeRecord&#39;, &#39;name, age, title, department, paygrade&#39;)
 
 import csv
 # somenamedtuple._make(iterable) makes a new instance
-for emp in map(EmployeeRecord._make, csv.reader(open(&quot;employees.csv&quot;, &quot;rb&quot;))):
+for emp in map(EmployeeRecord._make, csv.reader(open(&#34;employees.csv&#34;, &#34;rb&#34;))):
     print(emp.name, emp.title)
 
 import sqlite3
-conn = sqlite3.connect('/companydata')
+conn = sqlite3.connect(&#39;/companydata&#39;)
 cursor = conn.cursor()
-cursor.execute('SELECT name, age, title, department, paygrade FROM employees')
+cursor.execute(&#39;SELECT name, age, title, department, paygrade FROM employees&#39;)
 for emp in map(EmployeeRecord._make, cursor.fetchall()):
     print(emp.name, emp.title)
-</code></pre><pre><code>&gt;&gt;&gt; class Point(namedtuple('Point', ['x', 'y'])):
+</code></pre><pre tabindex="0"><code>&gt;&gt;&gt; class Point(namedtuple(&#39;Point&#39;, [&#39;x&#39;, &#39;y&#39;])):
 ...     __slots__ = ()
 ...     @property
 ...     def hypot(self):
 ...         return (self.x ** 2 + self.y ** 2) ** 0.5
 ...     def __str__(self):
-...         return 'Point: x=%6.3f  y=%6.3f  hypot=%6.3f' % (self.x, self.y, self.hypot)
+...         return &#39;Point: x=%6.3f  y=%6.3f  hypot=%6.3f&#39; % (self.x, self.y, self.hypot)
 
 &gt;&gt;&gt; for p in Point(3, 4), Point(14, 5/7):
 ...     print(p)
 Point: x= 3.000  y= 4.000  hypot= 5.000
 Point: x=14.000  y= 0.714  hypot=14.018
 </code></pre><h4 id="836-ordereddict-objects">8.3.6. OrderedDict objects</h4>
-<pre><code>&gt;&gt;&gt; # regular unsorted dictionary
-&gt;&gt;&gt; d = {'banana': 3, 'apple': 4, 'pear': 1, 'orange': 2}
+<pre tabindex="0"><code>&gt;&gt;&gt; # regular unsorted dictionary
+&gt;&gt;&gt; d = {&#39;banana&#39;: 3, &#39;apple&#39;: 4, &#39;pear&#39;: 1, &#39;orange&#39;: 2}
 
 &gt;&gt;&gt; # dictionary sorted by key
 &gt;&gt;&gt; OrderedDict(sorted(d.items(), key=lambda t: t[0]))
-OrderedDict([('apple', 4), ('banana', 3), ('orange', 2), ('pear', 1)])
+OrderedDict([(&#39;apple&#39;, 4), (&#39;banana&#39;, 3), (&#39;orange&#39;, 2), (&#39;pear&#39;, 1)])
 
 &gt;&gt;&gt; # dictionary sorted by value
 &gt;&gt;&gt; OrderedDict(sorted(d.items(), key=lambda t: t[1]))
-OrderedDict([('pear', 1), ('orange', 2), ('banana', 3), ('apple', 4)])
+OrderedDict([(&#39;pear&#39;, 1), (&#39;orange&#39;, 2), (&#39;banana&#39;, 3), (&#39;apple&#39;, 4)])
 
 &gt;&gt;&gt; # dictionary sorted by length of the key string
 &gt;&gt;&gt; OrderedDict(sorted(d.items(), key=lambda t: len(t[0])))
-OrderedDict([('pear', 1), ('apple', 4), ('orange', 2), ('banana', 3)])
+OrderedDict([(&#39;pear&#39;, 1), (&#39;apple&#39;, 4), (&#39;orange&#39;, 2), (&#39;banana&#39;, 3)])
 </code></pre><h4 id="837-userdict-objects">8.3.7. UserDict objects</h4>
 <h4 id="838-userlist-objects">8.3.8. UserList objects</h4>
 <h4 id="839-userstring-objects">8.3.9. UserString objects</h4>
@@ -3299,12 +3297,12 @@ OrderedDict([('pear', 1), ('apple', 4), ('orange', 2), ('banana', 3)])
 <ul>
 <li>
 <p><code>random.randrange(stop)</code></p>
-<pre><code>&gt;&gt;&gt; randrange(10)        # Integer from 0 to 9 inclusive
+<pre tabindex="0"><code>&gt;&gt;&gt; randrange(10)        # Integer from 0 to 9 inclusive
 7
 </code></pre></li>
 <li>
 <p><code>random.randrange(start, stop[, step])</code></p>
-<pre><code>&gt;&gt;&gt; randrange(0, 101, 2)      # Even integer from 0 to 100 inclusive
+<pre tabindex="0"><code>&gt;&gt;&gt; randrange(0, 101, 2)      # Even integer from 0 to 100 inclusive
 26
 </code></pre></li>
 <li>
@@ -3315,21 +3313,21 @@ OrderedDict([('pear', 1), ('apple', 4), ('orange', 2), ('banana', 3)])
 <ul>
 <li>
 <p><code>random.choice(seq)</code></p>
-<pre><code># Single random element from a sequence
-&gt;&gt;&gt; choice(['win', 'lose', 'draw'])      
-'draw'
+<pre tabindex="0"><code># Single random element from a sequence
+&gt;&gt;&gt; choice([&#39;win&#39;, &#39;lose&#39;, &#39;draw&#39;])      
+&#39;draw&#39;
 </code></pre></li>
 <li>
 <p><code>random.choices(population, weights=None, *, cum_weights=None, k=1)</code></p>
 <p>Return a <em>k</em> sized list of elements chosen from the <em>population</em> <strong>with replacement</strong>. </p>
-<pre><code># Six roulette wheel spins (weighted sampling with replacement)
-&gt;&gt;&gt; choices(['red', 'black', 'green'], [18, 18, 2], k=6)  
-['red', 'green', 'black', 'black', 'red', 'black'] 
+<pre tabindex="0"><code># Six roulette wheel spins (weighted sampling with replacement)
+&gt;&gt;&gt; choices([&#39;red&#39;, &#39;black&#39;, &#39;green&#39;], [18, 18, 2], k=6)  
+[&#39;red&#39;, &#39;green&#39;, &#39;black&#39;, &#39;black&#39;, &#39;red&#39;, &#39;black&#39;] 
 </code></pre></li>
 <li>
 <p><code>random.shuffle(x[, random])</code></p>
 <p>Shuffle the sequence <em>x</em> in place.</p>
-<pre><code>&gt;&gt;&gt; origin = [1, 2, 3, 4, 5, 6]
+<pre tabindex="0"><code>&gt;&gt;&gt; origin = [1, 2, 3, 4, 5, 6]
 &gt;&gt;&gt; random.shuffle(origin)       # Shuffle a list
 &gt;&gt;&gt; origin
 [4, 1, 5, 6, 3, 2]
@@ -3337,7 +3335,7 @@ OrderedDict([('pear', 1), ('apple', 4), ('orange', 2), ('banana', 3)])
 <li>
 <p><code>random.sample(population, k)</code></p>
 <p>Return a <em>k</em> length list of unique elements chosen from the population sequence or set. Used for random sampling <strong>without replacement.</strong></p>
-<pre><code># Three samples without replacement
+<pre tabindex="0"><code># Three samples without replacement
 &gt;&gt;&gt; random.sample([1, 2, 3, 4, 5, 6], k=3)
 [2, 3, 1
 </code></pre></li>
@@ -3346,12 +3344,12 @@ OrderedDict([('pear', 1), ('apple', 4), ('orange', 2), ('banana', 3)])
 <ul>
 <li>
 <p><code>random.random()</code></p>
-<pre><code>&gt;&gt;&gt; random()                  # Random float:  0.0 &lt;= x &lt; 1.0
+<pre tabindex="0"><code>&gt;&gt;&gt; random()                  # Random float:  0.0 &lt;= x &lt; 1.0
 0.37444887175646646
 </code></pre></li>
 <li>
 <p><code>random.uniform(a, b)</code></p>
-<pre><code>&gt;&gt;&gt; uniform(2.5, 10.0)       # Random float:  2.5 &lt;= x &lt; 10.0
+<pre tabindex="0"><code>&gt;&gt;&gt; uniform(2.5, 10.0)       # Random float:  2.5 &lt;= x &lt; 10.0
 3.1800146073117523
 </code></pre></li>
 <li>
@@ -3362,7 +3360,7 @@ OrderedDict([('pear', 1), ('apple', 4), ('orange', 2), ('banana', 3)])
 </li>
 <li>
 <p><code>random.expovariate(lambd)</code></p>
-<pre><code># Interval between arrivals averaging 5 seconds
+<pre tabindex="0"><code># Interval between arrivals averaging 5 seconds
 &gt;&gt;&gt; expovariate(1 / 5)    
 5.148957571865031
 </code></pre></li>
@@ -3395,42 +3393,42 @@ OrderedDict([('pear', 1), ('apple', 4), ('orange', 2), ('banana', 3)])
 <ul>
 <li>
 <p><code>itertools.count(start=0, step=1)</code></p>
-<pre><code>count(10) --&gt; 10 11 12 13 14 ...
+<pre tabindex="0"><code>count(10) --&gt; 10 11 12 13 14 ...
 </code></pre></li>
 <li>
 <p><code>itertools.cycle(iterable)</code></p>
-<pre><code>cycle('ABCD') --&gt; A B C D A B C D ...
+<pre tabindex="0"><code>cycle(&#39;ABCD&#39;) --&gt; A B C D A B C D ...
 </code></pre></li>
 <li>
 <p><code>itertools.repeat(object[, times])</code></p>
-<pre><code>repeat(10, 3) --&gt; 10 10 10
+<pre tabindex="0"><code>repeat(10, 3) --&gt; 10 10 10
 </code></pre></li>
 </ul>
 <p><strong>Iterators terminating on the shortest input sequence:</strong></p>
 <ul>
 <li>
 <p><code>itertools.accumulate(iterable[, func])</code></p>
-<pre><code>accumulate([1,2,3,4,5]) --&gt; 1 3 6 10 15
+<pre tabindex="0"><code>accumulate([1,2,3,4,5]) --&gt; 1 3 6 10 15
 </code></pre></li>
 <li>
 <p><code>itertools.chain(*iterables)</code></p>
 <ul>
 <li><code>classmethod chain.from_iterable(iterable)</code></li>
 </ul>
-<pre><code>chain('ABC', 'DEF') --&gt; A B C D E F
-chain.from_iterable(['ABC', 'DEF']) --&gt; A B C D E F
+<pre tabindex="0"><code>chain(&#39;ABC&#39;, &#39;DEF&#39;) --&gt; A B C D E F
+chain.from_iterable([&#39;ABC&#39;, &#39;DEF&#39;]) --&gt; A B C D E F
 </code></pre></li>
 <li>
 <p><code>itertools.compress(data, selectors)</code></p>
-<pre><code>compress('ABCDEF', [1,0,1,0,1,1]) --&gt; A C E F
+<pre tabindex="0"><code>compress(&#39;ABCDEF&#39;, [1,0,1,0,1,1]) --&gt; A C E F
 </code></pre></li>
 <li>
 <p><code>itertools.dropwhile(predicate, iterable)</code></p>
-<pre><code>dropwhile(lambda x: x&lt;5, [1,4,6,4,1]) --&gt; 6 4 1
+<pre tabindex="0"><code>dropwhile(lambda x: x&lt;5, [1,4,6,4,1]) --&gt; 6 4 1
 </code></pre></li>
 <li>
 <p><code>itertools.filterfalse(predicate, iterable)</code></p>
-<pre><code>filterfalse(lambda x: x%2, range(10)) --&gt; 0 2 4 6 8
+<pre tabindex="0"><code>filterfalse(lambda x: x%2, range(10)) --&gt; 0 2 4 6 8
 </code></pre></li>
 <li>
 <p><code>itertools.groupby(iterable, key=None)</code></p>
@@ -3440,15 +3438,15 @@ chain.from_iterable(['ABC', 'DEF']) --&gt; A B C D E F
 </li>
 <li>
 <p><code>itertools.islice(iterable, start, stop[, step])</code></p>
-<pre><code>islice('ABCDEFG', 2, None) --&gt; C D E F G
+<pre tabindex="0"><code>islice(&#39;ABCDEFG&#39;, 2, None) --&gt; C D E F G
 </code></pre></li>
 <li>
 <p><code>itertools.starmap(function, iterable)</code></p>
-<pre><code>starmap(pow, [(2,5), (3,2), (10,3)]) --&gt; 32 9 1000
+<pre tabindex="0"><code>starmap(pow, [(2,5), (3,2), (10,3)]) --&gt; 32 9 1000
 </code></pre></li>
 <li>
 <p><code>itertools.takewhile(predicate, iterable)</code></p>
-<pre><code># until pred fails
+<pre tabindex="0"><code># until pred fails
 takewhile(lambda x: x&lt;5, [1,4,6,4,1]) --&gt; 1 4
 </code></pre></li>
 <li>
@@ -3456,29 +3454,29 @@ takewhile(lambda x: x&lt;5, [1,4,6,4,1]) --&gt; 1 4
 </li>
 <li>
 <p><code>itertools.zip_longest(*iterables, fillvalue=None)</code></p>
-<pre><code>zip_longest('ABCD', 'xy', fillvalue='-') --&gt; Ax By C- D-
+<pre tabindex="0"><code>zip_longest(&#39;ABCD&#39;, &#39;xy&#39;, fillvalue=&#39;-&#39;) --&gt; Ax By C- D-
 </code></pre></li>
 </ul>
 <p><strong>Combinatoric iterators:</strong></p>
 <ul>
 <li>
 <p><code>itertools.product(*iterables, repeat=1)</code></p>
-<pre><code>product('ABCD', repeat=2)
+<pre tabindex="0"><code>product(&#39;ABCD&#39;, repeat=2)
 --&gt; AA AB AC AD BA BB BC BD CA CB CC CD DA DB DC DD
 </code></pre></li>
 <li>
 <p><code>itertools.permutations(iterable, r=None)</code></p>
-<pre><code>permutations('ABCD', 2)
+<pre tabindex="0"><code>permutations(&#39;ABCD&#39;, 2)
 --&gt; AB AC AD BA BC BD CA CB CD DA DB DC
 </code></pre></li>
 <li>
 <p><code>itertools.combinations(iterable, r)</code></p>
-<pre><code>combinations('ABCD', 2)
+<pre tabindex="0"><code>combinations(&#39;ABCD&#39;, 2)
 --&gt; AB AC AD BC BD CD
 </code></pre></li>
 <li>
 <p><code>itertools.combinations_with_replacement(iterable, r)</code></p>
-<pre><code>combinations_with_replacement('ABCD', 2)
+<pre tabindex="0"><code>combinations_with_replacement(&#39;ABCD&#39;, 2)
 --&gt; AA AB AC AD BB BC BD CC CD DD
 </code></pre></li>
 </ul>
@@ -3488,30 +3486,30 @@ takewhile(lambda x: x&lt;5, [1,4,6,4,1]) --&gt; 1 4
 <p><code>functools.cmp_to_key(func)</code></p>
 <p>Transform an old-style comparison function to a key function.</p>
 <p>A comparison function is any callable that accept two arguments, compares them, and returns a negative number for less-than, zero for equality, or a positive number for greater-than.</p>
-<pre><code>sorted(iterable, key=cmp_to_key(locale.strcoll))
+<pre tabindex="0"><code>sorted(iterable, key=cmp_to_key(locale.strcoll))
 </code></pre></li>
 <li>
 <p><code>@functools.lru_cache(maxsize=128, typed=False)</code></p>
-<pre><code>@lru_cache(maxsize=None)
+<pre tabindex="0"><code>@lru_cache(maxsize=None)
 def fib(n):
     if n &lt; 2:
         return n
     return fib(n-1) + fib(n-2)
-  
+
 &gt;&gt;&gt; [fib(n) for n in range(16)]
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
-  
+
 &gt;&gt;&gt; fib.cache_info()
 CacheInfo(hits=28, misses=16, maxsize=None, currsize=16)
 </code></pre></li>
 <li>
 <p><code>@functools.total_ordering</code></p>
 <p>Given a class defining one or more rich comparison ordering methods, this class decorator supplies the rest. </p>
-<pre><code>@total_ordering
+<pre tabindex="0"><code>@total_ordering
 class Student:
     def _is_valid_operand(self, other):
-        return (hasattr(other, &quot;lastname&quot;) and
-                hasattr(other, &quot;firstname&quot;))
+        return (hasattr(other, &#34;lastname&#34;) and
+                hasattr(other, &#34;firstname&#34;))
     def __eq__(self, other):
         if not self._is_valid_operand(other):
             return NotImplemented
@@ -3525,7 +3523,7 @@ class Student:
 </code></pre></li>
 <li>
 <p><code>functools.partial(func, *args, **keywords)</code></p>
-<pre><code>&gt;&gt;&gt; def three_sum(a, b, c):
+<pre tabindex="0"><code>&gt;&gt;&gt; def three_sum(a, b, c):
 ...     return a + b + c
 ... 
 &gt;&gt;&gt; add_two = partial(three_sum, 2, 0)
@@ -3534,7 +3532,7 @@ class Student:
 </code></pre></li>
 <li>
 <p><code>class functools.partialmethod(func, *args, **keywords)</code></p>
-<pre><code>&gt;&gt;&gt; class Cell(object):
+<pre tabindex="0"><code>&gt;&gt;&gt; class Cell(object):
 ...     def __init__(self):
 ...         self._alive = False
 ...     @property
@@ -3554,44 +3552,44 @@ True
 </code></pre></li>
 <li>
 <p><code>functools.reduce(function, iterable[, initializer])</code></p>
-<pre><code>&gt;&gt;&gt; reduce(lambda x, y: x+y, [1, 2, 3, 4, 5])
+<pre tabindex="0"><code>&gt;&gt;&gt; reduce(lambda x, y: x+y, [1, 2, 3, 4, 5])
 ((((1+2)+3)+4)+5)
 </code></pre></li>
 <li>
 <p><code>@functools.singledispatch</code></p>
 <p>Transform a function into a single-dispatch <strong>generic</strong> function.</p>
-<pre><code>&gt;&gt;&gt; from functools import singledispatch
+<pre tabindex="0"><code>&gt;&gt;&gt; from functools import singledispatch
 &gt;&gt;&gt; @singledispatch
 ... def fun(arg, verbose=False):
 ...     if verbose:
-...         print(&quot;Let me just say,&quot;, end=&quot; &quot;)
+...         print(&#34;Let me just say,&#34;, end=&#34; &#34;)
 ...     print(arg)
-</code></pre><pre><code>&gt;&gt;&gt; @fun.register(int)
+</code></pre><pre tabindex="0"><code>&gt;&gt;&gt; @fun.register(int)
 ... def _(arg, verbose=False):
 ...     if verbose:
-...         print(&quot;Strength in numbers, eh?&quot;, end=&quot; &quot;)
+...         print(&#34;Strength in numbers, eh?&#34;, end=&#34; &#34;)
 ...     print(arg)
 ...
 &gt;&gt;&gt; @fun.register(list)
 ... def _(arg, verbose=False):
 ...     if verbose:
-...         print(&quot;Enumerate this:&quot;)
+...         print(&#34;Enumerate this:&#34;)
 ...     for i, elem in enumerate(arg):
 ...         print(i, elem)
-</code></pre><pre><code>&gt;&gt;&gt; def nothing(arg, verbose=False):
-...     print(&quot;Nothing.&quot;)
+</code></pre><pre tabindex="0"><code>&gt;&gt;&gt; def nothing(arg, verbose=False):
+...     print(&#34;Nothing.&#34;)
 ...
 &gt;&gt;&gt; fun.register(type(None), nothing)
-</code></pre><pre><code>&gt;&gt;&gt; @fun.register(float)
+</code></pre><pre tabindex="0"><code>&gt;&gt;&gt; @fun.register(float)
 ... @fun.register(Decimal)
 ... def fun_num(arg, verbose=False):
 ...     if verbose:
-...         print(&quot;Half of your number:&quot;, end=&quot; &quot;)
+...         print(&#34;Half of your number:&#34;, end=&#34; &#34;)
 ...     print(arg / 2)
-</code></pre><pre><code>&gt;&gt;&gt; fun.registry.keys()
-dict_keys([&lt;class 'NoneType'&gt;, &lt;class 'int'&gt;, &lt;class 'object'&gt;,
-          &lt;class 'decimal.Decimal'&gt;, &lt;class 'list'&gt;,
-          &lt;class 'float'&gt;])
+</code></pre><pre tabindex="0"><code>&gt;&gt;&gt; fun.registry.keys()
+dict_keys([&lt;class &#39;NoneType&#39;&gt;, &lt;class &#39;int&#39;&gt;, &lt;class &#39;object&#39;&gt;,
+          &lt;class &#39;decimal.Decimal&#39;&gt;, &lt;class &#39;list&#39;&gt;,
+          &lt;class &#39;float&#39;&gt;])
 &gt;&gt;&gt; fun.registry[float]
 &lt;function fun_num at 0x1035a2840&gt;
 &gt;&gt;&gt; fun.registry[object]
@@ -3602,26 +3600,26 @@ dict_keys([&lt;class 'NoneType'&gt;, &lt;class 'int'&gt;, &lt;class 'object'&gt;
 </li>
 <li>
 <p><code>@functools.wraps(wrapped, assigned=WRAPPER_ASSIGNMENTS, updated=WRAPPER_UPDATES)</code></p>
-<pre><code>&gt;&gt;&gt; from functools import wraps
+<pre tabindex="0"><code>&gt;&gt;&gt; from functools import wraps
 &gt;&gt;&gt; def my_decorator(f):
 ...     @wraps(f)
 ...     def wrapper(*args, **kwds):
-...         print('Calling decorated function')
+...         print(&#39;Calling decorated function&#39;)
 ...         return f(*args, **kwds)
 ...     return wrapper
 ...
 &gt;&gt;&gt; @my_decorator
 ... def example():
-...     &quot;&quot;&quot;Docstring&quot;&quot;&quot;
-...     print('Called example function')
+...     &#34;&#34;&#34;Docstring&#34;&#34;&#34;
+...     print(&#39;Called example function&#39;)
 ...
 &gt;&gt;&gt; example()
 Calling decorated function
 Called example function
 &gt;&gt;&gt; example.__name__
-'example'
+&#39;example&#39;
 &gt;&gt;&gt; example.__doc__
-'Docstring'
+&#39;Docstring&#39;
 </code></pre></li>
 </ul>
 <h3 id="103-operator---standard-operators-as-functions">10.3. operator —  Standard operators as functions</h3>
@@ -4126,7 +4124,7 @@ Called example function
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

@@ -13,7 +13,7 @@
       <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/summarization/</guid>
-      <description> https://github.com/huggingface/transformers/tree/master/examples/seq2seq https://github.com/tensorflow/models/tree/master/research/textsum https://github.com/atulkum/pointer_summarizer https://github.com/vrindav/just-news-it https://github.com/pytorch/fairseq https://github.com/abisee/pointer-generator   </description>
+      <description> https://github.com/huggingface/transformers/tree/master/examples/seq2seq https://github.com/tensorflow/models/tree/master/research/textsum https://github.com/atulkum/pointer_summarizer https://github.com/vrindav/just-news-it https://github.com/pytorch/fairseq https://github.com/abisee/pointer-generator </description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@
       <description>TensorFlow Docker requirements Install Docker
 sudo pacman -S docker systemctl enable docker.service systemctl start docker.service For GPU support on Linux,
 yay -S nvidia-container-toolkit The official TensorFlow Docker images are located in the tensorflow/tensorflow Docker Hub repository.
-Start a TensorFlow Docker container docker run [-it] [--rm] [-p hostPort:containerPort] tensorflow/tensorflow[:tag] [command] Examples using CPU-only images docker pull tensorflow/tensorflow docker run -it --rm tensorflow/tensorflow \ python -c &amp;quot;import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))&amp;quot; Start a bash shell session within a TensorFlow-configured container:</description>
+Start a TensorFlow Docker container docker run [-it] [--rm] [-p hostPort:containerPort] tensorflow/tensorflow[:tag] [command] Examples using CPU-only images docker pull tensorflow/tensorflow docker run -it --rm tensorflow/tensorflow \ python -c &amp;#34;import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))&amp;#34; Start a bash shell session within a TensorFlow-configured container:</description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@ The approach you take is to generate semantic embeddings of the training phrases
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/joint-intent-and-slot-classification/</guid>
-      <description>Reference  Joint_Intent_and_Slot_Classification.ipynb  </description>
+      <description>Reference Joint_Intent_and_Slot_Classification.ipynb </description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@ The approach you take is to generate semantic embeddings of the training phrases
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/named-entity-recognition/</guid>
-      <description>Reference  Named Entity Recognition using Spacy and Tensorflow  </description>
+      <description>Reference Named Entity Recognition using Spacy and Tensorflow </description>
     </item>
     
     <item>
@@ -107,9 +107,9 @@ The approach you take is to generate semantic embeddings of the training phrases
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/product-overview/</guid>
-      <description>Implementing Recommendations Steps   Set up a project
-  Import your product catalog You can add items to your Recommendations AI product catalog individually by using the import Files or API.
-  Information of the products sold to customers. This includes the product title, description, in stock availability, pricing, and so on.
+      <description>Implementing Recommendations Steps Set up a project
+Import your product catalog You can add items to your Recommendations AI product catalog individually by using the import Files or API.
+Information of the products sold to customers. This includes the product title, description, in stock availability, pricing, and so on.
 Record user events User events track user actions such as clicking on a product, adding an item to a shopping cart, or purchasing an item, and so on.</description>
     </item>
     
@@ -146,7 +146,7 @@ Record user events User events track user actions such as clicking on a product,
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/learn/</guid>
-      <description> ICS UCI CSE 163 CA106B Search Engine NYU Search Engine Page Rank Overview - Building a Search Engine | Coursera CSC 575 Intelligent Information Retrieval   </description>
+      <description> ICS UCI CSE 163 CA106B Search Engine NYU Search Engine Page Rank Overview - Building a Search Engine | Coursera CSC 575 Intelligent Information Retrieval </description>
     </item>
     
     <item>
@@ -190,7 +190,7 @@ https://github.com/elastic/elasticsearch-dsl-py</description>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/python/</guid>
-      <description> https://github.com/django-haystack/django-haystack/blob/master/haystack/backends/elasticsearch_backend.py   self.conn.indices.create( index=self.index_name, body=self.DEFAULT_SETTINGS, ignore=400 ) self.conn.indices.put_mapping( index=self.index_name, doc_type=&amp;quot;modelresult&amp;quot;, body=current_mapping ) </description>
+      <description> https://github.com/django-haystack/django-haystack/blob/master/haystack/backends/elasticsearch_backend.py self.conn.indices.create( index=self.index_name, body=self.DEFAULT_SETTINGS, ignore=400 ) self.conn.indices.put_mapping( index=self.index_name, doc_type=&amp;#34;modelresult&amp;#34;, body=current_mapping ) </description>
     </item>
     
     <item>

@@ -39,6 +39,15 @@ Scale: Indexing and IO Model Sorting, Building Indices Part 1 B+ Trees Query Opt
     </item>
     
     <item>
+      <title>Database Scaling Strategies</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/database-scaling/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/database-scaling/</guid>
+      <description>What Is Scalability? As your application scale, the database will often be the main bottleneck of the system. Scaling your database is a great way to deal with performance bottlenecks. Scalability is the system’s ability to deliver equal bang for the buck as you add resources to perform more work. Most benchmarks measure a system’s maximum</description>
+    </item>
+    
+    <item>
       <title>Designing and Implementing an Application Layer Network Protocol Using UNIX Sockets and TCP</title>
       <link>http://www.yezheng.pro/post/specialization/systems/computer-networking/custom-protocol/</link>
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
@@ -89,7 +98,7 @@ Scale: Indexing and IO Model Sorting, Building Indices Part 1 B+ Trees Query Opt
       <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/systems/computer-networking/how-the-internet-works/</guid>
-      <description>Multiple packets in pipeline at same time Packets may be damaged Packets may arrive out of order Packets may be duplicated They may not arrive at all!  Summary so far: Applications send and receive data in packets over an Internet that is unreliable.
+      <description>Multiple packets in pipeline at same time Packets may be damaged Packets may arrive out of order Packets may be duplicated They may not arrive at all! Summary so far: Applications send and receive data in packets over an Internet that is unreliable.
 How packets find their way across the Internet? Internet addresses | Data | Internet &amp;ldquo;IP&amp;rdquo; Address |
 All Internet packets carry a destination IP address. We usually write the IP address like this: 171.</description>
     </item>

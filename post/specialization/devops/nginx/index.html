@@ -35,7 +35,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:" />
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/devops/nginx/" />
@@ -56,7 +56,7 @@ include sites-enabled/*; To enable a server block, simple create a symlink:" />
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -69,15 +69,14 @@ include sites-enabled/*; To enable a server block, simple create a symlink:" />
 include sites-enabled/*; To enable a server block, simple create a symlink:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/devops/nginx/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2017-10-21T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2017-10-21T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2017-10-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-10-21T00:00:00+00:00" />
 <meta itemprop="name" content="Nginx">
 <meta itemprop="description" content="General configuration Managing server entries It is possible to put different server blocks in different files. This allows you to easily enable or disable certain sites.
 # mkdir /etc/nginx/sites-available # mkdir /etc/nginx/sites-enabled Create a file inside the sites-available directory that contains one or more server blocks:
 /etc/nginx/sites-available/example server { .. } Append the following line at the end of the http block in /etc/nginx/nginx.conf:
-include sites-enabled/*; To enable a server block, simple create a symlink:"><meta itemprop="datePublished" content="2017-10-21T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2017-10-21T00:00:00&#43;00:00" />
+include sites-enabled/*; To enable a server block, simple create a symlink:"><meta itemprop="datePublished" content="2017-10-21T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2017-10-21T00:00:00+00:00" />
 <meta itemprop="wordCount" content="277">
 <meta itemprop="keywords" content="Nginx,DevOps," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Nginx"/>
@@ -346,23 +345,23 @@ include sites-enabled/*; To enable a server block, simple create a symlink:"/>
       <h2 id="general-configuration">General configuration</h2>
 <h4 id="managing-server-entries">Managing server entries</h4>
 <p>It is possible to put different <code>server</code> blocks in different files. This allows you to easily enable or disable certain sites.</p>
-<pre><code># mkdir /etc/nginx/sites-available
+<pre tabindex="0"><code># mkdir /etc/nginx/sites-available
 # mkdir /etc/nginx/sites-enabled
 </code></pre><p>Create a file inside the <code>sites-available</code> directory that contains one or more server blocks:</p>
-<pre><code>/etc/nginx/sites-available/example
+<pre tabindex="0"><code>/etc/nginx/sites-available/example
 server {
     ..
 }
 </code></pre><p>Append the following line at the end of the <code>http</code> block in <code>/etc/nginx/nginx.conf</code>:</p>
-<pre><code>include sites-enabled/*; 
+<pre tabindex="0"><code>include sites-enabled/*; 
 </code></pre><p>To enable a <code>server</code> block, simple create a symlink:</p>
-<pre><code># ln -s /etc/nginx/sites-available/example /etc/nginx/sites-enabled/example
+<pre tabindex="0"><code># ln -s /etc/nginx/sites-available/example /etc/nginx/sites-enabled/example
 </code></pre><p>To remove a <code>server</code>:</p>
-<pre><code># unlink /etc/nginx/sites-enabled/example
+<pre tabindex="0"><code># unlink /etc/nginx/sites-enabled/example
 </code></pre><p><code>Reload</code>/<code>restart</code> <code>nginx.service</code> to enable the new configuration.</p>
 <h4 id="tlsssl">TLS/SSL</h4>
 <h4 id="configuration-example">Configuration example</h4>
-<pre><code>upstream sample-backend {
+<pre tabindex="0"><code>upstream sample-backend {
     server 192.168.24.43:8000 fail_timeout=0 weight=2;
     server 127.0.0.1:8000 fail_timeout=0 weight=2;
 }
@@ -380,7 +379,7 @@ server {
         proxy_set_header X-Forwarded-For      $http_x_forwarded_for;
         
         # newrelic-specific header records the time when nginx handles a request.
-        proxy_set_header X-Queue-Start &quot;t={msec}&quot;;
+        proxy_set_header X-Queue-Start &#34;t={msec}&#34;;
         
         proxy_redirect off;
         proxy_pass http://192.168.3.104:18381;
@@ -392,7 +391,7 @@ server {
         proxy_set_header X-Forwarded-For      $http_x_forwarded_for;
         
         # newrelic-specific header records the time when nginx handles a request.
-        proxy_set_header X-Queue-Start &quot;t={msec}&quot;;
+        proxy_set_header X-Queue-Start &#34;t={msec}&#34;;
         
         proxy_redirect off;
         proxy_pass http://159.138.1.223:8080;
@@ -404,7 +403,7 @@ server {
             proxy_set_header X-Forwarded-For      $http_x_forwarded_for;
 
             # newrelic-specific header records the time when nginx handles a request.
-            proxy_set_header X-Queue-Start &quot;t={msec}&quot;;
+            proxy_set_header X-Queue-Start &#34;t={msec}&#34;;
 
             proxy_redirect off;
             ＃notice append backslash will no include catalog
@@ -417,7 +416,7 @@ server {
         proxy_set_header X-Forwarded-For      $http_x_forwarded_for;
         
         # newrelic-specific header records the time when nginx handles a request.
-        proxy_set_header X-Queue-Start &quot;t={msec}&quot;;
+        proxy_set_header X-Queue-Start &#34;t={msec}&#34;;
         
         proxy_redirect off;
         # distribute requests among worker processes in sample-backend.
@@ -436,8 +435,6 @@ server {
     }
     
 }
-
-
 </code></pre>
     </div>
 
@@ -605,7 +602,7 @@ server {
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

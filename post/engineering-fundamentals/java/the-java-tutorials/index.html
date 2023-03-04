@@ -24,8 +24,8 @@
 
 <meta name="author" content="Ye Zheng" />
   <meta name="description" content="Getting Started The Java programming language is a high-level language that can be characterized by all of the following buzzwords:
- Simple Object oriented Distributed Multithreaded Dynamic Architecture neutral Portable High performance Robust Secure  An overview of the software development process:
-all source code is first written in plain text files ending with the .java extension. Those source files are then compiled into .class files by the javac compiler. A ." />
+Simple Object oriented Distributed Multithreaded Dynamic Architecture neutral Portable High performance Robust Secure An overview of the software development process:
+all source code is first written in plain text files ending with the .java extension. Those source files are then compiled into .class files by the javac compiler. A .class file does not contain code that is native to your processor; it instead contains bytecodes — the machine language of the Java Virtual Machine1 (Java VM)." />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -34,7 +34,7 @@ all source code is first written in plain text files ending with the .java exten
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-tutorials/" />
@@ -55,7 +55,7 @@ all source code is first written in plain text files ending with the .java exten
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,24 +63,23 @@ all source code is first written in plain text files ending with the .java exten
 
 <meta property="og:title" content="The Java Tutorials" />
 <meta property="og:description" content="Getting Started The Java programming language is a high-level language that can be characterized by all of the following buzzwords:
- Simple Object oriented Distributed Multithreaded Dynamic Architecture neutral Portable High performance Robust Secure  An overview of the software development process:
-all source code is first written in plain text files ending with the .java extension. Those source files are then compiled into .class files by the javac compiler. A ." />
+Simple Object oriented Distributed Multithreaded Dynamic Architecture neutral Portable High performance Robust Secure An overview of the software development process:
+all source code is first written in plain text files ending with the .java extension. Those source files are then compiled into .class files by the javac compiler. A .class file does not contain code that is native to your processor; it instead contains bytecodes — the machine language of the Java Virtual Machine1 (Java VM)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-tutorials/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-03-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2019-03-01T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2019-03-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-03-01T00:00:00+00:00" />
 <meta itemprop="name" content="The Java Tutorials">
 <meta itemprop="description" content="Getting Started The Java programming language is a high-level language that can be characterized by all of the following buzzwords:
- Simple Object oriented Distributed Multithreaded Dynamic Architecture neutral Portable High performance Robust Secure  An overview of the software development process:
-all source code is first written in plain text files ending with the .java extension. Those source files are then compiled into .class files by the javac compiler. A ."><meta itemprop="datePublished" content="2019-03-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-03-01T00:00:00&#43;00:00" />
+Simple Object oriented Distributed Multithreaded Dynamic Architecture neutral Portable High performance Robust Secure An overview of the software development process:
+all source code is first written in plain text files ending with the .java extension. Those source files are then compiled into .class files by the javac compiler. A .class file does not contain code that is native to your processor; it instead contains bytecodes — the machine language of the Java Virtual Machine1 (Java VM)."><meta itemprop="datePublished" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-03-01T00:00:00+00:00" />
 <meta itemprop="wordCount" content="10783">
 <meta itemprop="keywords" content="Java," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The Java Tutorials"/>
 <meta name="twitter:description" content="Getting Started The Java programming language is a high-level language that can be characterized by all of the following buzzwords:
- Simple Object oriented Distributed Multithreaded Dynamic Architecture neutral Portable High performance Robust Secure  An overview of the software development process:
-all source code is first written in plain text files ending with the .java extension. Those source files are then compiled into .class files by the javac compiler. A ."/>
+Simple Object oriented Distributed Multithreaded Dynamic Architecture neutral Portable High performance Robust Secure An overview of the software development process:
+all source code is first written in plain text files ending with the .java extension. Those source files are then compiled into .class files by the javac compiler. A .class file does not contain code that is native to your processor; it instead contains bytecodes — the machine language of the Java Virtual Machine1 (Java VM)."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -436,24 +435,24 @@ all source code is first written in plain text files ending with the .java exten
 <li>The <em>Java Virtual Machine</em></li>
 <li>The <em>Java Application Programming Interface</em> (API)</li>
 </ul>
-<pre><code>/**
+<pre tabindex="0"><code>/**
  * The HelloWorldApp class implements an application that
- * simply prints &quot;Hello World!&quot; to standard output.
+ * simply prints &#34;Hello World!&#34; to standard output.
  */
 class HelloWorldApp {
     public static void main(String[] args) {
-        System.out.println(&quot;Hello World!&quot;); // Display the string.
+        System.out.println(&#34;Hello World!&#34;); // Display the string.
     }
 }
-</code></pre><pre><code>$ javac HelloWorldApp.java
-</code></pre><pre><code>$ java HelloWorldApp
+</code></pre><pre tabindex="0"><code>$ javac HelloWorldApp.java
+</code></pre><pre tabindex="0"><code>$ java HelloWorldApp
 </code></pre><h2 id="language-basics">Language Basics</h2>
 <h3 id="comments">Comments</h3>
-<pre><code>/* comments */
+<pre tabindex="0"><code>/* comments */
 // comments
 </code></pre><h3 id="primitive-data-types">Primitive Data Types</h3>
 <p>The Java programming language is statically-typed, which means that all variables must first be declared before they can be used. This involves stating the variable&rsquo;s type and name</p>
-<pre><code>int gear = 1;    // holds numerical data, and has an initial value 
+<pre tabindex="0"><code>int gear = 1;    // holds numerical data, and has an initial value 
 </code></pre><p>The eight primitive data types supported by the Java programming language are:</p>
 <ul>
 <li><strong>byte</strong>: The <code>byte</code> data type is an 8-bit signed two&rsquo;s complement integer. The <code>byte</code> data type can <strong>be useful for saving memory in large arrays</strong>.</li>
@@ -538,24 +537,24 @@ class HelloWorldApp {
 </ul>
 <h4 id="constants">Constants</h4>
 <p>The keyword <strong><code>final</code></strong> indicates that you can assign to the variable once, and then its value is set once and for all. It is customary to name constants in all uppercase.</p>
-<pre><code>public static void main(String[] args)
+<pre tabindex="0"><code>public static void main(String[] args)
 {
 	final double CM_PER_INCH = 2.54;
 }
 </code></pre><p>Set up a class constant with the keywords <strong><code>static final</code></strong>.</p>
-<pre><code>public class Constants2
+<pre tabindex="0"><code>public class Constants2
 {
     public static final double CM_PER_INCH = 2.54;
     public static void main(String[] args)
     {
         double paperWidth = 8.5;
         double paperHeight = 11;
-        System.out.println(&quot;Paper size in centimeters: &quot; + paperWidth * CM_PER_INCH + &quot; by &quot; + paperHeight * CM_PER_INCH);
+        System.out.println(&#34;Paper size in centimeters: &#34; + paperWidth * CM_PER_INCH + &#34; by &#34; + paperHeight * CM_PER_INCH);
     }
 }
 </code></pre><h4 id="enumerated-types">Enumerated Types</h4>
-<pre><code>enum Size { SMALL, MEDIUM, LARGE, EXTRA_LARGE };
-</code></pre><pre><code>Size s = Size.MEDIUM;
+<pre tabindex="0"><code>enum Size { SMALL, MEDIUM, LARGE, EXTRA_LARGE };
+</code></pre><pre tabindex="0"><code>Size s = Size.MEDIUM;
 </code></pre><h3 id="operators">Operators</h3>
 <table>
 <thead>
@@ -625,44 +624,44 @@ class HelloWorldApp {
 </table>
 <h3 id="strings">Strings</h3>
 <p>In addition to the eight primitive data types listed above, the Java programming language also provides special support for character strings via the <code>java.lang.String</code> class. Enclosing your character string within double quotes will automatically create a new String object.</p>
-<pre><code>String s = &quot;this is a string&quot;;
+<pre tabindex="0"><code>String s = &#34;this is a string&#34;;
 </code></pre><p><code>String</code> objects are <em><strong>immutable</strong></em>, which means that once created, their values cannot be changed. The <code>String</code> class is not technically a primitive data type, but considering the special support given to it by the language, you&rsquo;ll probably tend to think of it as such.</p>
 <h3 id="expressions-statements-and-blocks">Expressions, Statements, and Blocks</h3>
-<pre><code>double aValue = 8933.234;  // declaration statement
+<pre tabindex="0"><code>double aValue = 8933.234;  // declaration statement
 aValue = 8933.234;   // assignment statement
 aValue++;   // increment statement
-System.out.println(&quot;Hello World!&quot;);   // method invocation statement
+System.out.println(&#34;Hello World!&#34;);   // method invocation statement
 Bicycle myBike = new Bicycle();   // object creation statement
-</code></pre><pre><code>class BlockDemo {
+</code></pre><pre tabindex="0"><code>class BlockDemo {
      public static void main(String[] args) {
           boolean condition = true;
           if (condition) { // begin block 1
-               System.out.println(&quot;Condition is true.&quot;);
+               System.out.println(&#34;Condition is true.&#34;);
           } // end block one
           else { // begin block 2
-               System.out.println(&quot;Condition is false.&quot;);
+               System.out.println(&#34;Condition is false.&#34;);
           } // end block 2
      }
 }
 </code></pre><h3 id="input-and-output">Input and Output</h3>
 <h4 id="reading-input">Reading Input</h4>
-<pre><code>import java.util.*;
+<pre tabindex="0"><code>import java.util.*;
 Scanner in = new Scanner(System.in);
-</code></pre><pre><code>System.out.print(&quot;What is your name? &quot;);
+</code></pre><pre tabindex="0"><code>System.out.print(&#34;What is your name? &#34;);
 
 jshell&gt; String name = in.nextLine();
 Ye
-name ==&gt; &quot;Ye&quot;
-</code></pre><pre><code>String firstName = in.next();
-</code></pre><pre><code>System.out.print(&quot;How old are you? &quot;);
+name ==&gt; &#34;Ye&#34;
+</code></pre><pre tabindex="0"><code>String firstName = in.next();
+</code></pre><pre tabindex="0"><code>System.out.print(&#34;How old are you? &#34;);
 int age = in.nextInt();
-</code></pre><pre><code>boolean hasNext()
+</code></pre><pre tabindex="0"><code>boolean hasNext()
 </code></pre><p>The Scanner class is not suitable for reading a password from a console since the input is plainly visible to anyone.</p>
-<pre><code>Console cons = System.console();
-String username = cons.readLine(&quot;User name: &quot;);
-char[] passwd = cons.readPassword(&quot;Password: &quot;);
+<pre tabindex="0"><code>Console cons = System.console();
+String username = cons.readLine(&#34;User name: &#34;);
+char[] passwd = cons.readPassword(&#34;Password: &#34;);
 </code></pre><h4 id="formatting-output">Formatting Output</h4>
-<pre><code>System.out.printf(&quot;Hello, %s. Next year, you'll be %d&quot;, name, age);
+<pre tabindex="0"><code>System.out.printf(&#34;Hello, %s. Next year, you&#39;ll be %d&#34;, name, age);
 </code></pre><table>
 <thead>
 <tr>
@@ -748,43 +747,43 @@ char[] passwd = cons.readPassword(&quot;Password: &quot;);
 </tr>
 </tbody>
 </table>
-<pre><code>System.out.printf(&quot;%tc&quot;, new Date());  
+<pre tabindex="0"><code>System.out.printf(&#34;%tc&#34;, new Date());  
 // Mon Feb 09 18:05:19 PST 2015
-</code></pre><pre><code>System.out.printf(&quot;%1$s %2$tB %2$te, %2$tY&quot;, &quot;Due date:&quot;, new Date());
+</code></pre><pre tabindex="0"><code>System.out.printf(&#34;%1$s %2$tB %2$te, %2$tY&#34;, &#34;Due date:&#34;, new Date());
 // Due date: February 9, 2015
 </code></pre><h4 id="file-input-and-output">File Input and Output</h4>
 <p>To read from a file</p>
-<pre><code>Scanner in = new Scanner(Path.of(&quot;c:\\mydirectory\\myfile.txt&quot;), StandardCharsets.UTF_8);
+<pre tabindex="0"><code>Scanner in = new Scanner(Path.of(&#34;c:\\mydirectory\\myfile.txt&#34;), StandardCharsets.UTF_8);
 </code></pre><p>To write to a file</p>
-<pre><code>PrintWriter out = new PrintWriter(&quot;myfile.txt&quot;, StandardCharsets.UTF_8);
+<pre tabindex="0"><code>PrintWriter out = new PrintWriter(&#34;myfile.txt&#34;, StandardCharsets.UTF_8);
 </code></pre><p>When you specify a relative file name, the file is located relative to the directory in which the Java virtual machine was started.</p>
 <p>If you construct a Scanner with a file that does not exist or a PrintWriter with a file name that cannot be created, an exception occurs.</p>
-<pre><code>public static void main(String[] args) throws IOException
+<pre tabindex="0"><code>public static void main(String[] args) throws IOException
 {
-    Scanner in = new Scanner(Path.of(&quot;myfile.txt&quot;), StandardCharsets.UTF_8);
+    Scanner in = new Scanner(Path.of(&#34;myfile.txt&#34;), StandardCharsets.UTF_8);
     . . .
 }
 </code></pre><h3 id="control-flow-statements">Control Flow Statements</h3>
 <h4 id="the-if-else-statements">The if-else Statements</h4>
-<pre><code>class IfElseDemo {
+<pre tabindex="0"><code>class IfElseDemo {
     public static void main(String[] args) {
 
         int testscore = 76;
         char grade;
 
         if (testscore &gt;= 90) {
-            grade = 'A';
+            grade = &#39;A&#39;;
         } else if (testscore &gt;= 80) {
-            grade = 'B';
+            grade = &#39;B&#39;;
         } else {
-            grade = 'F';
+            grade = &#39;F&#39;;
         }
-        System.out.println(&quot;Grade = &quot; + grade);
+        System.out.println(&#34;Grade = &#34; + grade);
     }
 }
 </code></pre><h4 id="the-switch-statement">The switch Statement</h4>
 <p>The <code>break</code> statements are necessary because without them, statements in <code>switch</code> blocks <em>fall through</em>: <strong>All statements after the matching <code>case</code> label are executed in sequence, regardless of the expression of subsequent <code>case</code> labels, until a <code>break</code> statement is encountered.</strong></p>
-<pre><code>public class SwitchDemoFallThrough {
+<pre tabindex="0"><code>public class SwitchDemoFallThrough {
 
     public static void main(String[] args) {
         java.util.ArrayList&lt;String&gt; futureMonths =
@@ -793,24 +792,24 @@ char[] passwd = cons.readPassword(&quot;Password: &quot;);
         int month = 8;
 
         switch (month) {
-            case 1:  futureMonths.add(&quot;January&quot;);
-            case 2:  futureMonths.add(&quot;February&quot;);
-            case 3:  futureMonths.add(&quot;March&quot;);
-            case 4:  futureMonths.add(&quot;April&quot;);
-            case 5:  futureMonths.add(&quot;May&quot;);
-            case 6:  futureMonths.add(&quot;June&quot;);
-            case 7:  futureMonths.add(&quot;July&quot;);
-            case 8:  futureMonths.add(&quot;August&quot;);
-            case 9:  futureMonths.add(&quot;September&quot;);
-            case 10: futureMonths.add(&quot;October&quot;);
-            case 11: futureMonths.add(&quot;November&quot;);
-            case 12: futureMonths.add(&quot;December&quot;);
+            case 1:  futureMonths.add(&#34;January&#34;);
+            case 2:  futureMonths.add(&#34;February&#34;);
+            case 3:  futureMonths.add(&#34;March&#34;);
+            case 4:  futureMonths.add(&#34;April&#34;);
+            case 5:  futureMonths.add(&#34;May&#34;);
+            case 6:  futureMonths.add(&#34;June&#34;);
+            case 7:  futureMonths.add(&#34;July&#34;);
+            case 8:  futureMonths.add(&#34;August&#34;);
+            case 9:  futureMonths.add(&#34;September&#34;);
+            case 10: futureMonths.add(&#34;October&#34;);
+            case 11: futureMonths.add(&#34;November&#34;);
+            case 12: futureMonths.add(&#34;December&#34;);
                      break;
             default: break;
         }
 
         if (futureMonths.isEmpty()) {
-            System.out.println(&quot;Invalid month number&quot;);
+            System.out.println(&#34;Invalid month number&#34;);
         } else {
             for (String monthName : futureMonths) {
                System.out.println(monthName);
@@ -825,7 +824,7 @@ October
 November
 December
 */
-</code></pre><pre><code>public class StringSwitchDemo {
+</code></pre><pre tabindex="0"><code>public class StringSwitchDemo {
 
     public static int getMonthNumber(String month) {
 
@@ -836,10 +835,10 @@ December
         }
 
         switch (month.toLowerCase()) {
-            case &quot;january&quot;:
+            case &#34;january&#34;:
                 monthNumber = 1;
                 break;
-            case &quot;february&quot;:
+            case &#34;february&#34;:
                 monthNumber = 2;
                 break;
             // ...
@@ -853,13 +852,13 @@ December
 
     public static void main(String[] args) {
 
-        String month = &quot;August&quot;;
+        String month = &#34;August&#34;;
 
         int returnedMonthNumber =
             StringSwitchDemo.getMonthNumber(month);
 
         if (returnedMonthNumber == 0) {
-            System.out.println(&quot;Invalid month&quot;);
+            System.out.println(&#34;Invalid month&#34;);
         } else {
             System.out.println(returnedMonthNumber);
         }
@@ -868,41 +867,41 @@ December
 </code></pre><p>This example <strong>checks if the expression in the <code>switch</code> statement is <code>null</code>.</strong> Ensure that the expression in any <code>switch</code> statement is not null to prevent a <code>NullPointerException</code> from being thrown.</p>
 <p>This example <strong>Call class method</strong> <code>getMonthNumber</code></p>
 <h4 id="the-while-and-do-while-statements"><strong>The while and do-while Statements</strong></h4>
-<pre><code>while (expression) {
+<pre tabindex="0"><code>while (expression) {
      statement(s)
 }
 </code></pre><h4 id="the-for-statement"><strong>The for Statement</strong></h4>
-<pre><code>for (initialization; termination; increment) {
+<pre tabindex="0"><code>for (initialization; termination; increment) {
     statement(s)
 }
 </code></pre><p>The three expressions of the <code>for</code> loop are optional; an infinite loop can be created as follows:</p>
-<pre><code>// infinite loop
+<pre tabindex="0"><code>// infinite loop
 for ( ; ; ) {
     // your code goes here
 }
 </code></pre><p>The for statement also has another form designed for iteration through <code>Collections</code> and <code>arrays</code>.</p>
-<pre><code>class EnhancedForDemo {
+<pre tabindex="0"><code>class EnhancedForDemo {
     public static void main(String[] args){
          int[] numbers = 
              {1,2,3,4,5,6,7,8,9,10};
          for (int item : numbers) {
-             System.out.println(&quot;Count is: &quot; + item);
+             System.out.println(&#34;Count is: &#34; + item);
          }
     }
 }
 </code></pre><h4 id="branching-statements"><strong>Branching Statements</strong></h4>
-<pre><code>break;
-</code></pre><pre><code>continue;
-</code></pre><pre><code>return;
+<pre tabindex="0"><code>break;
+</code></pre><pre tabindex="0"><code>continue;
+</code></pre><pre tabindex="0"><code>return;
 </code></pre><p>The <code>return</code> statement has two forms: one that returns a value, and one that doesn&rsquo;t.  The data type of the returned value must match the type of the method&rsquo;s declared return value. When a method is declared <code>void</code>, use the form of <code>return</code> that doesn&rsquo;t return a value.</p>
 <h3 id="big-numbers">Big Numbers</h3>
 <p>Use the static <code>valueOf</code> method to turn an ordinary number into a big
 number:</p>
-<pre><code>BigInteger a = BigInteger.valueOf(100);
-</code></pre><pre><code>BigInteger reallyBig = new BigInteger(&quot;2222322446294204455297398934619099672066669390&quot;);
-</code></pre><pre><code>BigInteger c = a.add(b); // c = a + b
+<pre tabindex="0"><code>BigInteger a = BigInteger.valueOf(100);
+</code></pre><pre tabindex="0"><code>BigInteger reallyBig = new BigInteger(&#34;2222322446294204455297398934619099672066669390&#34;);
+</code></pre><pre tabindex="0"><code>BigInteger c = a.add(b); // c = a + b
 BigInteger d = c.multiply(b.add(BigInteger.valueOf(2))); // d = c *
-</code></pre><pre><code>BigInteger add(BigInteger other)
+</code></pre><pre tabindex="0"><code>BigInteger add(BigInteger other)
 BigInteger subtract(BigInteger other)
 BigInteger multiply(BigInteger other)
 BigInteger divide(BigInteger other)
@@ -910,46 +909,46 @@ BigInteger mod(BigInteger other)
 </code></pre><h3 id="arrays">Arrays</h3>
 <p>An <em>array</em> is a container object that holds a fixed number of values of a <strong>single type</strong>. The length of an array is established when the array is created. After creation, <strong>its length is fixed</strong>.</p>
 <h4 id="declaring-arrays">Declaring Arrays</h4>
-<pre><code>// declares an array of integers
+<pre tabindex="0"><code>// declares an array of integers
 int[] anArray;
-</code></pre><pre><code>// allocates memory for 100 integers
+</code></pre><pre tabindex="0"><code>// allocates memory for 100 integers
 int[] a = new int[100]; // or var a = new int[100];
 </code></pre><p>Like declarations for variables of other types, an array declaration has two components: the array&rsquo;s type and the array&rsquo;s name. An array&rsquo;s type is written as <strong><code>type[]</code></strong>, where <code>type</code> is the data type of the contained elements; the brackets are special symbols indicating that this variable holds an array. <strong>The size of the array is not part of its type (which is why the brackets are empty)</strong>. As with variables of other types, <strong>the declaration does not actually create an array</strong>; it simply tells the compiler that this variable will hold an array of the specified type.</p>
 <p>Alternatively, you can use the shortcut syntax to create and initialize an array:</p>
-<pre><code>//  creating an array object and supplying initial values
+<pre tabindex="0"><code>//  creating an array object and supplying initial values
 int[] smallPrimes = { 2, 3, 5, 7, 11, 13 };
 // reinitialize an array without creating a new variable. 
 smallPrimes = new int[] { 17, 19, 23, 29, 31, 37 };
 </code></pre><h4 id="accessing-array-elements">Accessing Array Elements</h4>
 <p>To find the number of elements of an array, use <strong><code>array.length</code></strong>.</p>
-<pre><code>String[] names = new String[10];
-for (int i = 0; i &lt; 10; i++) names[i] = &quot;&quot;;
-</code></pre><pre><code>for (int i = 0; i &lt; names.length; i++)
+<pre tabindex="0"><code>String[] names = new String[10];
+for (int i = 0; i &lt; 10; i++) names[i] = &#34;&#34;;
+</code></pre><pre tabindex="0"><code>for (int i = 0; i &lt; names.length; i++)
 	System.out.println(names[i]);
 </code></pre><h4 id="the-for-each-loop">The “for each” Loop</h4>
-<pre><code>for (variable : collection) statement
+<pre tabindex="0"><code>for (variable : collection) statement
 </code></pre><p>The collection expression must be an array or an object of a class that implements the Iterable interface, such as ArrayList.</p>
-<pre><code>for (int element : a)
+<pre tabindex="0"><code>for (int element : a)
 	System.out.println(element);
-</code></pre><pre><code>for (int i = 0; i &lt; a.length; i++)
+</code></pre><pre tabindex="0"><code>for (int i = 0; i &lt; a.length; i++)
 	System.out.println(a[i]);
-</code></pre><pre><code>System.out.println(Arrays.toString(a));
+</code></pre><pre tabindex="0"><code>System.out.println(Arrays.toString(a));
 </code></pre><h4 id="array-copying">Array Copying</h4>
-<pre><code>int[] smallPrimes = { 2, 3, 5, 7, 11, 13 };
+<pre tabindex="0"><code>int[] smallPrimes = { 2, 3, 5, 7, 11, 13 };
 int[] luckyNumbers = smallPrimes;
 luckyNumbers[5] = 12; // now smallPrimes[5] is also 12
-</code></pre><pre><code>int[] copiedLuckyNumbers = Arrays.copyOf(luckyNumbers, luckyNumbers.length);
+</code></pre><pre tabindex="0"><code>int[] copiedLuckyNumbers = Arrays.copyOf(luckyNumbers, luckyNumbers.length);
 </code></pre><p>A common use of this method is to increase the size of an array.</p>
-<pre><code>luckyNumbers = Arrays.copyOf(luckyNumbers, 2 * luckyNumbers.length);
+<pre tabindex="0"><code>luckyNumbers = Arrays.copyOf(luckyNumbers, 2 * luckyNumbers.length);
 </code></pre><p>The additional elements are filled with 0 if the array contains numbers, false if the array contains boolean values.</p>
 <p>The <code>System</code> class has an <strong><code>arraycopy</code></strong> method that you can use to efficiently copy data from one array into another:</p>
-<pre><code>public static void arraycopy(Object src, int srcPos,
+<pre tabindex="0"><code>public static void arraycopy(Object src, int srcPos,
                              Object dest, int destPos, int length)
-</code></pre><pre><code>char[] copyFrom = { 'd', 'e', 'c', 'a', 'f', 'f', 'e', 'i', 'n', 'a', 't', 'e', 'd' };
+</code></pre><pre tabindex="0"><code>char[] copyFrom = { &#39;d&#39;, &#39;e&#39;, &#39;c&#39;, &#39;a&#39;, &#39;f&#39;, &#39;f&#39;, &#39;e&#39;, &#39;i&#39;, &#39;n&#39;, &#39;a&#39;, &#39;t&#39;, &#39;e&#39;, &#39;d&#39; };
 char[] copyTo = new char[7];
 System.arraycopy(copyFrom, 2, copyTo, 0, 7);
 System.out.println(new String(copyTo));   // caffein
-</code></pre><pre><code>char[] copyFrom = {'d', 'e', 'c', 'a', 'f', 'f', 'e', 'i', 'n', 'a', 't', 'e', 'd'};
+</code></pre><pre tabindex="0"><code>char[] copyFrom = {&#39;d&#39;, &#39;e&#39;, &#39;c&#39;, &#39;a&#39;, &#39;f&#39;, &#39;f&#39;, &#39;e&#39;, &#39;i&#39;, &#39;n&#39;, &#39;a&#39;, &#39;t&#39;, &#39;e&#39;, &#39;d&#39;};
 char[] copyTo = java.util.Arrays.copyOfRange(copyFrom, 2, 9);
 System.out.println(new String(copyTo));
 </code></pre><p>Some other useful operations provided by methods in the <strong><code>java.util.Arrays</code></strong> class, are:</p>
@@ -959,30 +958,30 @@ System.out.println(new String(copyTo));
 <li>Filling an array to place a specific value at each index (the <strong><code>fill</code></strong> method).</li>
 </ul>
 <h4 id="command-line-parameters">Command-Line Parameters</h4>
-<pre><code>public class Message
+<pre tabindex="0"><code>public class Message
 {
     public static void main(String[] args)
     {
-        if (args.length == 0 || args[0].equals(&quot;-h&quot;))
-            System.out.print(&quot;Hello,&quot;);
-        else if (args[0].equals(&quot;-g&quot;))
-            System.out.print(&quot;Goodbye,&quot;);
+        if (args.length == 0 || args[0].equals(&#34;-h&#34;))
+            System.out.print(&#34;Hello,&#34;);
+        else if (args[0].equals(&#34;-g&#34;))
+            System.out.print(&#34;Goodbye,&#34;);
         // print the other command-line arguments
         for (int i = 1; i &lt; args.length; i++)
-            System.out.print(&quot; &quot; + args[i]);
-        System.out.println(&quot;!&quot;);
+            System.out.print(&#34; &#34; + args[i]);
+        System.out.println(&#34;!&#34;);
     }
 }
-</code></pre><pre><code>java Message -g cruel world
-</code></pre><pre><code>args[0]: &quot;-g&quot;
-args[1]: &quot;cruel&quot;
-args[2]: &quot;world&quot;
+</code></pre><pre tabindex="0"><code>java Message -g cruel world
+</code></pre><pre tabindex="0"><code>args[0]: &#34;-g&#34;
+args[1]: &#34;cruel&#34;
+args[2]: &#34;world&#34;
 </code></pre><h4 id="array-sorting">Array Sorting</h4>
 <p>Sorting an array into ascending order. This can be done either sequentially, using the <strong><code>sort</code></strong> method, or concurrently, using the <strong><code>parallelSort</code></strong> method introduced in Java SE 8. Parallel sorting of large arrays on multiprocessor systems is faster than sequential array sorting.</p>
-<pre><code>int[] a = new int[10000];
+<pre tabindex="0"><code>int[] a = new int[10000];
 . . .
 Arrays.sort(a)      //  QuickSort algorithm
-</code></pre><pre><code>static String toString(xxx[] a) 
+</code></pre><pre tabindex="0"><code>static String toString(xxx[] a) 
 static xxx[] copyOf(xxx[] a, int end) 
 static xxx[] copyOfRange(xxx[] a, int start, int end) 
 static void sort(xxx[] a)
@@ -992,11 +991,11 @@ static void fill(xxx[] a, xxx v)
 static boolean equals(xxx[] a, xxx[] b)
 </code></pre><h4 id="multidimensional-arrays">Multidimensional Arrays</h4>
 <p>declare an array of arrays (also known as a <em><strong>multidimensional</strong></em> array) by using two or more sets of brackets, such as <code>String[][] names</code>.  A consequence of this is that <strong>the rows are allowed to vary in length</strong></p>
-<pre><code>class MultiDimArrayDemo {
+<pre tabindex="0"><code>class MultiDimArrayDemo {
     public static void main(String[] args) {
         String[][] names = {
-            {&quot;Mr. &quot;, &quot;Mrs. &quot;, &quot;Ms. &quot;},
-            {&quot;Smith&quot;, &quot;Jones&quot;}
+            {&#34;Mr. &#34;, &#34;Mrs. &#34;, &#34;Ms. &#34;},
+            {&#34;Smith&#34;, &#34;Jones&#34;}
         };
         // Mr. Smith
         System.out.println(names[0][0] + names[1][0]);
@@ -1007,10 +1006,10 @@ static boolean equals(xxx[] a, xxx[] b)
 </code></pre><h4 id="ragged-arrays">Ragged Arrays</h4>
 <p>It is also easy to make “ragged” arrays—that is, arrays in <strong>which different</strong>
 <strong>rows have different lengths</strong>.</p>
-<pre><code>int[][] odds = new int[NMAX + 1][];
+<pre tabindex="0"><code>int[][] odds = new int[NMAX + 1][];
 for (int n = 0; n &lt;= NMAX; n++)
 	odds[n] = new int[n + 1];
-</code></pre><pre><code>for (int n = 0; n &lt; odds.length; n++)
+</code></pre><pre tabindex="0"><code>for (int n = 0; n &lt; odds.length; n++)
     for (int k = 0; k &lt; odds[n].length; k++)
     {
         // compute lotteryOdds
@@ -1020,29 +1019,29 @@ for (int n = 0; n &lt;= NMAX; n++)
 </code></pre><h2 id="numbers-and-strings">Numbers and Strings</h2>
 <h3 id="numbers">Numbers</h3>
 <p>When working with numbers, most of the time you use the primitive types in your code.  There are, however, reasons to use objects in place of primitives, and <strong>the Java platform provides <em>wrapper</em> classes for each of the primitive data types</strong>. <strong>These classes &ldquo;wrap&rdquo; the primitive in an object.</strong> <strong>The Java compiler automatically wraps (boxes) primitives for you when necessary and unboxes them, again when necessary.</strong></p>
-<pre><code>int ==&gt; Integer
+<pre tabindex="0"><code>int ==&gt; Integer
 float ==&gt; Float
 double ==&gt; Double
 byte ==&gt;  Byte
 </code></pre><p>The following table lists the <strong>instance methods</strong> that all the subclasses of the <code>Number</code> class implement.</p>
-<pre><code>// Converts the value of this Number object to the primitive data type returned.
+<pre tabindex="0"><code>// Converts the value of this Number object to the primitive data type returned.
 byte byteValue()
 short shortValue()
 int intValue()
 long longValue()
 float floatValue()
 double doubleValue()
-</code></pre><pre><code>// Compares this Number object to the argument.
+</code></pre><pre tabindex="0"><code>// Compares this Number object to the argument.
 int compareTo(Byte anotherByte)
 int compareTo(Double anotherDouble)
 int compareTo(Float anotherFloat)
 int compareTo(Integer anotherInteger)
 int compareTo(Long anotherLong)
 int compareTo(Short anotherShort)
-</code></pre><pre><code>// Determines whether this number object is equal to the argument. 
+</code></pre><pre tabindex="0"><code>// Determines whether this number object is equal to the argument. 
 boolean equals(Object obj)
 </code></pre><p><code>Integer</code> <strong>class methods</strong> for  converting numbers to and from strings and for converting between number systems.</p>
-<pre><code>// Decodes a string into an integer. 
+<pre tabindex="0"><code>// Decodes a string into an integer. 
 static Integer Integer.decode(String s)
 
 // Returns an integer (decimal only).
@@ -1067,10 +1066,10 @@ static Integer Integer.valueOf(String s)
 static Integer Integer.valueOf(String s, int radix)
 </code></pre><h4 id="formatting-numeric-print-output">Formatting Numeric Print Output</h4>
 <p>You can use <code>format</code> or <code>printf</code> anywhere in your code where you have previously been using <code>print</code> or <code>println</code>.</p>
-<pre><code>int i = 461012;
-System.out.format(&quot;The value of i is: %d%n&quot;, i);
-System.out.printf(&quot;The value of i is: %d%n&quot;, i);
-System.out.println(&quot;&quot;);
+<pre tabindex="0"><code>int i = 461012;
+System.out.format(&#34;The value of i is: %d%n&#34;, i);
+System.out.printf(&#34;The value of i is: %d%n&#34;, i);
+System.out.println(&#34;&#34;);
 </code></pre><table>
 <thead>
 <tr>
@@ -1094,7 +1093,7 @@ System.out.println(&quot;&quot;);
 </tbody>
 </table>
 <h4 id="beyond-basic-arithmetic">Beyond Basic Arithmetic</h4>
-<pre><code>import static java.lang.Math.*;
+<pre tabindex="0"><code>import static java.lang.Math.*;
 
 double a = -191.635;
 double b = 43.74;
@@ -1102,15 +1101,15 @@ int c = 16, d = 45;
 
 double abs_a = Math.abs(a)
 double ceil_b = Math.ceil(b)
-</code></pre><pre><code>int number = (int)(Math.random() * 10);    // 0.0 &lt;= Math.random() &lt; 1.0
+</code></pre><pre tabindex="0"><code>int number = (int)(Math.random() * 10);    // 0.0 &lt;= Math.random() &lt; 1.0
 </code></pre><h3 id="characters">Characters</h3>
-<pre><code>char ch = 'a'; 
+<pre tabindex="0"><code>char ch = &#39;a&#39;; 
 // Unicode for uppercase Greek omega character
-char uniChar = '\u03A9';
+char uniChar = &#39;\u03A9&#39;;
 // an array of chars
-char[] charArray = { 'a', 'b', 'c', 'd', 'e' };
+char[] charArray = { &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39; };
 </code></pre><p>useful <strong>class methods</strong> in the <code>Character</code> class</p>
-<pre><code>boolean isLetter(char ch)
+<pre tabindex="0"><code>boolean isLetter(char ch)
 boolean isDigit(char ch)
 boolean isWhitespace(char ch)	
 boolean isUpperCase(char ch)
@@ -1119,37 +1118,37 @@ char toUpperCase(char ch)
 char toLowerCase(char ch)	
 toString(char ch)	
 </code></pre><p>Escape Sequences</p>
-<pre><code>\t	Insert a tab 
+<pre tabindex="0"><code>\t	Insert a tab 
 \b	Insert a backspace 
 \n	Insert a newline 
 \r	Insert a carriage return 
 \f	Insert a formfeed 
-\'	Insert a single quote character
-\&quot;	Insert a double quote character 
+\&#39;	Insert a single quote character
+\&#34;	Insert a double quote character 
 \\	Insert a backslash character 
 </code></pre><h3 id="strings-1">Strings</h3>
 <p>In the Java programming language, strings are objects. <strong>The <code>String</code> class is immutable</strong>.</p>
-<pre><code>String greeting = &quot;Hello world!&quot;;
-char[] helloArray = { 'h', 'e', 'l', 'l', 'o', '.' };
+<pre tabindex="0"><code>String greeting = &#34;Hello world!&#34;;
+char[] helloArray = { &#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39;.&#39; };
 String helloString = new String(helloArray);
 </code></pre><p>useful instance methods</p>
-<pre><code>length()          // returns the number of characters contained in the string object
+<pre tabindex="0"><code>length()          // returns the number of characters contained in the string object
 charAt(i)         // returns the ith character in the string, counting from 0
 getChars(pos, len, destChatArray, startPos) // convert a string into an array of characters
 concat(string2)    // concatenating two strings
 String.format()        // returns a String object rather than a PrintStream object.
 </code></pre><p>The <code>+</code> operator is widely used in <code>print</code> statements.</p>
-<pre><code>String fs;
-fs = String.format(&quot;The value of the float &quot; +
-                   &quot;variable is %f, while &quot; +
-                   &quot;the value of the &quot; + 
-                   &quot;integer variable is %d, &quot; +
-                   &quot; and the string is %s&quot;,
+<pre tabindex="0"><code>String fs;
+fs = String.format(&#34;The value of the float &#34; +
+                   &#34;variable is %f, while &#34; +
+                   &#34;the value of the &#34; + 
+                   &#34;integer variable is %d, &#34; +
+                   &#34; and the string is %s&#34;,
                    floatVar, intVar, stringVar);
 System.out.println(fs);
 </code></pre><h4 id="converting-between-numbers-and-strings">Converting Between Numbers and Strings</h4>
 <p>The Number subclasses that wrap primitive numeric types ( Byte, Integer, Double, Float, Long, and Short) each provide a class method named <strong><code>valueOf</code></strong> that converts a string to an object of that type.</p>
-<pre><code>public class ValueOfDemo {
+<pre tabindex="0"><code>public class ValueOfDemo {
     public static void main(String[] args) {
         // this program requires two arguments on the command line 
         if (args.length == 2) {
@@ -1157,26 +1156,26 @@ System.out.println(fs);
             float a = (Float.valueOf(args[0])).floatValue(); 
             float b = (Float.valueOf(args[1])).floatValue();
         } else {
-            System.out.println(&quot;This program &quot; +
-                &quot;requires two command-line arguments.&quot;);
+            System.out.println(&#34;This program &#34; +
+                &#34;requires two command-line arguments.&#34;);
         }
     }
 }
 </code></pre><p>Each of the <code>Number</code> subclasses that wrap primitive numeric types also provides a <code>parseXXXX()</code> method (for example, <code>parseFloat()</code>) that can be used to convert strings to primitive numbers. Since a primitive type is returned instead of an object, the <code>parseFloat()</code> method is more direct than the <code>valueOf()</code> method.</p>
-<pre><code>float a = Float.parseFloat(args[0]);
+<pre tabindex="0"><code>float a = Float.parseFloat(args[0]);
 float b = Float.parseFloat(args[1]);
 </code></pre><h4 id="converting-numbers-to-strings">Converting Numbers to Strings</h4>
-<pre><code>int i;
-// Concatenate &quot;i&quot; with an empty string; conversion is handled for you.
-String s1 = &quot;&quot; + i;
-</code></pre><pre><code>// The valueOf class method.
+<pre tabindex="0"><code>int i;
+// Concatenate &#34;i&#34; with an empty string; conversion is handled for you.
+String s1 = &#34;&#34; + i;
+</code></pre><pre tabindex="0"><code>// The valueOf class method.
 String s2 = String.valueOf(i);
-</code></pre><pre><code>int i;
+</code></pre><pre tabindex="0"><code>int i;
 double d;
 String s3 = Integer.toString(i); 
 String s4 = Double.toString(d); 
 </code></pre><h4 id="manipulating-characters-in-a-string">Manipulating Characters in a String</h4>
-<pre><code>public class Filename {
+<pre tabindex="0"><code>public class Filename {
     private String fullPath;
     private char pathSeparator, 
                  extensionSeparator;
@@ -1217,7 +1216,7 @@ String s4 = Double.toString(d);
 
     public String directoryName() {
         String path = this.path();
-        String[] tokens = path.split(&quot;/&quot;);                      // split
+        String[] tokens = path.split(&#34;/&#34;);                      // split
         return tokens[tokens.length - 1];
     }
 
@@ -1230,22 +1229,22 @@ String s4 = Double.toString(d);
         return fullPath.replace(target, replacement);           // replace
     }
 }
-</code></pre><pre><code>public class FilenameDemo {
+</code></pre><pre tabindex="0"><code>public class FilenameDemo {
     public static void main(String[] args) {
-        final String FPATH = &quot;/home/user/index.html&quot;;
-        Filename myHomePage = new Filename(FPATH, '/', '.');
-        System.out.println(&quot;Extension = &quot; + myHomePage.extension());
-        System.out.println(&quot;Filename = &quot; + myHomePage.filename());
-        System.out.println(&quot;Path = &quot; + myHomePage.path());
-        System.out.println(&quot;Filename first letter = &quot; + myHomePage.charAt(0));
-        System.out.println(&quot;Filename uppercase = &quot; + myHomePage.toUpperCase());
-        System.out.println(&quot;Directory name = &quot; + myHomePage.directoryName());
-        System.out.println(&quot;Full path contains user = &quot; + myHomePage.contains(&quot;user&quot;));
-        System.out.println(&quot;Test change extension = &quot; + myHomePage.replace(&quot;html&quot;, &quot;text&quot;));
+        final String FPATH = &#34;/home/user/index.html&#34;;
+        Filename myHomePage = new Filename(FPATH, &#39;/&#39;, &#39;.&#39;);
+        System.out.println(&#34;Extension = &#34; + myHomePage.extension());
+        System.out.println(&#34;Filename = &#34; + myHomePage.filename());
+        System.out.println(&#34;Path = &#34; + myHomePage.path());
+        System.out.println(&#34;Filename first letter = &#34; + myHomePage.charAt(0));
+        System.out.println(&#34;Filename uppercase = &#34; + myHomePage.toUpperCase());
+        System.out.println(&#34;Directory name = &#34; + myHomePage.directoryName());
+        System.out.println(&#34;Full path contains user = &#34; + myHomePage.contains(&#34;user&#34;));
+        System.out.println(&#34;Test change extension = &#34; + myHomePage.replace(&#34;html&#34;, &#34;text&#34;));
     }
 }
 </code></pre><h4 id="comparing-strings-and-portions-of-strings">Comparing Strings and Portions of Strings</h4>
-<pre><code>boolean endsWith(String suffix)
+<pre tabindex="0"><code>boolean endsWith(String suffix)
 boolean startsWith(String prefix)
 boolean startsWith(String prefix, int offset)        
 int compareTo(String anotherString)                   
@@ -1255,10 +1254,10 @@ boolean equalsIgnoreCase(String anotherString)
 boolean regionMatches(int toffset, String other, int ooffset, int len)
 boolean regionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len)
 boolean matches(String regex)        
-</code></pre><pre><code>public class RegionMatchesDemo {
+</code></pre><pre tabindex="0"><code>public class RegionMatchesDemo {
     public static void main(String[] args) {
-        String searchMe = &quot;Green Eggs and Ham&quot;;
-        String findMe = &quot;Eggs&quot;;
+        String searchMe = &#34;Green Eggs and Ham&#34;;
+        String findMe = &#34;Eggs&#34;;
         int searchMeLength = searchMe.length();
         int findMeLength = findMe.length();
         boolean foundIt = false;
@@ -1272,23 +1271,23 @@ boolean matches(String regex)
            }
         }
         if (!foundIt)
-            System.out.println(&quot;No match found.&quot;);
+            System.out.println(&#34;No match found.&#34;);
     }
 }
 </code></pre><h4 id="the-stringbuilder-class">The StringBuilder Class</h4>
-<pre><code>StringBuilder append(String s)
+<pre tabindex="0"><code>StringBuilder append(String s)
 StringBuilder insert(int offset, String s)
 StringBuilder replace(int start, int end, String s)
 void setCharAt(int index, char c)
 StringBuilder reverse()
 String toString()
-</code></pre><pre><code>// creates empty builder, capacity 16
+</code></pre><pre tabindex="0"><code>// creates empty builder, capacity 16
 StringBuilder sb = new StringBuilder();
 // adds 9 character string at beginning
-sb.append(&quot;Greetings&quot;);
-</code></pre><pre><code>public class StringBuilderDemo {
+sb.append(&#34;Greetings&#34;);
+</code></pre><pre tabindex="0"><code>public class StringBuilderDemo {
     public static void main(String[] args) {
-        String palindrome = &quot;Dot saw I was Tod&quot;;
+        String palindrome = &#34;Dot saw I was Tod&#34;;
         StringBuilder sb = new StringBuilder(palindrome);
         sb.reverse();                                       // reverse it
         System.out.println(sb);
@@ -1312,12 +1311,12 @@ sb.append(&quot;Greetings&quot;);
 <h3 id="classes">Classes</h3>
 <h4 id="declaring-classes">Declaring Classes</h4>
 <p><strong>modifiers</strong>, <strong>constructor</strong>, <strong>fields</strong>, <strong>methods</strong></p>
-<pre><code>modifiers class MyClass extends MySuperClass implements YourInterface {
+<pre tabindex="0"><code>modifiers class MyClass extends MySuperClass implements YourInterface {
     // field, constructor, and
     // method declarations
 }
 </code></pre><p>naming rules: the first letter of a class name should be capitalized, and the first (or only) word in a method name should be a verb.</p>
-<pre><code>public class Bicycle {
+<pre tabindex="0"><code>public class Bicycle {
         
     // the Bicycle class has three fields
     private int cadence;
@@ -1368,20 +1367,20 @@ sb.append(&quot;Greetings&quot;);
 <p>constructor <strong>use the name of the class</strong> and <strong>have no return type</strong>.</p>
 <p>You don&rsquo;t have to provide any constructors for your class, the compiler automatically provides a no-argument, default constructor for any class without constructors. This default constructor will call the no-argument constructor of the superclass. In this situation,</p>
 <p>To create a new <code>Bicycle</code> object called <code>myBike</code>, a constructor is called by the <strong><code>new</code></strong> operator:</p>
-<pre><code>Bicycle myBike = new Bicycle(30, 0, 8);
+<pre tabindex="0"><code>Bicycle myBike = new Bicycle(30, 0, 8);
 </code></pre><p>All classes have at least one constructor. If a class does not explicitly declare any, the Java compiler automatically provides a no-argument constructor, called the <em>default constructor</em>. This default constructor calls the class parent&rsquo;s no-argument constructor, or the <code>Object</code> constructor if the class has no other parent. If the parent has no constructor (<code>Object</code> does have one), the compiler will reject the program.</p>
 <h5 id="using-objects">Using Objects</h5>
 <p>Code that is outside the object&rsquo;s class must use an object reference or expression, followed by the dot (.) operator, followed by a simple field name, as in:</p>
-<pre><code>objectReference.fieldName
+<pre tabindex="0"><code>objectReference.fieldName
 </code></pre><p>You also use an object reference to invoke an object&rsquo;s method. You append the method&rsquo;s simple name to the object reference, with an intervening dot operator (.).</p>
-<pre><code>objectReference.methodName(argumentList);
+<pre tabindex="0"><code>objectReference.methodName(argumentList);
 </code></pre><p><strong>The Garbage Collector</strong></p>
 <p>Some object-oriented languages require that you keep track of all the objects you create and that you explicitly <strong>destroy</strong> them when they are no longer needed. Managing memory explicitly is tedious and error-prone. The Java platform allows you to create as many objects as you want (limited, of course, by what your system can handle), and you don&rsquo;t have to worry about destroying them. The Java runtime environment deletes objects when it determines that they are no longer being used. This process is called <em>garbage collection</em>.</p>
 <p>An object is eligible for garbage collection <strong>when there are no more references to that object</strong>. References that are held in a variable are usually dropped <strong>when the variable goes out of scope</strong>. Or, you can <strong>explicitly drop an object reference by setting the variable to the special value <code>null</code>.</strong> Remember that a program can have multiple references to the same object; <strong>all references to an object must be dropped before</strong> the object is eligible for garbage collection.</p>
 <p>The Java runtime environment has a garbage collector that periodically frees the memory used by objects that are no longer referenced. The garbage collector does its job automatically when it determines that the time is right.</p>
 <h5 id="declaring-classes-1">Declaring Classes</h5>
 <p><strong>subclass</strong>:  <strong><code>extends</code></strong>, <strong><code>super</code></strong></p>
-<pre><code>public class MountainBike extends Bicycle {
+<pre tabindex="0"><code>public class MountainBike extends Bicycle {
         
     // the MountainBike subclass has one field
     public int seatHeight;
@@ -1402,7 +1401,7 @@ sb.append(&quot;Greetings&quot;);
 </code></pre><h5 id="passing-information-to-a-method-or-a-constructor">Passing Information to a Method or a Constructor</h5>
 <p><strong>Arbitrary Number of Arguments</strong></p>
 <p>To use varargs, you follow the type of the last parameter by an ellipsis (<strong>three dots</strong>, &hellip;), then a space, and the parameter name.</p>
-<pre><code>public Polygon polygonFrom(Point... corners) {
+<pre tabindex="0"><code>public Polygon polygonFrom(Point... corners) {
     int numberOfSides = corners.length;
     double squareOfSide1, lengthOfSide1;
     squareOfSide1 = (corners[1].x - corners[0].x)
@@ -1418,7 +1417,7 @@ sb.append(&quot;Greetings&quot;);
 <p>This means that any changes to the values of the parameters exist only within the scope of the method. When the method returns, the parameters are gone and any changes to them are lost.</p>
 <p><strong>Passing Reference Data Type Arguments</strong></p>
 <p><strong>Reference data type parameters</strong>, such as objects, are also passed into methods <em><strong>by value</strong></em>. This means that when the method returns, <strong>the passed-in reference still references the same object as before</strong>. <em>However</em>, the values of the object&rsquo;s fields <em>can</em> be changed in the method, if they have the proper access level.</p>
-<pre><code>public void moveCircle(Circle circle, int deltaX, int deltaY) {
+<pre tabindex="0"><code>public void moveCircle(Circle circle, int deltaX, int deltaY) {
     // code to move origin of circle to x+deltaX, y+deltaY
     circle.setX(circle.getX() + deltaX);
     circle.setY(circle.getY() + deltaY);
@@ -1426,11 +1425,11 @@ sb.append(&quot;Greetings&quot;);
     // code to assign a new reference to circle
     circle = new Circle(0, 0);
 }
-</code></pre><pre><code>moveCircle(myCircle, 23, 56)
+</code></pre><pre tabindex="0"><code>moveCircle(myCircle, 23, 56)
 </code></pre><p>Inside the method, <code>circle</code> initially refers to <code>myCircle</code>. The method changes the x and y coordinates of the object that <code>circle</code> references (i.e., <code>myCircle</code>) by 23 and 56, respectively. These changes will persist when the method returns. Then <code>circle</code> is assigned a reference to a new <code>Circle</code> object with <code>x = y = 0</code>. <strong>This reassignment has no permanence, however, because the reference was passed in by value and cannot change</strong>. Within the method, the object pointed to by <code>circle</code> has changed, but, when the method returns, <code>myCircle</code> <strong>still references the same <code>Circle</code> object as before the method was called.</strong></p>
 <h3 id="object">Object</h3>
 <h4 id="creating-objects">Creating Objects</h4>
-<pre><code>Point originOne = new Point(23, 94);
+<pre tabindex="0"><code>Point originOne = new Point(23, 94);
 </code></pre><ol>
 <li><strong>Declaration</strong>: The code set in <strong>bold</strong> are all variable declarations that associate a variable name with an object type.</li>
 <li><strong>Instantiation</strong>: The <code>new</code> keyword is a Java operator that creates the object.</li>
@@ -1445,7 +1444,7 @@ sb.append(&quot;Greetings&quot;);
 <p>Within an <strong>instance method or a constructor</strong>, <strong><code>this</code> is a reference to the <em>current object</em></strong> — the object whose method or constructor is being called. You can refer to any member of the current object from within an instance method or a constructor by using <code>this</code>.</p>
 <p><strong>Using this with a Constructor</strong></p>
 <p>From within a constructor, you can also use the <code>this</code> keyword to call another constructor in the same class. Doing so is called an <em><strong>explicit constructor invocation</strong></em>.</p>
-<pre><code>public class Rectangle {
+<pre tabindex="0"><code>public class Rectangle {
     private int x, y;
     private int width, height;
         
@@ -1477,26 +1476,26 @@ sb.append(&quot;Greetings&quot;);
 <p><strong>Class Variables</strong></p>
 <p>Fields that have the <strong><code>static</code></strong> modifier in their declaration are called <em>static fields</em> or <em>class variables</em>. They are associated with the class, rather than with any object. Every instance of the class shares a class variable, which is in one fixed location in memory. Any object can change the value of a class variable, but class variables can also be manipulated without creating an instance of the class.</p>
 <p>Class variables are referenced by the class name itself, as in</p>
-<pre><code>Bicycle.numberOfBicycles
+<pre tabindex="0"><code>Bicycle.numberOfBicycles
 </code></pre><p>You can use the <code>Bicycle</code> constructor to set the <code>id</code> instance variable and increment the <code>numberOfBicycles</code> class variable:</p>
-<pre><code>public class Bicycle {
-          
+<pre tabindex="0"><code>public class Bicycle {
+
     private int cadence;
     private int gear;
     private int speed;
     private int id;
     // add a class variable for the number of Bicycle objects instantiated
     private static int numberOfBicycles = 0;
-          
+
     public Bicycle(int startCadence, int startSpeed, int startGear){
         gear = startGear;
         cadence = startCadence;
         speed = startSpeed;
-  
+
         // increment number of Bicycles and assign ID number
         id = ++numberOfBicycles;
     }
-  
+
     // new method to return the ID instance variable
     public int getID() {
         return id;
@@ -1506,16 +1505,16 @@ sb.append(&quot;Greetings&quot;);
 <li>
 <p><strong>Class Methods</strong></p>
 <p>The Java programming language supports static methods as well as static variables. Static methods, which have the <code>static</code> modifier in their declarations, should be invoked with the class name, without the need for creating an instance of the class, as in</p>
-<pre><code>ClassName.methodName(args)
+<pre tabindex="0"><code>ClassName.methodName(args)
 </code></pre><p><strong>A common use for static methods is to access static fields.</strong></p>
-<pre><code>public static int getNumberOfBicycles() {
+<pre tabindex="0"><code>public static int getNumberOfBicycles() {
     return numberOfBicycles;
 }
 </code></pre></li>
 <li>
 <p><strong>Constants</strong></p>
 <p>The <code>static</code> modifier, in combination with the <code>final</code> modifier, is also used to define constants. <strong>The <code>final</code> modifier indicates that the value of this field cannot change.</strong></p>
-<pre><code>static final double PI = 3.141592653589793;
+<pre tabindex="0"><code>static final double PI = 3.141592653589793;
 </code></pre><p>Constants defined in this way cannot be reassigned, and it is a compile-time error if your program tries to do so. By convention, the names of constant values are spelled in uppercase letters. If the name is composed of more than one word, the words are separated by an underscore (_).</p>
 </li>
 </ul>
@@ -1524,9 +1523,9 @@ sb.append(&quot;Greetings&quot;);
 <ul>
 <li>
 <p><strong>Static Initialization Blocks</strong></p>
-<pre><code>class Whatever {
+<pre tabindex="0"><code>class Whatever {
     public static varType myVar = initializeClassVariable();
-          
+
     private static varType initializeClassVariable() {
         // initialization code goes here
     }
@@ -1535,9 +1534,9 @@ sb.append(&quot;Greetings&quot;);
 <li>
 <p><strong>Initializing Instance Members</strong></p>
 <p>A <em>final method</em> cannot be overridden in a subclass.</p>
-<pre><code>class Whatever {
+<pre tabindex="0"><code>class Whatever {
     private varType myVar = initializeInstanceVariable();
-          
+
     protected final varType initializeInstanceVariable() {
         // initialization code goes here
     }
@@ -1550,7 +1549,7 @@ sb.append(&quot;Greetings&quot;);
 <p>The <a href="https://docs.oracle.com/javase/8/docs/api/index.html">Java Platform API Specification</a> contains the complete listing for all packages, interfaces, classes, fields, and methods supplied by the Java SE platform. Load the page in your browser and bookmark it. As a programmer, it will become your single most important piece of reference documentation.</p>
 <h4 id="creating-and-using-packages">Creating and Using Packages</h4>
 <h5 id="creating-a-package">Creating a Package</h5>
-<pre><code>package packageName;
+<pre tabindex="0"><code>package packageName;
 </code></pre><p>must be the first line in the source file.</p>
 <p>If you put multiple types in a single source file, only one can be <code>public</code>, and it <strong>must have the same name as the source file</strong>. For example, you can define <code>public class Circle</code> in the file <code>Circle.java</code>, define <code>public interface Draggable</code> in the file <code>Draggable.java</code>, define <code>public enum Day</code> in the file <code>Day.java</code>, and so forth.</p>
 <h5 id="naming-a-package">Naming a Package</h5>
@@ -1562,23 +1561,23 @@ sb.append(&quot;Greetings&quot;);
 <li>
 <p>Referring to a Package Member by Its Qualified Name</p>
 <p><strong>use fully qualified name when name ambiguities</strong></p>
-<pre><code>packagename.TypeName
+<pre tabindex="0"><code>packagename.TypeName
 </code></pre></li>
 <li>
 <p>Importing a Package Member</p>
-<pre><code>import packagename.TypeName;
+<pre tabindex="0"><code>import packagename.TypeName;
 </code></pre></li>
 <li>
 <p>Importing an Entire Package</p>
-<pre><code>import packagename.*;
+<pre tabindex="0"><code>import packagename.*;
 </code></pre></li>
 </ul>
 <p>At first, **packages appear to be hierarchical, but they are not. **The prefix is used for a number of related packages to make the relationship evident, but not to show inclusion.</p>
 <p>you must import both packages with all their files:</p>
-<pre><code>import java.awt.*;
+<pre tabindex="0"><code>import java.awt.*;
 import java.awt.color.*;
 </code></pre><p>The Static Import Statement allow you access to static final fields (constants) and static methods from one or two classes.</p>
-<pre><code>import static java.lang.Math.PI;
+<pre tabindex="0"><code>import static java.lang.Math.PI;
 import static mypackage.MyConstants.*;
 </code></pre><h5 id="managing-source-and-class-files">Managing Source and Class Files</h5>
 <h3 id="documentation-comments">Documentation Comments</h3>
@@ -1630,7 +1629,7 @@ import static mypackage.MyConstants.*;
 <li>You can write a new <em>static</em> method in the subclass that has the same signature as the one in the superclass, thus <em><strong>hiding</strong></em> it.</li>
 <li>You can write a subclass constructor that invokes the constructor of the superclass, either implicitly or by using the keyword <strong><code>super</code></strong>.</li>
 </ul>
-<pre><code>public class Bicycle {
+<pre tabindex="0"><code>public class Bicycle {
         
     // the Bicycle class has one constructor
     public Bicycle(int startCadence, int startSpeed, int startGear) {
@@ -1639,7 +1638,7 @@ import static mypackage.MyConstants.*;
         speed = startSpeed;
     }  
 }
-</code></pre><pre><code>class MountainBike extends Bicycle {
+</code></pre><pre tabindex="0"><code>class MountainBike extends Bicycle {
 
     // the MountainBike subclass adds one field
     privite int seatHeight;
@@ -1657,14 +1656,14 @@ import static mypackage.MyConstants.*;
 }
 </code></pre><h3 id="casting-objects">Casting Objects</h3>
 <p><em>Casting</em> shows the use of an object of one type in place of another type, among the objects permitted by inheritance and implementations. For example, if we write</p>
-<pre><code>Object obj = new MountainBike();
+<pre tabindex="0"><code>Object obj = new MountainBike();
 </code></pre><p>then <code>obj</code> is both an <code>Object</code> and a <code>MountainBike</code> (until such time as <code>obj</code> is assigned another object that is <em>not</em> a <code>MountainBike</code>). This is called <em><strong>implicit casting</strong></em>.</p>
-<pre><code>MountainBike myBike = obj;
+<pre tabindex="0"><code>MountainBike myBike = obj;
 </code></pre><p>we would get a compile-time error because <code>obj</code> is not known to the compiler to be a <code>MountainBike</code>. However, we can <em>tell</em> the compiler that we promise to assign a <code>MountainBike</code> to <code>obj</code> by <em><strong>explicit casting:</strong></em></p>
-<pre><code>MountainBike myBike = (MountainBike)obj;
+<pre tabindex="0"><code>MountainBike myBike = (MountainBike)obj;
 </code></pre><p>This cast inserts a runtime check that <code>obj</code> is assigned a <code>MountainBike</code> so that the compiler can safely assume that <code>obj</code> is a <code>MountainBike</code>.</p>
 <p>You can make a logical test as to the type of a particular object using the <strong><code>instanceof</code></strong> operator. This can save you from a runtime error owing to an improper cast.</p>
-<pre><code>if (obj instanceof MountainBike) {
+<pre tabindex="0"><code>if (obj instanceof MountainBike) {
     MountainBike myBike = (MountainBike)obj;
 }
 </code></pre><p>Here the <code>instanceof</code> operator verifies that <code>obj</code> refers to a <code>MountainBike</code> so that we can make the cast with knowledge that there will be no runtime exception thrown.</p>
@@ -1706,22 +1705,22 @@ import static mypackage.MyConstants.*;
 </li>
 <li>
 <p><strong>The version of the hidden static method that gets invoked depends on whether it is invoked from the superclass or the subclass.</strong></p>
-<pre><code>public class Animal {
+<pre tabindex="0"><code>public class Animal {
     public static void testClassMethod() {
-        System.out.println(&quot;The static method in Animal&quot;);
+        System.out.println(&#34;The static method in Animal&#34;);
     }
     public void testInstanceMethod() {
-        System.out.println(&quot;The instance method in Animal&quot;);
+        System.out.println(&#34;The instance method in Animal&#34;);
     }
 }
 public class Cat extends Animal {
     public static void testClassMethod() {
-        System.out.println(&quot;The static method in Cat&quot;);
+        System.out.println(&#34;The static method in Cat&#34;);
     }
     public void testInstanceMethod() {
-        System.out.println(&quot;The instance method in Cat&quot;);
+        System.out.println(&#34;The instance method in Cat&#34;);
     }
-    
+
     public static void main(String[] args) {
         Cat myCat = new Cat();
         Animal myAnimal = myCat;
@@ -1740,12 +1739,12 @@ public class Cat extends Animal {
 </ul>
 <p>In a subclass, you can overload the methods inherited from the superclass. Such <strong>overloaded</strong> methods neither hide nor override the superclass instance methods—they are new methods, unique to the subclass.</p>
 <h3 id="polymorphism">Polymorphism</h3>
-<pre><code>public class TestBikes {
+<pre tabindex="0"><code>public class TestBikes {
   public static void main(String[] args){
     Bicycle bike01, bike02, bike03;
 
     bike01 = new Bicycle(20, 10, 1);
-    bike02 = new MountainBike(20, 10, 5, &quot;Dual&quot;);
+    bike02 = new MountainBike(20, 10, 5, &#34;Dual&#34;);
     bike03 = new RoadBike(40, 20, 8, 23);
 
     bike01.printDescription();
@@ -1754,23 +1753,23 @@ public class Cat extends Animal {
   }
 }
 </code></pre><h3 id="using-the-keyword-super">Using the Keyword super</h3>
-<pre><code>public class Superclass {
+<pre tabindex="0"><code>public class Superclass {
     public void printMethod() {
-        System.out.println(&quot;Printed in Superclass.&quot;);
+        System.out.println(&#34;Printed in Superclass.&#34;);
     }
 }
 public class Subclass extends Superclass {
     // overrides printMethod in Superclass
     public void printMethod() {
         super.printMethod();
-        System.out.println(&quot;Printed in Subclass&quot;);
+        System.out.println(&#34;Printed in Subclass&#34;);
     }
     public static void main(String[] args) {
         Subclass s = new Subclass();
         s.printMethod();    
     }
 }
-</code></pre><pre><code>public MountainBike(int startHeight, 
+</code></pre><pre tabindex="0"><code>public MountainBike(int startHeight, 
                     int startCadence,
                     int startSpeed,
                     int startGear) {
@@ -1781,13 +1780,13 @@ public class Subclass extends Superclass {
 <h3 id="object-as-a-superclass">Object as a Superclass</h3>
 <ul>
 <li>
-<pre><code>protected Object clone() throws CloneNotSupportedException
+<pre tabindex="0"><code>protected Object clone() throws CloneNotSupportedException
 </code></pre><p>The simplest way to make your class cloneable is to add <strong><code>implements Cloneable</code></strong> to your class&rsquo;s declaration. then your objects can invoke the <code>clone()</code> method.</p>
 <p>An object contains a reference to an external object, say <code>ObjExternal</code>, you may need to override <code>clone()</code> to get correct behavior.</p>
 </li>
 <li>
-<pre><code>public boolean equals(Object obj)
-</code></pre><pre><code>public class Book {
+<pre tabindex="0"><code>public boolean equals(Object obj)
+</code></pre><pre tabindex="0"><code>public class Book {
     ...
     public boolean equals(Object obj) {
         if (obj instanceof Book)
@@ -1799,31 +1798,31 @@ public class Subclass extends Superclass {
 </code></pre><p>If you override <code>equals()</code>, you must override <code>hashCode()</code> as well.</p>
 </li>
 <li>
-<pre><code>protected void finalize() throws Throwable
+<pre tabindex="0"><code>protected void finalize() throws Throwable
 </code></pre><p>you can override <code>finalize()</code> to do cleanup, such as freeing resources.</p>
 </li>
 <li>
-<pre><code>public final Class getClass()
+<pre tabindex="0"><code>public final Class getClass()
 </code></pre><p>You cannot override <code>getClass</code>.</p>
-<pre><code>void printClassName(Object obj) {
-    System.out.println(&quot;The object's&quot; + &quot; class is &quot; +
+<pre tabindex="0"><code>void printClassName(Object obj) {
+    System.out.println(&#34;The object&#39;s&#34; + &#34; class is &#34; +
         obj.getClass().getSimpleName());
 }
 </code></pre></li>
 <li>
-<pre><code>public int hashCode()
+<pre tabindex="0"><code>public int hashCode()
 </code></pre><p>The value returned by <code>hashCode()</code> is the object&rsquo;s hash code, which is the object&rsquo;s memory address in hexadecimal.</p>
 <p>By definition, if two objects are equal, their hash code <em>must also</em> be equal. If you override the <code>equals()</code> method, you change the way two objects are equated and <code>Object</code>&rsquo;s implementation of <code>hashCode()</code> is no longer valid. <strong>Therefore, if you override the <code>equals()</code> method, you must also override the <code>hashCode()</code> method as well.</strong></p>
 </li>
 <li>
-<pre><code>public String toString()
+<pre tabindex="0"><code>public String toString()
 </code></pre><p><strong>You should always consider overriding the <code>toString()</code> method in your classes.</strong> The <code>Object</code>&rsquo;s <code>toString()</code> method returns a <code>String</code> representation of the object, <strong>which is very useful for debugging</strong>.</p>
-<pre><code>System.out.println(firstBook.toString());
+<pre tabindex="0"><code>System.out.println(firstBook.toString());
 </code></pre></li>
 </ul>
 <p>Writing Final Classes and Methods</p>
 <p>You can declare some or all of a class&rsquo;s methods <em>final</em>. You use the <strong><code>final</code></strong> keyword in a method declaration to indicate that the method cannot be overridden by subclasses.</p>
-<pre><code>class ChessAlgorithm {
+<pre tabindex="0"><code>class ChessAlgorithm {
     enum ChessPlayer { WHITE, BLACK }
     ...
     final ChessPlayer getFirstPlayer() {
@@ -1835,7 +1834,7 @@ public class Subclass extends Superclass {
 <p>**Methods called from constructors should generally be declared final. **Note that you can also declare an entire class final. A class that is declared final cannot be subclassed.</p>
 <h3 id="abstract-methods-and-classes">Abstract Methods and Classes</h3>
 <p>An <em>abstract class</em> is a class that is declared <strong><code>abstract</code></strong>—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.</p>
-<pre><code>public abstract class GraphicObject {
+<pre tabindex="0"><code>public abstract class GraphicObject {
    // declare fields
    // declare nonabstract methods
    abstract void draw();
@@ -1870,29 +1869,29 @@ can use it to</p>
 <li>Take advantage of Method objects that work just like function pointers in languages such as C++</li>
 </ul>
 <h4 id="the-class-class">The Class Class</h4>
-<pre><code>Employee e;
+<pre tabindex="0"><code>Employee e;
 . . .
 Class cl = e.getClass();
-</code></pre><pre><code>System.out.println(e.getClass().getName() + &quot; &quot; + e.getName());
+</code></pre><pre tabindex="0"><code>System.out.println(e.getClass().getName() + &#34; &#34; + e.getName());
 </code></pre><p>If the class is in a package, the package name is part of the class name:</p>
-<pre><code>var generator = new Random();
+<pre tabindex="0"><code>var generator = new Random();
 Class cl = generator.getClass();
-String name = cl.getName(); // name is set to &quot;java.util.Random&quot;
+String name = cl.getName(); // name is set to &#34;java.util.Random&#34;
 </code></pre><p>You can obtain a Class object corresponding to a class name by using the static <strong><code>forName</code></strong> method.</p>
-<pre><code>try {
-    String className = &quot;java.util.Random&quot;;
+<pre tabindex="0"><code>try {
+    String className = &#34;java.util.Random&#34;;
     Class cl = Class.forName(className);
 } catch(ClassNotFoundException e) {
    e.printStackTrace();
 }
 </code></pre><p>A third method for obtaining an object of type Class is a convenient shorthand. If T is any Java type (or the void keyword), then <strong><code>T.class</code></strong> is the matching class object.</p>
-<pre><code>Class cl1 = Random.class; // if you import java.util.*;
+<pre tabindex="0"><code>Class cl1 = Random.class; // if you import java.util.*;
 Class cl2 = int.class;
 Class cl3 = Double[].class;
 </code></pre><p>use the <strong><code>==</code></strong> operator to compare class objects.</p>
-<pre><code>if (e.getClass() == Employee.class) . . .
+<pre tabindex="0"><code>if (e.getClass() == Employee.class) . . .
 </code></pre><p>use the <strong><code>newInstance</code></strong> method to construct an instance</p>
-<pre><code>var className = &quot;java.util.Random&quot;; // or any other name of a class with a no-arg constructor
+<pre tabindex="0"><code>var className = &#34;java.util.Random&#34;; // or any other name of a class with a no-arg constructor
 Class cl = Class.forName(className);
 Object obj = cl.getConstructor().newInstance();
 </code></pre><h4 id="resources">Resources</h4>
@@ -1903,7 +1902,7 @@ Object obj = cl.getConstructor().newInstance();
 </ul>
 <p>In Java, such an associated file is called a resource.</p>
 <p>The Class class provides a useful service for locating resource files.</p>
-<pre><code>import java.net.*;
+<pre tabindex="0"><code>import java.net.*;
 import java.nio.charset.*;
 import javax.swing.*;
 
@@ -1912,18 +1911,18 @@ public class ResourceTest
     public static void main(String[] args) throws IOException
     {
         Class cl = ResourceTest.class;
-        URL aboutURL = cl.getResource(&quot;about.gif&quot;);
+        URL aboutURL = cl.getResource(&#34;about.gif&#34;);
         var icon = new ImageIcon(aboutURL);
-        InputStream stream = cl.getResourceAsStream(&quot;data/about.txt&quot;);
-        var about = new String(stream.readAllBytes(), &quot;UTF-8&quot;);
-        InputStream stream2 = cl.getResourceAsStream(&quot;/corejava/title.txt&quot;);
+        InputStream stream = cl.getResourceAsStream(&#34;data/about.txt&#34;);
+        var about = new String(stream.readAllBytes(), &#34;UTF-8&#34;);
+        InputStream stream2 = cl.getResourceAsStream(&#34;/corejava/title.txt&#34;);
         var title = new String(stream2.readAllBytes(), StandardCharsets.UTF_8
         JOptionPane.showMessageDialog(null, about, title, JOptionPane.INFORMA
     }
 }
 </code></pre><h4 id="using-reflection-to-analyze-the-capabilities-of-classes">Using Reflection to Analyze the Capabilities of Classes</h4>
 <p>print out all information about a class.</p>
-<pre><code>import java.lang.reflect.*;
+<pre tabindex="0"><code>import java.lang.reflect.*;
 
 Class cl = Class.forName(name);
 Class supercl = cl.getSuperclass();
@@ -1932,7 +1931,7 @@ if (modifiers.length() &gt; 0)
 	System.out.print(modifiers);
 if (supercl != null &amp;&amp; supercl != Object.class) 
 	System.out + supercl.getName());
-</code></pre><pre><code>Constructor[] constructors = cl.getDeclaredConstructors();
+</code></pre><pre tabindex="0"><code>Constructor[] constructors = cl.getDeclaredConstructors();
 for (Constructor c : constructors) 
 {
 	String name = c.getName();
@@ -1940,40 +1939,40 @@ for (Constructor c : constructors)
 	Class[] paramTypes = c.getParameterTypes();
     for (int j = 0; j &lt; paramTypes.length; j++)
     {
-        if (j &gt; 0) System.out.print(&quot;, &quot;);
+        if (j &gt; 0) System.out.print(&#34;, &#34;);
         System.out.print(paramTypes[j].getName());
     }
 }
-</code></pre><pre><code>Method[] methods = cl.getDeclaredMethods();
+</code></pre><pre tabindex="0"><code>Method[] methods = cl.getDeclaredMethods();
 for (Method m : methods)
 {
     Class retType = m.getReturnType();
     String name = m.getName();
     String modifiers = Modifier.toString(m.getModifiers());
     if (modifiers.length() &gt; 0) 
-    	System.out.print(modifiers + &quot; &quot;);
-	System.out.print(retType.getName() + &quot; &quot; + name + &quot;(&quot;);
+    	System.out.print(modifiers + &#34; &#34;);
+	System.out.print(retType.getName() + &#34; &#34; + name + &#34;(&#34;);
 
     // print parameter types
     Class[] paramTypes = m.getParameterTypes();
     for (int j = 0; j &lt; paramTypes.length; j++)
     {
         if (j &gt; 0) 
-        	System.out.print(&quot;, &quot;);
+        	System.out.print(&#34;, &#34;);
         System.out.print(paramTypes[j].getName());
     }
-    System.out.println(&quot;);&quot;);
+    System.out.println(&#34;);&#34;);
 }
-</code></pre><pre><code>Field[] fields = cl.getDeclaredFields();
+</code></pre><pre tabindex="0"><code>Field[] fields = cl.getDeclaredFields();
 for (Field f : fields)
 {
     Class type = f.getType();
     String name = f.getName();
-    System.out.print(&quot;&quot;);
+    System.out.print(&#34;&#34;);
     String modifiers = Modifier.toString(f.getModifiers());
     if (modifiers.length() &gt; 0) 
-    	System.out.print(modifiers + &quot; &quot;);
-    System.out.println(type.getName() + &quot; &quot; + name + &quot;;&quot;);
+    	System.out.print(modifiers + &#34; &#34;);
+    System.out.println(type.getName() + &#34; &#34; + name + &#34;;&#34;);
 }
 </code></pre><h2 id="interfaces-lambda-expressions-and">Interfaces, Lambda Expressions, and</h2>
 <p>Inner Classes</p>
@@ -1982,7 +1981,7 @@ for (Field f : fields)
 <h4 id="defining-an-interface">Defining an Interface</h4>
 <p>The <code>public</code> access specifier indicates that the interface can be used by any class in any package. If you do not specify that the interface is public, then your interface is accessible only to classes defined in the same package as the interface.</p>
 <p>An interface can extend other interfaces, just as a class subclass or extend another class. However, whereas a class can extend only one other class, an interface can extend any number of interfaces. The interface declaration includes a comma-separated list of all the interfaces that it extends.</p>
-<pre><code>public interface Bicycle {
+<pre tabindex="0"><code>public interface Bicycle {
     // constant declarations
     
     // method signatures
@@ -1997,7 +1996,7 @@ for (Field f : fields)
 <p>In addition, an interface can contain constant declarations. All constant values defined in an interface are <strong>implicitly public, static, and final.</strong> Once again, you can omit these modifiers.</p>
 <h4 id="implementing-an-interface">Implementing an Interface</h4>
 <p>To use an interface, you write a class that <em><strong>implements</strong></em> the interface. When an instantiable class implements an interface, it provides a method body for each of the methods declared in the interface.</p>
-<pre><code>public class ACMEBicycle implements Bicycle {
+<pre tabindex="0"><code>public class ACMEBicycle implements Bicycle {
     int cadence = 0;
     int speed = 0;
     int gear = 1;
@@ -2018,9 +2017,9 @@ for (Field f : fields)
          speed = speed - decrement;
     }
     void printStates() {
-         System.out.println(&quot;cadence:&quot; +
-             cadence + &quot; speed:&quot; + 
-             speed + &quot; gear:&quot; + gear);
+         System.out.println(&#34;cadence:&#34; +
+             cadence + &#34; speed:&#34; + 
+             speed + &#34; gear:&#34; + gear);
     }
     void getPrice() {
          return this.price;
@@ -2040,7 +2039,7 @@ for (Field f : fields)
 </code></pre><p>Because <code>ACMEBicycle</code> implements <code>Bicycle</code>, the price of any two <code>ACMEBicycle</code> objects can be compared.</p>
 <p><code>(ACMEBicycle)other</code> casts <code>other</code> to a <code>ACMEBicycle</code> instance. <strong>Type casting tells the compiler what the object really is</strong>. Invoking <code>getPrice</code> directly on the <code>other</code> instance (<code>other.getPrice()</code>) would fail to compile because the compiler does not understand that <code>other</code> is actually an instance of <code>ACMEBicycle</code>.</p>
 <h4 id="using-an-interface-as-a-type">Using an Interface as a Type</h4>
-<pre><code>public Object findMoreExpensive(Object object1, Object object2) {
+<pre tabindex="0"><code>public Object findMoreExpensive(Object object1, Object object2) {
    Bicycle obj1 = (Bicycle)object1;
    Bicycle obj2 = (Bicycle)object2;
    if ((obj1).isMoreExpensive(obj2) &gt; 0)
@@ -2051,24 +2050,24 @@ for (Field f : fields)
 </code></pre><p>By casting <code>object1</code> to a <code>Bicycle</code> type, it can invoke the <code>isMoreExpensive</code> method.</p>
 <p>These methods work for any &ldquo;Bicycle&rdquo; objects, no matter what their class inheritance is. When they implement <code>Bicycle</code>, they can be of both their own class (or superclass) type and a <code>Bicycle</code> type. This gives them some of the advantages of multiple inheritance, where they can have behavior from both a superclass and an interface.</p>
 <h4 id="evolving-interfaces">Evolving Interfaces</h4>
-<pre><code>public interface DoIt {
+<pre tabindex="0"><code>public interface DoIt {
    void doSomething(int i, double x);
    int doSomethingElse(String s);
 }
 </code></pre><p>Suppose that, at a later time, you want to add a third method to <code>DoIt</code>, so that the interface now becomes:</p>
-<pre><code>public interface DoIt {
+<pre tabindex="0"><code>public interface DoIt {
    void doSomething(int i, double x);
    int doSomethingElse(String s);
    boolean didItWork(int i, double x, String s);
    
 }
 </code></pre><p>If you make this change, then all classes that implement the old <code>DoIt</code> interface will break because they no longer implement the old interface. Programmers relying on this interface will protest loudly.</p>
-<pre><code>public interface DoItPlus extends DoIt {
+<pre tabindex="0"><code>public interface DoItPlus extends DoIt {
    boolean didItWork(int i, double x, String s);
 }
 </code></pre><p>Now users of your code can choose to continue to use the old interface or to upgrade to the new interface.</p>
 <p>Alternatively, you can define your new methods as <strong>default methods</strong>.</p>
-<pre><code>public interface DoIt {
+<pre tabindex="0"><code>public interface DoIt {
    void doSomething(int i, double x);
    int doSomethingElse(String s);
    default boolean didItWork(int i, double x, String s) {
@@ -2087,14 +2086,14 @@ for (Field f : fields)
 </ul>
 <h4 id="static-methods">Static Methods</h4>
 <p>In addition to default methods, you can <strong>define static methods in interfaces</strong>. (A static method is a method that is associated with the class in which it is defined rather than with any object. Every instance of the class shares its static methods.) This makes it easier for you to organize helper methods in your libraries; you can <strong>keep static methods specific to an interface in the same interface rather than in a separate class</strong>.</p>
-<pre><code>public interface TimeClient {
+<pre tabindex="0"><code>public interface TimeClient {
     // ...
     static public ZoneId getZoneId (String zoneString) {
         try {
             return ZoneId.of(zoneString);
         } catch (DateTimeException e) {
-            System.err.println(&quot;Invalid time zone: &quot; + zoneString +
-                &quot;; using default time zone instead.&quot;);
+            System.err.println(&#34;Invalid time zone: &#34; + zoneString +
+                &#34;; using default time zone instead.&#34;);
             return ZoneId.systemDefault();
         }
     }
@@ -2105,11 +2104,11 @@ for (Field f : fields)
 }
 </code></pre><h3 id="lambda-expressions">Lambda Expressions</h3>
 <h3 id="nested-classes">Nested Classes</h3>
-<pre><code>public enum Day {
+<pre tabindex="0"><code>public enum Day {
     SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
     THURSDAY, FRIDAY, SATURDAY 
 }
-</code></pre><pre><code>public class EnumTest {
+</code></pre><pre tabindex="0"><code>public class EnumTest {
     Day day;
     
     public EnumTest(Day day) {
@@ -2119,16 +2118,16 @@ for (Field f : fields)
     public void tellItLikeItIs() {
         switch (day) {
             case MONDAY:
-                System.out.println(&quot;Mondays are bad.&quot;);
+                System.out.println(&#34;Mondays are bad.&#34;);
                 break;
             case FRIDAY:
-                System.out.println(&quot;Fridays are better.&quot;);
+                System.out.println(&#34;Fridays are better.&#34;);
                 break;      
             case SATURDAY: case SUNDAY:
-                System.out.println(&quot;Weekends are best.&quot;);
+                System.out.println(&#34;Weekends are best.&#34;);
                 break        
             default:
-                System.out.println(&quot;Midweek days are so-so.&quot;);
+                System.out.println(&#34;Midweek days are so-so.&#34;);
                 break;
         }
     }
@@ -2137,7 +2136,7 @@ for (Field f : fields)
         firstDay.tellItLikeItIs();
     }
 }
-</code></pre><pre><code>for (Day d : Day.values()) {
+</code></pre><pre tabindex="0"><code>for (Day d : Day.values()) {
 }
 </code></pre><h3 id="service-loaders">Service Loaders</h3>
 <h3 id="proxies">Proxies</h3>
@@ -2152,14 +2151,14 @@ for (Field f : fields)
 <h3 id="annotations-basics">Annotations Basics</h3>
 <p>The at sign character (<code>@</code>) indicates to the compiler that what follows is an annotation.</p>
 <p>The annotation type can be one of the types that are defined in the <code>java.lang</code> or <code>java.lang.annotation</code> packages of the Java SE API. It is also possible to define your own annotation type.</p>
-<pre><code>@Override
+<pre tabindex="0"><code>@Override
 void mySuperMethod() { ... }
-@SuppressWarnings(value = &quot;unchecked&quot;)
+@SuppressWarnings(value = &#34;unchecked&#34;)
 void myMethod() { ... }
 </code></pre><p>Annotations can be applied to declarations: declarations of classes, fields, methods, and other program elements. Annotations can also be applied to the <em>use</em> of types. This form of annotation is called a <em>type annotation</em>.</p>
 <h3 id="declaring-an-annotation-type">Declaring an Annotation Type</h3>
 <p>Many annotations replace comments in code.</p>
-<pre><code>public class Generation3List extends Generation2List {
+<pre tabindex="0"><code>public class Generation3List extends Generation2List {
    // Author: John Doe
    // Date: 3/17/2002
    // Current revision: 6
@@ -2172,7 +2171,7 @@ void myMethod() { ... }
 </code></pre><p>To add this same metadata with an annotation, you must first define the <em>annotation type</em>.</p>
 <p>The keyword <code>interface</code> is preceded by the at sign (<code>@</code>) (@ = AT, as in annotation type). Annotation types are a form of <em>interface</em>.</p>
 <p><strong>Optional</strong>: To make the information in <code>@ClassPreamble</code> appear in Javadoc-generated documentation, you must annotate the <code>@ClassPreamble</code> definition with the <code>@Documented</code> annotation:</p>
-<pre><code>// import this to use @Documented
+<pre tabindex="0"><code>// import this to use @Documented
 import java.lang.annotation.*;
 
 @Documented
@@ -2180,19 +2179,19 @@ import java.lang.annotation.*;
    String author();
    String date();
    int currentRevision() default 1;
-   String lastModified() default &quot;N/A&quot;;
-   String lastModifiedBy() default &quot;N/A&quot;;
+   String lastModified() default &#34;N/A&#34;;
+   String lastModifiedBy() default &#34;N/A&#34;;
    // Note use of array
    String[] reviewers();
 }
-</code></pre><pre><code>@ClassPreamble (
-   author = &quot;John Doe&quot;,
-   date = &quot;3/17/2002&quot;,
+</code></pre><pre tabindex="0"><code>@ClassPreamble (
+   author = &#34;John Doe&#34;,
+   date = &#34;3/17/2002&#34;,
    currentRevision = 6,
-   lastModified = &quot;4/12/2004&quot;,
-   lastModifiedBy = &quot;Jane Doe&quot;,
+   lastModified = &#34;4/12/2004&#34;,
+   lastModifiedBy = &#34;Jane Doe&#34;,
    // Note array notation
-   reviewers = {&quot;Alice&quot;, &quot;Bob&quot;, &quot;Cindy&quot;}
+   reviewers = {&#34;Alice&#34;, &#34;Bob&#34;, &#34;Cindy&#34;}
 )
 public class Generation3List extends Generation2List {
 	// class code goes here
@@ -2202,7 +2201,7 @@ public class Generation3List extends Generation2List {
 <ul>
 <li>
 <p><code>@Deprecated</code></p>
-<pre><code>   // Javadoc comment follows
+<pre tabindex="0"><code>   // Javadoc comment follows
     /**
      * @deprecated
      * explanation of why it was deprecated
@@ -2213,18 +2212,18 @@ public class Generation3List extends Generation2List {
 </code></pre></li>
 <li>
 <p><code>@Override</code></p>
-<pre><code>   // mark method as a superclass method
+<pre tabindex="0"><code>   // mark method as a superclass method
    // that has been overridden
    @Override 
    int overriddenMethod() { }
 </code></pre></li>
 <li>
 <p><code>@SuppressWarnings</code></p>
-<pre><code>   // use a deprecated method and tell 
+<pre tabindex="0"><code>   // use a deprecated method and tell 
    // compiler not to generate a warning
    // To suppress multiple categories of warnings, use the following syntax:
-   // @SuppressWarnings({&quot;unchecked&quot;, &quot;deprecation&quot;})
-   @SuppressWarnings(&quot;deprecation&quot;)
+   // @SuppressWarnings({&#34;unchecked&#34;, &#34;deprecation&#34;})
+   @SuppressWarnings(&#34;deprecation&#34;)
     void useDeprecatedMethod() {
         objectOne.deprecatedMethod();
     }
@@ -2240,23 +2239,23 @@ public class Generation3List extends Generation2List {
 </ul>
 <h3 id="type-annotations-and-pluggable-type-systems">Type Annotations and Pluggable Type Systems</h3>
 <p>Type annotations were created to support improved analysis of Java programs way of ensuring stronger type checking. For example, you want to ensure that a particular variable in your program is never assigned to null; you want to avoid triggering a <code>NullPointerException</code>.</p>
-<pre><code>@NonNull String str;
+<pre tabindex="0"><code>@NonNull String str;
 </code></pre><p>In many cases, you do not have to write your own type checking modules. There are third parties who have done the work for you. For example, you might want to take advantage of the Checker Framework created by the University of Washington. This framework includes a <code>NonNull</code> module, as well as a regular expression module, and a mutex lock module. For more information, see the <a href="http://types.cs.washington.edu/checker-framework/">Checker Framework</a>.</p>
 <h3 id="repeating-annotations">Repeating Annotations</h3>
 <p><strong>Declare a Repeatable Annotation Type</strong>:</p>
-<pre><code>import java.lang.annotation.Repeatable;
+<pre tabindex="0"><code>import java.lang.annotation.Repeatable;
 
 @Repeatable(Schedules.class)
 public @interface Schedule {
-  String dayOfMonth() default &quot;first&quot;;
-  String dayOfWeek() default &quot;Mon&quot;;
+  String dayOfMonth() default &#34;first&#34;;
+  String dayOfWeek() default &#34;Mon&#34;;
   int hour() default 12;
 }
-</code></pre><pre><code>public @interface Schedules { 
+</code></pre><pre tabindex="0"><code>public @interface Schedules { 
     Schedule [] value（）; 
 }
-</code></pre><pre><code>@Schedule(dayOfMonth=&quot;last&quot;)
-@Schedule(dayOfWeek=&quot;Fri&quot;, hour=&quot;23&quot;)
+</code></pre><pre tabindex="0"><code>@Schedule(dayOfMonth=&#34;last&#34;)
+@Schedule(dayOfWeek=&#34;Fri&#34;, hour=&#34;23&#34;)
 public void doPeriodicCleanup() { ... }
 </code></pre><h2 id="generics">Generics</h2>
 <p>are a powerful feature of the Java programming language. They improve the type safety of your code, making more of your bugs detectable at compile time.</p>
@@ -2432,7 +2431,7 @@ public void doPeriodicCleanup() { ... }
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

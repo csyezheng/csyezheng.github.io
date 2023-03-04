@@ -34,7 +34,7 @@ Extend the HomePage model # home/models.py from django.db import models from wag
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/web-application/back-end/wagtail/" />
@@ -55,7 +55,7 @@ Extend the HomePage model # home/models.py from django.db import models from wag
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -67,14 +67,13 @@ http://localhost:8000/admin/
 Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/web-application/back-end/wagtail/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2018-11-02T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2018-11-02T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2018-11-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-11-02T00:00:00+00:00" />
 <meta itemprop="name" content="Wagtail">
 <meta itemprop="description" content="Getting started setting up a brand new Wagtail project $ pip install wagtail $ wagtail start mysite $ cd mysite $ pip install -r requirements.txt $ ./manage.py migrate $ ./manage.py createsuperuser $ ./manage.py runserver http://localhost:8000
 http://localhost:8000/admin/
-Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page."><meta itemprop="datePublished" content="2018-11-02T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-11-02T00:00:00&#43;00:00" />
+Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page."><meta itemprop="datePublished" content="2018-11-02T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-11-02T00:00:00+00:00" />
 <meta itemprop="wordCount" content="316">
 <meta itemprop="keywords" content="Wagtail,Django,CMS," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Wagtail"/>
@@ -353,7 +352,7 @@ Extend the HomePage model # home/models.py from django.db import models from wag
     <div class="post-content">
       <h2 id="getting-started">Getting started</h2>
 <h3 id="setting-up-a-brand-new-wagtail-project">setting up a brand new Wagtail project</h3>
-<pre><code>$ pip install wagtail
+<pre tabindex="0"><code>$ pip install wagtail
 $ wagtail start mysite
 $ cd mysite
 $ pip install -r requirements.txt
@@ -363,7 +362,7 @@ $ ./manage.py runserver
 </code></pre><p>http://localhost:8000</p>
 <p>http://localhost:8000/admin/</p>
 <h3 id="extend-the-homepage-model">Extend the HomePage model</h3>
-<pre><code># home/models.py
+<pre tabindex="0"><code># home/models.py
 from django.db import models
 
 from wagtail.core.models import Page
@@ -376,14 +375,14 @@ class HomePage(Page):
     
     # content_panels define the capabilities and the layout of the editing interface
     content_panels = Page.content_panels + [
-        FieldPanel('body', classname=&quot;full&quot;),
+        FieldPanel(&#39;body&#39;, classname=&#34;full&#34;),
     ]
-</code></pre><pre><code>$ python manage.py makemigrations
+</code></pre><pre tabindex="0"><code>$ python manage.py makemigrations
 $ python manage.py migrate
 </code></pre><h3 id="create-a-new-app">create a new app</h3>
-<pre><code>$ python manage.py startapp blog
+<pre tabindex="0"><code>$ python manage.py startapp blog
 </code></pre><p>Add the new <code>blog</code> app to <code>INSTALLED_APPS</code> in <code>mysite/settings/base.py</code>.</p>
-<pre><code># blog/models.py
+<pre tabindex="0"><code># blog/models.py
 from wagtail.core.models import Page
 from wagtail.core.fields import RichTextField
 from wagtail.admin.edit_handlers import FieldPanel
@@ -393,17 +392,17 @@ class BlogIndexPage(Page):
     intro = RichTextField(blank=True)
 
     content_panels = Page.content_panels + [
-        FieldPanel('intro', classname=&quot;full&quot;)
+        FieldPanel(&#39;intro&#39;, classname=&#34;full&#34;)
     ]
 </code></pre><p>In the Wagtail admin, create a <code>BlogIndexPage</code> as a child of the Homepage, make sure it has the slug “blog” on the Promote tab, and publish it. You should now be able to access the url <code>/blog</code> on your site (<strong>note how the slug from the Promote tab defines the page URL</strong>).</p>
 <h2 id="freeform-page-content-using-streamfield">Freeform page content using StreamField</h2>
 <h2 id="page-models">Page models</h2>
 <h3 id="friendly-model-names">Friendly model names</h3>
-<pre><code>class HomePage(Page):
+<pre tabindex="0"><code>class HomePage(Page):
     ...
 
     class Meta:
-        verbose_name = &quot;homepage&quot;
+        verbose_name = &#34;homepage&#34;
 </code></pre><p>When users are given a choice of pages to create, the list of page types is generated by splitting your model names or verbose_name.</p>
 <p>move up / move down child pages</p>
 <ul>
@@ -412,25 +411,25 @@ class BlogIndexPage(Page):
 <li>refer to Contact Us page FormPage and form_fields</li>
 </ul>
 <h3 id="model-field">Model Field</h3>
-<pre><code>    country = models.CharField(verbose_name='country', max_length=255)
+<pre tabindex="0"><code>    country = models.CharField(verbose_name=&#39;country&#39;, max_length=255)
     featured_section_1 = models.ForeignKey(
-        'wagtailcore.Page',
+        &#39;wagtailcore.Page&#39;,
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
-        related_name='+',
-        help_text='First featured section for the homepage. Will display up to '
-        'three child items.',
-        verbose_name='Featured section 1'
+        related_name=&#39;+&#39;,
+        help_text=&#39;First featured section for the homepage. Will display up to &#39;
+        &#39;three child items.&#39;,
+        verbose_name=&#39;Featured section 1&#39;
     )
 </code></pre><ul>
 <li>verbose_name</li>
 <li>help_text</li>
 </ul>
 <p>noticebody</p>
-<pre><code>class NoticeBlock(StructBlock):
-    &quot;&quot;&quot;
-    &quot;&quot;&quot;
+<pre tabindex="0"><code>class NoticeBlock(StructBlock):
+    &#34;&#34;&#34;
+    &#34;&#34;&#34;
     title = CharBlock(required=False)
     summary = RichTextBlock(required=False) 
            = BooleanBlock(required=True, ) 
@@ -628,7 +627,7 @@ class BlogIndexPage(Page):
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

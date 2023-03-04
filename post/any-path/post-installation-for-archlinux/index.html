@@ -34,7 +34,7 @@ sudo pacman -Syy &amp;amp;&amp;amp; sudo pacman -S archlinuxcn-keyring Fonts sud
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/any-path/post-installation-for-archlinux/" />
@@ -55,7 +55,7 @@ sudo pacman -Syy &amp;amp;&amp;amp; sudo pacman -S archlinuxcn-keyring Fonts sud
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -67,14 +67,13 @@ $ setfont sun12x22 Connect to the internet nmcli device wifi list nmcli device w
 sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman -S ttc-iosevka-slab noto-fonts noto-fonts-cjk noto-fonts-emoji tf-latinmodern-math ttf-inconsolata Graphical user interface Display server sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight xorg-xrdb is using to loading a user-level configuration dotfile, typically located at ~/." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/any-path/post-installation-for-archlinux/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2017-09-26T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2017-09-26T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2017-09-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-09-26T00:00:00+00:00" />
 <meta itemprop="name" content="Post-installation for archlinux">
 <meta itemprop="description" content="Reboot into the new system Set the keyboard layout and Console fonts If you have the 4K display, console fonts will be extremely small.
 $ setfont sun12x22 Connect to the internet nmcli device wifi list nmcli device wifi connect TP-LINK_GZS password a3628436 ping baidu.com Unofficial user repositories sudo vim /etc/pacman.conf [archlinuxcn] Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch Adding unofficial keys
-sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman -S ttc-iosevka-slab noto-fonts noto-fonts-cjk noto-fonts-emoji tf-latinmodern-math ttf-inconsolata Graphical user interface Display server sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight xorg-xrdb is using to loading a user-level configuration dotfile, typically located at ~/."><meta itemprop="datePublished" content="2017-09-26T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2017-09-26T00:00:00&#43;00:00" />
+sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman -S ttc-iosevka-slab noto-fonts noto-fonts-cjk noto-fonts-emoji tf-latinmodern-math ttf-inconsolata Graphical user interface Display server sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight xorg-xrdb is using to loading a user-level configuration dotfile, typically located at ~/."><meta itemprop="datePublished" content="2017-09-26T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2017-09-26T00:00:00+00:00" />
 <meta itemprop="wordCount" content="936">
 <meta itemprop="keywords" content="archlinux,linux," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Post-installation for archlinux"/>
@@ -379,22 +378,22 @@ sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring Fonts sudo pacman
       <h2 id="reboot-into-the-new-system">Reboot into the new system</h2>
 <h3 id="set-the-keyboard-layout-and-console-fonts">Set the keyboard layout and Console fonts</h3>
 <p>If you have the 4K display, console fonts will be extremely small.</p>
-<pre><code>$ setfont sun12x22
+<pre tabindex="0"><code>$ setfont sun12x22
 </code></pre><h3 id="connect-to-the-internet">Connect to the internet</h3>
-<pre><code>nmcli device wifi list
+<pre tabindex="0"><code>nmcli device wifi list
 nmcli device wifi connect TP-LINK_GZS password a3628436
 ping baidu.com
 </code></pre><h2 id="unofficial-user-repositories">Unofficial user repositories</h2>
-<pre><code>sudo vim /etc/pacman.conf 
-</code></pre><pre><code>[archlinuxcn]
+<pre tabindex="0"><code>sudo vim /etc/pacman.conf 
+</code></pre><pre tabindex="0"><code>[archlinuxcn]
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 </code></pre><p>Adding unofficial keys</p>
-<pre><code>sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring
+<pre tabindex="0"><code>sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring
 </code></pre><h2 id="fonts">Fonts</h2>
-<pre><code>sudo pacman -S ttc-iosevka-slab noto-fonts noto-fonts-cjk noto-fonts-emoji tf-latinmodern-math ttf-inconsolata
+<pre tabindex="0"><code>sudo pacman -S ttc-iosevka-slab noto-fonts noto-fonts-cjk noto-fonts-emoji tf-latinmodern-math ttf-inconsolata
 </code></pre><h2 id="graphical-user-interface">Graphical user interface</h2>
 <h3 id="display-server">Display server</h3>
-<pre><code>sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight
+<pre tabindex="0"><code>sudo pacman -S xorg-server xorg-xrdb xorg-xbacklight
 </code></pre><p><code>xorg-xrdb</code> is using to loading a user-level configuration <em>dotfile</em>, typically located at <code>~/.Xresources</code>.</p>
 <p>They can be used to:</p>
 <ul>
@@ -405,14 +404,14 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 <li>configure low-level X applications like: xorg-xclock, xpdf, <strong>rxvt-unicode</strong></li>
 </ul>
 <p>Brightness can be set using the <code>xorg-xbacklight</code> package.</p>
-<pre><code>$ xbacklight -inc 10
+<pre tabindex="0"><code>$ xbacklight -inc 10
 $ xbacklight -dec 10
 </code></pre><p>Optional:</p>
-<pre><code>sudo pacman -S  xorg-apps xorg-xinit xorg-xrandr xorg-xinput
+<pre tabindex="0"><code>sudo pacman -S  xorg-apps xorg-xinit xorg-xrandr xorg-xinput
 </code></pre><h3 id="display-drivers">Display drivers</h3>
-<pre><code>lspci | grep -e VGA -e 3D
+<pre tabindex="0"><code>lspci | grep -e VGA -e 3D
 sudo pacman -S xf86-video-intel mesa nvidia-dkms nvidia-utils nvidia-settings 
-</code></pre><pre><code>sudo pacman -S wget git
+</code></pre><pre tabindex="0"><code>sudo pacman -S wget git
 git clone https://aur.archlinux.org/yay.git
 cd yay/
 makepkg -si
@@ -432,7 +431,7 @@ systemctl status optimus-manager.service
 <li><strong>Custom Xorg config :</strong> optimus-manager works by auto-generating a Xorg configuration file and putting it into <code>/etc/X11/xorg.conf.d/</code>. If you already have custom Xorg configuration files at that location or at <code>/etc/X11/xorg.conf </code>, it is strongly advised that you <strong>remove anything</strong> GPU-related from them to make sure that they do not interfere with the GPU switching process.</li>
 <li><strong>Bumblebee :</strong> optimus-manager is incompatible with Bumblebee since both tools would be trying to control GPU power switching at the same time. If Bumblebee is installed, you must disable its daemon (<code>sudo systemctl disable bumblebeed.service</code>, then reboot). This is particularly important for Manjaro users since Bumblebee is installed by default.</li>
 </ul>
-<pre><code>tree /etc/X11/
+<pre tabindex="0"><code>tree /etc/X11/
 /etc/X11/
 ├── xinit
 │   ├── xinitrc
@@ -444,8 +443,8 @@ systemctl status optimus-manager.service
     └── 10-optimus-manager.conf
 </code></pre><p>optimus-manager supported display managers are : SDDM, LightDM, GDM.</p>
 <p>optimus-manager can also work with other display managers (or with no display manager at all) but you have to configure them manually.</p>
-<pre><code>sudo vim /etc/pacman.d/hooks/nvidia.hook
-</code></pre><pre><code>[Trigger]
+<pre tabindex="0"><code>sudo vim /etc/pacman.d/hooks/nvidia.hook
+</code></pre><pre tabindex="0"><code>[Trigger]
 Operation=Install
 Operation=Upgrade
 Operation=Remove
@@ -459,70 +458,70 @@ Description=Update Nvidia module in initcpio
 Depends=mkinitcpio
 When=PostTransaction
 NeedsTargets
-Exec=/bin/sh -c 'while read -r trg; do case $trg in linux-lts) exit 0; esac; done; /usr/bin/mkinitcpio -P'
+Exec=/bin/sh -c &#39;while read -r trg; do case $trg in linux-lts) exit 0; esac; done; /usr/bin/mkinitcpio -P&#39;
 </code></pre><h4 id="power-management-in-optimus-manager">power management in optimus-manager</h4>
-<pre><code>sudo pacman -S acpi_call-lts
-</code></pre><pre><code>sudo vim /etc/optimus-manager/optimus-manager.conf
-</code></pre><pre><code>[optimus]
+<pre tabindex="0"><code>sudo pacman -S acpi_call-lts
+</code></pre><pre tabindex="0"><code>sudo vim /etc/optimus-manager/optimus-manager.conf
+</code></pre><pre tabindex="0"><code>[optimus]
 switching=acpi_call
 pci_power_control=no
 pci_remove=no
 pci_reset=no
 </code></pre><h4 id="usage">usage</h4>
-<pre><code>$ optimus-manager --switch intel    # Use Intel graphics
+<pre tabindex="0"><code>$ optimus-manager --switch intel    # Use Intel graphics
 $ optimus-manager --switch nvidia   # Use NVIDIA graphics
 $ optimus-manager --switch hybrid   # Use hybrid graphics (Requires a patch to xorg-server)
 $ optimus-manager --switch auto     # Switch to different graphics (from what is used now)
 </code></pre><p>Also specify which graphics to use on boot:</p>
-<pre><code>$ optimus-manager --set-startup intel
+<pre tabindex="0"><code>$ optimus-manager --set-startup intel
 $ optimus-manager --set-startup nvidia
 $ optimus-manager --switch hybrid   # Use hybrid graphics (Requires a patch to xorg-server)
 </code></pre><h3 id="window-managers">Window managers</h3>
-<pre><code>sudo pacman -S i3 rxvt-unicode rofi conky
+<pre tabindex="0"><code>sudo pacman -S i3 rxvt-unicode rofi conky
 </code></pre><p>i3wm missing/blank system dialogs solution:</p>
-<pre><code>floating_minimum_size 500 x 300
+<pre tabindex="0"><code>floating_minimum_size 500 x 300
 floating_maximum_size 2000 x 1500
-for_window [class=&quot;chromium&quot;] floating enable
-for_window [class=&quot;typora&quot;] floating enable
+for_window [class=&#34;chromium&#34;] floating enable
+for_window [class=&#34;typora&#34;] floating enable
 </code></pre><h3 id="display-manager">Display manager</h3>
-<pre><code>sudo pacman -S lightdm lightdm-gtk-greeter
+<pre tabindex="0"><code>sudo pacman -S lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm
-</code></pre><pre><code>cp /data/Backup/ye/.Xresources .
+</code></pre><pre tabindex="0"><code>cp /data/Backup/ye/.Xresources .
 vim ~/.Xresources 
 sudo systemctl start lightdm
 </code></pre><h3 id="user-directories">User directories</h3>
-<pre><code>sudo pacman -S xdg-user-dirs
+<pre tabindex="0"><code>sudo pacman -S xdg-user-dirs
 xdg-user-dirs-update
 </code></pre><h2 id="multimedia">Multimedia</h2>
 <h3 id="sound">Sound</h3>
-<pre><code>sudo pacman -S alsa-utils
+<pre tabindex="0"><code>sudo pacman -S alsa-utils
 </code></pre><p>Test:</p>
-<pre><code>$ speaker-test -c 2
+<pre tabindex="0"><code>$ speaker-test -c 2
 $ aplay -L | grep :CARD
 </code></pre><h2 id="input-method">Input method</h2>
-<pre><code>sudo pacman -S fcitx fcitx-configtool fcitx-gtk2 fcitx-gtk3 fcitx-qt5
+<pre tabindex="0"><code>sudo pacman -S fcitx fcitx-configtool fcitx-gtk2 fcitx-gtk3 fcitx-qt5
 </code></pre><p>download <code>fcitx-qt4</code> manually and install</p>
-<pre><code>$ sudo pacman -U fcitx-qt4-4.2.9.6-1-x86_64.pkg.tar.xz
-</code></pre><pre><code>sudo pacman -S fcitx-googlepinyin
+<pre tabindex="0"><code>$ sudo pacman -U fcitx-qt4-4.2.9.6-1-x86_64.pkg.tar.xz
+</code></pre><pre tabindex="0"><code>sudo pacman -S fcitx-googlepinyin
 </code></pre><p>Set environment variables for IM modules. LightDM checks and sources  <code>~/.xprofile</code></p>
-<pre><code>vim ~/.xprofile
-</code></pre><pre><code>GTK_IM_MODULE=fcitx
+<pre tabindex="0"><code>vim ~/.xprofile
+</code></pre><pre tabindex="0"><code>GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
 </code></pre><p>When the terminal cannot switch the Chinese input method, consider logging out and logging in again.</p>
-<pre><code>$ vim ~/.config/i3/config
-</code></pre><pre><code>exec --no-startup-id LANG=&quot;zh_CN.UTF-8&quot; fcitx &amp;
+<pre tabindex="0"><code>$ vim ~/.config/i3/config
+</code></pre><pre tabindex="0"><code>exec --no-startup-id LANG=&#34;zh_CN.UTF-8&#34; fcitx &amp;
 </code></pre><h2 id="networking">Networking</h2>
-<pre><code>$ pacman -S network-manager-applet networkmanager-l2tp networkmanager-pptp
+<pre tabindex="0"><code>$ pacman -S network-manager-applet networkmanager-l2tp networkmanager-pptp
 </code></pre><h3 id="software-access-point">Software access point</h3>
-<pre><code>$ sudo pacman -S create_ap
+<pre tabindex="0"><code>$ sudo pacman -S create_ap
 </code></pre><h2 id="input-devices">Input devices</h2>
 <h3 id="bluetooth">Bluetooth</h3>
-<pre><code>$ sudo pacman -S bluez bluez-utils blueman 
-</code></pre><pre><code>$ systemctl start bluetooth.service
+<pre tabindex="0"><code>$ sudo pacman -S bluez bluez-utils blueman 
+</code></pre><pre tabindex="0"><code>$ systemctl start bluetooth.service
 $ systemctl enable bluetooth.service
-</code></pre><pre><code>$ vim /etc/bluetooth/main.conf
-</code></pre><pre><code>[General]
+</code></pre><pre tabindex="0"><code>$ vim /etc/bluetooth/main.conf
+</code></pre><pre tabindex="0"><code>[General]
 DiscoverableTimeout = 0
 Discoverable=true
 PairableTimeout = 0
@@ -530,53 +529,53 @@ Pairable=true
 [Policy]
 AutoEnable=true
 </code></pre><h4 id="bluetooth-keyboard-pairing-process">Bluetooth keyboard pairing process</h4>
-<pre><code>$ blueman-applet
-</code></pre><pre><code>$ blueman-manager
+<pre tabindex="0"><code>$ blueman-applet
+</code></pre><pre tabindex="0"><code>$ blueman-manager
 </code></pre><p>press search button in  blueman-manager graphical settings panel, if your device is Filco,  press <code>Ctrl + Alt + Fn</code> in keyboard.</p>
 <p>after keyboard as found, pair it, trust it and connect to it.</p>
 <p><strong>Troubleshooting</strong>:</p>
-<pre><code># bluetoothctl show
-</code></pre><pre><code>$ vim ~/.config/i3/config
-</code></pre><pre><code># start Blueman
+<pre tabindex="0"><code># bluetoothctl show
+</code></pre><pre tabindex="0"><code>$ vim ~/.config/i3/config
+</code></pre><pre tabindex="0"><code># start Blueman
 exec --no-startup-id blueman-applet
 </code></pre><h2 id="useful-packages">Useful packages</h2>
-<pre><code>sudo pacman -S unzip openssh
+<pre tabindex="0"><code>sudo pacman -S unzip openssh
 </code></pre><h2 id="console-improvements">Console improvements</h2>
-<pre><code>$ echo $SHELL
-</code></pre><pre><code>$ sudo pacman -S zsh
+<pre tabindex="0"><code>$ echo $SHELL
+</code></pre><pre tabindex="0"><code>$ sudo pacman -S zsh
 </code></pre><p>To list all installed shells</p>
-<pre><code>$ chsh -l
+<pre tabindex="0"><code>$ chsh -l
 </code></pre><p>And to set one as default for your user do:</p>
-<pre><code>$ sudo chsh -s /bin/zsh ye
-</code></pre><pre><code>$ yay -S oh-my-zsh-git
+<pre tabindex="0"><code>$ sudo chsh -s /bin/zsh ye
+</code></pre><pre tabindex="0"><code>$ yay -S oh-my-zsh-git
 $ vim ~/.zshrc
-</code></pre><pre><code>LANGUAGE=&quot;en&quot;
+</code></pre><pre tabindex="0"><code>LANGUAGE=&#34;en&#34;
 </code></pre><p><strong>plugins</strong>:</p>
 <ul>
 <li>
-<pre><code>git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+<pre tabindex="0"><code>git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 </code></pre></li>
 <li>
-<pre><code>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-</code></pre><pre><code>$ vim ~/.zshrc
-</code></pre><pre><code>plugins=( zsh-autosuggestions zsh-syntax-highlighting)
+<pre tabindex="0"><code>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+</code></pre><pre tabindex="0"><code>$ vim ~/.zshrc
+</code></pre><pre tabindex="0"><code>plugins=( zsh-autosuggestions zsh-syntax-highlighting)
 </code></pre></li>
 </ul>
 <h2 id="bypass-gfw">Bypass GFW</h2>
-<pre><code>$ vim /etc/hosts
-</code></pre><pre><code>104.18.57.236  free-ss.site
-</code></pre><pre><code>sudo pacman -S chromium shadowsocks
-</code></pre><pre><code>$ cp /etc/shadowsocks/example.json /etc/shadowsocks/config.json
+<pre tabindex="0"><code>$ vim /etc/hosts
+</code></pre><pre tabindex="0"><code>104.18.57.236  free-ss.site
+</code></pre><pre tabindex="0"><code>sudo pacman -S chromium shadowsocks
+</code></pre><pre tabindex="0"><code>$ cp /etc/shadowsocks/example.json /etc/shadowsocks/config.json
 </code></pre><p>find available proxy in <code>free-ss.site</code> and modify in <code>/etc/shadowsocks/config.json</code></p>
-<pre><code>$ sslocal -c /etc/shadowsocks/config.json
-</code></pre><pre><code>$ chromium --proxy-server=http://127.0.0.1:1080
+<pre tabindex="0"><code>$ sslocal -c /etc/shadowsocks/config.json
+</code></pre><pre tabindex="0"><code>$ chromium --proxy-server=http://127.0.0.1:1080
 </code></pre><p><a href="https://github.com/FelisCatus/SwitchyOmega/wiki/GFWList">SwitchyOmega settings restore from online, and update gfwlist list</a></p>
 <h2 id="full-system-backup">Full system backup</h2>
-<pre><code>$ sudo pacman -S rsync
+<pre tabindex="0"><code>$ sudo pacman -S rsync
 $ mkdir -p /data/backup/initial_system_backup
 </code></pre><p>Rsync will try to modify any previously backed up files on the target machine to match their current state at the source machine, with each <strong>incremental backup</strong>.</p>
 <p><strong>remember excluding data storage</strong></p>
-<pre><code>$ sudo rsync -aAXv --exclude={&quot;/dev/*&quot;,&quot;/proc/*&quot;,&quot;/sys/*&quot;,&quot;/tmp/*&quot;,&quot;/run/*&quot;,&quot;/mnt/*&quot;,&quot;/media/*&quot;,&quot;/lost+found&quot;,&quot;/home/ye/.cache/*&quot;,&quot;/data/*&quot;} / /data/backup/initial_system_backup
+<pre tabindex="0"><code>$ sudo rsync -aAXv --exclude={&#34;/dev/*&#34;,&#34;/proc/*&#34;,&#34;/sys/*&#34;,&#34;/tmp/*&#34;,&#34;/run/*&#34;,&#34;/mnt/*&#34;,&#34;/media/*&#34;,&#34;/lost+found&#34;,&#34;/home/ye/.cache/*&#34;,&#34;/data/*&#34;} / /data/backup/initial_system_backup
 </code></pre><h3 id="restore-a-backup">Restore a backup</h3>
 <p>If you wish to restore a backup, use the same <code>rsync</code> command that was executed but with the source and destination reversed.</p>
 <h2 id="references">References</h2>
@@ -750,7 +749,7 @@ $ mkdir -p /data/backup/initial_system_backup
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

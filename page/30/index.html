@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,6 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -214,7 +213,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -295,6 +294,40 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/specialization/web-application/spring/practice/">Spring Practice</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-11-18" class="post-time">
+        2020-11-18
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      vo package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } } dao import org.apache.ibatis.annotations.Param; public interface IUserDAO { List&lt;UserVO&gt; selectUsers(@Param(“paramVO”) UserVO paramVO); } xml &lt;resultMap id=&#34;userResultMap&#34; type=&#34;User&#34;&gt; &lt;id property=&#34;id&#34; column=&#34;user_id&#34; /&gt; &lt;result property=&#34;username&#34; column=&#34;user_name&#34;/&gt; &lt;result property=&#34;password&#34; column=&#34;hashed_password&#34;/&gt; &lt;/resultMap&gt; &lt;select id=&#34;selectUsers&#34; parameterType=&#34;com.
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/web-application/spring/practice/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/any-path/blog/">Link custom domain to Github pages</a>
     </h1>
     
@@ -355,46 +388,6 @@ DNS service provider Create Cloudflare account Enter your domain name yezheng.
     </div>
     <div class="read-more">
       <a href="/post/master-path/read-open-source/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/data-engineering/flink/">flink</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-11-12" class="post-time">
-        2020-11-12
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/big-data/"> big-data </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Reference Apache Flink Documentation
-Apache Flink 1.10 Documentation
-The Flink Ecosystem: A Quick Start to PyFlink
-Apache Flink Web Dashboard
-PyFlink: Introducing Python Support for UDFs in Flink&rsquo;s Table API
-flink-playgrounds
-Stream Compute Service
-    </div>
-    <div class="read-more">
-      <a href="/post/specialization/data-engineering/flink/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2329,6 +2322,90 @@ Stream Compute Service
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/31/">»</a></li>
@@ -2336,7 +2413,7 @@ Stream Compute Service
 
       
       
-      <li><a href="/page/85/">»»</a></li>
+      <li><a href="/page/89/">»»</a></li>
       
 
       </ul>
@@ -2424,7 +2501,7 @@ Stream Compute Service
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/notes-deep-learning-with-python/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,12 +63,11 @@
 <meta property="og:description" content="Deep Learning with Python PART 1 - FUNDAMENTALS OF DEEP LEARNING 1.What is deep learning? Artificial intelligence, machine learning, and deep learning Before deep learning: a brief history of machine learning Why deep learning? Why now? 2.Before we begin: the mathematical building blocks of neural networks A first look at a neural network Data representations for neural networks tensor: it’s a container for numbers. You may be already familiar with matrices, which are 2D tensors: tensors are a generalization of matrices to an arbitrary number of dimensions (note that in the context of tensors, a dimension is often called an axis)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/notes-deep-learning-with-python/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-05-05T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-05-05T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2020-05-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-05T00:00:00+00:00" />
 <meta itemprop="name" content="notes of deep learning with python">
-<meta itemprop="description" content="Deep Learning with Python PART 1 - FUNDAMENTALS OF DEEP LEARNING 1.What is deep learning? Artificial intelligence, machine learning, and deep learning Before deep learning: a brief history of machine learning Why deep learning? Why now? 2.Before we begin: the mathematical building blocks of neural networks A first look at a neural network Data representations for neural networks tensor: it’s a container for numbers. You may be already familiar with matrices, which are 2D tensors: tensors are a generalization of matrices to an arbitrary number of dimensions (note that in the context of tensors, a dimension is often called an axis)."><meta itemprop="datePublished" content="2020-05-05T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-05-05T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Deep Learning with Python PART 1 - FUNDAMENTALS OF DEEP LEARNING 1.What is deep learning? Artificial intelligence, machine learning, and deep learning Before deep learning: a brief history of machine learning Why deep learning? Why now? 2.Before we begin: the mathematical building blocks of neural networks A first look at a neural network Data representations for neural networks tensor: it’s a container for numbers. You may be already familiar with matrices, which are 2D tensors: tensors are a generalization of matrices to an arbitrary number of dimensions (note that in the context of tensors, a dimension is often called an axis)."><meta itemprop="datePublished" content="2020-05-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-05-05T00:00:00+00:00" />
 <meta itemprop="wordCount" content="4023">
 <meta itemprop="keywords" content="deep learning," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="notes of deep learning with python"/>
@@ -386,14 +385,14 @@ backward pass).</li>
 <p>Note that a variant of the mini-batch SGD algorithm would be to draw a single sample and target at each iteration, rather than drawing a batch of data. This would be <strong>true SGD</strong> (as opposed to <strong>mini-batch SGD</strong>). Alternatively, going to the opposite extreme, you could run every step on all data available, which is called <strong>batch SGD</strong>. Each update would then be more accurate, but far more expensive. The efficient compromise between these two extremes is to use mini-batches of reasonable size.</p>
 <p>Additionally, there exist <strong>multiple variants of SGD</strong> that differ by taking into account previous weight updates when computing the next weight update, rather than just looking at the current value of the gradients. There is, for instance, <strong>SGD with momentum</strong>, as well as <strong>Adagrad</strong>, <strong>RMSP rop</strong>, and several others. Such variants are known as <strong>optimization methods</strong> or <strong>optimizers</strong>. In particular, the concept of momentum, which is used in many of these variants, deserves your attention. <strong>Momentum addresses two issues with SGD: convergence speed and local minima.</strong></p>
 <h6 id="chaining-derivatives-the-backpropagation-algorithm">Chaining derivatives: the Backpropagation algorithm</h6>
-<p>Calculus tells us that such a chain of functions can be derived using the following identity, called the <strong>chain rule</strong>: f(g(x)) = f'(g(x)) * g'(x). Applying the chain rule to the computation of the gradient values of a neural network gives rise to an algorithm called <strong>Backpropagation</strong> (also sometimes called <strong>reverse-mode differentiation</strong>). Backpropagation starts with the final loss value and works backward from the top layers to the bottom layers, applying the chain rule to compute the contribution that each parameter had in the loss value.</p>
+<p>Calculus tells us that such a chain of functions can be derived using the following identity, called the <strong>chain rule</strong>: f(g(x)) = f&rsquo;(g(x)) * g&rsquo;(x). Applying the chain rule to the computation of the gradient values of a neural network gives rise to an algorithm called <strong>Backpropagation</strong> (also sometimes called <strong>reverse-mode differentiation</strong>). Backpropagation starts with the final loss value and works backward from the top layers to the bottom layers, applying the chain rule to compute the contribution that each parameter had in the loss value.</p>
 <h4 id="looking-back-at-our-first-example">Looking back at our first example</h4>
 <h3 id="3getting-started-with-neural-networks">3.Getting started with neural networks</h3>
 <h4 id="anatomy-of-a-neural-network">Anatomy of a neural network</h4>
 <p>Figure 3.1 Relationship between the network, layers, loss function, and optimizer</p>
 <p><img src="https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/03fig01.jpg" alt="Relationship between the network, layers, loss function, and optimizer"></p>
 <p>Different layers are appropriate for different tensor formats and different types of data processing. For instance, simple vector data, stored in 2D tensors of shape (samples, features) , is often processed by densely connected layers, also called fully connected or dense layers (the Dense class in Keras). Sequence data, stored in 3D tensors of shape (samples, timesteps, features), is typically processed by recurrent layers such as an LSTM layer. Image data, stored in 4D tensors, is usually processed by 2D convolution layers Conv2D).</p>
-<pre><code>from keras import layers
+<pre tabindex="0"><code>from keras import layers
 
 # A dense layer with 32 output units
 layer = layers.Dense(32, input_shape=(784,))
@@ -429,7 +428,7 @@ stacks of layers, which is the most common network architecture by far) or the f
 <p><img src="https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/03fig05_alt.jpg" alt="Figure 3.5 The sigmoid function"></p>
 <h6 id="what-are-activation-functions-and-why-are-they-necessary">What are activation functions, and why are they necessary?</h6>
 <p>Without an activation function like relu (also called a non-linearity), the Dense layer would consist of two linear operations—a dot product and an addition:</p>
-<pre><code>output = dot(W, input) + b
+<pre tabindex="0"><code>output = dot(W, input) + b
 </code></pre><p>In order to get access to a much richer hypothesis space that would benefit from deep representations, you need a non-linearity, or activation function. <strong>relu</strong> is the most popular activation function in deep learning, but there are many other candidates, which all come with similarly strange names: prelu, elu, and so on.</p>
 <p><strong>Crossentropy</strong> is usually the best choice when you’re dealing with models that <strong>output probabilities</strong>. Crossentropy is a quantity from the field of Information Theory <strong>that measures the distance between probability distributions</strong> or, in this case, between the ground-truth distribution and your predictions.</p>
 <h6 id="wrapping-up">Wrapping up</h6>
@@ -441,12 +440,12 @@ stacks of layers, which is the most common network architecture by far) or the f
 <h4 id="classifying-newswires-a-multiclass-classification-example">Classifying newswires: a multiclass classification example</h4>
 <p>Because you have many classes, this problem is an instance of <strong>multi-class classification</strong>; and because each data point should be classified into only one category, the problem is more specifically an instance of <strong>single-label, multiclass classification</strong>. If each data point could belong to multiple categories (in this case, topics), you’d be facing a <strong>multilabel, multiclass classification</strong> problem.</p>
 <p>In the previous example, you used 16-dimensional intermediate layers, but a 16-dimensional space may be too limited to learn to separate 46 different classes: <strong>such small layers may act as information bottlenecks, permanently dropping relevant information</strong>.</p>
-<pre><code>from keras import models
+<pre tabindex="0"><code>from keras import models
 from keras import layers
 model = models.Sequential()
-model.add(layers.Dense(64, activation='relu', input_shape=(10000,)))
-model.add(layers.Dense(64, activation='relu'))
-model.add(layers.Dense(46, activation='softmax'))
+model.add(layers.Dense(64, activation=&#39;relu&#39;, input_shape=(10000,)))
+model.add(layers.Dense(64, activation=&#39;relu&#39;))
+model.add(layers.Dense(46, activation=&#39;softmax&#39;))
 </code></pre><p>There are two other things you should note about this architecture:</p>
 <ul>
 <li>
@@ -458,29 +457,29 @@ model.add(layers.Dense(46, activation='softmax'))
 </ul>
 <p>The best loss function to use in this case is <strong>categorical_crossentropy</strong>. <strong>It measures the distance between two probability distributions</strong>: here, <strong>between the probability distribution output by the network and the true distribution of the labels.</strong> By minimizing the distance between these two distributions, you train the network to output something as close as possible to the true labels.</p>
 <p>Plotting the training and validation loss:</p>
-<pre><code>import matplotlib.pyplot as plt
-loss = history.history['loss']
-val_loss = history.history['val_loss']
+<pre tabindex="0"><code>import matplotlib.pyplot as plt
+loss = history.history[&#39;loss&#39;]
+val_loss = history.history[&#39;val_loss&#39;]
 epochs = range(1, len(loss) + 1)
-plt.plot(epochs, loss, 'bo', label='Training loss')
-plt.plot(epochs, val_loss, 'b', label='Validation loss')
-plt.title('Training and validation loss')
-plt.xlabel('Epochs')
-plt.ylabel('Loss')
+plt.plot(epochs, loss, &#39;bo&#39;, label=&#39;Training loss&#39;)
+plt.plot(epochs, val_loss, &#39;b&#39;, label=&#39;Validation loss&#39;)
+plt.title(&#39;Training and validation loss&#39;)
+plt.xlabel(&#39;Epochs&#39;)
+plt.ylabel(&#39;Loss&#39;)
 plt.legend()
 plt.show()
 </code></pre><p>Plotting the training and validation accuracy:</p>
-<pre><code>plt.clf()  # Clears the figure
-acc = history.history['acc']
-val_acc = history.history['val_acc']
-plt.plot(epochs, acc, 'bo', label='Training acc')
-plt.plot(epochs, val_acc, 'b', label='Validation acc')
-plt.title('Training and validation accuracy')
-plt.xlabel('Epochs')
-plt.ylabel('Loss')
+<pre tabindex="0"><code>plt.clf()  # Clears the figure
+acc = history.history[&#39;acc&#39;]
+val_acc = history.history[&#39;val_acc&#39;]
+plt.plot(epochs, acc, &#39;bo&#39;, label=&#39;Training acc&#39;)
+plt.plot(epochs, val_acc, &#39;b&#39;, label=&#39;Validation acc&#39;)
+plt.title(&#39;Training and validation accuracy&#39;)
+plt.xlabel(&#39;Epochs&#39;)
+plt.ylabel(&#39;Loss&#39;)
 plt.legend()
 plt.show()
-</code></pre><p>The only thing this approach would change is the choice of the loss function. The loss function used in listing 3.21, <strong>categorical_crossentropy</strong>, expects the labels to follow a <strong>categorical encoding</strong>. With <strong>integer labels</strong>, you should use **sparse_categorical_ crossentropy**.</p>
+</code></pre><p>The only thing this approach would change is the choice of the loss function. The loss function used in listing 3.21, <strong>categorical_crossentropy</strong>, expects the labels to follow a <strong>categorical encoding</strong>. With <strong>integer labels</strong>, you should use <strong>sparse_categorical_ crossentropy</strong>.</p>
 <h6 id="the-importance-of-having-sufficiently-large-intermediate-layers">The importance of having sufficiently large intermediate layers</h6>
 <p>We mentioned earlier that because the final outputs are 46-dimensional, you should avoid intermediate layers with many fewer than 46 hidden units.</p>
 <h6 id="wrapping-up-1">Wrapping up</h6>
@@ -860,7 +859,7 @@ first working model:</p>
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

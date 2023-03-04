@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JavaScript on Ye Zheng&#39;s Blog</title>
+    <title>javascript on Ye Zheng&#39;s Blog</title>
     <link>http://www.yezheng.pro/tags/javascript/</link>
-    <description>Recent content in JavaScript on Ye Zheng&#39;s Blog</description>
+    <description>Recent content in javascript on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS106AX: Programming Methodologies in JavaScript and Python</title>
+      <link>http://www.yezheng.pro/post/courses/cs106ax/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/courses/cs106ax/</guid>
+      <description>JavaScript JavaScript Basics JavaScript Graphics Interactive Graphics Timer-Based Animation Advanced Animation Strings Arrays Objects Binary Representation Cryptography Enigma Machine Overview Python Strings Lists Dictionaries Objects Object-Oriented Programming Objects and Abstraction Data-Driven Programs Adventure Web Programming Interactors CSS Asynchronous Requests HTTP Building Web Applications </description>
+    </item>
+    
     <item>
       <title>Debugging JavaScript in Chrome DevTools</title>
       <link>http://www.yezheng.pro/post/engineering-fundamentals/javascript/debug/</link>
@@ -24,7 +33,7 @@ Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: S
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/javascript/javascript/</guid>
-      <description>概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //</description>
+      <description>A Tour of JavaScript Lexical grammar The Text of a JavaScript Program JavaScript is a case-sensitive language. JavaScript ignores spaces that appear between tokens in programs. For the most part, JavaScript also ignores line breaks. let a a = 3 console.log(a) JavaScript interprets this code like this: let a; a = 3; console.log(a); Comments // This is a single-line comment. /* This is also a comment */ // and here</description>
     </item>
     
   </channel>

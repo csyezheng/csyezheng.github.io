@@ -101,7 +101,7 @@ cxf-spring-boot-starter-jaxrs cxf-spring-boot-starter-jaxws cxf-rt-rs-service-de
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/2/</guid>
-      <description>java  io  BufferedReader BufferedWriter ByteArrayInputStream ByteArrayOutputStream File FileFilter FileInputStream FileOutputStream IOException InputStream IntputStreamReader OutputStream OutputStreamWriter PrintWriter Reader Serializable StringReader StringWriter   lang  reflect  Field Method InvocationTargetException     math  BigDecimal   net  HttpURLConnection URL URLConnection URLDecoder URLEncoder   nio  charset  Charset     security  MessageDigest SecureRandom InvalidAlgorithmParameterException InvalidKeyException KeyManagementException NoSuchAlgorithmException NoSuchProviderException   sql  Date ResultSet ResultSetMetaData SQLException Timestamp   text  DateFormat DecimalFormat MessageFormat Normalizer NumberFormat SimpleDateFormat ParseException   util  ArrayList Arrays Base64.</description>
+      <description>java io BufferedReader BufferedWriter ByteArrayInputStream ByteArrayOutputStream File FileFilter FileInputStream FileOutputStream IOException InputStream IntputStreamReader OutputStream OutputStreamWriter PrintWriter Reader Serializable StringReader StringWriter lang reflect Field Method InvocationTargetException math BigDecimal net HttpURLConnection URL URLConnection URLDecoder URLEncoder nio charset Charset security MessageDigest SecureRandom InvalidAlgorithmParameterException InvalidKeyException KeyManagementException NoSuchAlgorithmException NoSuchProviderException sql Date ResultSet ResultSetMetaData SQLException Timestamp text DateFormat DecimalFormat MessageFormat Normalizer NumberFormat SimpleDateFormat ParseException util ArrayList Arrays Base64.Decoder Base64.Encoder Calendar Collection Collections Comparator Date Enumeration GregorianCalendar HashMap HashSet HashMap Iterator LinkedHashMap LinkedHashSet LinkedList List Locale Map.</description>
     </item>
     
     <item>
@@ -121,7 +121,7 @@ https://docs.oracle.com/cd/E19226-01/820-7627/6nisfjmk8/index.html</description>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/javaee/</guid>
-      <description> javax  inject  Inject Named   jms  Message MessageListener TextMessage   persistence  Transient   servlet  Filter FilterChain FilterConfig ServletInputStream ServletOutputStream ServletRequest ServletResponse ServletException http  Cookie HttpServlet HttpServletRequest HttpServletResponse HttpServletRequestWrapper HttpServletResponseWrapper     transaction  Transactional   ws  rs  DELETE GET POST PUT Path PathParam Produces QueryParam   core  Context MediaType        </description>
+      <description> javax inject Inject Named jms Message MessageListener TextMessage persistence Transient servlet Filter FilterChain FilterConfig ServletInputStream ServletOutputStream ServletRequest ServletResponse ServletException http Cookie HttpServlet HttpServletRequest HttpServletResponse HttpServletRequestWrapper HttpServletResponseWrapper transaction Transactional ws rs DELETE GET POST PUT Path PathParam Produces QueryParam core Context MediaType </description>
     </item>
     
     <item>
@@ -141,7 +141,7 @@ https://docs.oracle.com/javafx/2/collections/jfxpub-collections.htm</description
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/javax/</guid>
-      <description> javax  activation  DataHandler MimetypesFileTypeMap   crypto  BadPaddingException Cipher IllegalBlockSizeException NoSuchPaddingException spec  IvParameterSpec SecretKeySpec     net  ssl  HostnameVerifier HttpsURLConnection SSLSession SSLContext TrustManager X509TrustManager     script  ScriptException   security  auth  login  LoginException       xml  bind  Unmarshaller JAXBContext annotation  XmlAccessType XmlAccessorType XmlElement XmlElementWrapper XmlRootElement XmlType     namespace  QName   parsers  DocumentBuilder DocumentBuilderFactory SAXParser SAXParserFactory   soap  SOAPBody SOAPBodyElement SOAPEnvelope SOAPMessage SOAPPart SOAPException         </description>
+      <description> javax activation DataHandler MimetypesFileTypeMap crypto BadPaddingException Cipher IllegalBlockSizeException NoSuchPaddingException spec IvParameterSpec SecretKeySpec net ssl HostnameVerifier HttpsURLConnection SSLSession SSLContext TrustManager X509TrustManager script ScriptException security auth login LoginException xml bind Unmarshaller JAXBContext annotation XmlAccessType XmlAccessorType XmlElement XmlElementWrapper XmlRootElement XmlType namespace QName parsers DocumentBuilder DocumentBuilderFactory SAXParser SAXParserFactory soap SOAPBody SOAPBodyElement SOAPEnvelope SOAPMessage SOAPPart SOAPException </description>
     </item>
     
     <item>
@@ -150,7 +150,7 @@ https://docs.oracle.com/javafx/2/collections/jfxpub-collections.htm</description
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/java-standard-libraries/standardlibraries/</guid>
-      <description>Generic Array Lists ArrayList&amp;lt;Employee&amp;gt; staff = new ArrayList&amp;lt;Employee&amp;gt;(); var staff = new ArrayList&amp;lt;Employee&amp;gt;(); // diamond syntax ArrayList&amp;lt;Employee&amp;gt; staff = new ArrayList&amp;lt;&amp;gt;(); staff.add(new Employee(&amp;quot;Harry Hacker&amp;quot;, . . .)); staff.add(new Employee(&amp;quot;Tony Tester&amp;quot;, . . .)); staff.ensureCapacity(100); ArrayList&amp;lt;Employee&amp;gt; staff = new ArrayList&amp;lt;&amp;gt;(100); int sz = staff.size(); staff. trimToSize(); Employee e = staff.get(i); // use set only to replace a previously added element. staff.set(i, harry); var a = new X[staff.size()]; staff.toArray(a); int n = staff.</description>
+      <description>Generic Array Lists ArrayList&amp;lt;Employee&amp;gt; staff = new ArrayList&amp;lt;Employee&amp;gt;(); var staff = new ArrayList&amp;lt;Employee&amp;gt;(); // diamond syntax ArrayList&amp;lt;Employee&amp;gt; staff = new ArrayList&amp;lt;&amp;gt;(); staff.add(new Employee(&amp;#34;Harry Hacker&amp;#34;, . . .)); staff.add(new Employee(&amp;#34;Tony Tester&amp;#34;, . . .)); staff.ensureCapacity(100); ArrayList&amp;lt;Employee&amp;gt; staff = new ArrayList&amp;lt;&amp;gt;(100); int sz = staff.size(); staff. trimToSize(); Employee e = staff.get(i); // use set only to replace a previously added element. staff.set(i, harry); var a = new X[staff.size()]; staff.toArray(a); int n = staff.</description>
     </item>
     
     <item>
@@ -161,7 +161,8 @@ https://docs.oracle.com/javafx/2/collections/jfxpub-collections.htm</description
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/java/the-java-standard-library/</guid>
       <description>Collections Interfaces Note that all the core collection interfaces are generic. For example, this is the declaration of the Collection interface.
 public interface Collection&amp;lt;E&amp;gt;... The Collection Interface List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;String&amp;gt;(c); The Collection interface contains methods that perform basic operations, such as
- int size() boolean isEmpty() boolean contains(Object element) boolean add(E element) boolean remove(Object element) Iterator&amp;lt;E&amp;gt; iterator()  It also contains methods that operate on entire collections, such as</description>
+int size() boolean isEmpty() boolean contains(Object element) boolean add(E element) boolean remove(Object element) Iterator&amp;lt;E&amp;gt; iterator() It also contains methods that operate on entire collections, such as
+boolean containsAll(Collection&amp;lt;?</description>
     </item>
     
     <item>
@@ -171,7 +172,7 @@ public interface Collection&amp;lt;E&amp;gt;... The Collection Interface List&am
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/cpp/cpp-library-management/</guid>
       <description>In general, you are going to have to end up with
- Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&amp;rsquo;t need this.  You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).</description>
+Header files in a directory somewhere library files (either static libraries, or DLLs/shared objects). If the library is a header-only library like some of the boost libraries, then you won&amp;rsquo;t need this. You get hold of the library files, either by building them on your machine (typical for open source projects, and projects aimed at Linux platforms), or by downloading the pre-compiled binaries (typical for Windows libraries, particularly paid-for).</description>
     </item>
     
     <item>

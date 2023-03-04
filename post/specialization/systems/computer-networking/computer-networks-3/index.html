@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-3/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,12 +63,11 @@
 <meta property="og:description" content="Introduction and Transport-Layer Services 运输层位于应用层和网络层之间，该层为运行在不同主机上的应用进程提供直接的通信服务，它将网络层的在两个端系统之间的交付服务扩展到运行在" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-3/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-03-07T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-07T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2021-03-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-07T00:00:00+00:00" />
 <meta itemprop="name" content="Transport Layer">
-<meta itemprop="description" content="Introduction and Transport-Layer Services 运输层位于应用层和网络层之间，该层为运行在不同主机上的应用进程提供直接的通信服务，它将网络层的在两个端系统之间的交付服务扩展到运行在"><meta itemprop="datePublished" content="2021-03-07T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-07T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Introduction and Transport-Layer Services 运输层位于应用层和网络层之间，该层为运行在不同主机上的应用进程提供直接的通信服务，它将网络层的在两个端系统之间的交付服务扩展到运行在"><meta itemprop="datePublished" content="2021-03-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-07T00:00:00+00:00" />
 <meta itemprop="wordCount" content="21027">
 <meta itemprop="keywords" content="computer-networking,tcp," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Transport Layer"/>
@@ -558,7 +557,7 @@
 </ul>
 <h6 id="估计往返时间">估计往返时间</h6>
 <p>报文段的样本RTT(表示为SampleRTT)就是从某报文段被发出(即交给IP)到对该报文段的确认被收到之间的时间量。大多数TCP的实现仅在某个时刻做一次SampleRTT测量，而不是为每个发送的报文段测量一个SampleRTT.</p>
-<pre><code>//指数加权移动平均(Exponential Weighted Moving Average,EWMA)。
+<pre tabindex="0"><code>//指数加权移动平均(Exponential Weighted Moving Average,EWMA)。
 //推荐的a=0.25
 EstimatedRTT = (1 – a) • EstimatedRTT + a • SampleRTT
 //推荐的b=0.25
@@ -566,7 +565,7 @@ EstimatedRTT = (1 – a) • EstimatedRTT + a • SampleRTT
 DevRTT = (1 – b) • DevRTT + b•| SampleRTT – EstimatedRTT |
 </code></pre><h6 id="设置和管理重传超时间隔">设置和管理重传超时间隔</h6>
 <p>超时间隔应该大于等于EstimatedRTT,否则将造成不必要的重传。但超时时间间隔也不能比EstimatedRTT大太多，否则当报文段丢失时，TCP不能很快地重传该报文段，导致数据传输时延大。</p>
-<pre><code>//推荐TimeoutInterval值为1秒。超时后，TimeoutInterval值将加倍。
+<pre tabindex="0"><code>//推荐TimeoutInterval值为1秒。超时后，TimeoutInterval值将加倍。
 //一旦报文段收到并更新EstimatedRTT后，TimeoutInterval就使用下式
 TimeoutInterval = EstimatedRTT + 4 • DevRTT
 </code></pre><ul>
@@ -589,7 +588,7 @@ TimeoutInterval = EstimatedRTT + 4 • DevRTT
 <li>超时重发，重启计时器</li>
 <li>收到ACK，更新确认计数器</li>
 </ul>
-<pre><code>/* Assume sender is not constrained by TCP flow or congestion control, that data from above is less than MSS in size, and that data transfer is in one direction only. */
+<pre tabindex="0"><code>/* Assume sender is not constrained by TCP flow or congestion control, that data from above is less than MSS in size, and that data transfer is in one direction only. */
 NextSeqNum=InitialSeqNumber
 SendBase=InitialSeqNumber
 
@@ -652,7 +651,7 @@ loop (forever) {
 <p>接收窗口(receive window)：用于给发送方一个指示：该接收方还有多少可用的缓存空间。TCP通过让发送方维护一个称为接收窗口的变量来控制流量的控制。</p>
 <p>因为TCP是全双工通信，在连接两端的发送方都各自维护一个接收窗口。</p>
 <p>假设主机A通过一条TCP连接向主机B发送一个大文件。主机B为连接分配了一个接收缓存RecvBuffer表示其大小。</p>
-<pre><code>//定义以下变量
+<pre tabindex="0"><code>//定义以下变量
 • LastByteRead: the number of the last byte in the data stream read from the buffer by the application process in B
 • LastByteRcvd: the number of the last byte in the data stream that has arrived from the network and has been placed in the receive buffer at B
 //由于TCP不允许已分配缓存溢出，下式必须成立：
@@ -949,7 +948,7 @@ rwnd = RcvBuffer – [LastByteRcvd – LastByteRead]
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

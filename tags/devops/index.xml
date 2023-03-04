@@ -34,7 +34,7 @@ Sonar checkstyle-idea findbugs-idea PMDPlugin Save Actions</description>
       
       <guid>http://www.yezheng.pro/post/specialization/devops/grafana/</guid>
       <description>Reference
- https://grafana.com/grafana/dashboards/893  </description>
+https://grafana.com/grafana/dashboards/893 </description>
     </item>
     
     <item>
@@ -61,7 +61,7 @@ Sonar checkstyle-idea findbugs-idea PMDPlugin Save Actions</description>
       <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/devops/devops/</guid>
-      <description>What is DevOps? DevOps (a clipped compound of &amp;ldquo;development&amp;rdquo; and &amp;ldquo;operations&amp;quot;) is a software engineering culture and practice that aims at unifying software development (Dev) and software operation (Ops). The main characteristic of the DevOps movement is to strongly advocate automation and monitoring at all steps of software construction, from integration, testing, releasing to deployment and infrastructure management. DevOps aims at shorter development cycles, increased deployment frequency, and more dependable</description>
+      <description>What is DevOps? DevOps (a clipped compound of &amp;ldquo;development&amp;rdquo; and &amp;ldquo;operations&amp;rdquo;) is a software engineering culture and practice that aims at unifying software development (Dev) and software operation (Ops). The main characteristic of the DevOps movement is to strongly advocate automation and monitoring at all steps of software construction, from integration, testing, releasing to deployment and infrastructure management. DevOps aims at shorter development cycles, increased deployment frequency, and more dependable</description>
     </item>
     
     <item>
@@ -85,7 +85,7 @@ mysql -h 172.</description>
       <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/devops/books/</guid>
-      <description>Python for DevOps: Learn Ruthlessly Effective Automation  Hands-On Docker for Microservices with Python: Design, deploy, and operate a complex system with multiple microservices using Docker and Kubernetes
+      <description>Python for DevOps: Learn Ruthlessly Effective Automation Hands-On Docker for Microservices with Python: Design, deploy, and operate a complex system with multiple microservices using Docker and Kubernetes
 Ansible for DevOps: Server and configuration management for humans
 Terraform: Up &amp;amp; Running: Writing Infrastructure as Code
 Kubernetes: Up and Running: Dive into the Future of Infrastructure</description>
@@ -134,7 +134,7 @@ A Kubernetes cluster consists of two types of resources:</description>
       <pubDate>Thu, 25 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/devops/docker/</guid>
-      <description>Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&amp;ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&amp;ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker sudo pacman -S docker systemctl start docker.</description>
+      <description>Set up Docker environment Images and containers An image is an executable package that includes everything needed to run an application&amp;ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&amp;ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers. Install Docker sudo pacman -S docker systemctl start docker.</description>
     </item>
     
     <item>

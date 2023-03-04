@@ -14,10 +14,9 @@
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/generate-model-structs-from-database/</guid>
       <description>Generate gorm model structs from database
-  https://github.com/smallnest/gen
-  https://github.com/wantedly/pq2gorm
-  https://github.com/go-xorm/cmd
-  </description>
+https://github.com/smallnest/gen
+https://github.com/wantedly/pq2gorm
+https://github.com/go-xorm/cmd</description>
     </item>
     
     <item>
@@ -26,7 +25,7 @@
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/gorm/</guid>
-      <description>struct name and table name type User struct {} // default table name is `users` // Set User&#39;s table name to be `profiles` func (User) TableName() string { return &amp;quot;profiles&amp;quot; } gorm不定条件查询和分页操作 making dynamic query and pagination using gorm course := models.Course{} // The global db variable must be assigned to the local db variable. //</description>
+      <description>struct name and table name type User struct {} // default table name is `users` // Set User&amp;#39;s table name to be `profiles` func (User) TableName() string { return &amp;#34;profiles&amp;#34; } gorm不定条件查询和分页操作 making dynamic query and pagination using gorm course := models.Course{} // The global db variable must be assigned to the local db variable. //</description>
     </item>
     
   </channel>

@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="vo  package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } }  dao  import org." />
+  <meta name="description" content="vo package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } } dao import org.apache.ibatis.annotations.Param; public interface IUserDAO { List&amp;lt;UserVO&amp;gt; selectUsers(@Param(“paramVO”) UserVO paramVO); } xml &amp;lt;resultMap id=&amp;#34;userResultMap&amp;#34; type=&amp;#34;User&amp;#34;&amp;gt; &amp;lt;id property=&amp;#34;id&amp;#34; column=&amp;#34;user_id&amp;#34; /&amp;gt; &amp;lt;result property=&amp;#34;username&amp;#34; column=&amp;#34;user_name&amp;#34;/&amp;gt; &amp;lt;result property=&amp;#34;password&amp;#34; column=&amp;#34;hashed_password&amp;#34;/&amp;gt; &amp;lt;/resultMap&amp;gt; &amp;lt;select id=&amp;#34;selectUsers&amp;#34; parameterType=&amp;#34;com." />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/web-application/spring/practice/" />
@@ -53,26 +53,25 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
 
 
 <meta property="og:title" content="Spring Practice" />
-<meta property="og:description" content="vo  package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } }  dao  import org." />
+<meta property="og:description" content="vo package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } } dao import org.apache.ibatis.annotations.Param; public interface IUserDAO { List&lt;UserVO&gt; selectUsers(@Param(“paramVO”) UserVO paramVO); } xml &lt;resultMap id=&#34;userResultMap&#34; type=&#34;User&#34;&gt; &lt;id property=&#34;id&#34; column=&#34;user_id&#34; /&gt; &lt;result property=&#34;username&#34; column=&#34;user_name&#34;/&gt; &lt;result property=&#34;password&#34; column=&#34;hashed_password&#34;/&gt; &lt;/resultMap&gt; &lt;select id=&#34;selectUsers&#34; parameterType=&#34;com." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/web-application/spring/practice/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-11-18T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-11-18T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2020-11-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-11-18T00:00:00+00:00" />
 <meta itemprop="name" content="Spring Practice">
-<meta itemprop="description" content="vo  package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } }  dao  import org."><meta itemprop="datePublished" content="2020-11-18T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-11-18T00:00:00&#43;00:00" />
+<meta itemprop="description" content="vo package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } } dao import org.apache.ibatis.annotations.Param; public interface IUserDAO { List&lt;UserVO&gt; selectUsers(@Param(“paramVO”) UserVO paramVO); } xml &lt;resultMap id=&#34;userResultMap&#34; type=&#34;User&#34;&gt; &lt;id property=&#34;id&#34; column=&#34;user_id&#34; /&gt; &lt;result property=&#34;username&#34; column=&#34;user_name&#34;/&gt; &lt;result property=&#34;password&#34; column=&#34;hashed_password&#34;/&gt; &lt;/resultMap&gt; &lt;select id=&#34;selectUsers&#34; parameterType=&#34;com."><meta itemprop="datePublished" content="2020-11-18T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-11-18T00:00:00+00:00" />
 <meta itemprop="wordCount" content="173">
 <meta itemprop="keywords" content="Spring-boot," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Spring Practice"/>
-<meta name="twitter:description" content="vo  package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } }  dao  import org."/>
+<meta name="twitter:description" content="vo package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } } dao import org.apache.ibatis.annotations.Param; public interface IUserDAO { List&lt;UserVO&gt; selectUsers(@Param(“paramVO”) UserVO paramVO); } xml &lt;resultMap id=&#34;userResultMap&#34; type=&#34;User&#34;&gt; &lt;id property=&#34;id&#34; column=&#34;user_id&#34; /&gt; &lt;result property=&#34;username&#34; column=&#34;user_name&#34;/&gt; &lt;result property=&#34;password&#34; column=&#34;hashed_password&#34;/&gt; &lt;/resultMap&gt; &lt;select id=&#34;selectUsers&#34; parameterType=&#34;com."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -326,7 +325,7 @@
       <ul>
 <li>vo</li>
 </ul>
-<pre><code>package com.someapp.vo;
+<pre tabindex="0"><code>package com.someapp.vo;
 public class UserVO {
   private int id;
   private String username;
@@ -354,7 +353,7 @@ public class UserVO {
 </code></pre><ul>
 <li>dao</li>
 </ul>
-<pre><code>import org.apache.ibatis.annotations.Param;
+<pre tabindex="0"><code>import org.apache.ibatis.annotations.Param;
 
 public interface IUserDAO {
   List&lt;UserVO&gt; selectUsers(@Param(“paramVO”) UserVO paramVO);
@@ -362,34 +361,34 @@ public interface IUserDAO {
 </code></pre><ul>
 <li>xml</li>
 </ul>
-<pre><code>&lt;resultMap id=&quot;userResultMap&quot; type=&quot;User&quot;&gt;
-  &lt;id property=&quot;id&quot; column=&quot;user_id&quot; /&gt;
-  &lt;result property=&quot;username&quot; column=&quot;user_name&quot;/&gt;
-  &lt;result property=&quot;password&quot; column=&quot;hashed_password&quot;/&gt;
+<pre tabindex="0"><code>&lt;resultMap id=&#34;userResultMap&#34; type=&#34;User&#34;&gt;
+  &lt;id property=&#34;id&#34; column=&#34;user_id&#34; /&gt;
+  &lt;result property=&#34;username&#34; column=&#34;user_name&#34;/&gt;
+  &lt;result property=&#34;password&#34; column=&#34;hashed_password&#34;/&gt;
 &lt;/resultMap&gt;
 
-&lt;select id=&quot;selectUsers&quot;  parameterType=&quot;com.someapp.vo.User&quot;  resultMap=&quot;userResultMap&quot;&gt;
+&lt;select id=&#34;selectUsers&#34;  parameterType=&#34;com.someapp.vo.User&#34;  resultMap=&#34;userResultMap&#34;&gt;
   select user_id, user_name, hashed_password
   from some_table
- &lt;include refid=&quot;whereList&quot;/&gt;
+ &lt;include refid=&#34;whereList&#34;/&gt;
 &lt;/select&gt;
 
-&lt;sql id=&quot;whereList&quot;&gt; 
+&lt;sql id=&#34;whereList&#34;&gt; 
 WHERE 1 = 1
-  &lt;if test=&quot;ParamVO.title != null&quot;&gt;
+  &lt;if test=&#34;ParamVO.title != null&#34;&gt;
     AND title = #{paramVO.title}
   &lt;/if&gt;
 &lt;/sql&gt;
 </code></pre><ul>
 <li>service</li>
 </ul>
-<pre><code>@Path(“/api”)
+<pre tabindex="0"><code>@Path(“/api”)
 public interface IUserService {
   @POST
   @Path(“/v1/users”)
   ReturnVO selectUsers(UserVO userVO);
 }
-</code></pre><pre><code>@named
+</code></pre><pre tabindex="0"><code>@named
 public UserService implements IUserService {
 	@Inject
 	private IUserDAO userDAO;
@@ -577,7 +576,7 @@ public UserService implements IUserService {
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

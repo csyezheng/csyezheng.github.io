@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>courses on Ye Zheng&#39;s Blog</title>
+    <link>http://www.yezheng.pro/categories/courses/</link>
+    <description>Recent content in courses on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 23 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/categories/courses/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS106AX: Programming Methodologies in JavaScript and Python</title>
+      <link>http://www.yezheng.pro/post/courses/cs106ax/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/courses/cs106ax/</guid>
+      <description>JavaScript JavaScript Basics JavaScript Graphics Interactive Graphics Timer-Based Animation Advanced Animation Strings Arrays Objects Binary Representation Cryptography Enigma Machine Overview Python Strings Lists Dictionaries Objects Object-Oriented Programming Objects and Abstraction Data-Driven Programs Adventure Web Programming Interactors CSS Asynchronous Requests HTTP Building Web Applications </description>
+    </item>
+    
+    <item>
+      <title>CS106X: Programming Abstractions in C&#43;&#43;</title>
+      <link>http://www.yezheng.pro/post/courses/cs106x/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/courses/cs106x/</guid>
+      <description>CS106X: Programming Abstractions in C++ Description 使用C ++介绍了基本的编程概念和软件工程技术。解决问题的技能，基本的抽象数据类型和递归。常规主题包括基本编程方法（工程，模块化，</description>
+    </item>
+    
+  </channel>
+</rss>

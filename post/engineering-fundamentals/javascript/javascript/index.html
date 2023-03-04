@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //" />
+  <meta name="description" content="A Tour of JavaScript Lexical grammar The Text of a JavaScript Program JavaScript is a case-sensitive language. JavaScript ignores spaces that appear between tokens in programs. For the most part, JavaScript also ignores line breaks. let a a = 3 console.log(a) JavaScript interprets this code like this: let a; a = 3; console.log(a); Comments // This is a single-line comment. /* This is also a comment */ // and here" />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/engineering-fundamentals/javascript/javascript/" />
@@ -53,26 +53,25 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
 
 
 <meta property="og:title" content="JavaScript" />
-<meta property="og:description" content="概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //" />
+<meta property="og:description" content="A Tour of JavaScript Lexical grammar The Text of a JavaScript Program JavaScript is a case-sensitive language. JavaScript ignores spaces that appear between tokens in programs. For the most part, JavaScript also ignores line breaks. let a a = 3 console.log(a) JavaScript interprets this code like this: let a; a = 3; console.log(a); Comments // This is a single-line comment. /* This is also a comment */ // and here" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/engineering-fundamentals/javascript/javascript/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-03-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2019-03-01T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2019-03-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-03-01T00:00:00+00:00" />
 <meta itemprop="name" content="JavaScript">
-<meta itemprop="description" content="概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //"><meta itemprop="datePublished" content="2019-03-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-03-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="5067">
+<meta itemprop="description" content="A Tour of JavaScript Lexical grammar The Text of a JavaScript Program JavaScript is a case-sensitive language. JavaScript ignores spaces that appear between tokens in programs. For the most part, JavaScript also ignores line breaks. let a a = 3 console.log(a) JavaScript interprets this code like this: let a; a = 3; console.log(a); Comments // This is a single-line comment. /* This is also a comment */ // and here"><meta itemprop="datePublished" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="10577">
 <meta itemprop="keywords" content="JavaScript," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="JavaScript"/>
-<meta name="twitter:description" content="概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //"/>
+<meta name="twitter:description" content="A Tour of JavaScript Lexical grammar The Text of a JavaScript Program JavaScript is a case-sensitive language. JavaScript ignores spaces that appear between tokens in programs. For the most part, JavaScript also ignores line breaks. let a a = 3 console.log(a) JavaScript interprets this code like this: let a; a = 3; console.log(a); Comments // This is a single-line comment. /* This is also a comment */ // and here"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -317,22 +316,926 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#a-tour-of-javascript">A Tour of JavaScript</a>
+      <ul>
+        <li><a href="#lexical-grammar">Lexical grammar</a></li>
+        <li><a href="#primitive-data-types">Primitive Data Types</a></li>
+        <li><a href="#expressions-and-operators">Expressions and Operators</a></li>
+        <li><a href="#statements">Statements</a></li>
+        <li><a href="#objects">Objects</a></li>
+        <li><a href="#arrays">Arrays</a></li>
+        <li><a href="#functions">Functions</a></li>
+        <li><a href="#classes">Classes</a></li>
+      </ul>
+    </li>
+    <li><a href="#modules">Modules</a></li>
+    <li><a href="#the-javascript-standard-library">The JavaScript Standard Library</a>
+      <ul>
+        <li><a href="#built-in-functions">Built-in Functions</a></li>
+      </ul>
+    </li>
+    <li><a href="#iterators-and-generators">Iterators and Generators</a></li>
+    <li><a href="#asynchronous-javascript">Asynchronous JavaScript</a></li>
+    <li><a href="#metaprogramming">Metaprogramming</a></li>
+    <li><a href="#client-side-web-apis">Client-side web APIs</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#server-side-javascript-with-node">Server-Side JavaScript with Node</a></li>
+    <li><a href="#javascript-tools-and-extensions">JavaScript Tools and Extensions</a>
+      <ul>
+        <li><a href="#code-bundling">Code Bundling</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
 </div>
 
     
     <div class="post-content">
-      <p>概要
+      <h2 id="a-tour-of-javascript">A Tour of JavaScript</h2>
+<h3 id="lexical-grammar">Lexical grammar</h3>
+<h4 id="the-text-of-a-javascript-program">The Text of a JavaScript Program</h4>
+<ul>
+<li>
+<p>JavaScript is a case-sensitive language.</p>
+</li>
+<li>
+<p>JavaScript ignores spaces that appear between tokens in programs.  For
+the most part, JavaScript also ignores line breaks.</p>
+<pre tabindex="0"><code>let a
+a
+=
+3
+console.log(a)
+</code></pre><p>JavaScript interprets this code like this:</p>
+<pre tabindex="0"><code>let a; a = 3; console.log(a);
+</code></pre></li>
+</ul>
+<h4 id="comments">Comments</h4>
+<pre tabindex="0"><code>// This is a single-line comment.
+/* This is also a comment */   // and here is another comment.
+/*
+* This is a multi-line comment. The extra * characters at the start of
+* each line are not a required part of the syntax; they just look cool!
+*/
+</code></pre><p>The <strong>hashbang comment</strong> begins with <code>#!</code> and <strong>is only valid at the absolute start of a script or module</strong>. The JavaScript interpreter will treat it as a normal comment — it only has semantic meaning to the shell if the script is directly run in a shell.</p>
+<pre tabindex="0"><code>#!/usr/bin/env node
+
+console.log(&#34;Hello world&#34;);
+</code></pre><h4 id="variable">Variable</h4>
+<p>A JavaScript identifier usually starts with a letter, underscore (<code>_</code>), or dollar sign (<code>$</code>). Subsequent characters can also be digits (<code>0</code> – <code>9</code>).</p>
+<p>JavaScript is <strong>case sensitive</strong>.</p>
+<p>You can also use the Unicode escape sequences as characters in identifiers.</p>
+<h6 id="declaration">Declaration</h6>
+<ul>
+<li>
+<p>var</p>
+<p>Declares a <strong>function-scoped</strong> or <strong>globally-scoped</strong> variable, optionally initializing it to a value.</p>
+<p>Variables declared with var do not have block scope. they are scoped to the body of the containing function <strong>no matter how deeply nested they are inside that function</strong>.</p>
+<pre tabindex="0"><code>var x;
+</code></pre><p>If you use var outside of a function body, it declares a global variable. Globals
+declared with var are implemented as <strong>properties of the global object</strong>. The global object can be referenced as <strong><code>globalThis</code></strong>. The properties created with global var declarations cannot be deleted with the <code>delete</code> operator.</p>
+<pre tabindex="0"><code>var x = 2;             # declares outside of a function body
+globalThis.x;          # =&gt; 2
+</code></pre><p>Unlike variables declared with <code>let</code>, it is legal to declare the same variable multiple times with <code>var</code>, and it is actually common to do this kind of redeclaration.</p>
+<p>One of the most unusual features of var declarations is known as <strong>hoisting</strong> (提升). When a variable is declared with var, the declaration is lifted up (or “hoisted”) to the top of the enclosing function. So variables declared with var can be used, without error, anywhere in the enclosing function. If the initialization code has not run yet, then the value of <strong>the variable may be undefined, but you won’t get an error if you use the variable before it is initialized</strong>.</p>
+</li>
+<li>
+<p>let</p>
+<p>Declares a <strong>block-scoped</strong>, local variable, optionally initializing it to a value.</p>
+<p>Global variables and constants declared with <code>let</code> and <code>const</code> are not properties of the global object.</p>
+</li>
+<li>
+<p>const</p>
+<p>Declares a <strong>block-scoped</strong>, read-only named constant.</p>
+<p>However, if a constant is an <strong>object</strong> or <strong>array</strong> its properties or items can be updated or removed.</p>
+</li>
+<li>
+<p>undeclared</p>
+<p>In strict mode, if you attempt to use an undeclared variable, you’ll get a reference error when you run your code. Outside of strict mode, however, if you assign a value to a name that has not been declared with <code>let</code>, <code>const</code>, or <code>var</code>, you’ll end up <strong>creating a new global variable</strong>, these properties can be deleted with the <code>delete</code> operator.</p>
+</li>
+</ul>
+<h6 id="initialization">Initialization</h6>
+<p>In <code>var</code> and <code>let</code> declarations, the initializer is optional. If a variable is declared without an initializer, it is assigned the value <code>undefined</code>.</p>
+<p><code>const</code> declarations always need an initializer.</p>
+<pre tabindex="0"><code>let x;                   // undefined
+let x = 42;              // declaration and initialization
+</code></pre><h6 id="variable-scope">Variable scope</h6>
+<p>A variable may belong to one of the following scopes:</p>
+<ul>
+<li><strong>Global scope</strong>: The default scope for all code running in script mode.</li>
+<li><strong>Module scope</strong>: The scope for code running in module mode.</li>
+<li><strong>Function scope</strong>: The scope created with a function.</li>
+</ul>
+<p>In addition, variables declared with <code>let</code> or <code>const</code> can belong to an additional scope:</p>
+<ul>
+<li><strong>Block scope</strong>: The scope created with a pair of curly braces (a block).</li>
+</ul>
+<p>When you declare a variable outside of any function, it is called a <strong>global variable</strong>, because it is available to any other code in the current document. When you declare a variable within a function, it is called a <strong>local variable</strong>, because it is available only within that function.</p>
+<p><code>let</code> and <code>const</code> declarations can also be scoped to the block statement that they are declared in. However, variables created with <code>var</code> are not block-scoped, but only local to the <em>function (or global scope)</em> that the block resides within.</p>
+<h6 id="variable-hoisting">Variable hoisting</h6>
+<p><code>var</code>-declared variables are <em><strong>hoisted</strong></em>, meaning you can refer to the variable anywhere in its scope, even if its declaration isn&rsquo;t reached yet. You can see <code>var</code> declarations as being &ldquo;lifted&rdquo; to the top of its function or global scope. However, if you access a variable before it&rsquo;s declared, the value is always <code>undefined</code>, because only its <em>declaration</em> is hoisted, but not its <em>initialization</em>.</p>
+<pre tabindex="0"><code>console.log(x === undefined); // true
+var x = 3;
+
+(function() {
+  console.log(x); // undefined
+  var x = &#39;local value&#39;;
+})();
+</code></pre><p>Because of hoisting, all <code>var</code> statements in a function should be placed as near to the top of the function as possible. This best practice increases the clarity of the code.</p>
+<p><code>let</code> and <code>const</code> -declared variables are not <em><strong>hoisted</strong></em>.</p>
+<h6 id="global-variables">Global variables</h6>
+<p>Global variables are in fact properties of the <em><strong>global object</strong></em>.</p>
+<p>In web pages, the global object is <strong>window</strong>, so you can set and access global variables using the <strong><code>window.variable</code></strong> syntax. In all environments, you can use the <strong>globalThis</strong> variable (which itself is a global variable) to access global variables.</p>
+<h6 id="constants">Constants</h6>
+<p><code>const</code> <strong>only prevents re-assignments</strong>, but <strong>doesn&rsquo;t prevent mutations</strong>. The properties of objects assigned to constants are not protected, so the following statement is executed without problems.</p>
+<pre tabindex="0"><code>const MY_OBJECT = { key: &#39;value&#39; };
+MY_OBJECT.key = &#39;otherValue&#39;;
+</code></pre><p>Also, the contents of an array are not protected</p>
+<pre tabindex="0"><code>const MY_ARRAY = [&#39;HTML&#39;,&#39;CSS&#39;];
+MY_ARRAY.push(&#39;JAVASCRIPT&#39;);
+console.log(MY_ARRAY); // [&#39;HTML&#39;, &#39;CSS&#39;, &#39;JAVASCRIPT&#39;];
+</code></pre><h4 id="literals">Literals</h4>
+<p>A literal is a data value that appears directly in a program.</p>
+<h6 id="null-literal">Null literal</h6>
+<pre tabindex="0"><code>null                            // Absence of an object
+</code></pre><h6 id="boolean-literal">Boolean literal</h6>
+<pre tabindex="0"><code>true                            // A Boolean value
+false                           // The other Boolean value
+</code></pre><h6 id="numeric-literals">Numeric literals</h6>
+<p>The <strong>Number</strong> and <strong>BigInt</strong> types use numeric literals.</p>
+<ul>
+<li>
+<p><strong>Decimal</strong></p>
+<pre tabindex="0"><code>1234567890
+42
+1.2  // The number one point two
+0888 // 888 parsed as decimal
+0777 // parsed as octal, 511 in decimal
+</code></pre><p>Decimal literals can start with a zero (0) followed by another decimal digit, but if all digits after the leading 0 are smaller than 8, the number is interpreted as an octal number. Number literals prefixed with 0, whether interpreted as octal or decimal, cause a syntax error in strict mode — so, <strong>use the 0o prefix instead</strong>.</p>
+</li>
+<li>
+<p><strong>EXPONENTIAL</strong></p>
+<pre tabindex="0"><code>0e-5   // 0
+0e+5   // 0
+5e1    // 50
+175e-2 // 1.75
+1e3    // 1000
+1e-3   // 0.001
+1E3    // 1000
+</code></pre></li>
+<li>
+<p><strong>Binary</strong> (leading with <code>0b</code> or <code>0B</code>)</p>
+<pre tabindex="0"><code>0b10000000000000000000000000000000 // 2147483648
+0b01111111100000000000000000000000 // 2139095040
+0B00000000011111111111111111111111 // 8388607
+</code></pre></li>
+<li>
+<p><strong>Octal</strong> (leading with <code>0o</code> or <code>0O</code>)</p>
+<pre tabindex="0"><code>0O755 // 493
+0o644 // 420
+</code></pre></li>
+<li>
+<p><strong>Hexadecimal</strong> (leading with <code>0x</code> or <code>0x</code>)</p>
+<p>Any character after the <code>0x</code> that is outside the range (0123456789ABCDEF) will terminate the literal sequence.</p>
+<pre tabindex="0"><code>0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+0x123456789ABCDEF   // 81985529216486900
+0XA                 // 10
+</code></pre></li>
+<li>
+<p><strong>BigInt literal</strong> (appending <code>n</code> to the end of an integer)</p>
+<pre tabindex="0"><code>123456789123456789n     // 123456789123456789
+0o777777777777n         // 68719476735
+0x123456789ABCDEFn      // 81985529216486895
+0b11101001010101010101n // 955733
+</code></pre><p>For octal BigInt numbers, always use zero followed by the letter &ldquo;o&rdquo; (uppercase or lowercase):</p>
+<pre tabindex="0"><code>0o755n;
+</code></pre></li>
+</ul>
+<p><strong>Numeric separators</strong></p>
+<p>To improve readability for numeric literals, underscores (<code>_</code>, <code>U+005F</code>) can be used as separators:</p>
+<pre tabindex="0"><code>1_000_000_000_000
+1_050.95
+0b1010_0001_1000_0101
+0o2_2_5_6
+0xA0_B0_C0
+1_000_000_000_000_000_000_000n
+</code></pre><h6 id="string-literals">String literals</h6>
+<p>When generating these String values Unicode code points are UTF-16 encoded.</p>
+<pre tabindex="0"><code>&#39;foo&#39;
+&#34;bar&#34;
+</code></pre><ul>
+<li>
+<p><strong>Hexadecimal escape sequences</strong> (two hexadecimal digits following <code>x</code>)</p>
+<pre tabindex="0"><code>&#34;\xA9&#34;; // &#34;©&#34; 
+</code></pre></li>
+<li>
+<p><strong>Unicode escape sequences</strong> (four hexadecimal digits following <code>\u</code>)</p>
+<p>It represents a code unit in the UTF-16 encoding.</p>
+<pre tabindex="0"><code>&#34;\u00A9&#34;; // &#34;©&#34; (U+A9)
+</code></pre></li>
+<li>
+<p>Unicode code point escapes</p>
+<pre tabindex="0"><code>&#34;\u{2F804}&#34;; // CJK COMPATIBILITY IDEOGRAPH-2F804 (U+2F804)
+
+// the same character represented as a surrogate pair
+&#34;\uD87E\uDC04&#34;;
+</code></pre></li>
+</ul>
+<h6 id="array-literals">Array literals</h6>
+<pre tabindex="0"><code>const coffees = [&#39;French Roast&#39;, &#39;Colombian&#39;, &#39;Kona&#39;];
+</code></pre><h6 id="object-literals">Object literals</h6>
+<pre tabindex="0"><code>const car = { myCar: &#39;Saturn&#39;, getCar: carTypes(&#39;Honda&#39;), special: sales };
+</code></pre><h6 id="regular-expression-literals">Regular expression literals</h6>
+<p>Regular expression literals are enclosed by two forward slashes (<code>/</code>).</p>
+<pre tabindex="0"><code>/ab+c/g
+</code></pre><p>A regular expression literal cannot start with two forward slashes (<code>//</code>), because that would be a line comment. To specify an empty regular expression, use <code>/(?:)/</code></p>
+<pre tabindex="0"><code> /(?:)/
+</code></pre><h6 id="template-literals">Template literals</h6>
+<pre tabindex="0"><code>`string text ${expression} string text`
+
+tagFunction`string text ${expression} string text`
+
+`\`` === &#34;`&#34;; // true
+`\${1}` === &#34;${1}&#34;; // true
+</code></pre><p>Using template literals for <strong>multi-line strings</strong></p>
+<pre tabindex="0"><code>console.log(`string text line 1
+string text line 2`);
+// &#34;string text line 1
+// string text line 2&#34;
+</code></pre><p>Using template literals for <strong>string interpolation</strong></p>
+<pre tabindex="0"><code>const a = 5;
+const b = 10;
+console.log(`Fifteen is ${a + b} and
+not ${2 * a + b}.`);
+// &#34;Fifteen is 15 and
+// not 20.&#34;
+</code></pre><p><strong>Tagged templates</strong> allow you to parse template literals with a function. The first argument of a tag function contains an array of string values. The remaining arguments are related to the expressions.</p>
+<pre tabindex="0"><code>const person = &#34;Mike&#34;;
+const age = 28;
+
+function myTag(strings, personExp, ageExp) {
+  const str0 = strings[0]; // &#34;That &#34;
+  const str1 = strings[1]; // &#34; is a &#34;
+  const str2 = strings[2]; // &#34;.&#34;
+
+  const ageStr = ageExp &gt; 99 ? &#34;centenarian&#34; : &#34;youngster&#34;;
+
+  // We can even return a string built using a template literal
+  return `${str0}${personExp}${str1}${ageStr}${str2}`;
+}
+
+const output = myTag`That ${person} is a ${age}.`;
+
+console.log(output);
+// That Mike is a youngster.
+</code></pre><p>The special <code>raw</code> property, available on the first argument to the tag function, allows you to access the raw strings as they were entered, without processing escape sequences.</p>
+<pre tabindex="0"><code>function tag(strings) {
+  console.log(strings.raw[0]);
+}
+
+tag`string text line 1 \n string text line 2`;
+// Logs &#34;string text line 1 \n string text line 2&#34; ,
+// including the two characters &#39;\&#39; and &#39;n&#39;
+</code></pre><p>In addition, the <code>String.raw()</code> method exists to create raw strings just like the default template function and string concatenation would create.</p>
+<pre tabindex="0"><code>const str = String.raw`Hi\n${2 + 3}!`;
+// &#34;Hi\\n5!&#34;
+
+str.length;
+// 6
+
+Array.from(str).join(&#34;,&#34;);
+// &#34;H,i,\\,n,5,!&#34;
+</code></pre><h4 id="keywords">Keywords</h4>
+<h4 id="unicode-escape-sequences">Unicode Escape Sequences</h4>
+<p>Early versions of JavaScript only supported the four-digit escape sequence.</p>
+<pre tabindex="0"><code>let café = 1;         // Define a variable using a Unicode character
+caf\u00e9             // =&gt; 1; access the variable using an escape sequence
+caf\u{E9}             // =&gt; 1; another form of the same escape sequence
+</code></pre><p>The version with curly braces was introduced in ES6 to better support Unicode codepoints that require more than 16 bits, such as emoji:</p>
+<pre tabindex="0"><code>console.log(&#34;\u{1F600}&#34;);         // Prints a smiley face emoji
+</code></pre><h4 id="optional-semicolons">Optional Semicolons</h4>
+<p>Many JavaScript programmers (and the code in this book) use semicolons to explicitly mark the ends of statements, even where they are not required.</p>
+<h3 id="primitive-data-types">Primitive Data Types</h3>
+<h4 id="number">Number</h4>
+<p>An <strong>integer</strong> or <strong>floating point number</strong>.</p>
+<h4 id="bigint">BigInt</h4>
+<h4 id="string">String</h4>
+<p>A sequence of characters with single quote or double quote.</p>
+<h4 id="boolean">Boolean</h4>
+<p><code>true</code> and <code>false</code></p>
+<h4 id="null">null</h4>
+<p>A special keyword denoting a null value.</p>
+<h4 id="undefined">undefined</h4>
+<p>A top-level property whose value is not defined.</p>
+<h4 id="symbols">Symbols</h4>
+<p>A data type whose instances are <strong>unique</strong> and <strong>immutable</strong>.</p>
+<h4 id="immutable-primitive-values-and-mutable-object-references">Immutable Primitive Values and Mutable Object References</h4>
+<p>Primitives are <strong>immutable</strong> and they are <strong>compared by value</strong>.</p>
+<p>Objects are <strong>mutable</strong> and they are <strong>compared by reference</strong>.</p>
+<pre tabindex="0"><code>let a = [];
+let b = a;
+b[0] = 1;
+a[0]                  // =&gt; 1: the change is also visible through variable a.
+a === b               // true
+</code></pre><p><strong>defines a function to compare objects or arrays</strong></p>
+<pre tabindex="0"><code>function equalArrays(a, b) {
+    if (a === b) 
+    	return true;              // Identical arrays are equal
+    if (a.length !== b.length) 
+    	return false;            
+    for(let i = 0; i &lt; a.length; i++) {  // Loop through all elements
+        if (a[i] !== b[i]) 
+            return false;
+    }
+    return true;
+}
+</code></pre><h4 id="data-type-conversions">Data Type Conversions</h4>
+<p>JavaScript is a <strong>dynamically typed language</strong>. This means you don&rsquo;t have to specify the data type of a variable when you declare it. It also means that data types are automatically converted as-needed during script execution.</p>
+<pre tabindex="0"><code>let answer = 42;
+answer = &#39;Thanks for all the fish!&#39;;           # won&#39;t cause an error
+</code></pre><p>JavaScript is very flexible about the types of values it requires.</p>
+<h6 id="explicit-conversions">Explicit Conversions</h6>
+<pre tabindex="0"><code>Number(&#34;3&#34;)                  // =&gt; 3
+String(false)                // =&gt; &#34;false&#34;:  Or use false.toString()
+Boolean([])                  // =&gt; true
+</code></pre><p>Any value other than null or undefined has a <strong><code>toString()</code></strong> method, and the result of this method is usually the same as that returned by the <code>String()</code> function.</p>
+<pre tabindex="0"><code>let n = 17;
+let binary = &#34;0b&#34; + n.toString(2);      // binary == &#34;0b10001&#34;
+let octal = &#34;0o&#34; + n.toString(8);       // octal == &#34;0o21&#34;
+let hex = &#34;0x&#34; + n.toString(16);        // hex == &#34;0x11&#34;
+</code></pre><p>The Number class defines three methods for these kinds of number-to-string conversions.</p>
+<ul>
+<li><strong><code>Number.prototype.toFixed()</code></strong></li>
+<li><strong><code>Number.prototype.toExponential()</code></strong></li>
+<li><strong><code>Number.prototype.toPrecision()</code></strong></li>
+</ul>
+<pre tabindex="0"><code>let n = 123456.789;
+n.toFixed(0)                     // =&gt; &#34;123457&#34;
+n.toFixed(2)                     // =&gt; &#34;123456.79&#34;
+n.toFixed(5)                     // =&gt; &#34;123456.78900&#34;
+n.toExponential(1)               // =&gt; &#34;1.2e+5&#34;
+n.toExponential(3)               // =&gt; &#34;1.235e+5&#34;
+n.toPrecision(4)                 // =&gt; &#34;1.235e+5&#34;
+n.toPrecision(7)                 // =&gt; &#34;123456.8&#34;
+n.toPrecision(10)                // =&gt; &#34;123456.7890&#34;
+</code></pre><p>The <strong><code>parseInt()</code></strong> and <strong><code>parseFloat()</code></strong> functions (these are global functions, not methods of any class) are more flexible.</p>
+<pre tabindex="0"><code>parseInt(&#39;101&#39;, 2)               // 5, 2 base radix
+parseFloat(&#34;  3.14  &#34;);          // 3.14
+parseFloat(&#34; 3.14 meters&#34;)       // 3.14
+parseFloat(&#34;314e-2&#34;);            // 3.14
+parseFloat(&#34;FF2&#34;);               // NAN
+</code></pre><h6 id="implicit-conversions">Implicit conversions</h6>
+<p>If one operand of the <strong><code>+</code></strong> operator is a string, it converts the other one to a string.</p>
+<p>The unary <strong><code>+</code></strong> operator converts its operand to a number.</p>
+<p>The unary <strong><code>!</code></strong> operator converts its operand to a boolean and negates it.</p>
+<pre tabindex="0"><code>x + &#34;&#34;                  // =&gt; String(x)
++x                      // =&gt; Number(x)
+x-0                     // =&gt; Number(x)
+!!x                     // // =&gt; Boolean(x): Note double !
+</code></pre><pre tabindex="0"><code>let n = 1 - &#34;x&#34;;    // n == NaN; string &#34;x&#34; can&#39;t convert to a number
+n + &#34; objects&#34;      // =&gt; &#34;NaN objects&#34;: NaN converts to string &#34;NaN&#34;
+&#39;37&#39; + 7            // &#34;377&#34;
+</code></pre><pre tabindex="0"><code>&#39;37&#39; - 7            // =&gt; 30
+&#34;7&#34; * &#34;4&#34;           // =&gt; 28: both strings convert to numbers
+</code></pre><pre tabindex="0"><code>&#39;1.1&#39; + &#39;1.1&#39; // &#39;1.11.1&#39;
+(+&#39;1.1&#39;) + (+&#39;1.1&#39;) // 2.2
+// Note: the parentheses are added for clarity, not required.
+</code></pre><h6 id="object-to-primitive-conversions">Object to Primitive Conversions</h6>
+<ul>
+<li>
+<p>Object-to-boolean</p>
+<p>all objects convert to true</p>
+<pre tabindex="0"><code>new Boolean(false)    // it&#39;s object not primitive, it converts to true 
+</code></pre></li>
+<li>
+<p>Object-to-string</p>
+<p>call <code>toString()</code> or <code>valueOf()</code> method, then convert to string</p>
+</li>
+<li>
+<p>Object-to-number</p>
+<p>call <code>valueOf()</code>  or <code>toString()</code> method, then convert to number</p>
+</li>
+<li>
+<p>Special case operators</p>
+<p>The <code>+</code>,  <code>==</code> and <code>!=</code> operators and the relational operators <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, and <code>&gt;=</code>  convert object to a primitive value.</p>
+</li>
+</ul>
+<h3 id="expressions-and-operators">Expressions and Operators</h3>
+<h4 id="expressions">Expressions</h4>
+<h6 id="object-and-array-initializers">Object and Array Initializers</h6>
+<pre tabindex="0"><code>let matrix = [[1,2,3], [4,5,6], [7,8,9]];
+let p = { x: 2.3, y: -1.2 };           // An object with 2 properties
+</code></pre><h6 id="function-definition">Function Definition</h6>
+<pre tabindex="0"><code>let square = function(x) { return x * x; };
+</code></pre><h6 id="property-access">Property Access</h6>
+<pre tabindex="0"><code>expression . identifier
+expression [ expression ]
+</code></pre><p><strong>Conditional Property Access</strong></p>
+<p>The optional chaining (?.) operator accesses an object&rsquo;s property or calls a function.</p>
+<p>If the object accessed or function called is undefined or null, it returns undefined instead of throwing an error.</p>
+<pre tabindex="0"><code>expression ?. identifier
+expression ?.[ expression ]
+</code></pre><pre tabindex="0"><code>const adventurer = {
+  name: &#39;Alice&#39;,
+  cat: {
+    name: &#39;Dinah&#39;
+  }
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);             
+// expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// expected output: undefined
+</code></pre><h6 id="invocation">Invocation</h6>
+<pre tabindex="0"><code>f(0)
+Math.max(x,y,z)
+a.sort()
+</code></pre><p><strong>Conditional Invocation</strong></p>
+<pre tabindex="0"><code>f?.(0)
+</code></pre><h6 id="this">this</h6>
+<p>Use the <code>this</code> keyword to refer to the current object. In general, this refers to the calling object in a method.</p>
+<pre tabindex="0"><code>this[&#39;propertyName&#39;]
+this.propertyName
+</code></pre><h6 id="new">new</h6>
+<p>create an instance of a user-defined object type or of one of the built-in object types.</p>
+<pre tabindex="0"><code>const objectName = new objectType(param1, param2, /* …, */ paramN);
+</code></pre><h6 id="super">super</h6>
+<p>The <code>super</code> keyword is used to call functions on an object&rsquo;s parent. It is useful with classes to call the parent constructor.</p>
+<pre tabindex="0"><code>super([arguments]); // calls the parent constructor.
+super.functionOnParent([arguments]);
+</code></pre><h4 id="operators">Operators</h4>
+<h6 id="assignment-operators">Assignment operators</h6>
+<pre tabindex="0"><code>=, +=, -=, *=, /=, %/, &lt;&lt;=, &gt;&gt;=, &gt;&gt;&gt;=, &amp;=, |=, ^=
+</code></pre><h6 id="comparison-operators">Comparison operators</h6>
+<pre tabindex="0"><code>==, !=, ===, !==, &gt;, &gt;=, &lt;, &lt;= 
+</code></pre><ul>
+<li>
+<p>Strict equality (===)</p>
+<pre tabindex="0"><code>OneType === SecondType       // false if different types
+Object === Object            // true if refer to the same object
+null === null                // null only equals to null
+undefined === undefined      // undefined only equals to undefined
+NaN === NaN                  // false If either operand is NaN
++0 === -0                    // true
+</code></pre></li>
+<li>
+<p>Equality (==)</p>
+<p>It attempts to convert and compare operands that are of different types.</p>
+<pre tabindex="0"><code>// same type
+Object == Object             // true if reference the same object
+Number == Number             // +0 equals to -0, NaN not equals to NaN
+Symbol == Symbol             // true if reference the same symbol
+</code></pre><pre tabindex="0"><code>// one of the operands is null or undefined
+null == undefined            // true
+</code></pre><pre tabindex="0"><code>// converted to primitives: String, Number, Boolean, Symbol, BigInt
+Object == PrimitiveType      // toPrimitive(), valueOf(), toString()
+</code></pre><pre tabindex="0"><code>// At this step, both operands are converted to primitives
+Symbol == NotSymbol             // false
+Boolean == NotBoolean           // boolean convert to 1 or 0
+Number == String                // string convert to number or NaN
+Number == BigInt                // false if the number is ±Infinity or NaN
+String == BigInt                // string convert to BigInt, false if convert failed
+</code></pre></li>
+</ul>
+<h6 id="arithmetic-operators">Arithmetic operators</h6>
+<pre tabindex="0"><code>%, ++, --, -, +, **
+</code></pre><h6 id="bitwise-operators">Bitwise operators</h6>
+<pre tabindex="0"><code>&amp;, |, ^, ~, &lt;&lt;, &gt;&gt;, &gt;&gt;&gt;
+</code></pre><h6 id="logical-operators">Logical operators</h6>
+<p>logical expressions are evaluated using &ldquo;<strong>short-circuit</strong>&rdquo;.</p>
+<pre tabindex="0"><code>&amp;&amp; || !
+</code></pre><h6 id="bigint-operators">BigInt operators</h6>
+<pre tabindex="0"><code>const a = Number(1n) + 2; // 3
+const b = 1n + BigInt(2); // 3n
+</code></pre><h6 id="string-operators">String operators</h6>
+<pre tabindex="0"><code>&#39;my &#39; + &#39;string&#39;
+</code></pre><h6 id="conditional-ternary-operator">Conditional (ternary) operator</h6>
+<pre tabindex="0"><code>condition ? exprIfTrue : exprIfFalse
+</code></pre><h6 id="comma-operator">Comma operator</h6>
+<p>The comma operator (<code>,</code>) evaluates both of its operands and returns the value of the last operand.</p>
+<h6 id="unary-operators">Unary operators</h6>
+<ul>
+<li>
+<p>delete</p>
+<pre tabindex="0"><code>delete object.property
+delete object[property]
+delete objectName[index];
+
+delete Math.PI; // returns false (cannot delete non-configurable properties)
+</code></pre><p><code>delete</code> elements from array is  regarded as a <strong>bad practice</strong>, try to avoid it.</p>
+<pre tabindex="0"><code>let arr = [0, 1, 2, 3];
+delete arr[2];           // return true
+arr                      // [0, 1, empty, 3]
+</code></pre><p>When you delete an array property, the array <strong>length is not affected</strong> and <strong>other elements are not re-indexed</strong>. To achieve that behavior, it is much better to just overwrite the element with the value <code>undefined</code>. To actually manipulate the array, use the various array methods such as <code>splice</code>.</p>
+</li>
+<li>
+<p>typeof</p>
+<pre tabindex="0"><code>typeof 3.14 === &#34;number&#34;;
+typeof Math.LN2 === &#34;number&#34;;
+typeof Infinity === &#34;number&#34;;  
+typeof 42n === &#34;bigint&#34;;
+typeof true === &#34;boolean&#34;;
+typeof Symbol(&#34;foo&#34;) === &#34;symbol&#34;;
+
+typeof undefined === &#34;undefined&#34;;
+typeof null === &#34;object&#34;;
+
+typeof { a: 1 } === &#34;object&#34;;
+typeof [1, 2, 4] === &#34;object&#34;;
+typeof new Date() === &#34;object&#34;;
+typeof /regex/ === &#34;object&#34;;
+
+// The following are confusing, dangerous, and wasteful. Avoid them.
+typeof new Boolean(true) === &#34;object&#34;;
+typeof new Number(1) === &#34;object&#34;;
+typeof new String(&#34;abc&#34;) === &#34;object&#34;;
+
+// Functions
+typeof function () {} === &#34;function&#34;;
+typeof class C {} === &#34;function&#34;;
+typeof Math.sin === &#34;function&#34;;
+</code></pre></li>
+<li>
+<p>void</p>
+<p>The <code>void</code> operator evaluates the given expression and then returns undefined.</p>
+<pre tabindex="0"><code>void expression
+</code></pre></li>
+</ul>
+<h6 id="relational-operators">Relational operators</h6>
+<ul>
+<li>
+<p>in</p>
+<pre tabindex="0"><code>propNameOrNumber in objectName           // true or false
+</code></pre></li>
+<li>
+<p>instanceof</p>
+<pre tabindex="0"><code>const literalString = &#34;This is a literal string&#34;;
+const stringObject = new String(&#34;String created with constructor&#34;);
+
+literalString instanceof String; // false, string primitive is not a String
+stringObject instanceof String; // true
+
+literalString instanceof Object; // false, string primitive is not an Object
+stringObject instanceof Object; // true
+</code></pre></li>
+</ul>
+<h6 id="destructuring-assignment">Destructuring assignment</h6>
+<p>The <strong>destructuring assignment</strong> syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.</p>
+<pre tabindex="0"><code>let [x,y] = [1,2];        // Same as let x=1, y=2
+[x,y] = [x+1,y+1];        // Same as x = x + 1, y = y + 1
+[x,y] = [y,x];            // Swap the value of the two variables
+[x,y]                     // =&gt; [3,2]: the incremented and swapped values 
+
+const a = [1, 2, 3, 4, 5];
+const [b, c] = a;       // Same const b=1, c=2
+</code></pre><pre tabindex="0"><code>const obj = { a: 1, b: 2 };     
+const { a, b } = obj;    // const a = obj.a, b = obj.b;
+</code></pre><pre tabindex="0"><code>let o = { x: 1, y: 2 };               // The object we&#39;ll loop over
+for(const [name, value] of Object.entries(o)) {
+	console.log(name, value);         // Prints &#34;x 1&#34; and &#34;y 2&#34;
+}
+</code></pre><p>The number of variables on the left of a destructuring assignment does not have to match the number of array elements on the right.</p>
+<pre tabindex="0"><code>let [x,y] = [1];         // x == 1; y == undefined
+[x,y] = [1,2,3];         // x == 1; y == 2
+[,x,,y] = [1,2,3,4];     // x == 2; y == 4
+</code></pre><p><strong>rest property</strong>, use three dots (&hellip;) before the last variable name on the left-hand side</p>
+<pre tabindex="0"><code>let [x, ...y] = [1,2,3,4];         // y == [2,3,4]
+</code></pre><p>nested arrays</p>
+<pre tabindex="0"><code>let [a, [b, c]] = [1, [2,2.5], 3]; // a == 1; b == 2; c ==
+2.5
+</code></pre><p>use any <strong>iterable</strong> object on the righthand side of the assignment; any object that can be used with a <code>for / of</code> loop can also be destructured:</p>
+<pre tabindex="0"><code>let [first, ...rest] = &#34;Hello&#34;; // first == &#34;H&#34;; rest ==[&#34;e&#34;,&#34;l&#34;,&#34;l&#34;,&#34;o&#34;]
+</code></pre><pre tabindex="0"><code>let transparent = {r: 0.0, g: 0.0, b: 0.0, a: 1.0}; // A RGBA color
+let {r, g, b} = transparent; // r == 0.0; g == 0.0; b == 0.0
+</code></pre><p>assignment global functions of the Math object into variables</p>
+<pre tabindex="0"><code>// Same as const sin=Math.sin, cos=Math.cos, tan=Math.tan
+const {sin, cos, tan} = Math;
+</code></pre><p>Each of the identifiers on the lefthand side of an object destructuring assignment can also be a colon-separated pair of identifiers, where the first is the name of the property whose value is to be assigned and the second is the name of the variable to assign it to:</p>
+<pre tabindex="0"><code>// Same as const cosine = Math.cos, tangent = Math.tan;
+const { cos: cosine, tan: tangent } = Math;
+</code></pre><p>destructuring an array of objects</p>
+<pre tabindex="0"><code>let points = [{x: 1, y: 2}, {x: 3, y: 4}];
+let [{x: x1, y: y1}, {x: x2, y: y2}] = points; 
+</code></pre><p>destructure an object of arrays</p>
+<pre tabindex="0"><code>let points = { p1: [1,2], p2: [3,4] };
+let { p1: [x1, y1], p2: [x2, y2] } = points;
+</code></pre><h4 id="examples">examples</h4>
+<pre tabindex="0"><code>// Operators act on values (the operands) to produce a new value.
+// Arithmetic operators are some of the simplest:
+3 + 2                        // =&gt; 5: addition
+3 - 2                        // =&gt; 1: subtraction
+3 * 2                        // =&gt; 6: multiplication
+3 / 2                        // =&gt; 1.5: division
+points[1].x - points[0].x    // =&gt; 1: more complicated operands also work
+&#34;3&#34; + &#34;2&#34;                    // =&gt; &#34;32&#34;: + adds numbers, concatenates strings
+
+// JavaScript defines some shorthand arithmetic operators
+let count = 0;               // Define a variable
+count++;                     // Increment the variable
+count--;                     // Decrement the variable
+count += 2;                  // Add 2: same as count = count + 2;
+count *= 3;                  // Multiply by 3: same as count = count * 3;
+count                        // =&gt; 6: variable names are expressions, too.
+
+// Equality and relational operators test whether two values are equal,
+// unequal, less than, greater than, and so on. They evaluate to true or false.
+let x = 2, y = 3;            // These = signs are assignment, not equality tests
+x === y                      // =&gt; false: equality
+x !== y                      // =&gt; true: inequality
+x &lt; y                        // =&gt; true: less-than
+x &lt;= y                       // =&gt; true: less-than or equal
+x &gt; y                        // =&gt; false: greater-than
+x &gt;= y                       // =&gt; false: greater-than or equal
+&#34;two&#34; === &#34;three&#34;            // =&gt; false: the two strings are different
+&#34;two&#34; &gt; &#34;three&#34;              // =&gt; true: &#34;tw&#34; is alphabetically greater than &#34;th&#34;
+false === (x &gt; y)            // =&gt; true: false is equal to false     
+
+// Logical operators combine or invert boolean values
+(x === 2) &amp;&amp; (y === 3)       // =&gt; true: both comparisons are true. &amp;&amp; is AND
+(x &gt; 3) || (y &lt; 3)           // =&gt; false: neither comparison is true. || is OR
+!(x === y)                   // =&gt; true: ! inverts a boolean value
+</code></pre><h3 id="statements">Statements</h3>
+<pre tabindex="0"><code>// JavaScript statements include conditionals and loops using
+the syntax
+// of C, C++, Java, and other languages.
+function abs(x) {                 // A function to compute the absolute value.
+    if (x &gt;= 0) {                 // The if statement...
+    	return x;                 // executes this code if the comparison is true.
+    }                             // This is the end of the if clause.
+	else {                        // The optional else clause executes its code if
+		return -x;                // the comparison is false.
+	}                             // Curly braces optional when 1 statement per clause.
+}                                 // Note return statements nested inside if/else.
+abs(-10) === abs(10)              // =&gt; true
+
+function sum(array) {             // Compute the sum of the elements
+of an array
+	let sum = 0;                  // Start with an initial sum of 0.
+	for(let x of array) {         // Loop over array, assigning each element to x.
+		sum += x;                 // Add the element value to the sum.
+	}                             // This is the end of the loop.
+	return sum;                   // Return the sum.
+}
+sum(primes)                       // =&gt; 28: sum of the first 5 primes 2+3+5+7+11
+
+function factorial(n) {           // A function to compute factorials
+    let product = 1;              // Start with a product of 1
+    while(n &gt; 1) {                // Repeat statements in {} while expr in () is true             
+        product *= n;             // Shortcut for product = product * n;
+        n--;                      // Shortcut for n = n - 1
+	}	                          // End of loop
+    return product;               // Return the product
+}
+factorial(4)                      // =&gt; 24: 1*4*3*2
+
+function factorial2(n) {          // Another version using a different loop
+	let i, product = 1;           // Start with 1
+	for(i=2; i &lt;= n; i++)         // Automatically increment i from 2 up to n
+		product *= i;             // Do this each time. {} not needed for 1-line loops
+	return product;               // Return the factorial
+}
+factorial2(5)                     // =&gt; 120: 1*2*3*4*5
+</code></pre><h6 id="ifelse-ifelse">if&hellip;else if&hellip;else</h6>
+<pre tabindex="0"><code>if (condition1)
+  statement1
+else if (condition2)
+  statement2
+// …
+else
+  statementN
+</code></pre><h6 id="switch">switch</h6>
+<pre tabindex="0"><code>switch (expression) {
+  case value1:
+    [break;]
+  case value2:
+    [break;]
+  ...
+  [default:
+    [break;]]
+}
+</code></pre><h6 id="while">while</h6>
+<pre tabindex="0"><code>while (condition)
+  statement
+</code></pre><h6 id="dowhile">do&hellip;while</h6>
+<pre tabindex="0"><code>let i = 0;
+do {
+  i = i + 1;
+} while (i &lt; 5);
+</code></pre><h6 id="for">for</h6>
+<pre tabindex="0"><code>let str = &#39;&#39;;
+for (let i = 0; i &lt; 9; i++) {
+  str = str + i;
+}
+</code></pre><h6 id="forof">for&hellip;of</h6>
+<pre tabindex="0"><code>const array1 = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;];
+for (const element of array1) {
+  console.log(element);           // &#39;a&#39;, &#39;b&#39;, &#39;c&#39;
+}
+</code></pre><h6 id="forin">for&hellip;in</h6>
+<p>The <code>for...in</code> statement will return the name of your user-defined properties in addition to the numeric indexes when iterating over arrays.</p>
+<pre tabindex="0"><code>const object = { a: 1, b: 2, c: 3 };
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+</code></pre><p>While <code>for...in</code> iterates over property names, <code>for...of</code> iterates over property values:</p>
+<pre tabindex="0"><code>const arr = [3, 5, 7];
+arr.foo = &#39;hello&#39;;
+for (const i in arr) {
+  console.log(i);                 // &#34;0&#34; &#34;1&#34; &#34;2&#34; &#34;foo&#34;
+}
+for (const i of arr) {
+  console.log(i);                 // Logs: 3 5 7
+}
+</code></pre><pre tabindex="0"><code>const obj = { foo: 1, bar: 2 };
+for (const [key, val] of Object.entries(obj)) {
+  console.log(key, val);
+}
+// &#34;foo&#34; 1
+// &#34;bar&#34; 2
+</code></pre><h6 id="label">label</h6>
+<pre tabindex="0"><code>mainloop: while(token !== null) {
+    // Code omitted...
+    continue mainloop; // Jump to the next iteration of the named loop
+    // More code omitted...
+}
+</code></pre><h6 id="break">break</h6>
+<h6 id="continue">continue</h6>
+<h6 id="return">return</h6>
+<h6 id="yield">yield</h6>
+<pre tabindex="0"><code>function* foo(index) {
+  while (index &lt; 2) {
+    yield index;
+    index++;
+  }
+}
+const iterator = foo(0);
+console.log(iterator.next().value);          // expected output: 0
+console.log(iterator.next().value);          // expected output: 1
+</code></pre><h6 id="throw">throw</h6>
+<pre tabindex="0"><code>throw &#39;Error2&#39;; // generates an exception with a string value
+throw 42;       // generates an exception with the value 42
+throw true;     // generates an exception with the value true
+throw new Error(&#39;Required&#39;);  // generates an error object with the message of Required
+</code></pre><pre tabindex="0"><code>function UserException(message) {
+  this.message = message;
+  this.name = &#39;UserException&#39;;
+}
+throw new UserException(&#39;message&#39;);
+</code></pre><pre tabindex="0"><code>class ZipCodeFormatException extends Error {
+  constructor(msg) {
+    super(msg);
+  }
+}
+throw new ZipCodeFormatException(msg);
+</code></pre><h6 id="trycatchfinally">try&hellip;catch&hellip;finally</h6>
+<pre tabindex="0"><code>try {
+  tryStatements
+} catch (exceptionVar) {
+  catchStatements
+} finally {
+  finallyStatements
+}
+</code></pre><h6 id="debugger">debugger</h6>
+<p>If no debugging functionality is available, this statement has no effect.</p>
+<h3 id="objects">Objects</h3>
+<h3 id="arrays">Arrays</h3>
+<pre tabindex="0"><code>// JavaScript&#39;s most important datatype is the object.
+// An object is a collection of name/value pairs, or a string to value map.
+let book = {              // Objects are enclosed in curly braces.
+    topic: &#34;JavaScript&#34;,  // The property &#34;topic&#34; has value &#34;JavaScript&#34;
+	edition: 7            // The property &#34;edition&#34; has value 7
+};                        // The curly brace marks the end of the object.
+
+// Access the properties of an object with . or []:
+book.topic                // =&gt; &#34;JavaScript&#34;
+book[&#34;edition&#34;]           // =&gt; 7: another way to access property values.
+book.author = &#34;Flanagan&#34;; // Create new properties by assignment.
+book.contents = {};       // {} is an empty object with no properties.
+
+// Conditionally access properties with ?. (ES2020):
+book.contents?.ch01?.sect1 // =&gt; undefined: book.contents has no ch01 property.
+
+// JavaScript also supports arrays (numerically indexed lists) of values:
+let primes = [2, 3, 5, 7]; // An array of 4 values, delimited with [ and ].
+primes[0]                  // =&gt; 2: the first element (index 0) of the array.
+primes.length              // =&gt; 4: how many elements in the array.
+primes[primes.length-1]    // =&gt; 7: the last element of the array.
+primes[4] = 9;             // Add a new element by assignment.
+primes[4] = 11;            // Or alter an existing element by
+assignment.
+let empty = [];            // [] is an empty array with no elements.
+empty.length               // =&gt; 0
+
+// Arrays and objects can hold other arrays and objects:
+let points = [             // An array with 2 elements.
+	{x: 0, y: 0},          // Each element is an object.
+	{x: 1, y: 1}
+];
+let data = {               // An object with 2 properties
+	trial1: [[1,2], [3,4]], // The value of each property is an array.
+	trial2: [[2,3], [4,5]]  // The elements of the arrays are arrays.
+};
+</code></pre><h3 id="functions">Functions</h3>
+<pre tabindex="0"><code>// Functions are parameterized blocks of JavaScript code that we can invoke.
+function plus1(x) {          // Define a function named &#34;plus1&#34; with parameter &#34;x&#34;
+	return x + 1;            // Return a value one larger than the value passed in
+}                            // Functions are enclosed in curly braces
+
+plus1(y)                     // =&gt; 4: y is 3, so this invocation returns 3+1
+
+let square = function(x) {   // Functions are values and can be assigned to vars
+	return x * x;            // Compute the function&#39;s value
+};                           // Semicolon marks the end of the assignment.
+
+
+square(plus1(y))             // =&gt; 16: invoke two functions in one expression
+</code></pre><p><strong>arrow functions</strong> (shorthand syntax for defining functions).</p>
+<pre tabindex="0"><code>const plus1 = x =&gt; x + 1;    // The input x maps to the output x + 1
+const square = x =&gt; x * x;   // The input x maps to the output x * x
+plus1(y)                     // =&gt; 4: function invocation is the same
+square(plus1(y))             // =&gt; 16
+</code></pre><p>When we use functions with objects, we get <strong>methods</strong>:</p>
+<pre tabindex="0"><code>// When functions are assigned to the properties of an object, we call
+// them &#34;methods.&#34; All JavaScript objects (including arrays) have methods:
+let a = [];                     // Create an empty array
+a.push(1,2,3);                  // The push() method adds elements to an array
+a.reverse();                    // Another method: reverse the order of elements
+
+// We can define our own methods, too. The &#34;this&#34; keyword refers to the object
+// on which the method is defined: in this case, the points array from earlier.
+points.dist = function() {      // Define a method to compute distance between points
+	let p1 = this[0];           // First element of array we&#39;re invoked on
+	let p2 = this[1];           // Second element of the &#34;this&#34;
+object
+	let a = p2.x-p1.x;          // Difference in x coordinates
+	let b = p2.y-p1.y;          // Difference in y coordinates
+	return Math.sqrt(a*a +      // The Pythagorean theorem
+	                 b*b);      // Math.sqrt() computes the square root
+};
+points.dist()                   // =&gt; Math.sqrt(2): distance between our 2 points
+</code></pre><h3 id="classes">Classes</h3>
+<pre tabindex="0"><code>class Point {                      // By convention, class names are capitalized.
+    constructor(x, y) {            // Constructor function to initialize new instances.
+    	this.x = x;                // This keyword is the new object being initialized.
+    	this.y = y;                // Store function arguments as object properties.
+    }                              // No return is necessary in constructor functions.
+    
+    distance() {                   // Method to compute distance from origin to point.
+        return Math.sqrt(          // Return the square root of x2 + y2.
+        	this.x * this.x +      // this refers to the Point object on which
+            this.y * this.y        // the distance method is invoked.
+        );
+    }
+}
+
+// Use the Point() constructor function with &#34;new&#34; to create Point objects
+let p = new Point(1, 1);           // The geometric point (1,1).
+ 
+// Now use a method of the Point object p
+p.distance()                       // =&gt; Math.SQRT2
+</code></pre><h2 id="modules">Modules</h2>
+<h2 id="the-javascript-standard-library">The JavaScript Standard Library</h2>
+<h3 id="built-in-functions">Built-in Functions</h3>
+<h6 id="eval">eval()</h6>
+<p>The <code>eval()</code> function evaluates JavaScript code represented as a string and returns its completion value.</p>
+<pre tabindex="0"><code>eval(&#39;2 + 2&#39;)                         // 4
+</code></pre><h2 id="iterators-and-generators">Iterators and Generators</h2>
+<h2 id="asynchronous-javascript">Asynchronous JavaScript</h2>
+<h2 id="metaprogramming">Metaprogramming</h2>
+<h2 id="client-side-web-apis">Client-side web APIs</h2>
+<h4 id="web-programming-basics">Web Programming Basics</h4>
+<h4 id="drawing-graphics">Drawing graphics</h4>
+<h4 id="video-and-audio-apis">Video and Audio APIs</h4>
+<h4 id="client-side-storage">Client-side storage</h4>
+<h2 id="server-side-javascript-with-node">Server-Side JavaScript with Node</h2>
+<h2 id="javascript-tools-and-extensions">JavaScript Tools and Extensions</h2>
+<h3 id="code-bundling">Code Bundling</h3>
+<h4 id="webpack">Webpack</h4>
+<p>To minify HTML, try <a href="https://github.com/kangax/html-minifier">HTMLMinifier</a> To minify CSS, try <a href="https://github.com/ben-eb/cssnano">CSSNano</a> and <a href="https://github.com/css/csso">csso</a>. To minify JavaScript, try <a href="https://github.com/mishoo/UglifyJS2">UglifyJS</a>. The <a href="https://developers.google.com/closure/compiler">Closure Compiler</a> is also <a href="https://github.com/samccone/The-cost-of-transpiling-es2015-in-2016#summary-of-findings">very effective</a>. You can create a <strong>build process that uses these tools to minify</strong> and rename the development files and save them to a production directory.</p>
+<ul>
+<li>HTMLMinifier</li>
+<li>CSSNano</li>
+<li>UglifyJS</li>
+</ul>
+<p>概要
 1.1 JavaScript语言核心
 // 注释
-/*
-*  多行注释
+/*</p>
+<pre><code>*  多行注释
 */
 let x;      // 声明变量
 x = 0;      // 赋值
-x              // 获取值</p>
-<pre><code>// 注释
+x              // 获取值
+
+// 注释
 /*
  *  多行注释
  */
@@ -340,8 +1243,7 @@ let x;      // 声明变量
 x = 0;      // 赋值
 x              // 获取值
 </code></pre>
-<p>​
-​	// &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; data type &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+<p>​	// &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; data type &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
 ​
 ​	x = 1;          // 数字类型
 ​	x = 0.01;        // 整数和实数共用一种数据类型
@@ -367,26 +1269,26 @@ x              // 获取值
 ​		.replace(&ldquo;h&rdquo;, &ldquo;H&rdquo;)
 ​		.toUpperCase()
 ​	
-/pattern/        // 正则表达式直接量
-/pattern/i        // 忽略小写
-/pattern/g       // 全局
-let text = &ldquo;testing: 1, 2, 3&rdquo;;
-let pattern = /\d+/g           <br>
-pattern.test(text)                   // return boolean
-text.search(pattern)              // 返回首次匹配成功的位置
-text.match(pattern)              //所有匹配组成的数组
-text.replace(pattern, &ldquo;#&quot;);       // =&gt; &ldquo;testing: #, #, #&rdquo;
-text.split(/D+/);         // =&gt; [&quot;&rdquo;, &ldquo;1&rdquo;, &ldquo;2&rdquo;, &ldquo;3&rdquo;] 用非数字字符截取字符串
-x = true;         // 布尔值
-x = false;        // 另一个布尔值
-x = null;         // null 是一个特殊的值，意思是“空”
-typeof(null)      // return &ldquo;object&rdquo;
-x = undefined;
-typeof(underfined)      // return &ldquo;underfined&rdquo;
-null == underfined     // return true
-null === underfined    // return false
-// object
-// array</p>
+​		/pattern/        // 正则表达式直接量
+​		/pattern/i        // 忽略小写
+​		/pattern/g       // 全局
+​		let text = &ldquo;testing: 1, 2, 3&rdquo;;
+​		let pattern = /\d+/g           <br>
+​		pattern.test(text)                   // return boolean
+​		text.search(pattern)              // 返回首次匹配成功的位置
+​		text.match(pattern)              //所有匹配组成的数组
+​		text.replace(pattern, &ldquo;#&rdquo;);       // =&gt; &ldquo;testing: #, #, #&rdquo;
+​		text.split(/D+/);         // =&gt; [&quot;&quot;, &ldquo;1&rdquo;, &ldquo;2&rdquo;, &ldquo;3&rdquo;] 用非数字字符截取字符串
+​	x = true;         // 布尔值
+​	x = false;        // 另一个布尔值
+​	x = null;         // null 是一个特殊的值，意思是“空”
+​		typeof(null)      // return &ldquo;object&rdquo;
+​	x = undefined;
+​		typeof(underfined)      // return &ldquo;underfined&rdquo;
+​		null == underfined     // return true
+​		null === underfined    // return false
+​	// object
+​	// array</p>
 <pre><code>// 对象是键值对的集合，字符串到值得映射
 let book = {
 	topic: &quot;JavaScript&quot;,
@@ -453,7 +1355,7 @@ for (let i = 0; i &lt; a.length; i++) {
 function equalArrays(a, b) {
 	if (a.length != b.length) return false;
 	for (let i = 0; i &lt; a.length; i++)
-        if (a[i] !== b[i] return false;
+		if (a[i] !== b[i] return false;
 	return true;
 }
 
@@ -548,55 +1450,55 @@ d instanceof Object;     // true      所有对象都是object的实例
 ​
 ​	plus1(y)
 ​
-let square = function(x) {
-return x*x;
-};                                                                     // 分号标识了赋值语句的结束</p>
-<pre><code>square(plus1(u))                                         // 在一个表达式中调用两个函数
-
-// 当函数赋值给对象的属性，称为“method&quot;，所有的JavaScript对象都含有方法
-let a = []
-a.plush(1, 2, 3)
-a.reverse();
-
-// 自定义方法，this 是对定义方法的对象的引用
-points.dist = function() {
-	let p1 = this[0];
-	let p2 = this[2];
-	let a = p2.x - p1.x;
-	let b = p2.y - p1.y，吗 
-	return Math.sqrt(a * a + b * b);
-};
-points.dist()
-
-// ------------------------------ control sentence ------------------------------------ 
-
+​	let square = function(x) {
+​		return x*x;
+​	};                                                                     // 分号标识了赋值语句的结束
+​
+​	square(plus1(u))                                         // 在一个表达式中调用两个函数
+​
+​	// 当函数赋值给对象的属性，称为“method&quot;，所有的JavaScript对象都含有方法
+​	let a = []
+​	a.plush(1, 2, 3)
+​	a.reverse();
+​
+​	// 自定义方法，this 是对定义方法的对象的引用
+​	points.dist = function() {
+​		let p1 = this[0];
+​		let p2 = this[2];
+​		let a = p2.x - p1.x;
+​		let b = p2.y - p1.y，吗
+​		return Math.sqrt(a * a + b * b);
+​	};
+​	points.dist()
+​
+​	// &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; control sentence &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
+​
 function abx(x) {
-	if (x &gt; 0) {
-        return x;
-	} else if (x = 0) {
-        return x;
-	} else {
-        return -x;
-	}
+if (x &gt; 0) {
+return x;
+} else if (x = 0) {
+return x;
+} else {
+return -x;
 }
-
-switch(n) {
+}</p>
+<pre><code>switch(n) {
 	case 1:
-        statements
-        break;
+		statements
+		break;
 	case 2;
-        statements
-        break;
+		statements
+		break;
 	default:
-        statements
-        break;
+		statements
+		break;
 }
 
 function factorial(n) {
 	let product = 1;
 	while (n &gt; 1) {
-        product *= n;
-        n--;
+		product *= n;
+		n--;
 	}
 	return product;
 }
@@ -606,7 +1508,7 @@ factorial(4);
 function factorial2(n) {
 	let i, product = 1;
 	for (i = 2; i &lt;= n; i++)
-        product *= i;
+		product *= i;
 	return product;
 }
 
@@ -645,11 +1547,11 @@ debugger;
 JavaScript对象是动态的，可新增属性，也可删除属性。对象是可变的，而且简单拷贝其实是引用。
 直接量:
 	let book = {
-        &quot;main title&quot;: &quot;JavaScript&quot;,          // 属性名里用空格或连字符或保留字，必须用字符串表示
-        author: {
-            firstname: &quot;David&quot;,
-            surname: &quot;Flanagan&quot;
-        }
+		&quot;main title&quot;: &quot;JavaScript&quot;,          // 属性名里用空格或连字符或保留字，必须用字符串表示
+		author: {
+			firstname: &quot;David&quot;,
+			surname: &quot;Flanagan&quot;
+		}
 	};
 使用new:
 	let o = new Object();
@@ -668,13 +1570,13 @@ Object.create():
 	let o3 = Object.create(Object.prototype);       // =&gt; {}   the same as new Object()
 	
 	function inherit(p) {
-        if (p == null) throw TypeError();
-        if (Object.create) return Object.create(p);
-        let t = typeof p;
-        if (t !== &quot;object&quot; &amp;&amp; t != &quot;function&quot;) throw TypeError();
-        function f() {};                        // 定义一个新的构造函数
-        f.prototype = p;                       // 将其原型属性设为p
-        return new f();
+		if (p == null) throw TypeError();
+		if (Object.create) return Object.create(p);
+		let t = typeof p;
+		if (t !== &quot;object&quot; &amp;&amp; t != &quot;function&quot;) throw TypeError();
+		function f() {};                        // 定义一个新的构造函数
+		f.prototype = p;                       // 将其原型属性设为p
+		return new f();
 	}
 	
 	通过编写构造函数定义对象的“类”。
@@ -688,80 +1590,80 @@ Object.create():
 	delete object.attribute;
 	
 	检测是否包含属性：
-        attributeName in object              // true or not      自由属性和继承属性都检测
-        object.hasOwnPreperty(attributeName)       // true or not 仅检测自有属性
-        propertyIsEnumerable()                // true or not 仅检测可枚举的自有属性
+		attributeName in object              // true or not      自由属性和继承属性都检测
+		object.hasOwnPreperty(attributeName)       // true or not 仅检测自有属性
+		propertyIsEnumerable()                // true or not 仅检测可枚举的自有属性
 	枚举：
-        function extend(o, o) {
-            for (prop in p) {
-                o[prop] = p[prop];
-            }
-            return o;
-        }
-        function merge(o, p) {
-            for (prop in p) {
-                if (o.hasOwnProperty[prop] continue;
-                o[prop] = p[prop];
-            }
-            return 0;
-        }
-        function restrict(o, p) {
-            for (prop in o) {
-                if (! (prop in p)) delete o[prop];
-            }
-            return o;
-        }
-        function subtract (o, p) {
-            for (prop in p) {
-                delete o[prop];
-            }
-            return o;
-        }
-        function union(o, p) { return extend(extend({}, o), p); }
+		function extend(o, o) {
+			for (prop in p) {
+				o[prop] = p[prop];
+			}
+			return o;
+		}
+		function merge(o, p) {
+			for (prop in p) {
+				if (o.hasOwnProperty[prop] continue;
+				o[prop] = p[prop];
+			}
+			return 0;
+		}
+		function restrict(o, p) {
+			for (prop in o) {
+				if (! (prop in p)) delete o[prop];
+			}
+			return o;
+		}
+		function subtract (o, p) {
+			for (prop in p) {
+				delete o[prop];
+			}
+			return o;
+		}
+		function union(o, p) { return extend(extend({}, o), p); }
 		
-        function intersection(o, p) { return restrict(extend({}, o), p); }
+		function intersection(o, p) { return restrict(extend({}, o), p); }
 		
-        function keys(o) {
-            if (typeof o !== &quot;object&quot;) throw TypeError();
-            let result = [];
-            for (let prop in o) {
-                if (o.hasOwnProperty(prop))
-                    result.push(prop);
-            }
-            return result;
-        }
+		function keys(o) {
+			if (typeof o !== &quot;object&quot;) throw TypeError();
+			let result = [];
+			for (let prop in o) {
+				if (o.hasOwnProperty(prop))
+					result.push(prop);
+			}
+			return result;
+		}
 	
 	getter, setter:
-        对象的存取器属性getter, setter, 定义存取器属性使用对象直接量，用get, set替代function关键字
-        var o = {
-            $data_prop: value,                                         // $ 起始的属性名为私有属性
-            get accessor_prop() { /* 函数体 */};
-            set accessor_prop() { /* 函数体 */};
-        }
-        若同名属性只有get, 没有set则为只读
+		对象的存取器属性getter, setter, 定义存取器属性使用对象直接量，用get, set替代function关键字
+		var o = {
+			$data_prop: value,                                         // $ 起始的属性名为私有属性
+			get accessor_prop() { /* 函数体 */};
+			set accessor_prop() { /* 函数体 */};
+		}
+		若同名属性只有get, 没有set则为只读
 	Object.getOwnPropertyDescriptor()
-        获得某个对象特定属性的特性描述符
+		获得某个对象特定属性的特性描述符
 	Object.defineProperty()
-        设置属性的特性
+		设置属性的特性
 	Object.getPrototypeOf()
-        查询原型，但并不可靠，constructor.prototype才是真的原型，Object.create()则不是
+		查询原型，但并不可靠，constructor.prototype才是真的原型，Object.create()则不是
 	o.isProtypeOf(p)         
-        // 检测p是否是o的原型
+		// 检测p是否是o的原型
 	类属性：
-        function classof (o) {
-            if (o === null) return &quot;Null&quot;;
-            if (o === underfined) return &quot;Underfined&quot;;
-            return Object.prototype.toString.call(o).slice(8, -1);
-        }
+		function classof (o) {
+			if (o === null) return &quot;Null&quot;;
+			if (o === underfined) return &quot;Underfined&quot;;
+			return Object.prototype.toString.call(o).slice(8, -1);
+		}
 	序列化对象：
-        JSON.stringify()             //序列化对象           只能序列化可枚举的自由属性
-        JSON.parse()                 // 还原对象          不会还原日期对象
-        函数 RegExp undefined Error对象不能序列化和还原
+		JSON.stringify()             //序列化对象           只能序列化可枚举的自由属性
+		JSON.parse()                 // 还原对象          不会还原日期对象
+		函数 RegExp undefined Error对象不能序列化和还原
 	对象方法：
-        Object.toString()
-        Object.toLocalString()            // 会针对DateTime, Number 做本地化转换
-        Object.toJSON()
-        Object.valueOf()                 // 将对象转换为原始值而非字符串的时候调用
+		Object.toString()
+		Object.toLocalString()            // 会针对DateTime, Number 做本地化转换
+		Object.toJSON()
+		Object.valueOf()                 // 将对象转换为原始值而非字符串的时候调用
 
 
 // ------------------------------------- Array -----------------------------------
@@ -799,8 +1701,8 @@ forEach():
 	let data = [1, 2, 3, 4, 5];
 	let sumOfSquares = 0;
 	data.forEach(function(x) {
-        sumOfSquares += x*x;
-        });
+		sumOfSquares += x*x;
+		});
 	sumOfSquares    
 	
 Array.join()
@@ -812,8 +1714,8 @@ Array.reverse()
 Array.sort()
 	// 返回排序后的数组，不改变原数组，可选谓词做参数
 	a.sort(function(a, b) {
-            return b - a;
-        });
+			return b - a;
+		});
 Array.concat(array)
 	// 创建并返回拼接的新数组
 Array.slice(start, end)
@@ -883,8 +1785,8 @@ let p = new Point(1, 1);             // 平面几何中的点(1, 1)
 // 通过给构造函数的prototype对象赋值来给Point对象定义方法
 Point.prototype.r = function() {
 	return Math.sqrt(
-        this.x * this.y +
-        this.y * this.y)
+		this.x * this.y +
+		this.y * this.y)
 	);
 };
 
@@ -917,10 +1819,10 @@ function debug(msg) {
 	let log = document.getElementById(&quot;debuglog&quot;);
 	// 如果document不存在这个元素，则创建一个
 	if (!log) {
-        log = document.createElement(&quot;div&quot;);
-        log.id = &quot;debuglog&quot;;
-        log.innerHTML = &quot;&lt;h1&gt;Debug Log&lt;/h1&gt;&quot;;                #定义初始内容
-        doucument.body.appendChild(log);              
+		log = document.createElement(&quot;div&quot;);
+		log.id = &quot;debuglog&quot;;
+		log.innerHTML = &quot;&lt;h1&gt;Debug Log&lt;/h1&gt;&quot;;                #定义初始内容
+		doucument.body.appendChild(log);              
 	}
 	let pre = document.createElement(&quot;pre&quot;);
 	let text = document.createTextNode(&quot;msg&quot;);                  # 将msg包装在一个文本节点中
@@ -932,10 +1834,10 @@ function debug(msg) {
 
 function hide(e, reflow) {                       // 通过JavaScript操作样式来隐藏元素e
 	if (reflow) {                                    // 如果第二个参数是true
-        e.style.display = &quot;none&quot;                             // 隐藏这个元素，所占空间也消失
+		e.style.display = &quot;none&quot;                             // 隐藏这个元素，所占空间也消失
 	}
 	else {                                                                     
-        e.style.visibility = &quot;hidden&quot;;             // 否则将e隐藏，但是保留其所占的空间
+		e.style.visibility = &quot;hidden&quot;;             // 否则将e隐藏，但是保留其所占的空间
 	}
 }
 function highlight(e) {                               // 通过设置CSS类来高亮显示e
@@ -965,12 +1867,12 @@ windows.onload = function() {
 	// 遍历images，给每个节点的&quot;click&quot;事件添加事件处理程序
 	// 在点击图片的时候将图片隐藏
 	for(let i = 0; i &lt; images.length; i++) {
-        let image = images[i];
-        if (image.addEventListener)          
-                   // 注册事件处理程序的另一种方法
-            image.addEventListener(&quot;click&quot;, hide, false);
-        else
-            image.attachEvent(&quot;onclick&quot;, hide);      // 兼容IE8及以前版本
+		let image = images[i];
+		if (image.addEventListener)          
+		           // 注册事件处理程序的另一种方法
+			image.addEventListener(&quot;click&quot;, hide, false);
+		else
+			image.attachEvent(&quot;onclick&quot;, hide);      // 兼容IE8及以前版本
 	}
 	// 这便是上面注册的事件处理函数
 	function hide(event) { event.target.style.visibility = &quot;hidden&quot;; }
@@ -1157,7 +2059,7 @@ windows.onload = function() {
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

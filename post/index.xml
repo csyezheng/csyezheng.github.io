@@ -13,7 +13,7 @@
       <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/master-path/data-engineer-roadmap/</guid>
-      <description>Data Engineer in 2021  CS fundamentals  Basic terminal usage [general recommendation] Data structures &amp;amp; algorithms [general recommendation] APIs [general recommendation] REST [general recommendation] Structured vs unstructured data [general recommendation] Serialisation Linux [general recommendation]  CLI Vim Shell scripting Cronjobs   How does the computer work? [general recommendation] How does the Internet work? [general recommendation] Git — Version control [general recommendation] Math &amp;amp; statistics basics [general recommendation]    Note: Git is used for tracking changes in source code and coordinating work among programmers.</description>
+      <description>Data Engineer in 2021 CS fundamentals Basic terminal usage [general recommendation] Data structures &amp;amp; algorithms [general recommendation] APIs [general recommendation] REST [general recommendation] Structured vs unstructured data [general recommendation] Serialisation Linux [general recommendation] CLI Vim Shell scripting Cronjobs How does the computer work? [general recommendation] How does the Internet work? [general recommendation] Git — Version control [general recommendation] Math &amp;amp; statistics basics [general recommendation] Note: Git is used for tracking changes in source code and coordinating work among programmers.</description>
     </item>
     
     <item>
@@ -68,7 +68,7 @@ In this article, we discuss what a SWOT analysis is in further detail, why they 
       <pubDate>Sat, 27 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/natural-language-processing/summarization/</guid>
-      <description> https://github.com/huggingface/transformers/tree/master/examples/seq2seq https://github.com/tensorflow/models/tree/master/research/textsum https://github.com/atulkum/pointer_summarizer https://github.com/vrindav/just-news-it https://github.com/pytorch/fairseq https://github.com/abisee/pointer-generator   </description>
+      <description> https://github.com/huggingface/transformers/tree/master/examples/seq2seq https://github.com/tensorflow/models/tree/master/research/textsum https://github.com/atulkum/pointer_summarizer https://github.com/vrindav/just-news-it https://github.com/pytorch/fairseq https://github.com/abisee/pointer-generator </description>
     </item>
     
     <item>
@@ -88,7 +88,7 @@ Sonar checkstyle-idea findbugs-idea PMDPlugin Save Actions</description>
       <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/readme/</guid>
-      <description> https://zhuanlan.zhihu.com/p/32459776 https://www.zhihu.com/question/25089273/answer/233316164 https://zhuanlan.zhihu.com/p/343388831 https://zhuanlan.zhihu.com/p/75931257 https://zhuanlan.zhihu.com/p/348706530 https://zhuanlan.zhihu.com/p/334999899 https://www.zhihu.com/question/31687912/answer/95842364 https://github.com/VaughnVernon/IDDD_Samples  </description>
+      <description> https://zhuanlan.zhihu.com/p/32459776 https://www.zhihu.com/question/25089273/answer/233316164 https://zhuanlan.zhihu.com/p/343388831 https://zhuanlan.zhihu.com/p/75931257 https://zhuanlan.zhihu.com/p/348706530 https://zhuanlan.zhihu.com/p/334999899 https://www.zhihu.com/question/31687912/answer/95842364 https://github.com/VaughnVernon/IDDD_Samples </description>
     </item>
     
     <item>
@@ -97,7 +97,7 @@ Sonar checkstyle-idea findbugs-idea PMDPlugin Save Actions</description>
       <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/python/</guid>
-      <description> https://github.com/cosmicpython/code/branches/all Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices  </description>
+      <description> https://github.com/cosmicpython/code/branches/all Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices </description>
     </item>
     
     <item>
@@ -141,6 +141,15 @@ Scale: Indexing and IO Model Sorting, Building Indices Part 1 B+ Trees Query Opt
     </item>
     
     <item>
+      <title>Database Scaling Strategies</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/database-scaling/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/database-scaling/</guid>
+      <description>What Is Scalability? As your application scale, the database will often be the main bottleneck of the system. Scaling your database is a great way to deal with performance bottlenecks. Scalability is the system’s ability to deliver equal bang for the buck as you add resources to perform more work. Most benchmarks measure a system’s maximum</description>
+    </item>
+    
+    <item>
       <title>Hands-On Docker for Microservices with Python</title>
       <link>http://www.yezheng.pro/post/specialization/web-application/microservices/hands-on_docker_for_microservices_with_python/</link>
       <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
@@ -173,7 +182,7 @@ Scale: Indexing and IO Model Sorting, Building Indices Part 1 B+ Trees Query Opt
       <pubDate>Sun, 20 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/microservices/python/</guid>
-      <description>Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices Hands-On Microservices with Spring Boot and Spring Cloud: Build and deploy Java microservices using Spring Cloud, Istio, and Kubernetes  Hands-On Docker for Microservices with Python: Design, deploy, and operate a complex system with multiple microservices using Docker and Kubernetes</description>
+      <description>Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices Hands-On Microservices with Spring Boot and Spring Cloud: Build and deploy Java microservices using Spring Cloud, Istio, and Kubernetes Hands-On Docker for Microservices with Python: Design, deploy, and operate a complex system with multiple microservices using Docker and Kubernetes</description>
     </item>
     
     <item>
@@ -185,16 +194,7 @@ Scale: Indexing and IO Model Sorting, Building Indices Part 1 B+ Trees Query Opt
       <description>TensorFlow Docker requirements Install Docker
 sudo pacman -S docker systemctl enable docker.service systemctl start docker.service For GPU support on Linux,
 yay -S nvidia-container-toolkit The official TensorFlow Docker images are located in the tensorflow/tensorflow Docker Hub repository.
-Start a TensorFlow Docker container docker run [-it] [--rm] [-p hostPort:containerPort] tensorflow/tensorflow[:tag] [command] Examples using CPU-only images docker pull tensorflow/tensorflow docker run -it --rm tensorflow/tensorflow \ python -c &amp;quot;import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))&amp;quot; Start a bash shell session within a TensorFlow-configured container:</description>
-    </item>
-    
-    <item>
-      <title>chatbot</title>
-      <link>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/chatbot/</link>
-      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/chatbot/chatbot/</guid>
-      <description>Building a FAQ Chatbot in Python – The Future of Information Searching 用Rasa NLU构建自己的中文NLU系统 MITIE and Chinese support Chinese_models_for_SpaCy Tuning Your NLU Model Rasa 入坑指南一：初识 Rasa rasa_chatbot_cn diet_classifier Rasa入门教程专栏 rasa文章导</description>
+Start a TensorFlow Docker container docker run [-it] [--rm] [-p hostPort:containerPort] tensorflow/tensorflow[:tag] [command] Examples using CPU-only images docker pull tensorflow/tensorflow docker run -it --rm tensorflow/tensorflow \ python -c &amp;#34;import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))&amp;#34; Start a bash shell session within a TensorFlow-configured container:</description>
     </item>
     
   </channel>

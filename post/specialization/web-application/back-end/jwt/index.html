@@ -33,7 +33,7 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/web-application/back-end/jwt/" />
@@ -54,7 +54,7 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -65,13 +65,12 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
 When should you use JSON Web Tokens? Here are some scenarios where JSON Web Tokens are useful:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/web-application/back-end/jwt/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2018-10-09T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2018-10-09T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2018-10-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-10-09T00:00:00+00:00" />
 <meta itemprop="name" content="JSON Web Tokens">
 <meta itemprop="description" content="What is JSON Web Token? JSON Web Token (JWT) is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
-When should you use JSON Web Tokens? Here are some scenarios where JSON Web Tokens are useful:"><meta itemprop="datePublished" content="2018-10-09T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-10-09T00:00:00&#43;00:00" />
+When should you use JSON Web Tokens? Here are some scenarios where JSON Web Tokens are useful:"><meta itemprop="datePublished" content="2018-10-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-10-09T00:00:00+00:00" />
 <meta itemprop="wordCount" content="526">
 <meta itemprop="keywords" content="jwt,JSON Web Tokens," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="JSON Web Tokens"/>
@@ -355,25 +354,25 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
 <ul>
 <li>
 <p>Header</p>
-<pre><code>{
-  &quot;alg&quot;: &quot;HS256&quot;,   // the hashing algorithm being used, such as HMAC SHA256 or RSA.
-  &quot;typ&quot;: &quot;JWT&quot;
+<pre tabindex="0"><code>{
+  &#34;alg&#34;: &#34;HS256&#34;,   // the hashing algorithm being used, such as HMAC SHA256 or RSA.
+  &#34;typ&#34;: &#34;JWT&#34;
 }
 </code></pre><p>Then, this JSON is Base64Url encoded to form the first part of the JWT.</p>
 </li>
 <li>
 <p>Payload</p>
-<pre><code>{
-  &quot;sub&quot;: &quot;1234567890&quot;,    // Registered claims
-  &quot;name&quot;: &quot;John Doe&quot;,
-  &quot;admin&quot;: true
+<pre tabindex="0"><code>{
+  &#34;sub&#34;: &#34;1234567890&#34;,    // Registered claims
+  &#34;name&#34;: &#34;John Doe&#34;,
+  &#34;admin&#34;: true
 }
 </code></pre><p>The payload is then Base64Url encoded to form the second part of the JSON Web Token.</p>
 </li>
 <li>
 <p>Signature</p>
-<pre><code>HMACSHA256(
-  base64UrlEncode(header) + &quot;.&quot; +
+<pre tabindex="0"><code>HMACSHA256(
+  base64UrlEncode(header) + &#34;.&#34; +
   base64UrlEncode(payload),
   secret)
 </code></pre></li>
@@ -381,7 +380,7 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
 <h2 id="how-do-json-web-tokens-work">How do JSON Web Tokens work?</h2>
 <p>In authentication, when the user successfully logs in using their credentials, a JSON Web Token will be returned. In general, you should not keep tokens longer than required.</p>
 <p>Whenever the user wants to access a protected route or resource, the user agent should send the JWT, typically in the <strong>Authorization</strong> header using the <strong>Bearer</strong> schema. The content of the header should look like the following:</p>
-<pre><code>Authorization: Bearer &lt;token&gt;
+<pre tabindex="0"><code>Authorization: Bearer &lt;token&gt;
 </code></pre><p><img src="http://source.aicode.cc/markdown/jwt-diagram.png" alt=""></p>
 <ol>
 <li>The application or client requests authorization to the authorization server. This is performed through one of the different authorization flows. For example, a typical <a href="http://openid.net/connect/">OpenID Connect</a> compliant web application will go through the <code>/oauth/authorize</code> endpoint using the <a href="http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth">authorization code flow</a>.</li>
@@ -389,27 +388,27 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
 <li>The application uses the access token to access a protected resource (like an API).</li>
 </ol>
 <h2 id="json-web-token-implementation-in-python">JSON Web Token implementation in Python</h2>
-<pre><code>$ pip install pyjwt
+<pre tabindex="0"><code>$ pip install pyjwt
 </code></pre><h3 id="encoding--decoding-tokens-with-hs256">Encoding &amp; Decoding Tokens with HS256</h3>
-<pre><code>&gt;&gt;&gt; import jwt
+<pre tabindex="0"><code>&gt;&gt;&gt; import jwt
 
-&gt;&gt;&gt; encoded_jwt = jwt.encode({'some': 'payload'}, 'secret', algorithm='HS256')
+&gt;&gt;&gt; encoded_jwt = jwt.encode({&#39;some&#39;: &#39;payload&#39;}, &#39;secret&#39;, algorithm=&#39;HS256&#39;)
 &gt;&gt;&gt; encoded_jwt
-'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb21lIjoicGF5bG9hZCJ9.4twFt5NiznN84AWoo1d7KO1T_yoc0Z6XOpOVswacPZg'
+&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb21lIjoicGF5bG9hZCJ9.4twFt5NiznN84AWoo1d7KO1T_yoc0Z6XOpOVswacPZg&#39;
 
-&gt;&gt;&gt; jwt.decode(encoded_jwt, 'secret', algorithms=['HS256'])
-{'some': 'payload'}
+&gt;&gt;&gt; jwt.decode(encoded_jwt, &#39;secret&#39;, algorithms=[&#39;HS256&#39;])
+{&#39;some&#39;: &#39;payload&#39;}
 </code></pre><h3 id="encoding--decoding-tokens-with-rs256-rsa">Encoding &amp; Decoding Tokens with RS256 (RSA)</h3>
-<pre><code>&gt;&gt;import jwt
-&gt;&gt;private_key = b'-----BEGIN PRIVATE KEY-----\nMIGEAgEAMBAGByqGSM49AgEGBS...'
-&gt;&gt;public_key = b'-----BEGIN PUBLIC KEY-----\nMHYwEAYHKoZIzj0CAQYFK4EEAC...'
-&gt;&gt;encoded = jwt.encode({'some': 'payload'}, private_key, algorithm='RS256')
-'eyJhbGciOiJIU...'
-&gt;&gt;decoded = jwt.decode(encoded, public_key, algorithms='RS256')
-{'some': 'payload'}
+<pre tabindex="0"><code>&gt;&gt;import jwt
+&gt;&gt;private_key = b&#39;-----BEGIN PRIVATE KEY-----\nMIGEAgEAMBAGByqGSM49AgEGBS...&#39;
+&gt;&gt;public_key = b&#39;-----BEGIN PUBLIC KEY-----\nMHYwEAYHKoZIzj0CAQYFK4EEAC...&#39;
+&gt;&gt;encoded = jwt.encode({&#39;some&#39;: &#39;payload&#39;}, private_key, algorithm=&#39;RS256&#39;)
+&#39;eyJhbGciOiJIU...&#39;
+&gt;&gt;decoded = jwt.decode(encoded, public_key, algorithms=&#39;RS256&#39;)
+{&#39;some&#39;: &#39;payload&#39;}
 </code></pre><h3 id="specifying-additional-headers">Specifying Additional Headers</h3>
-<pre><code>&gt;&gt;jwt.encode({'some': 'payload'}, 'secret', algorithm='HS256', headers={'kid': '230498151c214b788dd97f22b85410a5'})
-'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjIzMDQ5ODE1MWMyMTRiNzg4ZGQ5N2YyMmI4NTQxMGE1In0.eyJzb21lIjoicGF5bG9hZCJ9.DogbDGmMHgA_bU05TAB-R6geQ2nMU2BRM-LnYEtefwg'
+<pre tabindex="0"><code>&gt;&gt;jwt.encode({&#39;some&#39;: &#39;payload&#39;}, &#39;secret&#39;, algorithm=&#39;HS256&#39;, headers={&#39;kid&#39;: &#39;230498151c214b788dd97f22b85410a5&#39;})
+&#39;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjIzMDQ5ODE1MWMyMTRiNzg4ZGQ5N2YyMmI4NTQxMGE1In0.eyJzb21lIjoicGF5bG9hZCJ9.DogbDGmMHgA_bU05TAB-R6geQ2nMU2BRM-LnYEtefwg&#39;
 </code></pre><h2 id="references">References</h2>
 <p>[1]. <a href="https://jwt.io/introduction/">Introduction to JSON Web Tokens</a></p>
 <p>[2]. <a href="%60PyJWT%60">PyJWT</a></p>
@@ -580,7 +579,7 @@ When should you use JSON Web Tokens? Here are some scenarios where JSON Web Toke
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

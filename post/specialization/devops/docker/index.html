@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&amp;ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&amp;ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker sudo pacman -S docker systemctl start docker." />
+  <meta name="description" content="Set up Docker environment Images and containers An image is an executable package that includes everything needed to run an application&amp;ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&amp;ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers. Install Docker sudo pacman -S docker systemctl start docker." />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/devops/docker/" />
@@ -53,26 +53,25 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
 
 
 <meta property="og:title" content="Docker" />
-<meta property="og:description" content="Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker sudo pacman -S docker systemctl start docker." />
+<meta property="og:description" content="Set up Docker environment Images and containers An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers. Install Docker sudo pacman -S docker systemctl start docker." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/devops/docker/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-04-25T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2019-04-25T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2019-04-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-04-25T00:00:00+00:00" />
 <meta itemprop="name" content="Docker">
-<meta itemprop="description" content="Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker sudo pacman -S docker systemctl start docker."><meta itemprop="datePublished" content="2019-04-25T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-04-25T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Set up Docker environment Images and containers An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers. Install Docker sudo pacman -S docker systemctl start docker."><meta itemprop="datePublished" content="2019-04-25T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-04-25T00:00:00+00:00" />
 <meta itemprop="wordCount" content="1831">
 <meta itemprop="keywords" content="Docker,DevOps," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Docker"/>
-<meta name="twitter:description" content="Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker sudo pacman -S docker systemctl start docker."/>
+<meta name="twitter:description" content="Set up Docker environment Images and containers An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers. Install Docker sudo pacman -S docker systemctl start docker."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -375,36 +374,36 @@
 <li>A <strong>container</strong> is a runtime instance of an image&ndash;what the image becomes in memory when executed. A <strong>container</strong> runs <em>natively</em> on Linux and shares the kernel of the host machine with other containers.</li>
 </ul>
 <h3 id="install-docker">Install Docker</h3>
-<pre><code>sudo pacman -S docker
+<pre tabindex="0"><code>sudo pacman -S docker
 systemctl start docker.service
 systemctl enable docker.service
 </code></pre><p>add your user to the <code>docker</code> group.</p>
-<pre><code>$ sudo groupadd docker
+<pre tabindex="0"><code>$ sudo groupadd docker
 $ sudo usermod -aG docker $USER
-</code></pre><pre><code>sudo tee /etc/docker/daemon.json &lt;&lt;-'EOF'
+</code></pre><pre tabindex="0"><code>sudo tee /etc/docker/daemon.json &lt;&lt;-&#39;EOF&#39;
 {
-  &quot;registry-mirrors&quot;: [&quot;https://registry.docker-cn.com&quot;, &quot;http://hub-mirror.c.163.com&quot;, &quot;https://docker.mirrors.ustc.edu.cn&quot;]
+  &#34;registry-mirrors&#34;: [&#34;https://registry.docker-cn.com&#34;, &#34;http://hub-mirror.c.163.com&#34;, &#34;https://docker.mirrors.ustc.edu.cn&#34;]
 }
 EOF
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 </code></pre><h3 id="docker-command">Docker command</h3>
-<pre><code>## List Docker CLI commands
+<pre tabindex="0"><code>## List Docker CLI commands
 $ docker                    
 $ docker container --help
-</code></pre><pre><code>## Display Docker version and info
+</code></pre><pre tabindex="0"><code>## Display Docker version and info
 $ docker --version
 $ docker info                                                             
-</code></pre><pre><code>## Execute Docker image
+</code></pre><pre tabindex="0"><code>## Execute Docker image
 $ docker run [OPTIONS] IMAGE                                     
              --rm    Automatically remove the container when it exits
              -i    Keep STDIN open even if not attached
              -t    Allocate a pseudo-TTY
              -d    Run container in background and print container ID
              -p 4000:80 mapping your machine’s port 4000 to the container’s published port 80
-</code></pre><pre><code>## List Docker images
+</code></pre><pre tabindex="0"><code>## List Docker images
 $ docker image ls                                                                      
-</code></pre><pre><code>## List Docker containers (running, all, all in quiet mode)                           
+</code></pre><pre tabindex="0"><code>## List Docker containers (running, all, all in quiet mode)                           
 $ docker container ls
 $ docker container ls --all
 $ docker container ls -aq
@@ -412,7 +411,7 @@ $ docker container ls -aq
 <p>The portable images are defined by something called a <code>Dockerfile</code>.</p>
 <h3 id="define-a-container-with-dockerfile">Define a container with <code>Dockerfile</code></h3>
 <p>Create a file called <code>Dockerfile</code>, copy-and-paste the following content into that file, and save it.</p>
-<pre><code># Use an official Python runtime as a parent image
+<pre tabindex="0"><code># Use an official Python runtime as a parent image
 FROM python:2.7-slim
 
 # Set the working directory to /app
@@ -431,37 +430,37 @@ EXPOSE 80
 ENV NAME World
 
 # Run app.py when the container launches
-CMD [&quot;python&quot;, &quot;app.py&quot;]
+CMD [&#34;python&#34;, &#34;app.py&#34;]
 </code></pre><p><em>DNS settings</em> or <em>Proxy server settings</em> refer to the documentation.</p>
 <h3 id="build-the-app">Build the app</h3>
-<pre><code>## Create a Docker image, and tag using -t follow by tag name              
+<pre tabindex="0"><code>## Create a Docker image, and tag using -t follow by tag name              
 $ docker build -t friendlyhello .
 $ docker image ls
 </code></pre><p>Note how the tag defaulted to <code>latest</code>. The full syntax for the tag option would be something like <code>--tag=friendlyhello:v0.0.1</code>.</p>
 <h3 id="run-the-app">Run the app</h3>
-<pre><code>## Mapping local machine’s port 4000 to the container’s port 80                        
+<pre tabindex="0"><code>## Mapping local machine’s port 4000 to the container’s port 80                        
 $ docker run -p 4000:80 friendlyhello
 ## Run the app in the background using detached mode
 $ docker run -d -p 4000:80 friendlyhello
 </code></pre><h3 id="stop-the-container">Stop the container</h3>
-<pre><code>$ docker container ls
+<pre tabindex="0"><code>$ docker container ls
 $ docker container stop &lt;container_hash_id&gt;                                             
 </code></pre><h3 id="manage-the-container-and-image">Manage the container and image</h3>
-<pre><code>docker container kill &lt;container_hash_id&gt;   # Force shutdown of the specified container
+<pre tabindex="0"><code>docker container kill &lt;container_hash_id&gt;   # Force shutdown of the specified container
 docker container rm &lt;container_hash_id&gt;  # Remove specified container from this machine
 docker container rm $(docker container ls -a -q)                # Remove all containers
 docker image ls -a                                    # List all images on this machine
 docker image rm &lt;image id&gt;                   # Remove specified image from this machine
 docker image rm $(docker image ls -a -q)          # Remove all images from this machine
 </code></pre><h3 id="share-your-image">Share your image</h3>
-<pre><code>docker login                    # Log in this CLI session using your Docker credentials
+<pre tabindex="0"><code>docker login                    # Log in this CLI session using your Docker credentials
 docker tag &lt;image_name&gt; username/repository:tag    # Tag &lt;image&gt; for upload to registry
 docker push username/repository:tag                   # Upload tagged image to registry
 docker run username/repository:tag                          # Run image from a registry
 </code></pre><p>If the image isn’t available locally on the machine, Docker pulls it from the repository.</p>
 <h2 id="scale-your-app-to-run-multiple-containers">Scale your app to run multiple containers</h2>
 <h3 id="install-docker-compose">Install Docker Compose</h3>
-<pre><code>$ sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+<pre tabindex="0"><code>$ sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 $ sudo chmod +x /usr/local/bin/docker-compose
 $ docker-compose --version
 </code></pre><h3 id="services">Services</h3>
@@ -469,7 +468,7 @@ $ docker-compose --version
 <p>Services are really just “containers in production.” A service only runs one image, but it codifies the way that image runs—what ports it should use, how many replicas of the container should run so the service has the capacity it needs, and so on. Scaling a service changes the number of container instances running that piece of software, assigning more computing resources to the service in the process.</p>
 <p>Luckily it’s very easy to <strong>define, run, and scale services with</strong> the Docker platform &ndash; just write a <code>docker-compose.yml</code> file.</p>
 <h3 id="define-docker-composeyml-file">Define <code>docker-compose.yml</code> file</h3>
-<pre><code>version: &quot;3&quot;
+<pre tabindex="0"><code>version: &#34;3&#34;
 services:
   web:
     # replace username/repo:tag with your name and image details
@@ -478,12 +477,12 @@ services:
       replicas: 5
       resources:
         limits:
-          cpus: &quot;0.1&quot;
+          cpus: &#34;0.1&#34;
           memory: 50M
       restart_policy:
         condition: on-failure
     ports:
-      - &quot;80:80&quot;
+      - &#34;80:80&#34;
     networks:
       - webnet
 networks:
@@ -497,17 +496,17 @@ networks:
 <li>Define the <code>webnet</code> network with the default settings (which is a load-balanced overlay network).</li>
 </ul>
 <h3 id="run-this-load-balanced-app">Run this load-balanced app</h3>
-<pre><code>$ docker swarm init
+<pre tabindex="0"><code>$ docker swarm init
 $ docker stack ls                 # List stacks or apps
 $ docker stack deploy -c docker-compose.yml &lt;set_a_app_name&gt;
 </code></pre><p>A single container running in a service is called a <strong>task</strong>. Tasks are given unique IDs that numerically increment, up to the number of <code>replicas</code> you defined in <code>docker-compose.yml</code>.</p>
-<pre><code>$ docker service ls
+<pre tabindex="0"><code>$ docker service ls
 $ docker service ps &lt;app_name&gt;   # List tasks associated with app
 $ docker inspect &lt;task or container&gt;  # Inspect task or container
 $ docker container ls -q
 </code></pre><p>Scale the app by changing the <code>replicas</code> value in <code>docker-compose.yml</code>, and re-running the <code>docker stack deploy</code> command.</p>
 <h3 id="take-down-the-app-and-the-swarm">Take down the app and the swarm</h3>
-<pre><code>## Take the app down
+<pre tabindex="0"><code>## Take the app down
 $ docker stack rm app_name
 # Take down a single node swarm from the manager
 $ docker swarm leave --force
@@ -518,36 +517,36 @@ $ docker swarm leave --force
 <p>Enabling swarm mode instantly makes the current machine a swarm manager. From then on, Docker runs the commands you execute on the swarm you’re managing, rather than just on the current machine.</p>
 <p>Run <code>docker swarm init</code> to enable swarm mode and make your current machine a swarm manager, then run <code>docker swarm join</code> on other machines to have them join the swarm as workers.</p>
 <p>Always run <code>docker swarm init</code> and <code>docker swarm join</code> with port 2377 (the swarm management port), or no port at all and let it take the default.</p>
-<pre><code># On swarm manager machine
+<pre tabindex="0"><code># On swarm manager machine
 $ docker swarm init --advertise-addr &lt;local ip&gt;
-</code></pre><pre><code># On other machine
+</code></pre><pre tabindex="0"><code># On other machine
 $ docker swarm join --token &lt;token&gt; &lt;ip&gt;:2377
-</code></pre><pre><code># On swarm manager machine
+</code></pre><pre tabindex="0"><code># On swarm manager machine
 $ docker node ls
 </code></pre><h3 id="deploy-the-app-on-the-swarm-cluster">Deploy the app on the swarm cluster</h3>
 <p>run a command that configures</p>
-<pre><code>export DOCKER_TLS_VERIFY=&quot;1&quot;
-export DOCKER_HOST=&quot;tcp://192.168.99.100:2376&quot;
-export DOCKER_CERT_PATH=&quot;/Users/sam/.docker/machine/machines/myvm1&quot;
-export DOCKER_MACHINE_NAME=&quot;myvm1&quot;
-</code></pre><pre><code>$ docker-machine scp &lt;file&gt; &lt;machine&gt;:~
-</code></pre><pre><code># On swarm manager machine
+<pre tabindex="0"><code>export DOCKER_TLS_VERIFY=&#34;1&#34;
+export DOCKER_HOST=&#34;tcp://192.168.99.100:2376&#34;
+export DOCKER_CERT_PATH=&#34;/Users/sam/.docker/machine/machines/myvm1&#34;
+export DOCKER_MACHINE_NAME=&#34;myvm1&#34;
+</code></pre><pre tabindex="0"><code>$ docker-machine scp &lt;file&gt; &lt;machine&gt;:~
+</code></pre><pre tabindex="0"><code># On swarm manager machine
 $ docker stack deploy -c docker-compose.yml &lt;app_name&gt;
 </code></pre><p>If your image is stored on a private registry instead of Docker Hub, you need to be logged in using <code>docker login &lt;your-registry&gt;</code> and then you need to add the <code>--with-registry-auth</code> flag to the <code>docker stack deploy</code> command.</p>
-<pre><code># On swarm manager machine
+<pre tabindex="0"><code># On swarm manager machine
 $ docker stack ps &lt;app_name&gt;
 </code></pre><h3 id="iterating-and-scaling-your-app">Iterating and scaling your app</h3>
 <p>Scale the app by changing the <code>docker-compose.yml</code> file, then <code>rebuild</code>, and <code>push</code> the new image. Using the  <code>docker swarm join</code> command to join any machine.</p>
 <p>All of modified simply run <code>docker stack deploy</code> afterwards, and your app can take advantage of the new resources.</p>
 <h3 id="cleanup-and-reboot-stacks-and-swarms">Cleanup and reboot Stacks and swarms</h3>
-<pre><code>$ docker stack rm &lt;service_name&gt;      # tear down the stack
+<pre tabindex="0"><code>$ docker stack rm &lt;service_name&gt;      # tear down the stack
 $ docker swarm leave --force
 </code></pre><h2 id="stack-services-by-adding-a-backend-database">Stack services by adding a backend database</h2>
 <p>A <strong>stack</strong> is a group of interrelated services that share dependencies, and can be orchestrated and scaled together.</p>
 <p>Make multiple services relate to each other, and run them on multiple machines.</p>
 <h3 id="add-a-new-service-and-redeploy">Add a new service and redeploy</h3>
-<pre><code>$ cat docker-compose.yml
-</code></pre><pre><code>version: &quot;3&quot;
+<pre tabindex="0"><code>$ cat docker-compose.yml
+</code></pre><pre tabindex="0"><code>version: &#34;3&#34;
 services:
   web:
     # replace username/repo:tag with your name and image details
@@ -558,18 +557,18 @@ services:
         condition: on-failure
       resources:
         limits:
-          cpus: &quot;0.1&quot;
+          cpus: &#34;0.1&#34;
           memory: 50M
     ports:
-      - &quot;80:80&quot;
+      - &#34;80:80&#34;
     networks:
       - webnet
   visualizer:
     image: dockersamples/visualizer:stable
     ports:
-      - &quot;8080:8080&quot;
+      - &#34;8080:8080&#34;
     volumes:
-      - &quot;/var/run/docker.sock:/var/run/docker.sock&quot;
+      - &#34;/var/run/docker.sock:/var/run/docker.sock&#34;
     deploy:
       placement:
         constraints: [node.role == manager]
@@ -579,14 +578,14 @@ networks:
   webnet:
 </code></pre><p>Notice two new things here: a <code>volumes</code> key, giving the visualizer access to the host’s socket file for Docker, and a <code>placement</code> key, ensuring that this service only ever runs on a swarm manager &ndash; never a worker.</p>
 <h4 id="redeploy">redeploy</h4>
-<pre><code>$ docker stack deploy -c docker-compose.yml getstartedlab
+<pre tabindex="0"><code>$ docker stack deploy -c docker-compose.yml getstartedlab
 Updating service getstartedlab_web (id: angi1bf5e4to03qu9f93trnxm)
 Creating service getstartedlab_visualizer (id: l9mnwkeq2jiononb5ihz9u7a4)
 </code></pre><p>You saw in the Compose file that <code>visualizer</code> runs on port 8080. Get the IP address of one of your nodes by running <code>docker-machine ls</code>. Go to either IP address at port 8080 and you can see the visualizer running. <code>192.168.99.101:8080</code></p>
-<pre><code>$ docker stack ps getstartedlab
+<pre tabindex="0"><code>$ docker stack ps getstartedlab
 </code></pre><p>The visualizer is a standalone service that can run in any app that includes it in the stack. It doesn’t depend on anything else.</p>
 <h3 id="persist-the-data">Persist the data</h3>
-<pre><code>version: &quot;3&quot;
+<pre tabindex="0"><code>version: &#34;3&#34;
 services:
   web:
     # replace username/repo:tag with your name and image details
@@ -597,18 +596,18 @@ services:
         condition: on-failure
       resources:
         limits:
-          cpus: &quot;0.1&quot;
+          cpus: &#34;0.1&#34;
           memory: 50M
     ports:
-      - &quot;80:80&quot;
+      - &#34;80:80&#34;
     networks:
       - webnet
   visualizer:
     image: dockersamples/visualizer:stable
     ports:
-      - &quot;8080:8080&quot;
+      - &#34;8080:8080&#34;
     volumes:
-      - &quot;/var/run/docker.sock:/var/run/docker.sock&quot;
+      - &#34;/var/run/docker.sock:/var/run/docker.sock&#34;
     deploy:
       placement:
         constraints: [node.role == manager]
@@ -617,9 +616,9 @@ services:
   redis:
     image: redis
     ports:
-      - &quot;6379:6379&quot;
+      - &#34;6379:6379&#34;
     volumes:
-      - &quot;/home/docker/data:/data&quot;
+      - &#34;/home/docker/data:/data&#34;
     deploy:
       placement:
         constraints: [node.role == manager]
@@ -641,9 +640,9 @@ networks:
 <li>The volume you created that lets the container access <code>./data</code> (on the host) as <code>/data</code> (inside the Redis container). While containers come and go, the files stored on <code>./data</code> on the specified host persists, enabling continuity.</li>
 </ul>
 <p>Create a <code>./data</code> directory on the manager:</p>
-<pre><code>$ docker-machine ssh myvm1 &quot;mkdir ./data&quot;
+<pre tabindex="0"><code>$ docker-machine ssh myvm1 &#34;mkdir ./data&#34;
 </code></pre><p>redeploy</p>
-<pre><code>$ docker stack deploy -c docker-compose.yml getstartedlab
+<pre tabindex="0"><code>$ docker stack deploy -c docker-compose.yml getstartedlab
 </code></pre><h2 id="deploy-your-app-to-production">Deploy your app to production</h2>
 
     </div>
@@ -812,7 +811,7 @@ networks:
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

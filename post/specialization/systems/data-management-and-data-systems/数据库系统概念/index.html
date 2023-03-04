@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,13 +63,12 @@
 <meta property="og:description" content="第一章、引言 1.1 文件管理系统坏处 1.2 数据视图 1.3 数据模型 1.4 数据库语言 第二章、关系模型介绍 2.1 关系数据库的结构 2.2 数据库模式 2.3 码 第三章、SQL 3.1 SQL 查询语" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E5%BF%B5/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-03-19T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-19T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2021-03-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-19T00:00:00+00:00" />
 <meta itemprop="name" content="[转]数据库系统概念">
-<meta itemprop="description" content="第一章、引言 1.1 文件管理系统坏处 1.2 数据视图 1.3 数据模型 1.4 数据库语言 第二章、关系模型介绍 2.1 关系数据库的结构 2.2 数据库模式 2.3 码 第三章、SQL 3.1 SQL 查询语"><meta itemprop="datePublished" content="2021-03-19T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="23490">
+<meta itemprop="description" content="第一章、引言 1.1 文件管理系统坏处 1.2 数据视图 1.3 数据模型 1.4 数据库语言 第二章、关系模型介绍 2.1 关系数据库的结构 2.2 数据库模式 2.3 码 第三章、SQL 3.1 SQL 查询语"><meta itemprop="datePublished" content="2021-03-19T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-19T00:00:00+00:00" />
+<meta itemprop="wordCount" content="23502">
 <meta itemprop="keywords" content="data-systems," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[转]数据库系统概念"/>
 <meta name="twitter:description" content="第一章、引言 1.1 文件管理系统坏处 1.2 数据视图 1.3 数据模型 1.4 数据库语言 第二章、关系模型介绍 2.1 关系数据库的结构 2.2 数据库模式 2.3 码 第三章、SQL 3.1 SQL 查询语"/>
@@ -542,7 +541,7 @@ order  by. 默认升序    desc降序      asc升序<br>
 mysql&gt; select T.sex as bala
 -&gt; from consumer as c,consumer as t
 -&gt; where c.sex=t.sex and t.name=&lsquo;王文萱&rsquo;;</p>
-<p>mysql&gt; select * from list where id like &lsquo;211%';</p>
+<p>mysql&gt; select * from list where id like &lsquo;211%&rsquo;;</p>
 <p>mysql&gt; select * from list
 -&gt; order by id desc,no asc;</p>
 <p>mysql&gt; select * from list
@@ -810,9 +809,9 @@ SQL允许指定默认值</p>
 <p>x,y都是date类型，那x-y就是时间间隔类型，其值为日期x到日期y间隔的天数</p>
 <p>mysql&gt; select current_date - date'2001-05-24&rsquo;;</p>
 <p>mysql&gt; select current_date;</p>
-<p>mysql&gt; select date'2001-04-25',time'09:30:00',timestamp'2001-04-25 09:30:00';</p>
+<p>mysql&gt; select date'2001-04-25&rsquo;,time'09:30:00&rsquo;,timestamp'2001-04-25 09:30:00&rsquo;;</p>
 <p>//从date中提取域。有year,month,day,hour,minute,second
-mysql&gt; select extract(year from date'2001-05-24');</p>
+mysql&gt; select extract(year from date'2001-05-24&rsquo;);</p>
 <p>mysql&gt; cast(&lsquo;2001-05-24&rsquo; as DATE);  //将字符串转化称DATE
 创建索引
 mysql&gt; create index i on wang(id);
@@ -864,7 +863,7 @@ grant用来授予权限</p>
 <p>SQL允许用授予权限的接受者可以进一步把权限授予其他人</p>
 <p>不允许对一个关系的指定元组授权</p>
 <p>远程连接时:</p>
-<p>GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP ON 你的数据库.* TO &lsquo;用户名&rsquo;@'%' identified by &lsquo;密码&rsquo;
+<p>GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP ON 你的数据库.* TO &lsquo;用户名&rsquo;@&rsquo;%&rsquo; identified by &lsquo;密码&rsquo;
 使用revoke语句来收回权限</p>
 <p>grant select on department to Amith;</p>
 <p>grant update(no) on department tomith;</p>
@@ -1631,7 +1630,7 @@ REDO-LIST
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

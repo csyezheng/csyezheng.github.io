@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,6 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -214,7 +213,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -295,15 +294,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/wagtail/">Wagtail</a>
+      <a class="post-link" href="/post/engineering-fundamentals/python/datetime/">Python datetime</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-11-02" class="post-time">
-        2018-11-02
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -315,12 +314,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Getting started setting up a brand new Wagtail project $ pip install wagtail $ wagtail start mysite $ cd mysite $ pip install -r requirements.txt $ ./manage.py migrate $ ./manage.py createsuperuser $ ./manage.py runserver http://localhost:8000
-http://localhost:8000/admin/
-Extend the HomePage model # home/models.py from django.db import models from wagtail.core.models import Page from wagtail.core.fields import RichTextField from wagtail.admin.edit_handlers import FieldPanel class HomePage(Page): body = RichTextField(blank=True) # content_panels define the capabilities and the layout of the editing interface content_panels = Page.
+      datetime 8.1. datetime
+The datetime module, the focus of the implementation is on efficient attribute extraction for output formatting and manipulation.
+There are two kinds of date and time objects: “naive” and “aware”.
+An aware object has sufficient knowledge of applicable algorithmic and political time adjustments, such as time zone and daylight saving time information, to locate itself relative to other aware objects. An aware object is used to represent a specific moment in time.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/wagtail/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/python/datetime/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,15 +331,15 @@ Extend the HomePage model # home/models.py from django.db import models from wag
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/web-applications/">gateway</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/quick-start/">quick-start</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-10-13" class="post-time">
-        2018-10-13
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -351,10 +351,11 @@ Extend the HomePage model # home/models.py from django.db import models from wag
   <div class="post-content">
     
     <div class="post-summary">
-      7 apache和nginx的区别 nginx 相对 apache 的优点： 轻量级，同样起web 服务，比apache 占用更少的内存及资源 抗并发，nginx 处理请求是异步
+       Create your project folder and cd inside
+mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &#34;$_&#34; go mod edit -require=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b go mod edit -replace=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b=github.com/google/go-genproto@v0.0.0-20180831171423-11092d34479b go mod edit -require=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -replace=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223=github.com/golang/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -require=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299 go mod edit -replace=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299=github.com/golang/crypto@v0.0.0-20180614174826-fd5f17ee7299 gen --connstr &#34;zhengye:csye3631@tcp(127.0.0.1:3307)/discovery&#34; --database discovery --json --gorm --guregu --rest 
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/web-applications/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/quick-start/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -365,15 +366,15 @@ Extend the HomePage model # home/models.py from django.db import models from wag
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/grpc/">gRPC by Go</a>
+      <a class="post-link" href="/post/engineering-fundamentals/scala/scalabyexample/">Scala By Example</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2018-10-13" class="post-time">
-        2018-10-13
+      <time datetime="2019-03-01" class="post-time">
+        2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -385,11 +386,11 @@ Extend the HomePage model # home/models.py from django.db import models from wag
   <div class="post-content">
     
     <div class="post-summary">
-      $ go version $ go get -u google.golang.org/grpc Install Protocol Buffers v3
- download pre-compiled binaries for your platform(protoc-&lt;version&gt;-&lt;platform&gt;.zip) from here: https://github.com/google/protobuf/releases Unzip this file. Update the environment variable PATH to include the path to the protoc binary file.  $ go get -u github.com/golang/protobuf/protoc-gen-go $ export PATH=$PATH:$GOPATH/bin Build the example $ cd $GOPATH/src/google.golang.org/grpc/examples/helloworld 
+      Introduction Scala smoothly integrates object-oriented and functional programming.
+Abstract types and mixin composition unify concepts from object and module systems. Pattern matching over class hierarchies uniﬁes functional and object-oriented data access. It greatly simpliﬁes the processing of XML trees. A ﬂexible syntax and type system enables the construction of advanced libraries and new domain speciﬁc languages. Starting with simple expressions and functions, and working up through objects and classes, lists and streams, mutable state, pattern matching to more complete examples that show interesting programming techniques.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/grpc/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/scala/scalabyexample/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2324,6 +2325,90 @@ Extend the HomePage model # home/models.py from django.db import models from wag
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/72/">»</a></li>
@@ -2331,7 +2416,7 @@ Extend the HomePage model # home/models.py from django.db import models from wag
 
       
       
-      <li><a href="/page/85/">»»</a></li>
+      <li><a href="/page/89/">»»</a></li>
       
 
       </ul>
@@ -2419,7 +2504,7 @@ Extend the HomePage model # home/models.py from django.db import models from wag
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

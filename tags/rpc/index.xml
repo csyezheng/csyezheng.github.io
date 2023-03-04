@@ -14,7 +14,7 @@
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/grpc/</guid>
       <description>$ go version $ go get -u google.golang.org/grpc Install Protocol Buffers v3
- download pre-compiled binaries for your platform(protoc-&amp;lt;version&amp;gt;-&amp;lt;platform&amp;gt;.zip) from here: https://github.com/google/protobuf/releases Unzip this file. Update the environment variable PATH to include the path to the protoc binary file.  $ go get -u github.com/golang/protobuf/protoc-gen-go $ export PATH=$PATH:$GOPATH/bin Build the example $ cd $GOPATH/src/google.golang.org/grpc/examples/helloworld </description>
+download pre-compiled binaries for your platform(protoc-&amp;lt;version&amp;gt;-&amp;lt;platform&amp;gt;.zip) from here: https://github.com/google/protobuf/releases Unzip this file. Update the environment variable PATH to include the path to the protoc binary file. $ go get -u github.com/golang/protobuf/protoc-gen-go $ export PATH=$PATH:$GOPATH/bin Build the example $ cd $GOPATH/src/google.golang.org/grpc/examples/helloworld </description>
     </item>
     
   </channel>

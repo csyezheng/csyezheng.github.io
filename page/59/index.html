@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,6 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -214,7 +213,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -295,15 +294,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/devops/project-management/">project management</a>
+      <a class="post-link" href="/post/engineering-fundamentals/cpp/curl/">libcurl</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-05-30" class="post-time">
-        2019-05-30
+      <time datetime="2019-09-16" class="post-time">
+        2019-09-16
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -315,10 +314,11 @@
   <div class="post-content">
     
     <div class="post-summary">
-      
+      #include &lt;curl/curl.h&gt; When using an external library you must link with it:
+$ g++ main.cpp -lcurl 
     </div>
     <div class="read-more">
-      <a href="/post/specialization/devops/project-management/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/cpp/curl/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -329,15 +329,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/oauth2/">Django oauth2 provider</a>
+      <a class="post-link" href="/post/engineering-fundamentals/cpp/3rd-libraries/">C&#43;&#43; 3rd party libraries</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-05-26" class="post-time">
-        2019-05-26
+      <time datetime="2019-09-15" class="post-time">
+        2019-09-15
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -349,12 +349,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... 'provider', 'provider.oauth2', ) # urls.py url(r'^oauth2/', include('provider.oauth2.urls', namespace = 'oauth2')), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ?   Create a client entry in your database
-To find out which type of client you need to create, read Section 2.1.
-To create a new entry simply use the Django admin panel.
+      grpc/libevent/libev/libasio 实现高性能网络服务器 protobuf 数据结构序列化/反序列化，方便数据交换 LevelDB/RocksDB 嵌入式KV数据库 snappy/zlib/lz4 数据压缩，解压缩 jemalloc/tcmalloc 高效内存分配器，尤其多线程场景 jerasure Reed Sol
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/oauth2/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/cpp/3rd-libraries/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -365,15 +363,15 @@ To create a new entry simply use the Django admin panel.
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/elasticsearch/">Elasticsearch Tutorial</a>
+      <a class="post-link" href="/post/engineering-fundamentals/cpp/jsoncpp/">jsoncpp</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-05-15" class="post-time">
-        2019-05-15
+      <time datetime="2019-09-15" class="post-time">
+        2019-09-15
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -385,11 +383,10 @@ To create a new entry simply use the Django admin panel.
   <div class="post-content">
     
     <div class="post-summary">
-      Getting Started Installing and Running Elasticsearch Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
-Installing Sense Sense is a Kibana app that provides an interactive console for submitting requests to Elasticsearch directly from your browser.
+      
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/elasticsearch/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/cpp/jsoncpp/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2324,6 +2321,90 @@ Installing Sense Sense is a Kibana app that provides an interactive console for 
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/60/">»</a></li>
@@ -2331,7 +2412,7 @@ Installing Sense Sense is a Kibana app that provides an interactive console for 
 
       
       
-      <li><a href="/page/85/">»»</a></li>
+      <li><a href="/page/89/">»»</a></li>
       
 
       </ul>
@@ -2419,7 +2500,7 @@ Installing Sense Sense is a Kibana app that provides an interactive console for 
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

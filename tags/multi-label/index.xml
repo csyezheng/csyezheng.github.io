@@ -14,8 +14,8 @@
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/multi-label-classification/</guid>
       <description>In the multi-label problem there is no constraint on how many of the classes the instance can be assigned to. Formally, multi-label classification is the problem of finding a model that maps inputs x to binary vectors y (assigning a value of 0 or 1 for each element (label) in y).
-Problem transformation methods   Transformation into binary classification problems
-  binary relevance
+Problem transformation methods Transformation into binary classification problems
+binary relevance
 amounts to independently training one binary classifier for each label.</description>
     </item>
     

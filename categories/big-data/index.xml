@@ -13,7 +13,7 @@
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/data-engineering/data-lakes/</guid>
-      <description>Reference  Delta Lake What is a Lakehouse?  </description>
+      <description>Reference Delta Lake What is a Lakehouse? </description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/data-engineering/edx-analytics-pipeline/</guid>
-      <description>Reference  edX Insights edX Analytics Pipeline edx-analytics-pipeline luigi  </description>
+      <description>Reference edX Insights edX Analytics Pipeline edx-analytics-pipeline luigi </description>
     </item>
     
     <item>
@@ -46,7 +46,7 @@ Stream Compute Service</description>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/data-engineering/elk-stack/</guid>
-      <description>Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &amp;quot;localhost&amp;quot; elasticsearch.hosts: [&amp;quot;http://localhost:9200&amp;quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
+      <description>Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &amp;#34;localhost&amp;#34; elasticsearch.hosts: [&amp;#34;http://localhost:9200&amp;#34;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
 Install Beats Install Filebeat Install Metricbeat sudo pacman -S metricbeat sudo vim /etc/metricbeat/metricbeat.yml setup.dashboards.enabled: true From the Metricbeat install directory, enable the system module
 cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricbeat.</description>
     </item>

@@ -40,7 +40,7 @@
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/learn/</guid>
-      <description> ICS UCI CSE 163 CA106B Search Engine NYU Search Engine Page Rank Overview - Building a Search Engine | Coursera CSC 575 Intelligent Information Retrieval   </description>
+      <description> ICS UCI CSE 163 CA106B Search Engine NYU Search Engine Page Rank Overview - Building a Search Engine | Coursera CSC 575 Intelligent Information Retrieval </description>
     </item>
     
     <item>
@@ -84,7 +84,7 @@ https://github.com/elastic/elasticsearch-dsl-py</description>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/search/python/</guid>
-      <description> https://github.com/django-haystack/django-haystack/blob/master/haystack/backends/elasticsearch_backend.py   self.conn.indices.create( index=self.index_name, body=self.DEFAULT_SETTINGS, ignore=400 ) self.conn.indices.put_mapping( index=self.index_name, doc_type=&amp;quot;modelresult&amp;quot;, body=current_mapping ) </description>
+      <description> https://github.com/django-haystack/django-haystack/blob/master/haystack/backends/elasticsearch_backend.py self.conn.indices.create( index=self.index_name, body=self.DEFAULT_SETTINGS, ignore=400 ) self.conn.indices.put_mapping( index=self.index_name, doc_type=&amp;#34;modelresult&amp;#34;, body=current_mapping ) </description>
     </item>
     
     <item>

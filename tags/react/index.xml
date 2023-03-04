@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React on Ye Zheng&#39;s Blog</title>
+    <link>http://www.yezheng.pro/tags/react/</link>
+    <description>Recent content in React on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 21 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React Tutorial</title>
+      <link>http://www.yezheng.pro/post/specialization/web-application/front-end/react/</link>
+      <pubDate>Wed, 21 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/web-application/front-end/react/</guid>
+      <description>Node.js Installation $ sudo pacman -S nodejs Managing packages with npm
+$ npm install packageName # installs the package in the current directory under node_modules $ npm -g install packageName # installs the package under /usr/lib/node_modules/npm $ npm update packageName $ npm update -g packageName $ npm uninstall packageName $ npm -g uninstall packageName $ npm list --depth=0 $ npm -g list $ npm outdated $ npm audit fix --force # To address all issues (including breaking changes) $ npm start # Starts the development server.</description>
+    </item>
+    
+  </channel>
+</rss>

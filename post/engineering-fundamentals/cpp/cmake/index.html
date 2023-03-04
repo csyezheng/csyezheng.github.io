@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/engineering-fundamentals/cpp/cmake/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,12 +63,11 @@
 <meta property="og:description" content="如果工程存在多个目录,需要确保每个要管理的目录都存在一个 CMakeLists.txt． Set a name, version, and enable languages for the entire project. project(&lt;PROJECT-NAME&gt; [LANGUAGES] [&lt;language-name&gt;...]) Sets the name of the project and stores the name in the PROJECT_NAME" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/engineering-fundamentals/cpp/cmake/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-09-13T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2019-09-13T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2019-09-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-09-13T00:00:00+00:00" />
 <meta itemprop="name" content="CMake">
-<meta itemprop="description" content="如果工程存在多个目录,需要确保每个要管理的目录都存在一个 CMakeLists.txt． Set a name, version, and enable languages for the entire project. project(&lt;PROJECT-NAME&gt; [LANGUAGES] [&lt;language-name&gt;...]) Sets the name of the project and stores the name in the PROJECT_NAME"><meta itemprop="datePublished" content="2019-09-13T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-09-13T00:00:00&#43;00:00" />
+<meta itemprop="description" content="如果工程存在多个目录,需要确保每个要管理的目录都存在一个 CMakeLists.txt． Set a name, version, and enable languages for the entire project. project(&lt;PROJECT-NAME&gt; [LANGUAGES] [&lt;language-name&gt;...]) Sets the name of the project and stores the name in the PROJECT_NAME"><meta itemprop="datePublished" content="2019-09-13T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-09-13T00:00:00+00:00" />
 <meta itemprop="wordCount" content="1120">
 <meta itemprop="keywords" content="cmake,Cpp," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="CMake"/>
@@ -328,34 +327,34 @@ CMakeLists.txt．</p>
 <ol>
 <li>
 <p>Set a name, version, and enable languages for the entire project.</p>
-<pre><code>project(&lt;PROJECT-NAME&gt; [LANGUAGES] [&lt;language-name&gt;...])
+<pre tabindex="0"><code>project(&lt;PROJECT-NAME&gt; [LANGUAGES] [&lt;language-name&gt;...])
 </code></pre><p>Sets the name of the project and stores the name in the <code>PROJECT_NAME </code>variable. Additionally this sets variables　<code>PROJECT_SOURCE_DIR</code>,   <code>PROJECT_BINARY_DIR</code></p>
 </li>
 <li>
 <p>Signatures of this command that specify a <code>&lt;value&gt;...</code> placeholder expect zero or more arguments. Multiple arguments will be joined as a <code>;-list</code> to form the actual variable value to be set.</p>
-<pre><code>set(&lt;variable&gt; &lt;value&gt;... CACHE &lt;type&gt; &lt;docstring&gt; [FORCE])
+<pre tabindex="0"><code>set(&lt;variable&gt; &lt;value&gt;... CACHE &lt;type&gt; &lt;docstring&gt; [FORCE])
 </code></pre><p>在哪里<code>add_executable</code> 或<code>add_library</code>，需要改变目标存放路径则在哪个层级的<code>CMakeLists.txt</code>加．</p>
-<pre><code>SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+<pre tabindex="0"><code>SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
 </code></pre></li>
 <li>
 <p>Display a message to the user.</p>
-<pre><code>message([&lt;mode&gt;] &quot;message to display&quot; ...)
+<pre tabindex="0"><code>message([&lt;mode&gt;] &#34;message to display&#34; ...)
 </code></pre></li>
 <li>
 <p>Add an executable target called <code>&lt;name&gt;</code> to be built from the specified source files. The <code>&lt;name&gt;</code> corresponds to the logical target name and must be globally unique within a project.</p>
-<pre><code>add_executable(&lt;name&gt; [WIN32] [MACOSX_BUNDLE]
+<pre tabindex="0"><code>add_executable(&lt;name&gt; [WIN32] [MACOSX_BUNDLE]
                [EXCLUDE_FROM_ALL]
                [source1] [source2 ...])
 </code></pre></li>
 <li>
 <p>Add a subdirectory to the build. The <code>source_dir</code> specifies the directory in which the source <code>CMakeLists.txt</code> and code files are located. If it is a relative path it will be evaluated with respect to the current directory. The <code>binary_dir</code>specifies the directory in which to place the output files. If it is a relative path it will be evaluated with respect to the current output directory, but it may also be an absolute path. If <code>binary_dir</code> is not specified, the value of <code>source_dir</code> will be used.</p>
-<pre><code>add_subdirectory(source_dir [binary_dir]
+<pre tabindex="0"><code>add_subdirectory(source_dir [binary_dir]
                  [EXCLUDE_FROM_ALL])
 </code></pre></li>
 <li>
 <p>Installing Targets</p>
-<pre><code>install(TARGETS targets... [EXPORT &lt;export-name&gt;]
+<pre tabindex="0"><code>install(TARGETS targets... [EXPORT &lt;export-name&gt;]
         [[ARCHIVE|LIBRARY|RUNTIME|OBJECTS|FRAMEWORK|BUNDLE|
           PRIVATE_HEADER|PUBLIC_HEADER|RESOURCE]
          [DESTINATION &lt;dir&gt;]
@@ -368,7 +367,7 @@ SET(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
         [INCLUDES DESTINATION [&lt;dir&gt; ...]]
         )
 </code></pre><p>example</p>
-<pre><code>install(TARGETS myExe mySharedLib myStaticLib
+<pre tabindex="0"><code>install(TARGETS myExe mySharedLib myStaticLib
         RUNTIME DESTINATION bin
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib/static)
@@ -378,7 +377,7 @@ install(TARGETS mySharedLib DESTINATION /some/full/path)
 </li>
 <li>
 <p>Installing Files</p>
-<pre><code>install(&lt;FILES|PROGRAMS&gt; files... DESTINATION &lt;dir&gt;
+<pre tabindex="0"><code>install(&lt;FILES|PROGRAMS&gt; files... DESTINATION &lt;dir&gt;
         [PERMISSIONS permissions...]
         [CONFIGURATIONS [Debug|Release|...]]
         [COMPONENT &lt;component&gt;]
@@ -386,7 +385,7 @@ install(TARGETS mySharedLib DESTINATION /some/full/path)
 </code></pre></li>
 <li>
 <p>Installing Directories</p>
-<pre><code>install(DIRECTORY dirs... DESTINATION &lt;dir&gt;
+<pre tabindex="0"><code>install(DIRECTORY dirs... DESTINATION &lt;dir&gt;
         [FILE_PERMISSIONS permissions...]
         [DIRECTORY_PERMISSIONS permissions...]
         [USE_SOURCE_PERMISSIONS] [OPTIONAL] [MESSAGE_NEVER]
@@ -399,27 +398,27 @@ install(TARGETS mySharedLib DESTINATION /some/full/path)
 <p>The <code>FILE_PERMISSIONS</code> and DIRECTORY_PERMISSIONS options specify permissions given to files and directories in the destination.</p>
 <p>Using the <code>PATTERN</code> or <code>REGEX</code> options  “match” options specify a globbing pattern or regular expression to match directories or files encountered within input directories.</p>
 <p>For example the code</p>
-<pre><code>install(DIRECTORY src/ DESTINATION include/myproj
-        FILES_MATCHING PATTERN &quot;*.h&quot;)
+<pre tabindex="0"><code>install(DIRECTORY src/ DESTINATION include/myproj
+        FILES_MATCHING PATTERN &#34;*.h&#34;)
 </code></pre><p>will extract and install header files from a source tree.</p>
 <p>For example the code</p>
-<pre><code>install(DIRECTORY icons scripts/ DESTINATION share/myproj
-        PATTERN &quot;CVS&quot; EXCLUDE
-        PATTERN &quot;scripts/*&quot;
+<pre tabindex="0"><code>install(DIRECTORY icons scripts/ DESTINATION share/myproj
+        PATTERN &#34;CVS&#34; EXCLUDE
+        PATTERN &#34;scripts/*&#34;
         PERMISSIONS OWNER_EXECUTE OWNER_WRITE OWNER_READ
                     GROUP_EXECUTE GROUP_READ)
 </code></pre><p>will install the <code>icons</code> directory to <code>share/myproj/icons</code> and the files in the<code>scripts</code> directory to <code>share/myproj</code>. The icons will get default file permissions, the scripts will be given specific permissions, and any <code>CVS</code>directories will be excluded.</p>
 </li>
 <li>
 <p>The <code>SCRIPT</code> form will invoke the given CMake script files during installation.  The <code>CODE</code> form will invoke the given CMake code during installation. </p>
-<pre><code>install([[SCRIPT &lt;file&gt;] [CODE &lt;code&gt;]]
+<pre tabindex="0"><code>install([[SCRIPT &lt;file&gt;] [CODE &lt;code&gt;]]
         [COMPONENT &lt;component&gt;] [EXCLUDE_FROM_ALL] [...])
 </code></pre></li>
 <li>
 <p>Adds a library target called <code>&lt;name&gt;</code> to be built from the source files listed in the command invocation.</p>
 </li>
 </ol>
-<pre><code>add_library(&lt;name&gt; [STATIC | SHARED | MODULE]
+<pre tabindex="0"><code>add_library(&lt;name&gt; [STATIC | SHARED | MODULE]
             [EXCLUDE_FROM_ALL]
             [source1] [source2 ...])
 </code></pre><p>The <code>&lt;name&gt;</code> corresponds to the logical target name and must be globally unique within a project.</p>
@@ -427,32 +426,32 @@ install(TARGETS mySharedLib DESTINATION /some/full/path)
 <ol start="11">
 <li>
 <p>Targets can have properties that affect how they are built. Set properties on a target. </p>
-<pre><code>set_target_properties(target1 target2 ...
+<pre tabindex="0"><code>set_target_properties(target1 target2 ...
                       PROPERTIES prop1 value1
                       prop2 value2 ...)
 </code></pre><p>using <code>add_library</code>, <code>set_target_propertie</code> to build shared and static library with the same name:</p>
-<pre><code>add_library(hello SHARED ${LIBHELLO_SRC})
+<pre tabindex="0"><code>add_library(hello SHARED ${LIBHELLO_SRC})
 add_library(hello_static STATIC ${LIBHELLO_SRC})
-    
-set_target_properties(hello_static PROPERTIES OUTPUT_NAME &quot;hello&quot;)
-    
+
+set_target_properties(hello_static PROPERTIES OUTPUT_NAME &#34;hello&#34;)
+
 set_target_properties(hello PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 set_target_properties(hello_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
-    
+
 set_target_properties(hello PROPERTIES VERSION 1.2 SOVERSION 1)
 set_target_properties(hello_static PROPERTIES VERSION 1.2 SOVERSION 1)
 </code></pre></li>
 <li>
 <p>install headers files and shared, static library to system directory:</p>
-<pre><code>install(TARGETS hello hello_static
+<pre tabindex="0"><code>install(TARGETS hello hello_static
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib)
-    
+
 install(FILES hello.h DESTINATION include/hello)
 </code></pre><p><code>cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..</code></p>
 <p><code>make</code></p>
 <p><code>make install</code></p>
-<pre><code>-- Installing: /usr/local/lib/libhello.so.1.2
+<pre tabindex="0"><code>-- Installing: /usr/local/lib/libhello.so.1.2
 -- Installing: /usr/local/lib/libhello.so.1
 -- Installing: /usr/local/lib/libhello.so
 -- Installing: /usr/local/lib/libhello.a
@@ -461,23 +460,23 @@ install(FILES hello.h DESTINATION include/hello)
 <li>
 <p>include header files directories and Link to external library</p>
 <p>Add the given directories to those the compiler uses to search for include files, such as header files. </p>
-<pre><code>include_directories([AFTER|BEFORE] [SYSTEM] dir1 [dir2 ...])
+<pre tabindex="0"><code>include_directories([AFTER|BEFORE] [SYSTEM] dir1 [dir2 ...])
 </code></pre><p>By default the directories specified are appended onto the current list of directories. This default behavior can be changed by setting <code>CMAKE_INCLUDE_DIRECTORIES_BEFORE</code> to <code>ON</code>. By using <code>AFTER</code> or <code>BEFORE</code>explicitly, you can select between appending and prepending, independent of the default.</p>
 <p>Specify directories in which the linker will look for libraries.</p>
-<pre><code>link_directories(directory1 directory2 ...)
+<pre tabindex="0"><code>link_directories(directory1 directory2 ...)
 </code></pre><p>Note that this command is rarely necessary. Library locations returned by <code>find_package()</code> and <code>find_library()</code> are absolute paths. Pass these absolute library file paths directly to the <code>target_link_libraries()</code> command. CMake will ensure the linker finds them.</p>
 <p>Specify libraries or flags to use when linking a given target and/or its dependents.</p>
-<pre><code>target_link_libraries(&lt;target&gt; ... &lt;item&gt;... ...)
+<pre tabindex="0"><code>target_link_libraries(&lt;target&gt; ... &lt;item&gt;... ...)
 </code></pre><p>The named <code>&lt;target&gt;</code> must have been created in the current directory by a command such as <code>add_executable()</code> or <code>add_library()</code> and must not be an <code>ALIAS</code> target.</p>
 <p>Each <code>&lt;item&gt;</code> may be: a library target name; <strong>a full path to a library file</strong>; a debug, optimized, or general keyword immediately followed by another <!-- raw HTML omitted -->.</p>
-<pre><code>include_directories(/usr/local/include/hello)
-    
+<pre tabindex="0"><code>include_directories(/usr/local/include/hello)
+
 target_link_libraries(main /usr/local/lib/libhello.so)
 # target_link_libraries(main /usr/local/lib/libhello.a)
 </code></pre></li>
 <li>
 <p>Finds and loads <strong>settings</strong> from an external project. <code>&lt;package&gt;_FOUND</code> will be set to indicate whether the package was found.</p>
-<pre><code>find_package(&lt;package&gt; [version] [EXACT] [QUIET] [MODULE]
+<pre tabindex="0"><code>find_package(&lt;package&gt; [version] [EXACT] [QUIET] [MODULE]
              [REQUIRED] [[COMPONENTS] [components...]]
              [OPTIONAL_COMPONENTS components...]
              [NO_POLICY_SCOPE])
@@ -487,7 +486,7 @@ target_link_libraries(main /usr/local/lib/libhello.so)
 </li>
 <li>
 <p>This command is used to find a library.</p>
-<pre><code>find_library (&lt;VAR&gt; name1 [path1 path2 ...])
+<pre tabindex="0"><code>find_library (&lt;VAR&gt; name1 [path1 path2 ...])
 </code></pre></li>
 </ol>
 
@@ -657,7 +656,7 @@ target_link_libraries(main /usr/local/lib/libhello.so)
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

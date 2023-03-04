@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/web-application/back-end/mybatis-spring-boot/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,13 +63,12 @@
 <meta property="og:description" content="Creating a project spring init -d=web --build=maven mysite Declare Dependencies cd mysite vim pom.xml &lt;dependency&gt; &lt;groupId&gt;org.liquibase&lt;/groupId&gt; &lt;artifactId&gt;liquibase-core&lt;/artifactId&gt; &lt;version&gt;3.10.2&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt; &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt; &lt;version&gt;2.1.3&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;mysql&lt;/groupId&gt; &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt; &lt;version&gt;8.0.20&lt;/version&gt; &lt;/dependency&gt; MyBatis-Spring-Boot-Starter will: Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers," />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/web-application/back-end/mybatis-spring-boot/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-08-09T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-08-09T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2020-08-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-08-09T00:00:00+00:00" />
 <meta itemprop="name" content="Mybatis Spring Boot">
-<meta itemprop="description" content="Creating a project spring init -d=web --build=maven mysite Declare Dependencies cd mysite vim pom.xml &lt;dependency&gt; &lt;groupId&gt;org.liquibase&lt;/groupId&gt; &lt;artifactId&gt;liquibase-core&lt;/artifactId&gt; &lt;version&gt;3.10.2&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt; &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt; &lt;version&gt;2.1.3&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;mysql&lt;/groupId&gt; &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt; &lt;version&gt;8.0.20&lt;/version&gt; &lt;/dependency&gt; MyBatis-Spring-Boot-Starter will: Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers,"><meta itemprop="datePublished" content="2020-08-09T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-08-09T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="999">
+<meta itemprop="description" content="Creating a project spring init -d=web --build=maven mysite Declare Dependencies cd mysite vim pom.xml &lt;dependency&gt; &lt;groupId&gt;org.liquibase&lt;/groupId&gt; &lt;artifactId&gt;liquibase-core&lt;/artifactId&gt; &lt;version&gt;3.10.2&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt; &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt; &lt;version&gt;2.1.3&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;mysql&lt;/groupId&gt; &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt; &lt;version&gt;8.0.20&lt;/version&gt; &lt;/dependency&gt; MyBatis-Spring-Boot-Starter will: Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers,"><meta itemprop="datePublished" content="2020-08-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-08-09T00:00:00+00:00" />
+<meta itemprop="wordCount" content="981">
 <meta itemprop="keywords" content="Mybatis,Spring," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mybatis Spring Boot"/>
 <meta name="twitter:description" content="Creating a project spring init -d=web --build=maven mysite Declare Dependencies cd mysite vim pom.xml &lt;dependency&gt; &lt;groupId&gt;org.liquibase&lt;/groupId&gt; &lt;artifactId&gt;liquibase-core&lt;/artifactId&gt; &lt;version&gt;3.10.2&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt; &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt; &lt;version&gt;2.1.3&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;mysql&lt;/groupId&gt; &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt; &lt;version&gt;8.0.20&lt;/version&gt; &lt;/dependency&gt; MyBatis-Spring-Boot-Starter will: Autodetect an existing DataSource Will create and register an instance of a SqlSessionFactory passing that DataSource as an input using the SqlSessionFactoryBean Will create and register an instance of a SqlSessionTemplate got out of the SqlSessionFactory Auto-scan your mappers,"/>
@@ -338,21 +337,21 @@
     
     <div class="post-content">
       <h2 id="creating-a-project">Creating a project</h2>
-<pre><code>spring init -d=web --build=maven mysite
+<pre tabindex="0"><code>spring init -d=web --build=maven mysite
 </code></pre><h2 id="declare-dependencies">Declare Dependencies</h2>
-<pre><code>cd mysite
+<pre tabindex="0"><code>cd mysite
 vim pom.xml
-</code></pre><pre><code>&lt;dependency&gt;
+</code></pre><pre tabindex="0"><code>&lt;dependency&gt;
     &lt;groupId&gt;org.liquibase&lt;/groupId&gt;
     &lt;artifactId&gt;liquibase-core&lt;/artifactId&gt;
     &lt;version&gt;3.10.2&lt;/version&gt;
 &lt;/dependency&gt;
-</code></pre><pre><code>&lt;dependency&gt;
+</code></pre><pre tabindex="0"><code>&lt;dependency&gt;
     &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;
     &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;
     &lt;version&gt;2.1.3&lt;/version&gt;
 &lt;/dependency&gt;
-</code></pre><pre><code>&lt;dependency&gt;
+</code></pre><pre tabindex="0"><code>&lt;dependency&gt;
     &lt;groupId&gt;mysql&lt;/groupId&gt;
     &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
     &lt;version&gt;8.0.20&lt;/version&gt;
@@ -365,7 +364,7 @@ vim pom.xml
 <li>Auto-scan your mappers, link them to the <code>SqlSessionTemplate</code> and register them to Spring context so they can be injected into your beans</li>
 </ul>
 <h3 id="applicationproperties">application.properties</h3>
-<pre><code>spring.datasource.username=root
+<pre tabindex="0"><code>spring.datasource.username=root
 spring.datasource.password=123456
 spring.datasource.url=jdbc:mysql://127.0.0.1:3306/discovery?characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=false&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=GMT%2B8&amp;nullCatalogMeansCurrent=true&amp;allowPublicKeyRetrieval=true
 spring.datasource.driver=com.mysql.cj.jdbc.Driver
@@ -375,31 +374,31 @@ spring.liquibase.change-log=classpath:/db/changelog/db.changelog-master.xml
 spring.liquibase.enabled=true
 spring.liquibase.contexts=dev, faker
 </code></pre><h3 id="dbchangelog">dbchangelog</h3>
-<pre><code>vim src/main/resources/db/changelog/db.changelog-master.xml
-</code></pre><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<pre tabindex="0"><code>vim src/main/resources/db/changelog/db.changelog-master.xml
+</code></pre><pre tabindex="0"><code>&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;
 &lt;databaseChangeLog
-        xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog&quot;
-        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-        xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog
-	  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd&quot;&gt;
-    &lt;include file=&quot;db/changelog/db.changelog-1.0.xml&quot; relativeToChangelogFile=&quot;false&quot;/&gt;
+        xmlns=&#34;http://www.liquibase.org/xml/ns/dbchangelog&#34;
+        xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34;
+        xsi:schemaLocation=&#34;http://www.liquibase.org/xml/ns/dbchangelog
+	  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd&#34;&gt;
+    &lt;include file=&#34;db/changelog/db.changelog-1.0.xml&#34; relativeToChangelogFile=&#34;false&#34;/&gt;
 &lt;/databaseChangeLog&gt;
-</code></pre><pre><code>vim src/main/resources/db/changelog/db.changelog-1.0.xml
-</code></pre><pre><code>&lt;databaseChangeLog
-        xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog&quot;
-        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-        xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog
-         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd&quot;&gt;
+</code></pre><pre tabindex="0"><code>vim src/main/resources/db/changelog/db.changelog-1.0.xml
+</code></pre><pre tabindex="0"><code>&lt;databaseChangeLog
+        xmlns=&#34;http://www.liquibase.org/xml/ns/dbchangelog&#34;
+        xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34;
+        xsi:schemaLocation=&#34;http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd&#34;&gt;
 &lt;/databaseChangeLog&gt;
 </code></pre><h3 id="run-a-spring-boot-application">Run a spring boot application</h3>
 <p>Hot Swapping</p>
-<pre><code>    &lt;dependency&gt;
+<pre tabindex="0"><code>    &lt;dependency&gt;
         &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
         &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;
         &lt;scope&gt;runtime&lt;/scope&gt;
         &lt;optional&gt;true&lt;/optional&gt;
     &lt;/dependency&gt;
-</code></pre><pre><code>&lt;build&gt;
+</code></pre><pre tabindex="0"><code>&lt;build&gt;
     &lt;plugins&gt;
         &lt;plugin&gt;
             &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
@@ -412,12 +411,12 @@ spring.liquibase.contexts=dev, faker
     &lt;/plugins&gt;
 &lt;/build&gt;
 </code></pre><p>Run a created application using the Spring Boot Maven Plugin.</p>
-<pre><code>vim pom.xml
-</code></pre><pre><code>&lt;properties&gt;
+<pre tabindex="0"><code>vim pom.xml
+</code></pre><pre tabindex="0"><code>&lt;properties&gt;
   &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;
   &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;
 &lt;/properties&gt;
-</code></pre><pre><code>&lt;build&gt;
+</code></pre><pre tabindex="0"><code>&lt;build&gt;
   &lt;plugins&gt;
     &lt;plugin&gt;
       &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
@@ -430,7 +429,7 @@ spring.liquibase.contexts=dev, faker
     &lt;/plugin&gt;
   &lt;/plugins&gt;
 &lt;/build&gt;
-</code></pre><pre><code>./mvnw spring-boot:run
+</code></pre><pre tabindex="0"><code>./mvnw spring-boot:run
 </code></pre><p>Database generate two table:</p>
 <ul>
 <li>DATABASECHANGELOG</li>
@@ -439,49 +438,49 @@ spring.liquibase.contexts=dev, faker
 <p><strong>atabasechangelog ：用于 Liquibase 操作记录，以行的形式跟踪每个</strong>*<strong>变更集*****，并由“ id”，“ author”和“ filename”列的组合标识。</strong></p>
 <p><strong>databasechangeloglock ：来确保一次仅运行一个</strong> <strong>Liquibase</strong> <strong>实例。</strong></p>
 <h3 id="create-table">Create table</h3>
-<pre><code>vim src/main/resources/db/changelog/db.changelog-1.0.xml
-</code></pre><pre><code>&lt;databaseChangeLog
-        xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog&quot;
-        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-        xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog
-         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd&quot;&gt;
+<pre tabindex="0"><code>vim src/main/resources/db/changelog/db.changelog-1.0.xml
+</code></pre><pre tabindex="0"><code>&lt;databaseChangeLog
+        xmlns=&#34;http://www.liquibase.org/xml/ns/dbchangelog&#34;
+        xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34;
+        xsi:schemaLocation=&#34;http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd&#34;&gt;
 
-    &lt;changeSet author=&quot;liquibase-docs&quot; id=&quot;create-city&quot;&gt;
-        &lt;preConditions onFail=&quot;MARK_RAN&quot;&gt;
+    &lt;changeSet author=&#34;liquibase-docs&#34; id=&#34;create-city&#34;&gt;
+        &lt;preConditions onFail=&#34;MARK_RAN&#34;&gt;
             &lt;not&gt;
-                &lt;tableExists tableName=&quot;city&quot;/&gt;
+                &lt;tableExists tableName=&#34;city&#34;/&gt;
             &lt;/not&gt;
         &lt;/preConditions&gt;
-        &lt;createTable remarks=&quot;城市&quot; tableName=&quot;city&quot;&gt;
-            &lt;column name=&quot;id&quot; type=&quot;BIGINT&quot; autoIncrement=&quot;true&quot;&gt;
-                &lt;constraints primaryKey=&quot;true&quot;/&gt;
+        &lt;createTable remarks=&#34;城市&#34; tableName=&#34;city&#34;&gt;
+            &lt;column name=&#34;id&#34; type=&#34;BIGINT&#34; autoIncrement=&#34;true&#34;&gt;
+                &lt;constraints primaryKey=&#34;true&#34;/&gt;
             &lt;/column&gt;
-            &lt;column name=&quot;name&quot; remarks=&quot;名称&quot; type=&quot;VARCHAR(255)&quot;/&gt;
-            &lt;column name=&quot;state&quot; remarks=&quot;州&quot; type=&quot;VARCHAR(255)&quot;/&gt;
-            &lt;column name=&quot;country&quot; remarks=&quot;国家&quot; type=&quot;VARCHAR(255)&quot;/&gt;
+            &lt;column name=&#34;name&#34; remarks=&#34;名称&#34; type=&#34;VARCHAR(255)&#34;/&gt;
+            &lt;column name=&#34;state&#34; remarks=&#34;州&#34; type=&#34;VARCHAR(255)&#34;/&gt;
+            &lt;column name=&#34;country&#34; remarks=&#34;国家&#34; type=&#34;VARCHAR(255)&#34;/&gt;
         &lt;/createTable&gt;
     &lt;/changeSet&gt;
 
-    &lt;changeSet author=&quot;liquibase-docs&quot; id=&quot;create-hotel&quot;&gt;
-        &lt;preConditions onFail=&quot;MARK_RAN&quot;&gt;
+    &lt;changeSet author=&#34;liquibase-docs&#34; id=&#34;create-hotel&#34;&gt;
+        &lt;preConditions onFail=&#34;MARK_RAN&#34;&gt;
             &lt;not&gt;
-                &lt;tableExists tableName=&quot;hotel&quot;/&gt;
+                &lt;tableExists tableName=&#34;hotel&#34;/&gt;
             &lt;/not&gt;
         &lt;/preConditions&gt;
-        &lt;createTable remarks=&quot;酒店&quot; tableName=&quot;hotel&quot;&gt;
-            &lt;column name=&quot;id&quot; type=&quot;BIGINT&quot;/&gt;
-            &lt;column name=&quot;city&quot; remarks=&quot;城市&quot; type=&quot;VARCHAR(255)&quot;/&gt;
-            &lt;column name=&quot;name&quot; remarks=&quot;名称&quot; type=&quot;VARCHAR(255)&quot;/&gt;
-            &lt;column name=&quot;address&quot; remarks=&quot;地址&quot; type=&quot;VARCHAR(255)&quot;/&gt;
-            &lt;column name=&quot;zip&quot; remarks=&quot;邮编&quot; type=&quot;VARCHAR(255)&quot;/&gt;
+        &lt;createTable remarks=&#34;酒店&#34; tableName=&#34;hotel&#34;&gt;
+            &lt;column name=&#34;id&#34; type=&#34;BIGINT&#34;/&gt;
+            &lt;column name=&#34;city&#34; remarks=&#34;城市&#34; type=&#34;VARCHAR(255)&#34;/&gt;
+            &lt;column name=&#34;name&#34; remarks=&#34;名称&#34; type=&#34;VARCHAR(255)&#34;/&gt;
+            &lt;column name=&#34;address&#34; remarks=&#34;地址&#34; type=&#34;VARCHAR(255)&#34;/&gt;
+            &lt;column name=&#34;zip&#34; remarks=&#34;邮编&#34; type=&#34;VARCHAR(255)&#34;/&gt;
         &lt;/createTable&gt;
     &lt;/changeSet&gt;
 
 &lt;/databaseChangeLog&gt;
 </code></pre><h3 id="create-a-domain-class">Create a domain class</h3>
-<pre><code>mkdir src/main/java/com/example/mysite/domain
-</code></pre><pre><code>vim src/main/java/com/example/mysite/City.java
-</code></pre><pre><code>package com.example.mysite.domain;
+<pre tabindex="0"><code>mkdir src/main/java/com/example/mysite/domain
+</code></pre><pre tabindex="0"><code>vim src/main/java/com/example/mysite/City.java
+</code></pre><pre tabindex="0"><code>package com.example.mysite.domain;
 
 import java.io.Serializable;
 
@@ -531,12 +530,12 @@ public class City implements Serializable {
 
   @Override
   public String toString() {
-    return getId() + &quot;,&quot; + getName() + &quot;,&quot; + getState() + &quot;,&quot; + getCountry();
+    return getId() + &#34;,&#34; + getName() + &#34;,&#34; + getState() + &#34;,&#34; + getCountry();
   }
 
 }
-</code></pre><pre><code>vim src/main/java/com/example/mysite/domain/Hotel.java
-</code></pre><pre><code>package com.example.mysite.domain;
+</code></pre><pre tabindex="0"><code>vim src/main/java/com/example/mysite/domain/Hotel.java
+</code></pre><pre tabindex="0"><code>package com.example.mysite.domain;
 
 import java.io.Serializable;
 
@@ -586,14 +585,14 @@ public class Hotel implements Serializable {
 
   @Override
   public String toString() {
-    return getCity() + &quot;,&quot; + getName() + &quot;,&quot; + getAddress() + &quot;,&quot; + getZip();
+    return getCity() + &#34;,&#34; + getName() + &#34;,&#34; + getAddress() + &#34;,&#34; + getZip();
   }
 
 }
 </code></pre><h3 id="create-a-dao">Create a DAO</h3>
-<pre><code>mkdir src/main/java/com/example/mysite/dao
-</code></pre><pre><code>vim src/main/java/com/example/mysite/dao/CityDao.java
-</code></pre><pre><code>package com.example.mysite.dao;
+<pre tabindex="0"><code>mkdir src/main/java/com/example/mysite/dao
+</code></pre><pre tabindex="0"><code>vim src/main/java/com/example/mysite/dao/CityDao.java
+</code></pre><pre tabindex="0"><code>package com.example.mysite.dao;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Component;
@@ -610,14 +609,14 @@ public class CityDao {
     }
 
     public City selectCityById(long id) {
-      return this.sqlSession.selectOne(&quot;selectCityById&quot;, id);
+      return this.sqlSession.selectOne(&#34;selectCityById&#34;, id);
     }
 
 }
 </code></pre><h6 id="create-a-mapper-interface">Create a mapper interface</h6>
-<pre><code>mkdir src/main/java/com/example/mysite/mapper
-</code></pre><pre><code>vim src/main/java/com/example/mysite/mapper/HotelMapper.java
-</code></pre><pre><code>package com.example.mysite.mapper;
+<pre tabindex="0"><code>mkdir src/main/java/com/example/mysite/mapper
+</code></pre><pre tabindex="0"><code>vim src/main/java/com/example/mysite/mapper/HotelMapper.java
+</code></pre><pre tabindex="0"><code>package com.example.mysite.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 
@@ -628,30 +627,30 @@ public interface HotelMapper {
   Hotel selectByCityId(int cityId);
 }
 </code></pre><h6 id="writer-mapper-file">Writer mapper file</h6>
-<pre><code>mkdir -p src/main/resources/com/example/mysite/mapper
-</code></pre><pre><code>vim src/main/resources/com/example/mysite/mapper/CityMapper.xml
-</code></pre><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+<pre tabindex="0"><code>mkdir -p src/main/resources/com/example/mysite/mapper
+</code></pre><pre tabindex="0"><code>vim src/main/resources/com/example/mysite/mapper/CityMapper.xml
+</code></pre><pre tabindex="0"><code>&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;
 &lt;!DOCTYPE mapper
-        PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;
-        &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;
-&lt;mapper namespace=&quot;com.example.mysite.mapper.CityMapper&quot;&gt;
-    &lt;select id=&quot;selectCityById&quot; resultType=&quot;City&quot;&gt;
+        PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34;
+        &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34;&gt;
+&lt;mapper namespace=&#34;com.example.mysite.mapper.CityMapper&#34;&gt;
+    &lt;select id=&#34;selectCityById&#34; resultType=&#34;City&#34;&gt;
         select id, name, state, country from city where id = #{id}
     &lt;/select&gt;
 &lt;/mapper&gt;
-</code></pre><pre><code>vim src/main/resources/com/example/mysite/mapper/HotelMapper.xml
-</code></pre><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+</code></pre><pre tabindex="0"><code>vim src/main/resources/com/example/mysite/mapper/HotelMapper.xml
+</code></pre><pre tabindex="0"><code>&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;
 &lt;!DOCTYPE mapper
-        PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;
-        &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;
-&lt;mapper namespace=&quot;com.example.mysite.mapper.HotelMapper&quot;&gt;
-    &lt;select id=&quot;selectByCityId&quot; resultType=&quot;Hotel&quot;&gt;
+        PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34;
+        &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34;&gt;
+&lt;mapper namespace=&#34;com.example.mysite.mapper.HotelMapper&#34;&gt;
+    &lt;select id=&#34;selectByCityId&#34; resultType=&#34;Hotel&#34;&gt;
         select city, name, address, zip from hotel where city = #{id}
     &lt;/select&gt;
 &lt;/mapper&gt;
 </code></pre><h6 id="modify-a-spring-boot-application-class">Modify a spring boot application class</h6>
-<pre><code>vim src/main/java/com/example/mysite/DemoApplication.java
-</code></pre><pre><code>package com.example.mysite;
+<pre tabindex="0"><code>vim src/main/java/com/example/mysite/DemoApplication.java
+</code></pre><pre tabindex="0"><code>package com.example.mysite;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.CommandLineRunner;
@@ -676,7 +675,7 @@ public class DemoApplication implements CommandLineRunner {
     }
 
     @Override
-    @SuppressWarnings(&quot;squid:S106&quot;)
+    @SuppressWarnings(&#34;squid:S106&#34;)
     public void run(String... args) {
         System.out.println(this.cityDao.selectCityById(1));
         System.out.println(this.hotelMapper.selectByCityId(1));
@@ -684,21 +683,21 @@ public class DemoApplication implements CommandLineRunner {
 
 }
 </code></pre><h6 id="mybatis-configuration">Mybatis Configuration</h6>
-<pre><code>vim src/main/resources/application.properties
-</code></pre><pre><code>mybatis.config-location=classpath:mybatis-config.xml
+<pre tabindex="0"><code>vim src/main/resources/application.properties
+</code></pre><pre tabindex="0"><code>mybatis.config-location=classpath:mybatis-config.xml
 logging.level.root=WARN
 logging.level.com.example.mysite.mapper=TRACE
-</code></pre><pre><code>vim src/main/resources/mybatis-config.xml
-</code></pre><pre><code>&lt;!DOCTYPE configuration
-        PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;
-        &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;
+</code></pre><pre tabindex="0"><code>vim src/main/resources/mybatis-config.xml
+</code></pre><pre tabindex="0"><code>&lt;!DOCTYPE configuration
+        PUBLIC &#34;-//mybatis.org//DTD Config 3.0//EN&#34;
+        &#34;http://mybatis.org/dtd/mybatis-3-config.dtd&#34;&gt;
 &lt;configuration&gt;
     &lt;typeAliases&gt;
-        &lt;package name=&quot;com.example.mysite.domain&quot;/&gt;
+        &lt;package name=&#34;com.example.mysite.domain&#34;/&gt;
     &lt;/typeAliases&gt;
     &lt;mappers&gt;
-        &lt;mapper resource=&quot;com/example/mysite/mapper/CityMapper.xml&quot;/&gt;
-        &lt;mapper resource=&quot;com/example/mysite/mapper/HotelMapper.xml&quot;/&gt;
+        &lt;mapper resource=&#34;com/example/mysite/mapper/CityMapper.xml&#34;/&gt;
+        &lt;mapper resource=&#34;com/example/mysite/mapper/HotelMapper.xml&#34;/&gt;
     &lt;/mappers&gt;
 &lt;/configuration&gt;
 </code></pre>
@@ -868,7 +867,7 @@ logging.level.com.example.mysite.mapper=TRACE
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

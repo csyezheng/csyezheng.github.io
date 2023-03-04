@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/engineering-fundamentals/python/the-python-tutorial/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,12 +63,11 @@
 <meta property="og:description" content="The Python Tutorial 1. Whetting Your Appetite The Python interpreter is easily extended with new functions and data types implemented in C or C&#43;&#43; (or other languages callable from C). Python allows you to split your program into modules that can be reused in other Python programs. It comes with a large collection of standard modules that you can use as the basis of your programs — or as examples" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/engineering-fundamentals/python/the-python-tutorial/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-03-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2019-03-01T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2019-03-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-03-01T00:00:00+00:00" />
 <meta itemprop="name" content="The Python Tutorial">
-<meta itemprop="description" content="The Python Tutorial 1. Whetting Your Appetite The Python interpreter is easily extended with new functions and data types implemented in C or C&#43;&#43; (or other languages callable from C). Python allows you to split your program into modules that can be reused in other Python programs. It comes with a large collection of standard modules that you can use as the basis of your programs — or as examples"><meta itemprop="datePublished" content="2019-03-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-03-01T00:00:00&#43;00:00" />
+<meta itemprop="description" content="The Python Tutorial 1. Whetting Your Appetite The Python interpreter is easily extended with new functions and data types implemented in C or C&#43;&#43; (or other languages callable from C). Python allows you to split your program into modules that can be reused in other Python programs. It comes with a large collection of standard modules that you can use as the basis of your programs — or as examples"><meta itemprop="datePublished" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-03-01T00:00:00+00:00" />
 <meta itemprop="wordCount" content="18445">
 <meta itemprop="keywords" content="Python," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The Python Tutorial"/>
@@ -393,16 +392,16 @@
 <h3 id="22-the-interpreter-and-its-environment">2.2. The Interpreter and Its Environment</h3>
 <p>2.2.1. Source Code Encoding</p>
 <p>the source code starts with a UNIX “<strong>shebang</strong>” line.</p>
-<pre><code>#!/usr/bin/env python3
+<pre tabindex="0"><code>#!/usr/bin/env python3
 </code></pre><p>By default, Python source files are treated as encoded in UTF-8. To declare an encoding other than the default one:</p>
-<pre><code># -*- coding: encoding -*-
+<pre tabindex="0"><code># -*- coding: encoding -*-
 </code></pre><h2 id="3-an-informal-introduction-to-python">3. An Informal Introduction to Python</h2>
 <p>Note that a secondary prompt on a line by itself in an example means you must type a blank line; this is used to end a multi-line command.</p>
 <p>Comments in Python start with the hash character, <strong><code>#</code></strong>, and extend to the end of the physical line.</p>
-<pre><code>spam = 1  # this is the second comment
+<pre tabindex="0"><code>spam = 1  # this is the second comment
 </code></pre><h3 id="31-using-python-as-a-calculator">3.1. Using Python as a Calculator</h3>
 <h4 id="311-numbers">3.1.1. Numbers</h4>
-<pre><code>&gt;&gt;&gt; 2 + 2
+<pre tabindex="0"><code>&gt;&gt;&gt; 2 + 2
 4
 &gt;&gt;&gt; 50 - 5*6
 20
@@ -421,45 +420,45 @@
 <h4 id="312-strings">3.1.2. Strings</h4>
 <p>They can be enclosed in single quotes (<strong><code>'...'</code></strong>) or double quotes (<strong><code>&quot;...&quot;</code></strong>) with the same result. Unlike other languages, special characters such as <strong><code>\n</code></strong> have the same meaning with both single (<strong><code>'...'</code></strong>) and double (<strong><code>&quot;...&quot;</code></strong>) quotes.</p>
 <p>If you don’t want characters prefaced by <code>\</code> to be interpreted as special characters, you can use <em><strong>raw strings</strong></em> by adding an <code>r</code> before the first quote:</p>
-<pre><code>&gt;&gt;&gt; print('C:\some\name')  # here \n means newline!
+<pre tabindex="0"><code>&gt;&gt;&gt; print(&#39;C:\some\name&#39;)  # here \n means newline!
 C:\some
 ame
-&gt;&gt;&gt; print(r'C:\some\name')  # note the r before the quote
+&gt;&gt;&gt; print(r&#39;C:\some\name&#39;)  # note the r before the quote
 C:\some\name
 </code></pre><p>String literals can span multiple lines. One way is using triple-quotes: <code>&quot;&quot;&quot;...&quot;&quot;&quot;</code> or <code>'''...'''</code>. <strong>End of lines are automatically included in the string, but it’s possible to prevent this by adding a <code>\</code> at the end of the line.</strong></p>
-<pre><code>print(&quot;&quot;&quot;\
+<pre tabindex="0"><code>print(&#34;&#34;&#34;\
 Usage: thingy [OPTIONS]
      -h                        Display this usage message
      -H hostname               Hostname to connect to
-&quot;&quot;&quot;)
+&#34;&#34;&#34;)
 </code></pre><p>Strings can be concatenated (glued together) with the <code>+</code> operator, and repeated with <code>*</code>:</p>
-<pre><code>&gt;&gt;&gt; # 3 times 'un', followed by 'ium'
-&gt;&gt;&gt; 3 * 'un' + 'ium'
-'unununium'
-</code></pre><pre><code>&gt;&gt;&gt; 'Py' 'thon'
-'Python'
-</code></pre><pre><code>&gt;&gt;&gt; prefix = 'Py'
-&gt;&gt;&gt; prefix + 'thon'
-'Python'
+<pre tabindex="0"><code>&gt;&gt;&gt; # 3 times &#39;un&#39;, followed by &#39;ium&#39;
+&gt;&gt;&gt; 3 * &#39;un&#39; + &#39;ium&#39;
+&#39;unununium&#39;
+</code></pre><pre tabindex="0"><code>&gt;&gt;&gt; &#39;Py&#39; &#39;thon&#39;
+&#39;Python&#39;
+</code></pre><pre tabindex="0"><code>&gt;&gt;&gt; prefix = &#39;Py&#39;
+&gt;&gt;&gt; prefix + &#39;thon&#39;
+&#39;Python&#39;
 </code></pre><p>Strings can be indexed (subscripted), with the first character having index 0, last character having index -1. Attempting to use an index that is too large will result in an error:</p>
-<pre><code>&gt;&gt;&gt; word = 'Python'
+<pre tabindex="0"><code>&gt;&gt;&gt; word = &#39;Python&#39;
 &gt;&gt;&gt; word[0]  # character in position 0
-'P'
+&#39;P&#39;
 &gt;&gt;&gt; word[-1]  # last character
-'n'
+&#39;n&#39;
 &gt;&gt;&gt; word[-2]  # second-last character
-'o'
+&#39;o&#39;
 </code></pre><p>slicing:  string_variable[included_start : excluded_end] . Out of range slice indexes are handled gracefully when used for slicing. <strong>Note how the start is always included, and the end always excluded.</strong></p>
-<pre><code>&gt;&gt;&gt; word = 'Python'
+<pre tabindex="0"><code>&gt;&gt;&gt; word = &#39;Python&#39;
 &gt;&gt;&gt; word[0:2]  
-'Py'
+&#39;Py&#39;
 &gt;&gt;&gt; word[2:5]  
-'tho'
+&#39;tho&#39;
 &gt;&gt;&gt; word[:2] + word[2:]
-'Python'
+&#39;Python&#39;
 </code></pre><p>Python strings cannot be changed — they are <strong>immutable</strong>. Therefore, assigning to an indexed position in the string results in an error. <strong>Immutable objects include numbers, strings and tuples.</strong> A new object has to be created if a different value has to be stored.</p>
 <p>The built-in function <strong><code>len</code></strong>(s) returns the length of a sequence (such as a string, bytes, tuple, list,  or range) or a collection (such as a disctionary, set, or frozen set).</p>
-<pre><code>&gt;&gt;&gt; s = 'supercalifragilisticexpialidocious'
+<pre tabindex="0"><code>&gt;&gt;&gt; s = &#39;supercalifragilisticexpialidocious&#39;
 &gt;&gt;&gt; len(s)
 34
 </code></pre><h4 id="common-sequence-operations">Common Sequence Operations</h4>
@@ -548,7 +547,7 @@ Usage: thingy [OPTIONS]
 <h4 id="313-lists">3.1.3. Lists</h4>
 <p>Lists might contain items of different types, but usually the items all have the same type.</p>
 <p>List support sequence operation, can be indexed, sliced, concatenated. All slice operations return a new list.</p>
-<pre><code>&gt;&gt;&gt; squares = [1, 4, 9, 16, 25]
+<pre tabindex="0"><code>&gt;&gt;&gt; squares = [1, 4, 9, 16, 25]
 &gt;&gt;&gt; squares[0]  # indexing returns the item
 1
 &gt;&gt;&gt; squares[-1]
@@ -558,38 +557,38 @@ Usage: thingy [OPTIONS]
 &gt;&gt;&gt; squares + [36, 49, 64, 81, 100]
 [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 </code></pre><p>Lists are a <strong>mutable</strong> type.</p>
-<pre><code>&gt;&gt;&gt; cubes = [1, 8, 27, 65, 125]  
+<pre tabindex="0"><code>&gt;&gt;&gt; cubes = [1, 8, 27, 65, 125]  
 &gt;&gt;&gt; cubes[3] = 64  
 &gt;&gt;&gt; cubes
 [1, 8, 27, 64, 125]
 </code></pre><p>You can also add new items at the end of the list, by using the <strong><code>append()</code></strong> <em>method</em></p>
-<pre><code>&gt;&gt;&gt; cubes.append(216)  # add the cube of 6
+<pre tabindex="0"><code>&gt;&gt;&gt; cubes.append(216)  # add the cube of 6
 </code></pre><p>Assignment to slices is also possible, and this can even change the size of the list or clear it entirely.</p>
-<pre><code>&gt;&gt;&gt; letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+<pre tabindex="0"><code>&gt;&gt;&gt; letters = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;]
 &gt;&gt;&gt; letters
-['a', 'b', 'c', 'd', 'e', 'f', 'g']
+[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;]
 &gt;&gt;&gt; # replace some values
-&gt;&gt;&gt; letters[2:5] = ['C', 'D', 'E']
+&gt;&gt;&gt; letters[2:5] = [&#39;C&#39;, &#39;D&#39;, &#39;E&#39;]
 &gt;&gt;&gt; letters
-['a', 'b', 'C', 'D', 'E', 'f', 'g']
+[&#39;a&#39;, &#39;b&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;, &#39;f&#39;, &#39;g&#39;]
 &gt;&gt;&gt; # now remove them
 &gt;&gt;&gt; letters[2:5] = []
 &gt;&gt;&gt; letters
-['a', 'b', 'f', 'g']
+[&#39;a&#39;, &#39;b&#39;, &#39;f&#39;, &#39;g&#39;]
 </code></pre><p>The built-in function <strong><code>len()</code></strong> also applies to lists:</p>
-<pre><code>&gt;&gt;&gt; letters = ['a', 'b', 'c', 'd']
+<pre tabindex="0"><code>&gt;&gt;&gt; letters = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]
 &gt;&gt;&gt; len(letters)
 4
 </code></pre><p>It is possible to nest lists (create lists containing other lists)</p>
-<pre><code>&gt;&gt;&gt; a = ['a', 'b', 'c']
+<pre tabindex="0"><code>&gt;&gt;&gt; a = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
 &gt;&gt;&gt; n = [1, 2, 3]
 &gt;&gt;&gt; x = [a, n]
 &gt;&gt;&gt; x
-[['a', 'b', 'c'], [1, 2, 3]]
+[[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;], [1, 2, 3]]
 &gt;&gt;&gt; x[0]
-['a', 'b', 'c']
+[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
 &gt;&gt;&gt; x[0][1]
-'b'
+&#39;b&#39;
 </code></pre><h3 id="32-first-steps-towards-programming">3.2. First Steps Towards Programming</h3>
 <p><code>a, b = b, a+b</code></p>
 <p><code>while condition:</code></p>
@@ -598,17 +597,17 @@ Usage: thingy [OPTIONS]
 <p>Each line within a basic block must be indented by the same amount.</p>
 <h2 id="4-more-control-flow-tools">4. More Control Flow Tools</h2>
 <h3 id="41-if-statements">4.1. if Statements</h3>
-<pre><code>&gt;&gt;&gt; x = int(input(&quot;Please enter an integer: &quot;))
+<pre tabindex="0"><code>&gt;&gt;&gt; x = int(input(&#34;Please enter an integer: &#34;))
 Please enter an integer: 42
 &gt;&gt;&gt; if x &lt; 0:
 ...     x = 0
-...     print('Negative changed to zero')
+...     print(&#39;Negative changed to zero&#39;)
 ... elif x == 0:
-...     print('Zero')
+...     print(&#39;Zero&#39;)
 ... elif x == 1:
-...     print('Single')
+...     print(&#39;Single&#39;)
 ... else:
-...     print('More')
+...     print(&#39;More&#39;)
 ...
 More
 </code></pre><p>An <code>if</code> … <code>elif</code> … <code>elif</code> … sequence is a substitute for the <code>switch</code> or <code>case</code> statements found in other languages.</p>
@@ -696,8 +695,8 @@ if x &lt; 0: a.remove(x)</p>
 <h4 id="473-arbitrary-argument-lists">4.7.3. Arbitrary Argument Lists</h4>
 <p>When a final formal parameter of the form **name is present, it receives a dictionary (see Mapping Types — dict) containing all keyword arguments except for those corresponding to a formal parameter.  This may be combined with a formal parameter of the form *name which receives a tuple containing the positional arguments beyond the formal parameter list.  (*name must occur before **name.) For example, if we define a function like this:</p>
 <p>def cheeseshop(kind, *arguments, **keywords):</p>
-<p>​    print(&quot;&ndash; Do you have any&quot;, kind, &ldquo;?&quot;)</p>
-<p>​    print(&quot;&ndash; I&rsquo;m sorry, we&rsquo;re all out of&rdquo;, kind)</p>
+<p>​    print(&quot;&ndash; Do you have any&quot;, kind, &ldquo;?&rdquo;)</p>
+<p>​    print(&quot;&ndash; I&rsquo;m sorry, we&rsquo;re all out of&quot;, kind)</p>
 <p>​    for arg in arguments:</p>
 <p>​        print(arg)</p>
 <p>​    print(&quot;-&quot; * 40)</p>
@@ -708,9 +707,9 @@ if x &lt; 0: a.remove(x)</p>
 <p>&hellip;     return sep.join(args)</p>
 <p>&hellip;</p>
 <p>&gt;&raquo; concat(&ldquo;earth&rdquo;, &ldquo;mars&rdquo;, &ldquo;venus&rdquo;)</p>
-<p>&lsquo;earth/mars/venus&rsquo;</p>
+<p>&rsquo;earth/mars/venus&rsquo;</p>
 <p>&gt;&raquo; concat(&ldquo;earth&rdquo;, &ldquo;mars&rdquo;, &ldquo;venus&rdquo;, sep=&quot;.&quot;)</p>
-<p>&lsquo;earth.mars.venus&rsquo;</p>
+<p>&rsquo;earth.mars.venus&rsquo;</p>
 <p>Any formal parameters which occur after the *args parameter are ‘keyword-only’ arguments, meaning that they can only be used as keywords rather than positional arguments.</p>
 <h4 id="474-unpacking-argument-lists">4.7.4. Unpacking Argument Lists</h4>
 <p>&gt;&raquo; list(range(3, 6))            # normal call with separate arguments</p>
@@ -720,9 +719,9 @@ if x &lt; 0: a.remove(x)</p>
 <p>[3, 4, 5]</p>
 <p>In the same fashion, dictionaries can deliver keyword arguments with the **-operator:</p>
 <p>&gt;&raquo; def parrot(voltage, state=&lsquo;a stiff&rsquo;, action=&lsquo;voom&rsquo;):</p>
-<p>&hellip;     print(&quot;&ndash; This parrot wouldn&rsquo;t&quot;, action, end=' &lsquo;)</p>
+<p>&hellip;     print(&quot;&ndash; This parrot wouldn&rsquo;t&quot;, action, end=&rsquo; &lsquo;)</p>
 <p>&hellip;     print(&ldquo;if you put&rdquo;, voltage, &ldquo;volts through it.&rdquo;, end=&rsquo; &lsquo;)</p>
-<p>&hellip;     print(&ldquo;E&rsquo;s&rdquo;, state, &ldquo;!&quot;)</p>
+<p>&hellip;     print(&ldquo;E&rsquo;s&rdquo;, state, &ldquo;!&rdquo;)</p>
 <p>&hellip;</p>
 <p>&gt;&raquo; d = {&ldquo;voltage&rdquo;: &ldquo;four million&rdquo;, &ldquo;state&rdquo;: &ldquo;bleedin&rsquo; demised&rdquo;, &ldquo;action&rdquo;: &ldquo;VOOM&rdquo;}</p>
 <p>&gt;&raquo; parrot(**d)</p>
@@ -736,13 +735,13 @@ if x &lt; 0: a.remove(x)</p>
 <p>Equivalence of whitespace should be tested after expansion of tabs (to 8 spaces, normally).</p>
 <h4 id="477-function-annotations">4.7.7. Function Annotations</h4>
 <p>Annotations are stored in the <strong>annotations</strong> attribute of the function as a dictionary and have no effect on any other part of the function. Parameter annotations are defined by a colon after the parameter name, followed by an expression evaluating to the value of the annotation. Return annotations are defined by a literal -&gt;, followed by an expression, between the parameter list and the colon denoting the end of the def statement.</p>
-<p>&gt;&raquo; def f(ham: str, eggs: str = &lsquo;eggs&rsquo;) -&gt; str:</p>
+<p>&gt;&raquo; def f(ham: str, eggs: str = &rsquo;eggs&rsquo;) -&gt; str:</p>
 <p>&hellip;     print(&ldquo;Annotations:&rdquo;, f.<strong>annotations</strong>)</p>
 <p>&hellip;     print(&ldquo;Arguments:&rdquo;, ham, eggs)</p>
-<p>&hellip;     return ham + ' and ' + eggs</p>
+<p>&hellip;     return ham + &rsquo; and &rsquo; + eggs</p>
 <p>&hellip;</p>
 <p>&gt;&raquo; f(&lsquo;spam&rsquo;)</p>
-<p>Annotations: {&lsquo;ham&rsquo;: &lt;class &lsquo;str&rsquo;&gt;, &lsquo;return&rsquo;: &lt;class &lsquo;str&rsquo;&gt;, &lsquo;eggs&rsquo;: &lt;class &lsquo;str&rsquo;&gt;}</p>
+<p>Annotations: {&lsquo;ham&rsquo;: &lt;class &lsquo;str&rsquo;&gt;, &lsquo;return&rsquo;: &lt;class &lsquo;str&rsquo;&gt;, &rsquo;eggs&rsquo;: &lt;class &lsquo;str&rsquo;&gt;}</p>
 <p>Arguments: spam eggs</p>
 <p>&lsquo;spam and eggs&rsquo;</p>
 <h3 id="48-intermezzo-coding-style">4.8. Intermezzo: Coding Style</h3>
@@ -839,19 +838,19 @@ if x &lt; 0: a.remove(x)</p>
 <p>&gt;&raquo; a = set(&lsquo;abracadabra&rsquo;)</p>
 <p>&gt;&raquo; b = set(&lsquo;alacazam&rsquo;)</p>
 <p>&gt;&raquo; a                                  # unique letters in a</p>
-<p>{&lsquo;a&rsquo;, &lsquo;r&rsquo;, &lsquo;b&rsquo;, &lsquo;c&rsquo;, &rsquo;d'}</p>
+<p>{&lsquo;a&rsquo;, &lsquo;r&rsquo;, &lsquo;b&rsquo;, &lsquo;c&rsquo;, &rsquo;d&rsquo;}</p>
 <p>&gt;&raquo; a - b                              # letters in a but not in b</p>
-<p>{&lsquo;r&rsquo;, &rsquo;d', &lsquo;b&rsquo;}</p>
+<p>{&lsquo;r&rsquo;, &rsquo;d&rsquo;, &lsquo;b&rsquo;}</p>
 <p>&gt;&raquo; a | b                              # letters in either a or b</p>
-<p>{&lsquo;a&rsquo;, &lsquo;c&rsquo;, &lsquo;r&rsquo;, &rsquo;d', &lsquo;b&rsquo;, &rsquo;m', &lsquo;z&rsquo;, &lsquo;l&rsquo;}</p>
+<p>{&lsquo;a&rsquo;, &lsquo;c&rsquo;, &lsquo;r&rsquo;, &rsquo;d&rsquo;, &lsquo;b&rsquo;, &rsquo;m&rsquo;, &lsquo;z&rsquo;, &rsquo;l&rsquo;}</p>
 <p>&gt;&raquo; a &amp; b                              # letters in both a and b</p>
 <p>{&lsquo;a&rsquo;, &lsquo;c&rsquo;}</p>
 <p>&gt;&raquo; a ^ b                              # letters in a or b but not both</p>
-<p>{&lsquo;r&rsquo;, &rsquo;d', &lsquo;b&rsquo;, &rsquo;m', &lsquo;z&rsquo;, &lsquo;l&rsquo;}</p>
+<p>{&lsquo;r&rsquo;, &rsquo;d&rsquo;, &lsquo;b&rsquo;, &rsquo;m&rsquo;, &lsquo;z&rsquo;, &rsquo;l&rsquo;}</p>
 <p>Similarly to list comprehensions, set comprehensions are also supported:</p>
 <p>&gt;&raquo; a = {x for x in &lsquo;abracadabra&rsquo; if x not in &lsquo;abc&rsquo;}</p>
 <p>&gt;&raquo; a</p>
-<p>{&lsquo;r&rsquo;, &rsquo;d'}</p>
+<p>{&lsquo;r&rsquo;, &rsquo;d&rsquo;}</p>
 <h3 id="55-dictionaries">5.5. Dictionaries</h3>
 <p>Unlike sequences, which are indexed by a range of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key.</p>
 <p>A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs within the braces adds initial key:value pairs to the dictionary.</p>
@@ -873,17 +872,17 @@ if x &lt; 0: a.remove(x)</p>
 <p>{&lsquo;sape&rsquo;: 4139, &lsquo;jack&rsquo;: 4098, &lsquo;guido&rsquo;: 4127}</p>
 <h3 id="56-looping-techniques">5.6. Looping Techniques</h3>
 <p>When looping through dictionaries, the key and corresponding value can be retrieved at the same time using the items() method.</p>
-<p>&gt;&raquo; knights = {&lsquo;gallahad&rsquo;: &lsquo;the pure&rsquo;, &lsquo;robin&rsquo;: &lsquo;the brave&rsquo;}</p>
+<p>&gt;&raquo; knights = {&lsquo;gallahad&rsquo;: &rsquo;the pure&rsquo;, &lsquo;robin&rsquo;: &rsquo;the brave&rsquo;}</p>
 <p>&gt;&raquo; for k, v in knights.items():</p>
 <p>When looping through a sequence, the position index and corresponding value can be retrieved at the same time using the enumerate() function.</p>
 <p>enumerate(iterable, start=0)  Return an enumerate object. iterable must be a sequence, an iterator, or some other object which supports iteration.</p>
-<p>&gt;&raquo; for i, v in enumerate([&lsquo;tic&rsquo;, &lsquo;tac&rsquo;, &lsquo;toe&rsquo;]):</p>
+<p>&gt;&raquo; for i, v in enumerate([&rsquo;tic&rsquo;, &rsquo;tac&rsquo;, &rsquo;toe&rsquo;]):</p>
 <p>&hellip;     print(i, v)</p>
 <p>To loop over two or more sequences at the same time, the entries can be paired with the zip() function.</p>
-<p>&gt;&raquo; questions = [&lsquo;name&rsquo;, &lsquo;quest&rsquo;, &lsquo;favorite color&rsquo;]</p>
-<p>&gt;&raquo; answers = [&lsquo;lancelot&rsquo;, &lsquo;the holy grail&rsquo;, &lsquo;blue&rsquo;]</p>
+<p>&gt;&raquo; questions = [&rsquo;name&rsquo;, &lsquo;quest&rsquo;, &lsquo;favorite color&rsquo;]</p>
+<p>&gt;&raquo; answers = [&rsquo;lancelot&rsquo;, &rsquo;the holy grail&rsquo;, &lsquo;blue&rsquo;]</p>
 <p>&gt;&raquo; for q, a in zip(questions, answers):</p>
-<p>&hellip;     print(&lsquo;What is your {0}?  It is {1}.'.format(q, a))</p>
+<p>&hellip;     print(&lsquo;What is your {0}?  It is {1}.&rsquo;.format(q, a))</p>
 <p>To loop over a sequence in reverse,  call the reversed() function.</p>
 <p>To loop over a sequence in sorted order, use the sorted() function which returns a new sorted list.</p>
 <p>It is sometimes tempting to change a list while you are looping over it; however, it is often simpler and safer to create a new list instead, then append after loop and check.</p>
@@ -915,7 +914,7 @@ if x &lt; 0: a.remove(x)</p>
 <p>For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use importlib.reload(), e.g. import importlib; importlib.reload(modulename).</p>
 <h4 id="611-executing-modules-as-scripts">6.1.1. Executing modules as scripts</h4>
 <p>When you run a Python module with python fibo.py <!-- raw HTML omitted -->   the code in the module will be executed, just as if you imported it, but with the <strong>name</strong> set to &ldquo;<strong>main</strong>&rdquo;.</p>
-<p>if <strong>name</strong> == &ldquo;<strong>main</strong>&quot;:</p>
+<p>if <strong>name</strong> == &ldquo;<strong>main</strong>&rdquo;:</p>
 <p>​    import sys</p>
 <p>​    fib(int(sys.argv[1]))</p>
 <p>By adding this code at the end of your module, you can make the file usable as a script as well as an importable module.</p>
@@ -943,7 +942,7 @@ if x &lt; 0: a.remove(x)</p>
 <p>&gt;&raquo; import fibo</p>
 <p>&gt;&raquo; fib = fibo.fib</p>
 <p>&gt;&raquo; dir()</p>
-<p>['<strong>builtins</strong>&rsquo;, &lsquo;<strong>name</strong>&rsquo;, &lsquo;a&rsquo;, &lsquo;fib&rsquo;, &lsquo;fibo&rsquo;, &lsquo;sys&rsquo;]</p>
+<p>[&rsquo;<strong>builtins</strong>&rsquo;, &lsquo;<strong>name</strong>&rsquo;, &lsquo;a&rsquo;, &lsquo;fib&rsquo;, &lsquo;fibo&rsquo;, &lsquo;sys&rsquo;]</p>
 <p>dir() does not list the names of built-in functions and variables. If you want a list of those, they are defined in the standard module builtins:</p>
 <p>&gt;&raquo; import builtins</p>
 <p>&gt;&raquo; dir(builtins)</p>
@@ -998,7 +997,7 @@ if x &lt; 0: a.remove(x)</p>
 from .. import formats
 from ..filters import equalizer</p>
 <p>Note that relative imports are based on the name of the current module. Since the name of the main module is always &ldquo;<strong>main</strong>&rdquo;, modules intended for use as the main module of a Python application must always use absolute imports.</p>
-<p>if <strong>name</strong> == &lsquo;<strong>main</strong>':</p>
+<p>if <strong>name</strong> == &lsquo;<strong>main</strong>&rsquo;:</p>
 <p>6.4.3. Packages in Multiple Directories</p>
 <p>Packages support one more special attribute, <strong>path</strong>. This is initialized to be a list containing the name of the directory holding the package’s <strong>init</strong>.py before the code in that file is executed. This variable can be modified; doing so affects future searches for modules and subpackages contained in the package.</p>
 <p>\7. Input and Output</p>
@@ -1012,19 +1011,19 @@ from ..filters import equalizer</p>
 &gt;&raquo; str(s)
 &lsquo;Hello, world.&rsquo;
 &gt;&raquo; repr(s)
-&ldquo;&lsquo;Hello, world.'&rdquo;</p>
+&ldquo;&lsquo;Hello, world.&rsquo;&rdquo;</p>
 <p>&gt;&raquo; # The repr() of a string adds string quotes and backslashes:
 &hellip; hello = &lsquo;hello, world\n&rsquo;
 &gt;&raquo; hellos = repr(hello)
 &gt;&raquo; print(hellos)
 &lsquo;hello, world\n&rsquo;</p>
 <p>&gt;&raquo; # The argument to repr() may be any Python object:
-&hellip; repr((x, y, (&lsquo;spam&rsquo;, &lsquo;eggs&rsquo;)))
-&ldquo;(32.5, 40000, (&lsquo;spam&rsquo;, &lsquo;eggs&rsquo;))&rdquo;</p>
+&hellip; repr((x, y, (&lsquo;spam&rsquo;, &rsquo;eggs&rsquo;)))
+&ldquo;(32.5, 40000, (&lsquo;spam&rsquo;, &rsquo;eggs&rsquo;))&rdquo;</p>
 <p>This example demonstrates the str.rjust() method of string objects, which right-justifies a string in a field of a given width by padding it with spaces on the left. There are similar methods str.ljust() and str.center(). These methods do not write anything, they just return a new string. If the input string is too long, they don’t truncate it, but return it unchanged.</p>
 <p>&gt;&raquo; for x in range(1, 11):
 &hellip;     print(repr(x).rjust(2), repr(x<em>x).rjust(3), end=&rsquo; &lsquo;)             # it adds spaces between its arguments
-&hellip;     # Note use of &lsquo;end&rsquo; on previous line
+&hellip;     # Note use of &rsquo;end&rsquo; on previous line
 &hellip;     print(repr(x</em>x*x).rjust(4))
 &hellip;
 1   1    1
@@ -1044,21 +1043,21 @@ from ..filters import equalizer</p>
 &lsquo;-003.14&rsquo;
 &gt;&raquo; &lsquo;3.14159265359&rsquo;.zfill(5)
 &lsquo;3.14159265359&rsquo;</p>
-<p>&gt;&raquo; print(&lsquo;We are the {} who say &ldquo;{}!&quot;'.format(&lsquo;knights&rsquo;, &lsquo;Ni&rsquo;))</p>
-<p>&gt;&raquo; print('{1} and {0}'.format(&lsquo;spam&rsquo;, &lsquo;eggs&rsquo;))</p>
-<p>&gt;&raquo; print(&lsquo;This {food} is {adjective}.'.format(food=&lsquo;spam&rsquo;, adjective=&lsquo;absolutely horrible&rsquo;))</p>
+<p>&gt;&raquo; print(&lsquo;We are the {} who say &ldquo;{}!&rdquo;&rsquo;.format(&lsquo;knights&rsquo;, &lsquo;Ni&rsquo;))</p>
+<p>&gt;&raquo; print(&rsquo;{1} and {0}&rsquo;.format(&lsquo;spam&rsquo;, &rsquo;eggs&rsquo;))</p>
+<p>&gt;&raquo; print(&lsquo;This {food} is {adjective}.&rsquo;.format(food=&lsquo;spam&rsquo;, adjective=&lsquo;absolutely horrible&rsquo;))</p>
 <p>&lsquo;!a&rsquo; (apply ascii()), &lsquo;!s&rsquo; (apply str()) and &lsquo;!r&rsquo; (apply repr()) can be used to convert the value before it is formatted.</p>
-<p>&gt;&raquo; contents = &lsquo;eels&rsquo;
-&gt;&raquo; print(&lsquo;My hovercraft is full of {!r}.'.format(contents))
-My hovercraft is full of &lsquo;eels&rsquo;.</p>
+<p>&gt;&raquo; contents = &rsquo;eels&rsquo;
+&gt;&raquo; print(&lsquo;My hovercraft is full of {!r}.&rsquo;.format(contents))
+My hovercraft is full of &rsquo;eels&rsquo;.</p>
 <p>An optional &lsquo;:&rsquo; and format specifier can follow the field name. This allows greater control over how the value is formatted. The following example rounds Pi to three places after the decimal.</p>
 <p>&gt;&raquo; import math
-&gt;&raquo; print(&lsquo;The value of PI is approximately {0:.3f}.'.format(math.pi))
+&gt;&raquo; print(&lsquo;The value of PI is approximately {0:.3f}.&rsquo;.format(math.pi))
 The value of PI is approximately 3.142.</p>
 <p>Passing an integer after the &lsquo;:&rsquo; will cause that field to be a minimum number of characters wide.</p>
 <p>&gt;&raquo; table = {&lsquo;Sjoerd&rsquo;: 4127, &lsquo;Jack&rsquo;: 4098, &lsquo;Dcab&rsquo;: 7678}
 &gt;&raquo; for name, phone in table.items():
-&hellip;     print('{0:10} ==&gt; {1:10d}'.format(name, phone))
+&hellip;     print(&rsquo;{0:10} ==&gt; {1:10d}&rsquo;.format(name, phone))
 &hellip;
 Jack       ==&gt;       4098
 Dcab       ==&gt;       7678
@@ -1066,10 +1065,10 @@ Sjoerd     ==&gt;       4127</p>
 <p>If you have a really long format string that you don’t want to split up, it would be nice if you could reference the variables to be formatted by name instead of by position</p>
 <p>&gt;&raquo; table = {&lsquo;Sjoerd&rsquo;: 4127, &lsquo;Jack&rsquo;: 4098, &lsquo;Dcab&rsquo;: 8637678}</p>
 <p>&gt;&raquo; print(&lsquo;Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; '</p>
-<p>&hellip;       &lsquo;Dcab: {0[Dcab]:d}'.format(table))</p>
+<p>&hellip;       &lsquo;Dcab: {0[Dcab]:d}&rsquo;.format(table))</p>
 <p>This could also be done by passing the table as keyword arguments with the ‘**’ notation.</p>
 <p>&gt;&raquo; table = {&lsquo;Sjoerd&rsquo;: 4127, &lsquo;Jack&rsquo;: 4098, &lsquo;Dcab&rsquo;: 8637678}</p>
-<p>&gt;&raquo; print(&lsquo;Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))</p>
+<p>&gt;&raquo; print(&lsquo;Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}&rsquo;.format(**table))</p>
 <p>This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing all local variables.</p>
 <h3 id="72-reading-and-writing-files">7.2. Reading and Writing Files</h3>
 <p>f = open(filename, mode)  returns a file object</p>
@@ -1078,11 +1077,11 @@ Sjoerd     ==&gt;       4127</p>
 <p>In text mode, the default when reading is to convert platform-specific line endings (\n on Unix, \r\n on Windows) to just \n. When writing in text mode, the default is to convert occurrences of \n back to platform-specific line endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.</p>
 <h4 id="721-methods-of-file-objects">7.2.1. Methods of File Objects</h4>
 <p>str = f.read([size])  # which reads some quantity of data and returns it as a string (in text mode) or bytes object (in binary mode).</p>
-<p>If the end of the file has been reached, f.read() will return an empty string ('').</p>
+<p>If the end of the file has been reached, f.read() will return an empty string (&rsquo;&rsquo;).</p>
 <p>f.readline() reads a single line from the file; a newline character (\n) is left at the end of the string, and is only omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by &lsquo;\n&rsquo;, a string containing only a single newline.</p>
 <p>For reading lines from a file, you can loop over the file object.</p>
 <p>&gt;&raquo; for line in f:</p>
-<p>&hellip;     print(line, end='')</p>
+<p>&hellip;     print(line, end=&rsquo;&rsquo;)</p>
 <p>If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().</p>
 <p>f.write(string) writes the contents of string to the file, returning the number of characters written.</p>
 <p>f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from the beginning of the file when in binary mode and an opaque number when in text mode.</p>
@@ -1109,7 +1108,7 @@ Sjoerd     ==&gt;       4127</p>
 <blockquote>
 <blockquote>
 <blockquote>
-<p>json.dumps([1, &lsquo;simple&rsquo;, &lsquo;list&rsquo;])</p>
+<p>json.dumps([1, &lsquo;simple&rsquo;, &rsquo;list&rsquo;])</p>
 </blockquote>
 </blockquote>
 </blockquote>
@@ -1135,7 +1134,7 @@ Sjoerd     ==&gt;       4127</p>
 <p>&hellip;         x = int(input(&ldquo;Please enter a number: &ldquo;))</p>
 <p>&hellip;         break</p>
 <p>&hellip;     except ValueError:</p>
-<p>&hellip;         print(&ldquo;Oops! That was no valid number. Try again&hellip;&quot;)</p>
+<p>&hellip;         print(&ldquo;Oops! That was no valid number. Try again&hellip;&rdquo;)</p>
 <p>If an exception occurs which does not match the exception named in the except clause, it is passed on to outer try statements; if no handler is found, it is an unhandled exception and execution stops with a message as shown above.</p>
 <p>A try statement may have more than one except clause, to specify handlers for different exceptions. At most one handler will be executed. An except clause may name multiple exceptions as a parenthesized tuple.</p>
 <p>A class in an except clause is compatible with an exception if it is the same class or a base class thereof (but not the other way around — an except clause listing a derived class is not compatible with a base class). For example, the following code will print B, C, D in that order:</p>
@@ -1164,7 +1163,7 @@ Sjoerd     ==&gt;       4127</p>
 <p>except OSError as err:</p>
 <p>​    print(&ldquo;OS error: {0}&quot;.format(err))</p>
 <p>except ValueError:</p>
-<p>​    print(&ldquo;Could not convert data to an integer.&quot;)</p>
+<p>​    print(&ldquo;Could not convert data to an integer.&rdquo;)</p>
 <p>except:</p>
 <p>​    print(&ldquo;Unexpected error:&rdquo;, sys.exc_info()[0])</p>
 <p>​    raise</p>
@@ -1174,7 +1173,7 @@ Sjoerd     ==&gt;       4127</p>
 <p>​    except IOError:</p>
 <p>​        print(&lsquo;cannot open&rsquo;, arg)</p>
 <p>​    else:</p>
-<p>​        print(arg, &lsquo;has&rsquo;, len(f.readlines()), &lsquo;lines&rsquo;)</p>
+<p>​        print(arg, &lsquo;has&rsquo;, len(f.readlines()), &rsquo;lines&rsquo;)</p>
 <p>​        f.close()</p>
 <p>The use of the else clause is better than adding additional code to the try clause because it avoids accidentally catching an exception that wasn’t raised by the code being protected by the try &hellip; except statement.</p>
 <p>When an exception occurs, it may have an associated value, also known as the exception’s argument. The presence and type of the argument depend on the exception type.</p>
@@ -1188,7 +1187,7 @@ Sjoerd     ==&gt;       4127</p>
 <p>&gt;&raquo; try:</p>
 <p>&hellip;     raise NameError(&lsquo;HiThere&rsquo;)</p>
 <p>&hellip; except NameError:</p>
-<p>&hellip;     print(&lsquo;An exception flew by!')</p>
+<p>&hellip;     print(&lsquo;An exception flew by!&rsquo;)</p>
 <p>&hellip;     raise</p>
 <p>8.5. User-defined Exceptions</p>
 <p>Programs may name their own exceptions by creating a new exception class. Exceptions should typically be derived from the Exception class, either directly or indirectly. When creating a module that can raise several distinct errors, a common practice is to create a base class for exceptions defined by that module, and subclass that to create specific exception classes for different error conditions.</p>
@@ -1433,7 +1432,7 @@ g</p>
 <p>&gt;&raquo; valedictorian = max((student.gpa, student.name) for student in graduates)</p>
 <p>&gt;&raquo; data = &lsquo;golf&rsquo;
 &gt;&raquo; list(data[i] for i in range(len(data)-1, -1, -1))
-[&lsquo;f&rsquo;, &lsquo;l&rsquo;, &lsquo;o&rsquo;, &lsquo;g&rsquo;]</p>
+[&lsquo;f&rsquo;, &rsquo;l&rsquo;, &lsquo;o&rsquo;, &lsquo;g&rsquo;]</p>
 <p>\10. Brief Tour of the Standard Library</p>
 <p>The built-in dir() and help() functions are useful as interactive aids for working with large modules like os:</p>
 <p>&gt;&raquo; dir(os)
@@ -1444,15 +1443,15 @@ g</p>
 <p>The os module provides dozens of functions for interacting with the operating system:</p>
 <p>Be sure to use the import os style instead of from os import *. This will keep <a href="https://docs.python.org/3/library/os.html#os.open">os.open()</a> from shadowing the built-in <a href="https://docs.python.org/3/library/functions.html#open">open()</a> function which operates much differently.</p>
 <p>os.getcwd()      # Return the current working directory</p>
-<p>os.chdir('/server/accesslogs&rsquo;)   # Change current working directory</p>
+<p>os.chdir(&rsquo;/server/accesslogs&rsquo;)   # Change current working directory</p>
 <p>os.system(&lsquo;mkdir today&rsquo;)   # Run the command mkdir in the system shell</p>
 <p>For daily file and directory management tasks, the shutil module provides a higher level interface that is easier to use:
 shutil.copyfile(&lsquo;data.db&rsquo;, &lsquo;archive.db&rsquo;)
-shutil.move('/build/executables&rsquo;, &lsquo;installdir&rsquo;)</p>
+shutil.move(&rsquo;/build/executables&rsquo;, &lsquo;installdir&rsquo;)</p>
 <p>10.2. File Wildcards</p>
 <p>The glob module provides a function for making file lists from directory wildcard searches:</p>
 <p>&gt;&raquo; import glob
-&gt;&raquo; glob.glob('*.py&rsquo;)
+&gt;&raquo; glob.glob(&rsquo;*.py&rsquo;)
 [&lsquo;primes.py&rsquo;, &lsquo;random.py&rsquo;, &lsquo;quote.py&rsquo;]</p>
 <p>10.3. Command Line Arguments</p>
 <p>command line arguments are stored in the sys module’s argv attribute as a list.</p>
@@ -1493,13 +1492,13 @@ Warning, log file not found starting a new one</p>
 &hellip;             print(line)</p>
 <p><!-- raw HTML omitted -->Nov. 25, 09:43:32 PM EST</p>
 <p>&gt;&raquo; import smtplib
-&gt;&raquo; server = smtplib.SMTP(&lsquo;localhost&rsquo;)
+&gt;&raquo; server = smtplib.SMTP(&rsquo;localhost&rsquo;)
 &gt;&raquo; server.sendmail(&lsquo;<a href="mailto:soothsayer@example.org">soothsayer@example.org</a>&rsquo;, &lsquo;<a href="mailto:jcaesar@example.org">jcaesar@example.org</a>&rsquo;,
 &hellip; &ldquo;&ldquo;&ldquo;To: <a href="mailto:jcaesar@example.org">jcaesar@example.org</a>
 &hellip; From: <a href="mailto:soothsayer@example.org">soothsayer@example.org</a>
 &hellip;
 &hellip; Beware the Ides of March.
-&hellip; &ldquo;&quot;&quot;)
+&hellip; &ldquo;&rdquo;&rdquo;)
 &gt;&raquo; server.quit()</p>
 <p>this example needs a mailserver running on localhost.</p>
 <p>10.8. Dates and Times</p>
@@ -1554,7 +1553,7 @@ doctest.testmod()   # automatically validate the embedded tests</p>
 <p>The <a href="">reprlib</a> module provides a version of <a href="">repr()</a> customized for abbreviated displays of large or deeply nested containers:</p>
 <p>&gt;&raquo; import reprlib
 &gt;&raquo; reprlib.repr(set(&lsquo;supercalifragilisticexpialidocious&rsquo;))
-&ldquo;{&lsquo;a&rsquo;, &lsquo;c&rsquo;, &rsquo;d&rsquo;, &lsquo;e&rsquo;, &lsquo;f&rsquo;, &lsquo;g&rsquo;, &hellip;}&rdquo;</p>
+&ldquo;{&lsquo;a&rsquo;, &lsquo;c&rsquo;, &rsquo;d&rsquo;, &rsquo;e&rsquo;, &lsquo;f&rsquo;, &lsquo;g&rsquo;, &hellip;}&rdquo;</p>
 <p>The <a href="">pprint</a> module offers more sophisticated control over printing both built-in and user defined objects in a way that is readable by the interpreter. When the result is longer than one line, the “pretty printer” adds line breaks and indentation to more clearly reveal data structure:</p>
 <p>The <a href="">textwrap</a> module formats paragraphs of text to fit a given screen width:</p>
 <p>&gt;&raquo; import textwrap
@@ -1572,11 +1571,11 @@ to separate the wrapped lines.</p>
 <p>The <a href="">string</a> module includes a versatile <a href="">Template</a> class with a simplified syntax suitable for editing by end-users. This allows users to customize their applications without having to alter the application.</p>
 <p>The format uses placeholder names formed by $ with valid Python identifiers (alphanumeric characters and underscores). Surrounding the placeholder with braces allows it to be followed by more alphanumeric letters with no intervening spaces. Writing $$ creates a single escaped $:</p>
 <p>&gt;&raquo; from string import Template
-&gt;&raquo; t = Template('${village}folk send $$10 to $cause.')
+&gt;&raquo; t = Template(&rsquo;${village}folk send $$10 to $cause.&rsquo;)
 &gt;&raquo; t.substitute(village=&lsquo;Nottingham&rsquo;, cause=&lsquo;the ditch fund&rsquo;)
 &lsquo;Nottinghamfolk send $10 to the ditch fund.&rsquo;</p>
 <p>The <a href="">substitute()</a> method raises a <a href="">KeyError</a> when a placeholder is not supplied in a dictionary or a keyword argument. For mail-merge style applications, user supplied data may be incomplete and the <a href="">safe_substitute()</a> method may be more appropriate — it will leave placeholders unchanged if data is missing:</p>
-<p>&gt;&raquo; t = Template(&lsquo;Return the $item to $owner.')
+<p>&gt;&raquo; t = Template(&lsquo;Return the $item to $owner.&rsquo;)
 &gt;&raquo; d = dict(item=&lsquo;unladen swallow&rsquo;)
 &gt;&raquo; t.substitute(d)
 Traceback (most recent call last):
@@ -1592,11 +1591,11 @@ KeyError: &lsquo;owner&rsquo;
 &gt;&raquo; fmt = input(&lsquo;Enter rename style (%d-date %n-seqnum %f-format):  &lsquo;)
 Enter rename style (%d-date %n-seqnum %f-format):  Ashley_%n%f</p>
 <p>&gt;&raquo; t = BatchRename(fmt)
-&gt;&raquo; date = time.strftime('%d%b%y&rsquo;)
+&gt;&raquo; date = time.strftime(&rsquo;%d%b%y&rsquo;)
 &gt;&raquo; for i, filename in enumerate(photofiles):
 &hellip;     base, ext = os.path.splitext(filename)
 &hellip;     newname = t.substitute(d=date, n=i, f=ext)
-&hellip;     print('{0} &ndash;&gt; {1}'.format(filename, newname))</p>
+&hellip;     print(&rsquo;{0} &ndash;&gt; {1}&rsquo;.format(filename, newname))</p>
 <p>img_1074.jpg &ndash;&gt; Ashley_0.jpg
 img_1076.jpg &ndash;&gt; Ashley_1.jpg
 img_1077.jpg &ndash;&gt; Ashley_2.jpg</p>
@@ -1609,7 +1608,7 @@ data = f.read()</p>
 <p>start = 0
 for i in range(3):                      # show the first 3 file headers
 start += 14
-fields = struct.unpack('&lt;IIIHH&rsquo;, data[start:start+16])
+fields = struct.unpack(&rsquo;&lt;IIIHH&rsquo;, data[start:start+16])
 crc32, comp_size, uncomp_size, filenamesize, extra_size = fields</p>
 <p>start += 16
 filename = data[start:start+filenamesize]
@@ -1633,9 +1632,9 @@ f.close()
 print(&lsquo;Finished background zip of:&rsquo;, self.infile)</p>
 <p>background = AsyncZip(&lsquo;mydata.txt&rsquo;, &lsquo;myarchive.zip&rsquo;)
 background.start()
-print(&lsquo;The main program continues to run in foreground.')</p>
+print(&lsquo;The main program continues to run in foreground.&rsquo;)</p>
 <p>background.join()    # Wait for the background task to finish
-print(&lsquo;Main program waited until background was done.')</p>
+print(&lsquo;Main program waited until background was done.&rsquo;)</p>
 <p>The principal challenge of multi-threaded applications is coordinating threads that share data or other resources. To that end, the threading module provides a number of synchronization primitives including locks, events, condition variables, and semaphores.</p>
 <p>While those tools are powerful, minor design errors can result in problems that are difficult to reproduce. So, the preferred approach to task coordination is to concentrate all access to a resource in a single thread and then use the <a href="">queue</a> module to feed that thread with requests from other threads. Applications using <a href="">Queue</a> objects for inter-thread communication and coordination are easier to design, more readable, and more reliable.</p>
 <p>11.5. Logging</p>
@@ -1696,7 +1695,7 @@ Decimal(&lsquo;0.74&rsquo;)
 0.73</p>
 <p>The <a href="">Decimal</a> result keeps a trailing zero, automatically inferring four place significance from multiplicands with two place significance. Decimal reproduces mathematics as done by hand and avoids issues that can arise when binary floating point cannot exactly represent decimal quantities.</p>
 <p>Exact representation enables the <a href="">Decimal</a> class to perform modulo calculations and equality tests that are unsuitable for binary floating point:</p>
-<p>&gt;&raquo; Decimal(&lsquo;1.00&rsquo;) % Decimal('.10&rsquo;)
+<p>&gt;&raquo; Decimal(&lsquo;1.00&rsquo;) % Decimal(&rsquo;.10&rsquo;)
 Decimal(&lsquo;0.00&rsquo;)
 &gt;&raquo; 1.00 % 0.10
 0.09999999999999995</p>
@@ -1850,7 +1849,7 @@ Decimal(&lsquo;0.1000000000000000055511151231257827021181583404541015625&rsquo;)
 <p>On Windows systems, there is no notion of an “executable mode”. The Python installer automatically associates .py files with python.exe</p>
 <p>16.1.3. The Interactive Startup File</p>
 <p>When you use Python interactively, it is frequently handy to have some standard commands executed every time the interpreter is started. You can do this by setting an environment variable named PYTHONSTARTUP to the name of a file containing your start-up commands. This is similar to the .profile feature of the Unix shells.</p>
-<p>If you want to read an additional start-up file from the current directory, you can program this in the global start-up file using code like ifos.path.isfile('.pythonrc.py&rsquo;): exec(open('.pythonrc.py&rsquo;).read()). If you want to use the startup file in a script, you must do this explicitly in the script:</p>
+<p>If you want to read an additional start-up file from the current directory, you can program this in the global start-up file using code like ifos.path.isfile(&rsquo;.pythonrc.py&rsquo;): exec(open(&rsquo;.pythonrc.py&rsquo;).read()). If you want to use the startup file in a script, you must do this explicitly in the script:</p>
 <p>import os
 filename = os.environ.get(&lsquo;PYTHONSTARTUP&rsquo;)
 if filename and os.path.isfile(filename):
@@ -2034,7 +2033,7 @@ exec(startup_file)</p>
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

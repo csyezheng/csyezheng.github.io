@@ -16,7 +16,7 @@
       <description>Basics Packages, variables, and functions. Packages Programs start running in package main.
 By convention, the package name is the same as the last element of the import path. For instance, the &amp;quot;math/rand&amp;quot; package comprises files that begin with the statement package rand.
 Imports It is good style to use the factored import statement.
-import ( &amp;quot;fmt&amp;quot; &amp;quot;math/rand&amp;quot; ) Exported names In Go, a name is exported if it begins with a capital letter.</description>
+import ( &amp;#34;fmt&amp;#34; &amp;#34;math/rand&amp;#34; ) Exported names In Go, a name is exported if it begins with a capital letter.</description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@ import ( &amp;quot;fmt&amp;quot; &amp;quot;math/rand&amp;quot; ) Exported names 
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/debugging-with-delve/</guid>
-      <description>Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;amp;&amp;amp; cd &amp;quot;$_&amp;quot; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &amp;quot;fmt&amp;quot; &amp;quot;log&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;os&amp;quot; ) const port = &amp;quot;8000&amp;quot; func main() { http.HandleFunc(&amp;quot;/hi&amp;quot;, hi) fmt.Println(&amp;quot;runing on port: &amp;quot; + port) log.Fatal(http.ListenAndServe(&amp;quot;:&amp;quot; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &amp;quot;HostName: %s&amp;quot;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.</description>
+      <description>Installation on Linux $ mkdir -p $GOPATH/src/github.com/myusername/project &amp;amp;&amp;amp; cd &amp;#34;$_&amp;#34; $ go get -u github.com/go-delve/delve/cmd/dlv Usage $ cat $GOPATH/src/github.com/username/proj/main.go package main import ( &amp;#34;fmt&amp;#34; &amp;#34;log&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;os&amp;#34; ) const port = &amp;#34;8000&amp;#34; func main() { http.HandleFunc(&amp;#34;/hi&amp;#34;, hi) fmt.Println(&amp;#34;runing on port: &amp;#34; + port) log.Fatal(http.ListenAndServe(&amp;#34;:&amp;#34; + port, nil)) } func hi(w http.ResponseWriter, r *http.Request) { hostName, _ := os.Hostname() fmt.Fprintf(w, &amp;#34;HostName: %s&amp;#34;, hostName) } dlv debug Compile and begin debugging main package in current directory, or the package specified.</description>
     </item>
     
     <item>
@@ -35,10 +35,9 @@ import ( &amp;quot;fmt&amp;quot; &amp;quot;math/rand&amp;quot; ) Exported names 
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/generate-model-structs-from-database/</guid>
       <description>Generate gorm model structs from database
-  https://github.com/smallnest/gen
-  https://github.com/wantedly/pq2gorm
-  https://github.com/go-xorm/cmd
-  </description>
+https://github.com/smallnest/gen
+https://github.com/wantedly/pq2gorm
+https://github.com/go-xorm/cmd</description>
     </item>
     
     <item>
@@ -48,7 +47,7 @@ import ( &amp;quot;fmt&amp;quot; &amp;quot;math/rand&amp;quot; ) Exported names 
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/gin/</guid>
       <description>sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
-$ go get github.com/gin-contrib/sessions import &amp;quot;github.com/gin-contrib/sessions&amp;quot; cookie-based Example import ( &amp;quot;github.com/gin-contrib/sessions&amp;quot; &amp;quot;github.com/gin-contrib/sessions/cookie&amp;quot; &amp;quot;github.com/gin-gonic/gin&amp;quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&amp;quot;secret&amp;quot;)) r.Use(sessions.Sessions(&amp;quot;mysession&amp;quot;, store)) r.GET(&amp;quot;/incr&amp;quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&amp;quot;count&amp;quot;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&amp;quot;count&amp;quot;, count) session.</description>
+$ go get github.com/gin-contrib/sessions import &amp;#34;github.com/gin-contrib/sessions&amp;#34; cookie-based Example import ( &amp;#34;github.com/gin-contrib/sessions&amp;#34; &amp;#34;github.com/gin-contrib/sessions/cookie&amp;#34; &amp;#34;github.com/gin-gonic/gin&amp;#34; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&amp;#34;secret&amp;#34;)) r.Use(sessions.Sessions(&amp;#34;mysession&amp;#34;, store)) r.GET(&amp;#34;/incr&amp;#34;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&amp;#34;count&amp;#34;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&amp;#34;count&amp;#34;, count) session.</description>
     </item>
     
     <item>
@@ -108,7 +107,7 @@ photoprism.md</description>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/good-at/</guid>
-      <description>Golang Pros  Modular design means the compiled binary is as small as possible and requires no dependencies. Like Java, it’s platform independent. You can compile it for any platform your servers and applications run on. Take that, Apple. Easy for your developers to learn because it’s based on C. You don’t need to go to a code bootcamp to become proficient. Has static type checking, meaning your code gets its bugs cleaned up at compile time, not in production.</description>
+      <description>Golang Pros Modular design means the compiled binary is as small as possible and requires no dependencies. Like Java, it’s platform independent. You can compile it for any platform your servers and applications run on. Take that, Apple. Easy for your developers to learn because it’s based on C. You don’t need to go to a code bootcamp to become proficient. Has static type checking, meaning your code gets its bugs cleaned up at compile time, not in production.</description>
     </item>
     
     <item>
@@ -126,7 +125,7 @@ photoprism.md</description>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/gorm/</guid>
-      <description>struct name and table name type User struct {} // default table name is `users` // Set User&#39;s table name to be `profiles` func (User) TableName() string { return &amp;quot;profiles&amp;quot; } gorm不定条件查询和分页操作 making dynamic query and pagination using gorm course := models.Course{} // The global db variable must be assigned to the local db variable. //</description>
+      <description>struct name and table name type User struct {} // default table name is `users` // Set User&amp;#39;s table name to be `profiles` func (User) TableName() string { return &amp;#34;profiles&amp;#34; } gorm不定条件查询和分页操作 making dynamic query and pagination using gorm course := models.Course{} // The global db variable must be assigned to the local db variable. //</description>
     </item>
     
     <item>
@@ -156,8 +155,8 @@ sudo docker-compose exec photoprism bash </description>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/quick-start/</guid>
-      <description>  Create your project folder and cd inside
-mkdir -p $GOPATH/src/github.com/myusername/project &amp;amp;&amp;amp; cd &amp;quot;$_&amp;quot;   go mod edit -require=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b go mod edit -replace=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b=github.com/google/go-genproto@v0.0.0-20180831171423-11092d34479b go mod edit -require=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -replace=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223=github.com/golang/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -require=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299 go mod edit -replace=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299=github.com/golang/crypto@v0.0.0-20180614174826-fd5f17ee7299 gen --connstr &amp;quot;zhengye:csye3631@tcp(127.0.0.1:3307)/discovery&amp;quot; --database discovery --json --gorm --guregu --rest </description>
+      <description> Create your project folder and cd inside
+mkdir -p $GOPATH/src/github.com/myusername/project &amp;amp;&amp;amp; cd &amp;#34;$_&amp;#34; go mod edit -require=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b go mod edit -replace=google.golang.org/genproto@v0.0.0-20180831171423-11092d34479b=github.com/google/go-genproto@v0.0.0-20180831171423-11092d34479b go mod edit -require=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -replace=golang.org/x/sys@v0.0.0-20190222072716-a9d3bda3a223=github.com/golang/sys@v0.0.0-20190222072716-a9d3bda3a223 go mod edit -require=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299 go mod edit -replace=golang.org/x/crypto@v0.0.0-20180614174826-fd5f17ee7299=github.com/golang/crypto@v0.0.0-20180614174826-fd5f17ee7299 gen --connstr &amp;#34;zhengye:csye3631@tcp(127.0.0.1:3307)/discovery&amp;#34; --database discovery --json --gorm --guregu --rest </description>
     </item>
     
     <item>
@@ -166,7 +165,7 @@ mkdir -p $GOPATH/src/github.com/myusername/project &amp;amp;&amp;amp; cd &amp;qu
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/standard-library/</guid>
-      <description>io io.Writer import	stdlog &amp;quot;log&amp;quot; var loggers []*Logger var logLevel = Debug type Logger struct { level int logger *stdlog.Logger } func NewLogger(out io.Writer) *Logger { ret := &amp;amp;Logger{level: logLevel, logger: stdlog.New(out, &amp;quot;&amp;quot;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)} loggers = append(loggers, ret) return ret } io.MultiWriter func init() { rand.Seed(time.Now().UTC().UnixNano()) log.SetLevel(&amp;quot;warn&amp;quot;) logger = log.NewLogger(os.Stdout) model.LoadConf() util.LoadMarkdown() i18n.Load() theme.Load() replaceServerConf() if &amp;quot;dev&amp;quot; == model.Conf.RuntimeMode { gin.SetMode(gin.DebugMode) } else { gin.SetMode(gin.ReleaseMode) } gin.DefaultWriter = io.MultiWriter(os.Stdout) } io.</description>
+      <description>io io.Writer import	stdlog &amp;#34;log&amp;#34; var loggers []*Logger var logLevel = Debug type Logger struct { level int logger *stdlog.Logger } func NewLogger(out io.Writer) *Logger { ret := &amp;amp;Logger{level: logLevel, logger: stdlog.New(out, &amp;#34;&amp;#34;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)} loggers = append(loggers, ret) return ret } io.MultiWriter func init() { rand.Seed(time.Now().UTC().UnixNano()) log.SetLevel(&amp;#34;warn&amp;#34;) logger = log.NewLogger(os.Stdout) model.LoadConf() util.LoadMarkdown() i18n.Load() theme.Load() replaceServerConf() if &amp;#34;dev&amp;#34; == model.Conf.RuntimeMode { gin.SetMode(gin.DebugMode) } else { gin.SetMode(gin.ReleaseMode) } gin.DefaultWriter = io.MultiWriter(os.Stdout) } io.</description>
     </item>
     
   </channel>

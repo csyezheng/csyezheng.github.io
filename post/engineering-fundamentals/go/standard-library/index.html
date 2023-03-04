@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="io io.Writer import	stdlog &amp;quot;log&amp;quot; var loggers []*Logger var logLevel = Debug type Logger struct { level int logger *stdlog.Logger } func NewLogger(out io.Writer) *Logger { ret := &amp;amp;Logger{level: logLevel, logger: stdlog.New(out, &amp;quot;&amp;quot;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)} loggers = append(loggers, ret) return ret } io.MultiWriter func init() { rand.Seed(time.Now().UTC().UnixNano()) log.SetLevel(&amp;quot;warn&amp;quot;) logger = log.NewLogger(os.Stdout) model.LoadConf() util.LoadMarkdown() i18n.Load() theme.Load() replaceServerConf() if &amp;quot;dev&amp;quot; == model.Conf.RuntimeMode { gin.SetMode(gin.DebugMode) } else { gin.SetMode(gin.ReleaseMode) } gin.DefaultWriter = io.MultiWriter(os.Stdout) } io." />
+  <meta name="description" content="io io.Writer import	stdlog &amp;#34;log&amp;#34; var loggers []*Logger var logLevel = Debug type Logger struct { level int logger *stdlog.Logger } func NewLogger(out io.Writer) *Logger { ret := &amp;amp;Logger{level: logLevel, logger: stdlog.New(out, &amp;#34;&amp;#34;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)} loggers = append(loggers, ret) return ret } io.MultiWriter func init() { rand.Seed(time.Now().UTC().UnixNano()) log.SetLevel(&amp;#34;warn&amp;#34;) logger = log.NewLogger(os.Stdout) model.LoadConf() util.LoadMarkdown() i18n.Load() theme.Load() replaceServerConf() if &amp;#34;dev&amp;#34; == model.Conf.RuntimeMode { gin.SetMode(gin.DebugMode) } else { gin.SetMode(gin.ReleaseMode) } gin.DefaultWriter = io.MultiWriter(os.Stdout) } io." />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/engineering-fundamentals/go/standard-library/" />
@@ -53,26 +53,25 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
 
 
 <meta property="og:title" content="standard-library" />
-<meta property="og:description" content="io io.Writer import	stdlog &quot;log&quot; var loggers []*Logger var logLevel = Debug type Logger struct { level int logger *stdlog.Logger } func NewLogger(out io.Writer) *Logger { ret := &amp;Logger{level: logLevel, logger: stdlog.New(out, &quot;&quot;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)} loggers = append(loggers, ret) return ret } io.MultiWriter func init() { rand.Seed(time.Now().UTC().UnixNano()) log.SetLevel(&quot;warn&quot;) logger = log.NewLogger(os.Stdout) model.LoadConf() util.LoadMarkdown() i18n.Load() theme.Load() replaceServerConf() if &quot;dev&quot; == model.Conf.RuntimeMode { gin.SetMode(gin.DebugMode) } else { gin.SetMode(gin.ReleaseMode) } gin.DefaultWriter = io.MultiWriter(os.Stdout) } io." />
+<meta property="og:description" content="io io.Writer import	stdlog &#34;log&#34; var loggers []*Logger var logLevel = Debug type Logger struct { level int logger *stdlog.Logger } func NewLogger(out io.Writer) *Logger { ret := &amp;Logger{level: logLevel, logger: stdlog.New(out, &#34;&#34;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)} loggers = append(loggers, ret) return ret } io.MultiWriter func init() { rand.Seed(time.Now().UTC().UnixNano()) log.SetLevel(&#34;warn&#34;) logger = log.NewLogger(os.Stdout) model.LoadConf() util.LoadMarkdown() i18n.Load() theme.Load() replaceServerConf() if &#34;dev&#34; == model.Conf.RuntimeMode { gin.SetMode(gin.DebugMode) } else { gin.SetMode(gin.ReleaseMode) } gin.DefaultWriter = io.MultiWriter(os.Stdout) } io." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/engineering-fundamentals/go/standard-library/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-03-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2019-03-01T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2019-03-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-03-01T00:00:00+00:00" />
 <meta itemprop="name" content="standard-library">
-<meta itemprop="description" content="io io.Writer import	stdlog &quot;log&quot; var loggers []*Logger var logLevel = Debug type Logger struct { level int logger *stdlog.Logger } func NewLogger(out io.Writer) *Logger { ret := &amp;Logger{level: logLevel, logger: stdlog.New(out, &quot;&quot;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)} loggers = append(loggers, ret) return ret } io.MultiWriter func init() { rand.Seed(time.Now().UTC().UnixNano()) log.SetLevel(&quot;warn&quot;) logger = log.NewLogger(os.Stdout) model.LoadConf() util.LoadMarkdown() i18n.Load() theme.Load() replaceServerConf() if &quot;dev&quot; == model.Conf.RuntimeMode { gin.SetMode(gin.DebugMode) } else { gin.SetMode(gin.ReleaseMode) } gin.DefaultWriter = io.MultiWriter(os.Stdout) } io."><meta itemprop="datePublished" content="2019-03-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-03-01T00:00:00&#43;00:00" />
+<meta itemprop="description" content="io io.Writer import	stdlog &#34;log&#34; var loggers []*Logger var logLevel = Debug type Logger struct { level int logger *stdlog.Logger } func NewLogger(out io.Writer) *Logger { ret := &amp;Logger{level: logLevel, logger: stdlog.New(out, &#34;&#34;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)} loggers = append(loggers, ret) return ret } io.MultiWriter func init() { rand.Seed(time.Now().UTC().UnixNano()) log.SetLevel(&#34;warn&#34;) logger = log.NewLogger(os.Stdout) model.LoadConf() util.LoadMarkdown() i18n.Load() theme.Load() replaceServerConf() if &#34;dev&#34; == model.Conf.RuntimeMode { gin.SetMode(gin.DebugMode) } else { gin.SetMode(gin.ReleaseMode) } gin.DefaultWriter = io.MultiWriter(os.Stdout) } io."><meta itemprop="datePublished" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-03-01T00:00:00+00:00" />
 <meta itemprop="wordCount" content="1852">
 <meta itemprop="keywords" content="Go," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="standard-library"/>
-<meta name="twitter:description" content="io io.Writer import	stdlog &quot;log&quot; var loggers []*Logger var logLevel = Debug type Logger struct { level int logger *stdlog.Logger } func NewLogger(out io.Writer) *Logger { ret := &amp;Logger{level: logLevel, logger: stdlog.New(out, &quot;&quot;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)} loggers = append(loggers, ret) return ret } io.MultiWriter func init() { rand.Seed(time.Now().UTC().UnixNano()) log.SetLevel(&quot;warn&quot;) logger = log.NewLogger(os.Stdout) model.LoadConf() util.LoadMarkdown() i18n.Load() theme.Load() replaceServerConf() if &quot;dev&quot; == model.Conf.RuntimeMode { gin.SetMode(gin.DebugMode) } else { gin.SetMode(gin.ReleaseMode) } gin.DefaultWriter = io.MultiWriter(os.Stdout) } io."/>
+<meta name="twitter:description" content="io io.Writer import	stdlog &#34;log&#34; var loggers []*Logger var logLevel = Debug type Logger struct { level int logger *stdlog.Logger } func NewLogger(out io.Writer) *Logger { ret := &amp;Logger{level: logLevel, logger: stdlog.New(out, &#34;&#34;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)} loggers = append(loggers, ret) return ret } io.MultiWriter func init() { rand.Seed(time.Now().UTC().UnixNano()) log.SetLevel(&#34;warn&#34;) logger = log.NewLogger(os.Stdout) model.LoadConf() util.LoadMarkdown() i18n.Load() theme.Load() replaceServerConf() if &#34;dev&#34; == model.Conf.RuntimeMode { gin.SetMode(gin.DebugMode) } else { gin.SetMode(gin.ReleaseMode) } gin.DefaultWriter = io.MultiWriter(os.Stdout) } io."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -367,7 +366,7 @@
     <div class="post-content">
       <h3 id="io">io</h3>
 <h5 id="iowriter">io.Writer</h5>
-<pre><code>import	stdlog &quot;log&quot;
+<pre tabindex="0"><code>import	stdlog &#34;log&#34;
 
 var loggers []*Logger
 var logLevel = Debug
@@ -378,17 +377,17 @@ type Logger struct {
 }
 
 func NewLogger(out io.Writer) *Logger {
-	ret := &amp;Logger{level: logLevel, logger: stdlog.New(out, &quot;&quot;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)}
+	ret := &amp;Logger{level: logLevel, logger: stdlog.New(out, &#34;&#34;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)}
 
 	loggers = append(loggers, ret)
 
 	return ret
 }
 </code></pre><h5 id="iomultiwriter">io.MultiWriter</h5>
-<pre><code>func init() {
+<pre tabindex="0"><code>func init() {
 	rand.Seed(time.Now().UTC().UnixNano())
 
-	log.SetLevel(&quot;warn&quot;)
+	log.SetLevel(&#34;warn&#34;)
 	logger = log.NewLogger(os.Stdout)
 
 	model.LoadConf()
@@ -397,16 +396,15 @@ func NewLogger(out io.Writer) *Logger {
 	theme.Load()
 	replaceServerConf()
 
-	if &quot;dev&quot; == model.Conf.RuntimeMode {
+	if &#34;dev&#34; == model.Conf.RuntimeMode {
 		gin.SetMode(gin.DebugMode)
 	} else {
 		gin.SetMode(gin.ReleaseMode)
 	}
 	gin.DefaultWriter = io.MultiWriter(os.Stdout)
 }
-
 </code></pre><h5 id="iocopy">io.Copy</h5>
-<pre><code>// CopyFile copies the source file to the dest file.
+<pre tabindex="0"><code>// CopyFile copies the source file to the dest file.
 func (*myfile) CopyFile(source string, dest string) (err error) {
 	sourcefile, err := os.Open(source)
 	if nil != err {
@@ -435,210 +433,209 @@ func (*myfile) CopyFile(source string, dest string) (err error) {
 }
 </code></pre><h3 id="ioioutil">io/ioutil</h3>
 <h5 id="ioutilreadfile">ioutil.ReadFile</h5>
-<pre><code>data, err := ioutil.ReadFile(path)
+<pre tabindex="0"><code>data, err := ioutil.ReadFile(path)
 </code></pre><h5 id="ioutilwritefile">ioutil.WriteFile</h5>
-<pre><code>err = ioutil.WriteFile(path, []byte(content), 0644)
+<pre tabindex="0"><code>err = ioutil.WriteFile(path, []byte(content), 0644)
 </code></pre><h5 id="ioutilreadall">ioutil.ReadAll</h5>
-<pre><code>data, err := ioutil.ReadAll(response.Body)
+<pre tabindex="0"><code>data, err := ioutil.ReadAll(response.Body)
 </code></pre><h5 id="ioutilreaddir">ioutil.ReadDir</h5>
-<pre><code>files, err := ioutil.ReadDir(dirName)
+<pre tabindex="0"><code>files, err := ioutil.ReadDir(dirName)
 </code></pre><h4 id="fmt">fmt</h4>
 <h5 id="fmtsprint">fmt.Sprint</h5>
-<pre><code>fmt.Sprint(v...)
+<pre tabindex="0"><code>fmt.Sprint(v...)
 </code></pre><h5 id="fmtsprintf">fmt.Sprintf</h5>
-<pre><code>v := fmt.Sprintf(&quot;%d&quot;, time.Now().Unix())
+<pre tabindex="0"><code>v := fmt.Sprintf(&#34;%d&#34;, time.Now().Unix())
 </code></pre><h5 id="fmtfprintf">fmt.Fprintf</h5>
-<pre><code>fmt.Fprintf(buf, &quot;%s:%d (0x%x)\n&quot;, file, line, pc)
+<pre tabindex="0"><code>fmt.Fprintf(buf, &#34;%s:%d (0x%x)\n&#34;, file, line, pc)
 </code></pre><h5 id="fmtprintln">fmt.Println</h5>
-<pre><code>fmt.Println(Version)
+<pre tabindex="0"><code>fmt.Println(Version)
 </code></pre><h5 id="fmterrorf">fmt.Errorf</h5>
-<pre><code>fmt.Errorf(&quot;not found category [id=%d] to update&quot;, category.ID)
+<pre tabindex="0"><code>fmt.Errorf(&#34;not found category [id=%d] to update&#34;, category.ID)
 </code></pre><h3 id="strings">strings</h3>
 <h5 id="stringshassuffix">strings.HasSuffix</h5>
-<pre><code>if strings.HasSuffix(path, &quot;.min.js&quot;) {}
+<pre tabindex="0"><code>if strings.HasSuffix(path, &#34;.min.js&#34;) {}
 </code></pre><h5 id="stringscontains">strings.Contains</h5>
-<pre><code>if !strings.Contains(content, &quot;exports={Server:&quot;) {}
+<pre tabindex="0"><code>if !strings.Contains(content, &#34;exports={Server:&#34;) {}
 </code></pre><h5 id="stringssplit">strings.Split</h5>
-<pre><code>tmp := &quot;{Server:&quot; + strings.Split(content, &quot;{Server:&quot;)[1]
+<pre tabindex="0"><code>tmp := &#34;{Server:&#34; + strings.Split(content, &#34;{Server:&#34;)[1]
 </code></pre><h5 id="stringsreplace">strings.Replace</h5>
-<pre><code>content = strings.Replace(content, json, newJSON, -1)
+<pre tabindex="0"><code>content = strings.Replace(content, json, newJSON, -1)
 </code></pre><h5 id="stringslastindex">strings.LastIndex</h5>
-<pre><code>part = part[strings.LastIndex(part, &quot;\&quot;&quot;)+1:]
+<pre tabindex="0"><code>part = part[strings.LastIndex(part, &#34;\&#34;&#34;)+1:]
 </code></pre><h5 id="stringstolower">strings.ToLower</h5>
-<pre><code>level = strings.ToLower(level)
+<pre tabindex="0"><code>level = strings.ToLower(level)
 </code></pre><h5 id="stringsnewreader">strings.NewReader</h5>
-<pre><code>doc, _ := goquery.NewDocumentFromReader(strings.NewReader(contentHTML))
+<pre tabindex="0"><code>doc, _ := goquery.NewDocumentFromReader(strings.NewReader(contentHTML))
 </code></pre><h5 id="stringstrimspace">strings.TrimSpace</h5>
-<pre><code>abstractText := strings.TrimSpace(runesToString(runes))
+<pre tabindex="0"><code>abstractText := strings.TrimSpace(runesToString(runes))
 </code></pre><h5 id="stringsindex">strings.Index</h5>
-<pre><code>if emojiASCII == img[:strings.Index(img, &quot;.&quot;)] {}
+<pre tabindex="0"><code>if emojiASCII == img[:strings.Index(img, &#34;.&#34;)] {}
 </code></pre><h5 id="stringshasprefix">strings.HasPrefix</h5>
-<pre><code>if strings.HasPrefix(path, reservedPath) {}
+<pre tabindex="0"><code>if strings.HasPrefix(path, reservedPath) {}
 </code></pre><h5 id="stringsindex-1">strings.Index</h5>
-<pre><code>if idx := strings.Index(mdResult.ContentHTML, &quot;&lt;/p&gt;&quot;); 0 &lt; idx {}
+<pre tabindex="0"><code>if idx := strings.Index(mdResult.ContentHTML, &#34;&lt;/p&gt;&#34;); 0 &lt; idx {}
 </code></pre><h5 id="stringstrimprefix">strings.TrimPrefix</h5>
-<pre><code>articleSignSetting = strings.TrimPrefix(articleSignSetting, &quot;&lt;p&gt;&quot;)
+<pre tabindex="0"><code>articleSignSetting = strings.TrimPrefix(articleSignSetting, &#34;&lt;p&gt;&#34;)
 </code></pre><h5 id="stringstrimsuffix">strings.TrimSuffix</h5>
-<pre><code>articleSignSetting = strings.TrimSuffix(articleSignSetting, &quot;&lt;/p&gt;&quot;)
+<pre tabindex="0"><code>articleSignSetting = strings.TrimSuffix(articleSignSetting, &#34;&lt;/p&gt;&#34;)
 </code></pre><h5 id="stringssplitafter">strings.SplitAfter</h5>
-<pre><code>date := strings.SplitAfter(c.Request.URL.Path, util.PathArchives+&quot;/&quot;)[1]
+<pre tabindex="0"><code>date := strings.SplitAfter(c.Request.URL.Path, util.PathArchives+&#34;/&#34;)[1]
 </code></pre><h5 id="stringsbuilder">strings.Builder</h5>
-<pre><code>c.Writer = &amp;pjaxHTMLWriter{c.Writer, &amp;strings.Builder{}, c}
-</code></pre><pre><code>type pjaxHTMLWriter struct {
+<pre tabindex="0"><code>c.Writer = &amp;pjaxHTMLWriter{c.Writer, &amp;strings.Builder{}, c}
+</code></pre><pre tabindex="0"><code>type pjaxHTMLWriter struct {
 	gin.ResponseWriter
 	bodyBuilder *strings.Builder
 	c           *gin.Context
 }
 </code></pre><h5 id="stringsjoin">strings.Join</h5>
-<pre><code>body = strings.Join(containers, &quot;&quot;)
+<pre tabindex="0"><code>body = strings.Join(containers, &#34;&#34;)
 </code></pre><h5 id="heading"></h5>
 <h3 id="bytes">bytes</h3>
 <h5 id="bytesbuffer">bytes.Buffer</h5>
-<pre><code>buf := &amp;bytes.Buffer{}
-fmt.Fprintf(buf, &quot;%s:%d (0x%x)\n&quot;, file, line, pc)
-fmt.Fprintf(buf, &quot;\t%s: %s\n&quot;, function(pc), source(lines, line))
+<pre tabindex="0"><code>buf := &amp;bytes.Buffer{}
+fmt.Fprintf(buf, &#34;%s:%d (0x%x)\n&#34;, file, line, pc)
+fmt.Fprintf(buf, &#34;\t%s: %s\n&#34;, function(pc), source(lines, line))
 return buf.Bytes()
-</code></pre><pre><code>builder := bytes.Buffer{}
-builder.WriteString(&quot;&lt;ul id=\&quot;toc\&quot; class=\&quot;toc\&quot;&gt;&quot;)
+</code></pre><pre tabindex="0"><code>builder := bytes.Buffer{}
+builder.WriteString(&#34;&lt;ul id=\&#34;toc\&#34; class=\&#34;toc\&#34;&gt;&#34;)
 return builder.String()
 </code></pre><h5 id="bytesnewreader">bytes.NewReader</h5>
-<pre><code>data, err := ioutil.ReadAll(transform.NewReader(bytes.NewReader([]byte(fileName)), simplifiedchinese.GB18030.NewDecoder()))
-
+<pre tabindex="0"><code>data, err := ioutil.ReadAll(transform.NewReader(bytes.NewReader([]byte(fileName)), simplifiedchinese.GB18030.NewDecoder()))
 </code></pre><h5 id="bytessplit">bytes.Split</h5>
-<pre><code>data, err := ioutil.ReadFile(file)
-lines = bytes.Split(data, []byte{'\n'})
+<pre tabindex="0"><code>data, err := ioutil.ReadFile(file)
+lines = bytes.Split(data, []byte{&#39;\n&#39;})
 </code></pre><h5 id="bytestrim">bytes.Trim</h5>
-<pre><code>return bytes.Trim(lines[n], &quot; \t&quot;)
+<pre tabindex="0"><code>return bytes.Trim(lines[n], &#34; \t&#34;)
 </code></pre><h5 id="byteslastindex">bytes.LastIndex</h5>
-<pre><code>if lastslash := bytes.LastIndex(name, slash); lastslash &gt;= 0 {}
+<pre tabindex="0"><code>if lastslash := bytes.LastIndex(name, slash); lastslash &gt;= 0 {}
 </code></pre><h5 id="bytesindex">bytes.Index</h5>
-<pre><code>if period := bytes.Index(name, dot); period &gt;= 0 {}
+<pre tabindex="0"><code>if period := bytes.Index(name, dot); period &gt;= 0 {}
 </code></pre><h5 id="bytesreplace">bytes.Replace</h5>
-<pre><code>name = bytes.Replace(name, centerDot, dot, -1)
+<pre tabindex="0"><code>name = bytes.Replace(name, centerDot, dot, -1)
 </code></pre><h3 id="strconv">strconv</h3>
 <h5 id="strconvatoi">strconv.Atoi</h5>
-<pre><code>ret, _ := strconv.Atoi(c.Query(&quot;p&quot;))
+<pre tabindex="0"><code>ret, _ := strconv.Atoi(c.Query(&#34;p&#34;))
 </code></pre><h5 id="strconvitoawidth">strconv.Itoa(width)</h5>
-<pre><code>return &quot;width: &quot; + strconv.Itoa(width) + &quot;, height: &quot; + strconv.Itoa(height)
+<pre tabindex="0"><code>return &#34;width: &#34; + strconv.Itoa(width) + &#34;, height: &#34; + strconv.Itoa(height)
 </code></pre><h5 id="strconvformatint">strconv.FormatInt</h5>
-<pre><code>t.Log(&quot;size of file [.] is [&quot; + strconv.FormatInt(size, 10) + &quot;]&quot;)
-</code></pre><pre><code>time := strconv.FormatInt(time.Now().UnixNano(), 10)
+<pre tabindex="0"><code>t.Log(&#34;size of file [.] is [&#34; + strconv.FormatInt(size, 10) + &#34;]&#34;)
+</code></pre><pre tabindex="0"><code>time := strconv.FormatInt(time.Now().UnixNano(), 10)
 </code></pre><h5 id="strconvparseuint">strconv.ParseUint</h5>
-<pre><code>parentCmtID, _ := strconv.ParseUint(parentCmtIDArg, 10, 64)
+<pre tabindex="0"><code>parentCmtID, _ := strconv.ParseUint(parentCmtIDArg, 10, 64)
 </code></pre><h5 id="strconvparsebool">strconv.ParseBool</h5>
-<pre><code>v, err := strconv.ParseBool(setting.Value)
+<pre tabindex="0"><code>v, err := strconv.ParseBool(setting.Value)
 </code></pre><h5 id="strconvformatbool">strconv.FormatBool</h5>
-<pre><code>value = strconv.FormatBool(v.(bool))
+<pre tabindex="0"><code>value = strconv.FormatBool(v.(bool))
 </code></pre><h5 id="strconvparseint">strconv.ParseInt</h5>
-<pre><code>v, err := strconv.ParseInt(setting.Value, 10, 64)
+<pre tabindex="0"><code>v, err := strconv.ParseInt(setting.Value, 10, 64)
 </code></pre><h5 id="strconvformatfloat">strconv.FormatFloat</h5>
-<pre><code>value = strconv.FormatFloat(v.(float64), 'f', 0, 64)
+<pre tabindex="0"><code>value = strconv.FormatFloat(v.(float64), &#39;f&#39;, 0, 64)
 </code></pre><h3 id="regexp">regexp</h3>
 <h5 id="regexpmustcompile">regexp.MustCompile</h5>
-<pre><code>contentHTML = bluemonday.UGCPolicy().AllowAttrs(&quot;class&quot;).Matching(regexp.MustCompile(&quot;^language-[a-zA-Z0-9]+$&quot;)).OnElements(&quot;code&quot;).AllowAttrs(&quot;data-src&quot;).Sanitize(contentHTML)
-</code></pre><pre><code>reg := regexp.MustCompile(`\s+`)
-ret := reg.ReplaceAllString(tagStr, &quot;&quot;)
-</code></pre><pre><code>reg = regexp.MustCompile(`[\\u4e00-\\u9fa5,\\w,&amp;,\\+,-,\\.]+`)
+<pre tabindex="0"><code>contentHTML = bluemonday.UGCPolicy().AllowAttrs(&#34;class&#34;).Matching(regexp.MustCompile(&#34;^language-[a-zA-Z0-9]+$&#34;)).OnElements(&#34;code&#34;).AllowAttrs(&#34;data-src&#34;).Sanitize(contentHTML)
+</code></pre><pre tabindex="0"><code>reg := regexp.MustCompile(`\s+`)
+ret := reg.ReplaceAllString(tagStr, &#34;&#34;)
+</code></pre><pre tabindex="0"><code>reg = regexp.MustCompile(`[\\u4e00-\\u9fa5,\\w,&amp;,\\+,-,\\.]+`)
 if !reg.MatchString(tag) {}
 </code></pre><h3 id="unicode">unicode</h3>
 <h5 id="unicodeisspace">unicode.IsSpace</h5>
-<pre><code>if unicode.IsSpace(runeValue) {}
+<pre tabindex="0"><code>if unicode.IsSpace(runeValue) {}
 </code></pre><h3 id="unicodeutf8">unicode/utf8</h3>
 <h5 id="utf8decoderuneinstring">utf8.DecodeRuneInString</h5>
-<pre><code>runeValue, width := utf8.DecodeRuneInString(text[i:])
+<pre tabindex="0"><code>runeValue, width := utf8.DecodeRuneInString(text[i:])
 </code></pre><h5 id="utf8validstring">utf8.ValidString</h5>
-<pre><code>if !utf8.ValidString(fileName) {}
+<pre tabindex="0"><code>if !utf8.ValidString(fileName) {}
 </code></pre><h3 id="sort">sort</h3>
 <h5 id="sortstrings">sort.Strings</h5>
-<pre><code>var ret []string
+<pre tabindex="0"><code>var ret []string
 for name := range locales {
 	ret = append(ret, name)
 }
 sort.Strings(ret)
 </code></pre><h5 id="sortsort">sort.Sort</h5>
-<pre><code>
+<pre tabindex="0"><code>
 sort.Sort(articles)
 </code></pre><h3 id="time">time</h3>
 <h5 id="timenow">time.Now</h5>
-<pre><code>time.Now().Unix()
+<pre tabindex="0"><code>time.Now().Unix()
 time.Now().UTC().UnixNano()
 </code></pre><h5 id="timesecond">time.Second</h5>
 <h5 id="timetick">time.Tick</h5>
-<pre><code>for range time.Tick(time.Second * 30) {}
+<pre tabindex="0"><code>for range time.Tick(time.Second * 30) {}
 </code></pre><h5 id="timedate">time.Date</h5>
 <h5 id="timeunix">time.Unix</h5>
-<pre><code>func RandImage() string {
+<pre tabindex="0"><code>func RandImage() string {
 	min := time.Date(2017, 11, 04, 0, 0, 0, 0, time.UTC).Unix()
 	max := time.Now().Unix()
 	delta := max - min
 	sec := rand.Int63n(delta) + min
-	return time.Unix(sec, 0).Format(&quot;https://img.hacpai.com/bing/20060102.jpg&quot;)
+	return time.Unix(sec, 0).Format(&#34;https://img.hacpai.com/bing/20060102.jpg&#34;)
 }
 </code></pre><h5 id="timemillisecond">time.Millisecond</h5>
-<pre><code>return uint64(time.Now().UnixNano() / int64(time.Millisecond))
+<pre tabindex="0"><code>return uint64(time.Now().UnixNano() / int64(time.Millisecond))
 </code></pre><h5 id="timesleep">time.Sleep</h5>
 <p>time.Nanosecond</p>
-<pre><code>time.Sleep(time.Nanosecond)
+<pre tabindex="0"><code>time.Sleep(time.Nanosecond)
 </code></pre><h5 id="timeparse">time.Parse</h5>
-<pre><code>var ZeroPushTime, _ = time.Parse(&quot;2006-01-02 15:04:05&quot;, &quot;2006-01-02 15:04:05&quot;)
+<pre tabindex="0"><code>var ZeroPushTime, _ = time.Parse(&#34;2006-01-02 15:04:05&#34;, &#34;2006-01-02 15:04:05&#34;)
 </code></pre><h5 id="timetime">time.Time</h5>
-<pre><code>func parseDate(m *map[string]interface{}) time.Time {}
+<pre tabindex="0"><code>func parseDate(m *map[string]interface{}) time.Time {}
 </code></pre><h5 id="timenowyear">time.Now().Year()</h5>
-<pre><code>time.Now().Year()
+<pre tabindex="0"><code>time.Now().Year()
 </code></pre><h3 id="math">math</h3>
 <h5 id="mathceil">math.Ceil</h5>
-<pre><code>pageCount := int(math.Ceil(float64(recordCount) / float64(pageSize)))
+<pre tabindex="0"><code>pageCount := int(math.Ceil(float64(recordCount) / float64(pageSize)))
 </code></pre><h5 id="mathmaxint32">math.MaxInt32</h5>
-<pre><code>const SyncCommentAuthorID = math.MaxInt32
+<pre tabindex="0"><code>const SyncCommentAuthorID = math.MaxInt32
 </code></pre><h5 id="mathmaxint8">math.MaxInt8</h5>
-<pre><code>categoryModels := service.Category.GetCategories(math.MaxInt8, blogID)
+<pre tabindex="0"><code>categoryModels := service.Category.GetCategories(math.MaxInt8, blogID)
 </code></pre><h5 id="mathmaxint64">math.MaxInt64</h5>
-<pre><code>tagModels := service.Tag.GetTags(math.MaxInt64, blogID)
+<pre tabindex="0"><code>tagModels := service.Tag.GetTags(math.MaxInt64, blogID)
 </code></pre><h3 id="mathrand">math/rand</h3>
 <h5 id="randseed">rand.Seed</h5>
-<pre><code>rand.Seed(time.Now().UTC().UnixNano())
+<pre tabindex="0"><code>rand.Seed(time.Now().UTC().UnixNano())
 </code></pre><h5 id="randintn">rand.Intn</h5>
-<pre><code>modes := []string{&quot;identicon&quot;, &quot;monsterid&quot;, &quot;wavatar&quot;}
+<pre tabindex="0"><code>modes := []string{&#34;identicon&#34;, &#34;monsterid&#34;, &#34;wavatar&#34;}
 d := modes[rand.Intn(len(modes))]
 </code></pre><h5 id="randint63n">rand.Int63n</h5>
-<pre><code>min := time.Date(2017, 11, 04, 0, 0, 0, 0, time.UTC).Unix()
+<pre tabindex="0"><code>min := time.Date(2017, 11, 04, 0, 0, 0, 0, time.UTC).Unix()
 max := time.Now().Unix()
 delta := max - min
 sec := rand.Int63n(delta) + min
 </code></pre><h5 id="randint">rand.Int</h5>
-<pre><code>v := rand.Int()
+<pre tabindex="0"><code>v := rand.Int()
 </code></pre><h3 id="os">os</h3>
 <h5 id="osstdout">os.Stdout</h5>
-<pre><code>var logger *log.Logger
+<pre tabindex="0"><code>var logger *log.Logger
 
 func init() {
 	rand.Seed(time.Now().UTC().UnixNano())
 
-	log.SetLevel(&quot;warn&quot;)
+	log.SetLevel(&#34;warn&#34;)
 	logger = log.NewLogger(os.Stdout)
     //...
 	gin.DefaultWriter = io.MultiWriter(os.Stdout)
 }
 </code></pre><h5 id="ossignal">os.Signal</h5>
-<pre><code>c := make(chan os.Signal)
+<pre tabindex="0"><code>c := make(chan os.Signal)
 </code></pre><h5 id="osexit">os.Exit</h5>
-<pre><code>os.Exit(0)
+<pre tabindex="0"><code>os.Exit(0)
 os.Exit(1)
 </code></pre><h5 id="osfileinfo">os.FileInfo</h5>
-<pre><code>func test(path string, f os.FileInfo, err error) error {}
+<pre tabindex="0"><code>func test(path string, f os.FileInfo, err error) error {}
 </code></pre><h5 id="osopen">os.Open</h5>
-<pre><code>f, _ := os.Open(filepath.ToSlash(filepath.Join(model.Conf.StaticRoot, &quot;i18n&quot;)))
+<pre tabindex="0"><code>f, _ := os.Open(filepath.ToSlash(filepath.Join(model.Conf.StaticRoot, &#34;i18n&#34;)))
 names, _ := f.Readdirnames(-1)
 f.Close()
 </code></pre><h5 id="osstat">os.Stat</h5>
-<pre><code>fi, err := os.Stat(path)
+<pre tabindex="0"><code>fi, err := os.Stat(path)
 </code></pre><h5 id="osisexist">os.IsExist</h5>
-<pre><code>if os.IsExist(err) {}
+<pre tabindex="0"><code>if os.IsExist(err) {}
 </code></pre><h5 id="oslstat">os.Lstat</h5>
-<pre><code>fio, err := os.Lstat(path)
+<pre tabindex="0"><code>fio, err := os.Lstat(path)
 </code></pre><h5 id="oscreate">os.Create</h5>
 <h5 id="oschmod">os.Chmod</h5>
-<pre><code>// CopyFile copies the source file to the dest file.
+<pre tabindex="0"><code>// CopyFile copies the source file to the dest file.
 func (*myfile) CopyFile(source string, dest string) (err error) {
 	sourcefile, err := os.Open(source)
 	if nil != err {
@@ -666,26 +663,26 @@ func (*myfile) CopyFile(source string, dest string) (err error) {
 	return nil
 }
 </code></pre><h5 id="osmkdirall">os.MkdirAll</h5>
-<pre><code>sourceinfo, err := os.Stat(source)
+<pre tabindex="0"><code>sourceinfo, err := os.Stat(source)
 if nil != err {
 	return err
 }
 err = os.MkdirAll(dest, sourceinfo.Mode())
 </code></pre><h5 id="osargs">os.Args</h5>
-<pre><code>file, _ := exec.LookPath(os.Args[0])
+<pre tabindex="0"><code>file, _ := exec.LookPath(os.Args[0])
 </code></pre><h5 id="osgetenv">os.Getenv</h5>
-<pre><code>if home := os.Getenv(&quot;HOME&quot;); home != &quot;&quot; {}
+<pre tabindex="0"><code>if home := os.Getenv(&#34;HOME&#34;); home != &#34;&#34; {}
 </code></pre><h5 id="osfile">os.File</h5>
-<pre><code>// ZipFile represents a zip file.
+<pre tabindex="0"><code>// ZipFile represents a zip file.
 type ZipFile struct {
 	zipFile *os.File
 	writer  *zip.Writer
 }
 </code></pre><h5 id="osmodedirosmodeperm">os.ModeDir|os.ModePerm</h5>
-<pre><code>err := os.MkdirAll(filepath.Dir(path), os.ModeDir|os.ModePerm)
+<pre tabindex="0"><code>err := os.MkdirAll(filepath.Dir(path), os.ModeDir|os.ModePerm)
 </code></pre><h3 id="osexec">os/exec</h3>
 <h5 id="execlookpath">exec.LookPath</h5>
-<pre><code>// Pwd gets the path of current working directory.
+<pre tabindex="0"><code>// Pwd gets the path of current working directory.
 func Pwd() string {
 	file, _ := exec.LookPath(os.Args[0])
 	pwd, _ := filepath.Abs(file)
@@ -693,54 +690,54 @@ func Pwd() string {
 	return filepath.Dir(pwd)
 }
 </code></pre><h5 id="execcommand">exec.Command</h5>
-<pre><code>var stdout bytes.Buffer
-cmd := exec.Command(&quot;sh&quot;, &quot;-c&quot;, &quot;eval echo ~$USER&quot;)
+<pre tabindex="0"><code>var stdout bytes.Buffer
+cmd := exec.Command(&#34;sh&#34;, &#34;-c&#34;, &#34;eval echo ~$USER&#34;)
 cmd.Stdout = &amp;stdout
 if err := cmd.Run(); err != nil {
-	return &quot;&quot;, err
+	return &#34;&#34;, err
 }
 result := strings.TrimSpace(stdout.String())
 </code></pre><h3 id="osuser">os/user</h3>
 <h5 id="usercurrent">user.Current</h5>
-<pre><code>user, err := user.Current()
+<pre tabindex="0"><code>user, err := user.Current()
 if nil == err {
 	return user.HomeDir, nil
 }
 </code></pre><h3 id="ossignal-1">os/signal</h3>
 <h5 id="signalnotify">signal.Notify</h5>
-<pre><code>signal.Notify(c, syscall.SIGINT, syscall.SIGQUIT, syscall.SIGTERM)
+<pre tabindex="0"><code>signal.Notify(c, syscall.SIGINT, syscall.SIGQUIT, syscall.SIGTERM)
 </code></pre><h3 id="path">path</h3>
 <h5 id="pathclean">path.Clean</h5>
-<pre><code>blogURL += path.Clean(url.Path)
+<pre tabindex="0"><code>blogURL += path.Clean(url.Path)
 </code></pre><h3 id="pathfilepath">path/filepath</h3>
 <h5 id="filepathwalk">filepath.Walk</h5>
-<pre><code>err = filepath.Walk(unzipPath, func(path string, f os.FileInfo, err error) error {
+<pre tabindex="0"><code>err = filepath.Walk(unzipPath, func(path string, f os.FileInfo, err error) error {
     if !f.IsDir() {
     	filePaths = append(filePaths, path)
     }
     return err
 })
 </code></pre><h5 id="filepathtoslash">filepath.ToSlash</h5>
-<pre><code>fh.Name = filepath.ToSlash(filepath.Clean(path))
+<pre tabindex="0"><code>fh.Name = filepath.ToSlash(filepath.Clean(path))
 </code></pre><h5 id="filepathjoin">filepath.Join</h5>
-<pre><code>zipPath := filepath.Join(path, name)
+<pre tabindex="0"><code>zipPath := filepath.Join(path, name)
 </code></pre><h5 id="filepathglob">filepath.Glob</h5>
-<pre><code>paths, err := filepath.Glob(filepath.ToSlash(filepath.Join(model.Conf.StaticRoot, &quot;console/dist/*.js&quot;)))
+<pre tabindex="0"><code>paths, err := filepath.Glob(filepath.ToSlash(filepath.Join(model.Conf.StaticRoot, &#34;console/dist/*.js&#34;)))
 </code></pre><h5 id="filepathabs">filepath.Abs</h5>
 <h5 id="filepathdir">filepath.Dir</h5>
-<pre><code>func Pwd() string {
+<pre tabindex="0"><code>func Pwd() string {
 	file, _ := exec.LookPath(os.Args[0])
 	pwd, _ := filepath.Abs(file)
 
 	return filepath.Dir(pwd)
 }
 </code></pre><h5 id="filepathbase">filepath.Base</h5>
-<pre><code>name := filepath.Base(filePath)
+<pre tabindex="0"><code>name := filepath.Base(filePath)
 </code></pre><h5 id="filepathext">filepath.Ext</h5>
-<pre><code>ext := filepath.Ext(mdFile.Name)
+<pre tabindex="0"><code>ext := filepath.Ext(mdFile.Name)
 </code></pre><h3 id="testing">testing</h3>
 <h5 id="testingt">testing.T</h5>
-<pre><code>func TestRemoveArticle(t *testing.T) {
+<pre tabindex="0"><code>func TestRemoveArticle(t *testing.T) {
 	// ...
 	if conditions {
 		t.FailNow()
@@ -748,22 +745,22 @@ if nil == err {
 	}
 
 	if conditions {
-		t.Errorf(&quot;exptected is [%d], actual is [%d]&quot;, expected, val)
+		t.Errorf(&#34;exptected is [%d], actual is [%d]&#34;, expected, val)
 
 	}
 	// ...
 	if conditions {
-		t.Error(&quot;remove article failed&quot;)
+		t.Error(&#34;remove article failed&#34;)
 	}
 }
 </code></pre><h3 id="syscall">syscall</h3>
 <h5 id="syscallsigint">syscall.SIGINT</h5>
 <h5 id="syscallsigquit">syscall.SIGQUIT</h5>
 <h5 id="syscallsigterm">syscall.SIGTERM</h5>
-<pre><code>signal.Notify(c, syscall.SIGINT, syscall.SIGQUIT, syscall.SIGTERM)
+<pre tabindex="0"><code>signal.Notify(c, syscall.SIGINT, syscall.SIGQUIT, syscall.SIGTERM)
 </code></pre><h3 id="log">log</h3>
-<pre><code>import	stdlog &quot;log&quot;
-</code></pre><pre><code>type Logger struct {
+<pre tabindex="0"><code>import	stdlog &#34;log&#34;
+</code></pre><pre tabindex="0"><code>type Logger struct {
 	level  int
 	logger *stdlog.Logger
 }
@@ -771,12 +768,12 @@ if nil == err {
 <h5 id="stdlogldate">stdlog.Ldate</h5>
 <h5 id="stdlogltime">stdlog.Ltime</h5>
 <h5 id="stdloglshortfile">stdlog.Lshortfile</h5>
-<pre><code>const Debug
+<pre tabindex="0"><code>const Debug
 var loggers []*Logger
 var logLevel = Debug
 
 func NewLogger(out io.Writer) *Logger {
-	ret := &amp;Logger{level: logLevel, logger: stdlog.New(out, &quot;&quot;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)}
+	ret := &amp;Logger{level: logLevel, logger: stdlog.New(out, &#34;&#34;, stdlog.Ldate|stdlog.Ltime|stdlog.Lshortfile)}
 
 	loggers = append(loggers, ret)
 
@@ -784,18 +781,18 @@ func NewLogger(out io.Writer) *Logger {
 }
 </code></pre><h3 id="encodingjson">encoding/json</h3>
 <h5 id="jsonunmarshal">json.Unmarshal</h5>
-<pre><code>type Configuration struct {
+<pre tabindex="0"><code>type Configuration struct {
 	// ...
 }
 bytes, err := ioutil.ReadFile(*confPath)
 if nil != err {
-	logger.Fatal(&quot;loads configuration file [&quot; + *confPath + &quot;] failed: &quot; + err.Error())
+	logger.Fatal(&#34;loads configuration file [&#34; + *confPath + &#34;] failed: &#34; + err.Error())
 }
 Conf = &amp;Configuration{}
 if err = json.Unmarshal(bytes, Conf); nil != err {
-	logger.Fatal(&quot;parses failed: &quot;, err)
+	logger.Fatal(&#34;parses failed: &#34;, err)
 }
-</code></pre><pre><code>type SessionData struct {
+</code></pre><pre tabindex="0"><code>type SessionData struct {
 	UID     uint64 // user ID
 	UName   string // username
 	UB3Key  string // user B3 key
@@ -807,26 +804,26 @@ if err = json.Unmarshal(bytes, Conf); nil != err {
 ret := &amp;SessionData{}
 err := json.Unmarshal([]byte(sessionDataStr.(string)), ret)
 </code></pre><h5 id="jsonmarshal">json.Marshal</h5>
-<pre><code>func (sd *SessionData) Save(c *gin.Context) error {
+<pre tabindex="0"><code>func (sd *SessionData) Save(c *gin.Context) error {
 	session := sessions.Default(c)
 	sessionDataBytes, err := json.Marshal(sd)
 	if nil != err {
 		return err
 	}
-	session.Set(&quot;data&quot;, string(sessionDataBytes))
+	session.Set(&#34;data&#34;, string(sessionDataBytes))
 
 	return session.Save()
 }
 </code></pre><h3 id="cryptomd5">crypto/md5</h3>
 <h5 id="md5new">md5.New</h5>
-<pre><code>mdText = strings.Replace(mdText, &quot;\r\n&quot;, &quot;\n&quot;, -1)
+<pre tabindex="0"><code>mdText = strings.Replace(mdText, &#34;\r\n&#34;, &#34;\n&#34;, -1)
 digest := md5.New()
 digest.Write([]byte(mdText))
 key := string(digest.Sum(nil))
 </code></pre><h3 id="cryptotls">crypto/tls</h3>
 <h5 id="tlsconfig">tls.Config</h5>
 <h5 id="tlsclient">tls.Client</h5>
-<pre><code>func dialTLS(network, addr string) (net.Conn, error) {
+<pre tabindex="0"><code>func dialTLS(network, addr string) (net.Conn, error) {
 	conn, err := net.Dial(network, addr)
 	if err != nil {
 		return nil, err
@@ -853,26 +850,26 @@ key := string(digest.Sum(nil))
 }
 </code></pre><h3 id="net">net</h3>
 <h5 id="netconn">net.Conn</h5>
-<pre><code>func dialTLS(network, addr string) (net.Conn, error) {}
+<pre tabindex="0"><code>func dialTLS(network, addr string) (net.Conn, error) {}
 </code></pre><h5 id="netdial">net.Dial</h5>
-<pre><code>conn, err := net.Dial(network, addr)
+<pre tabindex="0"><code>conn, err := net.Dial(network, addr)
 </code></pre><h5 id="netsplithostport">net.SplitHostPort</h5>
-<pre><code>host, _, err := net.SplitHostPort(addr)
+<pre tabindex="0"><code>host, _, err := net.SplitHostPort(addr)
 </code></pre><h5 id="netparseip">net.ParseIP</h5>
-<pre><code>func IsIP(s string) bool {
+<pre tabindex="0"><code>func IsIP(s string) bool {
 	return nil != net.ParseIP(s)
 }
 </code></pre><h3 id="nethttp">net/http</h3>
 <h5 id="httpserver">http.Server</h5>
-<pre><code>server := &amp;http.Server{
-    Addr:    &quot;0.0.0.0:&quot; + model.Conf.Port,
+<pre tabindex="0"><code>server := &amp;http.Server{
+    Addr:    &#34;0.0.0.0:&#34; + model.Conf.Port,
     Handler: router,
 }
 handleSignal(server)  // func handleSignal(server *http.Server) {}
 server.ListenAndServe()
 </code></pre><h5 id="httpnewrequest">http.NewRequest</h5>
 <h5 id="httpdefaultclient">http.DefaultClient</h5>
-<pre><code>request, err := http.NewRequest(&quot;POST&quot;, &quot;http://localhost:8250&quot;, strings.NewReader(&quot;&quot;))
+<pre tabindex="0"><code>request, err := http.NewRequest(&#34;POST&#34;, &#34;http://localhost:8250&#34;, strings.NewReader(&#34;&#34;))
 if nil != err { 
 	return 
 }
@@ -889,12 +886,12 @@ if nil != err {
 content := string(data)
 </code></pre><h5 id="httptransport">http.Transport</h5>
 <h5 id="httprequest">http.Request</h5>
-<pre><code>// ExampleAPI is a reverse proxy for https://example.com.
+<pre tabindex="0"><code>// ExampleAPI is a reverse proxy for https://example.com.
 func ExampleAPI() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		proxy := httputil.NewSingleHostReverseProxy(&amp;url.URL{
-			Scheme: &quot;https&quot;,
-			Host:   &quot;example.com&quot;,
+			Scheme: &#34;https&#34;,
+			Host:   &#34;example.com&#34;,
 		})
 
 		proxy.Transport = &amp;http.Transport{DialTLS: dialTLS}
@@ -902,66 +899,66 @@ func ExampleAPI() gin.HandlerFunc {
 		proxy.Director = func(req *http.Request) {
 			director(req)
 			req.Host = req.URL.Host
-			req.URL.Path = req.URL.Path[len(&quot;api/hp/&quot;):]
+			req.URL.Path = req.URL.Path[len(&#34;api/hp/&#34;):]
 		}
 
 		proxy.ServeHTTP(c.Writer, c.Request)
 	}
 }
 </code></pre><h5 id="httpget">http.Get</h5>
-<pre><code>response, err := http.Get(&quot;http://www.example.com/api/v1/res&quot;)
+<pre tabindex="0"><code>response, err := http.Get(&#34;http://www.example.com/api/v1/res&#34;)
 </code></pre><h5 id="httpstatusok">http.StatusOK</h5>
 <h5 id="httpstatusnotfound">http.StatusNotFound</h5>
 <h5 id="httpstatusbadrequest">http.StatusBadRequest</h5>
 <h5 id="httpstatusunauthorized">http.StatusUnauthorized</h5>
 <h5 id="httpstatusinternalservererror">http.StatusInternalServerError</h5>
-<pre><code>func redirectGitHubLoginAction(c *gin.Context) {
+<pre tabindex="0"><code>func redirectGitHubLoginAction(c *gin.Context) {
 	// ...
 	c.JSON(http.StatusOK, result)
 }
 </code></pre><h5 id="httpstatusseeother">http.StatusSeeOther</h5>
-<pre><code>func redirectGitHubLoginAction(c *gin.Context) {
+<pre tabindex="0"><code>func redirectGitHubLoginAction(c *gin.Context) {
 	// ...
 	c.Redirect(http.StatusSeeOther, path)
 }
 </code></pre><h5 id="httpstatustemporaryredirect">http.StatusTemporaryRedirect</h5>
-<pre><code>func redirectGitHubLoginAction(c *gin.Context) {
+<pre tabindex="0"><code>func redirectGitHubLoginAction(c *gin.Context) {
 	// ...
 	c.Redirect(http.StatusTemporaryRedirect, model.Conf.Server)
 }
 </code></pre><h3 id="nethttphttputil">net/http/httputil</h3>
 <h5 id="httputilnewsinglehostreverseproxy">httputil.NewSingleHostReverseProxy</h5>
-<pre><code>proxy := httputil.NewSingleHostReverseProxy(&amp;url.URL{
-    Scheme: &quot;https&quot;,
-    Host:   &quot;hacpai.com&quot;,
+<pre tabindex="0"><code>proxy := httputil.NewSingleHostReverseProxy(&amp;url.URL{
+    Scheme: &#34;https&#34;,
+    Host:   &#34;hacpai.com&#34;,
 })
 </code></pre><h3 id="neturl">net/url</h3>
 <h5 id="urlurl">url.URL</h5>
-<pre><code>proxy := httputil.NewSingleHostReverseProxy(&amp;url.URL{
-    Scheme: &quot;https&quot;,
-    Host:   &quot;example.com&quot;,
+<pre tabindex="0"><code>proxy := httputil.NewSingleHostReverseProxy(&amp;url.URL{
+    Scheme: &#34;https&#34;,
+    Host:   &#34;example.com&#34;,
 })
 </code></pre><h5 id="urlparse">url.Parse</h5>
-<pre><code>server, _ := url.Parse(model.Conf.Server)
+<pre tabindex="0"><code>server, _ := url.Parse(model.Conf.Server)
 if !util.IsDomain(server.Hostname()) {
 	return
 }
 </code></pre><h5 id="urlpathunescape">url.PathUnescape</h5>
-<pre><code>path, _ = url.PathUnescape(path)
+<pre tabindex="0"><code>path, _ = url.PathUnescape(path)
 </code></pre><h5 id="urlscheme">url.Scheme</h5>
 <h5 id="urlhost">url.Host</h5>
 <h5 id="urlpath">url.Path</h5>
-<pre><code>blogURL = url.Scheme + &quot;://&quot; + url.Host
-if &quot;&quot; != url.Path {
+<pre tabindex="0"><code>blogURL = url.Scheme + &#34;://&#34; + url.Host
+if &#34;&#34; != url.Path {
 	blogURL += path.Clean(url.Path)
 }
 value = blogURL
 </code></pre><h3 id="errors">errors</h3>
 <h5 id="errorsnew">errors.New</h5>
-<pre><code>return value, errors.New(&quot;what happend&quot;)
+<pre tabindex="0"><code>return value, errors.New(&#34;what happend&#34;)
 </code></pre><h3 id="sync">sync</h3>
 <h5 id="syncmutex">sync.Mutex</h5>
-<pre><code>// Init service.
+<pre tabindex="0"><code>// Init service.
 var Init = &amp;initService{
 	mutex: &amp;sync.Mutex{},
 }
@@ -979,7 +976,7 @@ var Setting = &amp;settingService{
 type settingService struct {
 	mutex *sync.Mutex
 }
-</code></pre><pre><code>func (srv *initService) InitBlog(blogAdmin *model.User) error {
+</code></pre><pre tabindex="0"><code>func (srv *initService) InitBlog(blogAdmin *model.User) error {
 	srv.mutex.Lock()
 	defer srv.mutex.Unlock()
 
@@ -1001,22 +998,22 @@ type settingService struct {
 }
 </code></pre><h3 id="runtime">runtime</h3>
 <h5 id="runtimegoos">runtime.GOOS</h5>
-<pre><code>func IsWindows() bool {
-	return &quot;windows&quot; == runtime.GOOS
+<pre tabindex="0"><code>func IsWindows() bool {
+	return &#34;windows&#34; == runtime.GOOS
 }
 </code></pre><h5 id="runtimecaller">runtime.Caller</h5>
-<pre><code>pc, file, line, ok := runtime.Caller(i)
+<pre tabindex="0"><code>pc, file, line, ok := runtime.Caller(i)
 </code></pre><h5 id="runtimefuncforpc">runtime.FuncForPC</h5>
-<pre><code>fn := runtime.FuncForPC(pc)
+<pre tabindex="0"><code>fn := runtime.FuncForPC(pc)
 </code></pre><h3 id="archivezip">archive/zip</h3>
 <h5 id="zipwriter">zip.Writer</h5>
-<pre><code>// ZipFile represents a zip file.
+<pre tabindex="0"><code>// ZipFile represents a zip file.
 type ZipFile struct {
 	zipFile *os.File
 	writer  *zip.Writer
 }
 </code></pre><h5 id="zipnewwriter">zip.NewWriter</h5>
-<pre><code>// Create a zip file with the specified filename.
+<pre tabindex="0"><code>// Create a zip file with the specified filename.
 func (*myzip) Create(filename string) (*ZipFile, error) {
 	file, err := os.Create(filename)
 	if nil != err {
@@ -1026,14 +1023,14 @@ func (*myzip) Create(filename string) (*ZipFile, error) {
 }
 </code></pre><h5 id="zipfileinfoheader">zip.FileInfoHeader</h5>
 <h5 id="zipdeflate">zip.Deflate</h5>
-<pre><code>fh, err := zip.FileInfoHeader(fi)
+<pre tabindex="0"><code>fh, err := zip.FileInfoHeader(fi)
 if nil != err {
     return err
 }
 fh.Name = filepath.ToSlash(filepath.Clean(path))
 fh.Method = zip.Deflate // data compression algorithm
 </code></pre><h5 id="zipfile">zip.File</h5>
-<pre><code>func cloneZipItem(f *zip.File, dest string) error {
+<pre tabindex="0"><code>func cloneZipItem(f *zip.File, dest string) error {
     fileName := f.Name
     if f.FileInfo().IsDir() {}
     fd, err := f.Open()
@@ -1043,7 +1040,7 @@ fh.Method = zip.Deflate // data compression algorithm
 	defer fd.Close()
 }
 </code></pre><h5 id="zipopenreader">zip.OpenReader</h5>
-<pre><code>// Unzip extracts a zip file specified by the zipFilePath to the destination.
+<pre tabindex="0"><code>// Unzip extracts a zip file specified by the zipFilePath to the destination.
 func (*myzip) Unzip(zipFilePath, destination string) error {
 	r, err := zip.OpenReader(zipFilePath)
 	if nil != err {
@@ -1059,27 +1056,27 @@ func (*myzip) Unzip(zipFilePath, destination string) error {
 	return nil
 }
 </code></pre><h3 id="flag">flag</h3>
-<pre><code>version := flag.Bool(&quot;version&quot;, false, &quot;prints current pipe version&quot;)
-confShowSQL := flag.Bool(&quot;show_sql&quot;, false, &quot;this will override Conf.ShowSQL if specified&quot;)
+<pre tabindex="0"><code>version := flag.Bool(&#34;version&#34;, false, &#34;prints current pipe version&#34;)
+confShowSQL := flag.Bool(&#34;show_sql&#34;, false, &#34;this will override Conf.ShowSQL if specified&#34;)
 flag.Parse()
 </code></pre><h3 id="htmltemplate">html/template</h3>
 <h5 id="templatehtml">template.HTML</h5>
-<pre><code>type ThemeArticle struct {
+<pre tabindex="0"><code>type ThemeArticle struct {
 	// ...
-	Abstract       template.HTML `json:&quot;abstract&quot;`
+	Abstract       template.HTML `json:&#34;abstract&#34;`
 	// ...
 }
-</code></pre><pre><code>Content :=   template.HTML(mdResult.ContentHTML)
+</code></pre><pre tabindex="0"><code>Content :=   template.HTML(mdResult.ContentHTML)
 </code></pre><h5 id="templatemust">template.Must</h5>
 <h5 id="templatenew">template.New</h5>
-<pre><code>t := template.Must(template.New(&quot;&quot;).ParseFiles(filepath.ToSlash(filepath.Join(model.Conf.StaticRoot, &quot;theme/comment/comment.html&quot;))))
+<pre tabindex="0"><code>t := template.Must(template.New(&#34;&#34;).ParseFiles(filepath.ToSlash(filepath.Join(model.Conf.StaticRoot, &#34;theme/comment/comment.html&#34;))))
 </code></pre><h3 id="texttemplate">text/template</h3>
 <h5 id="templateparsefiles">template.ParseFiles</h5>
-<pre><code>func showIndexAction(c *gin.Context) {
-	t, err := template.ParseFiles(filepath.ToSlash(filepath.Join(model.Conf.StaticRoot, &quot;console/dist/index.html&quot;)))
+<pre tabindex="0"><code>func showIndexAction(c *gin.Context) {
+	t, err := template.ParseFiles(filepath.ToSlash(filepath.Join(model.Conf.StaticRoot, &#34;console/dist/index.html&#34;)))
 	if nil != err {
-		logger.Errorf(&quot;load index page failed: &quot; + err.Error())
-		c.String(http.StatusNotFound, &quot;load index page failed&quot;)
+		logger.Errorf(&#34;load index page failed: &#34; + err.Error())
+		c.String(http.StatusNotFound, &#34;load index page failed&#34;)
 
 		return
 	}
@@ -1252,7 +1249,7 @@ flag.Parse()
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

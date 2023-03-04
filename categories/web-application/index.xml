@@ -22,7 +22,7 @@
       <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/readme/</guid>
-      <description> https://zhuanlan.zhihu.com/p/32459776 https://www.zhihu.com/question/25089273/answer/233316164 https://zhuanlan.zhihu.com/p/343388831 https://zhuanlan.zhihu.com/p/75931257 https://zhuanlan.zhihu.com/p/348706530 https://zhuanlan.zhihu.com/p/334999899 https://www.zhihu.com/question/31687912/answer/95842364 https://github.com/VaughnVernon/IDDD_Samples  </description>
+      <description> https://zhuanlan.zhihu.com/p/32459776 https://www.zhihu.com/question/25089273/answer/233316164 https://zhuanlan.zhihu.com/p/343388831 https://zhuanlan.zhihu.com/p/75931257 https://zhuanlan.zhihu.com/p/348706530 https://zhuanlan.zhihu.com/p/334999899 https://www.zhihu.com/question/31687912/answer/95842364 https://github.com/VaughnVernon/IDDD_Samples </description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/domain-driven-design/python/</guid>
-      <description> https://github.com/cosmicpython/code/branches/all Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices  </description>
+      <description> https://github.com/cosmicpython/code/branches/all Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices </description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Sun, 20 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/microservices/python/</guid>
-      <description>Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices Hands-On Microservices with Spring Boot and Spring Cloud: Build and deploy Java microservices using Spring Cloud, Istio, and Kubernetes  Hands-On Docker for Microservices with Python: Design, deploy, and operate a complex system with multiple microservices using Docker and Kubernetes</description>
+      <description>Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices Hands-On Microservices with Spring Boot and Spring Cloud: Build and deploy Java microservices using Spring Cloud, Istio, and Kubernetes Hands-On Docker for Microservices with Python: Design, deploy, and operate a complex system with multiple microservices using Docker and Kubernetes</description>
     </item>
     
     <item>
@@ -67,7 +67,7 @@
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/spring/microservice-with-spring-cloud/</guid>
-      <description>Introduction to Spring Cloud    Design pattern Current component Replaced by Software component     Service discovery Netflix Eureka &amp;amp; Netflix Ribbon Netflix Eureka and Spring Cloud load balancer   Edge server Netflix Zuul Spring Cloud Gateway and Spring Security OAuth   Centralized configuration  Spring Cloud Configuration Server   Circuit breaker Netflix Hystrix Resilience4j   Distributed tracing  Spring Cloud Sleuth and Zipkin    Adding Service Discovery Using Netflix Eureka and Ribbon Using Spring Cloud Gateway to Hide Microservices Behind an Edge Server Securing Access to APIs Centralized Configuration Improving Resilience Using Resilience4j Understanding Distributed Tracing </description>
+      <description>Introduction to Spring Cloud Design pattern Current component Replaced by Software component Service discovery Netflix Eureka &amp;amp; Netflix Ribbon Netflix Eureka and Spring Cloud load balancer Edge server Netflix Zuul Spring Cloud Gateway and Spring Security OAuth Centralized configuration Spring Cloud Configuration Server Circuit breaker Netflix Hystrix Resilience4j Distributed tracing Spring Cloud Sleuth and Zipkin Adding Service Discovery Using Netflix Eureka and Ribbon Using Spring Cloud Gateway to Hide Microservices Behind an Edge Server Securing Access to APIs Centralized Configuration Improving Resilience Using Resilience4j Understanding Distributed Tracing </description>
     </item>
     
     <item>
@@ -76,7 +76,7 @@
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/saas/saas/</guid>
-      <description> https://blog.sentry.io/2018/11/14/how-to-build-saas-application/ https://youtu.be/W1fkGyIcePA  </description>
+      <description> https://blog.sentry.io/2018/11/14/how-to-build-saas-application/ https://youtu.be/W1fkGyIcePA </description>
     </item>
     
     <item>
@@ -85,7 +85,7 @@
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/saas/flask/</guid>
-      <description> https://github.com/nickjj/build-a-saas-app-with-flask  </description>
+      <description> https://github.com/nickjj/build-a-saas-app-with-flask </description>
     </item>
     
     <item>
@@ -94,7 +94,7 @@
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/spring/config/</guid>
-      <description>application.properties import org.springframework.beans.factory.annotation.Value; import com.alibaba.fastjson.JSONObject; import org.apache.http.entity.ContentType; class MessageRestController { @Value(&amp;quot;${restService_url: default_url}&amp;quot;) private String url; @RequestMapping(&amp;quot;/message&amp;quot;) String getMessage() { CloseableHttpClient httpClient = HttpClients.createDefault(); String body; if (param instanceof String) { body = (String) param; } else { body = JSONObject.toJSONString(param); } try { // 创建Http Post请求 HttpPost httpPost = new HttpPost(url); // 添加http headers if</description>
+      <description>application.properties import org.springframework.beans.factory.annotation.Value; import com.alibaba.fastjson.JSONObject; import org.apache.http.entity.ContentType; class MessageRestController { @Value(&amp;#34;${restService_url: default_url}&amp;#34;) private String url; @RequestMapping(&amp;#34;/message&amp;#34;) String getMessage() { CloseableHttpClient httpClient = HttpClients.createDefault(); String body; if (param instanceof String) { body = (String) param; } else { body = JSONObject.toJSONString(param); } try { // 创建Http Post请求 HttpPost httpPost = new HttpPost(url); // 添加http headers if</description>
     </item>
     
     <item>
@@ -103,9 +103,9 @@
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/spring/mybatis/</guid>
-      <description>applicationContext.xml &amp;lt;context:component-scan base-package=&amp;quot;org.example&amp;quot;/&amp;gt; Classpath scanning and managed components
-&amp;lt;bean id=&amp;quot;txManager&amp;quot; class=&amp;quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&amp;quot;&amp;gt; &amp;lt;property name=&amp;quot;dataSource&amp;quot; ref=&amp;quot;dataSource&amp;quot;/&amp;gt; &amp;lt;/bean&amp;gt; &amp;lt;tx:annotation-driven transaction-manager=&amp;quot;txManager&amp;quot;/&amp;gt; &amp;lt;tx:advice id=&amp;quot;txAdvice&amp;quot; transaction-manager=&amp;quot;txManager&amp;quot;&amp;gt; &amp;lt;tx:attributes&amp;gt; &amp;lt;tx:method name=&amp;quot;create*&amp;quot; propagation=&amp;quot;REQUIRED&amp;quot; timeout=&amp;quot;300&amp;quot; rollback-for=&amp;quot;java.lang.Exception&amp;quot; /&amp;gt; &amp;lt;tx:method name=&amp;quot;delete*&amp;quot; propagation=&amp;quot;REQUIRED&amp;quot; timeout=&amp;quot;300&amp;quot; rollback-for=&amp;quot;java.lang.Exception&amp;quot; /&amp;gt; &amp;lt;tx:method name=&amp;quot;update*&amp;quot; propagation=&amp;quot;REQUIRED&amp;quot; timeout=&amp;quot;300&amp;quot; rollback-for=&amp;quot;java.lang.Exception&amp;quot; /&amp;gt; &amp;lt;tx:method name=&amp;quot;get*&amp;quot; propagation=&amp;quot;REQUIRED&amp;quot; read-only=&amp;quot;true&amp;quot; timeout=&amp;quot;300&amp;quot; /&amp;gt; &amp;lt;tx:method name=&amp;quot;*&amp;quot; propagation=&amp;quot;REQUIRED&amp;quot; read-only=&amp;quot;true&amp;quot; timeout=&amp;quot;300&amp;quot; rollback-for=&amp;quot;java.lang.Exception&amp;quot;/&amp;gt; &amp;lt;/tx:attributes&amp;gt; &amp;lt;/tx:advice&amp;gt; &amp;lt;aop:config&amp;gt; &amp;lt;aop:pointcut id=&amp;quot;txPointcut&amp;quot; expression=&amp;quot;execution(* com.mico.emptyspring.service.*ServiceA.*(..))&amp;quot; /&amp;gt; &amp;lt;aop:advisor pointcut-ref=&amp;quot;txPointcut&amp;quot; advice-ref=&amp;quot;txAdvice&amp;quot; /&amp;gt; &amp;lt;/aop:config&amp;gt; Transaction Management
-&amp;lt;bean id=&amp;quot;sqlSessionFactory&amp;quot; class=&amp;quot;org.mybatis.spring.SqlSessionFactoryBean&amp;quot;&amp;gt; &amp;lt;property name=&amp;quot;dataSource&amp;quot; ref=&amp;quot;dataSource&amp;quot; /&amp;gt; &amp;lt;property name=&amp;quot;configuration&amp;quot;&amp;gt; &amp;lt;bean class=&amp;quot;org.</description>
+      <description>applicationContext.xml &amp;lt;context:component-scan base-package=&amp;#34;org.example&amp;#34;/&amp;gt; Classpath scanning and managed components
+&amp;lt;bean id=&amp;#34;txManager&amp;#34; class=&amp;#34;org.springframework.jdbc.datasource.DataSourceTransactionManager&amp;#34;&amp;gt; &amp;lt;property name=&amp;#34;dataSource&amp;#34; ref=&amp;#34;dataSource&amp;#34;/&amp;gt; &amp;lt;/bean&amp;gt; &amp;lt;tx:annotation-driven transaction-manager=&amp;#34;txManager&amp;#34;/&amp;gt; &amp;lt;tx:advice id=&amp;#34;txAdvice&amp;#34; transaction-manager=&amp;#34;txManager&amp;#34;&amp;gt; &amp;lt;tx:attributes&amp;gt; &amp;lt;tx:method name=&amp;#34;create*&amp;#34; propagation=&amp;#34;REQUIRED&amp;#34; timeout=&amp;#34;300&amp;#34; rollback-for=&amp;#34;java.lang.Exception&amp;#34; /&amp;gt; &amp;lt;tx:method name=&amp;#34;delete*&amp;#34; propagation=&amp;#34;REQUIRED&amp;#34; timeout=&amp;#34;300&amp;#34; rollback-for=&amp;#34;java.lang.Exception&amp;#34; /&amp;gt; &amp;lt;tx:method name=&amp;#34;update*&amp;#34; propagation=&amp;#34;REQUIRED&amp;#34; timeout=&amp;#34;300&amp;#34; rollback-for=&amp;#34;java.lang.Exception&amp;#34; /&amp;gt; &amp;lt;tx:method name=&amp;#34;get*&amp;#34; propagation=&amp;#34;REQUIRED&amp;#34; read-only=&amp;#34;true&amp;#34; timeout=&amp;#34;300&amp;#34; /&amp;gt; &amp;lt;tx:method name=&amp;#34;*&amp;#34; propagation=&amp;#34;REQUIRED&amp;#34; read-only=&amp;#34;true&amp;#34; timeout=&amp;#34;300&amp;#34; rollback-for=&amp;#34;java.lang.Exception&amp;#34;/&amp;gt; &amp;lt;/tx:attributes&amp;gt; &amp;lt;/tx:advice&amp;gt; &amp;lt;aop:config&amp;gt; &amp;lt;aop:pointcut id=&amp;#34;txPointcut&amp;#34; expression=&amp;#34;execution(* com.mico.emptyspring.service.*ServiceA.*(..))&amp;#34; /&amp;gt; &amp;lt;aop:advisor pointcut-ref=&amp;#34;txPointcut&amp;#34; advice-ref=&amp;#34;txAdvice&amp;#34; /&amp;gt; &amp;lt;/aop:config&amp;gt; Transaction Management
+&amp;lt;bean id=&amp;#34;sqlSessionFactory&amp;#34; class=&amp;#34;org.mybatis.spring.SqlSessionFactoryBean&amp;#34;&amp;gt; &amp;lt;property name=&amp;#34;dataSource&amp;#34; ref=&amp;#34;dataSource&amp;#34; /&amp;gt; &amp;lt;property name=&amp;#34;configuration&amp;#34;&amp;gt; &amp;lt;bean class=&amp;#34;org.</description>
     </item>
     
     <item>
@@ -114,7 +114,7 @@
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/spring/practice/</guid>
-      <description>vo  package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } }  dao  import org.</description>
+      <description>vo package com.someapp.vo; public class UserVO { private int id; private String username; private String hashedPassword; public int getId() { return id; } public void setId(int id) { this.id = id; } public String getUsername() { return username; } public void setUsername(String username) { this.username = username; } public String getHashedPassword() { return hashedPassword; } public void setHashedPassword(String hashedPassword) { this.hashedPassword = hashedPassword; } } dao import org.apache.ibatis.annotations.Param; public interface IUserDAO { List&amp;lt;UserVO&amp;gt; selectUsers(@Param(“paramVO”) UserVO paramVO); } xml &amp;lt;resultMap id=&amp;#34;userResultMap&amp;#34; type=&amp;#34;User&amp;#34;&amp;gt; &amp;lt;id property=&amp;#34;id&amp;#34; column=&amp;#34;user_id&amp;#34; /&amp;gt; &amp;lt;result property=&amp;#34;username&amp;#34; column=&amp;#34;user_name&amp;#34;/&amp;gt; &amp;lt;result property=&amp;#34;password&amp;#34; column=&amp;#34;hashed_password&amp;#34;/&amp;gt; &amp;lt;/resultMap&amp;gt; &amp;lt;select id=&amp;#34;selectUsers&amp;#34; parameterType=&amp;#34;com.</description>
     </item>
     
     <item>
@@ -148,7 +148,7 @@ export PATH=/opt/spring-2.</description>
       <description>Features Registers CXF Servlet with a &amp;ldquo;/services/*&amp;rdquo; URL pattern for serving CXF JAX-RS endpoints.
 Optionally auto-discovers JAX-RS root resources and providers and creates a JAX-RS endpoint.
 Note the use of CXF JAX-RS Clients in SpringBoot Application is covered in this section.
-Databases sudo docker container start mysql-container-id sudo docker exec -it mysql-container-name mysql -u root -p mysql&amp;gt; create database demo; mysql&amp;gt; USE demo; mysql&amp;gt; SET FOREIGN_KEY_CHECKS=0; mysql&amp;gt; DROP TABLE IF EXISTS `student`; mysql&amp;gt; CREATE TABLE `student` ( -&amp;gt; `id` int(10) NOT NULL, -&amp;gt; `name` varchar(100) DEFAULT NULL, -&amp;gt; `sex` char(6) DEFAULT NULL, -&amp;gt; `address` varchar(255) DEFAULT NULL, -&amp;gt; `age` int(10) DEFAULT NULL, -&amp;gt; PRIMARY KEY (`id`) -&amp;gt; ) ENGINE=InnoDB DEFAULT CHARSET=utf8; mysql&amp;gt; INSERT INTO `student` VALUES (&#39;1&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;22&#39;); Creating a project spring init -d=web,mybatis,mysql --build=maven mysite dependency  &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
+Databases sudo docker container start mysql-container-id sudo docker exec -it mysql-container-name mysql -u root -p mysql&amp;gt; create database demo; mysql&amp;gt; USE demo; mysql&amp;gt; SET FOREIGN_KEY_CHECKS=0; mysql&amp;gt; DROP TABLE IF EXISTS `student`; mysql&amp;gt; CREATE TABLE `student` ( -&amp;gt; `id` int(10) NOT NULL, -&amp;gt; `name` varchar(100) DEFAULT NULL, -&amp;gt; `sex` char(6) DEFAULT NULL, -&amp;gt; `address` varchar(255) DEFAULT NULL, -&amp;gt; `age` int(10) DEFAULT NULL, -&amp;gt; PRIMARY KEY (`id`) -&amp;gt; ) ENGINE=InnoDB DEFAULT CHARSET=utf8; mysql&amp;gt; INSERT INTO `student` VALUES (&amp;#39;1&amp;#39;, &amp;#39;&amp;#39;, &amp;#39;&amp;#39;, &amp;#39;&amp;#39;, &amp;#39;22&amp;#39;); Creating a project spring init -d=web,mybatis,mysql --build=maven mysite dependency &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
     </item>
     
     <item>
@@ -157,7 +157,7 @@ Databases sudo docker container start mysql-container-id sudo docker exec -it my
       <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/search-architecture/</guid>
-      <description>搜索服务使用说明 &#34;\nst=\u003estart: 开始\ne=\u003eend: 结束\n\nop1=\u003eoperation: 服务订阅\ncond1=\u003ec</description>
+      <description>搜索服务使用说明 搜索运营 运营分析 Dashboard TopN dashboard badcase 热搜词统计 用户行为明细 词库管理 同义词 手动新增 自动挖掘 专有名词 听用词 核心词 业务管理 直通车 黑名单 提示次 敏</description>
     </item>
     
     <item>
@@ -184,7 +184,7 @@ Databases sudo docker container start mysql-container-id sudo docker exec -it my
       <pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/oauth2/</guid>
-      <description>Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... &#39;provider&#39;, &#39;provider.oauth2&#39;, ) # urls.py url(r&#39;^oauth2/&#39;, include(&#39;provider.oauth2.urls&#39;, namespace = &#39;oauth2&#39;)), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ?   Create a client entry in your database
+      <description>Django oauth2 provider $ pip install django-oauth2-provider # settings.py INSTALLED_APPS = ( # ... &amp;#39;provider&amp;#39;, &amp;#39;provider.oauth2&amp;#39;, ) # urls.py url(r&amp;#39;^oauth2/&amp;#39;, include(&amp;#39;provider.oauth2.urls&amp;#39;, namespace = &amp;#39;oauth2&amp;#39;)), $ python manage.py syncdb $ python manage.py migrate How to request an access token for the first time ? Create a client entry in your database
 To find out which type of client you need to create, read Section 2.1.
 To create a new entry simply use the Django admin panel.</description>
     </item>
@@ -195,7 +195,7 @@ To create a new entry simply use the Django admin panel.</description>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/web-application/back-end/elasticsearch/</guid>
-      <description>Getting Started Installing and Running Elasticsearch Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &amp;quot;localhost&amp;quot; elasticsearch.hosts: [&amp;quot;http://localhost:9200&amp;quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
+      <description>Getting Started Installing and Running Elasticsearch Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &amp;#34;localhost&amp;#34; elasticsearch.hosts: [&amp;#34;http://localhost:9200&amp;#34;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
 Installing Sense Sense is a Kibana app that provides an interactive console for submitting requests to Elasticsearch directly from your browser.</description>
     </item>
     

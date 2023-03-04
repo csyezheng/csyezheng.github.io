@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,6 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -214,7 +213,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -295,6 +294,40 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/">Few shot learning</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-04-27" class="post-time">
+        2020-04-27
+      </time>
+      <div class="post-category">
+          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Reference https://github.com/AnthonyMRios/multi-label-zero-shot Few-Shot and Zero-Shot Multi-Label Learning for Structured Label Spaces Deep Neural Networks for Multi-Label Text Classification https://github.com/YujiaBao/Distributional-Signatures Induction Networks for Few-Shot Text Classification https://github.com/laohur/LearnToCompareText 
+    </div>
+    <div class="read-more">
+      <a href="/post/specialization/artificial-intelligence/machine-learning/few-shot-learning/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/specialization/artificial-intelligence/machine-learning/learn-ml/">Learning Path for Machine Learning</a>
     </h1>
     
@@ -332,15 +365,15 @@ Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which 
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/any-path/wireshark/">Wireshark</a>
+      <a class="post-link" href="/post/courses/cs103/">CS103: Mathematical Foundations of Computing</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-03-07" class="post-time">
-        2020-03-07
+      <time datetime="2020-04-23" class="post-time">
+        2020-04-23
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/any-path/"> any-path </a>
+          <a href="http://www.yezheng.pro/categories/course/"> course </a>
           
         </div>
       
@@ -352,44 +385,10 @@ Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which 
   <div class="post-content">
     
     <div class="post-summary">
-      $ tshark -r all.pcapng.gz -i http==1 -O http -T fields -e http.request.method -e http.request.uri -e http.request.line -e http.response.line &gt; dump.txt 
+      Description 计算机科学所需的数学基础。主题包括证明技术和逻辑；感应; 集合，功能和关系；正式语言简介；DFA，NFA和正则表达式；上下文无关文法，图灵机
     </div>
     <div class="read-more">
-      <a href="/post/any-path/wireshark/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/specialization/web-application/back-end/scrapy-with-django/">Scraping with Scrapy and Django Integration</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-02-12" class="post-time">
-        2020-02-12
-      </time>
-      <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Installing Dependencies (Optional) $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple $ python -m pip install --user virtualenv $ python -m pip install --user virtualenvwrapper $ vim ~/.bashrc export WORKON_HOME=$HOME/.virtualenvs export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv source $HOME/.local/bin/virtualenvwrapper.sh $ source ~/.bashrc $ mkvirtualenv stock-screener pip install django djangorestframework markdown django-filter Scrapy scrapyd python-scrapyd-api scrapy-djangoitem proxybroker celery redis django-celery-results django-celery-beat Creating a Django Project $ django-admin startproject stock_screener $ cd stock_screener $ mkdir stock_screener/apps/basic_info $ django-admin startapp basic_info stock_screener/apps/basic_info $ mkdir stock_screener/apps/northbound $ django-admin startapp northbound stock_screener/apps/northbound $ mkdir stock_screener/apps/financial_metrics $ django-admin startapp financial_metrics stock_screener/apps/financial_metrics $ mkdir stock_screener/apps/quotes $ django-admin startapp quotes stock_screener/apps/quotes $ mkdir stock_screener/apps/jobs $ django-admin startapp jobs stock_screener/apps/jobs Cannot add backslash suffix when run startapp command.
-    </div>
-    <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/scrapy-with-django/" class="read-more-link">Read more</a>
+      <a href="/post/courses/cs103/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2324,6 +2323,90 @@ Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which 
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/48/">»</a></li>
@@ -2331,7 +2414,7 @@ Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which 
 
       
       
-      <li><a href="/page/85/">»»</a></li>
+      <li><a href="/page/89/">»»</a></li>
       
 
       </ul>
@@ -2419,7 +2502,7 @@ Step 2: Beyond the basics Take the TensorFlow in Practice Specialization, which 
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

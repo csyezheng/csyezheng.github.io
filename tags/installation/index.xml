@@ -13,12 +13,13 @@
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/any-path/setup-a-archlinux-windows10-dual-booting-system/</guid>
-      <description>Before   Check the hardware, three disks on my Lenovo ThinkPad P50
-  Samsung SSD 970 EVO Plus 250GB for installing windows
-  Samsung SSD 960 EVO 250GB for installling archlinux
-  WDC WD5000LPLX-0 HHD 500GB for data storage
-    Disable Windows Fast Startup if start from windows
-  Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)</description>
+      <description>Before Check the hardware, three disks on my Lenovo ThinkPad P50
+Samsung SSD 970 EVO Plus 250GB for installing windows
+Samsung SSD 960 EVO 250GB for installling archlinux
+WDC WD5000LPLX-0 HHD 500GB for data storage
+Disable Windows Fast Startup if start from windows
+Disable UEFI Secure Boot. (Arch Linux install media does not support Secure Boot.)
+Windows UEFI vs BIOS limitations. (In case where Windows and Linux dual boot from the same disk, it is advisable to follow the method used by Windows, ie.</description>
     </item>
     
   </channel>

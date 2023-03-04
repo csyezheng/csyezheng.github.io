@@ -33,7 +33,7 @@ insertion sort has an average and worst-case running time of $$\theta{(n^2)}$$ (
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/computer-science-core/algorithms/algorithms-divide-conquer-sorting-searching-randomized/" />
@@ -54,7 +54,7 @@ insertion sort has an average and worst-case running time of $$\theta{(n^2)}$$ (
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -65,13 +65,12 @@ insertion sort has an average and worst-case running time of $$\theta{(n^2)}$$ (
 insertion sort has an average and worst-case running time of $$\theta{(n^2)}$$ (pronounced “theta of n-squared”)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/computer-science-core/algorithms/algorithms-divide-conquer-sorting-searching-randomized/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2016-03-21T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2016-03-21T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2016-03-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-03-21T00:00:00+00:00" />
 <meta itemprop="name" content="Divide and Conquer, Sorting and Searching, and Randomized Algorithms">
 <meta itemprop="description" content="Insertion Sort Insertion Sort: Pseudocode INSERTION-SORT(A) for j = 2 to A.length key = A[j] // Insert A[j] into the sorted sequence A[1..j-1]. i = j - 1 while i &gt; 0 and A[j] &gt; key A[i&#43;1] = A[i] i = i - 1 A[i &#43; 1] = key Insertion Sort: Complexity analysis insertion sort has a best-case running time of $$\theta{(n)}$$ (pronounced “theta of n”).
-insertion sort has an average and worst-case running time of $$\theta{(n^2)}$$ (pronounced “theta of n-squared”)."><meta itemprop="datePublished" content="2016-03-21T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2016-03-21T00:00:00&#43;00:00" />
+insertion sort has an average and worst-case running time of $$\theta{(n^2)}$$ (pronounced “theta of n-squared”)."><meta itemprop="datePublished" content="2016-03-21T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2016-03-21T00:00:00+00:00" />
 <meta itemprop="wordCount" content="1107">
 <meta itemprop="keywords" content="algorithms,Leetcode," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Divide and Conquer, Sorting and Searching, and Randomized Algorithms"/>
@@ -346,7 +345,7 @@ insertion sort has an average and worst-case running time of $$\theta{(n^2)}$$ (
       <h3 id="insertion-sort">Insertion Sort</h3>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif" alt="https://en.wikipedia.org/wiki/Insertion_sort"></p>
 <h4 id="insertion-sort-pseudocode">Insertion Sort: Pseudocode</h4>
-<pre><code>INSERTION-SORT(A)
+<pre tabindex="0"><code>INSERTION-SORT(A)
 
 for j = 2 to A.length
 	key = A[j]
@@ -366,7 +365,7 @@ for j = 2 to A.length
 <h3 id="merge-sort">Merge Sort</h3>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif" alt="https://en.wikipedia.org/wiki/Merge_sort"></p>
 <h4 id="merge-sort-pseudocode">Merge Sort: Pseudocode</h4>
-<pre><code>MERGE(A; p, q, r)
+<pre tabindex="0"><code>MERGE(A; p, q, r)
 
 n1 = q - p + 1
 n2 = r - q
@@ -386,7 +385,7 @@ for k = p to r
 	else
 		A[k] = R[j]
 		j = j + 1
-</code></pre><pre><code>MERGE-SORT(A, p, r)
+</code></pre><pre tabindex="0"><code>MERGE-SORT(A, p, r)
 
 if p &lt; r
 	q = (p +r) / 2
@@ -403,7 +402,7 @@ if p &lt; r
 <h3 id="bubble-sort">Bubble Sort</h3>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" alt="https://en.wikipedia.org/wiki/Bubble_sort"></p>
 <h4 id="bubble-sort-pseudocode">Bubble Sort: Pseudocode</h4>
-<pre><code>BUBBLESORT(A)
+<pre tabindex="0"><code>BUBBLESORT(A)
 for i = 1 to A.length - 1
 	for j D A:length downto i C 1
 		if A[j]  &lt; A[j - 1]
@@ -412,12 +411,12 @@ for i = 1 to A.length - 1
 <p>Bubble sort has a worst-case and average complexity of $O(n^2)$</p>
 <h3 id="quicksort">Quicksort</h3>
 <h4 id="quicksort-pseudocode">Quicksort: Pseudocode</h4>
-<pre><code>QUICKSORT(A, p, r)
+<pre tabindex="0"><code>QUICKSORT(A, p, r)
 if p &lt; r
 	q = PARTITION(A, p, r)
 	QUICKSORT(A, p, q - 1)
 	QUICKSORT(A, q + 1, r)
-</code></pre><pre><code>PARTITION(A, p, r)
+</code></pre><pre tabindex="0"><code>PARTITION(A, p, r)
 x = A[r]
 i = p - 1
 for j = p to r - 1
@@ -439,11 +438,11 @@ expected running time is $\theta(n \lg n)$.</p>
 <p>Moreover, the $\theta(n^2)$ running time occurs when the input array is already completely sorted—a common situation in which insertion sort runs in $O(n)$ time.</p>
 <h3 id="a-randomized-version-of-quicksort">A randomized version of quicksort</h3>
 <h4 id="randomized-quicksort-pseudocode">Randomized quicksort: Pseudocode</h4>
-<pre><code>RANDOMIZED-PARTITION(A, p, r)
+<pre tabindex="0"><code>RANDOMIZED-PARTITION(A, p, r)
 i = RANDOM(p, r)
 exchange A[r] with A[i]
 return PARTITION(A, p, r)
-</code></pre><pre><code>RANDOMIZED-QUICKSORT(A, p, r)
+</code></pre><pre tabindex="0"><code>RANDOMIZED-QUICKSORT(A, p, r)
 if p &lt; r
 	q = RANDOMIZED-PARTITION(A, p, r)
 	RANDOMIZED-QUICKSORT(A, p, q - 1)
@@ -454,7 +453,7 @@ if p &lt; r
 <h3 id="counting-sort">Counting Sort</h3>
 <p><img src="https://d18l82el6cdm1i.cloudfront.net/uploads/hrUDdYC7OH-countingsort.gif" alt="https://brilliant.org/wiki/counting-sort/"></p>
 <h4 id="counting-sort-pseudocode">Counting Sort: Pseudocode</h4>
-<pre><code>COUNTING-SORT(A, B, k)
+<pre tabindex="0"><code>COUNTING-SORT(A, B, k)
 
 let C[0 ... k] be a new array
 for i = 0 to k
@@ -476,7 +475,7 @@ for j = A.length downto 1
 <p>it is a stable sort.</p>
 <h3 id="radix-sort">Radix Sort</h3>
 <h4 id="radix-sort-pseudocode">Radix Sort: Pseudocode</h4>
-<pre><code>RADIX-SORT(A, d)
+<pre tabindex="0"><code>RADIX-SORT(A, d)
 
 for i = 1 to d
 	use a stable sort to sort array A on digit i
@@ -489,7 +488,7 @@ comparison sorts do. Thus, when primary memory storage is at a premium, we
 might prefer an <strong>in-place</strong> algorithm such as quicksort.</p>
 <h3 id="bucket-sort">Bucket Sort</h3>
 <h4 id="bucket-sort-pseudocode">Bucket Sort: Pseudocode</h4>
-<pre><code>BUCKET-SORT(A)
+<pre tabindex="0"><code>BUCKET-SORT(A)
 
 let B[0 ... n - 1] be a new array
 n = A.length
@@ -717,7 +716,7 @@ concatenate the lists B[0], B[1], ..., B[n - 1] together in order
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

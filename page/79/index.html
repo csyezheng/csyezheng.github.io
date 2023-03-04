@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,6 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -214,7 +213,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -295,12 +294,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/front-end/bootstrap/">Bootstrap</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/kafka/">Kafka</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-07-01" class="post-time">
-        2017-07-01
+      <time datetime="2018-07-23" class="post-time">
+        2018-07-23
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
@@ -315,10 +314,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Bootstrap Components Modal Add dialogs to your site for lightboxes, user notifications, or completely custom content.
+      Quickstart &gt; tar -xzf kafka_2.11-1.1.0.tgz &gt; cd kafka_2.11-1.1.0 Start the server bin/zookeeper-server-start.sh config/zookeeper.properties bin/kafka-server-start.sh config/server.properties Create a topic bin/kaftopics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic my-topic bin/kafka-topics.sh --list --zookeeper localhost:2181 Send some messages bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my-topic bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning Python client for the Apache Kafka #!/usr/bin/env python3 import logging from kafka import KafkaProducer from kafka.errors import KafkaError import msgpack log = logging.getLogger(__name__) def send(): producer = KafkaProducer(bootstrap_servers=[&#39;localhost:9092&#39;], value_serializer=msgpack.
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/front-end/bootstrap/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/kafka/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -329,15 +328,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/front-end/angular/">Angular</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/deep-learning/keras/">keras</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-06-21" class="post-time">
-        2017-06-21
+      <time datetime="2018-03-26" class="post-time">
+        2018-03-26
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -349,10 +348,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      QuickStart Step 1. Set up the Development Environment $ yaourt -S nodejs npm $ npm install -g @angular/cli Step 2. Create a new project $ ng new my-app Step 3: Serve the application $ cd my-app $ ng serve --open Step 4: Edit your first Angular component # ./src/app/app.component.ts export class AppComponent { title = 'My First Angular App!'; } # ./src/app/app.component.css h1 { color: #369; font-family: Arial, Helvetica, sans-serif; font-size: 250%; } Project file review my-app e2e # end-to-end tests src app.
+      Keras import tensorflow as tf from tensorflow import keras 
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/front-end/angular/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/deep-learning/keras/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -363,12 +362,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/django/">Getting start with Django</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/make-a-web-site/">MAKE A WEBSITE</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2017-05-22" class="post-time">
-        2017-05-22
+      <time datetime="2018-03-18" class="post-time">
+        2018-03-18
       </time>
       <div class="post-category">
           <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
@@ -383,12 +382,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      First steps  Requests and responses Models and the admin site Views and templates Forms and generic views Testing Static files Customizing the admin site  Advanced Tutorials: How to write reusable apps | Writing your first patch for Django
-The model layer Models Generally, each model maps to a single database table.
-from django.db import models class Person(models.Model): name = models.CharField(max_length=30)  The name of the table, myapp_person, is automatically derived from the name of the app and the model class.
+      GET A DOMAIN &amp; WEB HOSTING Register a domain name Namesilo Create New Account csyezheng csye3631 SEARCH Domain and REGISTER NameServers：域名解析服务器设置，未确定的可以等稍后在后台设置也一样； Auto-Renew
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/django/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/make-a-web-site/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -444,9 +441,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -467,9 +462,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -490,9 +483,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -513,10 +504,8 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
           
-          
 
         
         
@@ -535,11 +524,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -558,11 +545,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -581,11 +566,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -604,11 +587,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -628,9 +609,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -651,9 +630,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -674,9 +651,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -697,9 +672,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -720,10 +693,8 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
           
-          
 
         
         
@@ -742,11 +713,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -765,11 +734,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -788,11 +755,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -811,11 +776,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -835,9 +798,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -858,9 +819,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -881,9 +840,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -904,9 +861,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -927,10 +882,8 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
           
-          
 
         
         
@@ -949,11 +902,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -972,11 +923,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -995,11 +944,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1018,11 +965,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1042,9 +987,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1065,9 +1008,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1088,9 +1029,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1111,9 +1050,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1134,10 +1071,8 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
           
-          
 
         
         
@@ -1156,11 +1091,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1179,11 +1112,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1202,11 +1133,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1225,11 +1154,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1249,9 +1176,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1272,9 +1197,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1295,9 +1218,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1318,9 +1239,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1341,10 +1260,8 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
           
-          
 
         
         
@@ -1363,11 +1280,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1386,11 +1301,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1409,11 +1322,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1432,11 +1343,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1456,9 +1365,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1479,9 +1386,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1502,9 +1407,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1525,9 +1428,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1548,10 +1449,8 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
           
-          
 
         
         
@@ -1570,11 +1469,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1593,11 +1490,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1616,11 +1511,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1639,11 +1532,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1663,9 +1554,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1686,9 +1575,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1709,9 +1596,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1732,9 +1617,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1755,10 +1638,8 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
           
-          
 
         
         
@@ -1777,11 +1658,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1800,11 +1679,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1823,11 +1700,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1846,11 +1721,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -1870,9 +1743,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1893,9 +1764,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1916,9 +1785,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1939,9 +1806,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -1962,10 +1827,8 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
           
-          
 
         
         
@@ -1984,11 +1847,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -2007,11 +1868,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
 
           
-          
 
         
         
@@ -2031,9 +1890,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -2054,9 +1911,7 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
-          
           
 
         
@@ -2077,10 +1932,8 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
 
           
-          
 
         
         
@@ -2099,12 +1952,10 @@ from django.db import models class Person(models.Model): name = models.CharField
           
           
 
-            
             
               
             
 
-          
           
 
         
@@ -2131,11 +1982,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -2162,11 +2011,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -2193,11 +2040,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -2224,11 +2069,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -2255,11 +2098,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -2286,11 +2127,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -2317,11 +2156,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -2348,11 +2185,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -2379,11 +2214,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -2410,11 +2243,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -2441,11 +2272,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -2472,11 +2301,9 @@ from django.db import models class Person(models.Model): name = models.CharField
           
 
             
-            
               
             
 
-          
           
 
         
@@ -2493,6 +2320,90 @@ from django.db import models class Person(models.Model): name = models.CharField
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/80/">»</a></li>
@@ -2500,7 +2411,7 @@ from django.db import models class Person(models.Model): name = models.CharField
 
       
       
-      <li><a href="/page/85/">»»</a></li>
+      <li><a href="/page/89/">»»</a></li>
       
 
       </ul>
@@ -2588,7 +2499,7 @@ from django.db import models class Person(models.Model): name = models.CharField
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

@@ -33,7 +33,7 @@ Single Quotes Enclosing characters in single quotes (&#39;) preserves the litera
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/any-path/bash/" />
@@ -54,7 +54,7 @@ Single Quotes Enclosing characters in single quotes (&#39;) preserves the litera
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -65,14 +65,13 @@ Single Quotes Enclosing characters in single quotes (&#39;) preserves the litera
 Single Quotes Enclosing characters in single quotes (&#39;) preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/any-path/bash/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2016-09-26T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2016-09-26T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2016-09-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-09-26T00:00:00+00:00" />
 <meta itemprop="name" content="Bash Reference Manual">
 <meta itemprop="description" content="Bash Reference Manual Basic Shell Features Shell Syntax Shell Operation Quoting Escape Character A non-quoted backslash \ is the Bash escape character. It preserves the literal value of the next character that follows, with the exception of \newline.
-Single Quotes Enclosing characters in single quotes (&#39;) preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash."><meta itemprop="datePublished" content="2016-09-26T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2016-09-26T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="3759">
+Single Quotes Enclosing characters in single quotes (&#39;) preserves the literal value of each character within the quotes. A single quote may not occur between single quotes, even when preceded by a backslash."><meta itemprop="datePublished" content="2016-09-26T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2016-09-26T00:00:00+00:00" />
+<meta itemprop="wordCount" content="3770">
 <meta itemprop="keywords" content="“bash&#34;,shell,unix,linux," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Bash Reference Manual"/>
 <meta name="twitter:description" content="Bash Reference Manual Basic Shell Features Shell Syntax Shell Operation Quoting Escape Character A non-quoted backslash \ is the Bash escape character. It preserves the literal value of the next character that follows, with the exception of \newline.
@@ -430,7 +429,7 @@ Single Quotes Enclosing characters in single quotes (&#39;) preserves the litera
 <h4 id="pipelines">Pipelines</h4>
 <p>A <code>pipeline</code> is a sequence of one or more commands separated by one of the control operators <code>|</code> or <code>|&amp;</code>.</p>
 <p>The format for a pipeline is</p>
-<pre><code>[time [-p]] [!] command1 [ | or |&amp; command2 ] …
+<pre tabindex="0"><code>[time [-p]] [!] command1 [ | or |&amp; command2 ] …
 </code></pre><p>The output of each command in the pipeline is connected via a pipe to the input of the next command.</p>
 <p>If <code>|&amp;</code> is used, command1’s standard error, in addition to its standard output, is connected to command2’s standard input through the pipe; it is shorthand for <code>2&gt;&amp;1 |</code>. This implicit redirection of the standard error to the standard output is performed after any redirections specified by the command.</p>
 <p>The reserved word <code>time</code> causes timing statistics to be printed for the pipeline once it finishes.</p>
@@ -450,22 +449,22 @@ Single Quotes Enclosing characters in single quotes (&#39;) preserves the litera
 <ul>
 <li>
 <p><strong><code>until</code></strong></p>
-<pre><code>until test-commands; do consequent-commands; done
+<pre tabindex="0"><code>until test-commands; do consequent-commands; done
 </code></pre><p>Execute consequent-commands as long as test-commands has an exit status which is not zero.</p>
 <p>The return status is the exit status of the last command executed in consequent-commands, or zero if none was executed.</p>
 </li>
 <li>
 <p><strong><code>while</code></strong></p>
-<pre><code>while test-commands; do consequent-commands; done
+<pre tabindex="0"><code>while test-commands; do consequent-commands; done
 </code></pre><p>Execute consequent-commands as long as test-commands has an exit status of zero.</p>
 <p>The return status is the exit status of the last command executed in consequent-commands, or zero if none was executed.</p>
 </li>
 <li>
 <p><strong><code>for</code></strong></p>
-<pre><code>for name [ [in [words …] ] ; ] do commands; done
+<pre tabindex="0"><code>for name [ [in [words …] ] ; ] do commands; done
 </code></pre><p>If <code>in words</code> is not present, the <code>for</code> command executes the commands once for each positional parameter that is set.</p>
 <p>The return status is the exit status of the last command that executes. If there are no items in the expansion of words, no commands are executed, and the return status is zero.</p>
-<pre><code>for (( expr1 ; expr2 ; expr3 )) ; do commands ; done
+<pre tabindex="0"><code>for (( expr1 ; expr2 ; expr3 )) ; do commands ; done
 </code></pre><p>First, the arithmetic expression expr1 is evaluated, The arithmetic expression expr2 is then evaluated repeatedly until it evaluates to zero. Each time expr2 evaluates to a non-zero value, commands are executed and the arithmetic expression expr3 is evaluated.</p>
 </li>
 <li>
@@ -476,7 +475,7 @@ Single Quotes Enclosing characters in single quotes (&#39;) preserves the litera
 <ul>
 <li>
 <p><strong><code>if</code></strong></p>
-<pre><code>if test-commands; then
+<pre tabindex="0"><code>if test-commands; then
   consequent-commands;
 [elif more-test-commands; then
   more-consequents;]
@@ -487,26 +486,26 @@ fi
 </li>
 <li>
 <p><strong><code>case</code></strong></p>
-<pre><code>case word in
+<pre tabindex="0"><code>case word in
     [ [(] pattern [| pattern]…) command-list ;;]…
 esac
 </code></pre><p>Each clause must be terminated with <code>;;</code>, <code>;&amp;</code>, or <code>;;&amp;</code>.</p>
-<pre><code>echo -n &quot;Enter the name of an animal: &quot;
+<pre tabindex="0"><code>echo -n &#34;Enter the name of an animal: &#34;
 read ANIMAL
-echo -n &quot;The $ANIMAL has &quot;
+echo -n &#34;The $ANIMAL has &#34;
 case $ANIMAL in
-  horse | dog | cat) echo -n &quot;four&quot;;;
-  man | kangaroo ) echo -n &quot;two&quot;;;
-  *) echo -n &quot;an unknown number of&quot;;;
+  horse | dog | cat) echo -n &#34;four&#34;;;
+  man | kangaroo ) echo -n &#34;two&#34;;;
+  *) echo -n &#34;an unknown number of&#34;;;
 esac
-echo &quot; legs.&quot;
+echo &#34; legs.&#34;
 </code></pre><p>If the ‘;;’ operator is used, no subsequent matches are attempted after the first pattern match. Using ‘;&amp;’ in place of ‘;;’ causes execution to continue with the command-list associated with the next clause, if any. Using ‘;;&amp;’ in place of ‘;;’ causes the shell to test the patterns in the next clause, if any, and execute any associated command-list on a successful match, continuing the case statement execution as if the pattern list had not matched.</p>
 <p>The return status is zero if no pattern is matched. Otherwise, the return status is the exit status of the command-list executed.</p>
 </li>
 <li>
 <p><strong><code>select</code></strong></p>
-<pre><code>select name [in words …]; do commands; done
-</code></pre><pre><code>select fname in *;
+<pre tabindex="0"><code>select name [in words …]; do commands; done
+</code></pre><pre tabindex="0"><code>select fname in *;
 do
 	echo you picked $fname \($REPLY\)
 	break;
@@ -514,12 +513,12 @@ done
 </code></pre></li>
 <li>
 <p><strong><code>((…))</code></strong></p>
-<pre><code>(( expression ))
+<pre tabindex="0"><code>(( expression ))
 </code></pre><p>If the value of the expression is non-zero, the return status is 0; otherwise the return status is 1.</p>
 </li>
 <li>
 <p><strong><code>[[…]]</code></strong></p>
-<pre><code>[[ expression ]]
+<pre tabindex="0"><code>[[ expression ]]
 </code></pre><p>Return a status of 0 or 1 depending on the evaluation of the conditional expression expression.</p>
 </li>
 </ul>
@@ -527,82 +526,82 @@ done
 <p>Bash provides two ways to group a list of commands to be executed as a unit.</p>
 <ul>
 <li>
-<pre><code>( list )
+<pre tabindex="0"><code>( list )
 </code></pre><p>Placing a list of commands between parentheses causes a subshell environment to be created, and each of the commands in list to be executed in that subshell. ince the list is executed in a subshell, variable assignments do not remain in effect after the subshell completes.</p>
 </li>
 <li>
-<pre><code>{ list; }
+<pre tabindex="0"><code>{ list; }
 </code></pre><p>Placing a list of commands between curly braces causes the list to be executed in the current shell context. No subshell is created. The semicolon (or newline) following list is required.</p>
 </li>
 </ul>
 <h4 id="coprocesses">Coprocesses</h4>
 <p>A coprocess is executed asynchronously in a subshell, as if the command had been terminated with the ‘&amp;’ control operator, with a two-way pipe established between the executing shell and the coprocess.</p>
-<pre><code>coproc [NAME] command [redirections]
+<pre tabindex="0"><code>coproc [NAME] command [redirections]
 </code></pre><p>This creates a coprocess named NAME. If NAME is not supplied, the default name is COPROC. NAME must not be supplied if command is a simple command; otherwise, it is interpreted as the first word of the simple command.</p>
 <h4 id="gnu-parallel">GNU Parallel</h4>
 <p>Parallel can replace <code>xargs</code> or feed commands from its input sources to several different instances of Bash.</p>
 <p>For example, it is easy to replace <code>xargs</code> to gzip all html files in the current directory and its subdirectories:</p>
-<pre><code>find . -type f -name '*.html' -print | parallel gzip
+<pre tabindex="0"><code>find . -type f -name &#39;*.html&#39; -print | parallel gzip
 </code></pre><p>If you need to protect special characters such as newlines in file names, use find’s <code>-print0</code> option and parallel’s <code>-0</code> option.</p>
 <p>You can use Parallel to move files from the current directory when the number of files is too large to process with one <code>mv</code> invocation:</p>
-<pre><code>ls | parallel mv {} destdir
+<pre tabindex="0"><code>ls | parallel mv {} destdir
 </code></pre><p>As you can see, the {} is replaced with each line read from standard input. While using <code>ls</code> will work in most instances, it is not sufficient to deal with all filenames. If you need to accommodate special characters in filenames, you can use</p>
-<pre><code>find . -depth 1 \! -name '.*' -print0 | parallel -0 mv {} destdir
+<pre tabindex="0"><code>find . -depth 1 \! -name &#39;.*&#39; -print0 | parallel -0 mv {} destdir
 </code></pre><p>This will run as many <code>mv</code> commands as there are files in the current directory. You can emulate a parallel <code>xargs</code> by adding the -X option:</p>
-<pre><code>find . -depth 1 \! -name '.*' -print0 | parallel -0 -X mv {} destdir
+<pre tabindex="0"><code>find . -depth 1 \! -name &#39;.*&#39; -print0 | parallel -0 -X mv {} destdir
 </code></pre><p>GNU Parallel can replace certain common idioms that operate on lines read from a file (in this case, filenames listed one per line):</p>
-<pre><code>	while IFS= read -r x; do
-		do-something1 &quot;$x&quot; &quot;config-$x&quot;
-		do-something2 &lt; &quot;$x&quot;
+<pre tabindex="0"><code>	while IFS= read -r x; do
+		do-something1 &#34;$x&#34; &#34;config-$x&#34;
+		do-something2 &lt; &#34;$x&#34;
 	done &lt; file | process-output
 </code></pre><p>with a more compact syntax reminiscent of lambdas:</p>
-<pre><code>cat list | parallel &quot;do-something1 {} config-{} ; do-something2 &lt; {}&quot; |
+<pre tabindex="0"><code>cat list | parallel &#34;do-something1 {} config-{} ; do-something2 &lt; {}&#34; |
            process-output
 </code></pre><p>Parallel provides a built-in mechanism to remove filename extensions, which lends itself to batch file transformations or renaming:</p>
-<pre><code>ls *.gz | parallel -j+0 &quot;zcat {} | bzip2 &gt;{.}.bz2 &amp;&amp; rm {}&quot;
+<pre tabindex="0"><code>ls *.gz | parallel -j+0 &#34;zcat {} | bzip2 &gt;{.}.bz2 &amp;&amp; rm {}&#34;
 </code></pre><h3 id="shell-functions">Shell Functions</h3>
 <p>Functions are declared using this syntax:</p>
-<pre><code>name () compound-command [ redirections ]
+<pre tabindex="0"><code>name () compound-command [ redirections ]
 </code></pre><p>or</p>
-<pre><code>function name [()] compound-command [ redirections ]
+<pre tabindex="0"><code>function name [()] compound-command [ redirections ]
 </code></pre><p>That command is usually a list enclosed between <code>{</code> and <code>}</code></p>
 <p>Note that for historical reasons, in the most common usage the curly braces that surround the body of the function must be separated from the body by <code>blank</code>s or newlines.</p>
 <p>Also, when using the braces, the list must be terminated by a semicolon, a <code>&amp;</code>, or a newline.</p>
 <p>The shell uses dynamic scoping to control a variable’s visibility within functions.</p>
-<pre><code>func1()
+<pre tabindex="0"><code>func1()
 {
-    local var='func1 local'
+    local var=&#39;func1 local&#39;
     func2
 }
 
 func2()
 {
-    echo &quot;In func2, var = $var&quot;
+    echo &#34;In func2, var = $var&#34;
 }
 
 var=global
 func1
-</code></pre><pre><code>In func2, var = func1 local
+</code></pre><pre tabindex="0"><code>In func2, var = func1 local
 </code></pre><h3 id="shell-parameters">Shell Parameters</h3>
 <h4 id="positional-parameters">Positional Parameters</h4>
 <p>The shell provides a set of variables called positional parameters that contain the individual words on the command line. The variables are named 0 through 9. The shell also provides a variable, <code>$#</code>, that contains the number of arguments on the command line:</p>
 <p>They can be demonstrated this way:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span><span style="color:#75715e"># posit-param: script to view command line parameters</span>
-echo <span style="color:#e6db74">&#34;
-</span><span style="color:#e6db74">Number of arguments: </span>$#<span style="color:#e6db74">
-</span><span style="color:#e6db74">\$0 = </span>$0<span style="color:#e6db74">
-</span><span style="color:#e6db74">\$1 = </span>$1<span style="color:#e6db74">
-</span><span style="color:#e6db74">\$2 = </span>$2<span style="color:#e6db74">
-</span><span style="color:#e6db74">\$3 = </span>$3<span style="color:#e6db74">
-</span><span style="color:#e6db74">\$4 = </span>$4<span style="color:#e6db74">
-</span><span style="color:#e6db74">\$5 = </span>$5<span style="color:#e6db74">
-</span><span style="color:#e6db74">\$6 = </span>$6<span style="color:#e6db74">
-</span><span style="color:#e6db74">\$7 = </span>$7<span style="color:#e6db74">
-</span><span style="color:#e6db74">\$8 = </span>$8<span style="color:#e6db74">
-</span><span style="color:#e6db74">\$9 = </span>$9<span style="color:#e6db74">
-</span><span style="color:#e6db74">&#34;</span>
-</code></pre></div><pre><code>[me@linuxbox ~]$ posit-param a b c d
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e"># posit-param: script to view command line parameters</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Number of arguments: </span>$#<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\$0 = </span>$0<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\$1 = </span>$1<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\$2 = </span>$2<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\$3 = </span>$3<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\$4 = </span>$4<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\$5 = </span>$5<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\$6 = </span>$6<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\$7 = </span>$7<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\$8 = </span>$8<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">\$9 = </span>$9<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><pre tabindex="0"><code>[me@linuxbox ~]$ posit-param a b c d
 Number of arguments: 4
 $0 = /home/me/bin/posit-param
 $1 = a
@@ -616,31 +615,31 @@ $8 =
 $9 = 
 </code></pre><p>Even when no arguments are provided, $0 will always contain the first item appearing on the command line, which is the pathname of the program being executed.</p>
 <h6 id="shift--getting-access-to-many-arguments">shift – Getting Access to Many Arguments</h6>
-<pre><code>#!/bin/bash
+<pre tabindex="0"><code>#!/bin/bash
 # posit-param2: script to display all arguments
 count=1
 while [[ $# -gt 0 ]]; do
-    echo &quot;Argument $count = $1&quot;
+    echo &#34;Argument $count = $1&#34;
     count=$((count + 1))
     shift
 done
 </code></pre><p>Each time shift is executed, the value of <code>$2</code> is moved to <code>$1</code>, the value of <code>$3</code> is moved to <code>$2</code> and so on. The value of <code>$#</code> is also reduced by one.</p>
-<pre><code>[me@linuxbox ~]$ posit-param2 a b c d
+<pre tabindex="0"><code>[me@linuxbox ~]$ posit-param2 a b c d
 Argument 1 = a
 Argument 2 = b
 Argument 3 = c
 Argument 4 = d
 </code></pre><h6 id="simple-applications">Simple Applications</h6>
-<pre><code>#!/bin/bash
+<pre tabindex="0"><code>#!/bin/bash
 # file-info: simple file information program
-PROGNAME=&quot;$(basename &quot;$0&quot;)&quot;
-if [[ -e &quot;$1&quot; ]]; then
-    echo -e &quot;\nFile Type:&quot;
-    file &quot;$1&quot;
-    echo -e &quot;\nFile Status:&quot;
-    stat &quot;$1&quot;
+PROGNAME=&#34;$(basename &#34;$0&#34;)&#34;
+if [[ -e &#34;$1&#34; ]]; then
+    echo -e &#34;\nFile Type:&#34;
+    file &#34;$1&#34;
+    echo -e &#34;\nFile Status:&#34;
+    stat &#34;$1&#34;
 else
-    echo &quot;$PROGNAME: usage: $PROGNAME file&quot; &gt;&amp;2
+    echo &#34;$PROGNAME: usage: $PROGNAME file&#34; &gt;&amp;2
     exit 1
 fi
 </code></pre><p>This program displays the file type (determined by the <code>file</code> command) and the file status (from the <code>stat</code> command) of a specified file. One interesting feature of this program is the <code>PROGNAME</code> variable. It is given the value that results from the <code>basename &quot;$0&quot;</code> command. The <code>basename</code> command removes the leading portion of a pathname, leaving only the base name of a file. In our example, <code>basename</code> removes the leading portion of the pathname contained in the <code>$0</code> parameter, the full pathname of our example program.</p>
@@ -663,28 +662,28 @@ fi
 </tr>
 </tbody>
 </table>
-<pre><code>#!/bin/bash
+<pre tabindex="0"><code>#!/bin/bash
 # posit-params3: script to demonstrate $* and $@
 print_params () {
-    echo &quot;\$1 = $1&quot;
-    echo &quot;\$2 = $2&quot;
-    echo &quot;\$3 = $3&quot;
-    echo &quot;\$4 = $4&quot;
+    echo &#34;\$1 = $1&#34;
+    echo &#34;\$2 = $2&#34;
+    echo &#34;\$3 = $3&#34;
+    echo &#34;\$4 = $4&#34;
 }
 pass_params () {
-    echo -e &quot;\n&quot; '$* :'; print_params $*
-    echo -e &quot;\n&quot; '&quot;$*&quot; :'; print_params &quot;$*&quot;
-    echo -e &quot;\n&quot; '$@ :'; print_params $@
-    echo -e &quot;\n&quot; '&quot;$@&quot; :'; print_params &quot;$@&quot;
+    echo -e &#34;\n&#34; &#39;$* :&#39;; print_params $*
+    echo -e &#34;\n&#34; &#39;&#34;$*&#34; :&#39;; print_params &#34;$*&#34;
+    echo -e &#34;\n&#34; &#39;$@ :&#39;; print_params $@
+    echo -e &#34;\n&#34; &#39;&#34;$@&#34; :&#39;; print_params &#34;$@&#34;
 }
-pass_params &quot;word&quot; &quot;words with spaces&quot;
-</code></pre><pre><code>[me@linuxbox ~]$ posit-param3
+pass_params &#34;word&#34; &#34;words with spaces&#34;
+</code></pre><pre tabindex="0"><code>[me@linuxbox ~]$ posit-param3
  $* :
 $1 = word
 $2 = words
 $3 = with
 $4 = spaces
- &quot;$*&quot; :
+ &#34;$*&#34; :
 $1 = word words with spaces
 $2 =
 $3 =
@@ -694,7 +693,7 @@ $1 = word
 $2 = words
 $3 = with
 $4 = spaces
- &quot;$@&quot; :
+ &#34;$@&#34; :
 $1 = word
 $2 = words with spaces
 $3 =
@@ -702,24 +701,24 @@ $4 =
 </code></pre><p><code>$@</code> is by far the most useful for most situations because it preserves the integrity of each positional parameter.</p>
 <h3 id="shell-expansions">Shell Expansions</h3>
 <h4 id="brace-expansion">Brace Expansion</h4>
-<pre><code>[me@linuxbox ~]$ echo Front-{A,B,C}-Back
+<pre tabindex="0"><code>[me@linuxbox ~]$ echo Front-{A,B,C}-Back
 Front-A-Back Front-B-Back Front-C-Back
 </code></pre><p>The brace expression itself may contain either a comma-separated list of strings or a range of integers or single characters.</p>
-<pre><code>[me@linuxbox ~]$ echo Number_{1..5}
+<pre tabindex="0"><code>[me@linuxbox ~]$ echo Number_{1..5}
 Number_1 Number_2 Number_3 Number_4 Number_5
 </code></pre><p>Here is a range of letters in reverse order:</p>
-<pre><code>[me@linuxbox ~]$ echo {Z..A}
+<pre tabindex="0"><code>[me@linuxbox ~]$ echo {Z..A}
 Z Y X W V U T S R Q P O N M L K J I H G F E D C B A
 </code></pre><p>Brace expansions may be nested.</p>
-<pre><code>[me@linuxbox ~]$ echo a{A{1,2},B{3,4}}b
+<pre tabindex="0"><code>[me@linuxbox ~]$ echo a{A{1,2},B{3,4}}b
 aA1b aA2b aB3b aB4b
 </code></pre><p>So, what is this good for? The most common application is to make lists of files or directories to be created.</p>
-<pre><code>[me@linuxbox ~]$ mkdir Photos
+<pre tabindex="0"><code>[me@linuxbox ~]$ mkdir Photos
 [me@linuxbox ~]$ cd Photos
 [me@linuxbox Photos]$ mkdir {2007..2009}-{01..12}
 </code></pre><h4 id="tilde-expansion">Tilde Expansion</h4>
 <p>As we may recall from our introduction to the cd command, the tilde character (~) has a special meaning. When used at the beginning of a word, it expands into the name of the home directory of the named user or, if no user is named, the home directory of the current user.</p>
-<pre><code>[me@linuxbox ~]$ echo ~
+<pre tabindex="0"><code>[me@linuxbox ~]$ echo ~
 /home/me
 [me@linuxbox ~]$ echo ~foo
 /home/foo
@@ -727,17 +726,17 @@ aA1b aA2b aB3b aB4b
 <p>It&rsquo;s a feature that is more useful in shell scripts than directly on the command line.</p>
 <p>The basic form of parameter expansion is ${parameter}</p>
 <p>The braces are required when parameter is a positional parameter with more than one digit, or when parameter is followed by a character that is not to be interpreted as part of its name.</p>
-<pre><code>[me@linuxbox ~]$ echo $USER
+<pre tabindex="0"><code>[me@linuxbox ~]$ echo $USER
 me
 [me@linuxbox ~]$ printenv | less
 </code></pre><p>With parameter expansion, if we misspell the name of a variable, the expansion will still take place but will result in an empty string</p>
 <p><a href="https://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion">read more</a></p>
 <h4 id="command-substitution">Command Substitution</h4>
 <p>Command substitution allows us to use the output of a command as an expansion.</p>
-<pre><code>[me@linuxbox ~]$ ls -l $(which cp)
+<pre tabindex="0"><code>[me@linuxbox ~]$ ls -l $(which cp)
 -rwxr-xr-x 1 root root 71516 2007-12-05 08:58 /bin/cp
-</code></pre><pre><code>[me@linuxbox ~]$ file $(ls -d /usr/bin/* | grep zip)
-/usr/bin/bunzip2: symbolic link to `bzip2'
+</code></pre><pre tabindex="0"><code>[me@linuxbox ~]$ file $(ls -d /usr/bin/* | grep zip)
+/usr/bin/bunzip2: symbolic link to `bzip2&#39;
 /usr/bin/bzip2: ELF 32-bit LSB executable, Intel 80386,
 version 1 (SYSV), dynamically linked (uses shared libs), for
 GNU/Linux 2.6.9, stripped
@@ -780,18 +779,18 @@ GNU/Linux 2.6.9, stripped
 </tbody>
 </table>
 <p>The format for arithmetic expansion is:</p>
-<pre><code>$(( expression ))
-</code></pre><pre><code>[me@linuxbox ~]$ echo $((2 + 2))                  # 4
+<pre tabindex="0"><code>$(( expression ))
+</code></pre><pre tabindex="0"><code>[me@linuxbox ~]$ echo $((2 + 2))                  # 4
 [me@linuxbox ~]$ echo $(($((5**2)) * 3))          # 75
 </code></pre><h4 id="process-substitution">Process Substitution</h4>
 <p>Process substitution allows a process’s input or output to be referred to using a filename. Process substitution is expressed in two ways.</p>
 <p>For processes that produce standard output, it looks like this:</p>
-<pre><code>&lt;(list)
+<pre tabindex="0"><code>&lt;(list)
 </code></pre><p>or, for processes that intake standard input, it looks like this:</p>
-<pre><code>&gt;(list)
+<pre tabindex="0"><code>&gt;(list)
 </code></pre><p>where list is a list of commands.</p>
 <p>Process substitution is often used with loops containing read. Here is an example of a read loop that processes the contents of a directory listing created by a subshell:</p>
-<pre><code>#!/bin/bash
+<pre tabindex="0"><code>#!/bin/bash
 # pro-sub: demo of process substitution
 while read attr links owner group size date time filename; do
     cat &lt;&lt;- EOF
@@ -812,9 +811,9 @@ done &lt; &lt;(ls -l | tail -n +2)
 <h3 id="redirections">Redirections</h3>
 <p>In the following descriptions, if the file descriptor number is omitted, and the first character of the redirection operator is <code>&lt;</code>, the redirection refers to the standard input (<strong>file descriptor 0</strong>). If the first character of the redirection operator is <code>&gt;</code>, the redirection refers to the standard output (<strong>file descriptor 1</strong>).</p>
 <p><strong>Note that the order of redirections is significant.</strong> For example, the command</p>
-<pre><code>ls &gt; dirlist 2&gt;&amp;1
+<pre tabindex="0"><code>ls &gt; dirlist 2&gt;&amp;1
 </code></pre><p>directs both standard output (file descriptor 1) and standard error (file descriptor 2) to the file dirlist, while the command</p>
-<pre><code>ls 2&gt;&amp;1 &gt; dirlist
+<pre tabindex="0"><code>ls 2&gt;&amp;1 &gt; dirlist
 </code></pre><p>directs only the standard output to file dirlist, because the standard error <strong>was made</strong> a copy of the standard output before the standard output was redirected to dirlist.</p>
 <ul>
 <li>cat – Concatenate files</li>
@@ -827,32 +826,32 @@ done &lt; &lt;(ls -l | tail -n +2)
 <li>tee – Read from standard input and write to standard output and files</li>
 </ul>
 <h4 id="redirecting-input">Redirecting Input</h4>
-<pre><code>[n]&lt;word
+<pre tabindex="0"><code>[n]&lt;word
 </code></pre><p>n is file descriptor, redirecting the standard input (file descriptor 0) if <code>n</code> is not specified.</p>
 <h4 id="redirecting-output">Redirecting Output</h4>
-<pre><code>[n]&gt;[|]word
+<pre tabindex="0"><code>[n]&gt;[|]word
 </code></pre><p>n is file descriptor, redirecting the standard output (file descriptor 1) if n is not specified.</p>
 <h4 id="appending-redirected-output">Appending Redirected Output</h4>
-<pre><code>[n]&gt;&gt;word              
+<pre tabindex="0"><code>[n]&gt;&gt;word              
 </code></pre><p>n is file descriptor, redirecting the standard output (file descriptor 1) if n is not specified.</p>
 <h4 id="redirecting-standard-output-and-standard-error">Redirecting Standard Output and Standard Error</h4>
 <p>This construct allows both the standard output (file descriptor 1) and the standard error output (file descriptor 2) to be redirected to the file whose name is the expansion of word.</p>
-<pre><code>&amp;&gt;word
-</code></pre><pre><code>&gt;word 2&gt;&amp;1
+<pre tabindex="0"><code>&amp;&gt;word
+</code></pre><pre tabindex="0"><code>&gt;word 2&gt;&amp;1
 </code></pre><h4 id="appending-standard-output-and-standard-error">Appending Standard Output and Standard Error</h4>
-<pre><code>&amp;&gt;&gt;word
-</code></pre><pre><code>&gt;&gt;word 2&gt;&amp;1
+<pre tabindex="0"><code>&amp;&gt;&gt;word
+</code></pre><pre tabindex="0"><code>&gt;&gt;word 2&gt;&amp;1
 </code></pre><h4 id="here-documents">Here Documents</h4>
 <p>A here document is an additional form of I/O redirection in which we embed a body of text into our script and feed it into the standard input of a command.</p>
-<pre><code>command &lt;&lt; token
+<pre tabindex="0"><code>command &lt;&lt; token
 text
 token
 </code></pre><p>where command is the name of command that accepts standard input and token is a string used to indicate the end of the embedded text.</p>
-<pre><code>#!/bin/bash
+<pre tabindex="0"><code>#!/bin/bash
 # Program to output a system information page
-TITLE=&quot;System Information Report For $HOSTNAME&quot;
-CURRENT_TIME=&quot;$(date +&quot;%x %r %Z&quot;)&quot;
-TIMESTAMP=&quot;Generated $CURRENT_TIME, by $USER&quot;
+TITLE=&#34;System Information Report For $HOSTNAME&#34;
+CURRENT_TIME=&#34;$(date +&#34;%x %r %Z&#34;)&#34;
+TIMESTAMP=&#34;Generated $CURRENT_TIME, by $USER&#34;
 cat &lt;&lt; _EOF_
 &lt;html&gt;
     &lt;head&gt;
@@ -869,27 +868,27 @@ _EOF_
 <p>So, what’s the advantage of using a here document? It’s mostly the same as echo, <strong>except that, by default, single and double quotes within here documents lose their special meaning to the shell</strong>.</p>
 <p>If we change the redirection operator from <code>&lt;&lt;</code> to <strong><code>&lt;&lt;-</code></strong>, the shell will ignore leading tab characters (but not spaces) in the here document. This allows a here document to be indented, which can improve readability</p>
 <h4 id="here-strings">Here Strings</h4>
-<pre><code>[n]&lt;&lt;&lt; word
-</code></pre><pre><code>#!/bin/bash
+<pre tabindex="0"><code>[n]&lt;&lt;&lt; word
+</code></pre><pre tabindex="0"><code>#!/bin/bash
 # read-ifs: read fields from a file
 FILE=/etc/passwd
-read -p &quot;Enter a username &gt; &quot; user_name
-file_info=&quot;$(grep &quot;^$user_name:&quot; $FILE)&quot;
-if [ -n &quot;$file_info&quot; ]; then
-    IFS=&quot;:&quot; read user pw uid gid name home shell &lt;&lt;&lt; &quot;$file_info&quot;
-    echo &quot;User = '$user'&quot;
-    echo &quot;UID = '$uid'&quot;
-    echo &quot;GID = '$gid'&quot;
-    echo &quot;Full Name = '$name'&quot;
-    echo &quot;Home Dir. = '$home'&quot;
-    echo &quot;Shell = '$shell'&quot;
+read -p &#34;Enter a username &gt; &#34; user_name
+file_info=&#34;$(grep &#34;^$user_name:&#34; $FILE)&#34;
+if [ -n &#34;$file_info&#34; ]; then
+    IFS=&#34;:&#34; read user pw uid gid name home shell &lt;&lt;&lt; &#34;$file_info&#34;
+    echo &#34;User = &#39;$user&#39;&#34;
+    echo &#34;UID = &#39;$uid&#39;&#34;
+    echo &#34;GID = &#39;$gid&#39;&#34;
+    echo &#34;Full Name = &#39;$name&#39;&#34;
+    echo &#34;Home Dir. = &#39;$home&#39;&#34;
+    echo &#34;Shell = &#39;$shell&#39;&#34;
 else
-    echo &quot;No such user '$user_name'&quot; &gt;&amp;2
+    echo &#34;No such user &#39;$user_name&#39;&#34; &gt;&amp;2
     exit 1
 fi
 </code></pre><p>The <code>&lt;&lt;&lt;</code> operator indicates a here string. A here string is like a here document, only shorter, consisting of a single string. In our example, the line of data from the <code>/etc/ passwd</code> file is fed to the standard input of the read command.</p>
 <p>We might wonder <strong>why this rather oblique method was chosen rather than thsi</strong>:</p>
-<pre><code>echo &quot;$file_info&quot; | IFS=&quot;:&quot; read user pw uid gid name home shell
+<pre tabindex="0"><code>echo &#34;$file_info&#34; | IFS=&#34;:&#34; read user pw uid gid name home shell
 </code></pre><p>In bash (and other shells such as sh), pipelines create subshells. These are copies of the shell and its environment that are used to execute the command in the pipeline. When the processes finishes, the copy of the environment is destroyed. This means that a subshell can never alter the environment of its parent process.  In the previous example, read assigns the value foo to the variable REPLY in its subshell’s environment, but when the command exits, <strong>the subshell and its environment are destroyed, and the effect of the assignment is lost.</strong> <strong>Using here strings is one way to work around this behavior.</strong></p>
 <h4 id="duplicating-file-descriptors">Duplicating File Descriptors</h4>
 <h4 id="moving-file-descriptors">Moving File Descriptors</h4>
@@ -1068,7 +1067,7 @@ fi
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

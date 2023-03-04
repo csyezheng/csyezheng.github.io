@@ -13,15 +13,14 @@
       <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/machine-learning/scikit-learn/</guid>
-      <description>scikit-learn   sklearn
-  preprocessing
-  MultiLabelBinarizer
+      <description>scikit-learn sklearn
+preprocessing
+MultiLabelBinarizer
 Transforms between iterable of iterables and a multilabel format (binary matrix)
-    utils
-  class_weight
-  compute_class_weight
-Estimate class weights for unbalanced datasets.
-        </description>
+utils
+class_weight
+compute_class_weight
+Estimate class weights for unbalanced datasets.</description>
     </item>
     
   </channel>

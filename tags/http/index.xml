@@ -22,7 +22,7 @@
       <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/systems/computer-networking/how-the-internet-works/</guid>
-      <description>Multiple packets in pipeline at same time Packets may be damaged Packets may arrive out of order Packets may be duplicated They may not arrive at all!  Summary so far: Applications send and receive data in packets over an Internet that is unreliable.
+      <description>Multiple packets in pipeline at same time Packets may be damaged Packets may arrive out of order Packets may be duplicated They may not arrive at all! Summary so far: Applications send and receive data in packets over an Internet that is unreliable.
 How packets find their way across the Internet? Internet addresses | Data | Internet &amp;ldquo;IP&amp;rdquo; Address |
 All Internet packets carry a destination IP address. We usually write the IP address like this: 171.</description>
     </item>

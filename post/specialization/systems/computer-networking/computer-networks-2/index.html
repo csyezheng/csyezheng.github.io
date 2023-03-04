@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-2/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,12 +63,11 @@
 <meta property="og:description" content="Principles of Network Applications 研究网络应用程序的核心是写出能够运行在不同的端系统和通过网络彼此通信的程序。不需要写在网络核心设备如路由器或链路层交换机上运行的软件" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/systems/computer-networking/computer-networks-2/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2021-03-06T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-06T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2021-03-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-06T00:00:00+00:00" />
 <meta itemprop="name" content="Application Layer">
-<meta itemprop="description" content="Principles of Network Applications 研究网络应用程序的核心是写出能够运行在不同的端系统和通过网络彼此通信的程序。不需要写在网络核心设备如路由器或链路层交换机上运行的软件"><meta itemprop="datePublished" content="2021-03-06T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-06T00:00:00&#43;00:00" />
+<meta itemprop="description" content="Principles of Network Applications 研究网络应用程序的核心是写出能够运行在不同的端系统和通过网络彼此通信的程序。不需要写在网络核心设备如路由器或链路层交换机上运行的软件"><meta itemprop="datePublished" content="2021-03-06T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-06T00:00:00+00:00" />
 <meta itemprop="wordCount" content="15696">
 <meta itemprop="keywords" content="computer-networking,http," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Application Layer"/>
@@ -426,7 +425,7 @@
 <p>每个请求/响应对是经一个单独的TCP连接发送，还是所有的请求及其响应经相同的TCP连接发送呢?采用前一种方法，该应用程序被称为使用非持续连接(non-persistent connection); 采用后一种方法，该应用程序被称为使用持续连接(persistent connection) 。</p>
 <p>使用持续连接或非持续连接是由应用层决定的（HTTP默认使用的是持续连接）</p>
 <h6 id="采用非持续连接的http">采用非持续连接的HTTP</h6>
-<pre><code>HTTP/1.1 200 OK
+<pre tabindex="0"><code>HTTP/1.1 200 OK
 Connection: close
 Content-Encoding: gzip
 Content-Type: text/html; charset=utf-8
@@ -445,7 +444,7 @@ Server: Apache
 <li>每个对象都要遭受两倍RTT的交付时延，一个RTT用来创建TCP，另一个RTT用来请求和接受一个对象。</li>
 </ul>
 <h6 id="采用持续连接的http">采用持续连接的HTTP</h6>
-<pre><code>HTTP/1.1 200 OK
+<pre tabindex="0"><code>HTTP/1.1 200 OK
 Connection: Keep-Alive
 Content-Encoding: gzip
 Content-Type: text/html; charset=utf-8
@@ -461,7 +460,7 @@ Server: Apache
 <h4 id="http-message-format">HTTP Message Format</h4>
 <h6 id="http请求报文">HTTP请求报文</h6>
 <p>一个典型的http请求报文：</p>
-<pre><code>GET /somedir/page.html HTTP/1.1
+<pre tabindex="0"><code>GET /somedir/page.html HTTP/1.1
 Host: www.hans941.tk
 Connection: close
 User-agent: Chrome/57.0
@@ -529,7 +528,7 @@ Accept-language: ch
 </ul>
 <h6 id="http响应报文">HTTP响应报文</h6>
 <p>http响应报文由三部分组成：一个初始状态行（status line），之后有6个首部行（header line），然后是实体体（entity body）</p>
-<pre><code>HTTP/1.1 200 OK
+<pre tabindex="0"><code>HTTP/1.1 200 OK
 Connection: close
 Date: Tue, 09 Aug 2011 15:44:04 GMT
 Server: Apache/2.2.3 (CentOS)
@@ -679,12 +678,12 @@ Content-Type: text/html
 </ul>
 <p>原始服务器向Web缓存器中返回HTTP响应时包含<strong>Last-Modified</strong>首部行，缓存器在存储该对象的同事也存储了最后修改日期。</p>
 <p>Web缓存器向原始Web服务器发送请求：</p>
-<pre><code>GET / HTTP/1.1
+<pre tabindex="0"><code>GET / HTTP/1.1
 Host: www.sina.com.cn:80
 If-Modified-Since:Thu, 4 Feb 2010 20:39:13 GMT
 Connection: Close
 </code></pre><p>Web服务器向缓存器发送一个响应报文</p>
-<pre><code>HTTP/1.0 304 Not Modified
+<pre tabindex="0"><code>HTTP/1.0 304 Not Modified
 Date: Thu, 04 Feb 2010 12:38:41 GMT
 
 (empty entity body)
@@ -761,7 +760,7 @@ Date: Thu, 04 Feb 2010 12:38:41 GMT
 <p>客户程序被称为UDPClient.py，服务器程序被称为UDPServer.py。为了强调关键问题，我们有意提供最少的代码。“好代码”无疑将具有一些更为辅助性的代码行，特别是用于处理出现差错的情况。</p>
 <h6 id="udpclientpy">UDPClient.py</h6>
 <p>下面是该应用程序客户端的代码：</p>
-<pre><code>from socket import *
+<pre tabindex="0"><code>from socket import *
 
 # 服务器的P地址（如“128.138.32.126”）或者服务器的主机名（如“cis.poly.edu”）的字符串, 如果我们使用主机名，则将自动执行DNS lookup从而得到IP地址
 serverName = ‘hostname’                                           
@@ -787,7 +786,7 @@ print modifiedMessage.decode()
 clientSocket.close()
 </code></pre><h6 id="udpserverpy">UDPServer.py</h6>
 <p>现在来看看这个应用程序的服务器端：</p>
-<pre><code>from socket import * 
+<pre tabindex="0"><code>from socket import * 
 
 serverPort = 12000 
 
@@ -795,7 +794,7 @@ serverPort = 12000
 serverSocket = socket(AF_INET, SOCK_DGRAM) 
 
 # 将端口号12000与个服务器的套接字绑定（即分配）在一起,代码显式地为该套接字分配一个端口号
-serverSocket.bind(('', serverPort)) 
+serverSocket.bind((&#39;&#39;, serverPort)) 
 
 print (“The server is ready to receive”) 
 
@@ -819,7 +818,7 @@ while True:
 <p><img src="https://yqfile.alicdn.com/4054507a62b63bc6c0ce7c4ac9496aa6979190b6.png" alt="image"></p>
 <h6 id="tcpclientpy">TCPClient.py</h6>
 <p>这里给出了应用程序客户端的代码：</p>
-<pre><code>from socket import * 
+<pre tabindex="0"><code>from socket import * 
 
 serverName = ’servername’ 
 serverPort = 12000 
@@ -846,7 +845,7 @@ print(‘From Server:’, modifiedSentence.decode())
 clientSocket.close()
 </code></pre><h6 id="tcpserverpy">TCPServer.py</h6>
 <p>现在我们看一下服务器程序</p>
-<pre><code>from socket import * 
+<pre tabindex="0"><code>from socket import * 
 
 serverPort = 12000 
 
@@ -1168,7 +1167,7 @@ while True:
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,12 +63,11 @@
 <meta property="og:description" content="This solution describes and compares the different design approaches for calling a machine learning model during a Dataflow pipeline, and examines the tradeoffs involved in choosing one approach or another. We present the results of a series of experiments that we ran to explore different approaches and illustrate these tradeoffs, both in batch and stream processing pipelines. This solution is designed for people who integrate trained models into data processing pipelines, rather than for data scientists who want to build machine learning models." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/artificial-intelligence/deep-learning/ml-model-predictions-in-dataflow-pipelines/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-12-05T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-12-05T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2020-12-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-05T00:00:00+00:00" />
 <meta itemprop="name" content="Machine Learning Models for Predictions in Cloud Dataflow Pipelines">
-<meta itemprop="description" content="This solution describes and compares the different design approaches for calling a machine learning model during a Dataflow pipeline, and examines the tradeoffs involved in choosing one approach or another. We present the results of a series of experiments that we ran to explore different approaches and illustrate these tradeoffs, both in batch and stream processing pipelines. This solution is designed for people who integrate trained models into data processing pipelines, rather than for data scientists who want to build machine learning models."><meta itemprop="datePublished" content="2020-12-05T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-12-05T00:00:00&#43;00:00" />
+<meta itemprop="description" content="This solution describes and compares the different design approaches for calling a machine learning model during a Dataflow pipeline, and examines the tradeoffs involved in choosing one approach or another. We present the results of a series of experiments that we ran to explore different approaches and illustrate these tradeoffs, both in batch and stream processing pipelines. This solution is designed for people who integrate trained models into data processing pipelines, rather than for data scientists who want to build machine learning models."><meta itemprop="datePublished" content="2020-12-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-12-05T00:00:00+00:00" />
 <meta itemprop="wordCount" content="4473">
 <meta itemprop="keywords" content="machine-learning,deep-learning,design," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Machine Learning Models for Predictions in Cloud Dataflow Pipelines"/>
@@ -448,61 +447,61 @@
 <p>You can deploy a model by using commands like the following:</p>
 <p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/scripts/deploy-cmle.sh">blogs/tf_dataflow_serving/scripts/deploy-cmle.sh</a></p>
 <p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/scripts/deploy-cmle.sh">View on GitHub</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">PROJECT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[PROJECT_ID]&#34;</span> <span style="color:#75715e"># change to your project name</span>
-REGION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[REGION]&#34;</span>
-BUCKET<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[BUCKET]&#34;</span> <span style="color:#75715e"># change to your bucket name</span>
-MODEL_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;babyweight_estimator&#34;</span> <span style="color:#75715e"># change to your estimator name</span>
-MODEL_VERSION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;v1&#34;</span> <span style="color:#75715e"># change to your model version</span>
-MODEL_BINARIES<span style="color:#f92672">=</span>gs://<span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span>/models/<span style="color:#e6db74">${</span>MODEL_NAME<span style="color:#e6db74">}</span>
-
-<span style="color:#75715e"># upload the local SavedModel to GCS</span>
-gsutil -m cp -r model/trained/v1/* gs://<span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span>/models/<span style="color:#e6db74">${</span>MODEL_NAME<span style="color:#e6db74">}</span>
-
-<span style="color:#75715e"># set the current project</span>
-gcloud config set project <span style="color:#e6db74">${</span>PROJECT<span style="color:#e6db74">}</span>
-
-<span style="color:#75715e"># list model files on GCS</span>
-gsutil ls <span style="color:#e6db74">${</span>MODEL_BINARIES<span style="color:#e6db74">}</span>
-
-<span style="color:#75715e"># deploy model to GCP</span>
-gcloud ml-engine models create <span style="color:#e6db74">${</span>MODEL_NAME<span style="color:#e6db74">}</span> --regions<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>REGION<span style="color:#e6db74">}</span>
-
-<span style="color:#75715e"># deploy model version</span>
-gcloud ml-engine versions create <span style="color:#e6db74">${</span>MODEL_VERSION<span style="color:#e6db74">}</span> --model<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>MODEL_NAME<span style="color:#e6db74">}</span> --origin<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>MODEL_BINARIES<span style="color:#e6db74">}</span> --runtime-version<span style="color:#f92672">=</span>1.4
-</code></pre></div><p>The code creates an AI Platform Prediction model called babyweight_estimator in the Google Cloud project, with model version v1.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>PROJECT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[PROJECT_ID]&#34;</span> <span style="color:#75715e"># change to your project name</span>
+</span></span><span style="display:flex;"><span>REGION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[REGION]&#34;</span>
+</span></span><span style="display:flex;"><span>BUCKET<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[BUCKET]&#34;</span> <span style="color:#75715e"># change to your bucket name</span>
+</span></span><span style="display:flex;"><span>MODEL_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;babyweight_estimator&#34;</span> <span style="color:#75715e"># change to your estimator name</span>
+</span></span><span style="display:flex;"><span>MODEL_VERSION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;v1&#34;</span> <span style="color:#75715e"># change to your model version</span>
+</span></span><span style="display:flex;"><span>MODEL_BINARIES<span style="color:#f92672">=</span>gs://<span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span>/models/<span style="color:#e6db74">${</span>MODEL_NAME<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># upload the local SavedModel to GCS</span>
+</span></span><span style="display:flex;"><span>gsutil -m cp -r model/trained/v1/* gs://<span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span>/models/<span style="color:#e6db74">${</span>MODEL_NAME<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># set the current project</span>
+</span></span><span style="display:flex;"><span>gcloud config set project <span style="color:#e6db74">${</span>PROJECT<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># list model files on GCS</span>
+</span></span><span style="display:flex;"><span>gsutil ls <span style="color:#e6db74">${</span>MODEL_BINARIES<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># deploy model to GCP</span>
+</span></span><span style="display:flex;"><span>gcloud ml-engine models create <span style="color:#e6db74">${</span>MODEL_NAME<span style="color:#e6db74">}</span> --regions<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>REGION<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># deploy model version</span>
+</span></span><span style="display:flex;"><span>gcloud ml-engine versions create <span style="color:#e6db74">${</span>MODEL_VERSION<span style="color:#e6db74">}</span> --model<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>MODEL_NAME<span style="color:#e6db74">}</span> --origin<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>MODEL_BINARIES<span style="color:#e6db74">}</span> --runtime-version<span style="color:#f92672">=</span>1.4
+</span></span></code></pre></div><p>The code creates an AI Platform Prediction model called babyweight_estimator in the Google Cloud project, with model version v1.</p>
 <p>After the model is deployed, you can invoke it. The following Python code shows a way to invoke a model version in AI Platform Prediction as a REST API:</p>
 <p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/model/inference.py">blogs/tf_dataflow_serving/model/inference.py</a></p>
 <p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/model/inference.py">View on GitHub</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">cmle_api <span style="color:#f92672">=</span> None
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">init_api</span>():
-
-    <span style="color:#66d9ef">global</span> cmle_api
-
-    <span style="color:#66d9ef">if</span> cmle_api <span style="color:#f92672">is</span> None:
-        cmle_api <span style="color:#f92672">=</span> discovery<span style="color:#f92672">.</span>build(<span style="color:#e6db74">&#39;ml&#39;</span>, <span style="color:#e6db74">&#39;v1&#39;</span>,
-                              discoveryServiceUrl<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://storage.googleapis.com/cloud-ml/discovery/ml_v1_discovery.json&#39;</span>,
-                              cache_discovery<span style="color:#f92672">=</span>True)
-
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">estimate_cmle</span>(instances):
-    <span style="color:#e6db74">&#34;&#34;&#34;
-</span><span style="color:#e6db74">    Calls the babyweight estimator API on CMLE to get predictions
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">    Args:
-</span><span style="color:#e6db74">       instances: list of json objects
-</span><span style="color:#e6db74">    Returns:
-</span><span style="color:#e6db74">        int - estimated baby weight
-</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
-    init_api()
-
-    request_data <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;instances&#39;</span>: instances}
-
-    model_url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;projects/{}/models/{}/versions/{}&#39;</span><span style="color:#f92672">.</span>format(PROJECT, CMLE_MODEL_NAME, CMLE_MODEL_VERSION)
-    response <span style="color:#f92672">=</span> cmle_api<span style="color:#f92672">.</span>projects()<span style="color:#f92672">.</span>predict(body<span style="color:#f92672">=</span>request_data, name<span style="color:#f92672">=</span>model_url)<span style="color:#f92672">.</span>execute()
-    values <span style="color:#f92672">=</span> [item[<span style="color:#e6db74">&#34;predictions&#34;</span>][<span style="color:#ae81ff">0</span>] <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> response[<span style="color:#e6db74">&#39;predictions&#39;</span>]]
-    <span style="color:#66d9ef">return</span> values
-</code></pre></div><p>If you have a large dataset available in something like BigQuery or Cloud Storage and you want to maximize the throughput of the overall process, serving your ML model as an HTTP endpoint is not recommended for batch prediction. Doing this generates one HTTP request for each data point, which results in a huge volume of HTTP requests. The following section presents better options for batch prediction.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>cmle_api <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">init_api</span>():
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">global</span> cmle_api
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> cmle_api <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>        cmle_api <span style="color:#f92672">=</span> discovery<span style="color:#f92672">.</span>build(<span style="color:#e6db74">&#39;ml&#39;</span>, <span style="color:#e6db74">&#39;v1&#39;</span>,
+</span></span><span style="display:flex;"><span>                              discoveryServiceUrl<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://storage.googleapis.com/cloud-ml/discovery/ml_v1_discovery.json&#39;</span>,
+</span></span><span style="display:flex;"><span>                              cache_discovery<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">estimate_cmle</span>(instances):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Calls the babyweight estimator API on CMLE to get predictions
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       instances: list of json objects
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        int - estimated baby weight
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    init_api()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    request_data <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;instances&#39;</span>: instances}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    model_url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;projects/</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">/models/</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">/versions/</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>format(PROJECT, CMLE_MODEL_NAME, CMLE_MODEL_VERSION)
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> cmle_api<span style="color:#f92672">.</span>projects()<span style="color:#f92672">.</span>predict(body<span style="color:#f92672">=</span>request_data, name<span style="color:#f92672">=</span>model_url)<span style="color:#f92672">.</span>execute()
+</span></span><span style="display:flex;"><span>    values <span style="color:#f92672">=</span> [item[<span style="color:#e6db74">&#34;predictions&#34;</span>][<span style="color:#ae81ff">0</span>] <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> response[<span style="color:#e6db74">&#39;predictions&#39;</span>]]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> values
+</span></span></code></pre></div><p>If you have a large dataset available in something like BigQuery or Cloud Storage and you want to maximize the throughput of the overall process, serving your ML model as an HTTP endpoint is not recommended for batch prediction. Doing this generates one HTTP request for each data point, which results in a huge volume of HTTP requests. The following section presents better options for batch prediction.</p>
 <h4 id="direct-model-for-batch-and-online-predictions">Direct-model for batch and online predictions</h4>
 <p>The direct-model prediction technique leverages a local TensorFlow <code>SavedModel</code> on the Dataflow instances. The saved model is a copy of the output files created after you have finished building and training the TensorFlow model. The TensorFlow <code>SavedModel</code> can be:</p>
 <ul>
@@ -516,74 +515,74 @@ gcloud ml-engine versions create <span style="color:#e6db74">${</span>MODEL_VERS
 <p>When you create the Dataflow job, specify the pipeline dependencies to be loaded, including the model file. The following Python code shows the <code>setup.py</code> file that includes the model files to be submitted with the Dataflow job.</p>
 <p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/setup.py">blogs/tf_dataflow_serving/setup.py</a></p>
 <p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/setup.py">View on GitHub</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> setuptools
-   
-requirements <span style="color:#f92672">=</span> []
-   
-setuptools<span style="color:#f92672">.</span>setup(
-    name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;TF-DATAFLOW-DEMO&#39;</span>,
-    version<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;v1&#39;</span>,
-    install_requires<span style="color:#f92672">=</span>requirements,
-    packages<span style="color:#f92672">=</span>setuptools<span style="color:#f92672">.</span>find_packages(),
-    package_data<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;model&#39;</span>: [<span style="color:#e6db74">&#39;trained/*&#39;</span>,
-                            <span style="color:#e6db74">&#39;trained/v1/*&#39;</span>,
-                            <span style="color:#e6db74">&#39;trained/v1/variables/*&#39;</span>]
-                  },
-)
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">import</span> setuptools
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>requirements <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>setuptools<span style="color:#f92672">.</span>setup(
+</span></span><span style="display:flex;"><span>    name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;TF-DATAFLOW-DEMO&#39;</span>,
+</span></span><span style="display:flex;"><span>    version<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;v1&#39;</span>,
+</span></span><span style="display:flex;"><span>    install_requires<span style="color:#f92672">=</span>requirements,
+</span></span><span style="display:flex;"><span>    packages<span style="color:#f92672">=</span>setuptools<span style="color:#f92672">.</span>find_packages(),
+</span></span><span style="display:flex;"><span>    package_data<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;model&#39;</span>: [<span style="color:#e6db74">&#39;trained/*&#39;</span>,
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#39;trained/v1/*&#39;</span>,
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#39;trained/v1/variables/*&#39;</span>]
+</span></span><span style="display:flex;"><span>                  },
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div></li>
 <li>
 <p>Call the local model files during the pipeline. This produces the prediction for the given instances. The following Python code shows how to do this.</p>
 <p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/model/inference.py">blogs/tf_dataflow_serving/model/inference.py</a></p>
 <p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/model/inference.py">View on GitHub</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">predictor_fn <span style="color:#f92672">=</span> None
-   
-   
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">init_predictor</span>():
-    <span style="color:#e6db74">&#34;&#34;&#34; Loads the TensorFlow saved model to the predictor object
-</span><span style="color:#e6db74">   
-</span><span style="color:#e6db74">    Returns:
-</span><span style="color:#e6db74">        predictor_fn
-</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
-   
-    <span style="color:#66d9ef">global</span> predictor_fn
-   
-    <span style="color:#66d9ef">if</span> predictor_fn <span style="color:#f92672">is</span> None:
-   
-        logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;Initialising predictor...&#34;</span>)
-        dir_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>dirname(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>realpath(__file__))
-        export_dir <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(dir_path, SAVED_MODEL_DIR)
-   
-        <span style="color:#66d9ef">if</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>exists(export_dir):
-            predictor_fn <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>contrib<span style="color:#f92672">.</span>predictor<span style="color:#f92672">.</span>from_saved_model(
-                export_dir<span style="color:#f92672">=</span>export_dir,
-                signature_def_key<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;predict&#34;</span>
-            )
-        <span style="color:#66d9ef">else</span>:
-            logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#34;Model not found! - Invalid model path: {}&#34;</span><span style="color:#f92672">.</span>format(export_dir))
-   
-   
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">estimate_local</span>(instances):
-    <span style="color:#e6db74">&#34;&#34;&#34;
-</span><span style="color:#e6db74">    Calls the local babyweight estimator to get predictions
-</span><span style="color:#e6db74">   
-</span><span style="color:#e6db74">    Args:
-</span><span style="color:#e6db74">       instances: list of json objects
-</span><span style="color:#e6db74">    Returns:
-</span><span style="color:#e6db74">        int - estimated baby weight
-</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
-   
-    init_predictor()
-   
-    inputs <span style="color:#f92672">=</span> dict((k, [v]) <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> instances[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>items())
-    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,len(instances)):
-        instance <span style="color:#f92672">=</span> instances[i]
-   
-        <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> instance<span style="color:#f92672">.</span>items():
-            inputs[k] <span style="color:#f92672">+=</span> [v]
-   
-    values <span style="color:#f92672">=</span> predictor_fn(inputs)[<span style="color:#e6db74">&#39;predictions&#39;</span>]
-    <span style="color:#66d9ef">return</span> [value<span style="color:#f92672">.</span>item() <span style="color:#66d9ef">for</span> value <span style="color:#f92672">in</span> values<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)]
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>predictor_fn <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">init_predictor</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34; Loads the TensorFlow saved model to the predictor object
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        predictor_fn
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">global</span> predictor_fn
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> predictor_fn <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#34;Initialising predictor...&#34;</span>)
+</span></span><span style="display:flex;"><span>        dir_path <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>dirname(os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>realpath(__file__))
+</span></span><span style="display:flex;"><span>        export_dir <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(dir_path, SAVED_MODEL_DIR)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>exists(export_dir):
+</span></span><span style="display:flex;"><span>            predictor_fn <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>contrib<span style="color:#f92672">.</span>predictor<span style="color:#f92672">.</span>from_saved_model(
+</span></span><span style="display:flex;"><span>                export_dir<span style="color:#f92672">=</span>export_dir,
+</span></span><span style="display:flex;"><span>                signature_def_key<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;predict&#34;</span>
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            logging<span style="color:#f92672">.</span>error(<span style="color:#e6db74">&#34;Model not found! - Invalid model path: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(export_dir))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">estimate_local</span>(instances):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Calls the local babyweight estimator to get predictions
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       instances: list of json objects
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        int - estimated baby weight
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    init_predictor()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    inputs <span style="color:#f92672">=</span> dict((k, [v]) <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> instances[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>items())
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,len(instances)):
+</span></span><span style="display:flex;"><span>        instance <span style="color:#f92672">=</span> instances[i]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> instance<span style="color:#f92672">.</span>items():
+</span></span><span style="display:flex;"><span>            inputs[k] <span style="color:#f92672">+=</span> [v]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    values <span style="color:#f92672">=</span> predictor_fn(inputs)[<span style="color:#e6db74">&#39;predictions&#39;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> [value<span style="color:#f92672">.</span>item() <span style="color:#66d9ef">for</span> value <span style="color:#f92672">in</span> values<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)]
+</span></span></code></pre></div></li>
 </ol>
 <p>See the <a href="https://beam.apache.org/documentation/sdks/python-pipeline-dependencies/#multiple-file-dependencies">Apache Beam Multiple File Dependencies</a> page for more details.</p>
 <h4 id="ai-platform-batch-prediction-job">AI Platform batch prediction job</h4>
@@ -591,25 +590,25 @@ setuptools<span style="color:#f92672">.</span>setup(
 <p>An AI Platform batch prediction job takes the Cloud Storage location of the input data files as a parameter. It uses the model to get predictions for that data, and then stores the prediction results in another Cloud Storage output location that is also given as a parameter. The following example shows <code>gcloud</code> commands that submit an AI Platform batch prediction job.</p>
 <p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/scripts/predict-batch-cmle.sh">blogs/tf_dataflow_serving/scripts/predict-batch-cmle.sh</a></p>
 <p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/scripts/predict-batch-cmle.sh">View on GitHub</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">BUCKET<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&lt;BUCKET&gt;&#39;</span>
-DATA_FORMAT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;TEXT&#34;</span>
-INPUT_PATHS<span style="color:#f92672">=</span>gs://<span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span>/data/babyweight/experiments/outputs/data-prep-*
-OUTPUT_PATH<span style="color:#f92672">=</span>gs://<span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span>/data/babyweight/experiments/outputs/cmle-estimates
-MODEL_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;babyweight_estimator&#39;</span>
-VERSION_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;v1&#39;</span>
-REGION<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&lt;REGION&gt;&#39;</span>
-now<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>date +<span style="color:#e6db74">&#34;%Y%m%d_%H%M%S&#34;</span><span style="color:#66d9ef">)</span>
-JOB_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;batch_predict_</span>$MODEL_NAME$now<span style="color:#e6db74">&#34;</span>
-MAX_WORKER_COUNT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20&#34;</span>
-
-gcloud ml-engine jobs submit prediction $JOB_NAME <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --model<span style="color:#f92672">=</span>$MODEL_NAME <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --input-paths<span style="color:#f92672">=</span>$INPUT_PATHS <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --output-path<span style="color:#f92672">=</span>$OUTPUT_PATH <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --region<span style="color:#f92672">=</span>$REGION <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --data-format<span style="color:#f92672">=</span>$DATA_FORMAT <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --max-worker-count<span style="color:#f92672">=</span>$MAX_WORKER_COUNT
-</code></pre></div><h4 id="point-by-point-versus-micro-batching-for-online-prediction">Point-by-point versus micro-batching for online prediction</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>BUCKET<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&lt;BUCKET&gt;&#39;</span>
+</span></span><span style="display:flex;"><span>DATA_FORMAT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;TEXT&#34;</span>
+</span></span><span style="display:flex;"><span>INPUT_PATHS<span style="color:#f92672">=</span>gs://<span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span>/data/babyweight/experiments/outputs/data-prep-*
+</span></span><span style="display:flex;"><span>OUTPUT_PATH<span style="color:#f92672">=</span>gs://<span style="color:#e6db74">${</span>BUCKET<span style="color:#e6db74">}</span>/data/babyweight/experiments/outputs/cmle-estimates
+</span></span><span style="display:flex;"><span>MODEL_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;babyweight_estimator&#39;</span>
+</span></span><span style="display:flex;"><span>VERSION_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;v1&#39;</span>
+</span></span><span style="display:flex;"><span>REGION<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&lt;REGION&gt;&#39;</span>
+</span></span><span style="display:flex;"><span>now<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>date +<span style="color:#e6db74">&#34;%Y%m%d_%H%M%S&#34;</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>JOB_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;batch_predict_</span>$MODEL_NAME$now<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>MAX_WORKER_COUNT<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gcloud ml-engine jobs submit prediction $JOB_NAME <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --model<span style="color:#f92672">=</span>$MODEL_NAME <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --input-paths<span style="color:#f92672">=</span>$INPUT_PATHS <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --output-path<span style="color:#f92672">=</span>$OUTPUT_PATH <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region<span style="color:#f92672">=</span>$REGION <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --data-format<span style="color:#f92672">=</span>$DATA_FORMAT <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --max-worker-count<span style="color:#f92672">=</span>$MAX_WORKER_COUNT
+</span></span></code></pre></div><h4 id="point-by-point-versus-micro-batching-for-online-prediction">Point-by-point versus micro-batching for online prediction</h4>
 <p>In real-time prediction pipelines, whether you are serving the model as an HTTP endpoint or using the model directly from the workers, you have two options to get predictions for incoming data points:</p>
 <ul>
 <li><strong>Individual point</strong>. The obvious option is to send each data point to the model individually and get a prediction.</li>
@@ -618,30 +617,30 @@ gcloud ml-engine jobs submit prediction $JOB_NAME <span style="color:#ae81ff">\
 <p>The following Python code shows how to create time-based micro-batches using a windowing function in an Apache Beam pipeline.</p>
 <p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/pipelines/stream_process.py">blogs/tf_dataflow_serving/pipelines/stream_process.py</a></p>
 <p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/pipelines/stream_process.py">View on GitHub</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run_pipeline_with_micro_batches</span>(inference_type, project,
-                                    pubsub_topic, pubsub_subscription,
-                                    bq_dataset, bq_table,
-                                    window_size, runner, args<span style="color:#f92672">=</span>None):
-
-    prepare_steaming_source(project, pubsub_topic, pubsub_subscription)
-    prepare_steaming_sink(project, bq_dataset, bq_table)
-    pubsub_subscription_url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;projects/{}/subscriptions/{}&#34;</span><span style="color:#f92672">.</span>format(project, pubsub_subscription)
-    options <span style="color:#f92672">=</span> beam<span style="color:#f92672">.</span>pipeline<span style="color:#f92672">.</span>PipelineOptions(flags<span style="color:#f92672">=</span>[], <span style="color:#f92672">**</span>args)
-
-    pipeline <span style="color:#f92672">=</span> beam<span style="color:#f92672">.</span>Pipeline(runner, options<span style="color:#f92672">=</span>options)
-    (
-            pipeline
-            <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;Read from PubSub&#39;</span> <span style="color:#f92672">&gt;&gt;</span> beam<span style="color:#f92672">.</span>io<span style="color:#f92672">.</span>ReadStringsFromPubSub(subscription<span style="color:#f92672">=</span>pubsub_subscription_url, id_label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;source_id&#34;</span>)
-            <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;Micro-batch - Window Size: {} Seconds&#39;</span><span style="color:#f92672">.</span>format(window_size) <span style="color:#f92672">&gt;&gt;</span> beam<span style="color:#f92672">.</span>WindowInto(FixedWindows(size<span style="color:#f92672">=</span>window_size))
-            <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;Estimate Targets - {}&#39;</span><span style="color:#f92672">.</span>format(inference_type) <span style="color:#f92672">&gt;&gt;</span> beam<span style="color:#f92672">.</span>FlatMap(<span style="color:#66d9ef">lambda</span> messages: estimate(messages, inference_type))
-            <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;Write to BigQuery&#39;</span> <span style="color:#f92672">&gt;&gt;</span> beam<span style="color:#f92672">.</span>io<span style="color:#f92672">.</span>WriteToBigQuery(project<span style="color:#f92672">=</span>project,
-                                                             dataset<span style="color:#f92672">=</span>bq_dataset,
-                                                             table<span style="color:#f92672">=</span>bq_table
-                                                             )
-    )
-
-    pipeline<span style="color:#f92672">.</span>run()
-</code></pre></div><p>The micro-batching approach uses models deployed as HTTP endpoints, which dramatically reduces the number of HTTP requests and reduces latency. Even when the micro-batching technique used with the direct model, sending the model a tensor with N instances for prediction is more efficient than sending a tensor with a length of 1 because of the vectorized operations.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run_pipeline_with_micro_batches</span>(inference_type, project,
+</span></span><span style="display:flex;"><span>                                    pubsub_topic, pubsub_subscription,
+</span></span><span style="display:flex;"><span>                                    bq_dataset, bq_table,
+</span></span><span style="display:flex;"><span>                                    window_size, runner, args<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    prepare_steaming_source(project, pubsub_topic, pubsub_subscription)
+</span></span><span style="display:flex;"><span>    prepare_steaming_sink(project, bq_dataset, bq_table)
+</span></span><span style="display:flex;"><span>    pubsub_subscription_url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;projects/</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">/subscriptions/</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(project, pubsub_subscription)
+</span></span><span style="display:flex;"><span>    options <span style="color:#f92672">=</span> beam<span style="color:#f92672">.</span>pipeline<span style="color:#f92672">.</span>PipelineOptions(flags<span style="color:#f92672">=</span>[], <span style="color:#f92672">**</span>args)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    pipeline <span style="color:#f92672">=</span> beam<span style="color:#f92672">.</span>Pipeline(runner, options<span style="color:#f92672">=</span>options)
+</span></span><span style="display:flex;"><span>    (
+</span></span><span style="display:flex;"><span>            pipeline
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;Read from PubSub&#39;</span> <span style="color:#f92672">&gt;&gt;</span> beam<span style="color:#f92672">.</span>io<span style="color:#f92672">.</span>ReadStringsFromPubSub(subscription<span style="color:#f92672">=</span>pubsub_subscription_url, id_label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;source_id&#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;Micro-batch - Window Size: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> Seconds&#39;</span><span style="color:#f92672">.</span>format(window_size) <span style="color:#f92672">&gt;&gt;</span> beam<span style="color:#f92672">.</span>WindowInto(FixedWindows(size<span style="color:#f92672">=</span>window_size))
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;Estimate Targets - </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>format(inference_type) <span style="color:#f92672">&gt;&gt;</span> beam<span style="color:#f92672">.</span>FlatMap(<span style="color:#66d9ef">lambda</span> messages: estimate(messages, inference_type))
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;Write to BigQuery&#39;</span> <span style="color:#f92672">&gt;&gt;</span> beam<span style="color:#f92672">.</span>io<span style="color:#f92672">.</span>WriteToBigQuery(project<span style="color:#f92672">=</span>project,
+</span></span><span style="display:flex;"><span>                                                             dataset<span style="color:#f92672">=</span>bq_dataset,
+</span></span><span style="display:flex;"><span>                                                             table<span style="color:#f92672">=</span>bq_table
+</span></span><span style="display:flex;"><span>                                                             )
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    pipeline<span style="color:#f92672">.</span>run()
+</span></span></code></pre></div><p>The micro-batching approach uses models deployed as HTTP endpoints, which dramatically reduces the number of HTTP requests and reduces latency. Even when the micro-batching technique used with the direct model, sending the model a tensor with N instances for prediction is more efficient than sending a tensor with a length of 1 because of the vectorized operations.</p>
 <h2 id="batch-experiments">Batch experiments</h2>
 <p>In the batch experiments, we want to estimate baby weights in the Natality dataset in BigQuery by using a TensorFlow regression model. We then want to save the prediction results in Cloud Storage as CSV files by using a Dataflow batch pipeline. The following section describes different experiments we tried to accomplish this task.</p>
 <h3 id="approach-1-dataflow-with-direct-model-prediction">Approach 1: Dataflow with direct-model prediction</h3>
@@ -761,25 +760,25 @@ gcloud ml-engine jobs submit prediction $JOB_NAME <span style="color:#ae81ff">\
 <p>The topic receives data from a stream simulator that generates data points, which are the instances to estimate the baby weight for, at a predefined rate of events per second. This simulates a real-world example of an unbounded data source. The following Python code simulates the data stream sent to a Pub/Sub topic.</p>
 <p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/simulate_stream.py">blogs/tf_dataflow_serving/simulate_stream.py</a></p>
 <p><a href="https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/blogs/tf_dataflow_serving/simulate_stream.py">View on GitHub</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">client <span style="color:#f92672">=</span> pubsub<span style="color:#f92672">.</span>Client(project<span style="color:#f92672">=</span>PARAMS<span style="color:#f92672">.</span>project_id)
-topic <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>topic(PARAMS<span style="color:#f92672">.</span>pubsub_topic)
-<span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> topic<span style="color:#f92672">.</span>exists():
-    <span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#39;Topic does not exist. Please run a stream pipeline first to create the topic.&#39;</span>
-    <span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#39;Simulation aborted.&#39;</span>
-
-    <span style="color:#66d9ef">return</span>
-
-<span style="color:#66d9ef">for</span> index <span style="color:#f92672">in</span> range(PARAMS<span style="color:#f92672">.</span>stream_sample_size):
-
-    message <span style="color:#f92672">=</span> send_message(topic, index)
-
-    <span style="color:#75715e"># for debugging</span>
-    <span style="color:#66d9ef">if</span> PARAMS<span style="color:#f92672">.</span>show_message:
-        <span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;Message {} was sent: {}&#34;</span><span style="color:#f92672">.</span>format(index<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, message)
-        <span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;&#34;</span>
-
-    time<span style="color:#f92672">.</span>sleep(sleep_time_per_msg)
-</code></pre></div><h3 id="approach-1-dataflow-with-ai-platform-online-prediction">Approach 1: Dataflow with AI Platform online prediction</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>client <span style="color:#f92672">=</span> pubsub<span style="color:#f92672">.</span>Client(project<span style="color:#f92672">=</span>PARAMS<span style="color:#f92672">.</span>project_id)
+</span></span><span style="display:flex;"><span>topic <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>topic(PARAMS<span style="color:#f92672">.</span>pubsub_topic)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> topic<span style="color:#f92672">.</span>exists():
+</span></span><span style="display:flex;"><span>    print <span style="color:#e6db74">&#39;Topic does not exist. Please run a stream pipeline first to create the topic.&#39;</span>
+</span></span><span style="display:flex;"><span>    print <span style="color:#e6db74">&#39;Simulation aborted.&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> index <span style="color:#f92672">in</span> range(PARAMS<span style="color:#f92672">.</span>stream_sample_size):
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    message <span style="color:#f92672">=</span> send_message(topic, index)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># for debugging</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> PARAMS<span style="color:#f92672">.</span>show_message:
+</span></span><span style="display:flex;"><span>        print <span style="color:#e6db74">&#34;Message </span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> was sent: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(index<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, message)
+</span></span><span style="display:flex;"><span>        print <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(sleep_time_per_msg)
+</span></span></code></pre></div><h3 id="approach-1-dataflow-with-ai-platform-online-prediction">Approach 1: Dataflow with AI Platform online prediction</h3>
 <p>In this approach, the TensorFlow model is deployed and hosted in AI Platform as a REST API. The Dataflow streaming pipeline calls the API for each message consumed from Pub/Sub get predictions. The high-level architecture of this approach is shown in Figure 8.</p>
 <p><img src="https://cloud.google.com/solutions/images/comparing-ml-model-predictions-using-cloud-dataflow-fig-8-stream-approach-1-dataflow-with-cloud-ml-online.png" alt="Stream Approach 1: Dataflow with AI Platform online prediction"><strong>Figure 8.</strong> Stream Approach 1: Dataflow with AI Platform online prediction. The HTTP request might include a single data point or a group of data points in a micro-batch.</p>
 <p>In this approach, the Dataflow pipeline performs the following steps:</p>
@@ -1072,7 +1071,7 @@ topic <span style="color:#f92672">=</span> client<span style="color:#f92672">.</
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

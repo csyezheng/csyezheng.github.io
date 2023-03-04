@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>course on Ye Zheng&#39;s Blog</title>
+    <link>http://www.yezheng.pro/tags/course/</link>
+    <description>Recent content in course on Ye Zheng&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 23 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/course/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CS103: Mathematical Foundations of Computing</title>
+      <link>http://www.yezheng.pro/post/courses/cs103/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/courses/cs103/</guid>
+      <description>Description 计算机科学所需的数学基础。主题包括证明技术和逻辑；感应; 集合，功能和关系；正式语言简介；DFA，NFA和正则表达式；上下文无关文法，图灵机</description>
+    </item>
+    
+    <item>
+      <title>CS106AX: Programming Methodologies in JavaScript and Python</title>
+      <link>http://www.yezheng.pro/post/courses/cs106ax/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/courses/cs106ax/</guid>
+      <description>JavaScript JavaScript Basics JavaScript Graphics Interactive Graphics Timer-Based Animation Advanced Animation Strings Arrays Objects Binary Representation Cryptography Enigma Machine Overview Python Strings Lists Dictionaries Objects Object-Oriented Programming Objects and Abstraction Data-Driven Programs Adventure Web Programming Interactors CSS Asynchronous Requests HTTP Building Web Applications </description>
+    </item>
+    
+    <item>
+      <title>CS106X: Programming Abstractions in C&#43;&#43;</title>
+      <link>http://www.yezheng.pro/post/courses/cs106x/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/courses/cs106x/</guid>
+      <description>CS106X: Programming Abstractions in C++ Description 使用C ++介绍了基本的编程概念和软件工程技术。解决问题的技能，基本的抽象数据类型和递归。常规主题包括基本编程方法（工程，模块化，</description>
+    </item>
+    
+    <item>
+      <title>CS107: Computer Organization &amp; Systems</title>
+      <link>http://www.yezheng.pro/post/courses/cs107/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/courses/cs107/</guid>
+      <description>CS107: Computer Organization &amp;amp; Systems Description 在UNIX计算机上进行编程。介绍从硬件到源代码的计算机系统。主题包括机器体系结构（寄存器，I / O，基本汇编语言），内存模型（指针</description>
+    </item>
+    
+    <item>
+      <title>CS109: Introduction to Probability for Computer Scientists</title>
+      <link>http://www.yezheng.pro/post/courses/cs109/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/courses/cs109/</guid>
+      <description>CS109: Introduction to Probability for Computer Scientists Description 计算机科学相关的概率和统计资料。主题包括组合学；概率论 有条件的概率和独立性；概率分布；贝叶斯定理，大数定律和中心极限定理；和</description>
+    </item>
+    
+    <item>
+      <title>CS110: Principles of Computer Systems</title>
+      <link>http://www.yezheng.pro/post/courses/cs110/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/courses/cs110/</guid>
+      <description>CS110: Principles of Computer Systems Description 利用系统和网络抽象来开发大型软件。CS110将教学生如何使用操作系统和网络抽象来构建大规模系统。主题包括进程（线程，上下文切换，</description>
+    </item>
+    
+    <item>
+      <title>CS140: Operating Systems and Systems Programming</title>
+      <link>http://www.yezheng.pro/post/courses/cs140/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/courses/cs140/</guid>
+      <description>CS140: Operating Systems and Systems Programming Description 操作系统： 死锁的条件与算法，进程的状态，进程和线程的区别，内存换页算法，同步与互斥等，参考书籍：现代操作系统 Prerequisite Principles of Computer Systems Readings https://web.stanford.edu/~ouster/cgi-bin/cs140-spring20/lectures.php Operating Systems:</description>
+    </item>
+    
+    <item>
+      <title>CS144: Introduction to Computer Networking</title>
+      <link>http://www.yezheng.pro/post/courses/cs144/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/courses/cs144/</guid>
+      <description>CS144: Introduction to Computer Networking Description 计算机网络：OSI模型，三次握手，TCP状态转换图等，参考书籍：计算机网络与UNIX网络编程第一卷 Prerequisites Principles of Computer Systems Readings 《计算机网络：自顶</description>
+    </item>
+    
+    <item>
+      <title>CS145: Data Management and Data Systems</title>
+      <link>http://www.yezheng.pro/post/courses/cs145/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/courses/cs145/</guid>
+      <description>CS145: Data Management and Data Systems Description SQL语句的基本写法，如Select, groupby having，数据库的范式，数据库的索引（实现是哪种数据结构）和存储过程等，数据库的A</description>
+    </item>
+    
+    <item>
+      <title>CS161: Design and Analysis of Algorithms</title>
+      <link>http://www.yezheng.pro/post/courses/cs161/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/courses/cs161/</guid>
+      <description>CS161: Design and Analysis of Algorithms 算法复杂度分析（Big Oh，Omega，Theta），递归关系和主方法。包括随机算法，分治策略，贪婪算法，hasing，堆，图算</description>
+    </item>
+    
+    <item>
+      <title>Math51 Linear Algebra, Multivariable Calculus, and Modern Applications</title>
+      <link>http://www.yezheng.pro/post/courses/math51/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/courses/math51/</guid>
+      <description>Description 线性代数部分包括正交性，线性独立性，矩阵代数和特征值，其应用包括最小二乘法，线性回归和马尔可夫链（与总体动力学，分子化学和PageRank</description>
+    </item>
+    
+  </channel>
+</rss>

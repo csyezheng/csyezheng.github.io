@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,6 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -214,7 +213,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -295,15 +294,15 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/data-engineering/elk-stack/">elk stack</a>
+      <a class="post-link" href="/post/engineering-fundamentals/cpp/cmake/">CMake</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-05-15" class="post-time">
-        2019-05-15
+      <time datetime="2019-09-13" class="post-time">
+        2019-09-13
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/big-data/"> big-data </a>
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -315,12 +314,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Install Elasticsearch sudo pacman -S elasticsearch systemctl start elasticsearch.service curl http://127.0.0.1:9200 Install Kibana sudo pacman -S kibana sudo vim /etc/kibana/kibana.yml server.port: 5601 server.host: &quot;localhost&quot; elasticsearch.hosts: [&quot;http://localhost:9200&quot;] systemctl start kibana.service To launch the Kibana web interface, point your browser to port 5601. For example, http://127.0.0.1:5601.
-Install Beats Install Filebeat Install Metricbeat sudo pacman -S metricbeat sudo vim /etc/metricbeat/metricbeat.yml setup.dashboards.enabled: true From the Metricbeat install directory, enable the system module
-cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricbeat.
+      如果工程存在多个目录,需要确保每个要管理的目录都存在一个 CMakeLists.txt． Set a name, version, and enable languages for the entire project. project(&lt;PROJECT-NAME&gt; [LANGUAGES] [&lt;language-name&gt;...]) Sets the name of the project and stores the name in the PROJECT_NAME
     </div>
     <div class="read-more">
-      <a href="/post/specialization/data-engineering/elk-stack/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/cpp/cmake/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,15 +328,15 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/devops/docker/">Docker</a>
+      <a class="post-link" href="/post/engineering-fundamentals/cpp/tools/">C&#43;&#43; tools</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-04-25" class="post-time">
-        2019-04-25
+      <time datetime="2019-09-09" class="post-time">
+        2019-09-09
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/devops/"> devops </a>
+          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
           
         </div>
       
@@ -351,10 +348,10 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
   <div class="post-content">
     
     <div class="post-summary">
-      Set up Docker environment Images and containers  An image is an executable package that includes everything needed to run an application&ndash;the code, a runtime, libraries, environment variables, and configuration files. A container is a runtime instance of an image&ndash;what the image becomes in memory when executed. A container runs natively on Linux and shares the kernel of the host machine with other containers.  Install Docker sudo pacman -S docker systemctl start docker.
+      Tools clang-format 格式化c++代码，同类工具还有astyle。保持代码风格统一是个好习惯。 qt creator vs以外我觉得最好用的c++ ide，代码补全质量高（基于li
     </div>
     <div class="read-more">
-      <a href="/post/specialization/devops/docker/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/cpp/tools/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -365,15 +362,15 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/specialization/web-application/back-end/microservices/">microservices</a>
+      <a class="post-link" href="/post/specialization/artificial-intelligence/machine-learning/kaggle/">kaggle</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2019-04-20" class="post-time">
-        2019-04-20
+      <time datetime="2019-08-25" class="post-time">
+        2019-08-25
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
+          <a href="http://www.yezheng.pro/categories/artificial-intelligence/"> artificial-intelligence </a>
           
         </div>
       
@@ -385,10 +382,18 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
   <div class="post-content">
     
     <div class="post-summary">
-      第1章 微服务 1.1 什么是微服务 微服务就是一些协同工作的小而自治的服务 1.1.1 很小，专注于做好一件事 在一个单块系统内，通常会创建一些抽象层或者模块来保证
+      https://www.kaggle.com/stackoverflow/statsquestions
+https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge
+https://developer.ibm.com/exchanges/models/all/max-toxic-comment-classifier/
+https://www.quora.com/Is-binary-relevance-same-as-one-vs-all
+https://stackoverflow.com/questions/44674847/what-are-the-differences-between-all-these-cross-entropy-losses-in-keras-and-ten
+https://vict0rs.ch/2018/06/17/multilabel-text-classification-tensorflow/
+https://github.com/tensorflow/skflow/issues/113
+https://towardsdatascience.com/journey-to-the-center-of-multi-label-classification-384c40229bff
+https://www.reddit.com/r/MLQuestions/comments/5n82zb/loss_function_for_sparse_multilabel_classification/
     </div>
     <div class="read-more">
-      <a href="/post/specialization/web-application/back-end/microservices/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/artificial-intelligence/machine-learning/kaggle/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2323,6 +2328,90 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/61/">»</a></li>
@@ -2330,7 +2419,7 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
 
       
       
-      <li><a href="/page/85/">»»</a></li>
+      <li><a href="/page/89/">»»</a></li>
       
 
       </ul>
@@ -2418,7 +2507,7 @@ cd /etc/metricbeat sudo metricbeat modules enable system systemctl start metricb
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="Introduction Scala is object-oriented: every value is an object.  classes traits mixin-based composition as a clean replacement for multiple inheritance.  Scala is functional: every function is a value.  higher-order functions nested functions currying (multiple parameter lists) case classes pattern matching model algebraic types used in many functional programming languages. Singleton objects provide a convenient way to group functions that aren’t members of a class.  Scala is statically typed the type system supports:" />
+  <meta name="description" content="Introduction Scala is object-oriented: every value is an object. classes traits mixin-based composition as a clean replacement for multiple inheritance. Scala is functional: every function is a value. higher-order functions nested functions currying (multiple parameter lists) case classes pattern matching model algebraic types used in many functional programming languages. Singleton objects provide a convenient way to group functions that aren’t members of a class. Scala is statically typed the type system supports:" />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/engineering-fundamentals/scala/a-tour-of-scala/" />
@@ -53,26 +53,25 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
 
 
 <meta property="og:title" content="The tour of Scala" />
-<meta property="og:description" content="Introduction Scala is object-oriented: every value is an object.  classes traits mixin-based composition as a clean replacement for multiple inheritance.  Scala is functional: every function is a value.  higher-order functions nested functions currying (multiple parameter lists) case classes pattern matching model algebraic types used in many functional programming languages. Singleton objects provide a convenient way to group functions that aren’t members of a class.  Scala is statically typed the type system supports:" />
+<meta property="og:description" content="Introduction Scala is object-oriented: every value is an object. classes traits mixin-based composition as a clean replacement for multiple inheritance. Scala is functional: every function is a value. higher-order functions nested functions currying (multiple parameter lists) case classes pattern matching model algebraic types used in many functional programming languages. Singleton objects provide a convenient way to group functions that aren’t members of a class. Scala is statically typed the type system supports:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/engineering-fundamentals/scala/a-tour-of-scala/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-03-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2019-03-01T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2019-03-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-03-01T00:00:00+00:00" />
 <meta itemprop="name" content="The tour of Scala">
-<meta itemprop="description" content="Introduction Scala is object-oriented: every value is an object.  classes traits mixin-based composition as a clean replacement for multiple inheritance.  Scala is functional: every function is a value.  higher-order functions nested functions currying (multiple parameter lists) case classes pattern matching model algebraic types used in many functional programming languages. Singleton objects provide a convenient way to group functions that aren’t members of a class.  Scala is statically typed the type system supports:"><meta itemprop="datePublished" content="2019-03-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-03-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2908">
+<meta itemprop="description" content="Introduction Scala is object-oriented: every value is an object. classes traits mixin-based composition as a clean replacement for multiple inheritance. Scala is functional: every function is a value. higher-order functions nested functions currying (multiple parameter lists) case classes pattern matching model algebraic types used in many functional programming languages. Singleton objects provide a convenient way to group functions that aren’t members of a class. Scala is statically typed the type system supports:"><meta itemprop="datePublished" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="2914">
 <meta itemprop="keywords" content="Scala," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The tour of Scala"/>
-<meta name="twitter:description" content="Introduction Scala is object-oriented: every value is an object.  classes traits mixin-based composition as a clean replacement for multiple inheritance.  Scala is functional: every function is a value.  higher-order functions nested functions currying (multiple parameter lists) case classes pattern matching model algebraic types used in many functional programming languages. Singleton objects provide a convenient way to group functions that aren’t members of a class.  Scala is statically typed the type system supports:"/>
+<meta name="twitter:description" content="Introduction Scala is object-oriented: every value is an object. classes traits mixin-based composition as a clean replacement for multiple inheritance. Scala is functional: every function is a value. higher-order functions nested functions currying (multiple parameter lists) case classes pattern matching model algebraic types used in many functional programming languages. Singleton objects provide a convenient way to group functions that aren’t members of a class. Scala is statically typed the type system supports:"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -529,35 +528,35 @@
 </table>
 <h2 id="unified-types">Unified Types</h2>
 <h2 id="classes">Classes</h2>
-<pre><code>class C(x: R)                 // constructor params - x is only available in class body 
-</code></pre><pre><code>class C(val x: R) 
+<pre tabindex="0"><code>class C(x: R)                 // constructor params - x is only available in class body 
+</code></pre><pre tabindex="0"><code>class C(val x: R) 
 var c = new C(4)                // constructor params - automatic public member defined 
 c.x
-</code></pre><pre><code>class C(var x: R) {
-  assert(x &gt; 0, &quot;positive please&quot;)     // constructor is class body 
+</code></pre><pre tabindex="0"><code>class C(var x: R) {
+  assert(x &gt; 0, &#34;positive please&#34;)     // constructor is class body 
   var y = x                            // declare a public member 
   val readonly = 5                     // declare a gettable but not settable member
   private var secret = 1               // declare a private member 
   def this = this(42)                  // alternative constructor
 }
-</code></pre><pre><code>class Greeter(prefix: String, suffix: String) {         // constructor parameters
+</code></pre><pre tabindex="0"><code>class Greeter(prefix: String, suffix: String) {         // constructor parameters
   def greet(name: String): Unit =        // The return type of the method greet is Unit
     println(prefix + name + suffix)      // Unit similarly to void in Java and C
 }
 
 //  make an instance of a class with the new keyword.
-val greeter = new Greeter(&quot;Hello, &quot;, &quot;!&quot;)   
-greeter.greet(&quot;Scala developer&quot;) // Hello, Scala developer!
-</code></pre><pre><code>new{ ... }                             // anonymous class
-</code></pre><pre><code>abstract class D { ... }               // define an abstract class. (non-createable)  
-</code></pre><pre><code>class C extends D { ... }　　　　　　　　 // define an inherited class.
-</code></pre><pre><code>class D(var x: R) 
+val greeter = new Greeter(&#34;Hello, &#34;, &#34;!&#34;)   
+greeter.greet(&#34;Scala developer&#34;) // Hello, Scala developer!
+</code></pre><pre tabindex="0"><code>new{ ... }                             // anonymous class
+</code></pre><pre tabindex="0"><code>abstract class D { ... }               // define an abstract class. (non-createable)  
+</code></pre><pre tabindex="0"><code>class C extends D { ... }　　　　　　　　 // define an inherited class.
+</code></pre><pre tabindex="0"><code>class D(var x: R) 
 class C(x: R) extends D(x)       // inheritance and constructor params.
                                  // (wishlist: automatically pass-up params by default)
 </code></pre><h2 id="traits">Traits</h2>
 <p>Traits are used to share interfaces and fields between classes. Classes and objects can extend traits but traits <strong>cannot be instantiated</strong> and therefore <strong>have no parameters</strong>.</p>
 <h3 id="defining-a-trait">Defining a trait</h3>
-<pre><code>
+<pre tabindex="0"><code>
 // Traits become useful as generic types and with abstract methods.
 trait Iterator[A] {
   def hasNext: Boolean
@@ -565,7 +564,7 @@ trait Iterator[A] {
 }
 </code></pre><h3 id="using-traits">Using traits</h3>
 <p>Use the <code>extends</code> keyword to extend a trait. Then implement any abstract members of the trait using the <code>override</code> keyword:</p>
-<pre><code>trait Iterator[A] {
+<pre tabindex="0"><code>trait Iterator[A] {
   def hasNext: Boolean
   def next(): A
 }
@@ -587,7 +586,7 @@ iterator.next()  // returns 0
 iterator.next()  // returns 1
 </code></pre><h3 id="subtyping">Subtyping</h3>
 <p>Where a given trait is required, a subtype of the trait can be used instead.</p>
-<pre><code>import scala.collection.mutable.ArrayBuffer
+<pre tabindex="0"><code>import scala.collection.mutable.ArrayBuffer
 
 trait Pet {
   val name: String
@@ -596,8 +595,8 @@ trait Pet {
 class Cat(val name: String) extends Pet
 class Dog(val name: String) extends Pet
 
-val dog = new Dog(&quot;Harry&quot;)
-val cat = new Cat(&quot;Sally&quot;)
+val dog = new Dog(&#34;Harry&#34;)
+val cat = new Cat(&#34;Sally&#34;)
 
 val animals = ArrayBuffer.empty[Pet]
 animals.append(dog)
@@ -605,41 +604,41 @@ animals.append(cat)
 animals.foreach(pet =&gt; println(pet.name))  // Prints Harry Sally
 </code></pre><h2 id="tuples">Tuples</h2>
 <p>A tuple is a class that can hold elements of different types. Tuples are immutable.</p>
-<pre><code>val ingredient = (&quot;Sugar&quot; , 25):Tuple2[String, Int]
+<pre tabindex="0"><code>val ingredient = (&#34;Sugar&#34; , 25):Tuple2[String, Int]
 </code></pre><p>Tuple in Scala is a series of classes: Tuple2, Tuple3, etc., through Tuple22.</p>
 <h3 id="accessing-the-elements">Accessing the elements</h3>
 <p>Tuple elements are accessed using underscore syntax. ‘tuple._n’ gives nth element.</p>
-<pre><code>println(ingredient._1) // Sugar
+<pre tabindex="0"><code>println(ingredient._1) // Sugar
 println(ingredient._2) // 25
 </code></pre><h3 id="destructuring-tuple-data">Destructuring tuple data</h3>
-<pre><code>val (name, quantity) = ingredient
+<pre tabindex="0"><code>val (name, quantity) = ingredient
 println(name) // Sugar
 println(quantity) // 25
 </code></pre><p>Tuple destructuring can be used in pattern matching too.</p>
-<pre><code>val planetDistanceFromSun = List((&quot;Mercury&quot;, 57.9), (&quot;Venus&quot;, 108.2), (&quot;Earth&quot;, 149.6 ), (&quot;Mars&quot;, 227.9), (&quot;Jupiter&quot;, 778.3))
+<pre tabindex="0"><code>val planetDistanceFromSun = List((&#34;Mercury&#34;, 57.9), (&#34;Venus&#34;, 108.2), (&#34;Earth&#34;, 149.6 ), (&#34;Mars&#34;, 227.9), (&#34;Jupiter&#34;, 778.3))
 
 planetDistanceFromSun.foreach{ tuple =&gt; {
   tuple match {
-      case (&quot;Mercury&quot;, distance) =&gt; println(s&quot;Mercury is $distance millions km far from Sun&quot;)
-      case p if(p._1 == &quot;Venus&quot;) =&gt; println(s&quot;Venus is ${p._2} millions km far from Sun&quot;)
-      case p if(p._1 == &quot;Earth&quot;) =&gt; println(s&quot;Blue planet is ${p._2} millions km far from Sun&quot;)
-      case _ =&gt; println(&quot;Too far....&quot;)
+      case (&#34;Mercury&#34;, distance) =&gt; println(s&#34;Mercury is $distance millions km far from Sun&#34;)
+      case p if(p._1 == &#34;Venus&#34;) =&gt; println(s&#34;Venus is ${p._2} millions km far from Sun&#34;)
+      case p if(p._1 == &#34;Earth&#34;) =&gt; println(s&#34;Blue planet is ${p._2} millions km far from Sun&#34;)
+      case _ =&gt; println(&#34;Too far....&#34;)
     }
   }
 }
 </code></pre><p>in ‘for’ comprehension</p>
-<pre><code>val numPairs = List((2, 5), (3, -7), (20, 56))
+<pre tabindex="0"><code>val numPairs = List((2, 5), (3, -7), (20, 56))
 for ((a, b) &lt;- numPairs) {
   println(a * b)
 }
 </code></pre><p>Users may sometimes find hard to choose between Tuples and case classes. As a rule, <strong>case classes are preferred choice if elements carry more meaning</strong>.</p>
 <h2 id="class-composition-with-mixins">Class Composition with Mixins</h2>
 <p><strong>Mixins are traits</strong> which are <strong>used to compose a class</strong>.</p>
-<pre><code>abstract class A {
+<pre tabindex="0"><code>abstract class A {
   val message: String
 }
 class B extends A {
-  val message = &quot;I'm an instance of class B&quot;
+  val message = &#34;I&#39;m an instance of class B&#34;
 }
 trait C extends A {
   def loudMessage = message.toUpperCase()
@@ -647,26 +646,26 @@ trait C extends A {
 class D extends B with C
 
 val d = new D
-println(d.message)  // I'm an instance of class B
-println(d.loudMessage)  // I'M AN INSTANCE OF CLASS B
+println(d.message)  // I&#39;m an instance of class B
+println(d.loudMessage)  // I&#39;M AN INSTANCE OF CLASS B
 </code></pre><p>Class <code>D</code> has a superclass <code>B</code> and a mixin <code>C</code>. Classes can only have one superclass but many mixins (using the keywords <code>extends</code> and <code>with</code> respectively). The mixins and the superclass may have the same supertype.</p>
 <h2 id="higher-order-functions">Higher-order Functions</h2>
 <h2 id="nested-methods">Nested Methods</h2>
 <h2 id="multiple-parameter-lists-currying">Multiple Parameter Lists (Currying)</h2>
 <h2 id="case-classes">Case Classes</h2>
-<pre><code>case class Point(x: Int, y: Int)   // case classes are immutable and compared by value.
+<pre tabindex="0"><code>case class Point(x: Int, y: Int)   // case classes are immutable and compared by value.
 val point = Point(1, 2)            // instantiate case classes without new keyword.
 val anotherPoint = Point(2, 2)
-</code></pre><pre><code>
+</code></pre><pre tabindex="0"><code>
 if (point == anotherPoint) {           // compared by value.
-  println(point + &quot; and &quot; + anotherPoint + &quot; are the same.&quot;)
+  println(point + &#34; and &#34; + anotherPoint + &#34; are the same.&#34;)
 } else {
-  println(point + &quot; and &quot; + anotherPoint + &quot; are different.&quot;)
+  println(point + &#34; and &#34; + anotherPoint + &#34; are different.&#34;)
 }
 </code></pre><h2 id="pattern-matching">Pattern Matching</h2>
 <h2 id="singleton-objects">Singleton Objects</h2>
 <p>Objects are single instances of their own definitions.</p>
-<pre><code>object O extends D { ... }                      // define a singleton. (module-like)
+<pre tabindex="0"><code>object O extends D { ... }                      // define a singleton. (module-like)
 </code></pre><h2 id="regular-expression-patterns">Regular Expression Patterns</h2>
 <h2 id="extractor-objects">Extractor Objects</h2>
 <h2 id="for-comprehensions">For Comprehensions</h2>
@@ -675,7 +674,7 @@ if (point == anotherPoint) {           // compared by value.
 <h2 id="upper-type-bounds">Upper Type Bounds</h2>
 <h2 id="lower-type-bounds">Lower Type Bounds</h2>
 <p>The term <code>B &gt;: A</code> expresses that the type parameter <code>B</code> or the abstract type <code>B</code> refer to a supertype of type <code>A</code>. In most cases, <code>A</code>will be the type parameter of the class and <code>B</code> will be the type parameter of a method.</p>
-<pre><code>trait Node[+B] {
+<pre tabindex="0"><code>trait Node[+B] {
   def prepend(elem: B): Node[B]
 }
 
@@ -690,7 +689,7 @@ case class Nil[+B]() extends Node[B] {
 }
 </code></pre><p>This program does <em>not</em> compile because the parameter <code>elem</code> in <code>prepend</code> is of type <code>B</code>, which we declared <em>co</em>variant. This doesn’t work because functions are <em>contra</em>variant in their parameter types and <em>co</em>variant in their result types.</p>
 <p>To fix this, we need to flip the variance of the type of the parameter <code>elem</code> in <code>prepend</code>. We do this by introducing a new type parameter <code>U</code> that has <code>B</code> as a lower type bound.</p>
-<pre><code>trait Node[+B] {
+<pre tabindex="0"><code>trait Node[+B] {
   def prepend[U &gt;: B](elem: U): Node[U]
 }
 
@@ -704,7 +703,7 @@ case class Nil[+B]() extends Node[B] {
   def prepend[U &gt;: B](elem: U): ListNode[U] = ListNode(elem, this)
 }
 </code></pre><p>Now we can do the following:</p>
-<pre><code>trait Bird
+<pre tabindex="0"><code>trait Bird
 case class AfricanSwallow() extends Bird
 case class EuropeanSwallow() extends Bird
 
@@ -714,7 +713,7 @@ birdList.prepend(new EuropeanSwallow)
 </code></pre><p>The <code>Node[Bird]</code> can be assigned the <code>africanSwallowList</code> but then accept <code>EuropeanSwallow</code>s.</p>
 <h2 id="inner-classes">Inner Classes</h2>
 <p>In Scala inner classes are bound to the outer object.</p>
-<pre><code>class Graph {
+<pre tabindex="0"><code>class Graph {
   class Node {
     var connectedNodes: List[Node] = Nil
     def connectTo(node: Node) {
@@ -731,14 +730,14 @@ birdList.prepend(new EuropeanSwallow)
   }
 }
 </code></pre><p>The <code>class Node</code> is a <em>path-dependent type</em> because it is nested in the <code>class Graph</code>. Therefore, all nodes in the <code>connectedNodes</code> must be created using the <code>newNode</code> from the same instance of <code>Graph</code>.</p>
-<pre><code>val graph1: Graph = new Graph
+<pre tabindex="0"><code>val graph1: Graph = new Graph
 val node1: graph1.Node = graph1.newNode
 val node2: graph1.Node = graph1.newNode
 val node3: graph1.Node = graph1.newNode
 node1.connectTo(node2)
 node3.connectTo(node1)
 </code></pre><p>The nodes of the other graph have a different type.</p>
-<pre><code>val graph1: Graph = new Graph
+<pre tabindex="0"><code>val graph1: Graph = new Graph
 val node1: graph1.Node = graph1.newNode
 val node2: graph1.Node = graph1.newNode
 node1.connectTo(node2)      // legal
@@ -746,7 +745,7 @@ val graph2: Graph = new Graph
 val node3: graph2.Node = graph2.newNode
 node1.connectTo(node3)      // illegal!
 </code></pre><p>Java let inner classes are members of the enclosing class. In Scala such a type can be expressed as well, it is written <code>Graph#Node</code>.</p>
-<pre><code>class Graph {
+<pre tabindex="0"><code>class Graph {
   class Node {
     var connectedNodes: List[Graph#Node] = Nil
     def connectTo(node: Graph#Node) {
@@ -764,18 +763,18 @@ node1.connectTo(node3)      // illegal!
 }
 </code></pre><h2 id="abstract-types">Abstract Types</h2>
 <p>Traits and abstract classes can have an abstract type member. This means that the concrete implementations define the actual type.</p>
-<pre><code>trait Buffer {
+<pre tabindex="0"><code>trait Buffer {
   type T
   val element: T
 }
 </code></pre><p>We can extend this trait in an abstract class, adding an upper-type-bound to <code>T</code> to make it more specific.</p>
-<pre><code>abstract class SeqBuffer extends Buffer {
+<pre tabindex="0"><code>abstract class SeqBuffer extends Buffer {
   type U
   type T &lt;: Seq[U]
   def length = element.length
 }
 </code></pre><p>Traits or classes with abstract type members are often used in combination with <strong>anonymous class instantiations</strong>.</p>
-<pre><code>abstract class IntSeqBuffer extends SeqBuffer {
+<pre tabindex="0"><code>abstract class IntSeqBuffer extends SeqBuffer {
   type U = Int
 }
 
@@ -785,11 +784,11 @@ def newIntSeqBuf(elem1: Int, elem2: Int): IntSeqBuffer =
        val element = List(elem1, elem2)
      }
 val buf = newIntSeqBuf(7, 8)
-println(&quot;length = &quot; + buf.length)
-println(&quot;content = &quot; + buf.element)
+println(&#34;length = &#34; + buf.length)
+println(&#34;content = &#34; + buf.element)
 </code></pre><p>Here the factory <code>newIntSeqBuf</code> uses an anonymous class implementation of <code>IntSeqBuf</code> (i.e. <code>new IntSeqBuffer</code>), setting <code>type T</code> to a <code>List[Int]</code>.</p>
 <p>It is also possible to <strong>turn abstract type members into type parameters of classes and vice versa</strong>. Here is a version of the code above which only uses type parameters:</p>
-<pre><code>abstract class Buffer[+T] {
+<pre tabindex="0"><code>abstract class Buffer[+T] {
   val element: T
 }
 abstract class SeqBuffer[U, +T &lt;: Seq[U]] extends Buffer[T] {
@@ -802,12 +801,12 @@ def newIntSeqBuf(e1: Int, e2: Int): SeqBuffer[Int, Seq[Int]] =
   }
 
 val buf = newIntSeqBuf(7, 8)
-println(&quot;length = &quot; + buf.length)
-println(&quot;content = &quot; + buf.element)
+println(&#34;length = &#34; + buf.length)
+println(&#34;content = &#34; + buf.element)
 </code></pre><p>Note that we have to use <strong>variance annotations</strong> here (<code>+T &lt;: Seq[U]</code>) in order to hide the concrete sequence implementation type of the object returned from method <code>newIntSeqBuf</code>. Furthermore, there are cases where it is not possible to replace abstract types with type parameters.</p>
 <h2 id="compound-types">Compound Types</h2>
 <p>Sometimes it is necessary to express that the type of an object is a subtype of several other types. In Scala this can be expressed with the help of <em>compound types</em>, which are intersections of object types.</p>
-<pre><code>trait Cloneable extends java.lang.Cloneable {
+<pre tabindex="0"><code>trait Cloneable extends java.lang.Cloneable {
   override def clone(): Cloneable = {
     super.clone().asInstanceOf[Cloneable]
   }
@@ -821,30 +820,30 @@ def cloneAndReset(obj: ?): Cloneable = {
   cloned
 }
 </code></pre><p>This compound type is written like this in Scala: <code>Cloneable with Resetable</code>.</p>
-<pre><code>def cloneAndReset(obj: Cloneable with Resetable): Cloneable = {
+<pre tabindex="0"><code>def cloneAndReset(obj: Cloneable with Resetable): Cloneable = {
   //...
 }
 </code></pre><h2 id="self-type">Self-type</h2>
 <p>Self-types are a way to declare that a trait must be mixed into another trait, even though it doesn’t directly extend it. That makes the members of the dependency available without imports.</p>
 <p>A self-type is a way to narrow the type of <code>this</code> or another identifier that aliases <code>this</code>.</p>
 <p>To use a self-type in a trait, write an identifier, the type of another trait to mix in, and a <code>=&gt;</code> (e.g. <code>someIdentifier: SomeOtherTrait =&gt;</code>).</p>
-<pre><code>trait User {
+<pre tabindex="0"><code>trait User {
   def username: String
 }
 
 trait Tweeter {
   this: User =&gt;  // reassign this
-  def tweet(tweetText: String) = println(s&quot;$username: $tweetText&quot;)
+  def tweet(tweetText: String) = println(s&#34;$username: $tweetText&#34;)
 }
 
 class VerifiedTweeter(val username_ : String) extends Tweeter with User {  
 // We mixin User because Tweeter required it
-	def username = s&quot;real $username_&quot;
+	def username = s&#34;real $username_&#34;
 }
 
-val realBeyoncé = new VerifiedTweeter(&quot;Beyoncé&quot;)
-realBeyoncé.tweet(&quot;Just spilled my glass of lemonade&quot;)  
-// prints &quot;real Beyoncé: Just spilled my glass of lemonade&quot;
+val realBeyoncé = new VerifiedTweeter(&#34;Beyoncé&#34;)
+realBeyoncé.tweet(&#34;Just spilled my glass of lemonade&#34;)  
+// prints &#34;real Beyoncé: Just spilled my glass of lemonade&#34;
 </code></pre><p>Because we said <code>this: User =&gt;</code> in <code>trait Tweeter</code>, now the variable <code>username</code> is in scope for the <code>tweet</code> method. This also means that since <code>VerifiedTweeter</code> extends <code>Tweeter</code>, it must also mix-in <code>User</code>(using <code>with User</code>).</p>
 <h2 id="implicit-parameters">Implicit Parameters</h2>
 <p>A method can have an <em>implicit</em> parameter list, marked by the <code>implicit</code> keyword at the start of the parameter list. <strong>If the parameters in that parameter list are not passed as usual</strong>, Scala will look if it can get an implicit value of the correct type, and if it can, pass it automatically.</p>
@@ -853,7 +852,7 @@ realBeyoncé.tweet(&quot;Just spilled my glass of lemonade&quot;)
 <li>Scala will first look for implicit definitions and implicit parameters that can be accessed directly (without a prefix) at the point the method with the implicit parameter block is called.</li>
 <li>Then it looks for members marked implicit in all the <strong>companion objects</strong> associated with the implicit candidate type.</li>
 </ul>
-<pre><code>abstract class Monoid[A] {
+<pre tabindex="0"><code>abstract class Monoid[A] {
   def add(x: A, y: A): A
   def unit: A
 }
@@ -861,7 +860,7 @@ realBeyoncé.tweet(&quot;Just spilled my glass of lemonade&quot;)
 object ImplicitTest {
   implicit val stringMonoid: Monoid[String] = new Monoid[String] {
     def add(x: String, y: String): String = x concat y
-    def unit: String = &quot;&quot;
+    def unit: String = &#34;&#34;
   }
   
   implicit val intMonoid: Monoid[Int] = new Monoid[Int] {
@@ -875,7 +874,7 @@ object ImplicitTest {
     
   def main(args: Array[String]): Unit = {
     println(sum(List(1, 2, 3)))       // uses IntMonoid implicitly
-    println(sum(List(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;))) // uses StringMonoid implicitly
+    println(sum(List(&#34;a&#34;, &#34;b&#34;, &#34;c&#34;))) // uses StringMonoid implicitly
   }
 }
 </code></pre><p>To show how implicit parameters work, we first define monoids <code>StringMonoid</code> and <code>IntMonoid</code> for strings and integers, respectively. The <code>implicit</code> keyword <strong>indicates that the corresponding object can be used implicitly</strong>.</p>
@@ -885,11 +884,11 @@ object ImplicitTest {
 <h2 id="type-inference">Type Inference</h2>
 <h2 id="operators">Operators</h2>
 <p>In Scala, operators are methods. <strong>Any method with a single parameter can be used as an <em>infix operator</em>.</strong></p>
-<pre><code>10.+(1)
-</code></pre><pre><code>10 + 1
+<pre tabindex="0"><code>10.+(1)
+</code></pre><pre tabindex="0"><code>10 + 1
 </code></pre><h3 id="defining-and-using-operators">Defining and using operators</h3>
 <p>You can use any legal identifier as an operator. This includes a name like <code>add</code> or a symbol(s) like <code>+</code>.</p>
-<pre><code>case class Vec(val x: Double, val y: Double) {
+<pre tabindex="0"><code>case class Vec(val x: Double, val y: Double) {
   def +(that: Vec) = new Vec(this.x + that.x, this.y + that.y)
 }
 
@@ -900,7 +899,7 @@ val vector3 = vector1 + vector2
 vector3.x  // 3.0
 vector3.y  // 3.0
 </code></pre><p>Using parentheses, you can build up complex expressions with readable syntax.</p>
-<pre><code>case class MyBool(x: Boolean) {
+<pre tabindex="0"><code>case class MyBool(x: Boolean) {
   def and(that: MyBool): MyBool = if (x) that else this
   def or(that: MyBool): MyBool = if (x) this else that
   def negate: MyBool = MyBool(!x)
@@ -909,7 +908,7 @@ vector3.y  // 3.0
 def not(x: MyBool) = x.negate
 def xor(x: MyBool, y: MyBool) = (x or y) and not(x and y)
 </code></pre><h3 id="precedence">Precedence</h3>
-<pre><code>(characters not shown below)
+<pre tabindex="0"><code>(characters not shown below)
 * / %
 + -
 :
@@ -920,13 +919,13 @@ def xor(x: MyBool, y: MyBool) = (x or y) and not(x and y)
 |
 (all letters)
 </code></pre><p>For example</p>
-<pre><code>a + b ^? c ?^ d less a ==&gt; b | c
+<pre tabindex="0"><code>a + b ^? c ?^ d less a ==&gt; b | c
 </code></pre><p>Is equivalent to</p>
-<pre><code>((a + b) ^? (c ?^ d)) less ((a ==&gt; b) | c)
+<pre tabindex="0"><code>((a + b) ^? (c ?^ d)) less ((a ==&gt; b) | c)
 </code></pre><p><code>?^</code> has the highest precedence because it starts with the character <code>?</code>. <code>+</code> has the second highest precedence, followed by <code>==&gt;</code>, <code>^?</code>, <code>|</code>, and <code>less</code>.</p>
 <h2 id="by-name-parameters">By-name Parameters</h2>
 <p><em>By-name parameters</em> are only evaluated when used. They are in contrast to <em>by-value parameters</em>. To make a parameter called by-name, simply prepend <code>=&gt;</code> to its type.</p>
-<pre><code>def whileLoop(condition: =&gt; Boolean)(body: =&gt; Unit): Unit =
+<pre tabindex="0"><code>def whileLoop(condition: =&gt; Boolean)(body: =&gt; Unit): Unit =
   if (condition) {
     body
     whileLoop(condition)(body)
@@ -1110,7 +1109,7 @@ whileLoop (i &gt; 0) {
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

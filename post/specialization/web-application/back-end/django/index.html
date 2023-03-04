@@ -23,9 +23,9 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Ye Zheng" />
-  <meta name="description" content="First steps  Requests and responses Models and the admin site Views and templates Forms and generic views Testing Static files Customizing the admin site  Advanced Tutorials: How to write reusable apps | Writing your first patch for Django
+  <meta name="description" content="First steps Requests and responses Models and the admin site Views and templates Forms and generic views Testing Static files Customizing the admin site Advanced Tutorials: How to write reusable apps | Writing your first patch for Django
 The model layer Models Generally, each model maps to a single database table.
-from django.db import models class Person(models.Model): name = models.CharField(max_length=30)  The name of the table, myapp_person, is automatically derived from the name of the app and the model class." />
+from django.db import models class Person(models.Model): name = models.CharField(max_length=30) The name of the table, myapp_person, is automatically derived from the name of the app and the model class." />
 
   <meta name="keywords" content="technique, programming, computer science" />
 
@@ -34,7 +34,7 @@ from django.db import models class Person(models.Model): name = models.CharField
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/web-application/back-end/django/" />
@@ -55,32 +55,31 @@ from django.db import models class Person(models.Model): name = models.CharField
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
 
 
 <meta property="og:title" content="Getting start with Django" />
-<meta property="og:description" content="First steps  Requests and responses Models and the admin site Views and templates Forms and generic views Testing Static files Customizing the admin site  Advanced Tutorials: How to write reusable apps | Writing your first patch for Django
+<meta property="og:description" content="First steps Requests and responses Models and the admin site Views and templates Forms and generic views Testing Static files Customizing the admin site Advanced Tutorials: How to write reusable apps | Writing your first patch for Django
 The model layer Models Generally, each model maps to a single database table.
-from django.db import models class Person(models.Model): name = models.CharField(max_length=30)  The name of the table, myapp_person, is automatically derived from the name of the app and the model class." />
+from django.db import models class Person(models.Model): name = models.CharField(max_length=30) The name of the table, myapp_person, is automatically derived from the name of the app and the model class." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/web-application/back-end/django/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2017-05-22T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2017-05-22T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2017-05-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-05-22T00:00:00+00:00" />
 <meta itemprop="name" content="Getting start with Django">
-<meta itemprop="description" content="First steps  Requests and responses Models and the admin site Views and templates Forms and generic views Testing Static files Customizing the admin site  Advanced Tutorials: How to write reusable apps | Writing your first patch for Django
+<meta itemprop="description" content="First steps Requests and responses Models and the admin site Views and templates Forms and generic views Testing Static files Customizing the admin site Advanced Tutorials: How to write reusable apps | Writing your first patch for Django
 The model layer Models Generally, each model maps to a single database table.
-from django.db import models class Person(models.Model): name = models.CharField(max_length=30)  The name of the table, myapp_person, is automatically derived from the name of the app and the model class."><meta itemprop="datePublished" content="2017-05-22T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2017-05-22T00:00:00&#43;00:00" />
+from django.db import models class Person(models.Model): name = models.CharField(max_length=30) The name of the table, myapp_person, is automatically derived from the name of the app and the model class."><meta itemprop="datePublished" content="2017-05-22T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2017-05-22T00:00:00+00:00" />
 <meta itemprop="wordCount" content="2062">
 <meta itemprop="keywords" content="Django," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Getting start with Django"/>
-<meta name="twitter:description" content="First steps  Requests and responses Models and the admin site Views and templates Forms and generic views Testing Static files Customizing the admin site  Advanced Tutorials: How to write reusable apps | Writing your first patch for Django
+<meta name="twitter:description" content="First steps Requests and responses Models and the admin site Views and templates Forms and generic views Testing Static files Customizing the admin site Advanced Tutorials: How to write reusable apps | Writing your first patch for Django
 The model layer Models Generally, each model maps to a single database table.
-from django.db import models class Person(models.Model): name = models.CharField(max_length=30)  The name of the table, myapp_person, is automatically derived from the name of the app and the model class."/>
+from django.db import models class Person(models.Model): name = models.CharField(max_length=30) The name of the table, myapp_person, is automatically derived from the name of the app and the model class."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -397,7 +396,7 @@ from django.db import models class Person(models.Model): name = models.CharField
 <h2 id="the-model-layer">The model layer</h2>
 <h3 id="models">Models</h3>
 <p>Generally, each model maps to a single database table.</p>
-<pre><code>from django.db import models
+<pre tabindex="0"><code>from django.db import models
 
 class Person(models.Model):
     name = models.CharField(max_length=30)
@@ -405,11 +404,11 @@ class Person(models.Model):
 <li>The name of the table, <code>myapp_person</code>, is automatically derived from the name of the app and the model class.</li>
 <li>An <code>id</code> field is added automatically, If you’d like to specify a custom primary key, just specify <code>primary_key=True</code> on one of your fields, then django won’t add the automatic <code>id </code>column.</li>
 </ul>
-<pre><code># settings.py file
+<pre tabindex="0"><code># settings.py file
 
 INSTALLED_APPS = [
     #...
-    'myapp',
+    &#39;myapp&#39;,
     #...
 ]
 </code></pre><p>When you add new apps to <code>INSTALLED_APPS</code>, be sure to run <code>manage.py migrate</code>, optionally making migrations for them first with <code>manage.py makemigrations</code>.</p>
@@ -476,11 +475,11 @@ INSTALLED_APPS = [
 <li>
 <p><strong>ForeignKey</strong></p>
 <p>A many-to-one relationship.</p>
-<pre><code>from django.db import models
+<pre tabindex="0"><code>from django.db import models
 
 class Car(models.Model):
     manufacturer = models.ForeignKey(
-        'Manufacturer',
+        &#39;Manufacturer&#39;,
         on_delete=models.CASCADE,
     )
     # ...
@@ -489,9 +488,9 @@ class Manufacturer(models.Model):
     # ...
     pass
 </code></pre><p>To refer to models defined in another application, you can explicitly specify a model with the full application label.</p>
-<pre><code>class Car(models.Model):
+<pre tabindex="0"><code>class Car(models.Model):
     manufacturer = models.ForeignKey(
-        'another_appname.Manufacturer',
+        &#39;another_appname.Manufacturer&#39;,
         on_delete=models.CASCADE,
     )
 </code></pre><p>A database <strong>index</strong> is automatically created on the <code>ForeignKey</code>. You can disable this by setting <code>db_index</code> to False.</p>
@@ -543,7 +542,7 @@ class Manufacturer(models.Model):
 </li>
 <li>
 <p><strong>OneToOneField</strong></p>
-<pre><code>from django.conf import settings
+<pre tabindex="0"><code>from django.conf import settings
 from django.db import models
 
 class MySpecialUser(models.Model):
@@ -554,12 +553,12 @@ class MySpecialUser(models.Model):
     supervisor = models.OneToOneField(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
-        related_name='supervisor_of',
+        related_name=&#39;supervisor_of&#39;,
     )
-</code></pre><pre><code>&gt;&gt; user = User.objects.get(pk=1)
-&gt;&gt;&gt; hasattr(user, 'myspecialuser')
+</code></pre><pre tabindex="0"><code>&gt;&gt; user = User.objects.get(pk=1)
+&gt;&gt;&gt; hasattr(user, &#39;myspecialuser&#39;)
 True
-&gt;&gt;&gt; hasattr(user, 'supervisor_of')
+&gt;&gt;&gt; hasattr(user, &#39;supervisor_of&#39;)
 True
 </code></pre><ul>
 <li><code>OneToOneField.on_delete</code></li>
@@ -575,18 +574,18 @@ True
 </ul>
 <h4 id="meta-options">Meta options</h4>
 <p>anything that’s not a field</p>
-<pre><code>from django.db import models
+<pre tabindex="0"><code>from django.db import models
 
 class Ox(models.Model):
     horn_length = models.IntegerField()
 
     class Meta:
-        ordering = [&quot;horn_length&quot;]
-        verbose_name_plural = &quot;oxen&quot;
+        ordering = [&#34;horn_length&#34;]
+        verbose_name_plural = &#34;oxen&#34;
         db_table = tabel_name
 </code></pre><h4 id="model-methods">Model methods</h4>
 <p>Whereas <code>Manager</code> methods are intended to do “table-wide” things, model methods should act on a particular model instance.</p>
-<pre><code>from django.db import models
+<pre tabindex="0"><code>from django.db import models
 
 class Person(models.Model):
     first_name = models.CharField(max_length=50)
@@ -594,59 +593,59 @@ class Person(models.Model):
     birth_date = models.DateField()
 
     def baby_boomer_status(self):
-        &quot;Returns the person's baby-boomer status.&quot;
+        &#34;Returns the person&#39;s baby-boomer status.&#34;
         import datetime
         if self.birth_date &lt; datetime.date(1945, 8, 1):
-            return &quot;Pre-boomer&quot;
+            return &#34;Pre-boomer&#34;
         elif self.birth_date &lt; datetime.date(1965, 1, 1):
-            return &quot;Baby boomer&quot;
+            return &#34;Baby boomer&#34;
         else:
-            return &quot;Post-boomer&quot;
+            return &#34;Post-boomer&#34;
 
     @property
     def full_name(self):
-        &quot;Returns the person's full name.&quot;
-        return '%s %s' % (self.first_name, self.last_name)
+        &#34;Returns the person&#39;s full name.&#34;
+        return &#39;%s %s&#39; % (self.first_name, self.last_name)
 </code></pre><p><code>__str__()</code>
 A Python “magic method” that returns a string representation of any object.</p>
 <h4 id="overriding-predefined-model-methods">Overriding predefined model methods</h4>
-<pre><code>class Blog(models.Model):
+<pre tabindex="0"><code>class Blog(models.Model):
     name = models.CharField(max_length=100)
     tagline = models.TextField()
 
     def save(self, *args, **kwargs):
         do_something()
-        super().save(*args, **kwargs)  # Call the &quot;real&quot; save() method.
+        super().save(*args, **kwargs)  # Call the &#34;real&#34; save() method.
         do_something_else()
 </code></pre><h4 id="executing-custom-sql">Executing custom SQL</h4>
-<pre><code>Person.objects.raw('SELECT * FROM myapp_person WHERE last_name = %s', [lname])
+<pre tabindex="0"><code>Person.objects.raw(&#39;SELECT * FROM myapp_person WHERE last_name = %s&#39;, [lname])
 </code></pre><p>If you want to include literal percent signs in the query, you have to double them in the case you are passing parameters</p>
-<pre><code>from django.db import connection
+<pre tabindex="0"><code>from django.db import connection
 
 def my_custom_sql(self):
     with connection.cursor() as cursor:
-        cursor.execute(&quot;UPDATE bar SET foo = 1 WHERE baz = %s&quot;, [self.baz])
-        cursor.execute(&quot;SELECT foo FROM bar WHERE baz = '30%%' AND id = %s&quot;, [self.id])
+        cursor.execute(&#34;UPDATE bar SET foo = 1 WHERE baz = %s&#34;, [self.baz])
+        cursor.execute(&#34;SELECT foo FROM bar WHERE baz = &#39;30%%&#39; AND id = %s&#34;, [self.id])
         row = cursor.fetchone()
 
     return row
-</code></pre><pre><code>from django.db import connections
-cursor = connections['my_db_alias'].cursor()
+</code></pre><pre tabindex="0"><code>from django.db import connections
+cursor = connections[&#39;my_db_alias&#39;].cursor()
 </code></pre><h4 id="calling-stored-procedures">Calling stored procedures</h4>
-<pre><code>with connection.cursor() as cursor:
+<pre tabindex="0"><code>with connection.cursor() as cursor:
     cursor.callproc(procedures_name, [parameter_list])
 </code></pre><h2 id="making-queries">Making queries</h2>
 <p>Creating objects <code>ModelNmae(**kwargs)</code> and then use <code>save()</code> method the same as  <code>create()</code> method
 Saving changes to objects <code>save()</code>
 Saving ForeignKey and ManyToManyField fields</p>
-<pre><code>&gt;&gt;&gt; entry.blog = cheese_blog
+<pre tabindex="0"><code>&gt;&gt;&gt; entry.blog = cheese_blog
 &gt;&gt;&gt; entry.save()
-&gt;&gt;&gt; john = Author.objects.create(name=&quot;John&quot;)
-&gt;&gt;&gt; paul = Author.objects.create(name=&quot;Paul&quot;)
+&gt;&gt;&gt; john = Author.objects.create(name=&#34;John&#34;)
+&gt;&gt;&gt; paul = Author.objects.create(name=&#34;Paul&#34;)
 &gt;&gt;&gt; entry.authors.add(john, paul)
 </code></pre><p>Retrieving objects
 Retrieving all objects using <code>all()</code></p>
-<pre><code>&gt;&gt;&gt; Entry.objects       # Manager, Access it directly via the model class
+<pre tabindex="0"><code>&gt;&gt;&gt; Entry.objects       # Manager, Access it directly via the model class
 &lt;django.db.models.manager.Manager object at ...&gt;
 &gt;&gt;&gt; all_entries = Entry.objects.all()
 </code></pre><p>Retrieving specific objects with filters</p>
@@ -779,58 +778,58 @@ Falling back to raw SQL</p>
 </ul>
 <h1 id="django-rest-framework">Django REST Framework</h1>
 <h2 id="project-setup">Project setup</h2>
-<pre><code>django-admin.py startproject tutorial
+<pre tabindex="0"><code>django-admin.py startproject tutorial
 cd tutorial
 python manage.py createsuperuser --email admin@example.com --username admin
 python manage.py startapp snippets
-</code></pre><pre><code># tutorial/settings.py
+</code></pre><pre tabindex="0"><code># tutorial/settings.py
 INSTALLED_APPS = (
     ...
-    'rest_framework',
-    'snippets.apps.SnippetsConfig',
+    &#39;rest_framework&#39;,
+    &#39;snippets.apps.SnippetsConfig&#39;,
 )
 </code></pre><h2 id="creating-a-model-to-work-with">Creating a model to work with</h2>
-<pre><code># snippets/models.py
+<pre tabindex="0"><code># snippets/models.py
 
 from django.db import models
 
 class Snippet(models.Model):
     created = models.DateTimeField(auto_now_add=True)
-    title = models.CharField(max_length=100, blank=True, default='')
+    title = models.CharField(max_length=100, blank=True, default=&#39;&#39;)
     code = models.TextField()
     linenos = models.BooleanField(default=False)
-    language = models.CharField(choices=LANGUAGE_CHOICES, default='python', max_length=100)
+    language = models.CharField(choices=LANGUAGE_CHOICES, default=&#39;python&#39;, max_length=100)
 
     class Meta:
-        ordering = ('created',)
-</code></pre><pre><code>python manage.py makemigrations snippets
+        ordering = (&#39;created&#39;,)
+</code></pre><pre tabindex="0"><code>python manage.py makemigrations snippets
 python manage.py migrate
 </code></pre><h2 id="creating-a-serializer-class">Creating a Serializer class</h2>
 <p>If you serialize querysets instead of model instances, just simply add a <code>many=True</code> flag to the serializer arguments.</p>
-<pre><code>from rest_framework import serializers
+<pre tabindex="0"><code>from rest_framework import serializers
 
 class SnippetSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     title = serializers.CharField(required=False, allow_blank=True, max_length=100)
-    code = serializers.CharField(style={'base_template': 'textarea.html'})
+    code = serializers.CharField(style={&#39;base_template&#39;: &#39;textarea.html&#39;})
     linenos = serializers.BooleanField(required=False)
-    language = serializers.ChoiceField(choices=LANGUAGE_CHOICES, default='python')
-    style = serializers.ChoiceField(choices=STYLE_CHOICES, default='friendly')
+    language = serializers.ChoiceField(choices=LANGUAGE_CHOICES, default=&#39;python&#39;)
+    style = serializers.ChoiceField(choices=STYLE_CHOICES, default=&#39;friendly&#39;)
 
     def create(self, validated_data):
-        &quot;&quot;&quot;
+        &#34;&#34;&#34;
         Create and return a new `Snippet` instance, given the validated data.
-        &quot;&quot;&quot;
+        &#34;&#34;&#34;
         return Snippet.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
-        &quot;&quot;&quot;
+        &#34;&#34;&#34;
         Update and return an existing `Snippet` instance, given the validated data.
-        &quot;&quot;&quot;
-        instance.title = validated_data.get('title', instance.title)
-        instance.code = validated_data.get('code', instance.code)
-        instance.linenos = validated_data.get('linenos', instance.linenos)
-        instance.language = validated_data.get('language', instance.language)
+        &#34;&#34;&#34;
+        instance.title = validated_data.get(&#39;title&#39;, instance.title)
+        instance.code = validated_data.get(&#39;code&#39;, instance.code)
+        instance.linenos = validated_data.get(&#39;linenos&#39;, instance.linenos)
+        instance.language = validated_data.get(&#39;language&#39;, instance.language)
         instance.save()
         return instance
 </code></pre><h2 id="using-modelserializers">Using ModelSerializers</h2>
@@ -840,42 +839,42 @@ class SnippetSerializer(serializers.Serializer):
 <ul>
 <li>Simple default implementations for the <code>create()</code> and <code>update()</code> methods.</li>
 </ul>
-<pre><code># snippets/serializers.py
+<pre tabindex="0"><code># snippets/serializers.py
 # class SnippetSerializer(serializers.HyperlinkedModelSerializer):
 class SnippetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Snippet
-        fields = ('id', 'title', 'code', 'linenos', 'language')
+        fields = (&#39;id&#39;, &#39;title&#39;, &#39;code&#39;, &#39;linenos&#39;, &#39;language&#39;)
 </code></pre><h2 id="writing-regular-django-views-using-serializer">Writing regular Django views using Serializer</h2>
-<pre><code># snippets/serializers.py
+<pre tabindex="0"><code># snippets/serializers.py
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from tutorial.quickstart.serializers import UserSerializer, GroupSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
-    &quot;&quot;&quot;
+    &#34;&#34;&#34;
     API endpoint that allows users to be viewed or edited.
-    &quot;&quot;&quot;
-    queryset = User.objects.all().order_by('-date_joined')
+    &#34;&#34;&#34;
+    queryset = User.objects.all().order_by(&#39;-date_joined&#39;)
     serializer_class = UserSerializer
 
 
 class GroupViewSet(viewsets.ModelViewSet):
-    &quot;&quot;&quot;
+    &#34;&#34;&#34;
     API endpoint that allows groups to be viewed or edited.
-    &quot;&quot;&quot;
+    &#34;&#34;&#34;
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
 </code></pre><h3 id="request-objects">Request objects</h3>
-<pre><code>request.POST  # Only handles form data.  Only works for 'POST' method.
-request.data  # Handles arbitrary data.  Works for 'POST', 'PUT' and 'PATCH' methods.
+<pre tabindex="0"><code>request.POST  # Only handles form data.  Only works for &#39;POST&#39; method.
+request.data  # Handles arbitrary data.  Works for &#39;POST&#39;, &#39;PUT&#39; and &#39;PATCH&#39; methods.
 </code></pre><h3 id="response-objects">Response objects</h3>
-<pre><code>return Response(data)  # Renders to content type as requested by the client.
+<pre tabindex="0"><code>return Response(data)  # Renders to content type as requested by the client.
 </code></pre><h3 id="status-codes">Status codes</h3>
 <p>REST framework provides more explicit identifiers for each status code the <code>status</code> module.</p>
 <h3 id="wrapping-api-views">Wrapping API views</h3>
-<pre><code>from snippets.models import Snippet
+<pre tabindex="0"><code>from snippets.models import Snippet
 from snippets.serializers import SnippetSerializer
 from django.http import Http404
 from rest_framework.views import APIView
@@ -884,9 +883,9 @@ from rest_framework import status
 
 
 class SnippetList(APIView):
-    &quot;&quot;&quot;
+    &#34;&#34;&#34;
     List all snippets, or create a new snippet.
-    &quot;&quot;&quot;
+    &#34;&#34;&#34;
     def get(self, request, format=None):
         snippets = Snippet.objects.all()
         serializer = SnippetSerializer(snippets, many=True)
@@ -898,10 +897,10 @@ class SnippetList(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-</code></pre><pre><code>class SnippetDetail(APIView):
-    &quot;&quot;&quot;
+</code></pre><pre tabindex="0"><code>class SnippetDetail(APIView):
+    &#34;&#34;&#34;
     Retrieve, update or delete a snippet instance.
-    &quot;&quot;&quot;
+    &#34;&#34;&#34;
     def get_object(self, pk):
         try:
             return Snippet.objects.get(pk=pk)
@@ -926,7 +925,7 @@ class SnippetList(APIView):
         snippet.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 </code></pre><h3 id="using-mixins">Using mixins</h3>
-<pre><code>from snippets.models import Snippet
+<pre tabindex="0"><code>from snippets.models import Snippet
 from snippets.serializers import SnippetSerializer
 from rest_framework import mixins
 from rest_framework import generics
@@ -959,7 +958,7 @@ class SnippetDetail(mixins.RetrieveModelMixin,
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
 </code></pre><h3 id="using-generic-class-based-views">Using generic class-based views</h3>
-<pre><code>from snippets.models import Snippet
+<pre tabindex="0"><code>from snippets.models import Snippet
 from snippets.serializers import SnippetSerializer
 from rest_framework import generics
 
@@ -971,32 +970,32 @@ class SnippetDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Snippet.objects.all()
     serializer_class = SnippetSerializer
 </code></pre><h2 id="wire-up-the-api-urls">Wire up the API URLs.</h2>
-<pre><code># snippets/urls.py
+<pre tabindex="0"><code># snippets/urls.py
 from django.conf.urls import url
 from rest_framework.urlpatterns import format_suffix_patterns
 from snippets import views
 
 urlpatterns = [
-    url(r'^snippets/$', iews.SnippetList.as_view()),
-    url(r'^snippets/(?P&lt;pk&gt;[0-9]+)/$', views.SnippetDetail.as_view()),
+    url(r&#39;^snippets/$&#39;, iews.SnippetList.as_view()),
+    url(r&#39;^snippets/(?P&lt;pk&gt;[0-9]+)/$&#39;, views.SnippetDetail.as_view()),
 ]
 urlpatterns = format_suffix_patterns(urlpatterns)
-</code></pre><pre><code># tutorial/urls.py
+</code></pre><pre tabindex="0"><code># tutorial/urls.py
 from django.conf.urls import url, include
 
 urlpatterns = [
-    url(r'^', include('snippets.urls')),
+    url(r&#39;^&#39;, include(&#39;snippets.urls&#39;)),
 ]
 </code></pre><h2 id="testing-web-api">Testing Web API</h2>
-<pre><code>python manage.py runserver
-</code></pre><pre><code>pip install httpie
-</code></pre><pre><code>http http://127.0.0.1:8000/snippets/
-</code></pre><pre><code>bash: curl -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/
-</code></pre><pre><code>bash: http -a admin:password123 http://127.0.0.1:8000/users/
-</code></pre><pre><code># POST using form data
-http --form POST http://127.0.0.1:8000/snippets/ code=&quot;print 123&quot;
+<pre tabindex="0"><code>python manage.py runserver
+</code></pre><pre tabindex="0"><code>pip install httpie
+</code></pre><pre tabindex="0"><code>http http://127.0.0.1:8000/snippets/
+</code></pre><pre tabindex="0"><code>bash: curl -H &#39;Accept: application/json; indent=4&#39; -u admin:password123 http://127.0.0.1:8000/users/
+</code></pre><pre tabindex="0"><code>bash: http -a admin:password123 http://127.0.0.1:8000/users/
+</code></pre><pre tabindex="0"><code># POST using form data
+http --form POST http://127.0.0.1:8000/snippets/ code=&#34;print 123&#34;
 # POST using JSON
-http --json POST http://127.0.0.1:8000/snippets/ code=&quot;print 456&quot;
+http --json POST http://127.0.0.1:8000/snippets/ code=&#34;print 456&#34;
 </code></pre><p>Where are we now</p>
 <p>Serializers
 Views</p>
@@ -1043,7 +1042,7 @@ Testing our API</p>
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/specialization/web-application/front-end/angular/">
+          <a class="prev" href="/post/specialization/web-application/front-end/react/">
             
             <i class="iconfont">
               <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -1053,7 +1052,7 @@ Testing our API</p>
 </svg>
 
             </i>
-            <span class="prev-text nav-default">Angular</span>
+            <span class="prev-text nav-default">React Tutorial</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
@@ -1172,7 +1171,7 @@ Testing our API</p>
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

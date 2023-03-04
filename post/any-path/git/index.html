@@ -38,7 +38,7 @@ $ git config [--global] color." />
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/any-path/git/" />
@@ -59,7 +59,7 @@ $ git config [--global] color." />
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -75,9 +75,8 @@ $ git config [--global] user.email &lt;email&gt; Set colorization of command lin
 $ git config [--global] color." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/any-path/git/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2016-10-30T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2016-10-30T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2016-10-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-10-30T00:00:00+00:00" />
 <meta itemprop="name" content="Git cheat sheet ">
 <meta itemprop="description" content="Create Clone an existing repository
 $ git clone ssh://user@domain.tld/repo.git Clone an existing repository and all its sub-modules recursively
@@ -85,8 +84,8 @@ $ git clone --recurse-submodules ssh://user@domain.tld/repo.git Create a new loc
 $ git init Configuration Set the name attached to all your commits
 $ git config [--global] user.name &lt;name&gt; Set the email attached to all your commits
 $ git config [--global] user.email &lt;email&gt; Set colorization of command line output for all repos
-$ git config [--global] color."><meta itemprop="datePublished" content="2016-10-30T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2016-10-30T00:00:00&#43;00:00" />
+$ git config [--global] color."><meta itemprop="datePublished" content="2016-10-30T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2016-10-30T00:00:00+00:00" />
 <meta itemprop="wordCount" content="756">
 <meta itemprop="keywords" content="git,tools," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Git cheat sheet "/>
@@ -365,134 +364,134 @@ $ git config [--global] color."/>
     <div class="post-content">
       <h3 id="create">Create</h3>
 <p>Clone an existing repository</p>
-<pre><code>$ git clone ssh://user@domain.tld/repo.git
+<pre tabindex="0"><code>$ git clone ssh://user@domain.tld/repo.git
 </code></pre><p>Clone an existing repository and all its sub-modules recursively</p>
-<pre><code>$ git clone --recurse-submodules ssh://user@domain.tld/repo.git
+<pre tabindex="0"><code>$ git clone --recurse-submodules ssh://user@domain.tld/repo.git
 </code></pre><p>Create a new local repository</p>
-<pre><code>$ git init
+<pre tabindex="0"><code>$ git init
 </code></pre><h3 id="configuration">Configuration</h3>
 <p>Set the name attached to all your commits</p>
-<pre><code>$ git config [--global] user.name &lt;name&gt;
+<pre tabindex="0"><code>$ git config [--global] user.name &lt;name&gt;
 </code></pre><p>Set the email attached to all your commits</p>
-<pre><code>$ git config [--global] user.email &lt;email&gt;
+<pre tabindex="0"><code>$ git config [--global] user.email &lt;email&gt;
 </code></pre><p>Set colorization of command line output for all repos</p>
-<pre><code>$ git config [--global] color.ui auto
+<pre tabindex="0"><code>$ git config [--global] color.ui auto
 </code></pre><p>Print set name (in current repository or globally)</p>
-<pre><code>$ git config [--global] user.name
+<pre tabindex="0"><code>$ git config [--global] user.name
 </code></pre><p>Print set email (in current repository or globally)</p>
-<pre><code>$ git config [--global] user.email
+<pre tabindex="0"><code>$ git config [--global] user.email
 </code></pre><h3 id="local-changes">Local Changes</h3>
 <p>Changed files in your working directory</p>
-<pre><code>$ git status
+<pre tabindex="0"><code>$ git status
 </code></pre><p>Changes to tracked files</p>
-<pre><code>$ git diff
+<pre tabindex="0"><code>$ git diff
 </code></pre><p>Add current changes in file to the next commit</p>
-<pre><code>$ git add &lt;file&gt;
+<pre tabindex="0"><code>$ git add &lt;file&gt;
 </code></pre><p>Add all current changes to the next commit</p>
-<pre><code>$ git add .
+<pre tabindex="0"><code>$ git add .
 </code></pre><p>Add some changes in <!-- raw HTML omitted --> to the next commit interactively</p>
-<pre><code>$ git add -p &lt;file&gt;
+<pre tabindex="0"><code>$ git add -p &lt;file&gt;
 </code></pre><p>Rename file and add it to next commit</p>
-<pre><code>$ git mv &lt;file&gt; &lt;new file name&gt;
+<pre tabindex="0"><code>$ git mv &lt;file&gt; &lt;new file name&gt;
 </code></pre><p>Delete file and add its deletion to next commit</p>
-<pre><code>$ git rm &lt;file&gt;
+<pre tabindex="0"><code>$ git rm &lt;file&gt;
 </code></pre><p>Commit all local changes in tracked files</p>
-<pre><code>$ git commit -a
+<pre tabindex="0"><code>$ git commit -a
 </code></pre><p>Commit previously staged changes</p>
-<pre><code>$ git commit
+<pre tabindex="0"><code>$ git commit
 </code></pre><p>Change the last commit, <strong>Don‘t amend published commits!</strong></p>
-<pre><code>$ git commit --amend
+<pre tabindex="0"><code>$ git commit --amend
 </code></pre><h3 id="commit-history">Commit History</h3>
 <p>Show all commits, starting with newest</p>
-<pre><code>$ git log
+<pre tabindex="0"><code>$ git log
 </code></pre><p>Show changes over time for a specific file</p>
-<pre><code>$ git log -p &lt;file&gt;
+<pre tabindex="0"><code>$ git log -p &lt;file&gt;
 </code></pre><p>Some changes over time for a specific committer</p>
-<pre><code>$ git log --author=&lt;committer name&gt;
+<pre tabindex="0"><code>$ git log --author=&lt;committer name&gt;
 </code></pre><p>Search (grep) commit message for the given string</p>
-<pre><code>$ git log --grep=&lt;string&gt;
+<pre tabindex="0"><code>$ git log --grep=&lt;string&gt;
 </code></pre><p>Who changed what and when in <!-- raw HTML omitted --></p>
-<pre><code>$ git blame &lt;file&gt;
+<pre tabindex="0"><code>$ git blame &lt;file&gt;
 </code></pre><p>Store changes temporarily</p>
-<pre><code>$ git stash
+<pre tabindex="0"><code>$ git stash
 </code></pre><p>Remove and apply stashed changes</p>
-<pre><code>$ git stash pop
+<pre tabindex="0"><code>$ git stash pop
 </code></pre><p>Remove file from all previous commit but keep it locally</p>
-<pre><code>$ git rm --cached &lt;file&gt;
+<pre tabindex="0"><code>$ git rm --cached &lt;file&gt;
 </code></pre><h3 id="branches--tags">Branches &amp; Tags</h3>
 <p>List all existing branches</p>
-<pre><code>$ git branch [-av]
+<pre tabindex="0"><code>$ git branch [-av]
 </code></pre><p>Switch HEAD branch</p>
-<pre><code>$ git checkout &lt;branch&gt;
+<pre tabindex="0"><code>$ git checkout &lt;branch&gt;
 </code></pre><p>Create a new branch based on your current HEAD</p>
-<pre><code>$ git branch &lt;new-branch&gt;
+<pre tabindex="0"><code>$ git branch &lt;new-branch&gt;
 </code></pre><p>Create a new tracking branch based on a remote branch</p>
-<pre><code>$ git checkout --track &lt;remote/branch&gt;
+<pre tabindex="0"><code>$ git checkout --track &lt;remote/branch&gt;
 </code></pre><p>Delete a local branch</p>
-<pre><code>$ git branch -d &lt;branch&gt;
+<pre tabindex="0"><code>$ git branch -d &lt;branch&gt;
 </code></pre><p>Delete a remote branch</p>
-<pre><code>$ git push origin --delete &lt;branch&gt;
+<pre tabindex="0"><code>$ git push origin --delete &lt;branch&gt;
 </code></pre><p>Rename a branch locally</p>
-<pre><code>$ git branch -m &lt;old name&gt; &lt;new name&gt;
+<pre tabindex="0"><code>$ git branch -m &lt;old name&gt; &lt;new name&gt;
 </code></pre><p>Rename a branch on remote</p>
-<pre><code>$ git push &lt;remote&gt; :&lt;old name&gt;
+<pre tabindex="0"><code>$ git push &lt;remote&gt; :&lt;old name&gt;
 $ git push &lt;remote&gt; &lt;new name&gt;
 </code></pre><p>Mark the current commit with a tag</p>
-<pre><code>$ git tag &lt;tag-name&gt;
+<pre tabindex="0"><code>$ git tag &lt;tag-name&gt;
 </code></pre><h3 id="update--publish">Update &amp; Publish</h3>
 <p>List all currently configured remotes</p>
-<pre><code>$ git remote -v
+<pre tabindex="0"><code>$ git remote -v
 </code></pre><p>Show information about a remote</p>
-<pre><code>$ git remote show &lt;remote&gt;
+<pre tabindex="0"><code>$ git remote show &lt;remote&gt;
 </code></pre><p>Add new remote repository, named <!-- raw HTML omitted --></p>
-<pre><code>$ git remote add &lt;remote&gt; &lt;url&gt;
+<pre tabindex="0"><code>$ git remote add &lt;remote&gt; &lt;url&gt;
 </code></pre><p>Delete a branch on the remote</p>
-<pre><code>$ git branch -dr &lt;remote/branch&gt;
+<pre tabindex="0"><code>$ git branch -dr &lt;remote/branch&gt;
 </code></pre><p>Download all changes from <!-- raw HTML omitted -->, but don‘t integrate into HEAD</p>
-<pre><code>$ git fetch &lt;remote&gt;
+<pre tabindex="0"><code>$ git fetch &lt;remote&gt;
 </code></pre><p>Download changes and directly merge/integrate into HEAD</p>
-<pre><code>$ git pull &lt;remote&gt; &lt;branch&gt;
+<pre tabindex="0"><code>$ git pull &lt;remote&gt; &lt;branch&gt;
 </code></pre><p>Publish local changes on a remote</p>
-<pre><code>$ git push &lt;remote&gt; &lt;branch&gt;
+<pre tabindex="0"><code>$ git push &lt;remote&gt; &lt;branch&gt;
 </code></pre><p>Track a remote repository</p>
-<pre><code>$ git remote add --track &lt;remote-branch&gt; &lt;remote&gt; &lt;url&gt;
+<pre tabindex="0"><code>$ git remote add --track &lt;remote-branch&gt; &lt;remote&gt; &lt;url&gt;
 </code></pre><p>Publish your tags</p>
-<pre><code>$ git push --tags
+<pre tabindex="0"><code>$ git push --tags
 </code></pre><h3 id="merge--rebase">Merge &amp; Rebase</h3>
 <p>Merge <!-- raw HTML omitted --> into your current HEAD</p>
-<pre><code>$ git merge &lt;branch&gt;
+<pre tabindex="0"><code>$ git merge &lt;branch&gt;
 </code></pre><p>Rebase your current HEAD onto <!-- raw HTML omitted -->. Don‘t rebase published commits!</p>
-<pre><code>$ git rebase &lt;branch&gt;
+<pre tabindex="0"><code>$ git rebase &lt;branch&gt;
 </code></pre><p>Abort a rebase</p>
-<pre><code>$ git rebase --abort
+<pre tabindex="0"><code>$ git rebase --abort
 </code></pre><p>Continue a rebase after resolving conflicts</p>
-<pre><code>$ git rebase --continue
+<pre tabindex="0"><code>$ git rebase --continue
 </code></pre><p>Use your configured merge tool to solve conflicts</p>
-<pre><code>$ git mergetool
+<pre tabindex="0"><code>$ git mergetool
 </code></pre><p>Use your editor to manually solve conflicts and ( after resolving) mark file as resolved</p>
-<pre><code>$ git add &lt;resolved-file&gt;
+<pre tabindex="0"><code>$ git add &lt;resolved-file&gt;
 $ git rm &lt;resolved-file&gt;
 </code></pre><h3 id="undo">Undo</h3>
 <p>Discard all local changes in your working directory</p>
-<pre><code>$ git reset --hard HEAD
+<pre tabindex="0"><code>$ git reset --hard HEAD
 </code></pre><p>Discard local changes in a specific file </p>
-<pre><code>$ git checkout HEAD &lt;file&gt;
+<pre tabindex="0"><code>$ git checkout HEAD &lt;file&gt;
 </code></pre><p>Revert a commit (by producing a new commit with contrary changes)</p>
-<pre><code>$ git revert &lt;commit&gt;
+<pre tabindex="0"><code>$ git revert &lt;commit&gt;
 </code></pre><p>Reset your HEAD pointer to a previous commit and discard all changes since then</p>
-<pre><code>$ git reset --hard &lt;commit&gt;
+<pre tabindex="0"><code>$ git reset --hard &lt;commit&gt;
 </code></pre><p>Reset your HEAD pointer to a previous commit and preserve all changes as unstaged changes</p>
-<pre><code>$ git reset &lt;commit&gt;
+<pre tabindex="0"><code>$ git reset &lt;commit&gt;
 </code></pre><p>Reset your HEAD pointer to a previous commit and preserve uncommitted local changes</p>
-<pre><code>$ git reset --keep &lt;commit&gt;
+<pre tabindex="0"><code>$ git reset --keep &lt;commit&gt;
 </code></pre><h3 id="submodules">Submodules</h3>
 <p>Make changes, commit and checkout submodule files just go the submodules directory and use git as usual.</p>
 <p>List all currently configured submodules</p>
-<pre><code>$ git submodules
+<pre tabindex="0"><code>$ git submodules
 </code></pre><p>or</p>
-<pre><code>$ git submodules status
+<pre tabindex="0"><code>$ git submodules status
 </code></pre><p>Show information about a submodule</p>
-<pre><code>$ git remote show &lt;remote&gt;
+<pre tabindex="0"><code>$ git remote show &lt;remote&gt;
 </code></pre><p>Add a new submodule</p>
 <ol>
 <li><code>$ git submodule add -b &lt;branch&gt; --name &lt;name&gt; &lt;repository-path-or-url&gt;</code></li>
@@ -666,7 +665,7 @@ $ git rm &lt;resolved-file&gt;
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

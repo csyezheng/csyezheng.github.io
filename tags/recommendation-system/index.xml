@@ -31,9 +31,9 @@
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.yezheng.pro/post/specialization/artificial-intelligence/recommendation-system/product-overview/</guid>
-      <description>Implementing Recommendations Steps   Set up a project
-  Import your product catalog You can add items to your Recommendations AI product catalog individually by using the import Files or API.
-  Information of the products sold to customers. This includes the product title, description, in stock availability, pricing, and so on.
+      <description>Implementing Recommendations Steps Set up a project
+Import your product catalog You can add items to your Recommendations AI product catalog individually by using the import Files or API.
+Information of the products sold to customers. This includes the product title, description, in stock availability, pricing, and so on.
 Record user events User events track user actions such as clicking on a product, adding an item to a shopping cart, or purchasing an item, and so on.</description>
     </item>
     

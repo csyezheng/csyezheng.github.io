@@ -6,7 +6,16 @@
     <description>Recent content in databases on Ye Zheng&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/databases/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.yezheng.pro/tags/databases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Database Scaling Strategies</title>
+      <link>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/database-scaling/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/database-scaling/</guid>
+      <description>What Is Scalability? As your application scale, the database will often be the main bottleneck of the system. Scaling your database is a great way to deal with performance bottlenecks. Scalability is the system’s ability to deliver equal bang for the buck as you add resources to perform more work. Most benchmarks measure a system’s maximum</description>
+    </item>
+    
     <item>
       <title>databases</title>
       <link>http://www.yezheng.pro/post/specialization/systems/data-management-and-data-systems/databases/</link>

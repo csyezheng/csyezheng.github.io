@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/interview/all-in-one/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,12 +63,11 @@
 <meta property="og:description" content="1 计算机网络 1.1 网络分层和常见概念 介绍网络5层模型，每一层都实现什么功能 物理层：确保原始的数据可在各种物理媒体上以比特流的形式可靠地传输 数据链" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/interview/all-in-one/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-12-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2020-12-01T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2020-12-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-01T00:00:00+00:00" />
 <meta itemprop="name" content="all in one">
-<meta itemprop="description" content="1 计算机网络 1.1 网络分层和常见概念 介绍网络5层模型，每一层都实现什么功能 物理层：确保原始的数据可在各种物理媒体上以比特流的形式可靠地传输 数据链"><meta itemprop="datePublished" content="2020-12-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-12-01T00:00:00&#43;00:00" />
+<meta itemprop="description" content="1 计算机网络 1.1 网络分层和常见概念 介绍网络5层模型，每一层都实现什么功能 物理层：确保原始的数据可在各种物理媒体上以比特流的形式可靠地传输 数据链"><meta itemprop="datePublished" content="2020-12-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-12-01T00:00:00+00:00" />
 <meta itemprop="wordCount" content="21561">
 <meta itemprop="keywords" content="interview," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="all in one"/>
@@ -949,17 +948,17 @@
 <ul>
 <li>写一个建表语句</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> t_user2(id INT ,
-userName VARCHAR(<span style="color:#ae81ff">20</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,	<span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">增加约束</span>
-password VARCHAR(<span style="color:#ae81ff">20</span>),
-age INT,
-<span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (id),	<span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">指定主键</span>
-<span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (P_Id) <span style="color:#66d9ef">REFERENCES</span> Persons(P_Id)	<span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">指定外键</span>
-<span style="color:#66d9ef">UNIQUE</span> <span style="color:#66d9ef">INDEX</span> index_userName(userName)  <span style="color:#f92672">#</span><span style="color:#960050;background-color:#1e0010">同时创建索引</span>
-<span style="color:#66d9ef">CHECK</span> (age<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>)		<span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">增加约束</span>
-);
-<span style="color:#960050;background-color:#1e0010">复制代码</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> t_user2(id INT ,
+</span></span><span style="display:flex;"><span>userName VARCHAR(<span style="color:#ae81ff">20</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,	<span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">增加约束</span>
+</span></span><span style="display:flex;"><span>password VARCHAR(<span style="color:#ae81ff">20</span>),
+</span></span><span style="display:flex;"><span>age INT,
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (id),	<span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">指定主键</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (P_Id) <span style="color:#66d9ef">REFERENCES</span> Persons(P_Id)	<span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">指定外键</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">UNIQUE</span> <span style="color:#66d9ef">INDEX</span> index_userName(userName)  <span style="color:#f92672">#</span><span style="color:#960050;background-color:#1e0010">同时创建索引</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CHECK</span> (age<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>)		<span style="color:#f92672">#</span> <span style="color:#960050;background-color:#1e0010">增加约束</span>
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">复制代码</span>
+</span></span></code></pre></div><ul>
 <li>一个sql语句student(sno, sname, &hellip;)中以“王”姓开头的个数
 <ul>
 <li><code>SELECT COUNT(*) FROM student WHERE sname LIKE '王%'</code></li>
@@ -1027,15 +1026,15 @@ age INT,
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
-{
-    <span style="color:#66d9ef">int</span> pid <span style="color:#f92672">=</span> fork();
-    <span style="color:#66d9ef">if</span> (pid <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-    <span style="color:#66d9ef">if</span> (pid) printf(<span style="color:#e6db74">&#34;I am father, my pid is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, getpid());
-    <span style="color:#66d9ef">else</span> printf(<span style="color:#e6db74">&#34;I am child, my pid is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, getpid());
-}
-<span style="color:#960050;background-color:#1e0010">复制代码</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> pid <span style="color:#f92672">=</span> <span style="color:#a6e22e">fork</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (pid <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (pid) <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;I am father, my pid is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#a6e22e">getpid</span>());
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;I am child, my pid is %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#a6e22e">getpid</span>());
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">复制代码</span>
+</span></span></code></pre></div><ul>
 <li>线程与协程
 <ul>
 <li>协程既不是进程也不是线程，协程是一个特殊的函数</li>
@@ -1200,29 +1199,29 @@ age INT,
 </li>
 <li>如何查看远程服务器某一个端口被占用(nc命令，nmap命令，telnet命令)</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> nmap <span style="color:#ae81ff">192.168</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1.8</span> <span style="color:#f92672">-</span>p <span style="color:#ae81ff">22</span>
- 
-Starting Nmap <span style="color:#ae81ff">7.70</span> ( https:<span style="color:#f92672">//</span>nmap<span style="color:#f92672">.</span>org ) at <span style="color:#ae81ff">2019</span><span style="color:#f92672">-</span><span style="color:#ae81ff">03</span><span style="color:#f92672">-</span><span style="color:#ae81ff">16</span> <span style="color:#ae81ff">03</span>:<span style="color:#ae81ff">37</span> IST Nmap scan report <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">192.168</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1.8</span> Host <span style="color:#f92672">is</span> up (<span style="color:#ae81ff">0.00031</span>s latency)<span style="color:#f92672">.</span>
-
-PORT STATE SERVICE
- 
-<span style="color:#ae81ff">22</span><span style="color:#f92672">/</span>tcp open ssh
-<span style="color:#960050;background-color:#1e0010">复制代码</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> nmap <span style="color:#ae81ff">192.168.1.8</span> <span style="color:#f92672">-</span>p <span style="color:#ae81ff">22</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>Starting Nmap <span style="color:#ae81ff">7.70</span> ( https:<span style="color:#f92672">//</span>nmap<span style="color:#f92672">.</span>org ) at <span style="color:#ae81ff">2019</span><span style="color:#f92672">-</span><span style="color:#ae81ff">03</span><span style="color:#f92672">-</span><span style="color:#ae81ff">16</span> <span style="color:#ae81ff">03</span>:<span style="color:#ae81ff">37</span> IST Nmap scan report <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">192.168.1.8</span> Host <span style="color:#f92672">is</span> up (<span style="color:#ae81ff">0.00031</span>s latency)<span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PORT STATE SERVICE
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">22</span><span style="color:#f92672">/</span>tcp open ssh
+</span></span><span style="display:flex;"><span>复制代码
+</span></span></code></pre></div><ul>
 <li>怎么查看django server的进程呢？</li>
 <li>怎么查看硬盘的占用情况呢？</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">crysflair@crysflair:~$ df
-Filesystem     1K-blocks    Used Available Use% Mounted on
-udev             <span style="color:#ae81ff">1004100</span>       <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">1004100</span>   0% /dev
-tmpfs             <span style="color:#ae81ff">204800</span>    <span style="color:#ae81ff">2744</span>    <span style="color:#ae81ff">202056</span>   2% /run
-...文件系统的占用
-
-crysflair@crysflair:~$ du -sh ~
-262M    /home/crysflair
-文件夹的大小
-复制代码
-</code></pre></div><h2 id="35-io模型">3.5 IO模型</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>crysflair@crysflair:~$ df
+</span></span><span style="display:flex;"><span>Filesystem     1K-blocks    Used Available Use% Mounted on
+</span></span><span style="display:flex;"><span>udev             <span style="color:#ae81ff">1004100</span>       <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">1004100</span>   0% /dev
+</span></span><span style="display:flex;"><span>tmpfs             <span style="color:#ae81ff">204800</span>    <span style="color:#ae81ff">2744</span>    <span style="color:#ae81ff">202056</span>   2% /run
+</span></span><span style="display:flex;"><span>...文件系统的占用
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>crysflair@crysflair:~$ du -sh ~
+</span></span><span style="display:flex;"><span>262M    /home/crysflair
+</span></span><span style="display:flex;"><span>文件夹的大小
+</span></span><span style="display:flex;"><span>复制代码
+</span></span></code></pre></div><h2 id="35-io模型">3.5 IO模型</h2>
 <ul>
 <li>Linux io模型</li>
 </ul>
@@ -1313,7 +1312,7 @@ crysflair@crysflair:~$ du -sh ~
 </ul>
 </li>
 <li>
-<pre><code>__init__.py
+<pre tabindex="0"><code>__init__.py
 </code></pre><p>文件的作用是什么？除了引入模块之外还有别的作用吗？引入的模块都会被执行吗？</p>
 <ul>
 <li>去import一个Package的时候，会隐性执行 <code>__init__.py</code>。在 <code>__init__.py</code> 中定义的对象，会被绑定到当前的<strong>命名空间</strong>里面来</li>
@@ -1427,26 +1426,26 @@ crysflair@crysflair:~$ du -sh ~
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Ostrich</span> implements Tweetable, EggLayable {<span style="color:#75715e">//鸵鸟
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span> TweetAbility tweetAbility <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TweetAbility(); <span style="color:#75715e">//组合
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span> EggLayAbility eggLayAbility <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> EggLayAbility(); <span style="color:#75715e">//组合
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">//... 省略其他属性和方法...
-</span><span style="color:#75715e"></span>  <span style="color:#960050;background-color:#1e0010">@</span>Override
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> tweet() {
-    tweetAbility.tweet(); <span style="color:#75715e">// 委托
-</span><span style="color:#75715e"></span>  }
-  <span style="color:#960050;background-color:#1e0010">@</span>Override
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> layEgg() {
-    eggLayAbility.layEgg(); <span style="color:#75715e">// 委托
-</span><span style="color:#75715e"></span>  }
-}
-
-<span style="color:#960050;background-color:#1e0010">作者：沐晨</span>
-<span style="color:#960050;background-color:#1e0010">链接：</span>https:<span style="color:#75715e">//zhuanlan.zhihu.com/p/93899632
-</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">来源：知乎</span>
-<span style="color:#960050;background-color:#1e0010">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span>
-<span style="color:#960050;background-color:#1e0010">复制代码</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Ostrich</span> implements Tweetable, EggLayable {<span style="color:#75715e">//鸵鸟
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span> TweetAbility tweetAbility <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TweetAbility(); <span style="color:#75715e">//组合
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">private</span> EggLayAbility eggLayAbility <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> EggLayAbility(); <span style="color:#75715e">//组合
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">//... 省略其他属性和方法...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#960050;background-color:#1e0010">@</span>Override
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> tweet() {
+</span></span><span style="display:flex;"><span>    tweetAbility.tweet(); <span style="color:#75715e">// 委托
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>Override
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> layEgg() {
+</span></span><span style="display:flex;"><span>    eggLayAbility.layEgg(); <span style="color:#75715e">// 委托
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">作者：沐晨</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">链接：</span>https:<span style="color:#75715e">//zhuanlan.zhihu.com/p/93899632
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">来源：知乎</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">复制代码</span>
+</span></span></code></pre></div><ul>
 <li>多重继承 如何解决钻石模型</li>
 <li>面向对象语言的三大特性
 <ul>
@@ -1556,13 +1555,13 @@ crysflair@crysflair:~$ du -sh ~
 <li>django的orm</li>
 <li>如何搜索数据库里的文章</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Django ORM: 搜索标题或内容包含指定字符串的文章，大小写不限</span>
-articles <span style="color:#f92672">=</span> articles<span style="color:#f92672">.</span>filter(
-    Q(title__icontains<span style="color:#f92672">=</span>search) <span style="color:#f92672">|</span>
-    Q(body__icontains<span style="color:#f92672">=</span>search))
-<span style="color:#75715e"># 这个Q是把条件包起来，因为filter直接逗号分隔的话，是AND。用了Q,和 | 运算符可以实现OR</span>
-<span style="color:#960050;background-color:#1e0010">复制代码</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Django ORM: 搜索标题或内容包含指定字符串的文章，大小写不限</span>
+</span></span><span style="display:flex;"><span>articles <span style="color:#f92672">=</span> articles<span style="color:#f92672">.</span>filter(
+</span></span><span style="display:flex;"><span>    Q(title__icontains<span style="color:#f92672">=</span>search) <span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>    Q(body__icontains<span style="color:#f92672">=</span>search))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 这个Q是把条件包起来，因为filter直接逗号分隔的话，是AND。用了Q,和 | 运算符可以实现OR</span>
+</span></span><span style="display:flex;"><span>复制代码
+</span></span></code></pre></div><ul>
 <li>标签-文章表太慢怎么办(not sure)
 <ul>
 <li>文章上加索引。标签重复度高，不能加索引</li>
@@ -1575,105 +1574,105 @@ articles <span style="color:#f92672">=</span> articles<span style="color:#f92672
 <h2 id="71-经典题目">7.1 经典题目</h2>
 <h3 id="最长上升子序列">最长上升子序列</h3>
 <p>这是一道考烂了的题</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 定义 arr[i]: 长度为i+1的连续上升子序列的尾部数字大小</span>
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lengthOfLIS</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> int:
-        arr <span style="color:#f92672">=</span> []    
-        <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> nums:
-            <span style="color:#75715e"># 特殊情况：一开始还没有数据的时候</span>
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> arr: 
-                arr<span style="color:#f92672">.</span>append(n)
-                <span style="color:#66d9ef">continue</span>
-            <span style="color:#75715e"># 从后往前找到比当前值小的数，在它的基础上延长</span>
-            i <span style="color:#f92672">=</span> len(arr)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>  
-            <span style="color:#66d9ef">while</span> arr[i] <span style="color:#f92672">&gt;=</span> n <span style="color:#f92672">and</span> i<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>: i <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
-            
-            <span style="color:#66d9ef">if</span> arr[i] <span style="color:#f92672">&lt;</span> n:  <span style="color:#75715e"># 因为找到小值而停止</span>
-                <span style="color:#66d9ef">if</span> i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span> len(arr):  <span style="color:#75715e"># 如果后面有人，尝试更新这个长度。尾部数字越小越好</span>
-                    arr[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> min(arr[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>], n)
-                <span style="color:#66d9ef">else</span>:   <span style="color:#75715e"># 如果后面没人，新开一个长度</span>
-                    arr<span style="color:#f92672">.</span>append(n)
-            <span style="color:#66d9ef">else</span>:   <span style="color:#75715e"># 没有找到比自己更小的，在0处停止</span>
-                arr[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> n
-
-        <span style="color:#66d9ef">return</span> len(arr)
-<span style="color:#960050;background-color:#1e0010">复制代码</span>
-<span style="color:#75715e"># 使用二分查找优化至 O(NlogN)</span>
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lengthOfLIS</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> int:
-        arr <span style="color:#f92672">=</span> []    <span style="color:#75715e"># arr[i]: 长度为i+1的连续上升子序列的尾部数字大小</span>
-        <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> nums:
-            <span style="color:#75715e"># 如果arr中没有比n大的数</span>
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> arr <span style="color:#f92672">or</span> arr[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">&lt;</span>n: 
-                arr<span style="color:#f92672">.</span>append(n)
-                <span style="color:#66d9ef">continue</span>
-            <span style="color:#75715e"># 找比n刚好大一点的数，二分查找</span>
-            left,right<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,len(arr)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-            <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;=</span> right:
-                mid <span style="color:#f92672">=</span> (left<span style="color:#f92672">+</span>right)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
-                midval <span style="color:#f92672">=</span> arr[mid]
-                <span style="color:#66d9ef">if</span> midval <span style="color:#f92672">&gt;</span> n:
-                    right <span style="color:#f92672">=</span> mid<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-                <span style="color:#66d9ef">elif</span> midval <span style="color:#f92672">&lt;</span> n:
-                    left <span style="color:#f92672">=</span> mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
-                <span style="color:#66d9ef">else</span>:
-                    left <span style="color:#f92672">=</span> right <span style="color:#f92672">=</span> mid
-                    <span style="color:#66d9ef">break</span>
-            <span style="color:#75715e"># 经过分析，left所指的肯定就是比n大一点或等于n的</span>
-            arr[left] <span style="color:#f92672">=</span> min(arr[left], n)
-            
-        <span style="color:#66d9ef">return</span> len(arr)
-<span style="color:#960050;background-color:#1e0010">复制代码</span>
-</code></pre></div><h3 id="剑指48最长不含重复字符的子字符串">剑指48.最长不含重复字符的子字符串</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lengthOfLongestSubstring</span>(self, s: str) <span style="color:#f92672">-&gt;</span> int:
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> s: <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
-        left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>	
-        <span style="color:#75715e"># 左开右闭。right负责探索未知天地。</span>
-        contain <span style="color:#f92672">=</span> set()
-        contain<span style="color:#f92672">.</span>add(s[left])
-        ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-        
-        <span style="color:#66d9ef">while</span> right <span style="color:#f92672">&lt;</span> len(s):
-            <span style="color:#66d9ef">if</span> s[right] <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> contain:
-                contain<span style="color:#f92672">.</span>add(s[right])
-                ans <span style="color:#f92672">=</span> max(ans, len(contain))
-                right <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-            <span style="color:#66d9ef">else</span>:	
-            <span style="color:#75715e"># 如果发现重复，就扔掉左边字符，直到不重复为止</span>
-            <span style="color:#75715e"># 极端情况下，left=right，相当于扔空原有集合</span>
-                contain<span style="color:#f92672">.</span>discard(s[left])
-                left <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">return</span> ans
-<span style="color:#960050;background-color:#1e0010">复制代码</span>
-</code></pre></div><h3 id="接雨水">接雨水</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 定义 arr[i]: 长度为i+1的连续上升子序列的尾部数字大小</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lengthOfLIS</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        arr <span style="color:#f92672">=</span> []    
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> nums:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 特殊情况：一开始还没有数据的时候</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> arr: 
+</span></span><span style="display:flex;"><span>                arr<span style="color:#f92672">.</span>append(n)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 从后往前找到比当前值小的数，在它的基础上延长</span>
+</span></span><span style="display:flex;"><span>            i <span style="color:#f92672">=</span> len(arr)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> arr[i] <span style="color:#f92672">&gt;=</span> n <span style="color:#f92672">and</span> i<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>: i <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> arr[i] <span style="color:#f92672">&lt;</span> n:  <span style="color:#75715e"># 因为找到小值而停止</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;</span> len(arr):  <span style="color:#75715e"># 如果后面有人，尝试更新这个长度。尾部数字越小越好</span>
+</span></span><span style="display:flex;"><span>                    arr[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> min(arr[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>], n)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>:   <span style="color:#75715e"># 如果后面没人，新开一个长度</span>
+</span></span><span style="display:flex;"><span>                    arr<span style="color:#f92672">.</span>append(n)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:   <span style="color:#75715e"># 没有找到比自己更小的，在0处停止</span>
+</span></span><span style="display:flex;"><span>                arr[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> n
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> len(arr)
+</span></span><span style="display:flex;"><span>复制代码
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用二分查找优化至 O(NlogN)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lengthOfLIS</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        arr <span style="color:#f92672">=</span> []    <span style="color:#75715e"># arr[i]: 长度为i+1的连续上升子序列的尾部数字大小</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> nums:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 如果arr中没有比n大的数</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> arr <span style="color:#f92672">or</span> arr[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">&lt;</span>n: 
+</span></span><span style="display:flex;"><span>                arr<span style="color:#f92672">.</span>append(n)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 找比n刚好大一点的数，二分查找</span>
+</span></span><span style="display:flex;"><span>            left,right<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,len(arr)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;=</span> right:
+</span></span><span style="display:flex;"><span>                mid <span style="color:#f92672">=</span> (left<span style="color:#f92672">+</span>right)<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>                midval <span style="color:#f92672">=</span> arr[mid]
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> midval <span style="color:#f92672">&gt;</span> n:
+</span></span><span style="display:flex;"><span>                    right <span style="color:#f92672">=</span> mid<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">elif</span> midval <span style="color:#f92672">&lt;</span> n:
+</span></span><span style="display:flex;"><span>                    left <span style="color:#f92672">=</span> mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                    left <span style="color:#f92672">=</span> right <span style="color:#f92672">=</span> mid
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 经过分析，left所指的肯定就是比n大一点或等于n的</span>
+</span></span><span style="display:flex;"><span>            arr[left] <span style="color:#f92672">=</span> min(arr[left], n)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> len(arr)
+</span></span><span style="display:flex;"><span>复制代码
+</span></span></code></pre></div><h3 id="剑指48最长不含重复字符的子字符串">剑指48.最长不含重复字符的子字符串</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lengthOfLongestSubstring</span>(self, s: str) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> s: <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>	
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 左开右闭。right负责探索未知天地。</span>
+</span></span><span style="display:flex;"><span>        contain <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>        contain<span style="color:#f92672">.</span>add(s[left])
+</span></span><span style="display:flex;"><span>        ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> right <span style="color:#f92672">&lt;</span> len(s):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> s[right] <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> contain:
+</span></span><span style="display:flex;"><span>                contain<span style="color:#f92672">.</span>add(s[right])
+</span></span><span style="display:flex;"><span>                ans <span style="color:#f92672">=</span> max(ans, len(contain))
+</span></span><span style="display:flex;"><span>                right <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:	
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 如果发现重复，就扔掉左边字符，直到不重复为止</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 极端情况下，left=right，相当于扔空原有集合</span>
+</span></span><span style="display:flex;"><span>                contain<span style="color:#f92672">.</span>discard(s[left])
+</span></span><span style="display:flex;"><span>                left <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ans
+</span></span><span style="display:flex;"><span>复制代码
+</span></span></code></pre></div><h3 id="接雨水">接雨水</h3>
 <ul>
 <li>每面墙一旦出现，就把<strong>它和左边墙之间</strong>能填的缝隙全都使用水泥填上。（这里假装是水泥，比水更形象。浇过的水泥也会变成墙）</li>
 <li>那么左边已经处理的部分，一定是先增加再减少的阶梯型，没有凹陷。对一面新出现的墙，它的左边<strong>由近及远是从比它矮的墙到比他高的墙</strong></li>
 <li>按层次浇筑水泥。<strong>一开始的瓶颈是左边的矮墙</strong>，随着一层层浇筑水泥，池底的高度也越来越高。最后的瓶颈是它<strong>自己作为右边的矮墙</strong>。</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">trap</span>(self, height: List[int]) <span style="color:#f92672">-&gt;</span> int:
-        stack <span style="color:#f92672">=</span> []
-        ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-        <span style="color:#66d9ef">for</span> i, h <span style="color:#f92672">in</span> enumerate(height):
-            <span style="color:#66d9ef">if</span> h <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-                <span style="color:#66d9ef">continue</span>
-            bar <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>  <span style="color:#75715e"># 对于每一面新处理的墙，bar都是全新的</span>
-            <span style="color:#66d9ef">while</span> stack:
-                i_, h_ <span style="color:#f92672">=</span> stack[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
-                <span style="color:#66d9ef">if</span> h_ <span style="color:#f92672">&lt;=</span> h:     <span style="color:#75715e"># 如果栈顶&lt;=当前的墙, 用当前的墙不断碰撞左边的墙，并且逐步提升bar</span>
-                    ans <span style="color:#f92672">+=</span> (i<span style="color:#f92672">-</span>i_<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> (h_ <span style="color:#f92672">-</span> bar)
-                    bar <span style="color:#f92672">=</span> h_
-                    stack<span style="color:#f92672">.</span>pop()
-                <span style="color:#66d9ef">else</span>:           <span style="color:#75715e"># 如果栈顶&gt;当前的墙, 当前的墙成为了右边的矮子，根据当前bar加水。</span>
-                    <span style="color:#75715e"># 当前bar是当前的墙和此时栈顶之间的墙的最大值，在第一步的不断碰撞中已经计算好了</span>
-                    ans <span style="color:#f92672">+=</span> (i<span style="color:#f92672">-</span>i_<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> (h <span style="color:#f92672">-</span> bar)
-                    <span style="color:#66d9ef">break</span>
-            stack<span style="color:#f92672">.</span>append((i,h))
-        <span style="color:#66d9ef">return</span> ans
-<span style="color:#960050;background-color:#1e0010">复制代码</span>
-</code></pre></div><h3 id="lru实现">LRU实现</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">trap</span>(self, height: List[int]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        stack <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i, h <span style="color:#f92672">in</span> enumerate(height):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> h <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>            bar <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>  <span style="color:#75715e"># 对于每一面新处理的墙，bar都是全新的</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> stack:
+</span></span><span style="display:flex;"><span>                i_, h_ <span style="color:#f92672">=</span> stack[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> h_ <span style="color:#f92672">&lt;=</span> h:     <span style="color:#75715e"># 如果栈顶&lt;=当前的墙, 用当前的墙不断碰撞左边的墙，并且逐步提升bar</span>
+</span></span><span style="display:flex;"><span>                    ans <span style="color:#f92672">+=</span> (i<span style="color:#f92672">-</span>i_<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> (h_ <span style="color:#f92672">-</span> bar)
+</span></span><span style="display:flex;"><span>                    bar <span style="color:#f92672">=</span> h_
+</span></span><span style="display:flex;"><span>                    stack<span style="color:#f92672">.</span>pop()
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>:           <span style="color:#75715e"># 如果栈顶&gt;当前的墙, 当前的墙成为了右边的矮子，根据当前bar加水。</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># 当前bar是当前的墙和此时栈顶之间的墙的最大值，在第一步的不断碰撞中已经计算好了</span>
+</span></span><span style="display:flex;"><span>                    ans <span style="color:#f92672">+=</span> (i<span style="color:#f92672">-</span>i_<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> (h <span style="color:#f92672">-</span> bar)
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            stack<span style="color:#f92672">.</span>append((i,h))
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ans
+</span></span><span style="display:flex;"><span>复制代码
+</span></span></code></pre></div><h3 id="lru实现">LRU实现</h3>
 <h3 id="三数之和">三数之和</h3>
 <p><a href="https://leetcode-cn.com/problems/3sum/solution/pai-xu-shuang-zhi-zhen-zhu-xing-jie-shi-python3-by">wu_yan_zu - 力扣题解</a></p>
 <h3 id="一个字符串找出出现第二多的字符">一个字符串，找出出现第二多的字符</h3>
@@ -1701,51 +1700,51 @@ articles <span style="color:#f92672">=</span> articles<span style="color:#f92672
 <li>类似斐波那契数列。不允许到达7的倍数层就不算了呗。</li>
 </ul>
 <h3 id="树中两个点的最长路径和-leetcode-124">树中两个点的最长路径和 (leetcode 124)</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maxPathSum</span>(self, root: TreeNode) <span style="color:#f92672">-&gt;</span> int:
-        ans <span style="color:#f92672">=</span> root<span style="color:#f92672">.</span>val
-        
-        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">work</span>(node):
-            nonlocal ans
-            <span style="color:#75715e"># ans: node+max(0,左边最长链长)+max(0,右边最长链长)</span>
-            <span style="color:#75715e"># work函数：返回以node为头结点的最长链长，可能为负数</span>
-            
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> node: <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
-            leftmax <span style="color:#f92672">=</span> work(node<span style="color:#f92672">.</span>left)
-            rightmax <span style="color:#f92672">=</span> work(node<span style="color:#f92672">.</span>right)
-            <span style="color:#75715e">#print(&#34;at node&#34;, root.val, &#34;leftmax,rightmax=&#34;,leftmax, rightmax)</span>
-            ans <span style="color:#f92672">=</span> max(ans, node<span style="color:#f92672">.</span>val <span style="color:#f92672">+</span> max(<span style="color:#ae81ff">0</span>,leftmax) <span style="color:#f92672">+</span> max(<span style="color:#ae81ff">0</span>,rightmax))
-            <span style="color:#66d9ef">return</span> max(leftmax, rightmax, <span style="color:#ae81ff">0</span>) <span style="color:#f92672">+</span> node<span style="color:#f92672">.</span>val
-        
-        work(root)
-        <span style="color:#66d9ef">return</span> ans
-<span style="color:#960050;background-color:#1e0010">复制代码</span>
-</code></pre></div><h3 id="找比当前数大的下一个数如1243结果是1324">找比当前数大的下一个数（如1243，结果是1324）</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maxPathSum</span>(self, root: TreeNode) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        ans <span style="color:#f92672">=</span> root<span style="color:#f92672">.</span>val
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">work</span>(node):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">nonlocal</span> ans
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># ans: node+max(0,左边最长链长)+max(0,右边最长链长)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># work函数：返回以node为头结点的最长链长，可能为负数</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> node: <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>            leftmax <span style="color:#f92672">=</span> work(node<span style="color:#f92672">.</span>left)
+</span></span><span style="display:flex;"><span>            rightmax <span style="color:#f92672">=</span> work(node<span style="color:#f92672">.</span>right)
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">#print(&#34;at node&#34;, root.val, &#34;leftmax,rightmax=&#34;,leftmax, rightmax)</span>
+</span></span><span style="display:flex;"><span>            ans <span style="color:#f92672">=</span> max(ans, node<span style="color:#f92672">.</span>val <span style="color:#f92672">+</span> max(<span style="color:#ae81ff">0</span>,leftmax) <span style="color:#f92672">+</span> max(<span style="color:#ae81ff">0</span>,rightmax))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> max(leftmax, rightmax, <span style="color:#ae81ff">0</span>) <span style="color:#f92672">+</span> node<span style="color:#f92672">.</span>val
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        work(root)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ans
+</span></span><span style="display:flex;"><span>复制代码
+</span></span></code></pre></div><h3 id="找比当前数大的下一个数如1243结果是1324">找比当前数大的下一个数（如1243，结果是1324）</h3>
 <ul>
 <li>注意严谨。爬山的时候等于也要爬。这样才能正确处理重复数字</li>
 <li>python中nums[nextdigit+1:].sort()行不通</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:	<span style="color:#75715e"># LeetCode 31</span>
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">nextPermutation</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> None:
-        <span style="color:#e6db74">&#34;&#34;&#34;
-</span><span style="color:#e6db74">        Do not return anything, modify nums in-place instead.
-</span><span style="color:#e6db74">        这个函数也可以处理有重复值的情况~ 注意“爬山”时候的大于等于号~
-</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
-        
-        cur <span style="color:#f92672">=</span> len(nums)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>  <span style="color:#75715e"># 从后往前找第一个跌落(&lt;)的地方</span>
-        <span style="color:#66d9ef">while</span> cur <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> nums[cur<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">&gt;=</span> nums[cur]: cur <span style="color:#f92672">-=</span><span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">if</span> cur<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>:
-            nums<span style="color:#f92672">.</span>reverse()
-            <span style="color:#66d9ef">return</span>
-        nextdigit <span style="color:#f92672">=</span> cur<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>  <span style="color:#75715e"># 即将增大进位的那个数位</span>
-
-        cur <span style="color:#f92672">=</span> len(nums)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>  <span style="color:#75715e"># 从后往前找最小的大于target的数</span>
-        <span style="color:#66d9ef">while</span> nums[cur] <span style="color:#f92672">&lt;=</span> nums[nextdigit]: cur <span style="color:#f92672">-=</span><span style="color:#ae81ff">1</span>
-
-        nums[cur], nums[nextdigit] <span style="color:#f92672">=</span> nums[nextdigit], nums[cur]
-        nums[nextdigit<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:] <span style="color:#f92672">=</span> sorted(nums[nextdigit<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:])
-<span style="color:#960050;background-color:#1e0010">复制代码</span>
-</code></pre></div><h3 id="求x的y次方想出比直接for循环更好的方案">求x的y次方，想出比直接for循环更好的方案</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:	<span style="color:#75715e"># LeetCode 31</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">nextPermutation</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Do not return anything, modify nums in-place instead.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        这个函数也可以处理有重复值的情况~ 注意“爬山”时候的大于等于号~
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        cur <span style="color:#f92672">=</span> len(nums)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>  <span style="color:#75715e"># 从后往前找第一个跌落(&lt;)的地方</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> cur <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> nums[cur<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">&gt;=</span> nums[cur]: cur <span style="color:#f92672">-=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> cur<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            nums<span style="color:#f92672">.</span>reverse()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>        nextdigit <span style="color:#f92672">=</span> cur<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>  <span style="color:#75715e"># 即将增大进位的那个数位</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        cur <span style="color:#f92672">=</span> len(nums)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>  <span style="color:#75715e"># 从后往前找最小的大于target的数</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> nums[cur] <span style="color:#f92672">&lt;=</span> nums[nextdigit]: cur <span style="color:#f92672">-=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        nums[cur], nums[nextdigit] <span style="color:#f92672">=</span> nums[nextdigit], nums[cur]
+</span></span><span style="display:flex;"><span>        nums[nextdigit<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:] <span style="color:#f92672">=</span> sorted(nums[nextdigit<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:])
+</span></span><span style="display:flex;"><span>复制代码
+</span></span></code></pre></div><h3 id="求x的y次方想出比直接for循环更好的方案">求x的y次方，想出比直接for循环更好的方案</h3>
 <ul>
 <li>二进制快速幂</li>
 </ul>
@@ -1774,54 +1773,54 @@ articles <span style="color:#f92672">=</span> articles<span style="color:#f92672
 <li>dfs，计算时间复杂度.剑指 Offer 12. 矩阵中的路径</li>
 </ul>
 <h3 id="非负整数字符串重新排列使得结果最小">非负整数字符串重新排列使得结果最小</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 剑指 Offer 45. 把数组排成最小的数</span>
-<span style="color:#f92672">from</span> functools <span style="color:#f92672">import</span> cmp_to_key    <span style="color:#75715e"># python大法好!!</span>
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">compare</span>(x1, x2):   <span style="color:#75715e"># 如果x1更大返回正数，更小返回负数，相等返回0.</span>
-    <span style="color:#66d9ef">return</span> int(x1<span style="color:#f92672">+</span>x2) <span style="color:#f92672">-</span> int(x2<span style="color:#f92672">+</span>x1)
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minNumber</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> str:
-        nums <span style="color:#f92672">=</span> [str(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> nums]
-        nums<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span>cmp_to_key(compare))
-        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(nums)
-<span style="color:#960050;background-color:#1e0010">复制代码</span>
-</code></pre></div><h3 id="给定字符串找出最短的包含指定字符的子串">给定字符串，找出最短的包含指定字符的子串</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 剑指 Offer 45. 把数组排成最小的数</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> functools <span style="color:#f92672">import</span> cmp_to_key    <span style="color:#75715e"># python大法好!!</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">compare</span>(x1, x2):   <span style="color:#75715e"># 如果x1更大返回正数，更小返回负数，相等返回0.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> int(x1<span style="color:#f92672">+</span>x2) <span style="color:#f92672">-</span> int(x2<span style="color:#f92672">+</span>x1)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minNumber</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        nums <span style="color:#f92672">=</span> [str(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> nums]
+</span></span><span style="display:flex;"><span>        nums<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span>cmp_to_key(compare))
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(nums)
+</span></span><span style="display:flex;"><span>复制代码
+</span></span></code></pre></div><h3 id="给定字符串找出最短的包含指定字符的子串">给定字符串，找出最短的包含指定字符的子串</h3>
 <p>并说出算法的时间复杂度，证明算法的有效性。</p>
 <ul>
 <li>应该和最长不重复子串一个思路，维护左右指针和一个集合</li>
 </ul>
 <h3 id="leetcode-54-螺旋矩阵做完提问怎样保证不会重复输出">LeetCode 54 螺旋矩阵，做完提问怎样保证不会重复输出.</h3>
 <p>这个题有两种方法：分圈打印法，和四周“剥边”法。下面是分圈打印的代码。 保证不会重复输出也就是在left,right重合，或top,down重合的时候，不打印第二个即可。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:		<span style="color:#75715e"># 分圈打印法</span>
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spiralOrder</span>(self, matrix: List[List[int]]) <span style="color:#f92672">-&gt;</span> List[int]:
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> matrix: <span style="color:#66d9ef">return</span> []
-        
-        m,n <span style="color:#f92672">=</span> len(matrix),len(matrix[<span style="color:#ae81ff">0</span>])
-        left,right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-        top,down <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, m<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-        
-        ans <span style="color:#f92672">=</span> []   
-        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">printCircle</span>(top, left, down, right):
-            nonlocal ans
-            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(left,right<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
-                ans<span style="color:#f92672">.</span>append(matrix[top][i])
-            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(top<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, down):
-                ans<span style="color:#f92672">.</span>append(matrix[j][right])
-                
-            <span style="color:#66d9ef">if</span> top <span style="color:#f92672">!=</span> down:     <span style="color:#75715e"># 这一部分可能被吞哦！</span>
-                <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(right, left<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
-                    ans<span style="color:#f92672">.</span>append(matrix[down][i])
-            <span style="color:#66d9ef">if</span> left <span style="color:#f92672">!=</span> right:   <span style="color:#75715e"># 这一部分可能被吞哦！</span>
-                <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(down<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, top, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
-                    ans<span style="color:#f92672">.</span>append(matrix[j][left])
-        
-        <span style="color:#66d9ef">while</span> left<span style="color:#f92672">&lt;=</span>right <span style="color:#f92672">and</span> top <span style="color:#f92672">&lt;=</span> down:
-            printCircle(top,left,down,right)
-            top, left, down, right <span style="color:#f92672">=</span> top<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, left<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, down<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, right<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-            
-        <span style="color:#66d9ef">return</span> ans
-<span style="color:#960050;background-color:#1e0010">复制代码</span>
-</code></pre></div><h3 id="leetcode103-二叉树的锯齿形层次遍历">Leetcode103 二叉树的锯齿形层次遍历</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:		<span style="color:#75715e"># 分圈打印法</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">spiralOrder</span>(self, matrix: List[List[int]]) <span style="color:#f92672">-&gt;</span> List[int]:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> matrix: <span style="color:#66d9ef">return</span> []
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        m,n <span style="color:#f92672">=</span> len(matrix),len(matrix[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        left,right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        top,down <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, m<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        ans <span style="color:#f92672">=</span> []   
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">printCircle</span>(top, left, down, right):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">nonlocal</span> ans
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(left,right<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>                ans<span style="color:#f92672">.</span>append(matrix[top][i])
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(top<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, down):
+</span></span><span style="display:flex;"><span>                ans<span style="color:#f92672">.</span>append(matrix[j][right])
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> top <span style="color:#f92672">!=</span> down:     <span style="color:#75715e"># 这一部分可能被吞哦！</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(right, left<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>                    ans<span style="color:#f92672">.</span>append(matrix[down][i])
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> left <span style="color:#f92672">!=</span> right:   <span style="color:#75715e"># 这一部分可能被吞哦！</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(down<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, top, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>                    ans<span style="color:#f92672">.</span>append(matrix[j][left])
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> left<span style="color:#f92672">&lt;=</span>right <span style="color:#f92672">and</span> top <span style="color:#f92672">&lt;=</span> down:
+</span></span><span style="display:flex;"><span>            printCircle(top,left,down,right)
+</span></span><span style="display:flex;"><span>            top, left, down, right <span style="color:#f92672">=</span> top<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, left<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, down<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, right<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ans
+</span></span><span style="display:flex;"><span>复制代码
+</span></span></code></pre></div><h3 id="leetcode103-二叉树的锯齿形层次遍历">Leetcode103 二叉树的锯齿形层次遍历</h3>
 <h3 id="leetcode25-k-个一组翻转链表">Leetcode25 K 个一组翻转链表</h3>
 <h3 id="找出第一个缺失的正整数">找出第一个缺失的正整数</h3>
 <ul>
@@ -1873,35 +1872,35 @@ articles <span style="color:#f92672">=</span> articles<span style="color:#f92672
 <p>手撕生产者、消费者模型，10个生产者，10个消费者，队列容量为30个 (下图是不while死循环的生产者消费者, 和原面经有所区别) <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1de9c2e0d7bb4a2fa4328e83a49edfac~tplv-k3u1fbpfcp-watermark.image" alt="img"></p>
 <h3 id="实现阻塞队列">实现阻塞队列</h3>
 <p>且要求取的时候先取优先级最大的. 我先直接用优先队列，后面面试官让我再实现最大堆.(下方代码并没有实现最大堆)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> threading
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BoundedBlockingQueue</span>(object):	<span style="color:#75715e"># LeetCode1188</span>
-    
-    <span style="color:#66d9ef">def</span> __init__(self, capacity: int):
-        self<span style="color:#f92672">.</span>capacity <span style="color:#f92672">=</span> capacity
-        self<span style="color:#f92672">.</span>q <span style="color:#f92672">=</span> []
-        self<span style="color:#f92672">.</span>con <span style="color:#f92672">=</span> threading<span style="color:#f92672">.</span>Condition()
-
-
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">enqueue</span>(self, element: int) <span style="color:#f92672">-&gt;</span> None:
-        <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>con:  <span style="color:#75715e"># 自动acquire,release</span>
-            <span style="color:#66d9ef">while</span> len(self<span style="color:#f92672">.</span>q) <span style="color:#f92672">==</span> self<span style="color:#f92672">.</span>capacity:   <span style="color:#75715e"># 满</span>
-                self<span style="color:#f92672">.</span>con<span style="color:#f92672">.</span>wait()
-            self<span style="color:#f92672">.</span>q<span style="color:#f92672">.</span>append(element)
-            self<span style="color:#f92672">.</span>con<span style="color:#f92672">.</span>notify()
-
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dequeue</span>(self) <span style="color:#f92672">-&gt;</span> int:
-        <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>con: 
-            <span style="color:#66d9ef">while</span> len(self<span style="color:#f92672">.</span>q) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:  <span style="color:#75715e"># 空</span>
-                self<span style="color:#f92672">.</span>con<span style="color:#f92672">.</span>wait()
-            ans <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>q<span style="color:#f92672">.</span>pop(<span style="color:#ae81ff">0</span>)
-            self<span style="color:#f92672">.</span>con<span style="color:#f92672">.</span>notify()
-            <span style="color:#66d9ef">return</span> ans
-        
-
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">size</span>(self) <span style="color:#f92672">-&gt;</span> int:
-        <span style="color:#66d9ef">return</span> len(self<span style="color:#f92672">.</span>q)
-<span style="color:#960050;background-color:#1e0010">复制代码</span>
-</code></pre></div><h1 id="8-智力题">8 智力题</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> threading
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BoundedBlockingQueue</span>(object):	<span style="color:#75715e"># LeetCode1188</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, capacity: int):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>capacity <span style="color:#f92672">=</span> capacity
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>q <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>con <span style="color:#f92672">=</span> threading<span style="color:#f92672">.</span>Condition()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">enqueue</span>(self, element: int) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>con:  <span style="color:#75715e"># 自动acquire,release</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> len(self<span style="color:#f92672">.</span>q) <span style="color:#f92672">==</span> self<span style="color:#f92672">.</span>capacity:   <span style="color:#75715e"># 满</span>
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>con<span style="color:#f92672">.</span>wait()
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>q<span style="color:#f92672">.</span>append(element)
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>con<span style="color:#f92672">.</span>notify()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dequeue</span>(self) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>con: 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> len(self<span style="color:#f92672">.</span>q) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:  <span style="color:#75715e"># 空</span>
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>con<span style="color:#f92672">.</span>wait()
+</span></span><span style="display:flex;"><span>            ans <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>q<span style="color:#f92672">.</span>pop(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>con<span style="color:#f92672">.</span>notify()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> ans
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">size</span>(self) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> len(self<span style="color:#f92672">.</span>q)
+</span></span><span style="display:flex;"><span>复制代码
+</span></span></code></pre></div><h1 id="8-智力题">8 智力题</h1>
 <blockquote>
 <p>这里是我千辛万苦攒的智力题，后来面试一个智力题都没问，好气 (= _=)</p>
 </blockquote>
@@ -2150,7 +2149,7 @@ articles <span style="color:#f92672">=</span> articles<span style="color:#f92672
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

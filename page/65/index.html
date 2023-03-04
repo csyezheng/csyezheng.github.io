@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,6 @@
 <meta property="og:description" content="Here is where I keep my programming notes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://www.yezheng.pro/" />
-
 <meta itemprop="name" content="Ye Zheng&#39;s Blog">
 <meta itemprop="description" content="Here is where I keep my programming notes."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ye Zheng&#39;s Blog"/>
@@ -214,7 +213,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -295,7 +294,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/gopm/">gopm</a>
+      <a class="post-link" href="/post/engineering-fundamentals/go/a-tour-of-go/">A Tour of Go</a>
     </h1>
     
     <div class="post-meta">
@@ -315,10 +314,13 @@
   <div class="post-content">
     
     <div class="post-summary">
-      go get -u github.com/gpmgo/gopm 
+      Basics Packages, variables, and functions. Packages Programs start running in package main.
+By convention, the package name is the same as the last element of the import path. For instance, the &quot;math/rand&quot; package comprises files that begin with the statement package rand.
+Imports It is good style to use the factored import statement.
+import ( &#34;fmt&#34; &#34;math/rand&#34; ) Exported names In Go, a name is exported if it begins with a capital letter.
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/gopm/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/go/a-tour-of-go/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -329,7 +331,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/go/gorm/">gorm</a>
+      <a class="post-link" href="/post/specialization/web-application/back-end/spring-boot/">Building Java Projects with Maven</a>
     </h1>
     
     <div class="post-meta">
@@ -337,7 +339,7 @@
         2019-03-01
       </time>
       <div class="post-category">
-          <a href="http://www.yezheng.pro/categories/engineering-fundamentals/"> engineering-fundamentals </a>
+          <a href="http://www.yezheng.pro/categories/web-application/"> web-application </a>
           
         </div>
       
@@ -349,10 +351,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      struct name and table name type User struct {} // default table name is `users` // Set User's table name to be `profiles` func (User) TableName() string { return &quot;profiles&quot; } gorm不定条件查询和分页操作 making dynamic query and pagination using gorm course := models.Course{} // The global db variable must be assigned to the local db variable. //
+      Install Maven Maven is downloadable as a zip file at https://maven.apache.org/download.cgi.
+Once you have downloaded the zip file, unzip it to your computer. Then add the bin folder to your path.
+$ mvn -v Define a simple Maven build Maven projects are defined with an XML file named pom.xml. Create a file named pom.xml at the root of the project (i.e. put it next to the src folder) and give it the following contents:
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/go/gorm/" class="read-more-link">Read more</a>
+      <a href="/post/specialization/web-application/back-end/spring-boot/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -363,7 +367,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/engineering-fundamentals/javascript/javascript/">JavaScript</a>
+      <a class="post-link" href="/post/engineering-fundamentals/javascript/debug/">Debugging JavaScript in Chrome DevTools</a>
     </h1>
     
     <div class="post-meta">
@@ -383,10 +387,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      概要 1.1 JavaScript语言核心 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x // 获取值 // 注释 /* * 多行注释 */ let x; // 声明变量 x = 0; // 赋值 x //
+      Get Started Step 2: Get familiar with the Sources panel UI The Sources panel is where you debug JavaScript.
+Open DevTools by pressing Command+Option+I (Mac) or Control+Shift+I (Windows, Linux). This shortcut opens the Consolepanel.
+Step 3: Pause the code with a breakpoint Step 4: Step through the code Step 5: Set a line-of-code breakpoint Step 6: Check variable values 
     </div>
     <div class="read-more">
-      <a href="/post/engineering-fundamentals/javascript/javascript/" class="read-more-link">Read more</a>
+      <a href="/post/engineering-fundamentals/javascript/debug/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -2321,6 +2327,90 @@
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/66/">»</a></li>
@@ -2328,7 +2418,7 @@
 
       
       
-      <li><a href="/page/85/">»»</a></li>
+      <li><a href="/page/89/">»»</a></li>
       
 
       </ul>
@@ -2416,7 +2506,7 @@
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/engineering-fundamentals/typescript/typescript/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,13 +63,12 @@
 <meta property="og:description" content="TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/engineering-fundamentals/typescript/typescript/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-03-01T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2019-03-01T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2019-03-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-03-01T00:00:00+00:00" />
 <meta itemprop="name" content="TypeScript">
-<meta itemprop="description" content="TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件"><meta itemprop="datePublished" content="2019-03-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-03-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="4736">
+<meta itemprop="description" content="TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件"><meta itemprop="datePublished" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-03-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="4738">
 <meta itemprop="keywords" content="TypeScript," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="TypeScript"/>
 <meta name="twitter:description" content="TypeScript简介 install node.js npm install -g typescript tsc test.ts // tcc 是TypeScript编译器控制台接口，将TypeScript文件编译成JavaScript文件"/>
@@ -360,7 +359,7 @@ let counter : number;
 联合类型：
 let path: string[] | string;
 path = &lsquo;/temp/log.xml&rsquo;;
-path = ['/temp/log.xml', &lsquo;/temp/errors.xml&rsquo;]
+path = [&rsquo;/temp/log.xml&rsquo;, &lsquo;/temp/errors.xml&rsquo;]
 path = 1;     // error
 类型守护：
 typeof:
@@ -379,46 +378,19 @@ interface: ICustomConsole {
 log(arg: string): void;
 }
 declare var customConsole: ICustomConsole;
-算术运算符：</p>
-<table>
-<thead>
-<tr>
-<th>+</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>*</td>
-</tr>
-<tr>
-<td>/</td>
-</tr>
-<tr>
-<td>%</td>
-</tr>
-<tr>
-<td>++                          a++</td>
-</tr>
-<tr>
-<td>&ndash;                           a&ndash;</td>
-</tr>
-<tr>
-<td>比较运算符：</td>
-</tr>
-<tr>
-<td>==                             // 仅比较值</td>
-</tr>
-<tr>
-<td>===                           // 比较值与类型</td>
-</tr>
-<tr>
-<td>!=</td>
-</tr>
-<tr>
-<td>!==</td>
-</tr>
-</tbody>
-</table>
+算术运算符：
++
+-
+*
+/
+%
+++                          a++
+&ndash;                           a&ndash;
+比较运算符：
+==                             // 仅比较值
+===                           // 比较值与类型
+!=
+!==</p>
 <pre><code>&gt;
 &lt;
 &gt;=
@@ -445,7 +417,7 @@ declare var customConsole: ICustomConsole;
 %=
 控制语句：
 if (isValid) {
-alert(&ldquo;Is valid!&quot;);
+alert(&ldquo;Is valid!&rdquo;);
 }
 else {
 alert(&ldquo;Is NOT valid&rdquo;);
@@ -454,14 +426,14 @@ alert(&ldquo;Is NOT valid&rdquo;);
 
 switch(n) {
 	case 1:
-        statements
-        break;
+		statements
+		break;
 	case 2;
-        statements
-        break;
+		statements
+		break;
 	default:
-        statements
-        break;
+		statements
+		break;
 }
 
 while (n &gt; 1) {
@@ -483,7 +455,7 @@ for (let i: number = 0; i &lt; 9; i++) {
 let obj: any = { a: 1, b: 2, c: 3 };
 for (let key in obj) {
 	if (obj.hasOwnProperty(prop)) {           // hasOwnProperty只枚举对象自己的属性
-        // prop 没有被继承
+		// prop 没有被继承
 	}
 }
 </code></pre>
@@ -494,7 +466,7 @@ if (name) {
 return &ldquo;Hi! &quot; + name;
 }
 else{
-return &ldquo;Hi!&quot;;
+return &ldquo;Hi!&rdquo;;
 }
 }
 // 函数可指定返回值类型
@@ -523,7 +495,7 @@ if (name) {
 return &ldquo;Hi! &quot; + name;
 }
 else {
-return &ldquo;Hi!&quot;;
+return &ldquo;Hi!&rdquo;;
 }
 }
 // 回调函数
@@ -575,19 +547,19 @@ pasword: &quot; &ldquo;;            // 错误属性导致遗漏会有提示
 <p>命名空间（内部模块）：
 namespace Geometry {
 interface VectorInterface {
-/* &hellip; */
+/* &hellip; <em>/
 }
 export interface Vector2dInterface {
-/* &hellip; */
+/</em> &hellip; <em>/
 }
 export interface Vector3dInterface {
-/* &hellip; */
+/</em> &hellip; <em>/
 }
 export class Vector2d implements VectorInterface, Vector2dInterface {
-/* &hellip; */
+/</em> &hellip; <em>/
 }
 export class Vector3d implements VectorInterface, Vector3dInterface {
-/* &hellip; */
+/</em> &hellip; */
 }
 }
 // VectorInterface 没有 export 所以无法访问
@@ -623,7 +595,7 @@ this._y *= len;
 let vector: Geometry.Vector2dInterface = new Geometry.Vector2d(2, 3);
 vector.normalize();
 vector.toArray(function(vectorArray: number[]) {
-alert(' x: ' + vectorAsArray[0] + ' y: ' + vectorAsArray[1]);
+alert(&rsquo; x: &rsquo; + vectorAsArray[0] + &rsquo; y: &rsquo; + vectorAsArray[1]);
 });</p>
 <p>自动化工作流程
 版本控制工具
@@ -634,7 +606,7 @@ npm install gulp-typescript &ndash;save-dev
 npm install typescript -g             <br>
 // 全局安装的包并不会出现在package.json中，手动添加到package.json的devDependencies或peerDependencies中
 npm install jquery &ndash;save</p>
-<pre><code>    https://api.jquery.com
+<pre><code>	https://api.jquery.com
 	package.json的某些字段必须手动配置 https://docs.nomjs.com/files/package.json
 	
 	.gitignore 忽略node_modules目录，以后clone下来 npm install即可
@@ -660,113 +632,113 @@ npm install jquery &ndash;save</p>
 	---------------- gulpfile.js -----------------------
 	let gulp = require('gulp');
 	gulp.task('default', function() {
-        console.log('Hello Gulp!');
+		console.log('Hello Gulp!');
 	});
 	
 	$ gulp
 	
 	检查代码质量的任务
-        npm install gulp-tslint --save-dev
+		npm install gulp-tslint --save-dev
 		
-        ---------------- gulpfile.js -----------------------
-        let tslint = require('gulp-tslint');
-        gulp.task('lint', function() {
-            return gulp.src([
-                './source/ts/**/**.ts', './test/**/**.test.ts'
-        ]).pipe(tslint())
-           .pipe(tslint.report('verbose'));
-        ));
+		---------------- gulpfile.js -----------------------
+		let tslint = require('gulp-tslint');
+		gulp.task('lint', function() {
+			return gulp.src([
+			    './source/ts/**/**.ts', './test/**/**.test.ts'
+		]).pipe(tslint())
+		   .pipe(tslint.report('verbose'));
+		));
 		
-        Gulp的src函数会查找./source/ts目录及其子目录下所有扩展名为.ts的文件，同样还会查找./test目录及其子目录下所有扩展名为.test.ts的文件
-        src函数的输出流将会被pipe函数重定向为tslint函数的输入
-        将tslint函数的输出重定向为tslint.report函数的输入
+		Gulp的src函数会查找./source/ts目录及其子目录下所有扩展名为.ts的文件，同样还会查找./test目录及其子目录下所有扩展名为.test.ts的文件
+		src函数的输出流将会被pipe函数重定向为tslint函数的输入
+		将tslint函数的输出重定向为tslint.report函数的输入
 		
-        ---------------- gulpfile.js -----------------------
-        gulp.task('default', ['lint']);
+		---------------- gulpfile.js -----------------------
+		gulp.task('default', ['lint']);
 	
 	编译TypeScript代码的任务
-        npm install gulp-typescript --save-dev
+		npm install gulp-typescript --save-dev
 		
-        ---------------- gulp-typescript -----------------------
-        let ts = require('gulp-typescript');
-        let tsProject = ts.createProject((
-            removeComments: true,
-            noImplicitAny: true,
-            target: 'ES3',
-            module: 'commonjs',
-            declarationFiles: false
-        });
+		---------------- gulp-typescript -----------------------
+		let ts = require('gulp-typescript');
+		let tsProject = ts.createProject((
+			removeComments: true,
+			noImplicitAny: true,
+			target: 'ES3',
+			module: 'commonjs',
+			declarationFiles: false
+		});
 		
-        tsconfig.json
+		tsconfig.json
 		
-        ---------------- gulp-typescript -----------------------
-        gulp.task('tsc', function() {
-            return gulp.src('/source/ts/**/**.ts')
-                .pipe(ts(tsProject))
-                .js.pipe(gulp.desc('./temp/source/js'));
-        ));
+		---------------- gulp-typescript -----------------------
+		gulp.task('tsc', function() {
+			return gulp.src('/source/ts/**/**.ts')
+				.pipe(ts(tsProject))
+				.js.pipe(gulp.desc('./temp/source/js'));
+		));
 		
-        tsc任务会查找./source/ts目录及其子目录下所有扩展名为.ts的文件，src函数的输出流将会传递给TypeScript的编译器，编译器会使用tsProject对象的属性作为编译时的参数，将编译后的JavaScript代码保存在./temp/sources/js目录中
+		tsc任务会查找./source/ts目录及其子目录下所有扩展名为.ts的文件，src函数的输出流将会传递给TypeScript的编译器，编译器会使用tsProject对象的属性作为编译时的参数，将编译后的JavaScript代码保存在./temp/sources/js目录中
 		
-        ---------------- tsTestProject -----------------------
-        let tsTestProject = ts.create.Project({
-            removeComments : true,
-            noImplicitAny: true,
-            target: 'ES3',
-            module: 'commonjs',
-            declarationFiles: false
-        });
+		---------------- tsTestProject -----------------------
+		let tsTestProject = ts.create.Project({
+			removeComments : true,
+			noImplicitAny: true,
+			target: 'ES3',
+			module: 'commonjs',
+			declarationFiles: false
+		});
 		
-        ---------------- tsTestProject -----------------------
-        gulp.task('tsc-tests', function() {
-            return gulp.src('./test/**/**.tests.js')
-                .pipe(ts(tsTestProject))
-                .js.pipe(gulp.desc('./temp/test/'));
-        });
+		---------------- tsTestProject -----------------------
+		gulp.task('tsc-tests', function() {
+			return gulp.src('./test/**/**.tests.js')
+				.pipe(ts(tsTestProject))
+				.js.pipe(gulp.desc('./temp/test/'));
+		});
 		
-        在浏览器中使用JavaScript的三种方式
-            □ HTML标签的&lt;script&gt;引入
-            □ RequireJS库，用AJAX按需加载各个文件，异步模块加载，配置TypeScript的编译器模块参数为异步模块定义AMD
-            □ 配置TypeScript的编译器模块参数为CommonJS, Browserify解析应用的模块和以来，生成一个包含所有模块且高度优化的JavaScript文件。
+		在浏览器中使用JavaScript的三种方式
+			□ HTML标签的&lt;script&gt;引入
+			□ RequireJS库，用AJAX按需加载各个文件，异步模块加载，配置TypeScript的编译器模块参数为异步模块定义AMD
+			□ 配置TypeScript的编译器模块参数为CommonJS, Browserify解析应用的模块和以来，生成一个包含所有模块且高度优化的JavaScript文件。
 		
-        ---------------- tsTestProject -----------------------
-        ///&lt;reference path=&quot;./references.d.ts&quot;/&gt;
+		---------------- tsTestProject -----------------------
+		///&lt;reference path=&quot;./references.d.ts&quot;/&gt;
 		
-        import { headerView } from './header_view';
-        import { footerView } from './footer_view';
-        import { loadingView } from '.loading_view';
+		import { headerView } from './header_view';
+		import { footerView } from './footer_view';
+		import { loadingView } from '.loading_view';
 		
-        headerView.render();
-        footerView.render();
-        loadingView.render(); 
+		headerView.render();
+		footerView.render();
+		loadingView.render(); 
 		
 	npm install browserify viny-transform gulp-uglify gulp-sourcemaps
 	
 	let browserify = require('browserfiy'),
-        transform = require('vinyl-transform'),
-        uglify = require('gulp-uglify'),
-        sourcemaps = require('gulp-sourcemaps');
+		transform = require('vinyl-transform'),
+		uglify = require('gulp-uglify'),
+		sourcemaps = require('gulp-sourcemaps');
 	let browserified = transform(function(filename) {
-        let b = browserify({ entries: filename, debug: true });
-        return b.bundle();
+		let b = browserify({ entries: filename, debug: true });
+		return b.bundle();
 	});
 	
 	browserified会把一个普通的Node.js流转换为一个Gulp流
 	
 	gulp.task('bundle-js', function() {
-        return gulp.src('./temp/source/js/main.js')
-            .pipe(browserified)
-            .pipe(sourcemaps.init( { loadMaps: true }))
-            .pipe(uglify())
-            .pipe(sourcemaps.write('./'))
-            .pipe(gulp.dest('./dist/source/js/'));
+		return gulp.src('./temp/source/js/main.js')
+			.pipe(browserified)
+			.pipe(sourcemaps.init( { loadMaps: true }))
+			.pipe(uglify())
+			.pipe(sourcemaps.write('./'))
+			.pipe(gulp.dest('./dist/source/js/'));
 	});
 	
 	gulp.task('bundle-test', function () {
-        return gulp.src('./temp/test/**/**.test.js')
-        .pipe(browserified)
-        .pipe(browserified)
-        .pipe(gulp.desc('./dist/test/'));
+		return gulp.src('./temp/test/**/**.test.js')
+		.pipe(browserified)
+		.pipe(browserified)
+		.pipe(gulp.desc('./dist/test/'));
 	});
 	
 	gulp.task('default', ['lint', 'tsc', 'tsc-tests', 'bundle-js', 'bundle-test']);
@@ -846,9 +818,9 @@ return <code>My name is ${value}.</code>;
 case &ldquo;number&rdquo;:
 return <code>I'm ${value} years old.</code>;
 case &ldquo;boolean&rdquo;:
-return value ? &ldquo;I&rsquo;m single.&rdquo; : &ldquo;I&rsquo;m not single.&quot;;
+return value ? &ldquo;I&rsquo;m single.&rdquo; : &ldquo;I&rsquo;m not single.&rdquo;;
 default:
-console.log(&ldquo;Invalid Operation!&quot;);
+console.log(&ldquo;Invalid Operation!&rdquo;);
 }
 }
 // `` 反引号包围的为模板字符串，包含占位符
@@ -893,16 +865,16 @@ console.log(foo);           // error
 class Counter {
 	private _i : number;                             // _开始的变量为私有变量名
 	constructor() {
-        this._i = 0;
+		this._i = 0;
 	}
 	get() : number {
-        return this._i;
+		return this._i;
 	}
 	set(val : number) : void {
-        this._i = val;
+		this._i = val;
 	}
 	increment() : void {
-        this._i++;
+		this._i++;
 	}
 }
 let counter = new Counter();
@@ -948,15 +920,15 @@ tag函数和标签模板：
 // 在模板字符串上应用一个tag函数时，这个模板字符串变成了标签模板
 // 实现一个tag函数
 function htmlEscape (literals, &hellip;placeholers) {
-let result = &ldquo;&quot;;
+let result = &ldquo;&rdquo;;
 for (let i = 0; i &lt; placeholders.length; i++) {
 result += literals[i];
 result += placeholders[i]
-.replace(/&amp;/g, &lsquo;&amp;')
-.replace(/''/g, &lsquo;&quot;')
-.replace(/'/g, &lsquo;'')
-.replace(/&lt;/g, &lsquo;&lt;')
-.replace(/&gt;/g, &lsquo;&gt;');
+.replace(/&amp;/g, &lsquo;&amp;&rsquo;)
+.replace(/&rsquo;&rsquo;/g, &lsquo;&quot;&rsquo;)
+.replace(/&rsquo;/g, &lsquo;'&rsquo;)
+.replace(/&lt;/g, &lsquo;&lt;&rsquo;)
+.replace(/&gt;/g, &lsquo;&gt;&rsquo;);
 }
 result += literals[literals.length - 1];
 return result;
@@ -997,16 +969,16 @@ remo.greetDelay(1000);    // &ldquo;Hi! My name is &quot;</p>
 <pre><code>class Person {
 	name : string;
 	constructor (name : string) {
-        this.name = name;
+		this.name = name;
 	}
 	greet() {
-        alert(`Hi! My name is ${ this.name }`);
+		alert(`Hi! My name is ${ this.name }`);
 	}
 	// 箭头函数表达式的词法会在其作用域内绑定this操作符
 	greetDelay(time : number) {
-        setTimeout(function() {
-            alert(`Hi! My name is ${this.name}`);
-        }, time);
+		setTimeout(function() {
+			alert(`Hi! My name is ${this.name}`);
+		}, time);
 	}
 }
 let remo = new Person(&quot;remo&quot;);
@@ -1135,13 +1107,13 @@ rejected: 代表异步操作失败
 
 function foo() {
 	return new Promise( (fulfill, reject) =&gt; {
-        try {                                               // 其实并不需要try catch, 出现错误会自动rejected
-            // do something
-            fulfill(value);
-        }
-        catch(e) {
-            reject(reason);
-        }
+		try {                                               // 其实并不需要try catch, 出现错误会自动rejected
+			// do something
+			fulfill(value);
+		}
+		catch(e) {
+			reject(reason);
+		}
 	});
 }
 foo().then(function(value) { console.log(value); })
@@ -1255,7 +1227,7 @@ class ViewAsync {
                 var getTemplate = this._loadHbsAsync(this._templateUrl)
                     .then(this._compileHbsAsync);
 	     
-         // 并行执行两个promises
+	     // 并行执行两个promises
                 Q.all([getJson, getTemplate]).then((results) =&gt; {
 
                     var json = results[0];
@@ -1454,7 +1426,7 @@ TypeScript面向对象编程
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">

@@ -14,7 +14,7 @@
       
       <guid>http://www.yezheng.pro/post/any-path/hackintosh/</guid>
       <description>Step 0: Preparation You will need a computer running macOS already to follow this guide. If you do not have a Mac you will need to spend some time setting up a virtual machine on your Windows/Linux PC first.
- vmware workstation vmware macos unlocker workstation unlocker: https://github.com/paolo-projects/unlocker.git Download macOS Catalina Image file for VMWare  Step 1: Download macOS Catalina Download Catalina 10.15 from the Mac App Store
+vmware workstation vmware macos unlocker workstation unlocker: https://github.com/paolo-projects/unlocker.git Download macOS Catalina Image file for VMWare Step 1: Download macOS Catalina Download Catalina 10.15 from the Mac App Store
 For machines that need a specific OS release or can&amp;rsquo;t download from the App Store, you can use the gibMacOS utility.</description>
     </item>
     
@@ -26,7 +26,7 @@ For machines that need a specific OS release or can&amp;rsquo;t download from th
       <guid>http://www.yezheng.pro/post/other/hackintosh/</guid>
       <description>Step 1: Download – Get a copy of macOS Catalina Download Catalina 10.15 from the Mac App Store
 download it through a third party source such as gibMacOS.
-Step 2: Installer – Create the macOS Catalina flash drive   Formatting the USB Drive  Click Erase Set the following settings:  Name: Hackintosher Format: Mac OS Extended (Journaled) Scheme: GUID Partition Map   Click Erase    Transferring the Catalina Installer  balena-etcher    Step 3: Catalina EFI Partition &amp;amp; Clover Files  Mount EFI Partition Delete the folder called EFI in the partition you mounted (If it exists) Download Hackintosher-Catalina-10.</description>
+Step 2: Installer – Create the macOS Catalina flash drive Formatting the USB Drive Click Erase Set the following settings: Name: Hackintosher Format: Mac OS Extended (Journaled) Scheme: GUID Partition Map Click Erase Transferring the Catalina Installer balena-etcher Step 3: Catalina EFI Partition &amp;amp; Clover Files Mount EFI Partition Delete the folder called EFI in the partition you mounted (If it exists) Download Hackintosher-Catalina-10.</description>
     </item>
     
   </channel>

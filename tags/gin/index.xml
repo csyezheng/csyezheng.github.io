@@ -14,7 +14,7 @@
       
       <guid>http://www.yezheng.pro/post/engineering-fundamentals/go/gin/</guid>
       <description>sessions Gin middleware for session management with multi-backend support (currently cookie, Redis, Memcached, MongoDB, memstore).
-$ go get github.com/gin-contrib/sessions import &amp;quot;github.com/gin-contrib/sessions&amp;quot; cookie-based Example import ( &amp;quot;github.com/gin-contrib/sessions&amp;quot; &amp;quot;github.com/gin-contrib/sessions/cookie&amp;quot; &amp;quot;github.com/gin-gonic/gin&amp;quot; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&amp;quot;secret&amp;quot;)) r.Use(sessions.Sessions(&amp;quot;mysession&amp;quot;, store)) r.GET(&amp;quot;/incr&amp;quot;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&amp;quot;count&amp;quot;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&amp;quot;count&amp;quot;, count) session.</description>
+$ go get github.com/gin-contrib/sessions import &amp;#34;github.com/gin-contrib/sessions&amp;#34; cookie-based Example import ( &amp;#34;github.com/gin-contrib/sessions&amp;#34; &amp;#34;github.com/gin-contrib/sessions/cookie&amp;#34; &amp;#34;github.com/gin-gonic/gin&amp;#34; ) func main() { r := gin.Default() store := cookie.NewStore([]byte(&amp;#34;secret&amp;#34;)) r.Use(sessions.Sessions(&amp;#34;mysession&amp;#34;, store)) r.GET(&amp;#34;/incr&amp;#34;, func(c *gin.Context) { session := sessions.Default(c) var count int v := session.Get(&amp;#34;count&amp;#34;) if v == nil { count = 0 } else { count = v.(int) count++ } session.Set(&amp;#34;count&amp;#34;, count) session.</description>
     </item>
     
   </channel>

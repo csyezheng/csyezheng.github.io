@@ -38,7 +38,7 @@ mysql -h 172." />
 
 
 
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.108.0" />
 
 
 <link rel="canonical" href="http://www.yezheng.pro/post/specialization/devops/docker-mysql/" />
@@ -59,7 +59,7 @@ mysql -h 172." />
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.07e7e359ce9c2d627152877b6c47d830a43eee9e885a83dd7c4b859d74a6fb09.css" integrity="sha256-B&#43;fjWc6cLWJxUod7bEfYMKQ&#43;7p6IWoPdfEuFnXSm&#43;wk=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.059c61701caa74fbbc3be44958c5948fb8df9432e7fb1f83bc00598d50206ef5.css" integrity="sha256-BZxhcByqdPu8O&#43;RJWMWUj7jflDLn&#43;x&#43;DvABZjVAgbvU=" media="screen" crossorigin="anonymous">
 
 
 
@@ -75,9 +75,8 @@ sudo docker inspect some-mysql | grep IPAddress connect to mysql
 mysql -h 172." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://www.yezheng.pro/post/specialization/devops/docker-mysql/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-05-30T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2019-05-30T00:00:00&#43;00:00" />
-
+<meta property="article:published_time" content="2019-05-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-05-30T00:00:00+00:00" />
 <meta itemprop="name" content="DevOps">
 <meta itemprop="description" content="pull this image
 $ sudo docker pull mysql Start a mysql server instance
@@ -85,8 +84,8 @@ $ sudo docker run --name some-mysql -p 3310:3306 -e MYSQL_ROOT_PASSWORD=123456 -
 $ sudo docker exec -it some-mysql mysql -u root -p Install mariadb package.
 sudo pacman -S mariadb Find out the ip of the docker container over the docker bridge:
 sudo docker inspect some-mysql | grep IPAddress connect to mysql
-mysql -h 172."><meta itemprop="datePublished" content="2019-05-30T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-05-30T00:00:00&#43;00:00" />
+mysql -h 172."><meta itemprop="datePublished" content="2019-05-30T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-05-30T00:00:00+00:00" />
 <meta itemprop="wordCount" content="77">
 <meta itemprop="keywords" content="DevOps," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="DevOps"/>
@@ -348,17 +347,17 @@ mysql -h 172."/>
     
     <div class="post-content">
       <p>pull this image</p>
-<pre><code>$ sudo docker pull mysql
+<pre tabindex="0"><code>$ sudo docker pull mysql
 </code></pre><p>Start a mysql server instance</p>
-<pre><code>$ sudo docker run --name some-mysql -p 3310:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
+<pre tabindex="0"><code>$ sudo docker run --name some-mysql -p 3310:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
 </code></pre><p>logged in to the conainer</p>
-<pre><code>$ sudo docker exec -it some-mysql mysql -u root -p
+<pre tabindex="0"><code>$ sudo docker exec -it some-mysql mysql -u root -p
 </code></pre><p>Install mariadb package.</p>
-<pre><code>sudo pacman -S mariadb
+<pre tabindex="0"><code>sudo pacman -S mariadb
 </code></pre><p>Find out the ip of the docker container over the docker bridge:</p>
-<pre><code>sudo docker inspect some-mysql | grep IPAddress
+<pre tabindex="0"><code>sudo docker inspect some-mysql | grep IPAddress
 </code></pre><p>connect to mysql</p>
-<pre><code>mysql -h 172.17.02 -P 3306 -u root -p
+<pre tabindex="0"><code>mysql -h 172.17.02 -P 3306 -u root -p
 </code></pre>
     </div>
 
@@ -525,7 +524,7 @@ mysql -h 172."/>
     &copy;
     
       2017 -
-    2021
+    2023
     <span class="heart">
       
       <i class="iconfont">
